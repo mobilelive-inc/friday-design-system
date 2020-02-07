@@ -1,0 +1,36 @@
+/* footer styles */
+.footer {
+	background-color: theme-color(dark);
+}
+
+/* footer aside styles */
+.footer-aside{
+	min-height: 250px;
+	background-color: $gray-600;
+	.row{
+		width: calc(100% + #{$grid-gutter-width});
+	}
+	h2{
+		color: theme-color(primary);
+	}
+}
+
+/* social network styles */
+.social-networks{
+	position: relative;
+	margin: 0 -15px;
+	li{
+		padding:0 15px;
+		a{
+			color: $white;
+			&:hover{
+				color: theme-color(primary);
+			}
+		}
+	}
+	.fab {
+		font-size: rem-calc(14);
+		line-height: rem-calc(18);
+	}
+}
+

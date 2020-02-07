@@ -1,0 +1,14 @@
+
+@import '../components/colors';
+
+// Contextual Color
+
+@mixin text-variant($parent, $color) {
+  #{$parent} {
+    color: $color !important;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  @include text-variant(".text-#{$color}", $value);
+}

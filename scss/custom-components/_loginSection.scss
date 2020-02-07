@@ -1,0 +1,12 @@
+.login-page {
+  background: url("../../images/LogIn-bg02.svg") no-repeat left top;
+  background-size: cover;
+  min-height: 100vh;
+
+  #main {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,4 @@
+.login-page {
+  background: url("../../images/logIn-bg.jpg") no-repeat;
+  background-size: cover;
+  min-height: 100vh; }
