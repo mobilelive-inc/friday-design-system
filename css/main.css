@@ -14,7 +14,7 @@
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: 0.25rem;
+  border-radius: 0;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -35,12 +35,10 @@
   .btn.disabled, .btn:disabled {
     opacity: 0.65; }
   .btn.btn-primary {
-    background: -webkit-linear-gradient(174.35deg, #ee8045 50%, rgba(225, 121, 69, 0.79) 110.49%);
-    background: -o-linear-gradient(174.35deg, #ee8045 50%, rgba(225, 121, 69, 0.79) 110.49%);
-    background: linear-gradient(275.65deg, #ee8045 50%, rgba(225, 121, 69, 0.79) 110.49%);
-    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-    border-radius: 4px; }
+    background: -webkit-linear-gradient(174.35deg, #ee8045 20%, #ee8045 40%, rgba(225, 121, 69, 0.79) 110.49%);
+    background: -o-linear-gradient(174.35deg, #ee8045 20%, #ee8045 40%, rgba(225, 121, 69, 0.79) 110.49%);
+    background: linear-gradient(275.65deg, #ee8045 20%, #ee8045 40%, rgba(225, 121, 69, 0.79) 110.49%);
+    color: #fff; }
 
 a.btn.disabled,
 fieldset:disabled a.btn {
@@ -449,13 +447,13 @@ fieldset:disabled a.btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
-  border-radius: 0.3rem; }
+  border-radius: 0; }
 
 .btn-sm {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
-  border-radius: 0.2rem; }
+  border-radius: 0; }
 
 .btn-block {
   display: block;
@@ -648,9 +646,9 @@ input[type="button"].btn-block {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #bababa;
-  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-  border-radius: 0.25rem;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -762,8 +760,12 @@ select.form-control[size], select.form-control[multiple] {
 textarea.form-control {
   height: auto; }
 
+.form-group label {
+  font-size: 0.9rem;
+  color: #666; }
+
 .form-group {
-  margin-bottom: 1rem; }
+  margin-bottom: 1.5rem; }
 
 .form-text {
   display: block;
@@ -1093,7 +1095,7 @@ textarea.form-control {
       margin-bottom: 0; } }
 
 .border {
-  border: 1px solid #dee2e6; }
+  border: 1px solid #bababa; }
 
 .border-0 {
   border: 0 !important; }
@@ -1441,27 +1443,10 @@ textarea.form-control {
   background-color: #0a0a0a; }
 
 .login-page {
-  background: url("../../images/LogIn-bg02.svg") no-repeat left top;
+  background: #fff;
   background-size: cover;
   min-height: 100vh; }
   .login-page #main {
-    min-height: calc(100vh - 60px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; }
-
-.login-page02 {
-  min-height: 100vh; }
-  .login-page02 header {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
-  .login-page02 #main {
     min-height: calc(100vh - 60px);
     display: -webkit-box;
     display: -ms-flexbox;
