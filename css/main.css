@@ -35,9 +35,6 @@
   .btn.disabled, .btn:disabled {
     opacity: 0.65; }
   .btn.btn-primary {
-    background: -webkit-linear-gradient(174.35deg, #ee8045 20%, #ee8045 40%, rgba(225, 121, 69, 0.79) 110.49%);
-    background: -o-linear-gradient(174.35deg, #ee8045 20%, #ee8045 40%, rgba(225, 121, 69, 0.79) 110.49%);
-    background: linear-gradient(275.65deg, #ee8045 20%, #ee8045 40%, rgba(225, 121, 69, 0.79) 110.49%);
     color: #fff; }
 
 a.btn.disabled,
