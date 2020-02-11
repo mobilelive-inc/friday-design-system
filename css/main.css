@@ -694,6 +694,8 @@ input[type="button"].btn-block {
     color: #fff; }
   .form-control.error-outline {
     border: 1px solid #dc3545; }
+  .form-control.warning-outline {
+    border: 1px solid #FEE92C; }
   .form-control.success-outline {
     border: 1px solid #248700; }
 

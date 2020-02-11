@@ -65,6 +65,9 @@
   &.error-outline {
     border: $input-border-width solid $danger;
   }
+  &.warning-outline {
+    border: $input-border-width solid $warning;
+  }
   &.success-outline {
     border: $input-border-width solid $success;
   }
