@@ -194,8 +194,19 @@
             </div>
         </div>
     </div>
+    <h3 class="h3">Buttons with ICONS</h3>
+    <p>All HTML Buttons, <code class="highlighter-rouge">&lt;button class="btn"&gt;</code> and <code class="highlighter-rouge">&lt;a
+        class="btn"&gt;</code>,
+        are available. Use these classes <code class="highlighter-rouge">.btn-primary, btn-secondary, btn-success
+            etc </code></p>
+    <div class="p-t-30 d-flex button-example m-b-50">
+        <button type="button" class="btn btn-primary">Primary <i class="fa fa-facebook pl-3"></i></button>
+        <button type="button" class="btn btn-secondary">Secondary <i class="fa fa-google pl-3"></i></button>
+        <button type="button" class="btn btn-secondary"> <i class="fa fa-arrow-left pr-1"></i> Previous</button>
+        <button type="button" class="btn btn-primary">Next <i class="fa fa-arrow-right pl-3"></i></button>
+    </div>
     <h3 class="h3">Buttons/Links</h3>
-    <p>All HTML Buttons, <code class="highlighter-rouge">&lt;button&gt;</code> and <code class="highlighter-rouge">&lt;a
+    <p>All HTML Buttons, <code class="highlighter-rouge">&lt;button class="btn"&gt;</code> and <code class="highlighter-rouge">&lt;a
         class="btn"&gt;</code>,
         are available. Use these classes <code class="highlighter-rouge">.btn-primary, btn-secondary, btn-success
             etc </code></p>
@@ -232,6 +243,75 @@
         class. Included are styles for general appearance, focus state, sizing, and more.</p>
     <p>Be sure to explore our <a href="#custom-forms">custom forms</a> to further style <code class="highlighter-rouge">&lt;select&gt;</code>s.
     </p>
+    <div class="bd-example">
+        <form>
+            <div class="form-row align-items-center">
+                <div class="col-auto my-1">
+                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected="">Choose...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-auto my-1">
+                    <div class="custom-control custom-checkbox mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                        <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+                    </div>
+                </div>
+                <div class="col-auto my-1">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <h3 class="h3">Bootstrap Custom Checkbox</h3>
+    <div class="bd-example">
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+        </div>
+    </div>
+
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span> <span class="na">id=</span><span class="s">"customCheck1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customCheck1"</span><span class="nt">&gt;</span>Check this custom checkbox<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+
+    <h3 class="h3">Others Custom Checkbox</h3>
+    <div class="bd-example">
+        <div class="other-custom-checkbox mb-4">
+            <input type="checkbox" checked id="test1" />
+            <label for="test1">Check this other custom checkbox</label>
+        </div>
+        <div class="other-custom-checkbox other-custom-checkbox-lg">
+            <input type="checkbox" checked id="test2" />
+            <label for="test2">Check this other custom checkbox</label>
+        </div>
+    </div>
+
+    <h3 class="h3">Bootstrap Custom radio</h3>
+    <div class="bd-example">
+        <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+        </div>
+    </div>
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"customRadio1"</span> <span class="na">name=</span><span class="s">"customRadio"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customRadio1"</span><span class="nt">&gt;</span>Toggle this custom radio<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"custom-control custom-radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"customRadio2"</span> <span class="na">name=</span><span class="s">"customRadio"</span> <span class="na">class=</span><span class="s">"custom-control-input"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"custom-control-label"</span> <span class="na">for=</span><span class="s">"customRadio2"</span><span class="nt">&gt;</span>Or toggle this other custom radio<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
     <div class="bd-example">
         <form>
             <div class="form-group">
