@@ -10,5 +10,4 @@ steps:
   - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
 options:
     machineType: 'N1_HIGHCPU_8'
-tags: ['mytag1', 'mytag2']
 images: ['gcr.io/my-project/myimage']
