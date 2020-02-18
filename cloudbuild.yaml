@@ -1,10 +1,10 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/my-project/my-image', '.']
+  args: ['build', '-t', 'gcr.io/my-project/ml-design', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/my-project/my-image']
+  args: ['push', 'gcr.io/my-project/ml-design']
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['set', 'image', 'deployment/my-deployment', 'my-container=gcr.io/my-project/my-image']
+  args: ['set', 'image', 'deployment/my-deployment', 'my-container=gcr.io/my-project/ml-design']
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-east4-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
