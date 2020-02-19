@@ -1,7 +1,18 @@
 steps:
-- name: 'ubuntu'
-  args: [ "touch", "foo" ]
-- name: 'ubuntu'
-  args: [ "ls", "-l" ]
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['test']
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ "run", "--volume", "/workspace:/workspace", "--rm", "ubuntu", "ls", "-l", "/workspace" ]
+  args: ["build", "-t", "gcr.io/$PROJECT_ID/frontend:$REVISION_ID", "."]
+- name: 'gcr.io/cloud-builders/docker'
+  args: ["push", "gcr.io/$PROJECT_ID/frontend:$REVISION_ID"]
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    gcloud components install kubectl
+    gsutil cp gs://container-kubernetes-key/kubeconfig .
+    export KUBECONFIG=kubeconfig
+    kubectl set image deployment/frontend frontend=gcr.io/$PROJECT_ID/frontend:$REVISION_ID
