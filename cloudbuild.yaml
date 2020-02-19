@@ -1,4 +1,8 @@
 steps:
+- name: 'gcr.io/cloud-builders/go'
+  args: ['install', '.']
+  env: ['PROJECT_ROOT=hello']
+  dir: 'kubernetes.io/gce-pd'
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/mobilelive-design-thinking/my-image', '.']
   timeout: 500s
