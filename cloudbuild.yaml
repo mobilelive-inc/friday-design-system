@@ -1,6 +1,11 @@
 steps:
-- name: 'gcr.io/mobilelive-design-thinking/ml-design'
+- name: 'gcr.io/mobilelive-design-thinking/docker'
   args: ['build', '-t', 'gcr.io/mobilelive-design-thinking/my-image', '.']
   timeout: 500s
-- name: 'gcr.io/mobilelive-design-thinking/ml-design'
+- name: 'gcr.io/mobilelive-design-thinking/docker'
   args: ['push', 'gcr.io/mobilelive-design-thinking/my-image']
+- name: 'gcr.io/mobilelive-design-thinking/kubectl'
+  args: ['set', 'image', 'deployment/my-deployment', 'my-container=gcr.io/mobilelive-design-thinking/my-image']
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=standard-cluster-1'
