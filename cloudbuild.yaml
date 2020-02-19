@@ -1,18 +1,16 @@
 steps:
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['install']
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['test']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["build", "-t", "gcr.io/$PROJECT_ID/frontend:$REVISION_ID", "."]
+  args: ['build', '-t', 'gcr.io/my-project/my-image', '.']
+  timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["push", "gcr.io/$PROJECT_ID/frontend:$REVISION_ID"]
-- name: 'gcr.io/cloud-builders/gcloud'
-  entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-    gcloud components install kubectl
-    gsutil cp gs://container-kubernetes-key/kubeconfig .
-    export KUBECONFIG=kubeconfig
-    kubectl set image deployment/frontend frontend=gcr.io/$PROJECT_ID/frontend:$REVISION_ID
+  args: ['push', 'gcr.io/mobileLive Design Thinking/ml-design']
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: ['set', 'image', 'deployment/my-deployment', 'my-container=gcr.io/mobileLive Design Thinking/my-image']
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-east4-b'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
+options:
+    machineType: 'N1_HIGHCPU_8'
+timeout: 660s
+tags: ['mytag1', 'mytag2']
+images: ['gcr.io/mobileLive Design Thinking/myimage']
