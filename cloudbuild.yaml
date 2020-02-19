@@ -1,7 +1,7 @@
 steps:
-- name: 'gcr.io/cloud-builders/ml-design'
+- name: 'gcr.io/cloud-builders/gcloud'
   args: ['build', '-t', 'gcr.io/my-project/ml-design', '.']
-- name: 'gcr.io/cloud-builders/docker'
+- name: 'gcr.io/cloud-builders/gcloud'
   args: ['push', 'gcr.io/my-project/ml-design']
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['set', 'image', 'deployment/my-deployment', 'my-container=gcr.io/my-project/ml-design']
