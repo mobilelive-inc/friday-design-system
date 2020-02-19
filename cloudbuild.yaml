@@ -1,13 +1,23 @@
 steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['build', '-t', 'gcr.io/my-project/ml-design', '.']
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['push', 'gcr.io/my-project/ml-design']
-- name: 'gcr.io/cloud-builders/kubectl'
-  args: ['set', 'image', 'deployment/my-deployment', 'my-container=gcr.io/my-project/ml-design']
-  env:
-  - 'CLOUDSDK_COMPUTE_ZONE=us-east4-b'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
-options:
-    machineType: 'N1_HIGHCPU_8'
-images: ['gcr.io/my-project/myimage']
+- name: gcr.io/cloud-builders/gcloud
+  args:
+  - kms
+  - decrypt
+  - --ciphertext-file=.env.enc
+  - --plaintext-file=.env
+  - --location=global
+  - --keyring=myproject
+  - --key=cloudbuild-env
+# Install
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+# Test/Build
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'test:unit']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'build']
+# Deploy
+# - name: 'gcr.io/$PROJECT_ID/firebase'
+#   args: ['deploy']
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'deploy']
