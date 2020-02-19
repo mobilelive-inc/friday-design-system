@@ -1,11 +1,11 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/mobileLive Design Thinking/my-image', '.']
+  args: ['build', '-t', 'gcr.io/mobilelive-design-thinking/my-image', '.']
   timeout: 500s
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/mobileLive Design Thinking/ml-design']
+  args: ['push', 'gcr.io/mobilelive-design-thinking/ml-design']
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ['set', 'image', 'deployment/my-deployment', 'my-container=gcr.io/mobileLive Design Thinking/my-image']
+  args: ['set', 'image', 'deployment/my-deployment', 'my-container=gcr.io/mobilelive-design-thinking/my-image']
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-east4-b'
   - 'CLOUDSDK_CONTAINER_CLUSTER=my-cluster'
@@ -13,4 +13,4 @@ options:
     machineType: 'N1_HIGHCPU_8'
 timeout: 660s
 tags: ['mytag1', 'mytag2']
-images: ['gcr.io/mobileLive Design Thinking/myimage']
+images: ['gcr.io/mobilelive-design-thinking/myimage']
