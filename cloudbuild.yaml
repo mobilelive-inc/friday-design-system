@@ -1,19 +1,7 @@
 steps:
+- name: 'ubuntu'
+  args: [ "touch", "foo" ]
+- name: 'ubuntu'
+  args: [ "ls", "-l" ]
 - name: 'gcr.io/cloud-builders/docker'
-  args: [
-    'run',
-    '--rm',
-    '--network', 'cloudbuild',
-    '--volume', '/workspace:/workspace',
-    'node:8.11-alpine',
-    'sh', '-c', 'pwd && ls -lah && ls -lah /workspace'
-  ]
-
-- name: 'gcr.io/cloud-builders/docker'
-  args: [
-    'run',
-    '--rm',
-    '--network', 'cloudbuild',
-    'node:8.11-alpine',
-    'sh', '-c', 'pwd && ls -lah && ls -lah /workspace'
-  ]
+  args: [ "run", "--volume", "/workspace:/workspace", "--rm", "ubuntu", "ls", "-l", "/workspace" ]
