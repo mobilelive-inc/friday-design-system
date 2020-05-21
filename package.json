@@ -1,7 +1,7 @@
 {
   "name": "Ui-Design-System",
   "version": "1.0.0",
-  "description": "UI-Design-System",
+  "descripmixins\nutilities\nvendor\n_alert.scss\n_badge.scss\n_breadcrumb.scss\n_button-group.scss\n_buttons.scss\n_card.scss\n_carousel.scss\n_close.scss\n_code.scss\n_custom-forms.scss\n_dropdown.scss\n_forms.scss\n_functions.scss\n_grid.scss\n_images.scss\n_input-group.scss\n_jumbotron.scss\n_list-group.scss\n_media.scss\n_mixins.scss\n_modal.scss\n_nav.scss\n_navbar.scss\n_pagination.scss\n_popover.scss\n_print.scss\n_progress.scss\n_reboot.scss\n_root.scss\n_spinners.scss\n_tables.scss\n_toasts.scss\n_tooltip.scss\n_transitions.scss\n_type.scss\n_utilities.scss\n_variables.scss\nUiDSystem.scss\nUiDSystem-grid.scss\nUiDSystem-reboot.scsstion": "UI-Design-System",
   "main": "index.js",
   "scripts": {
     "dev-build": "webpack --mode development",

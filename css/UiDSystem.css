@@ -1,8 +1,8 @@
 /*!
- * Bootstrap v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
+ * UiDSystem v4.5.0 (https://getUiDSystem.com/)
+ * Copyright 2011-2020 The UiDSystem Authors
  * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/twbs/UiDSystem/blob/master/LICENSE)
  */
 :root {
   --blue: #007bff;
@@ -10275,4 +10275,4 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+/*# sourceMappingURL=UiDSystem.css.map */
