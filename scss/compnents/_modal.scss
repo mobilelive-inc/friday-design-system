@@ -25,11 +25,11 @@
   height: 100%;
   overflow: hidden;
   // Prevent Chrome on Windows from adding a focus outline. For details, see
-  // https://github.com/twbs/bootstrap/pull/10951.
+  // https://github.com/twbs/UiDSystem/pull/10951.
   outline: 0;
   // We deliberately don't use `-webkit-overflow-scrolling: touch;` due to a
   // gnarly iOS Safari bug: https://bugs.webkit.org/show_bug.cgi?id=158342
-  // See also https://github.com/twbs/bootstrap/issues/17695
+  // See also https://github.com/twbs/UiDSystem/issues/17695
 }
 
 // Shell div to position the modal with bottom padding
@@ -181,7 +181,7 @@
 
   // Place margin between footer elements
   // This solution is far from ideal because of the universal selector usage,
-  // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
+  // but is needed to fix https://github.com/twbs/UiDSystem/issues/24800
   // stylelint-disable-next-line selector-max-universal
   > * {
     margin: $modal-footer-margin-between / 2;

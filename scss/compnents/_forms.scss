@@ -42,7 +42,7 @@
   // Placeholder
   &::placeholder {
     color: $input-placeholder-color;
-    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/UiDSystem/pull/11526.
     opacity: 1;
   }
 
@@ -54,7 +54,7 @@
   &:disabled,
   &[readonly] {
     background-color: $input-disabled-bg;
-    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/UiDSystem/issues/11655.
     opacity: 1;
   }
 }
@@ -74,7 +74,7 @@ select.form-control {
     // the selected option text when the (still closed) <select> receives focus
     // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
     // match the appearance of the native widget.
-    // See https://github.com/twbs/bootstrap/issues/19398.
+    // See https://github.com/twbs/UiDSystem/issues/19398.
     color: $input-color;
     background-color: $input-bg;
   }
@@ -225,7 +225,7 @@ textarea.form-control {
   margin-top: $form-check-input-margin-y;
   margin-left: -$form-check-input-gutter;
 
-  // Use [disabled] and :disabled for workaround https://github.com/twbs/bootstrap/issues/28247
+  // Use [disabled] and :disabled for workaround https://github.com/twbs/UiDSystem/issues/28247
   &[disabled] ~ .form-check-label,
   &:disabled ~ .form-check-label {
     color: $text-muted;

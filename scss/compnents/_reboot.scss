@@ -197,7 +197,7 @@ a {
 // And undo these styles for placeholder links/named anchors (without href).
 // It would be more straightforward to just use a[href] in previous block, but that
 // causes specificity issues in many other styles that are too complex to fix.
-// See https://github.com/twbs/bootstrap/issues/19402
+// See https://github.com/twbs/UiDSystem/issues/19402
 
 a:not([href]) {
   color: inherit;
@@ -256,7 +256,7 @@ img {
 
 svg {
   // Workaround for the SVG overflow bug in IE10/11 is still required.
-  // See https://github.com/twbs/bootstrap/issues/26878
+  // See https://github.com/twbs/UiDSystem/issues/26878
   overflow: hidden;
   vertical-align: middle;
 }
@@ -297,7 +297,7 @@ label {
 
 // Remove the default `border-radius` that macOS Chrome adds.
 //
-// Details at https://github.com/twbs/bootstrap/issues/24093
+// Details at https://github.com/twbs/UiDSystem/issues/24093
 button {
   // stylelint-disable-next-line property-blacklist
   border-radius: 0;
@@ -335,14 +335,14 @@ select {
 
 // Set the cursor for non-`<button>` buttons
 //
-// Details at https://github.com/twbs/bootstrap/pull/30562
+// Details at https://github.com/twbs/UiDSystem/pull/30562
 [role="button"] {
   cursor: pointer;
 }
 
 // Remove the inheritance of word-wrap in Safari.
 //
-// Details at https://github.com/twbs/bootstrap/issues/24990
+// Details at https://github.com/twbs/UiDSystem/issues/24990
 select {
   word-wrap: normal;
 }
@@ -396,7 +396,7 @@ fieldset {
   // Browsers set a default `min-width: min-content;` on fieldsets,
   // unlike e.g. `<div>`s, which have `min-width: 0;` by default.
   // So we reset that to ensure fieldsets behave more like a standard block element.
-  // See https://github.com/twbs/bootstrap/issues/12359
+  // See https://github.com/twbs/UiDSystem/issues/12359
   // and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
   min-width: 0;
   // Reset the default outline behavior of fieldsets so they don't affect page layout.
@@ -433,7 +433,7 @@ progress {
   // This overrides the extra rounded corners on search inputs in iOS so that our
   // `.form-control` class can properly style them. Note that this cannot simply
   // be added to `.form-control` as it's not specific enough. For details, see
-  // https://github.com/twbs/bootstrap/issues/11586.
+  // https://github.com/twbs/UiDSystem/issues/11586.
   outline-offset: -2px; // 2. Correct the outline style in Safari.
   -webkit-appearance: none;
 }

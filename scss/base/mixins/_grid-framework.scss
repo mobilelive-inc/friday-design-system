@@ -1,6 +1,6 @@
 // Framework grid generation
 //
-// Used only by Bootstrap to generate the correct number of grid classes given
+// Used only by UiDSystem to generate the correct number of grid classes given
 // any value of `$grid-columns`.
 
 @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
@@ -34,7 +34,7 @@
       .col#{$infix} {
         flex-basis: 0;
         flex-grow: 1;
-        min-width: 0; // See https://github.com/twbs/bootstrap/issues/25410
+        min-width: 0; // See https://github.com/twbs/UiDSystem/issues/25410
         max-width: 100%;
       }
 

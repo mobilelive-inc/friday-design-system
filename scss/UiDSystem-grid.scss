@@ -1,8 +1,8 @@
 /*!
- * Bootstrap Grid v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
+ * UiDSystem Grid v4.5.0 (https://getUiDSystem.com/)
+ * Copyright 2011-2020 The UiDSystem Authors
  * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (https://github.com/twbs/UiDSystem/blob/master/LICENSE)
  */
 
 html {
@@ -19,9 +19,9 @@ html {
 @import "compnents/functions";
 @import "compnents/variables";
 
-@import "mixins/breakpoints";
-@import "mixins/grid-framework";
-@import "mixins/grid";
+@import "base/mixins/breakpoints";
+@import "base/mixins/grid-framework";
+@import "base/mixins/grid";
 
 @import "compnents/grid";
 @import "utilities/display";
