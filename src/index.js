@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import DesignSystem from './app'
 
 function App(){
-    return(
-        <DesignSystem />
-    )
+  return(
+    <h1>Design System</h1>
+  )
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
