@@ -31,6 +31,7 @@
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-intl": "^4.6.4",
     "rebass": "^4.0.7",
     "replace-in-file-webpack-plugin": "^1.0.6",
     "style-loader": "^1.2.1",
@@ -42,13 +43,20 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.10.1",
-    "babel-eslint": "^10.1.0"
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "babel-eslint": "^10.1.0",
+    "storybook-addon-intl": "^2.4.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode development",
-    "lint": "eslint \"src/**/*.{js,jsx}\""
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Samaid Saeed",
   "license": "ISC"
