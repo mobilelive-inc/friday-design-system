@@ -1,15 +1,10 @@
-/*!
- * UiDSystem v1.0.0 (https://getUiDSystem.com/)
- * Copyright 2011-2020 The UiDSystem Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/UiDSystem/blob/master/LICENSE)
- */
+
 
 @import "components/functions";
-@import "components/variables";
+@import "base/variables";
 @import "components/mixins";
-@import "components/root";
-@import "components/reboot";
+@import "base/root";
+@import "base/reboot";
 @import "components/type";
 @import "components/images";
 @import "components/code";
@@ -19,7 +14,6 @@
 @import "components/buttons";
 @import "components/transitions";
 @import "components/dropdown";
-@import "components/button-group";
 @import "components/input-group";
 @import "components/custom-forms";
 @import "components/nav";
@@ -40,5 +34,5 @@
 @import "components/popover";
 @import "components/carousel";
 @import "components/spinners";
-@import "components/utilities";
+@import "base/utilities";
 @import "components/print";
