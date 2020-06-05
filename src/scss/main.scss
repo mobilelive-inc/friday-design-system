@@ -1,0 +1,29 @@
+@import "UiDSystem";
+@import "UiDSystem-grid";
+@import "components/custom-theme";
+
+@import "info--page";
+//@import "base/base";
+
+
+/* body styles */
+body {
+	//min-width: $base-min-width;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+/* main wrapper styles */
+#wrapper{
+  position: relative;
+  width:100%;
+  overflow: hidden;
+}
+
+
+/* default link animation */
+a{
+	//@extend %transition;
+  text-decoration: none;
+}
+
