@@ -1,3 +1,77 @@
+.info-page {
+  #ColorPalette {
+    .card_body {
+      border-radius: 5px;
+      box-shadow: 0 0 6px 2px rgba(65, 64, 66, .15);
+      display: flex;
+      flex-direction: column;
+
+      .colors__info {
+      }
+    }
+  }
+
+  #buttons_info {
+    .button-example {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      button {
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  #typography{
+    .headings_list{
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 0;
+      li{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 0;
+        padding: 15px 10px;
+        width: 100%;
+        align-items: center;
+        &:nth-child(odd){
+          background-color: #f5f5f5;
+        }
+        code{
+          margin-right: 40px;
+        }
+        strong{
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  #forms_section{
+
+  }
+
+  #cards_sections{
+    .card{
+    }
+    .highlight{
+      padding: 15px 10px;
+      background-color: $gray-light;
+      pre{
+        margin: 0;
+        font-style: italic;
+      }
+    }
+  }
+
+}
+
+
 .other-custom-checkbox {
   /* Base for label styling */
   [type="checkbox"]:not(:checked),
@@ -79,6 +153,7 @@
   label:hover:before {
     border: 2px solid #4778d9 !important;
   }
+
   &.other-custom-checkbox-lg {
     /* checked mark aspect */
     [type="checkbox"]:not(:checked) + label:after,

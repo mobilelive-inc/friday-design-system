@@ -1,884 +1,345 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Textual form controls
+//
+
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
+  height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  font-family: $input-font-family;
+  //font-size : $input-font-size;
+  font-weight: $input-font-weight;
+  line-height: $input-line-height;
+  color: $input-color;
+  background-color: $input-bg;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border: $input-border-width solid $input-border-color;
 
+  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
+  @include border-radius($input-border-radius, 0);
+
+  @include box-shadow($input-box-shadow);
+  @include transition($input-transition);
+
+  // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
     background-color: transparent;
     border: 0;
   }
 
+  // Remove select outline from select box in FF
   &:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 #495057;
+    text-shadow: 0 0 0 $input-color;
   }
 
-  &:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
+  // Customize the `:focus` state to imitate native WebKit styles.
+  @include form-control-focus($ignore-warning: true);
 
-  &::-webkit-input-placeholder {
-    color: #6c757d;
-    opacity: 1;
-  }
-
-  &::-moz-placeholder {
-    color: #6c757d;
-    opacity: 1;
-  }
-
-  &:-ms-input-placeholder {
-    color: #6c757d;
-    opacity: 1;
-  }
-
-  &::-ms-input-placeholder {
-    color: #6c757d;
-    opacity: 1;
-  }
-
+  // Placeholder
   &::placeholder {
-    color: #6c757d;
+    color: $input-placeholder-color;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/UiDesignSystem/pull/11526.
     opacity: 1;
   }
 
-  &:disabled {
-    background-color: #e9ecef;
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &[readonly] {
+    background-color: $input-disabled-bg;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/UiDesignSystem/issues/11655.
     opacity: 1;
   }
 }
 
-.form-control[readonly] {
-  background-color: #e9ecef;
-  opacity: 1;
-}
-
-input[type="date"].form-control {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-input[type="time"].form-control {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-input[type="datetime-local"].form-control {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-input[type="month"].form-control {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  &.form-control {
+    appearance: none; // Fix appearance for date inputs in Safari
+  }
 }
 
 select.form-control {
-  &:focus {
-    &::-ms-value {
-      color: #495057;
-      background-color: #fff;
-    }
+  &:focus::-ms-value {
+    // Suppress the nested default white text on blue background highlight given to
+    // the selected option text when the (still closed) <select> receives focus
+    // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+    // match the appearance of the native widget.
+    // See https://github.com/twbs/UiDesignSystem/issues/19398.
+    color: $input-color;
+    background-color: $input-bg;
   }
 }
 
-.form-control-file {
-  display: block;
-  width: 100%;
-}
-
+// Make file inputs better match text inputs by forcing them to new lines.
+.form-control-file,
 .form-control-range {
   display: block;
   width: 100%;
 }
 
+
+//
+// Labels
+//
+
+// For use with horizontal and inline forms, when you need the label (or legend)
+// text to align with the form controls.
 .col-form-label {
-  padding-top: calc(0.375rem + 1px);
-  padding-bottom: calc(0.375rem + 1px);
-  margin-bottom: 0;
-  font-size: inherit;
-  line-height: 1.5;
+  padding-top: add($input-padding-y, $input-border-width);
+  padding-bottom: add($input-padding-y, $input-border-width);
+  margin-bottom: 0; // Override the `<label>/<legend>` default
+  font-size : $input-font-size;
+  line-height: $input-line-height;
 }
 
 .col-form-label-lg {
-  padding-top: calc(0.5rem + 1px);
-  padding-bottom: calc(0.5rem + 1px);
-  font-size: 1.25rem;
-  line-height: 1.5;
+  padding-top: add($input-padding-y-lg, $input-border-width);
+  padding-bottom: add($input-padding-y-lg, $input-border-width);
+  font-size : $input-font-size-lg;
+  line-height: $input-line-height-lg;
 }
 
 .col-form-label-sm {
-  padding-top: calc(0.25rem + 1px);
-  padding-bottom: calc(0.25rem + 1px);
-  font-size: 0.875rem;
-  line-height: 1.5;
+  padding-top: add($input-padding-y-sm, $input-border-width);
+  padding-bottom: add($input-padding-y-sm, $input-border-width);
+ font-size : $input-font-size-sm;
+  line-height: $input-line-height-sm;
 }
+
+
+// Readonly controls as plain text
+//
+// Apply class to a readonly input to make it appear like regular plain
+// text (without any border, background color, focus indicator)
 
 .form-control-plaintext {
   display: block;
   width: 100%;
-  padding: 0.375rem 0;
-  margin-bottom: 0;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #212529;
+  padding: $input-padding-y 0;
+  margin-bottom: 0; // match inputs if this class comes on inputs with default margins
+  font-size : $input-font-size;
+  line-height: $input-line-height;
+  color: $input-plaintext-color;
   background-color: transparent;
   border: solid transparent;
-  border-width: 1px 0;
+  border-width: $input-border-width 0;
+
+  &.form-control-sm,
+  &.form-control-lg {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
-.form-control-plaintext.form-control-sm {
-  padding-right: 0;
-  padding-left: 0;
-}
 
-.form-control-plaintext.form-control-lg {
-  padding-right: 0;
-  padding-left: 0;
-}
+// Form control sizing
+//
+// Build on `.form-control` with modifier classes to decrease or increase the
+// height and font-size of form controls.
+//
+// Repeated in `_input_group.scss` to avoid Sass extend issues.
 
 .form-control-sm {
-  height: calc(1.5em + 0.5rem + 2px);
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  border-radius: 0.2rem;
+  height: $input-height-sm;
+  padding: $input-padding-y-sm $input-padding-x-sm;
+ font-size : $input-font-size-sm;
+  line-height: $input-line-height-sm;
+  @include border-radius($input-border-radius-sm);
 }
 
 .form-control-lg {
-  height: calc(1.5em + 1rem + 2px);
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  border-radius: 0.3rem;
+  height: $input-height-lg;
+  padding: $input-padding-y-lg $input-padding-x-lg;
+  font-size : $input-font-size-lg;
+  line-height: $input-line-height-lg;
+  @include border-radius($input-border-radius-lg);
 }
 
-select.form-control[size] {
-  height: auto;
-}
-
-select.form-control[multiple] {
-  height: auto;
+// stylelint-disable-next-line no-duplicate-selectors
+select.form-control {
+  &[size],
+  &[multiple] {
+    height: auto;
+  }
 }
 
 textarea.form-control {
   height: auto;
 }
 
+// Form groups
+//
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: $form-group-margin-bottom;
 }
 
 .form-text {
   display: block;
-  margin-top: 0.25rem;
+  margin-top: $form-text-margin-top;
 }
+
+
+// Form grid
+//
+// Special replacement for our grid system's `.row` for tighter form layouts.
 
 .form-row {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -5px;
-  margin-left: -5px;
+  margin-right: -$form-grid-gutter-width / 2;
+  margin-left: -$form-grid-gutter-width / 2;
 
-  > .col {
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-
+  > .col,
   > [class*="col-"] {
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: $form-grid-gutter-width / 2;
+    padding-left: $form-grid-gutter-width / 2;
   }
 }
+
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
 
 .form-check {
   position: relative;
   display: block;
-  padding-left: 1.25rem;
+  padding-left: $form-check-input-gutter;
 }
 
 .form-check-input {
   position: absolute;
-  margin-top: 0.3rem;
-  margin-left: -1.25rem;
+  margin-top: $form-check-input-margin-y;
+  margin-left: -$form-check-input-gutter;
 
-  &:disabled {
-    ~ {
-      .form-check-label {
-        color: #6c757d;
-      }
-    }
-  }
-}
-
-.form-check-input[disabled] {
-  ~ {
-    .form-check-label {
-      color: #6c757d;
-    }
+  // Use [disabled] and :disabled for workaround https://github.com/twbs/UiDesignSystem/issues/28247
+  &[disabled] ~ .form-check-label,
+  &:disabled ~ .form-check-label {
+    color: $text-muted;
   }
 }
 
 .form-check-label {
-  margin-bottom: 0;
+  margin-bottom: 0; // Override default `<label>` bottom margin
 }
 
 .form-check-inline {
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -ms-flex-align: center;
   align-items: center;
-  padding-left: 0;
-  margin-right: 0.75rem;
+  padding-left: 0; // Override base .form-check
+  margin-right: $form-check-inline-margin-x;
 
+  // Undo .form-check-input defaults and add some `margin-right`.
   .form-check-input {
     position: static;
     margin-top: 0;
-    margin-right: 0.3125rem;
+    margin-right: $form-check-inline-input-margin-x;
     margin-left: 0;
   }
 }
 
-.valid-feedback {
-  display: none;
-  width: 100%;
-  margin-top: 0.25rem;
-  font-size: 80%;
-  color: #28a745;
-}
 
-.valid-tooltip {
-  position: absolute;
-  top: 100%;
-  z-index: 5;
-  display: none;
-  max-width: 100%;
-  padding: 0.25rem 0.5rem;
-  margin-top: .1rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: #fff;
-  background-color: rgba(40, 167, 69, 0.9);
-  border-radius: 0.25rem;
-}
-
-.was-validated {
-  &:valid {
-    ~ {
-      .valid-feedback {
-        display: block;
-      }
-
-      .valid-tooltip {
-        display: block;
-      }
-    }
-  }
-
-  .form-control {
-    &:valid {
-      border-color: #28a745;
-      padding-right: calc(1.5em + 0.75rem);
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
-      background-repeat: no-repeat;
-      background-position: right calc(0.375em + 0.1875rem) center;
-      background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-
-      &:focus {
-        border-color: #28a745;
-        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-      }
-    }
-
-    &:invalid {
-      border-color: #dc3545;
-      padding-right: calc(1.5em + 0.75rem);
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
-      background-repeat: no-repeat;
-      background-position: right calc(0.375em + 0.1875rem) center;
-      background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-
-      &:focus {
-        border-color: #dc3545;
-        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-      }
-    }
-  }
-
-  textarea.form-control {
-    &:valid {
-      padding-right: calc(1.5em + 0.75rem);
-      background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
-    }
-
-    &:invalid {
-      padding-right: calc(1.5em + 0.75rem);
-      background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
-    }
-  }
-
-  .custom-select {
-    &:valid {
-      border-color: #28a745;
-      padding-right: calc(0.75em + 2.3125rem);
-      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-
-      &:focus {
-        border-color: #28a745;
-        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-      }
-    }
-
-    &:invalid {
-      border-color: #dc3545;
-      padding-right: calc(0.75em + 2.3125rem);
-      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-
-      &:focus {
-        border-color: #dc3545;
-        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-      }
-    }
-  }
-
-  .form-check-input {
-    &:valid {
-      ~ {
-        .form-check-label {
-          color: #28a745;
-        }
-
-        .valid-feedback {
-          display: block;
-        }
-
-        .valid-tooltip {
-          display: block;
-        }
-      }
-    }
-
-    &:invalid {
-      ~ {
-        .form-check-label {
-          color: #dc3545;
-        }
-
-        .invalid-feedback {
-          display: block;
-        }
-
-        .invalid-tooltip {
-          display: block;
-        }
-      }
-    }
-  }
-
-  .custom-control-input {
-    &:valid {
-      ~ {
-        .custom-control-label {
-          color: #28a745;
-
-          &::before {
-            border-color: #28a745;
-          }
-        }
-      }
-
-      &:checked {
-        ~ {
-          .custom-control-label {
-            &::before {
-              border-color: #34ce57;
-              background-color: #34ce57;
-            }
-          }
-        }
-      }
-
-      &:focus {
-        ~ {
-          .custom-control-label {
-            &::before {
-              box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-            }
-          }
-        }
-
-        &:not(:checked) {
-          ~ {
-            .custom-control-label {
-              &::before {
-                border-color: #28a745;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    &:invalid {
-      ~ {
-        .custom-control-label {
-          color: #dc3545;
-
-          &::before {
-            border-color: #dc3545;
-          }
-        }
-      }
-
-      &:checked {
-        ~ {
-          .custom-control-label {
-            &::before {
-              border-color: #e4606d;
-              background-color: #e4606d;
-            }
-          }
-        }
-      }
-
-      &:focus {
-        ~ {
-          .custom-control-label {
-            &::before {
-              box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-            }
-          }
-        }
-
-        &:not(:checked) {
-          ~ {
-            .custom-control-label {
-              &::before {
-                border-color: #dc3545;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .custom-file-input {
-    &:valid {
-      ~ {
-        .custom-file-label {
-          border-color: #28a745;
-        }
-      }
-
-      &:focus {
-        ~ {
-          .custom-file-label {
-            border-color: #28a745;
-            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-          }
-        }
-      }
-    }
-
-    &:invalid {
-      ~ {
-        .custom-file-label {
-          border-color: #dc3545;
-        }
-      }
-
-      &:focus {
-        ~ {
-          .custom-file-label {
-            border-color: #dc3545;
-            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-          }
-        }
-      }
-    }
-  }
-
-  &:invalid {
-    ~ {
-      .invalid-feedback {
-        display: block;
-      }
-
-      .invalid-tooltip {
-        display: block;
-      }
-    }
-  }
-}
-
-.is-valid {
-  ~ {
-    .valid-feedback {
-      display: block;
-    }
-
-    .valid-tooltip {
-      display: block;
-    }
-  }
-}
-
-.form-control.is-valid {
-  border-color: #28a745;
-  padding-right: calc(1.5em + 0.75rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-
-  &:focus {
-    border-color: #28a745;
-    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-  }
-}
-
-textarea.form-control.is-valid {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
-}
-
-.custom-select.is-valid {
-  border-color: #28a745;
-  padding-right: calc(0.75em + 2.3125rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-
-  &:focus {
-    border-color: #28a745;
-    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-  }
-}
-
-.form-check-input.is-valid {
-  ~ {
-    .form-check-label {
-      color: #28a745;
-    }
-
-    .valid-feedback {
-      display: block;
-    }
-
-    .valid-tooltip {
-      display: block;
-    }
-  }
-}
-
-.custom-control-input.is-valid {
-  ~ {
-    .custom-control-label {
-      color: #28a745;
-
-      &::before {
-        border-color: #28a745;
-      }
-    }
-  }
-
-  &:checked {
-    ~ {
-      .custom-control-label {
-        &::before {
-          border-color: #34ce57;
-          background-color: #34ce57;
-        }
-      }
-    }
-  }
-
-  &:focus {
-    ~ {
-      .custom-control-label {
-        &::before {
-          box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-        }
-      }
-    }
-
-    &:not(:checked) {
-      ~ {
-        .custom-control-label {
-          &::before {
-            border-color: #28a745;
-          }
-        }
-      }
-    }
-  }
-}
-
-.custom-file-input.is-valid {
-  ~ {
-    .custom-file-label {
-      border-color: #28a745;
-    }
-  }
-
-  &:focus {
-    ~ {
-      .custom-file-label {
-        border-color: #28a745;
-        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-      }
-    }
-  }
-}
-
-.invalid-feedback {
-  display: none;
-  width: 100%;
-  margin-top: 0.25rem;
-  font-size: 80%;
-  color: #dc3545;
-}
-
-.invalid-tooltip {
-  position: absolute;
-  top: 100%;
-  z-index: 5;
-  display: none;
-  max-width: 100%;
-  padding: 0.25rem 0.5rem;
-  margin-top: .1rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: #fff;
-  background-color: rgba(220, 53, 69, 0.9);
-  border-radius: 0.25rem;
-}
-
-.is-invalid {
-  ~ {
-    .invalid-feedback {
-      display: block;
-    }
-
-    .invalid-tooltip {
-      display: block;
-    }
-  }
-}
-
-.form-control.is-invalid {
-  border-color: #dc3545;
-  padding-right: calc(1.5em + 0.75rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-
-  &:focus {
-    border-color: #dc3545;
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-  }
-}
-
-textarea.form-control.is-invalid {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
-}
-
-.custom-select.is-invalid {
-  border-color: #dc3545;
-  padding-right: calc(0.75em + 2.3125rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-
-  &:focus {
-    border-color: #dc3545;
-    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-  }
-}
-
-.form-check-input.is-invalid {
-  ~ {
-    .form-check-label {
-      color: #dc3545;
-    }
-
-    .invalid-feedback {
-      display: block;
-    }
-
-    .invalid-tooltip {
-      display: block;
-    }
-  }
-}
-
-.custom-control-input.is-invalid {
-  ~ {
-    .custom-control-label {
-      color: #dc3545;
-
-      &::before {
-        border-color: #dc3545;
-      }
-    }
-  }
-
-  &:checked {
-    ~ {
-      .custom-control-label {
-        &::before {
-          border-color: #e4606d;
-          background-color: #e4606d;
-        }
-      }
-    }
-  }
-
-  &:focus {
-    ~ {
-      .custom-control-label {
-        &::before {
-          box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-        }
-      }
-    }
-
-    &:not(:checked) {
-      ~ {
-        .custom-control-label {
-          &::before {
-            border-color: #dc3545;
-          }
-        }
-      }
-    }
-  }
-}
-
-.custom-file-input.is-invalid {
-  ~ {
-    .custom-file-label {
-      border-color: #dc3545;
-    }
-  }
-
-  &:focus {
-    ~ {
-      .custom-file-label {
-        border-color: #dc3545;
-        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-      }
-    }
-  }
-}
+// Form validation
+//
+// Provide feedback to users when form field values are valid or invalid. Works
+// primarily for client-side validation via scoped `:invalid` and `:valid`
+// pseudo-classes but also includes `.is-invalid` and `.is-valid` classes for
+// server side validation.
+
+//@each $state, $data in $form-validation-states {
+//  @include form-validation-state($state, map-get($data, color), map-get($data, icon));
+//}
+
+// Inline forms
+//
+// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// forms begin stacked on extra small (mobile) devices and then go inline when
+// viewports reach <768px.
+//
+// Requires wrapping inputs and labels with `.form-group` for proper display of
+// default HTML form controls and our custom form controls (e.g., input groups).
 
 .form-inline {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -ms-flex-align: center;
-  align-items: center;
+  align-items: center; // Prevent shorter elements from growing to same height as others (e.g., small buttons growing to normal sized button height)
 
+  // Because we use flex, the initial sizing of checkboxes is collapsed and
+  // doesn't occupy the full-width (which is what we want for xs grid tier),
+  // so we force that here.
   .form-check {
     width: 100%;
   }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  .form-control {
-    transition: none;
-  }
-}
-
-@media (min-width: 576px) {
-  .form-inline {
+  // Kick in the inline
+  @include media-breakpoint-up(sm) {
     label {
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex-align: center;
       align-items: center;
-      -ms-flex-pack: center;
       justify-content: center;
       margin-bottom: 0;
     }
 
+    // Inline-block all the things for "inline"
     .form-group {
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex: 0 0 auto;
       flex: 0 0 auto;
-      -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-      -ms-flex-align: center;
       align-items: center;
       margin-bottom: 0;
     }
 
+    // Allow folks to *not* use `.form-group`
     .form-control {
       display: inline-block;
-      width: auto;
+      width: auto; // Prevent labels from stacking above inputs in `.form-group`
       vertical-align: middle;
     }
 
+    // Make static controls behave like regular ones
     .form-control-plaintext {
       display: inline-block;
     }
 
-    .input-group {
-      width: auto;
-    }
-
+    .input-group,
     .custom-select {
       width: auto;
     }
 
+    // Remove default margin on radios/checkboxes that were used for stacking, and
+    // then undo the floating of radios and checkboxes to match.
     .form-check {
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex-align: center;
       align-items: center;
-      -ms-flex-pack: center;
       justify-content: center;
       width: auto;
       padding-left: 0;
     }
-
     .form-check-input {
       position: relative;
-      -ms-flex-negative: 0;
       flex-shrink: 0;
       margin-top: 0;
-      margin-right: 0.25rem;
+      margin-right: $form-check-input-margin-x;
       margin-left: 0;
     }
 
     .custom-control {
-      -ms-flex-align: center;
       align-items: center;
-      -ms-flex-pack: center;
       justify-content: center;
     }
-
     .custom-control-label {
       margin-bottom: 0;
     }
