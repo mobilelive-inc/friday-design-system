@@ -12,16 +12,30 @@
   }
 
   #buttons_info {
-    .button-example {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      flex-wrap: wrap;
 
-      button {
-        margin-right: 20px;
-        margin-bottom: 20px;
+  }
+  .button-example {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    button {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    span{
+      padding-right: 5px;
+    }
+    .btn-outline-primary{
+      &:hover{
+        span{
+          &:before{
+            color: #fff;
+          }
+        }
       }
+
     }
   }
 
