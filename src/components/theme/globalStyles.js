@@ -2,11 +2,13 @@ import { createGlobalStyle } from 'styled-components';
 import MediaQuery from '../../utils/mediaQuery';
 import { colors } from './defaultTheme';
 
+// add style from reset here
+
 const GlobalStyle = createGlobalStyle`
 
   @font-face { font-display: swap; }
 
-  * {
+  body {
     font-family: Gotham SSm A, Gotham SSm B, sans-serif !important;
     font-style: normal;
   }
