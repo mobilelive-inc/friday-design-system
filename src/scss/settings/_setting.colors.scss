@@ -1,0 +1,101 @@
+
+
+// Variables Colors
+
+// Color system
+:root {
+  --white: #fff;
+  --gray: #707070;
+  --gray-light: #E5E5E5;
+  --gray-dark: #282828;
+
+
+  --orange: #F48245;
+  --orange-lighter: #FEF3EC;
+  --orange-light: #F9C0A2;
+  --orange-dark: #C36837;
+  --orange-darker: #311A0E;
+
+
+  --blue: #55A2D9;
+  --blue-lighter: #EEF6FB;
+  --blue-light: #BBDAF0;
+  --blue-dark: #336182;
+  --blue-darker: #11202B;
+
+
+  --lemon: #FCCC2E;
+  --lemon-lighter: #FFFAEA;
+  --lemon-light: #FEEBAB;
+  --lemon-dark: #977A1C;
+  --lemon-darker: #322909;
+
+
+  --lime: #C4D93C;
+  --lime-lighter: #F9FBEC;
+  --lime-light: #E7F0B1;
+  --lime-dark: #768224;
+  --lime-darker: #272B0C;
+
+
+  --cyan: #66C9D5;
+  --cyan-lighter: #F0FAFB;
+  --cyan-light: #C2E9EE;
+  --cyan-dark: #3D7980;
+  --cyan-darker: #14282B;
+
+  --navy: #2874A4;
+  --navy-lighter: #EAF1F6;
+  --navy-light: #A9C7DB;
+  --navy-dark: #184662;
+  --navy-darker: #081721;
+
+
+  --red: #DF4B4B;
+  --green: #34A84D;
+  --black: #191919;
+  --pure: var(--white);
+  --ash: var(--gray);
+
+
+  // Theme Standard colors
+  --primary: var(--orange);
+  --secondary: var(--gray);
+  --success: var(--green);
+  --info: var(--cyan);
+  --warning: var(--lemon);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--gray-dark);
+}
+
+
+$primaryColor: var(--primary);
+$primaryColor2: var(--gray);
+$primaryColor3: var(--lemon);
+$primaryColor4: var(--red);
+
+
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+                (
+                        "primary": $primaryColor,
+                        "secondary": $primaryColor2,
+                        "success": $primaryColor3,
+                        "info": $primaryColor4,
+                ),
+                $theme-colors
+);
+
+
+
+
+
+
+
+
+
+
+

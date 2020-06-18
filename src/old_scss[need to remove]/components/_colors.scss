@@ -1,0 +1,159 @@
+.bg-primary {
+  background-color: $primary ;
+}
+.bg-secondary {
+  background-color: $secondary ;
+}
+.bg-success {
+  background-color: $success ;
+}
+a.bg-primary {
+  &:hover {
+    background-color: darken($primary, 10%) ;
+  }
+  &:focus {
+    background-color: darken($primary, 10%) ;
+  }
+}
+button.bg-primary {
+  &:hover {
+    background-color: darken($primary, 10%) ;
+  }
+  &:focus {
+    background-color: darken($primary, 10%) ;
+  }
+}
+a.bg-secondary {
+  &:hover {
+    background-color: darken($secondary, 10%) ;
+  }
+  &:focus {
+    background-color: darken($secondary, 10%) ;
+  }
+}
+button.bg-secondary {
+  &:hover {
+    background-color: darken($secondary, 10%) ;
+  }
+  &:focus {
+    background-color: darken($secondary, 10%) ;
+  }
+}
+
+a.bg-success {
+  &:hover {
+    background-color: darken($success, 10%) ;
+  }
+  &:focus {
+    background-color: darken($success, 10%) ;
+  }
+}
+button.bg-success {
+  &:hover {
+    background-color: darken($success, 10%) ;
+  }
+  &:focus {
+    background-color: darken($success, 10%) ;
+  }
+}
+.bg-info {
+  background-color: $info ;
+}
+a.bg-info {
+  &:hover {
+    background-color: darken($info, 10%) ;
+  }
+  &:focus {
+    background-color: darken($info, 10%) ;
+  }
+}
+button.bg-info {
+  &:hover {
+    background-color: darken($info, 10%) ;
+  }
+  &:focus {
+    background-color: darken($info, 10%) ;
+  }
+}
+.bg-warning {
+  background-color: $warning ;
+}
+a.bg-warning {
+  &:hover {
+    background-color: darken($warning, 10%) ;
+  }
+  &:focus {
+    background-color: darken($warning, 10%) ;
+  }
+}
+button.bg-warning {
+  &:hover {
+    background-color: darken($warning, 10%) ;
+  }
+  &:focus {
+    background-color: darken($warning, 10%) ;
+  }
+}
+.bg-danger {
+  background-color: $danger ;
+}
+a.bg-danger {
+  &:hover {
+    background-color: darken($danger, 10%) ;
+  }
+  &:focus {
+    background-color: darken($danger, 10%) ;
+  }
+}
+button.bg-danger {
+  &:hover {
+    background-color: darken($danger, 10%) ;
+  }
+  &:focus {
+    background-color: darken($danger, 10%) ;
+  }
+}
+.bg-light {
+  background-color: $light ;
+}
+a.bg-light {
+  &:hover {
+    background-color: darken($light, 10%) ;
+  }
+  &:focus {
+    background-color: darken($light, 10%) ;
+  }
+}
+button.bg-light {
+  &:hover {
+    background-color: darken($light, 10%) ;
+  }
+  &:focus {
+    background-color: darken($light, 10%) ;
+  }
+}
+.bg-dark {
+  background-color: $dark ;
+}
+a.bg-dark {
+  &:hover {
+    background-color: darken($dark, 10%) ;
+  }
+  &:focus {
+    background-color: darken($dark, 10%) ;
+  }
+}
+button.bg-dark {
+  &:hover {
+    background-color: darken($dark, 10%) ;
+  }
+  &:focus {
+    background-color: darken($dark, 10%) ;
+  }
+}
+.bg-white {
+  background-color: $white ;
+}
+.bg-transparent {
+  background-color: transparent ;
+}

@@ -1,2 +1,2 @@
-import '../src/scss/main.scss';
+import './scss/application.scss';
 import 'popper.js';
