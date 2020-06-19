@@ -3,7 +3,10 @@
 }
 
 
-// designSystem functions
+// Some Basic Functions
+
+
+// Bootstrap functions
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
 
@@ -143,4 +146,112 @@
   }
 
   @return if($return-calc == true, calc(#{$value1} - #{$value2}), $value1 + unquote(" - ") + $value2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Global Mixins
+
+
+
+// stylelint-disable property-blacklist
+@mixin transition($transition...) {
+  @if length($transition) == 0 {
+    $transition: $transition-base;
+  }
+
+  @if length($transition) > 1 {
+    @each $value in $transition {
+      @if $value == null or $value == none {
+        @warn "The keyword 'none' or 'null' must be used as a single argument.";
+      }
+    }
+  }
+
+  @if $enable-transitions {
+    @if nth($transition, 1) != null {
+      transition: $transition;
+    }
+
+    @if $enable-prefers-reduced-motion-media-query and nth($transition, 1) != null and nth($transition, 1) != none {
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
+    }
+  }
+}
+
+
+//box shadows
+
+@mixin box-shadow($shadow...) {
+  @if $enable-shadows {
+    $result: ();
+
+    @if (length($shadow) == 1) {
+      // We can pass `@include box-shadow(none);`
+      $result: $shadow;
+    } @else {
+      // Filter to avoid invalid properties for example `box-shadow: none, 1px 1px black;`
+      @for $i from 1 through length($shadow) {
+        @if nth($shadow, $i) != "none" {
+          $result: append($result, nth($shadow, $i), "comma");
+        }
+      }
+    }
+    @if (length($result) > 0) {
+      box-shadow: $result;
+    }
+  }
+}
+
+
+
+
+// Hover mixin and `$enable-hover-media-query` are deprecated.
+//
+// Originally added during our alphas and maintained during betas, this mixin was
+// designed to prevent `:hover` stickiness on iOS-an issue where hover styles
+// would persist after initial touch.
+//
+// For backward compatibility, we've kept these mixins and updated them to
+// always return their regular pseudo-classes instead of a shimmed media query.
+//
+// Issue: https://github.com/twbs/bootstrap/issues/25195
+
+@mixin hover() {
+  &:hover { @content; }
+}
+
+@mixin hover-focus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin plain-hover-focus() {
+  &,
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin hover-focus-active() {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
 }

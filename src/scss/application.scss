@@ -1,27 +1,39 @@
+@import "vendors/rfs_autofontSizing";
+
+
 @import "settings/setting.global";
-@import "settings/setting.typography";
-@import "settings/setting.buttons";
+@import "settings/variables";
+
 @import "settings/setting.colors";
+@import "settings/setting.typography";
 @import "settings/setting.gridLayout";
+@import "settings/setting.buttons";
 @import "settings/setting.borders";
+
+
+@import "tools/tool.grid";
+@import "tools/tool.shadows";
+@import "tools/tool.clearfix";
+@import "tools/tool.gradients";
+
+
 
 @import "components/buttons";
 @import "components/card";
 @import "components/images";
 
-@import "tools/clearfix";
-@import "tools/grid";
-@import "tools/shadows";
+
 
 @import "utilitis/align";
 @import "utilitis/borders";
 @import "utilitis/flex";
-@import "utilitis/grid";
 @import "utilitis/position";
 @import "utilitis/sizing";
 @import "utilitis/spacing";
 @import "utilitis/text";
 @import "utilitis/visibility";
+
+
 
 // Custom Styles
 @import "custom-theme";
