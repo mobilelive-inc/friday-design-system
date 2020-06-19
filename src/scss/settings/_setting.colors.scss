@@ -1,62 +1,53 @@
-
-
 // Variables Colors
 
 // Color system
 :root {
   --white: #fff;
   --gray: #707070;
-  --gray-light: #E5E5E5;
+  --gray-light: #e5e5e5;
   --gray-dark: #282828;
 
+  --orange: #f48245;
+  --orange-lighter: #fef3ec;
+  --orange-light: #f9c0a2;
+  --orange-dark: #c36837;
+  --orange-darker: #311a0e;
 
-  --orange: #F48245;
-  --orange-lighter: #FEF3EC;
-  --orange-light: #F9C0A2;
-  --orange-dark: #C36837;
-  --orange-darker: #311A0E;
-
-
-  --blue: #55A2D9;
-  --blue-lighter: #EEF6FB;
-  --blue-light: #BBDAF0;
+  --blue: #55a2d9;
+  --blue-lighter: #eef6fb;
+  --blue-light: #bbdaf0;
   --blue-dark: #336182;
-  --blue-darker: #11202B;
+  --blue-darker: #11202b;
 
-
-  --lemon: #FCCC2E;
-  --lemon-lighter: #FFFAEA;
-  --lemon-light: #FEEBAB;
-  --lemon-dark: #977A1C;
+  --lemon: #fccc2e;
+  --lemon-lighter: #fffaea;
+  --lemon-light: #feebab;
+  --lemon-dark: #977a1c;
   --lemon-darker: #322909;
 
-
-  --lime: #C4D93C;
-  --lime-lighter: #F9FBEC;
-  --lime-light: #E7F0B1;
+  --lime: #c4d93c;
+  --lime-lighter: #f9fbec;
+  --lime-light: #e7f0b1;
   --lime-dark: #768224;
-  --lime-darker: #272B0C;
+  --lime-darker: #272b0c;
 
+  --cyan: #66c9d5;
+  --cyan-lighter: #f0fafb;
+  --cyan-light: #c2e9ee;
+  --cyan-dark: #3d7980;
+  --cyan-darker: #14282b;
 
-  --cyan: #66C9D5;
-  --cyan-lighter: #F0FAFB;
-  --cyan-light: #C2E9EE;
-  --cyan-dark: #3D7980;
-  --cyan-darker: #14282B;
-
-  --navy: #2874A4;
-  --navy-lighter: #EAF1F6;
-  --navy-light: #A9C7DB;
+  --navy: #2874a4;
+  --navy-lighter: #eaf1f6;
+  --navy-light: #a9c7db;
   --navy-dark: #184662;
   --navy-darker: #081721;
 
-
-  --red: #DF4B4B;
-  --green: #34A84D;
+  --red: #df4b4b;
+  --green: #34a84d;
   --black: #191919;
   --pure: var(--white);
   --ash: var(--gray);
-
 
   // Theme Standard colors
   --primary: var(--orange);
@@ -69,33 +60,19 @@
   --dark: var(--gray-dark);
 }
 
-
 $primaryColor: var(--primary);
 $primaryColor2: var(--gray);
 $primaryColor3: var(--lemon);
 $primaryColor4: var(--red);
 
-
-
 $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
-                (
-                        "primary": $primaryColor,
-                        "secondary": $primaryColor2,
-                        "success": $primaryColor3,
-                        "info": $primaryColor4,
-                ),
-                $theme-colors
+  (
+    "primary": $primaryColor,
+    "secondary": $primaryColor2,
+    "success": $primaryColor3,
+    "info": $primaryColor4,
+  ),
+  $theme-colors
 );
-
-
-
-
-
-
-
-
-
-
-

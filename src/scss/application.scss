@@ -1,6 +1,5 @@
 @import "vendors/rfs_autofontSizing";
 
-
 @import "settings/setting.global";
 @import "settings/variables";
 
@@ -10,19 +9,14 @@
 @import "settings/setting.buttons";
 @import "settings/setting.borders";
 
-
 @import "tools/tool.grid";
 @import "tools/tool.shadows";
 @import "tools/tool.clearfix";
 @import "tools/tool.gradients";
 
-
-
 @import "components/buttons";
 @import "components/card";
 @import "components/images";
-
-
 
 @import "utilitis/align";
 @import "utilitis/borders";
@@ -32,8 +26,6 @@
 @import "utilitis/spacing";
 @import "utilitis/text";
 @import "utilitis/visibility";
-
-
 
 // Custom Styles
 @import "custom-theme";

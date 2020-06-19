@@ -1,6 +1,5 @@
 // Settings Borders
 
-
 // Helper function to replace negative values with 0
 @function valid-radius($radius) {
   $return: ();
@@ -17,8 +16,7 @@
 @mixin border-radius($radius: $border-radius, $fallback-border-radius: false) {
   @if $enable-rounded {
     border-radius: valid-radius($radius);
-  }
-  @else if $fallback-border-radius != false {
+  } @else if $fallback-border-radius != false {
     border-radius: $fallback-border-radius;
   }
 }
