@@ -29,7 +29,10 @@ const Flex = styled(BaseFlex)(
 
 const GetStarted = () => {
   return (
-    <>
+    <div
+      style={{
+        fontFamily:'"Noto Sans", sans-serif'
+      }}>
       <Flex
         alignItems="center"
         justifyContent="center">
@@ -42,11 +45,14 @@ const GetStarted = () => {
       </Flex>
       <Flex
         pl={["0px", "25%"]}>
-        <h3>Andromaida</h3>
+        <h3>Andromeda</h3>
       </Flex>
       <Flex
         px={["0px", "25%"]}>
-        <p>The Andromaida is an opinionated assemblage of open-source tools and libraries that allow you to accelerate your design system. The choice of tools, their composition, and a set of foundational components guides you on how to build a constraint-based system.</p>
+        <p>{`The Andromeda is an opinionated assemblage of open-source tools 
+          and libraries that allow you to accelerate the development of your 
+          web application.The choice of tools, their composition, and a set of foundational 
+          components guides you on how to build a constraint-based system.`}</p>
       </Flex>
       <Flex
         pl={["0px", "25%"]}>
@@ -55,7 +61,12 @@ const GetStarted = () => {
       <Flex
         px={["0px", "25%"]}>
         <p>
-          Radius is a seed project and not a library. It is built with composition in mind. You can replace any component or any part of the stack or create new things to extend it.
+          {
+            `Andromeda is built following the philosophy of composition.
+            It provides a ranged of UI components that can be composed together
+            to build a web application.
+            `
+          }
         </p>
       </Flex>
       <Flex
@@ -65,13 +76,13 @@ const GetStarted = () => {
             The design kit is built and maintained in Figma. It includes a set of foundational components and a reference architecture.
           </li>
           <li style={{padding:'5px'}}>
-            The component library bootstrapped using TSDX, mirrors the Figma components and is built using Typescript, React, Styled System and Styled Components.
+            {
+              `The component library, mirrors the Figma components and is built using 
+              Javascript, React, Styled System and Styled Components.`
+            }
           </li>
           <li style={{padding:'5px'}}>
             Storybook acts as both the developer sandbox and the documentation platform.
-          </li>
-          <li style={{padding:'5px'}}>
-            Chromatic runs visual regression tests, CircleCI runs all other forms of testing and Netlify builds and deploys Storybook as a static site.
           </li>
         </ul>
       </Flex>
@@ -95,7 +106,7 @@ const GetStarted = () => {
             <p style={{dispaly:"inline"}}> a set of JavaScript components that are version controlled and are composed to build one or more products.</p>
           </li>
           <li>
-            <b>Component Library —</b>
+            <b>Documentation —</b>
             <p style={{dispaly:"inline"}}>
               a set of guidelines on how to consume the Design System, design and dev considerations and detailed documentation for each component. The documentation site often includes a live playground that is aimed at the consumers to try out components in the browser.
             </p>
@@ -120,7 +131,7 @@ const GetStarted = () => {
           </li>
         </ul>
       </Flex>
-    </>
+    </div>
   )
 }
 

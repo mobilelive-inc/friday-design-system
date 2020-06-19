@@ -7,7 +7,7 @@ import theme from './defaultTheme';
 addParameters({
   options: {
     theme,
-    isToolshown:false,
+    isToolshown:true,
     showPanel:false,
     showCanvas:false
   },
