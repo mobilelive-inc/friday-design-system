@@ -13,6 +13,7 @@
 @import "tools/tool.shadows";
 @import "tools/tool.clearfix";
 @import "tools/tool.gradients";
+@import "tools/tool.vendor-prefixes";
 
 @import "components/buttons";
 @import "components/card";
@@ -26,6 +27,13 @@
 @import "utilitis/spacing";
 @import "utilitis/text";
 @import "utilitis/visibility";
+@import "utilitis/background";
 
 // Custom Styles
-@import "custom-theme";
+@import "custom_theming/custom-theme";
+@import "custom_theming/sidebar";
+
+
+//vendors
+
+@import "vendors/icomons_styles.css";

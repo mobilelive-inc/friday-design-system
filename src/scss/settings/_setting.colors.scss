@@ -60,19 +60,19 @@
   --dark: var(--gray-dark);
 }
 
-$primaryColor: var(--primary);
-$primaryColor2: var(--gray);
-$primaryColor3: var(--lemon);
-$primaryColor4: var(--red);
-
-$theme-colors: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$theme-colors: map-merge(
-  (
-    "primary": $primaryColor,
-    "secondary": $primaryColor2,
-    "success": $primaryColor3,
-    "info": $primaryColor4,
-  ),
-  $theme-colors
-);
+//$primaryColor: var(--primary);
+//$primaryColor2: var(--gray);
+//$primaryColor3: var(--lemon);
+//$primaryColor4: var(--red);
+//
+//$theme-colors: () !default;
+//// stylelint-disable-next-line scss/dollar-variable-default
+//$theme-colors: map-merge(
+//  (
+//    "primary": $primaryColor,
+//    "secondary": $primaryColor2,
+//    "success": $primaryColor3,
+//    "info": $primaryColor4,
+//  ),
+//  $theme-colors
+//);
