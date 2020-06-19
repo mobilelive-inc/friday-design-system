@@ -55,6 +55,10 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.10.1",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "babel-eslint": "^10.1.0",
+    "husky": "^4.2.5",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
@@ -63,7 +67,6 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "@storybook/theming": "^5.3.19",
-    "babel-eslint": "^10.1.0",
     "babel-plugin-inline-react-svg": "^1.1.1",
     "jest": "^26.0.1",
     "storybook-addon-intl": "^2.4.1"
@@ -77,6 +80,11 @@
     "build-storybook": "build-storybook",
     "webpack": "webpack"
   },
+  "husky": {
+      "hooks": {
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      }
+    },
   "author": "Samaid Saeed",
   "license": "ISC"
 }
