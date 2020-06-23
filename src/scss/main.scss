@@ -1,29 +1,26 @@
-@import "UiDSystem";
-@import "UiDSystem-grid";
-@import "components/custom-theme";
+@import "base/mixins";
+@import "base/base";
 
-@import "info--page";
-//@import "base/base";
+@import "components/images";
+@import "components/grid";
+@import "components/forms";
+@import "components/layout";
+@import "components/colors";
+@import "components/spacing_units";
+@import "components/images";
+@import "components/forms";
 
 
-/* body styles */
-body {
-	//min-width: $base-min-width;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-}
+@import "base/fonts";
+
+
+
+// Custom Styles
+@import "custom-theme";
 
 /* main wrapper styles */
-#wrapper{
+#wrapper {
   position: relative;
-  width:100%;
+  width: 100%;
   overflow: hidden;
 }
-
-
-/* default link animation */
-a{
-	//@extend %transition;
-  text-decoration: none;
-}
-

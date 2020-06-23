@@ -1,3 +1,7 @@
 .clearfix {
-  @include clearfix();
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
 }

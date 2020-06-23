@@ -12,7 +12,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin ({
             inject: true,
-            template: 'src/index.html'
+            template: 'src/index.html',
         }),
         new CopyWebpackPlugin([
             {
