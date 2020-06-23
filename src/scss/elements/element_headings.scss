@@ -116,7 +116,7 @@ mark,
 
 // Blockquotes
 .blockquote {
-  margin-bottom: $spacer;
+  margin-bottom: $global-spacer;
   @include font-size($blockquote-font-size);
 }
 

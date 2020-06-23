@@ -2,7 +2,7 @@
 
 // Some Basic Functions
 
-// Bootstrap functions
+// DesignSystem functions
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
 
@@ -232,7 +232,7 @@
 // For backward compatibility, we've kept these mixins and updated them to
 // always return their regular pseudo-classes instead of a shimmed media query.
 //
-// Issue: https://github.com/twbs/bootstrap/issues/25195
+// Issue: https://github.com/twbs/DesignSystem/issues/25195
 
 @mixin hover() {
   &:hover {
