@@ -322,7 +322,7 @@ $font-weight-bold: 700 !default;
 $font-weight-bolder: bolder !default;
 
 $font-weight-base: $font-weight-normal !default;
-$line-height-base: 1.5 !default;
+$line-height-base: 1 !default;
 
 $h1-font-size: $font-size-base * 2.5 !default;
 $h2-font-size: $font-size-base * 2 !default;
@@ -413,7 +413,7 @@ $table-border-level: -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y: 0.5rem !default;
+$input-btn-padding-y: 1rem !default;
 $input-btn-padding-x: 2rem !default;
 $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base !default;
