@@ -1,17 +1,19 @@
 {
-  "name": "design-thinking-landing-page",
+  "name": "mobilelive-design-system-static",
   "version": "1.0.0",
-  "description": "Design thinking landing page",
+  "description": "mobileLive Designs System Static",
   "main": "index.js",
   "scripts": {
     "dev-build": "webpack --mode development",
     "build": "webpack -p",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development --open",
+    "lint": "./node_modules/.bin/stylelint \"**/*.scss\" --syntax scss"
   },
   "author": "Safinali Maredia",
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
+    "D": "^1.0.0",
     "core-js": "^3.6.4",
     "is-mobile": "^2.2.1",
     "isotope-layout": "^3.0.6",
@@ -30,14 +32,18 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^5.1.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.5",
     "mini-css-extract-plugin": "^0.9.0",
+    "prettier": "2.0.5",
     "sass-loader": "^8.0.2",
+    "sass-true": "^4.0.0",
     "style-loader": "^1.1.3",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
     "url-loader": "^3.0.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "stylint": "2.0.0",
-    "prettier": "2.0.5"
+    "webpack-dev-server": "^3.10.3"
   }
 }
