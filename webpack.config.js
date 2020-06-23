@@ -44,7 +44,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
+        use: ['@svgr/webpack', 'url-loader'],
       },
       {
         test: /\.font\.js/,

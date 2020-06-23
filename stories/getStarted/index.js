@@ -16,7 +16,7 @@ import {
  * Rebass Flex with additional support
  */
 
-const Flex = styled(BaseFlex)(
+export const Flex = styled(BaseFlex)(
   compose(
     border,
     background,

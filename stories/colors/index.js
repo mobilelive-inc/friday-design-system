@@ -26,7 +26,7 @@ const Flex = styled(BaseFlex)(
   ),
 );
 
-const Box = styled(BaseBox)(
+export const Box = styled(BaseBox)(
   compose(
     border,
     background,

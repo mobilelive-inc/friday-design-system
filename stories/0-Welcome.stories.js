@@ -5,7 +5,7 @@ import GetStarted from './getStarted';
 import Colors from './colors';
 
 export default {
-  title: 'Welcome',
+  title: 'Get Started',
   component: Welcome,
 };
 
@@ -17,11 +17,12 @@ ToStorybook.story = {
   // parameters: { docs: { disable: false }, canvas:{disable: false} }
   parameters: {
     options: {
-      isToolshown:false,
+      isToolshown:true,
       showPanel:false,
-      showCanvas:true
+      showCanvas:false
     },
-    docs: { page: null } ,
+    docs: { page: null },
+    viewMode: 'story',
   },
 };
 
@@ -30,9 +31,11 @@ colorTokens.story = {
   // parameters: { docs: { disable: false }, canvas:{disable: false} }
   parameters: {
     options: {
-      isToolshown:false,
+      isToolshown:true,
       showPanel:false,
-      showCanvas:true
-    }
+      showCanvas:false
+    },
+    docs: { page: null },
+    viewMode: 'story'
   },
 }

@@ -6,8 +6,8 @@ import styled from 'styled-components'
 
 
 const BaseButton = styled.button`
-  background-color: #f48245;
-  color: white;
+  background-color: #F9C0A2;
+  color: black;
   width: 150px;
   height: 50px;
   cursor: pointer;
@@ -15,21 +15,30 @@ const BaseButton = styled.button`
 `
 
 const Button = ({
-  children, status
+  children, type, onClick, radius
 }) => {
-  return <BaseButton type="button" value={status}>{children}</BaseButton>
+  return (
+    <BaseButton
+      type={type}
+      onClick={onClick}
+      style={{
+        borderRadius: radius || "0px"
+      }}>{children}</BaseButton>
+  )
 }
 
 export default Button;
 
 Button.propTypes = {
   ...width.propTypes,
-  status: PropTypes.oneOf(['positive', 'negative', 'neutral', 'error', 'warning']),
+  type: PropTypes.oneOf(['submit', 'button', 'reset']).isRequired,
+  radius: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ])
 };
 Button.defaultProps = {
-  status: 'neutral',
+  type: 'button',
 };
