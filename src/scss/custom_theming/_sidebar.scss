@@ -100,14 +100,14 @@
             }
           }
           &:hover{
-            color: var(--gray-light);
+            color: $gray-light;
             i{
               &:before{
-                color: var(--gray-light);
+                color: $gray-light;
               }
             }
             &:before {
-              background-color: var(--gray-light);
+              background-color: $gray-light;
             }
           }
 

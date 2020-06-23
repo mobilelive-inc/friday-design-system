@@ -208,7 +208,7 @@
 
 // Framework grid generation
 //
-// Used only by Bootstrap to generate the correct number of grid classes given
+// Used only by DesignSystem to generate the correct number of grid classes given
 // any value of `$grid-columns`.
 
 @mixin make-grid-columns(
@@ -246,7 +246,7 @@
       .col#{$infix} {
         flex-basis: 0;
         flex-grow: 1;
-        min-width: 0; // See https://github.com/twbs/bootstrap/issues/25410
+        min-width: 0; // See https://github.com/twbs/DesignSystem/issues/25410
         max-width: 100%;
       }
 
