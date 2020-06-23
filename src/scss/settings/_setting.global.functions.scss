@@ -1,6 +1,4 @@
-:root {
-  --spacer: 16px;
-}
+
 
 // Some Basic Functions
 
@@ -61,7 +59,6 @@
   @return $string;
 }
 
-// See https://codepen.io/kevinweber/pen/dXWoRw
 @function escape-svg($string) {
   @if str-index($string, "data:image/svg+xml") {
     @each $char, $encoded in $escaped-characters {

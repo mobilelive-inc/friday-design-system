@@ -1,9 +1,8 @@
 @import "vendors/rfs_autofontSizing";
 
-@import "settings/setting.global";
-@import "settings/variables";
+@import "settings/setting.global.functions";
+@import "settings/setting.global.variables";
 
-@import "settings/setting.colors";
 @import "settings/setting.typography";
 @import "settings/setting.gridLayout";
 @import "settings/setting.buttons";

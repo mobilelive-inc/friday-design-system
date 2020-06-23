@@ -6,7 +6,6 @@
 // Color system
 
 $white: #fff !default;
-
 $gray-light: #e5e5e5 !default;
 $gray: #707070 !default;
 $gray-dark: #212529 !default;
@@ -18,42 +17,62 @@ $grays: () !default;
 $grays: map-merge(
   (
     "100": $gray-light,
-    "200": $gray-light,
-    "300": $gray-light,
     "400": $gray,
-    "500": $gray,
-    "600": $gray,
-    "700": $gray-dark,
-    "800": $gray-dark,
     "900": $gray-dark,
   ),
   $grays
 );
 
-$blue: #007bff !default;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
-$pink: #e83e8c !default;
+$orange: #f48245;
+$orange-lighter: #fef3ec;
+$orange-light: #f9c0a2;
+$orange-dark: #c36837;
+$orange-darker: #311a0e;
+
+$blue: #55a2d9;
+$blue-lighter: #eef6fb;
+$blue-light: #bbdaf0;
+$blue-dark: #336182;
+$blue-darker: #11202b;
+
+$lemon: #fccc2e;
+$lemon-lighter: #fffaea;
+$lemon-light: #feebab;
+$lemon-dark: #977a1c;
+$lemon-darker: #322909;
+
+$lime: #c4d93c;
+$lime-lighter: #f9fbec;
+$lime-light: #e7f0b1;
+$lime-dark: #768224;
+$lime-darker: #272b0c;
+
+$cyan: #66c9d5;
+$cyan-lighter: #f0fafb;
+$cyan-light: #c2e9ee;
+$cyan-dark: #3d7980;
+$cyan-darker: #14282b;
+
+$navy: #2874a4;
+$navy-lighter: #eaf1f6;
+$navy-light: #a9c7db;
+$navy-dark: #184662;
+$navy-darker: #081721;
+
+
 $red: #dc3545 !default;
-$orange: #f48245 !default;
-$yellow: #ffc107 !default;
-$green: #28a745 !default;
-$teal: #20c997 !default;
-$cyan: #17a2b8 !default;
+$green: #34A84D !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
   (
     "blue": $blue,
-    "indigo": $indigo,
-    "purple": $purple,
-    "pink": $pink,
+    "lime": $lime,
     "red": $red,
     "orange": $orange,
-    "yellow": $yellow,
-    "green": $green,
-    "teal": $teal,
+    "lemon": $lemon,
+    "navy": $navy,
     "cyan": $cyan,
     "white": $white,
     "gray": $gray,
@@ -63,14 +82,14 @@ $colors: map-merge(
 );
 
 
-//$primary: var(--primary);
-//$secondary: var(--secondary);
-//$success: var(--success);
-//$info: var(--info);
-//$warning: var(--warning);
-//$danger: var(--danger);
-//$light: var(--light);
-//$dark: var(--dark);
+//$primary: var($primary);
+//$secondary: var($secondary);
+//$success: var($success);
+//$info: var($info);
+//$warning: var($warning);
+//$danger: var($danger);
+//$light: var($light);
+//$dark: var($dark);
 
 
 
@@ -78,7 +97,7 @@ $primary:       $orange !default;
 $secondary:     $gray !default;
 $success:       $green !default;
 $info:          $cyan !default;
-$warning:       $yellow !default;
+$warning:       $lemon !default;
 $danger:        $red !default;
 $light:         $gray-light !default;
 $dark:          $gray-dark !default;
@@ -247,9 +266,10 @@ $grid-row-columns: 6 !default;
 $line-height-lg: 1.5 !default;
 $line-height-sm: 1.5 !default;
 
-$border-width: 1px !default;
+$border-width: 2px !default;
 $border-color: $gray-light !default;
 
+$border-radius-none: 0 !default;
 $border-radius: 0.25rem !default;
 $border-radius-lg: 0.3rem !default;
 $border-radius-sm: 0.2rem !default;
@@ -393,8 +413,8 @@ $table-border-level: -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y: 0.375rem !default;
-$input-btn-padding-x: 0.75rem !default;
+$input-btn-padding-y: 0.5rem !default;
+$input-btn-padding-x: 2rem !default;
 $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base !default;
 $input-btn-line-height: $line-height-base !default;
@@ -438,7 +458,7 @@ $btn-line-height-lg: $input-btn-line-height-lg !default;
 
 $btn-border-width: $input-btn-border-width !default;
 
-$btn-font-weight: $font-weight-normal !default;
+$btn-font-weight: $font-weight-bold !default;
 $btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075) !default;
 $btn-focus-width: $input-btn-focus-width !default;
 $btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
@@ -450,7 +470,9 @@ $btn-link-disabled-color: $gray !default;
 $btn-block-spacing-y: 0.5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius: $border-radius !default;
+$btn-border-radius: $border-radius-none !default;
+$btn-border-radius-curved: 8px !default;
+$btn-border-radius-rounded: 50px !default;
 $btn-border-radius-lg: $border-radius-lg !default;
 $btn-border-radius-sm: $border-radius-sm !default;
 
@@ -1151,7 +1173,7 @@ $close-text-shadow: 0 1px 0 $white !default;
 // Code
 
 $code-font-size: 87.5% !default;
-$code-color: $pink !default;
+$code-color: $red !default;
 
 $kbd-padding-y: 0.2rem !default;
 $kbd-padding-x: 0.4rem !default;
