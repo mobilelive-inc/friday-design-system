@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { linkTo } from '@storybook/addon-links';
 import { Welcome } from '@storybook/react/demo';
 import GetStarted from './getStarted';
 import Colors from './colors';
@@ -10,6 +9,7 @@ export default {
 };
 
 export const ToStorybook = () => <GetStarted />;
+// eslint-disable-next-line react/no-multi-comp
 export const colorTokens = () => <Colors />
 
 ToStorybook.story = {

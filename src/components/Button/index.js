@@ -15,12 +15,13 @@ const BaseButton = styled.button`
 `
 
 const Button = ({
-  children, type, onClick, radius
+  children, type, onClick, radius, disabled
 }) => {
   return (
     <BaseButton
       type={type}
       onClick={onClick}
+      disabled={disabled}
       style={{
         borderRadius: radius || "0px"
       }}>{children}</BaseButton>
@@ -34,6 +35,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(['submit', 'button', 'reset']).isRequired,
   radius: PropTypes.string,
   onClick: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node

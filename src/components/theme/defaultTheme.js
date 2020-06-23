@@ -187,44 +187,34 @@ export const zIndices = [
 export const typography = {
   H1 : {
     fontSize: fontSizes[11],
-    marginTop: space[0],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
   },
   H2: {
     fontSize: fontSizes[9],
-    marginTop: space[0],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
   },
   H3: {
     fontSize: fontSizes[8],
-    marginTop: space[0],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
   },
   H4: {
     fontSize: fontSizes[7],
-    marginTop: space[0],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
   },
   H5: {
     fontSize: fontSizes[5],
-    marginTop: space[0],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
   },
   H6: {
     fontSize: fontSizes[3],
-    marginTop: space[0],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
   },
-  paragraph:{
-    marginTop: space[0],
-    marginBottom: space[7]
-  }
 }
 
 export default {

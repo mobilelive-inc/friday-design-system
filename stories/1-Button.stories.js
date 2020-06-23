@@ -13,7 +13,7 @@ export default {
   component: Button,
 };
 
-export const Text = () => <Button onClick={action('clicked')}>Primary Button</Button>;
+export const PrimaryButton = () => <Button onClick={action('clicked')}>Primary Button</Button>;
 
 // eslint-disable-next-line react/no-multi-comp
 export const SecondaryButton =  () => (
@@ -22,9 +22,18 @@ export const SecondaryButton =  () => (
 
 // eslint-disable-next-line react/no-multi-comp
 export const WithRadius = () => (
-  <Button onClick={action('clicked')} radius="30px">
-    Rounded Button
-  </Button>
+  <Flex>
+    <Box width="25%">
+      <Button onClick={action('clicked')} radius="30px">
+        Rounded Button
+      </Button>
+    </Box>
+    <Box width="25%">
+      <Button onClick={action('clicked')} radius="8px">
+        Curved Button
+      </Button>
+    </Box>
+  </Flex>
 );
 
 // eslint-disable-next-line react/no-multi-comp
@@ -43,6 +52,11 @@ export const WithIcon = () => (
     <Box p="10px" width="25%">
       <SecondButton onClick={action('clicked')}>
         <AddPhoto /> <span>Upload Photo  </span>
+      </SecondButton>
+    </Box>
+    <Box p="10px" width="25%">
+      <SecondButton onClick={action('clicked')}>
+        <AddPhoto />
       </SecondButton>
     </Box>
   </Flex>

@@ -6,14 +6,12 @@ const ReplaceInFileWebpackPlugin = require('replace-in-file-webpack-plugin');
 const getEntries = fs
   .readdirSync('src/components')
   .map((component) => `./src/components/${component}/index.js`)
-console.log("enteries =======>>>>", getEntries)
-console.log("this is ", fs.readdirSync('src/components').map((component) => component))
+
 module.exports = {
   entry: "./src/components",
   output: {
     path: path.resolve('./dist/components/'),
     filename: (pathData) => {
-      console.log("path data is =====>>>", pathData)
       return '[file].js';
     },
   },

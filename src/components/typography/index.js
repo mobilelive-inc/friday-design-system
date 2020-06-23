@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import {
   compose,
   color,
@@ -8,9 +9,7 @@ import {
   border,
   variant
 } from 'styled-system';
-import { Text as RebassText, Box } from 'rebass/styled-components';
-import PropTypes from 'prop-types';
-import MediaQuery from '../../utils/mediaQuery';
+import { Text as RebassText } from 'rebass/styled-components';
 
 export const Text = styled(RebassText)(
   compose(
@@ -22,3 +21,10 @@ export const Text = styled(RebassText)(
     variant({ scale: 'typography' }),
   ),
 );
+
+Text.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
+};
