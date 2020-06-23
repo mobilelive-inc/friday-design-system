@@ -11,6 +11,7 @@ const BaseButton = styled.button`
   width: 150px;
   height: 50px;
   cursor: pointer;
+  
   ${width}
 `
 
@@ -36,6 +37,7 @@ Button.propTypes = {
   radius: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
+  /**children can be textual labels, icons or any valid HTML nodes */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node

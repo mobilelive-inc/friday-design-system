@@ -11,6 +11,7 @@ import {
 import {
   Flex as BaseFlex, Image
 } from 'rebass/styled-components';
+import galaxy from '../../src/assets/galaxy.jpg';
 
 /**
  * Rebass Flex with additional support
@@ -37,7 +38,7 @@ const GetStarted = () => {
         alignItems="center"
         justifyContent="center">
         <Image
-          src="https://6cb60bfa-a-62cb3a1a-s-sites.googlegroups.com/site/celeblianeyan/andromeda-galaxy/Energie-sexuelle-2.jpg?attachauth=ANoY7creW_a6P7uriZe-S4Exxsb02_5-I6CBfS9jq_bay1xxlSo7pe4vEqVt_Ce4pA7oh1CAKvJmoUxcC3iNR_gtQPZ_pQCQ9I90ErYknxZb5i_ygeV1ztdlcZxBmSJpRTIf_VaY_4pzdhq4tdvf4JLkH7Y2Bz4KwxQI-sQ0fhe1umlelLUm36jeSFGD2WA1vQ3xRB1nttPA5qjnH3n1yayG1qyI6YusVSW--aZeguNerfbCrgVckK2SqC2uOAIeejdW1f28jQkJ&attredirects=0"
+          src={galaxy}
           sx={{
             width: [ '100%', '50%' ],
             borderRadius: 8,
