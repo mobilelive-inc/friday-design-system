@@ -64,16 +64,50 @@ fieldset:disabled a.btn {
 //
 // Alternate buttons
 //
-
+// Solid block border Btn
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     @include button-variant($value, $value);
   }
 }
 
+// Solid curved border Btn
+@each $color, $value in $theme-colors {
+  .btn-#{$color}-curved {
+    @include button-variant($value, $value);
+    border-radius: $btn-border-radius-curved;
+  }
+}
+
+// Solid Rounded border Btn
+@each $color, $value in $theme-colors {
+  .btn-#{$color}-rounded {
+    @include button-variant($value, $value);
+    border-radius: $btn-border-radius-rounded;
+  }
+}
+
+
+// Outline block border Btn
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
+  }
+}
+
+// Outline curved border Btn
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color}-curved {
+    @include button-outline-variant($value);
+    border-radius: $btn-border-radius-curved;
+  }
+}
+
+// Outline rounded border Btn
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color}-rounded {
+    @include button-outline-variant($value);
+    border-radius: $btn-border-radius-rounded;
   }
 }
 
