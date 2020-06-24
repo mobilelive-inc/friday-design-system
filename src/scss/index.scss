@@ -2,11 +2,15 @@
 
 @import "settings/setting.global.functions";
 @import "settings/setting.global.variables";
-
 @import "settings/setting.typography";
+
 @import "settings/setting.gridLayout";
 @import "settings/setting.buttons";
 @import "settings/setting.borders";
+@import "settings/setting.forms";
+@import "settings/setting.tables";
+@import "settings/setting.modals";
+
 
 @import "tools/tool.grid";
 @import "tools/tool.shadows";
@@ -14,10 +18,8 @@
 @import "tools/tool.gradients";
 @import "tools/tool.vendor-prefixes";
 
-@import "elements/element_headings";
-
+@import "elements/element.headings";
 @import "components/buttons";
-@import "components/card";
 @import "components/images";
 
 @import "utilitis/align";
@@ -31,10 +33,10 @@
 @import "utilitis/background";
 
 // Custom Styles
-@import "custom_theming/custom-theme";
-@import "custom_theming/sidebar";
+@import "../DashboardStyling/custom-theme";
+@import "../DashboardStyling/sidebar";
 
 
 //vendors
 
-@import "vendors/icomons_styles.css";
+@import "vendors/icomons_styles";
