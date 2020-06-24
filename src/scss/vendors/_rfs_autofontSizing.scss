@@ -9,34 +9,34 @@
 // Configuration
 
 // Base font size
-$rfs-base-font-size: 1.25rem !default;
-$rfs-font-size-unit: rem !default;
+$rfs-base-font-size: 1.25rem ;
+$rfs-font-size-unit: rem ;
 
 // Breakpoint at where font-size starts decreasing if screen width is smaller
-$rfs-breakpoint: 1200px !default;
-$rfs-breakpoint-unit: px !default;
+$rfs-breakpoint: 1200px ;
+$rfs-breakpoint-unit: px ;
 
 // Resize font-size based on screen height and width
-$rfs-two-dimensional: false !default;
+$rfs-two-dimensional: false ;
 
 // Factor of decrease
-$rfs-factor: 10 !default;
+$rfs-factor: 10 ;
 
 @if type-of($rfs-factor) != "number" or $rfs-factor <= 1 {
   @error "`#{$rfs-factor}` is not a valid  $rfs-factor, it must be greater than 1.";
 }
 
 // Generate enable or disable classes. Possibilities: false, "enable" or "disable"
-$rfs-class: false !default;
+$rfs-class: false ;
 
 // 1 rem = $rfs-rem-value px
-$rfs-rem-value: 16 !default;
+$rfs-rem-value: 16 ;
 
 // Safari iframe resize bug: https://github.com/twbs/rfs/issues/14
-$rfs-safari-iframe-resize-bug-fix: false !default;
+$rfs-safari-iframe-resize-bug-fix: false ;
 
 // Disable RFS by setting $enable-responsive-font-sizes to false
-$enable-responsive-font-sizes: true !default;
+$enable-responsive-font-sizes: true ;
 
 // Cache $rfs-base-font-size unit
 $rfs-base-font-size-unit: unit($rfs-base-font-size);

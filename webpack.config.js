@@ -1,56 +1,26 @@
-const path = require("path");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
 module.exports = {
-  entry: ["@babel/polyfill", "./src/index.js"],
+  entry: './src/js/main.js',
   output: {
-    path: __dirname + "/dist",
-    filename: "bundle.js",
+    path: __dirname + '/dist',
+    filename: 'bundle.js'
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: "src/index.html",
-    }),
-    new CopyWebpackPlugin([
-      {
-        from: "src/assets/images",
-        to: "assets/images",
-      },
-    ]),
-    new ExtractTextPlugin({
-      filename: "[name].bundle.css",
-      allChunks: true,
-    }),
-  ],
   module: {
     rules: [
       {
+        enforce: 'pre',
         test: /\.js$/,
-        exclude: /node_module/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
-        },
-      },
-      {
-        // css / sass / scss loader for webpack
-        test: /\.(css|sass|scss)$/,
-        use: ExtractTextPlugin.extract({
-          use: ["css-loader", "sass-loader"],
-        }),
-      },
-      {
-        test: /\.(woff2|svg)$/,
-        loader: "url-loader",
-      },
-      {
-        test: /\.(jpg|png|gif|woff|ttf|eot)$/,
-        use: {
-          loader: "file-loader",
-        },
-      },
-    ],
-  },
-};
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }]
+  }
+}

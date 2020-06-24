@@ -10,5 +10,30 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up?
 
-- Run npm install
-- run Project : yarn Start
+It uses:
+- SCSS with linting and autoprefixer
+- JavaScript with webpack using babel and linting
+- html partials and minify with post-html
+- browser-sync
+
+The compiled files will go to the directory "/dist"
+
+- from `src/scss` to `dist/index.css`
+- from `src/js` to `dist/bundle.js`
+- from `src/views` to `dist/`
+
+## Getting Started
+
+1. Install dependencies
+```
+npm install
+```
+
+2. Build resources
+```
+npm run build
+```
+
+3. Watch for changes
+```
+npm run watch
