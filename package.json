@@ -53,6 +53,8 @@
     "replace-in-file-webpack-plugin": "^1.0.6",
     "storybook-addon-i18n": "^5.1.13",
     "style-loader": "^1.2.1",
+    "styled-components": "^5.1.1",
+    "styled-system": "^5.1.5",
     "unicorn": "0.0.1",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
@@ -62,11 +64,18 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.10.1",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "babel-eslint": "^10.1.0",
+    "husky": "^4.2.5",
     "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
+    "@storybook/addon-queryparams": "^5.3.19",
+    "@storybook/addon-storysource": "^5.3.19",
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
-    "babel-eslint": "^10.1.0",
+    "@storybook/theming": "^5.3.19",
     "babel-plugin-inline-react-svg": "^1.1.1",
     "jest": "^26.0.1",
     "storybook-addon-intl": "^2.4.1"
@@ -85,7 +94,15 @@
     "prepare": "npm run clean && babel src/components -d dist && npm run emotion",
     "bundle": "rm -rf /build && cross-env NODE_ENV=emotion babel src/components -d build"
   },
+<<<<<<< HEAD
   "browserslist": "> 0.25%, not dead",
+=======
+  "husky": {
+      "hooks": {
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      }
+    },
+>>>>>>> e1da331596edf46a4f4f2b9f30051bf84a5252f1
   "author": "Samaid Saeed",
   "license": "ISC"
 }
