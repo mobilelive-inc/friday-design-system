@@ -94,15 +94,12 @@
     "prepare": "npm run clean && babel src/components -d dist && npm run emotion",
     "bundle": "rm -rf /build && cross-env NODE_ENV=emotion babel src/components -d build"
   },
-<<<<<<< HEAD
   "browserslist": "> 0.25%, not dead",
-=======
   "husky": {
       "hooks": {
         "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
       }
     },
->>>>>>> e1da331596edf46a4f4f2b9f30051bf84a5252f1
   "author": "Samaid Saeed",
   "license": "ISC"
 }
