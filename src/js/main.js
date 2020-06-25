@@ -1,3 +1,7 @@
-import { logSomething } from "./module";
+import "./themeSwitcher";
 
-logSomething("Hello World");
+
+// function switchDarkTheme() {
+//   var element = document.getElementsByClassName("wrapper");
+//   element.classList.add("theme-dark");
+// }

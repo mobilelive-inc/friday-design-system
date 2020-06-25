@@ -49,13 +49,16 @@ $display4-weight: 300 ;
 $display-line-height: $headings-line-height ;
 
 
-
-
-
+//Borders
+$border-width: 2px ;
+$border-color: $gray-light ;
+$border-radius-none: 0 ;
+$border-radius: 0.25rem ;
+$border-radius-lg: 0.3rem ;
+$border-radius-sm: 0.2rem ;
 
 
 // Components
-//
 // Define common padding and border radius sizes and more.
 
 $line-height-lg: 1.5 ;
@@ -280,11 +283,6 @@ $dropdown-header-color: $gray ;
 $dropdown-header-padding: $dropdown-padding-y $dropdown-item-padding-x ;
 
 
-
-
-
-
-
 // Alerts
 //
 // Define alert colors, border radius, and padding.
@@ -326,3 +324,16 @@ $list-group-action-hover-color: $list-group-action-color ;
 $list-group-action-active-color: $body-color ;
 $list-group-action-active-bg: $gray-light ;
 
+
+
+
+// Code
+$code-font-size: 87.5% ;
+$code-color: $red ;
+$kbd-padding-y: 0.2rem ;
+$kbd-padding-x: 0.4rem ;
+$kbd-font-size: $code-font-size ;
+$kbd-color: $white ;
+$kbd-bg: $gray-dark ;
+$pre-color: $gray-dark ;
+$pre-scrollable-max-height: 340px ;

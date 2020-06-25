@@ -2,26 +2,30 @@
 
 @import "settings/global.functions";
 @import "settings/global.variables";
+@import "settings/colors";
 @import "settings/typography";
-
 @import "settings/gridLayout";
+@import "settings/utilities";
 @import "settings/buttons";
 @import "settings/borders";
 @import "settings/forms";
 @import "settings/tables";
+@import "settings/images";
 @import "settings/modals";
 
-
+//Tools
 @import "tools/tool.grid";
 @import "tools/tool.shadows";
 @import "tools/tool.clearfix";
 @import "tools/tool.gradients";
 @import "tools/tool.vendor-prefixes";
 
+
 @import "elements/element.headings";
 @import "components/buttons";
 @import "components/images";
 
+//utilities
 @import "utilitis/align";
 @import "utilitis/borders";
 @import "utilitis/flex";

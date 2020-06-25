@@ -1,0 +1,120 @@
+:root{
+  --white: #fff;
+  --gray-light: #e5e5e5;
+  --gray: #707070;
+  --gray-dark: #212529;
+  --black: #282828;
+
+  --orange: #f48245;
+  --orange-lighter: #fef3ec;
+  --orange-light: #f9c0a2;
+  --orange-dark: #c36837;
+  --orange-darker: #311a0e;
+
+  --blue: #55a2d9;
+  --blue-lighter: #eef6fb;
+  --blue-light: #bbdaf0;
+  --blue-dark: #336182;
+  --blue-darker: #11202b;
+
+  --lemon: #fccc2e;
+  --lemon-lighter: #fffaea;
+  --lemon-light: #feebab;
+  --lemon-dark: #977a1c;
+  --lemon-darker: #322909;
+
+  --lime: #c4d93c;
+  --lime-lighter: #f9fbec;
+  --lime-light: #e7f0b1;
+  --lime-dark: #768224;
+  --lime-darker: #272b0c;
+
+  --cyan: #66c9d5;
+  --cyan-lighter: #f0fafb;
+  --cyan-light: #c2e9ee;
+  --cyan-dark: #3d7980;
+  --cyan-darker: #14282b;
+
+  --navy: #2874a4;
+  --navy-lighter: #eaf1f6;
+  --navy-light: #a9c7db;
+  --navy-dark: #184662;
+  --navy-darker: #081721;
+
+
+  --red: #dc3545;
+  --green: #34A84D;
+
+
+//  base Colors
+  --primary: var(--orange);
+  --secondary: var(--gray);
+  --success: var(--green);
+  --info: var(--cyan);
+  --warning: var(--lemon);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--gray-dark);
+
+
+}
+
+
+.theme-light {
+  --bg-primary: var(--white);
+  --bg-secondary: var(--gray-dark);
+  --bg-success: var(--green);
+  --bg-info: var(--cyan);
+  --bg-warning: var(--lemon);
+  --bg-danger: var(--red);
+  --bg-light: var(--gray-light);
+  --bg-dark: var(--gray-dark);
+
+  --text-primary: var(--gray-dark);
+  --text-secondary: var(--gray);
+  --text-success: var(--green);
+  --text-info: var(--cyan);
+  --text-warning: var(--lemon);
+  --text-danger: var(--red);
+  --text-light: var(--gray-light);
+  --text-dark: var(--gray-dark);
+}
+
+.theme-dark {
+  --bg-primary: var(--gray-dark);
+  --bg-secondary: var(--gray);
+  --bg-success: var(--green);
+  --bg-info: var(--cyan);
+  --bg-warning: var(--lemon);
+  --bg-danger: var(--red);
+  --bg-light: var(--gray-light);
+  --bg-dark: var(--gray-dark);
+
+  --text-primary: var(--white);
+  --text-secondary: var(--gray);
+  --text-success: var(--green);
+  --text-info: var(--cyan);
+  --text-warning: var(--lemon);
+  --text-danger: var(--red);
+  --text-light: var(--gray-light);
+  --text-dark: var(--gray-dark);
+}
+
+#pageWrapper {
+  background-color: var(--bg-primary);
+  z-index: 1;
+  color: var(--text-primary) !important;
+}
+
+.theme-switcher {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 0 20px 14px rgba(0,0,0,0.15);
+  background-color: #a7a7a7;
+  z-index: 20;
+}

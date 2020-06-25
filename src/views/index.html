@@ -17,15 +17,15 @@
 
 <!--theme switcher-->
 <div class="theme-switcher">
-    <input type="checkbox" id="themeSwitch" name="theme-switch" class="theme-switch__input"/>
-    <label for="themeSwitch" class="theme-switch__label">
-        <span>Switch Theme</span>
-    </label>
+    <h4 class="h4">Theme Switcher</h4>
+    <div class="btns-switcher-holder">
+        <button class="btn btn-dark dark-theme-btn btn-sm" onclick="switchDarkTheme()">Dark</button>
+        <button class="btn btn-light light-theme-btn btn-sm" onclick="switchLightTheme()">Light</button>
+    </div>
 </div>
 
 <!--theme switcher-->
-<div class="wrapper">
-
+<div class="wrapper" id="pageWrapper">
 
     <!--Sidebar-->
     <module href="/components/sidebarNav.html"></module>
@@ -78,7 +78,6 @@
     </main>
     <!--/Header-->
 
-
     <!--Footer-->
     <footer class="footer">
         <div class="container-fluid">
@@ -88,5 +87,22 @@
     <!--Footer-->
 
 </div>
+
+<script src="/bundle.js"></script>
+
+<script>
+
+  function switchDarkTheme() {
+    var element = document.getElementById("pageWrapper");
+    element.classList.add("theme-dark");
+    element.classList.remove("theme-light");
+  }
+
+  function switchLightTheme() {
+    var element = document.getElementById("pageWrapper");
+    element.classList.add("theme-light");
+    element.classList.remove("theme-dark");
+  }
+</script>
 </body>
 </html>
