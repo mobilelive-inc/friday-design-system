@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Button} from '../build'
-// import Buttons from './components/Button'
-// import Refresh from './components/icons/refresh.svg';
+import {
+  Button, index, Innput
+} from '../build'
 
 function App(){
-  console.log('Buttton', Button)
+  console.log("index ", Innput);
   return(
     <>
       <h1>Design System</h1>
       <Button>
-        Lol
+        I am button exported from design system
       </Button>
-      {/* <button type="button"><Refresh /> Refresh</button> */}
+      <index />
+      <Innput />
     </>
   )
 }

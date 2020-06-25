@@ -12,7 +12,7 @@ var _react = _interopRequireDefault(require("react"));
 var _Input = _interopRequireDefault(require("../Input"));
 
 var index = () => {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Input.default, null));
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Input.default, null), " hskjdhasjkhdkja");
 };
 
 var _default = index;

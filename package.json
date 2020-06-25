@@ -83,7 +83,7 @@
     "start2": "webpack-dev-server --open --env.mode development",
     "clean": "rm -rf dist/",
     "prepare": "npm run clean && babel src/components -d dist && npm run emotion",
-    "bundle": "cross-env NODE_ENV=emotion babel src/components -d build"
+    "bundle": "rm -rf /build && cross-env NODE_ENV=emotion babel src/components -d build"
   },
   "browserslist": "> 0.25%, not dead",
   "author": "Samaid Saeed",
