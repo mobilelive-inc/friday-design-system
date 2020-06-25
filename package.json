@@ -1,12 +1,12 @@
 {
-  "name": "static-website-template",
-  "version": "1.0.1",
-  "description": "template for static website",
-  "author": "Vincent Will <vincent.will@vaitrade.de>",
-  "license": "MIT",
+  "name": "mobilelive-design-system-static",
+  "version": "1.0.0",
+  "description": "mobileLive Designs System Static",
+  "author": "Mutahar Aslam",
+  "license": "Mobilelive",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vincenius/static-website-template"
+    "url": "https://bitbucket.org/mobilelive/mobilelive-design-system-static-components/src/"
   },
   "scripts": {
     "clean": "rimraf dist/*",
