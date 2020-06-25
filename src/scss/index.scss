@@ -1,15 +1,15 @@
 @import "vendors/rfs_autofontSizing";
 
-@import "settings/setting.global.functions";
-@import "settings/setting.global.variables";
-@import "settings/setting.typography";
+@import "settings/global.functions";
+@import "settings/global.variables";
+@import "settings/typography";
 
-@import "settings/setting.gridLayout";
-@import "settings/setting.buttons";
-@import "settings/setting.borders";
-@import "settings/setting.forms";
-@import "settings/setting.tables";
-@import "settings/setting.modals";
+@import "settings/gridLayout";
+@import "settings/buttons";
+@import "settings/borders";
+@import "settings/forms";
+@import "settings/tables";
+@import "settings/modals";
 
 
 @import "tools/tool.grid";
@@ -32,11 +32,7 @@
 @import "utilitis/visibility";
 @import "utilitis/background";
 
-// Custom Styles
-@import "../DashboardStyling/custom-theme";
-@import "../DashboardStyling/sidebar";
-
-
 //vendors
 
 @import "vendors/icomons_styles";
+
