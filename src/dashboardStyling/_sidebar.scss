@@ -89,7 +89,7 @@
           cursor: pointer;
           font-size: 13px;
           padding: 10px 8px;
-          line-height: $line-height-lg;
+          line-height: 1.5;
           i{
             font-size: 17px;
             float: left;
@@ -100,14 +100,14 @@
             }
           }
           &:hover{
-            color: $gray-light;
+            color: #E5E5E5;
             i{
               &:before{
-                color: $gray-light;
+                color: #E5E5E5;
               }
             }
             &:before {
-              background-color: $gray-light;
+              background-color: #E5E5E5;
             }
           }
 

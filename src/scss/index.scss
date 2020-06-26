@@ -1,27 +1,31 @@
 @import "vendors/rfs_autofontSizing";
 
-@import "settings/setting.global.functions";
-@import "settings/setting.global.variables";
-@import "settings/setting.typography";
+@import "settings/global.functions";
+@import "settings/global.variables";
+@import "settings/colors";
+@import "settings/typography";
+@import "settings/gridLayout";
+@import "settings/utilities";
+@import "settings/buttons";
+@import "settings/borders";
+@import "settings/forms";
+@import "settings/tables";
+@import "settings/images";
+@import "settings/modals";
 
-@import "settings/setting.gridLayout";
-@import "settings/setting.buttons";
-@import "settings/setting.borders";
-@import "settings/setting.forms";
-@import "settings/setting.tables";
-@import "settings/setting.modals";
-
-
+//Tools
 @import "tools/tool.grid";
 @import "tools/tool.shadows";
 @import "tools/tool.clearfix";
 @import "tools/tool.gradients";
 @import "tools/tool.vendor-prefixes";
 
+
 @import "elements/element.headings";
 @import "components/buttons";
 @import "components/images";
 
+//utilities
 @import "utilitis/align";
 @import "utilitis/borders";
 @import "utilitis/flex";
@@ -32,11 +36,7 @@
 @import "utilitis/visibility";
 @import "utilitis/background";
 
-// Custom Styles
-@import "../DashboardStyling/custom-theme";
-@import "../DashboardStyling/sidebar";
-
-
 //vendors
 
 @import "vendors/icomons_styles";
+

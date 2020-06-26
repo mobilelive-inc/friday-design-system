@@ -2,25 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description"/>
     <title>mobileLIVE Design System - Static Components</title>
     <link rel="shortcut icon" href="/assets/images/favicon.ico"/>
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 
 
-
 <body class="dashboard-styling">
-<div class="wrapper">
+
+<!--theme switcher-->
+<div class="theme-switcher">
+    <h4 class="h4">Theme Switcher</h4>
+    <div class="btns-switcher-holder">
+        <button class="btn btn-dark dark-theme-btn btn-sm" onclick="switchDarkTheme()">Dark</button>
+        <button class="btn btn-light light-theme-btn btn-sm" onclick="switchLightTheme()">Light</button>
+    </div>
+</div>
+
+<!--theme switcher-->
+<div class="wrapper" id="pageWrapper">
 
     <!--Sidebar-->
     <module href="/components/sidebarNav.html"></module>
     <!--Sidebar-->
 
-    <div class="main-panel">
+
+    <!--Header-->
+    <main class="main-panel">
         <!-- Navbar -->
         <div class="logo">
             <a c href="javascript:void(0)" class="logo-mini">
@@ -62,15 +75,34 @@
             </div>
         </div>
 
-    </div>
+    </main>
+    <!--/Header-->
 
+    <!--Footer-->
     <footer class="footer">
         <div class="container-fluid">
 
         </div>
     </footer>
+    <!--Footer-->
+
 </div>
 
+<script src="/bundle.js"></script>
 
+<script>
+
+  function switchDarkTheme() {
+    var element = document.getElementById("pageWrapper");
+    element.classList.add("theme-dark");
+    element.classList.remove("theme-light");
+  }
+
+  function switchLightTheme() {
+    var element = document.getElementById("pageWrapper");
+    element.classList.add("theme-light");
+    element.classList.remove("theme-dark");
+  }
+</script>
 </body>
 </html>
