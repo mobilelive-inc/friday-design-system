@@ -1,6 +1,10 @@
 @import "themeSwitcher";
 @import "sidebar";
 
+*{
+box-sizing: border-box;
+}
+
 .dashboard-styling {
   margin: 0;
   padding: 0;

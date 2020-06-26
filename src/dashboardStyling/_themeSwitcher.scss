@@ -59,7 +59,7 @@
 
 }
 
-
+//Theme Light
 .theme-light {
   --bg-primary: var(--white);
   --bg-secondary: var(--gray-dark);
@@ -80,6 +80,8 @@
   --text-dark: var(--gray-dark);
 }
 
+
+//Theme dark
 .theme-dark {
   --bg-primary: var(--gray-dark);
   --bg-secondary: var(--gray);
@@ -113,8 +115,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 20px;
   box-shadow: 0 0 20px 14px rgba(0,0,0,0.15);
-  background-color: #a7a7a7;
+  background-color: #d8d8d8;
   z-index: 20;
+  border-radius: 10px;
+  opacity: 0.2;
+  &:hover{
+    opacity: 1;
+  }
 }
