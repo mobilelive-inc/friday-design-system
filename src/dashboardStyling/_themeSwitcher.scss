@@ -1,4 +1,4 @@
-:root{
+:root {
   --white: #fff;
   --gray-light: #e5e5e5;
   --gray: #707070;
@@ -46,7 +46,7 @@
   --green: #34A84D;
 
 
-//  base Colors
+  //  base Colors
   --primary: var(--orange);
   --secondary: var(--gray);
   --success: var(--green);
@@ -109,19 +109,20 @@
 }
 
 .theme-switcher {
-  position: absolute;
+  position: fixed;
   right: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px 20px;
-  box-shadow: 0 0 20px 14px rgba(0,0,0,0.15);
+  box-shadow: 0 0 20px 14px rgba(0, 0, 0, 0.15);
   background-color: #d8d8d8;
   z-index: 20;
   border-radius: 10px;
   opacity: 0.2;
-  &:hover{
+
+  &:hover {
     opacity: 1;
   }
 }
