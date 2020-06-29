@@ -1,13 +1,28 @@
 <div class="mb-5" id="typography">
-    <h3 class="h3">Headings</h3>
+    <h2 class="h2">Typography</h2>
+    <p>
+        Documentation and examples for ML Design System typography, including global settings, headings, body text,
+        lists, and more.
+    </p>
+    <ul>
+        <li>Use the <code>$font-family-base</code>, <code>$font-size-base</code>, and <code>$line-height-base</code>
+            variables as our typographic base applied to the <code>&lt;body&gt;</code>.
+        </li>
+        <li>Set the global link color via <code>$link-color</code> and apply link underlines only on <code>:hover</code>.
+        </li>
+    </ul>
+    <p>These styles can be found within <code>scss/generic/_reboot.scss</code>, and the global variables are defined in
+        <code>scss/settings</code>. Make sure to set <code>$font-size-base</code> in <code>rem</code>.</p>
+
+    <h4 class="h4">headings</h4>
     <p>
         All HTML headings, <code class="">&lt;h1&gt;</code> through
-        <code class="">&lt;h6&gt;</code>, are available.
+        <code class="">&lt;h6&gt;</code>, are available. Need to use classes <code>.h1</code> to <code>.h6</code>.
     </p>
     <div>
         <ul class="headings_list mb-5">
             <li>
-                <strong class="col-2">heading</strong>
+                <strong class="col-2">Heading</strong>
                 <strong class="col">Example</strong>
             </li>
             <li>
@@ -41,7 +56,7 @@
             </li>
         </ul>
     </div>
-    <h3 class="h3">Display headings</h3>
+    <h3 class="h4">Display headings</h3>
     <p>
         All Display headings, <code class="">.display-1</code> through
         <code class="">.display-4</code>, are available.
@@ -72,5 +87,355 @@
                 <span class="h4">Display 4</span>
             </li>
         </ul>
+    </div>
+
+    <h4 class="h4">Paragraphs</h4>
+    <p>Paragraph are having default styling from <code>settings/_typography.scss</code></p>
+    <p>There are some addons which can be added on paragraphs.</p>
+    <h5 class="h5">Lead</h5>
+    <p>Make a paragraph stand out by adding <code>.lead</code> for example:</p>
+    <div class="highlighted-block">
+        <p class="lead"> Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a
+            document</p>
+    </div>
+
+
+    <h5 class="h5 mt-mid">Inline text elements</h5>
+    <div class="highlighted-block">
+        <p>You can use the mark tag to
+            <mark>highlight</mark>
+            text.
+        </p>
+        <p>
+            <del>This line of text is meant to be treated as deleted text.</del>
+        </p>
+        <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+        <p>
+            <ins>This line of text is meant to be treated as an addition to the document.</ins>
+        </p>
+        <p><u>This line of text will render as underlined</u></p>
+        <p>
+            <small>This line of text is meant to be treated as fine print.</small>
+        </p>
+        <p><strong>This line rendered as bold text.</strong></p>
+        <p><em>This line rendered as italicized text.</em></p>
+    </div>
+
+    <div class="jumbotron">
+        <pre style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 14px; margin-top: 0px; margin-bottom: 0px; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'><code
+                class="language-html" data-lang="html"
+                style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p&gt;</span>You can use the mark tag to <span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;mark&gt;</span>highlight<span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/mark&gt;</span> text.<span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p&gt;&lt;del&gt;</span>This line of text is meant to be treated as deleted text.<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/del&gt;&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p&gt;&lt;s&gt;</span>This line of text is meant to be treated as no longer accurate.<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/s&gt;&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p&gt;&lt;ins&gt;</span>This line of text is meant to be treated as an addition to the document.<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/ins&gt;&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p&gt;&lt;u&gt;</span>This line of text will render as underlined<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/u&gt;&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p&gt;&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/small&gt;&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p&gt;&lt;strong&gt;</span>This line rendered as bold text.<span
+                    class="nt"
+                    style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/strong&gt;&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p&gt;&lt;em&gt;</span>This line rendered as italicized text.<span
+                    class="nt"
+                    style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/em&gt;&lt;/p&gt;</span></code></pre>
+    </div>
+
+
+    <h4 class="h4">Lists</h4>
+    <h5 class="h5"> - Unstyled</h5>
+    <p>Remove the default <code class="highlighter-rouge">list-style</code> and left margin on list items (immediate
+        children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to
+        add the class for any nested lists as well.</p>
+    <div class="highlighted-block">
+        <ul class="list-unstyled">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Integer molestie lorem at massa</li>
+            <li>Facilisis in pretium nisl aliquet</li>
+            <li>Nulla volutpat aliquam velit
+                <ul>
+                    <li>Phasellus iaculis neque</li>
+                    <li>Purus sodales ultricies</li>
+                    <li>Vestibulum laoreet porttitor sem</li>
+                    <li>Ac tristique libero volutpat at</li>
+                </ul>
+            </li>
+            <li>Faucibus porta lacus fringilla vel</li>
+            <li>Aenean sit amet erat nunc</li>
+            <li>Eget porttitor lorem</li>
+        </ul>
+    </div>
+    <div class="jumbotron">
+        <pre style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 14px; margin-top: 0px; margin-bottom: 0px; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'><code
+                class="language-html" data-lang="html"
+                style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;ul</span> <span class="na"
+                                                                                                         style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;list-unstyled&quot;</span><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>
+  <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li&gt;</span>Lorem ipsum dolor sit amet<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+  <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li&gt;</span>Consectetur adipiscing elit<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+  <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li&gt;</span>Integer molestie lorem at massa<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+  <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li&gt;</span>Facilisis in pretium nisl aliquet<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+  <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li&gt;</span>Nulla volutpat aliquam velit
+    <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;ul&gt;</span>
+      <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li&gt;</span>Phasellus iaculis neque<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+      <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li&gt;</span>Purus sodales ultricies<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+      <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li&gt;</span>Vestibulum laoreet porttitor sem<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+      <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li&gt;</span>Ac tristique libero volutpat at<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+    <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/ul&gt;</span>
+  <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+  <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li&gt;</span>Faucibus porta lacus fringilla vel<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+  <span class="nt"
+        style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li&gt;</span>Aenean sit amet erat nunc<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+  <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li&gt;</span>Eget porttitor lorem<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/ul&gt;</span></code></pre>
+    </div>
+
+    <h5 class="h5">- Inline Lists</h5>
+    <p>Remove a list’s bullets and apply some light <code class="highlighter-rouge">margin</code> with a combination of
+        two classes, <code class="highlighter-rouge">.list-inline</code> and <code class="highlighter-rouge">.list-inline-item</code>.
+    </p>
+    <div class="highlighted-block">
+        <ul class="list-inline">
+            <li class="list-inline-item">Lorem ipsum</li>
+            <li class="list-inline-item">Phasellus iaculis</li>
+            <li class="list-inline-item">Nulla volutpat</li>
+        </ul>
+    </div>
+    <div class="jumbotron">
+        <pre style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 14px; margin-top: 0px; margin-bottom: 0px; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'><code
+                class="language-html" data-lang="html"
+                style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;ul</span> <span class="na"
+                                                                                                         style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;list-inline&quot;</span><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>
+  <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li</span> <span class="na"
+                                                                                                 style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;list-inline-item&quot;</span><span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Lorem ipsum<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+  <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li</span> <span class="na"
+                                                                                                 style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;list-inline-item&quot;</span><span
+                    class="nt"
+                    style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Phasellus iaculis<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+  <span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;li</span> <span class="na"
+                                                                                                 style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;list-inline-item&quot;</span><span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Nulla volutpat<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/li&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/ul&gt;</span></code></pre>
+    </div>
+
+    <h4 class="h4">Text utilities</h4>
+    <p class="mb-mid">Change text alignment, transform, style, weight, and color with our <b>text utilities</b> and <a
+            href="#ColorPalette">color utilities</a>.</p>
+
+    <h5 class="h5">Text alignment</h5>
+    <p>For left, right, and center alignment, responsive classes are available that use the same viewport width
+        breakpoints as the grid system.</p>
+    <div class="highlighted-block">
+        <p class="text-left">Left aligned text on all viewport sizes.</p>
+        <p class="text-center">Center aligned text on all viewport sizes.</p>
+        <p class="text-right">Right aligned text on all viewport sizes.</p>
+    </div>
+    <div class="jumbotron">
+        <pre style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 14px; margin-top: 0px; margin-bottom: 0px; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'><code
+                class="language-html" data-lang="html"
+                style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                                        style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;text-justify&quot;</span><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Ambitioni dedisse scripsisse iudicaretur.&lt;/p&gt;</code>
+
+</pre>
+        <p>
+            <meta charset="utf-8">
+        </p>
+        <pre style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 14px; margin-top: 0px; margin-bottom: 0px; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'><code
+                class="language-html" data-lang="html"
+                style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                                        style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;text-left&quot;</span><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Left aligned text on all viewport sizes.<span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                              style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;text-center&quot;</span><span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Center aligned text on all viewport sizes.<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                              style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;text-right&quot;</span><span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Right aligned text on all viewport sizes.<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span></code></pre>
+    </div>
+
+    <ul class="list-unstyled">
+        <li>Left aligned text on viewports sized SM (small) or wider.</li>
+
+        <li>Left aligned text on viewports sized MD (medium) or wider.</li>
+
+        <li>Left aligned text on viewports sized LG (large) or wider.</li>
+
+        <li>Left aligned text on viewports sized XL (extra-large) or wider.</li>
+    </ul>
+    <div class="jumbotron">
+        <pre style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 14px; margin-top: 0px; margin-bottom: 0px; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'><code
+                class="language-html" data-lang="html"
+                style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                                        style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;text-sm-left&quot;</span><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Left aligned text on viewports sized SM (small) or wider.<span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                              style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;text-md-left&quot;</span><span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Left aligned text on viewports sized MD (medium) or wider.<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                              style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;text-lg-left&quot;</span><span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Left aligned text on viewports sized LG (large) or wider.<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                              style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;text-xl-left&quot;</span><span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Left aligned text on viewports sized XL (extra-large) or wider.<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span></code></pre>
+    </div>
+
+    <h5 class="h5">Word break</h5>
+    <p>Prevent long strings of text from breaking your components’ layout by using <code class="highlighter-rouge">.text-break</code>
+        to set <code class="highlighter-rouge">word-wrap: break-word</code>.</p>
+
+    <div class="highlighted-block">
+        <p class="text-break">
+            mmmmmdddmdnsjdfsdivdsjisdsdmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+    </div>
+    <div class="jumbotron">
+
+        <pre style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 14px; margin-top: 0px; margin-bottom: 0px; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'><code
+                class="language-html" data-lang="html"
+                style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                                        style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;text-break&quot;</span><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;Long text without spaces</span>&lt;/p&gt;</code></pre>
+    </div>
+
+    <h5 class="h5">Text transform</h5>
+    <p>Transform text in components with text capitalization classes.</p>
+    <div class="highlighted-block">
+        <p class="text-lowercase">Lowercased text.</p>
+        <p class="text-uppercase">Uppercased text.</p>
+        <p class="text-capitalize">CapiTaliZed text.</p>
+    </div>
+    <div class="jumbotron">
+
+<pre style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 14px; margin-top: 0px; margin-bottom: 0px; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'><code
+        class="language-html" data-lang="html"
+        style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span
+        class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                                style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+        class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;text-lowercase&quot;</span><span
+        class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Lowercased text.<span class="nt"
+                                                                                                              style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                              style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+            class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;text-uppercase&quot;</span><span
+            class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Uppercased text.<span
+            class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                              style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+            class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;text-capitalize&quot;</span><span
+            class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>CapiTaliZed text.<span
+            class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span></code></pre>
+    </div>
+
+    <h5 class="h5">Font weight and italics</h5>
+    <p>Quickly change the weight (boldness) of text or italicize text.</p>
+    <div class="highlighted-block">
+        <p class="font-weight-bold">Bold text.</p>
+        <p class="font-weight-bolder">Bolder weight text (relative to the parent element).</p>
+        <p class="font-weight-normal">Normal weight text.</p>
+        <p class="font-weight-light">Light weight text.</p>
+        <p class="font-weight-lighter">Lighter weight text (relative to the parent element).</p>
+        <p class="font-italic">Italic text.</p>
+    </div>
+
+    <div class="jumbotron">
+        <pre style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 14px; margin-top: 0px; margin-bottom: 0px; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'><code
+                class="language-html" data-lang="html"
+                style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                                        style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                class="s"
+                style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;font-weight-bold&quot;</span><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Bold text.<span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                              style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;font-weight-bolder&quot;</span><span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Bolder weight text (relative to the parent element).<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                              style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;font-weight-normal&quot;</span><span
+                    class="nt"
+                    style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Normal weight text.<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                              style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;font-weight-light&quot;</span><span
+                    class="nt"
+                    style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Light weight text.<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                              style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;font-weight-lighter&quot;</span><span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Lighter weight text (relative to the parent element).<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span>
+<span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;p</span> <span class="na"
+                                                                                              style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                    class="s"
+                    style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;font-italic&quot;</span><span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Italic text.<span
+                    class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/p&gt;</span></code></pre>
     </div>
 </div>
