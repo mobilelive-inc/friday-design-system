@@ -1,0 +1,47 @@
+{
+  "npmScope": "nx-hybrid-demo",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "ngx-xis-app": {
+      "tags": []
+    },
+    "ngx-xis-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ngx-xis-app"]
+    },
+    "rx-xis-app": {
+      "tags": ["scope:rx"],
+      "implicitDependencies": ["rx-xis"]
+    },
+    "rx-xis-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["rx-xis-app"]
+    },
+    "ngx-xis": {
+      "tags": []
+    },
+    "rx-xis": {
+      "tags": ["scope:rx"]
+    },
+    "ui": {
+      "tags": []
+    }
+  }
+}
