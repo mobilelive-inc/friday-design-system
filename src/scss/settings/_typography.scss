@@ -71,7 +71,7 @@ $box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
 $box-shadow-lg: 0 1rem 3rem rgba($black, 0.175);
 
 $component-active-color: $white;
-$component-active-bg: theme-color("primary");
+$component-active-bg: theme-color("info");
 
 $transition-base: all 0.2s ease-in-out;
 $transition-fade: opacity 0.15s linear;
@@ -146,7 +146,7 @@ $btn-font-size: $input-btn-font-size;
 $btn-line-height: $input-btn-line-height;
 $btn-white-space: null; // Set to `nowrap` to prevent text wrapping
 $btn-padding-y-sm: $global-spacer-tiny;
-$btn-padding-x-sm: $global-spacer;
+$btn-padding-x-sm: $global-spacer-tiny;
 $btn-font-size-sm: $input-btn-font-size-sm;
 $btn-line-height-sm: $input-btn-line-height-sm;
 $btn-padding-y-lg: $global-spacer;

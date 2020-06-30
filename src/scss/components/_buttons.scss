@@ -3,7 +3,9 @@
 //
 
 .btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   color: $body-color;
@@ -15,11 +17,11 @@
   background-color: transparent;
   border: $btn-border-width solid transparent;
   @include button-size(
-    $btn-padding-y,
-    $btn-padding-x,
-    $btn-font-size,
-    $btn-line-height,
-    $btn-border-radius
+                  $btn-padding-y,
+                  $btn-padding-x,
+                  $btn-font-size,
+                  $btn-line-height,
+                  $btn-border-radius
   );
   @include transition($btn-transition);
 
@@ -53,6 +55,16 @@
       }
     }
   }
+  span{
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  &.btn-curved{
+    border-radius: $btn-border-radius-rounded !important;
+  }
+  &.btn-rounded{
+    border-radius: $btn-border-radius-rounded;
+  }
 }
 
 // Future-proof disabling of clicks on `<a>` elements
@@ -71,22 +83,6 @@ fieldset:disabled a.btn {
   }
 }
 
-// Solid curved border Btn
-@each $color, $value in $theme-colors {
-  .btn-#{$color}-curved {
-    @include button-variant($value, $value);
-    border-radius: $btn-border-radius-curved;
-  }
-}
-
-// Solid Rounded border Btn
-@each $color, $value in $theme-colors {
-  .btn-#{$color}-rounded {
-    @include button-variant($value, $value);
-    border-radius: $btn-border-radius-rounded;
-  }
-}
-
 
 // Outline block border Btn
 @each $color, $value in $theme-colors {
@@ -95,21 +91,98 @@ fieldset:disabled a.btn {
   }
 }
 
-// Outline curved border Btn
+// Tooltip Btn
 @each $color, $value in $theme-colors {
-  .btn-outline-#{$color}-curved {
+  .btn-tooltip-#{$color} {
     @include button-outline-variant($value);
-    border-radius: $btn-border-radius-curved;
+    border-radius: 0;
+    border: none;
+    @include hover() {
+      color: lighten($body-color, 40%);
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: $btn-focus-box-shadow;
+    }
   }
 }
 
-// Outline rounded border Btn
+// Icon Only Btn + rounded
 @each $color, $value in $theme-colors {
-  .btn-outline-#{$color}-rounded {
-    @include button-outline-variant($value);
-    border-radius: $btn-border-radius-rounded;
+  .btn-icon-#{$color} {
+    @include button-variant($value, $value);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include button-size(
+        $btn-padding-y-sm,
+        $btn-padding-x-sm,
+        $btn-font-size,
+        $btn-line-height,
+        $btn-border-radius
+    );
+
+    span {
+      font-style: $font-size-base;
+      padding: 0 !important;
+    }
+
+    @include hover() {
+    }
+
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: $btn-focus-box-shadow;
+    }
   }
 }
+
+
+//Icon Only Btn outline + rounded outline
+@each $color, $value in $theme-colors {
+  .btn-icon-#{$color}-outline{
+    @include button-variant($value, $value);
+    //border: $btn-border-width solid transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: $body-color;
+    @include button-size(
+                    $btn-padding-y-sm,
+                    $btn-padding-x-sm,
+                    $btn-font-size,
+                    $btn-line-height,
+                    $btn-border-radius
+    );
+
+    span {
+      font-style: $font-size-base;
+      padding: 0 !important;
+    }
+
+    @include hover() {
+
+    }
+
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: $btn-focus-box-shadow;
+    }
+  }
+}
+
+
 
 //
 // Link buttons
@@ -146,21 +219,21 @@ fieldset:disabled a.btn {
 
 .btn-lg {
   @include button-size(
-    $btn-padding-y-lg,
-    $btn-padding-x-lg,
-    $btn-font-size-lg,
-    $btn-line-height-lg,
-    $btn-border-radius-lg
+                  $btn-padding-y-lg,
+                  $btn-padding-x-lg,
+                  $btn-font-size-lg,
+                  $btn-line-height,
+                  $btn-border-radius-lg
   );
 }
 
 .btn-sm {
   @include button-size(
-    $btn-padding-y-sm,
-    $btn-padding-x-sm,
-    $btn-font-size-sm,
-    $btn-line-height-sm,
-    $btn-border-radius-sm
+                  $btn-padding-y-sm,
+                  $btn-padding-x-sm,
+                  $btn-font-size-sm,
+                  $btn-line-height,
+                  $btn-border-radius-sm
   );
 }
 
