@@ -59,6 +59,12 @@
     padding-left: 8px;
     padding-right: 8px;
   }
+  &.btn-curved{
+    border-radius: $btn-border-radius-rounded !important;
+  }
+  &.btn-rounded{
+    border-radius: $btn-border-radius-rounded;
+  }
 }
 
 // Future-proof disabling of clicks on `<a>` elements
@@ -77,43 +83,11 @@ fieldset:disabled a.btn {
   }
 }
 
-// Solid curved border Btn
-@each $color, $value in $theme-colors {
-  .btn-#{$color}-curved {
-    @include button-variant($value, $value);
-    border-radius: $btn-border-radius-curved;
-  }
-}
-
-// Solid Rounded border Btn
-@each $color, $value in $theme-colors {
-  .btn-#{$color}-rounded {
-    @include button-variant($value, $value);
-    border-radius: $btn-border-radius-rounded;
-  }
-}
-
 
 // Outline block border Btn
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
-  }
-}
-
-// Outline curved border Btn
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color}-curved {
-    @include button-outline-variant($value);
-    border-radius: $btn-border-radius-curved;
-  }
-}
-
-// Outline rounded border Btn
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color}-rounded {
-    @include button-outline-variant($value);
-    border-radius: $btn-border-radius-rounded;
   }
 }
 
@@ -139,7 +113,7 @@ fieldset:disabled a.btn {
 
 // Icon Only Btn + rounded
 @each $color, $value in $theme-colors {
-  .btn-icon-#{$color}, .btn-icon-rounded-#{$color} {
+  .btn-icon-#{$color} {
     @include button-variant($value, $value);
     width: 40px;
     height: 40px;
@@ -167,24 +141,13 @@ fieldset:disabled a.btn {
       outline: 0;
       box-shadow: $btn-focus-box-shadow;
     }
-
-    &.btn-icon-rounded-#{$color} {
-      @include button-size(
-          $btn-padding-y-sm,
-          $btn-padding-x-sm,
-          $btn-font-size,
-          $btn-line-height,
-          $btn-border-radius-curved
-      );
-
-    }
   }
 }
 
 
 //Icon Only Btn outline + rounded outline
 @each $color, $value in $theme-colors {
-  .btn-icon-#{$color}-outline, .btn-icon-rounded-#{$color}-outline {
+  .btn-icon-#{$color}-outline{
     @include button-variant($value, $value);
     //border: $btn-border-width solid transparent;
     width: 40px;
@@ -215,15 +178,6 @@ fieldset:disabled a.btn {
     &.focus {
       outline: 0;
       box-shadow: $btn-focus-box-shadow;
-    }
-    &.btn-icon-rounded-#{$color}-outline{
-      @include button-size(
-                      $btn-padding-y-sm,
-                      $btn-padding-x-sm,
-                      $btn-font-size,
-                      $btn-line-height,
-                      $btn-border-radius-curved
-      );
     }
   }
 }
