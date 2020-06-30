@@ -1,3 +1,6 @@
+import { colors } from './colors'
+import { buttons } from './buttons';
+
 // Typography
 const fonts = {
   Gotham:
@@ -71,35 +74,6 @@ export const borderWidths = {
   read: '0', // 0
   hover: '1px', // 1
   unread: '4px', // 2
-};
-// Colors
-export const colors = {
-  primary: '#F48245',
-  secondary: '#707070',
-  success: '#34A84D',
-  danger: '#DF4B4B',
-  warning: '#ffc107',
-  info: '#66C9D5',
-  white: '#fff',
-  grayLighter: '#F2F2F2',
-  grayLight: '#dee2e6',
-  grayDark: '#707070',
-  grayDarker: '#282828',
-  grayDarkest: '#191919',
-  black: '#000',
-  orange: '#F48245',
-  blue: '#55A2D9',
-  lemon: '#FCCC2E',
-  lime: '#C4D93C',
-  cyan: '#66C9D5',
-  navy: '#F48245',
-  indigo: '#6610f2',
-  purple: '#6f42c1',
-  pink: '#e83e8c',
-  red: '#DF4B4B',
-  yellow: '#ffc107',
-  green: '#34A84D',
-  teal: '#20c997'
 };
 
 export const breakpoints = [
@@ -227,8 +201,10 @@ export const typography = {
   }
 }
 
+
 export default {
   breakpoints,
+  buttons,
   colors,
   font,
   fontFamilies,
