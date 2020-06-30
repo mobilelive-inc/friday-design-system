@@ -15,11 +15,11 @@
   background-color: transparent;
   border: $btn-border-width solid transparent;
   @include button-size(
-    $btn-padding-y,
-    $btn-padding-x,
-    $btn-font-size,
-    $btn-line-height,
-    $btn-border-radius
+                  $btn-padding-y,
+                  $btn-padding-x,
+                  $btn-font-size,
+                  $btn-line-height,
+                  $btn-border-radius
   );
   @include transition($btn-transition);
 
@@ -118,7 +118,7 @@ fieldset:disabled a.btn {
     border-radius: 0;
     border: none;
     @include hover() {
-      color: lighten($body-color, 40%) ;
+      color: lighten($body-color, 40%);
       text-decoration: none;
       background-color: transparent;
     }
@@ -131,41 +131,9 @@ fieldset:disabled a.btn {
   }
 }
 
-// Icon Only Btn
+// Icon Only Btn + rounded
 @each $color, $value in $theme-colors {
-  .btn-icon-#{$color} {
-    @include button-variant($value, $value);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include button-size(
-      $btn-padding-y-sm,
-      $btn-padding-x-sm,
-      $btn-font-size,
-      $btn-line-height,
-      $btn-border-radius
-    );
-    span{
-      font-style: $font-size-base;
-      padding: 0 !important;
-    }
-    @include hover() {
-      //color: lighten($body-color, 40%);
-    }
-
-    &:focus,
-    &.focus {
-      outline: 0;
-      box-shadow: $btn-focus-box-shadow;
-    }
-  }
-}
-
-// Icon Only Btn rounded
-@each $color, $value in $theme-colors {
-  .btn-icon-rounded-#{$color} {
+  .btn-icon-#{$color}, .btn-icon-rounded-#{$color} {
     @include button-variant($value, $value);
     width: 40px;
     height: 40px;
@@ -177,40 +145,15 @@ fieldset:disabled a.btn {
         $btn-padding-x-sm,
         $btn-font-size,
         $btn-line-height,
-        $btn-border-radius-curved
-
+        $btn-border-radius
     );
-    span{
+
+    span {
       font-style: $font-size-base;
       padding: 0 !important;
     }
-  }
-}
 
-// Icon Only Btn outline
-@each $color, $value in $theme-colors {
-  .btn-icon-#{$color}-outline {
-    @include button-variant($value, $value);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    color: $body-color;
-    @include button-size(
-      $btn-padding-y-sm,
-      $btn-padding-x-sm,
-      $btn-font-size,
-      $btn-line-height,
-      $btn-border-radius
-    );
-    span{
-      font-style: $font-size-base;
-      padding: 0 !important;
-    }
     @include hover() {
-      //color: lighten($body-color, 40%);
     }
 
     &:focus,
@@ -218,13 +161,26 @@ fieldset:disabled a.btn {
       outline: 0;
       box-shadow: $btn-focus-box-shadow;
     }
+
+    &.btn-icon-rounded-#{$color} {
+      @include button-size(
+          $btn-padding-y-sm,
+          $btn-padding-x-sm,
+          $btn-font-size,
+          $btn-line-height,
+          $btn-border-radius-curved
+      );
+
+    }
   }
 }
 
-// Icon Only Btn rounded outline
+
+//Icon Only Btn outline + rounded outline
 @each $color, $value in $theme-colors {
-  .btn-icon-rounded-#{$color}-outline {
+  .btn-icon-#{$color}-outline, .btn-icon-rounded-#{$color}-outline {
     @include button-variant($value, $value);
+    //border: $btn-border-width solid transparent;
     width: 40px;
     height: 40px;
     display: flex;
@@ -233,19 +189,40 @@ fieldset:disabled a.btn {
     background-color: transparent;
     color: $body-color;
     @include button-size(
-        $btn-padding-y-sm,
-        $btn-padding-x-sm,
-        $btn-font-size,
-        $btn-line-height,
-        $btn-border-radius-curved
-
+                    $btn-padding-y-sm,
+                    $btn-padding-x-sm,
+                    $btn-font-size,
+                    $btn-line-height,
+                    $btn-border-radius
     );
-    span{
+
+    span {
       font-style: $font-size-base;
       padding: 0 !important;
     }
+
+    @include hover() {
+
+    }
+
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: $btn-focus-box-shadow;
+    }
+    &.btn-icon-rounded-#{$color}-outline{
+      @include button-size(
+                      $btn-padding-y-sm,
+                      $btn-padding-x-sm,
+                      $btn-font-size,
+                      $btn-line-height,
+                      $btn-border-radius-curved
+      );
+    }
   }
 }
+
+
 
 //
 // Link buttons
@@ -282,21 +259,21 @@ fieldset:disabled a.btn {
 
 .btn-lg {
   @include button-size(
-    $btn-padding-y-lg,
-    $btn-padding-x-lg,
-    $btn-font-size-lg,
-    $btn-line-height,
-    $btn-border-radius-lg
+                  $btn-padding-y-lg,
+                  $btn-padding-x-lg,
+                  $btn-font-size-lg,
+                  $btn-line-height,
+                  $btn-border-radius-lg
   );
 }
 
 .btn-sm {
   @include button-size(
-    $btn-padding-y-sm,
-    $btn-padding-x-sm,
-    $btn-font-size-sm,
-    $btn-line-height,
-    $btn-border-radius-sm
+                  $btn-padding-y-sm,
+                  $btn-padding-x-sm,
+                  $btn-font-size-sm,
+                  $btn-line-height,
+                  $btn-border-radius-sm
   );
 }
 
