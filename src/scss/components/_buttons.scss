@@ -111,6 +111,142 @@ fieldset:disabled a.btn {
   }
 }
 
+// Tooltip Btn
+@each $color, $value in $theme-colors {
+  .btn-tooltip-#{$color} {
+    @include button-outline-variant($value);
+    border-radius: 0;
+    border: none;
+    @include hover() {
+      color: lighten($body-color, 40%) ;
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: $btn-focus-box-shadow;
+    }
+  }
+}
+
+// Icon Only Btn
+@each $color, $value in $theme-colors {
+  .btn-icon-#{$color} {
+    @include button-variant($value, $value);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include button-size(
+      $btn-padding-y-sm,
+      $btn-padding-x-sm,
+      $btn-font-size,
+      $btn-line-height,
+      $btn-border-radius
+    );
+    span{
+      font-style: $font-size-base;
+      padding: 0 !important;
+    }
+    @include hover() {
+      //color: lighten($body-color, 40%);
+    }
+
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: $btn-focus-box-shadow;
+    }
+  }
+}
+
+// Icon Only Btn rounded
+@each $color, $value in $theme-colors {
+  .btn-icon-rounded-#{$color} {
+    @include button-variant($value, $value);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include button-size(
+        $btn-padding-y-sm,
+        $btn-padding-x-sm,
+        $btn-font-size,
+        $btn-line-height,
+        $btn-border-radius-curved
+
+    );
+    span{
+      font-style: $font-size-base;
+      padding: 0 !important;
+    }
+  }
+}
+
+// Icon Only Btn outline
+@each $color, $value in $theme-colors {
+  .btn-icon-#{$color}-outline {
+    @include button-variant($value, $value);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: $body-color;
+    @include button-size(
+      $btn-padding-y-sm,
+      $btn-padding-x-sm,
+      $btn-font-size,
+      $btn-line-height,
+      $btn-border-radius
+    );
+    span{
+      font-style: $font-size-base;
+      padding: 0 !important;
+    }
+    @include hover() {
+      //color: lighten($body-color, 40%);
+    }
+
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: $btn-focus-box-shadow;
+    }
+  }
+}
+
+// Icon Only Btn rounded outline
+@each $color, $value in $theme-colors {
+  .btn-icon-rounded-#{$color}-outline {
+    @include button-variant($value, $value);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: $body-color;
+    @include button-size(
+        $btn-padding-y-sm,
+        $btn-padding-x-sm,
+        $btn-font-size,
+        $btn-line-height,
+        $btn-border-radius-curved
+
+    );
+    span{
+      font-style: $font-size-base;
+      padding: 0 !important;
+    }
+  }
+}
+
 //
 // Link buttons
 //
@@ -149,7 +285,7 @@ fieldset:disabled a.btn {
     $btn-padding-y-lg,
     $btn-padding-x-lg,
     $btn-font-size-lg,
-    $btn-line-height-lg,
+    $btn-line-height,
     $btn-border-radius-lg
   );
 }
@@ -159,7 +295,7 @@ fieldset:disabled a.btn {
     $btn-padding-y-sm,
     $btn-padding-x-sm,
     $btn-font-size-sm,
-    $btn-line-height-sm,
+    $btn-line-height,
     $btn-border-radius-sm
   );
 }
