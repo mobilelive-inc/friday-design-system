@@ -3,7 +3,9 @@
 //
 
 .btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
   color: $body-color;
@@ -52,6 +54,10 @@
         @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
       }
     }
+  }
+  span{
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
 
