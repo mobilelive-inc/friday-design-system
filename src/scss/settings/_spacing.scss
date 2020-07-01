@@ -1,0 +1,69 @@
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret: true;
+$enable-rounded: true;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-prefers-reduced-motion-media-query: true;
+$enable-hover-media-query: false; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes: true;
+$enable-pointer-cursor-for-buttons: true;
+$enable-print-styles: true;
+$enable-responsive-font-sizes: false;
+$enable-validation-icons: true;
+$enable-deprecation-messages: true;
+
+// Spacing
+//
+// Control the default styling of most DesignSystem elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $global-spacers map, should you need more variation.
+
+$global-spacer: 1rem;
+$global-spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$global-spacers: map-merge(
+        (
+            micro: (
+                $global-spacer * 0.25,
+            ),
+            tiny: (
+                $global-spacer * 0.5,
+            ),
+            small: $global-spacer,
+            mid: (
+                $global-spacer * 2,
+            ),
+            large: (
+                $global-spacer * 4,
+            ),
+            xlarge: (
+                $global-spacer * 8,
+            ),
+        ),
+        $global-spacers
+);
+
+$global-spacer-micro: $global-spacer * 0.25;
+$global-spacer-tiny: $global-spacer * 0.5;
+$global-spacer-mid: $global-spacer * 2;
+$global-spacer-large: $global-spacer * 4;
+$global-spacer-xlarge: $global-spacer * 8;
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$sizes: map-merge(
+        (
+            25: 25%,
+            50: 50%,
+            75: 75%,
+            100: 100%,
+            auto: auto,
+        ),
+        $sizes
+);
+

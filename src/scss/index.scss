@@ -1,7 +1,11 @@
 @import "vendors/rfs_autofontSizing";
 
+
+
 @import "settings/global.functions";
+
 @import "settings/colors";
+@import "settings/spacing";
 @import "settings/typography";
 @import "settings/gridLayout";
 @import "settings/utilities";
@@ -12,13 +16,14 @@
 @import "settings/images";
 @import "settings/modals";
 
+@import "generic/root";
+
 //Tools
 @import "tools/tool.grid";
 @import "tools/tool.shadows";
 @import "tools/tool.clearfix";
 @import "tools/tool.gradients";
 @import "tools/tool.vendor-prefixes";
-
 
 @import "elements/element.headings";
 @import "components/buttons";
@@ -40,4 +45,3 @@
 //vendors
 
 @import "vendors/icomons_styles";
-

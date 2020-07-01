@@ -23,7 +23,3 @@
 //     document.getElementById('slider').checked = true;
 //   }
 // })();
-
-
-
-

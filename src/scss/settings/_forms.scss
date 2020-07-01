@@ -42,30 +42,24 @@ $input-plaintext-color: $body-color;
 
 $input-height-border: $input-border-width * 2;
 
-$input-height-inner: add(
-                $input-line-height * 1em,
-                $input-padding-y * 2
-);
-$input-height-inner-half: add(
-                $input-line-height * 0.5em,
-                $input-padding-y
-);
+$input-height-inner: add($input-line-height * 1em, $input-padding-y * 2);
+$input-height-inner-half: add($input-line-height * 0.5em, $input-padding-y);
 $input-height-inner-quarter: add(
-                $input-line-height * 0.25em,
-                $input-padding-y / 2
+  $input-line-height * 0.25em,
+  $input-padding-y / 2
 );
 
 $input-height: add(
-                $input-line-height * 1em,
-                add($input-padding-y * 2, $input-height-border, false)
+  $input-line-height * 1em,
+  add($input-padding-y * 2, $input-height-border, false)
 );
 $input-height-sm: add(
-                $input-line-height-sm * 1em,
-                add($input-padding-y-sm * 2, $input-height-border, false)
+  $input-line-height-sm * 1em,
+  add($input-padding-y-sm * 2, $input-height-border, false)
 );
 $input-height-lg: add(
-                $input-line-height-lg * 1em,
-                add($input-padding-y-lg * 2, $input-height-border, false)
+  $input-line-height-lg * 1em,
+  add($input-padding-y-lg * 2, $input-height-border, false)
 );
 
 $input-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -87,7 +81,7 @@ $input-group-addon-bg: $gray-light;
 $input-group-addon-border-color: $input-border-color;
 
 $custom-forms-transition: background-color 0.15s ease-in-out,
-border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
 $custom-control-gutter: 0.5rem;
 $custom-control-spacer-x: 1rem;
@@ -108,10 +102,7 @@ $custom-control-label-disabled-color: $gray;
 
 $custom-control-indicator-checked-color: $component-active-color;
 $custom-control-indicator-checked-bg: $component-active-bg;
-$custom-control-indicator-checked-disabled-bg: rgba(
-                theme-color("primary"),
-                0.5
-);
+$custom-control-indicator-checked-disabled-bg: rgba($gray, 0.5);
 $custom-control-indicator-checked-box-shadow: none;
 $custom-control-indicator-checked-border-color: $custom-control-indicator-checked-bg;
 
@@ -119,10 +110,7 @@ $custom-control-indicator-focus-box-shadow: $input-focus-box-shadow;
 $custom-control-indicator-focus-border-color: $input-focus-border-color;
 
 $custom-control-indicator-active-color: $component-active-color;
-$custom-control-indicator-active-bg: lighten(
-                $component-active-bg,
-                35%
-);
+$custom-control-indicator-active-bg: lighten($component-active-bg, 35%);
 $custom-control-indicator-active-box-shadow: none;
 $custom-control-indicator-active-border-color: $custom-control-indicator-active-bg;
 
@@ -141,8 +129,8 @@ $custom-radio-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http:/
 $custom-switch-width: $custom-control-indicator-size * 1.75;
 $custom-switch-indicator-border-radius: $custom-control-indicator-size / 2;
 $custom-switch-indicator-size: subtract(
-                $custom-control-indicator-size,
-                $custom-control-indicator-border-width * 4
+  $custom-control-indicator-size,
+  $custom-control-indicator-border-width * 4
 );
 
 $custom-select-padding-y: $input-padding-y;
@@ -161,17 +149,17 @@ $custom-select-bg-size: 8px 10px; // In pixels because image dimensions
 $custom-select-indicator-color: $gray-dark;
 $custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>");
 $custom-select-background: escape-svg($custom-select-indicator) no-repeat right
-$custom-select-padding-x center / $custom-select-bg-size; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
+  $custom-select-padding-x center / $custom-select-bg-size; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 
 $custom-select-feedback-icon-padding-right: add(
-                1em * 0.75,
-                (2 * $custom-select-padding-y * 0.75) + $custom-select-padding-x +
+  1em * 0.75,
+  (2 * $custom-select-padding-y * 0.75) + $custom-select-padding-x +
     $custom-select-indicator-padding
 );
 $custom-select-feedback-icon-position: center right
-        ($custom-select-padding-x + $custom-select-indicator-padding);
+  ($custom-select-padding-x + $custom-select-indicator-padding);
 $custom-select-feedback-icon-size: $input-height-inner-half
-$input-height-inner-half;
+  $input-height-inner-half;
 
 $custom-select-border-width: $input-border-width;
 $custom-select-border-color: $input-border-color;
@@ -181,7 +169,7 @@ $custom-select-box-shadow: inset 0 1px 2px rgba($black, 0.075);
 $custom-select-focus-border-color: $input-focus-border-color;
 $custom-select-focus-width: $input-focus-width;
 $custom-select-focus-box-shadow: 0 0 0 $custom-select-focus-width
-$input-btn-focus-color;
+  $input-btn-focus-color;
 
 $custom-select-padding-y-sm: $input-padding-y-sm;
 $custom-select-padding-x-sm: $input-padding-x-sm;
@@ -207,7 +195,7 @@ $custom-range-thumb-border: 0;
 $custom-range-thumb-border-radius: 1rem;
 $custom-range-thumb-box-shadow: 0 0.1rem 0.25rem rgba($black, 0.1);
 $custom-range-thumb-focus-box-shadow: 0 0 0 1px $body-bg,
-$input-focus-box-shadow;
+  $input-focus-box-shadow;
 $custom-range-thumb-focus-box-shadow-width: $input-focus-width; // For focus box shadow issue in IE/Edge
 $custom-range-thumb-active-bg: lighten($component-active-bg, 35%);
 $custom-range-thumb-disabled-bg: $gray;
@@ -232,7 +220,7 @@ $custom-file-box-shadow: $input-box-shadow;
 $custom-file-button-color: $custom-file-color;
 $custom-file-button-bg: $input-group-addon-bg;
 $custom-file-text: (
-        en: "Browse",
+  en: "Browse",
 );
 
 // Form validation
@@ -250,15 +238,15 @@ $form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.o
 $form-validation-states: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $form-validation-states: map-merge(
-                (
-                        "valid": (
-                                "color": $form-feedback-valid-color,
-                                "icon": $form-feedback-icon-valid,
-                        ),
-                        "invalid": (
-                                "color": $form-feedback-invalid-color,
-                                "icon": $form-feedback-icon-invalid,
-                        ),
-                ),
-                $form-validation-states
+  (
+    "valid": (
+      "color": $form-feedback-valid-color,
+      "icon": $form-feedback-icon-valid,
+    ),
+    "invalid": (
+      "color": $form-feedback-invalid-color,
+      "icon": $form-feedback-icon-invalid,
+    ),
+  ),
+  $form-validation-states
 );

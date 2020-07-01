@@ -1,14 +1,13 @@
-
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-"Liberation Mono", "Courier New", monospace;
+  "Liberation Mono", "Courier New", monospace;
 $font-family-base: $font-family-sans-serif;
 
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
@@ -48,7 +47,6 @@ $display3-weight: 300;
 $display4-weight: 300;
 $display-line-height: $headings-line-height;
 
-
 //Borders
 $border-width: 2px;
 $border-color: $gray-light;
@@ -56,6 +54,34 @@ $border-radius-none: 0;
 $border-radius: 0.25rem;
 $border-radius-lg: 0.3rem;
 $border-radius-sm: 0.2rem;
+
+
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white;
+$body-color: $gray-dark;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: theme-var($--primary);
+$link-decoration: none;
+//$link-hover-color: darken(theme-var($--primary), 15%);
+$link-hover-decoration: underline;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 15%;
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom: 1rem;
+
 
 
 // Components
@@ -71,7 +97,7 @@ $box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
 $box-shadow-lg: 0 1rem 3rem rgba($black, 0.175);
 
 $component-active-color: $white;
-$component-active-bg: theme-color("info");
+$component-active-bg: blue;
 
 $transition-base: all 0.2s ease-in-out;
 $transition-fade: opacity 0.15s linear;
@@ -80,11 +106,9 @@ $transition-collapse: height 0.35s ease;
 $embed-responsive-aspect-ratios: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $embed-responsive-aspect-ratios: join(
-                        ((21 9), (16 9), (4 3), (1 1)),
-                $embed-responsive-aspect-ratios
+  ((21 9), (16 9), (4 3), (1 1)),
+  $embed-responsive-aspect-ratios
 );
-
-
 
 $lead-font-size: $font-size-base * 1.25;
 $lead-font-weight: 300;
@@ -171,9 +195,7 @@ $btn-border-radius-lg: $border-radius-lg;
 $btn-border-radius-sm: $border-radius-sm;
 
 $btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
-
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
 // Z-index master list
 //
@@ -197,10 +219,12 @@ $nav-link-disabled-color: $gray;
 $nav-tabs-border-color: $gray-light;
 $nav-tabs-border-width: $border-width;
 $nav-tabs-border-radius: $border-radius;
-$nav-tabs-link-hover-border-color: $gray-light $gray-light $nav-tabs-border-color;
+$nav-tabs-link-hover-border-color: $gray-light $gray-light
+  $nav-tabs-border-color;
 $nav-tabs-link-active-color: $gray-dark;
 $nav-tabs-link-active-bg: $body-bg;
-$nav-tabs-link-active-border-color: $gray-light $gray-light $nav-tabs-link-active-bg;
+$nav-tabs-link-active-border-color: $gray-light $gray-light
+  $nav-tabs-link-active-bg;
 
 $nav-pills-border-radius: $border-radius;
 $nav-pills-link-active-color: $component-active-color;
@@ -260,8 +284,8 @@ $dropdown-border-color: rgba($black, 0.15);
 $dropdown-border-radius: $border-radius;
 $dropdown-border-width: $border-width;
 $dropdown-inner-border-radius: subtract(
-                $dropdown-border-radius,
-                $dropdown-border-width
+  $dropdown-border-radius,
+  $dropdown-border-width
 );
 $dropdown-divider-bg: $gray-light;
 $dropdown-divider-margin-y: $nav-divider-margin-y;
@@ -282,7 +306,6 @@ $dropdown-item-padding-x: 1.5rem;
 $dropdown-header-color: $gray;
 $dropdown-header-padding: $dropdown-padding-y $dropdown-item-padding-x;
 
-
 // Alerts
 //
 // Define alert colors, border radius, and padding.
@@ -297,7 +320,6 @@ $alert-border-width: $border-width;
 $alert-bg-level: -10;
 $alert-border-level: -9;
 $alert-color-level: 6;
-
 
 // List group
 
@@ -324,9 +346,6 @@ $list-group-action-hover-color: $list-group-action-color;
 $list-group-action-active-color: $body-color;
 $list-group-action-active-bg: $gray-light;
 
-
-
-
 // Code
 $code-font-size: 1.25rem;
 $code-color: $orange-dark;
@@ -337,3 +356,5 @@ $kbd-color: $white;
 $kbd-bg: $gray-dark;
 $pre-color: $gray-dark;
 $pre-scrollable-max-height: 340px;
+
+

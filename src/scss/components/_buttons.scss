@@ -17,11 +17,11 @@
   background-color: transparent;
   border: $btn-border-width solid transparent;
   @include button-size(
-                  $btn-padding-y,
-                  $btn-padding-x,
-                  $btn-font-size,
-                  $btn-line-height,
-                  $btn-border-radius
+    $btn-padding-y,
+    $btn-padding-x,
+    $btn-font-size,
+    $btn-line-height,
+    $btn-border-radius
   );
   @include transition($btn-transition);
 
@@ -55,14 +55,14 @@
       }
     }
   }
-  span{
+  span {
     padding-left: 8px;
     padding-right: 8px;
   }
-  &.btn-curved{
+  &.btn-curved {
     border-radius: $btn-border-radius-rounded !important;
   }
-  &.btn-rounded{
+  &.btn-rounded {
     border-radius: $btn-border-radius-rounded;
   }
 }
@@ -82,7 +82,6 @@ fieldset:disabled a.btn {
     @include button-variant($value, $value);
   }
 }
-
 
 // Outline block border Btn
 @each $color, $value in $theme-colors {
@@ -121,11 +120,11 @@ fieldset:disabled a.btn {
     align-items: center;
     justify-content: center;
     @include button-size(
-        $btn-padding-y-sm,
-        $btn-padding-x-sm,
-        $btn-font-size,
-        $btn-line-height,
-        $btn-border-radius
+      $btn-padding-y-sm,
+      $btn-padding-x-sm,
+      $btn-font-size,
+      $btn-line-height,
+      $btn-border-radius
     );
 
     span {
@@ -144,10 +143,9 @@ fieldset:disabled a.btn {
   }
 }
 
-
 //Icon Only Btn outline + rounded outline
 @each $color, $value in $theme-colors {
-  .btn-icon-#{$color}-outline{
+  .btn-icon-#{$color}-outline {
     @include button-variant($value, $value);
     //border: $btn-border-width solid transparent;
     width: 40px;
@@ -158,11 +156,11 @@ fieldset:disabled a.btn {
     background-color: transparent;
     color: $body-color;
     @include button-size(
-                    $btn-padding-y-sm,
-                    $btn-padding-x-sm,
-                    $btn-font-size,
-                    $btn-line-height,
-                    $btn-border-radius
+      $btn-padding-y-sm,
+      $btn-padding-x-sm,
+      $btn-font-size,
+      $btn-line-height,
+      $btn-border-radius
     );
 
     span {
@@ -171,7 +169,6 @@ fieldset:disabled a.btn {
     }
 
     @include hover() {
-
     }
 
     &:focus,
@@ -181,8 +178,6 @@ fieldset:disabled a.btn {
     }
   }
 }
-
-
 
 //
 // Link buttons
@@ -219,21 +214,21 @@ fieldset:disabled a.btn {
 
 .btn-lg {
   @include button-size(
-                  $btn-padding-y-lg,
-                  $btn-padding-x-lg,
-                  $btn-font-size-lg,
-                  $btn-line-height,
-                  $btn-border-radius-lg
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $btn-line-height,
+    $btn-border-radius-lg
   );
 }
 
 .btn-sm {
   @include button-size(
-                  $btn-padding-y-sm,
-                  $btn-padding-x-sm,
-                  $btn-font-size-sm,
-                  $btn-line-height,
-                  $btn-border-radius-sm
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $btn-line-height,
+    $btn-border-radius-sm
   );
 }
 

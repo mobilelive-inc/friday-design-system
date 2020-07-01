@@ -11,6 +11,7 @@ This README would normally document whatever steps are necessary to get your app
 ### How do I get set up?
 
 It uses:
+
 - SCSS with linting and autoprefixer
 - JavaScript with webpack using babel and linting
 - html partials and minify with post-html
@@ -25,15 +26,19 @@ The compiled files will go to the directory "/dist"
 ## Getting Started
 
 1. Install dependencies
+
 ```
 npm install
 ```
 
 2. Build resources
+
 ```
 npm run build
 ```
 
 3. Watch for changes
+
 ```
 npm run watch
+```
