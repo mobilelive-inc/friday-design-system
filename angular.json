@@ -25,7 +25,9 @@
               "apps/ngx-xis-app/src/favicon.ico",
               "apps/ngx-xis-app/src/assets"
             ],
-            "styles": ["apps/ngx-xis-app/src/styles.scss"],
+            "styles": [
+              "apps/ngx-xis-app/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -83,7 +85,10 @@
               "apps/ngx-xis-app/tsconfig.app.json",
               "apps/ngx-xis-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/ngx-xis-app/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/ngx-xis-app/**/*"
+            ]
           }
         },
         "test": {
@@ -118,8 +123,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/ngx-xis-app-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/ngx-xis-app-e2e/**/*"]
+            "tsConfig": [
+              "apps/ngx-xis-app-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/ngx-xis-app-e2e/**/*"
+            ]
           }
         }
       }
@@ -189,7 +199,10 @@
               "apps/rx-xis-app/tsconfig.app.json",
               "apps/rx-xis-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/rx-xis-app/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/rx-xis-app/**/*"
+            ]
           }
         },
         "test": {
@@ -223,8 +236,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/rx-xis-app-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/rx-xis-app-e2e/**/*"]
+            "tsConfig": [
+              "apps/rx-xis-app-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/rx-xis-app-e2e/**/*"
+            ]
           }
         }
       }
@@ -254,7 +272,10 @@
               "libs/ngx-xis/tsconfig.lib.json",
               "libs/ngx-xis/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ngx-xis/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ngx-xis/**/*"
+            ]
           }
         },
         "test": {
@@ -286,7 +307,10 @@
               "libs/rx-xis/tsconfig.lib.json",
               "libs/rx-xis/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/rx-xis/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/rx-xis/**/*"
+            ]
           }
         },
         "build": {
@@ -296,7 +320,12 @@
             "tsConfig": "libs/rx-xis/tsconfig.lib.json",
             "project": "libs/rx-xis/package.json",
             "entryFile": "libs/rx-xis/src/index.ts",
-            "external": ["react", "react-dom", "react-is", "styled-components"],
+            "external": [
+              "react",
+              "react-dom",
+              "react-is",
+              "styled-components"
+            ],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -331,7 +360,10 @@
               "libs/ui/tsconfig.lib.json",
               "libs/ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ui/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui/**/*"
+            ]
           }
         },
         "test": {
@@ -352,7 +384,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "e5a39de2-a595-4642-ad87-ee588b9a060e"
   },
   "schematics": {
     "@nrwl/angular:application": {

@@ -1,13 +1,22 @@
+const path = require('path')
+const here = (...p) => path.join(__dirname, ...p);
 module.exports = {
-  name: 'rx-xis-app',
-  preset: '../../jest.config.js',
-  transform: {
-    '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nrwl/react/plugins/jest',
-    '^.+\\.[tj]sx?$': [
-      'babel-jest',
-      { cwd: __dirname, configFile: './babel-jest.config.json' },
-    ],
+  verbose: true,
+  testEnvironment: 'jsdom',
+  moduleNameMapper: {
+    '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
+    // eslint-disable-next-line max-len
+    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/src/__mock__/file-mock.js`,
   },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'html'],
-  coverageDirectory: '../../coverage/apps/rx-xis-app',
+  testPathIgnorePatterns: [`node_modules`, `.cache`],
+  coverageThreshold: {
+    global: {
+      statements: 80,
+      branches: 60,
+      functions: 80,
+      lines: 80
+    }
+  },
+  roots: ['./src'],
+  setupFilesAfterEnv: [here('./setupTests.js')],
 };
