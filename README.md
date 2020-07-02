@@ -34,7 +34,7 @@ npm install
 2. Build resources
 
 ```
-npm run build
+npm run build****
 ```
 
 3. Watch for changes

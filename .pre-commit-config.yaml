@@ -3,4 +3,3 @@ repos:
     rev: "" # Use the sha or tag you want to point at like 0.0.1
     hooks:
       - id: stylelint
-#            additional_dependencies: ['stylelint@13.2.1', 'stylelint-config-standard@20.0.0']
