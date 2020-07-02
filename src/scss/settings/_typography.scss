@@ -69,9 +69,9 @@ $body-color: $gray-dark;
 //
 // Style anchor elements.
 
-$link-color: theme-var($--primary);
+$link-color: $blue;
 $link-decoration: none;
-//$link-hover-color: darken(theme-var($--primary), 15%);
+$link-hover-color: darken($blue, 15%);
 $link-hover-decoration: underline;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15%;
@@ -92,9 +92,9 @@ $line-height-sm: 1.5;
 
 $rounded-pill: 50rem;
 
-$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075);
-$box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
-$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(#000, 0.075);
+$box-shadow: 0 0.5rem 1rem rgba(#000, 0.15);
+$box-shadow-lg: 0 1rem 3rem rgba(#000, 0.175);
 
 $component-active-color: $white;
 $component-active-bg: blue;
@@ -121,7 +121,7 @@ $blockquote-small-color: $gray;
 $blockquote-small-font-size: $small-font-size;
 $blockquote-font-size: $font-size-base * 1.25;
 
-$hr-border-color: rgba($black, 0.1);
+$hr-border-color: rgba(#000, 0.1);
 $hr-border-width: $border-width;
 
 $mark-padding: 0.2em;

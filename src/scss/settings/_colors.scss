@@ -1,7 +1,5 @@
 ///////////////////////// Variables////////////////////////////////////
 
-// Color system
-
 $white: #fff;
 $gray: #707070;
 $gray-light: #e5e5e5;
@@ -9,16 +7,6 @@ $gray-lighter: #f4f4f4;
 $gray-dark: #212529;
 $black: #282828;
 
-$grays: ();
-// stylelint-disable-next-line scss/dollar-variable-default
-$grays: map-merge(
-        (
-            "100": $gray-light,
-            "400": $gray,
-            "900": $gray-dark,
-        ),
-        $grays
-);
 
 $orange: #f48245;
 $orange-lighter: #fef3ec;
@@ -60,14 +48,84 @@ $red: #dc3545;
 $green: #34a84d;
 
 
-//$--primary: $orange;
-//$--secondary: $gray;
-//$--success: $green;
-//$--info: $cyan;
-//$--warning: $lemon;
-//$--danger: $red;
-//$--light: $gray-light;
-//$--dark: $gray-dark;
+// Color system
+:root {
+  --white: #fff;
+  --gray: #707070;
+  --gray-light: #e5e5e5;
+  --gray-lighter: #f4f4f4;
+  --gray-dark: #212529;
+  --black: #282828;
+
+
+  --orange: #f48245;
+  --orange-lighter: #fef3ec;
+  --orange-light: #f9c0a2;
+  --orange-dark: #c36837;
+  --orange-darker: #311a0e;
+
+  --blue: #55a2d9;
+  --blue-lighter: #eef6fb;
+  --blue-light: #bbdaf0;
+  --blue-dark: #336182;
+  --blue-darker: #11202b;
+
+  --lemon: #fccc2e;
+  --lemon-lighter: #fffaea;
+  --lemon-light: #feebab;
+  --lemon-dark: #977a1c;
+  --lemon-darker: #322909;
+
+  --lime: #c4d93c;
+  --lime-lighter: #f9fbec;
+  --lime-light: #e7f0b1;
+  --lime-dark: #768224;
+  --lime-darker: #272b0c;
+
+  --cyan: #66c9d5;
+  --cyan-lighter: #f0fafb;
+  --cyan-light: #c2e9ee;
+  --cyan-dark: #3d7980;
+  --cyan-darker: #14282b;
+
+  --navy: #2874a4;
+  --navy-lighter: #eaf1f6;
+  --navy-light: #a9c7db;
+  --navy-dark: #184662;
+  --navy-darker: #081721;
+
+  --red: #dc3545;
+  --green: #34a84d;
+
+  --primary: var(--orange);
+  --secondary: var(--gray);
+  --success: var(--green);
+  --info: var(--cyan);
+  --warning: var(--lemon);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--gray-dark);
+}
+
+
+$grays: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+        (
+            "100": $gray-light,
+            "400": $gray,
+            "900": $gray-dark,
+        ),
+        $grays
+);
+$primary: $orange;
+$secondary: $gray;
+$success: $green;
+$info: $cyan;
+$warning: $lemon;
+$danger: $red;
+$light: $gray-light;
+$dark: $gray-dark;
 
 
 $--primary: --primary;
@@ -129,47 +187,47 @@ $colors: map-merge(
 
 $theme-map-light: (
     $--primary: #fff,
-    $--secondary: $gray,
-    $--success: $green,
-    $--info: $gray-dark,
-    $--warning: $lemon,
-    $--danger: $red,
-    $--light: $gray-light,
-    $--dark: $gray-dark,
+    $--secondary: #ddd,
+    $--success: green,
+    $--info: cyan,
+    $--warning: yellow,
+    $--danger: $--red,
+    $--light: #ddd,
+    $--dark: #494949,
+    $--blue: $--red,
 
-    $--blue: $red,
     //$--lime: #ddd,
-    $--red: $red,
-    $--orange: $orange,
-    $--lemon: $lemon,
-    $--navy: $navy,
-    $--cyan: $cyan,
-    $--white: $white,
-    $--gray: $gray,
-    $--black: $black,
+    $--red: $--red,
+    $--orange: $--orange,
+    $--lemon: $--lemon,
+    $--navy: $--navy,
+    $--cyan: $--cyan,
+    $--white: $--white,
+    $--gray: $--gray,
+    $--black: $--black,
 );
 
 
 $theme-map-dark: (
     $--primary: #000,
-    $--secondary: $gray,
-    $--success: $green,
-    $--info: $cyan,
-    $--warning: $lemon,
-    $--danger: $red,
-    $--light: $gray-light,
-    $--dark: $gray-dark,
+    $--secondary: #ddd,
+    $--success: green,
+    $--info: cyan,
+    $--warning: yellow,
+    $--danger: $--red,
+    $--light: #ddd,
+    $--dark: #494949,
 
-    $--blue: $white,
-    //$--lime: $lime,
-    $--red: $red,
-    $--orange: $orange,
-    $--lemon: $lemon,
-    $--navy: $navy,
-    $--cyan: $cyan,
-    $--white: $white,
-    $--gray: $gray,
-    $--black: $black,
+    //$--lime: #ddd,
+    $--blue: $--white,
+    $--red: $--red,
+    $--orange: $--orange,
+    $--lemon: $--lemon,
+    $--navy: $--navy,
+    $--cyan: $--cyan,
+    $--white: $--white,
+    $--gray: $--gray,
+    $--black: $--black,
 );
 
 
@@ -220,8 +278,8 @@ $theme-color-interval: 8%;
 $yiq-contrasted-threshold: 150;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark: $gray-dark;
-$yiq-text-light: $white;
+$yiq-text-dark: $--dark;
+$yiq-text-light: $--white;
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (
