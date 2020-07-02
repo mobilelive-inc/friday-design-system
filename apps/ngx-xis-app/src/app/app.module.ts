@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { NgxXisModule } from '@nx-hybrid-demo/ngx-xis';
-
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
@@ -10,8 +8,7 @@ import { RouterModule } from '@angular/router';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-    NgxXisModule
+    RouterModule.forRoot([], { initialNavigation: 'enabled' })
   ],
   providers: [],
   bootstrap: [AppComponent],

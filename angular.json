@@ -247,53 +247,6 @@
         }
       }
     },
-    "ngx-xis": {
-      "projectType": "library",
-      "root": "libs/ngx-xis",
-      "sourceRoot": "libs/ngx-xis/src",
-      "prefix": "nx-hybrid-demo",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/ngx-xis/tsconfig.lib.json",
-            "project": "libs/ngx-xis/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/ngx-xis/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/ngx-xis/tsconfig.lib.json",
-              "libs/ngx-xis/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/ngx-xis/**/*"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/ngx-xis/jest.config.js",
-            "tsConfig": "libs/ngx-xis/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/ngx-xis/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      }
-    },
     "rx-xis": {
       "root": "libs/rx-xis",
       "sourceRoot": "libs/rx-xis/src",

@@ -34,9 +34,6 @@
       "tags": [],
       "implicitDependencies": ["rx-xis-app"]
     },
-    "ngx-xis": {
-      "tags": []
-    },
     "rx-xis": {
       "tags": ["scope:rx"]
     },
