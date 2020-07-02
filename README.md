@@ -43,6 +43,26 @@ npm run build****
 npm run watch
 ```
 
-# Run pretier to format the scss code
+### Run pretier to format the scss code
 
 npx prettier --write .
+
+
+### Run StyleLint to check errors in the scss code
+
+npx stylelint "**/*.css"
+
+
+# Information about root files
+````
+.pre-commit-config.yaml
+````
+- Have configs of pre commit hooks
+
+````
+.stylelintrc
+````
+- Have standard configurations of liniting
+- some custom pre defined rules can be over ride 
+
+

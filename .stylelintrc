@@ -6,6 +6,11 @@
     "block-opening-brace-space-before": null,
     "block-opening-brace-space-after": null,
     "block-closing-brace-newline-after": null,
-    "custom-property-empty-line-before": null
+    "custom-property-empty-line-before": null,
+    "selector-pseudo-element-colon-notation": null,
+    "color-hex-case": null,
+    "function-comma-space-after": null,
+    "rule-empty-line-before": null,
+    "declaration-colon-newline-after": null
   }
 }
