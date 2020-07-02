@@ -1,5 +1,0 @@
-repos:
-  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
-    rev: "" # Use the sha or tag you want to point at like 0.0.1
-    hooks:
-      - id: stylelint

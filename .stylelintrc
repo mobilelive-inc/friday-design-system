@@ -11,6 +11,8 @@
     "color-hex-case": null,
     "function-comma-space-after": null,
     "rule-empty-line-before": null,
-    "declaration-colon-newline-after": null
+    "declaration-colon-newline-after": null,
+    "declaration-empty-line-before": null,
+    "function-name-case": null
   }
 }

@@ -1,5 +1,4 @@
 ///////////////////////// Variables////////////////////////////////////
-
 $white: #fff;
 $gray: #707070;
 $gray-light: #e5e5e5;
@@ -187,8 +186,7 @@ $theme-map-light: (
   $--light: #ddd,
   $--dark: #494949,
   $--blue: $--red,
-  //$--lime: #ddd,
-    $--red: $--red,
+  $--red: $--red,
   $--orange: $--orange,
   $--lemon: $--lemon,
   $--navy: $--navy,
@@ -207,8 +205,7 @@ $theme-map-dark: (
   $--danger: $--red,
   $--light: #ddd,
   $--dark: #494949,
-  //$--lime: #ddd,
-    $--blue: $--white,
+  $--blue: $--white,
   $--red: $--red,
   $--orange: $--orange,
   $--lemon: $--lemon,

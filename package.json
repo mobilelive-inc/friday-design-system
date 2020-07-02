@@ -6,7 +6,7 @@
   "license": "Mobilelive",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/mobilelive/mobilelive-design-system-static-components/src/"
+    "url": "https://bitbucket.org/mobilelive/mobilelive-design-system-static-components/src"
   },
   "scripts": {
     "clean": "rimraf dist/*",
@@ -15,11 +15,13 @@
     "build:css": "npm run css:scss && npm run css:autoprefixer",
     "build:js": "webpack --mode=production",
     "build:html": "posthtml -c posthtml.json",
-    "build": "run-s build:*",
-    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
     "watch:css": "onchange \"src\" -- npm run build:css",
     "watch:html": "onchange \"src/views\" -- npm run build:html",
     "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+    "precommit": "pretty-quick --staged",
+    "prepush": "npm run lint",
+    "build": "run-s build:*",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
     "watch": "run-p serve watch:*"
   },
   "devDependencies": {
@@ -55,10 +57,13 @@
     "eslint-plugin-prettier": "^3.1.4"
   },
   "lint-staged": {
-    "**/*": [
-      "eslint --fix",
+    "**/*.js": [
+      "eslint --fix"
+    ],
+    "**/*.scss": [
       "prettier --write .",
-      "pretty-quick --staged"
+      "pretty-quick --staged",
+      "stylelint --syntax scss"
     ]
   },
   "husky": {

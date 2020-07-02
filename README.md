@@ -47,22 +47,21 @@ npm run watch
 
 npx prettier --write .
 
-
 ### Run StyleLint to check errors in the scss code
 
 npx stylelint "**/*.css"
 
-
 # Information about root files
-````
+
+```
 .pre-commit-config.yaml
-````
+```
+
 - Have configs of pre commit hooks
 
-````
+```
 .stylelintrc
-````
+```
+
 - Have standard configurations of liniting
-- some custom pre defined rules can be over ride 
-
-
+- some custom pre defined rules can be over ride
