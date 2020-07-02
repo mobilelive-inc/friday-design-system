@@ -1,22 +1,22 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/js/main.js",
   output: {
     path: __dirname + "/dist",
-    filename: "bundle.js"
+    filename: "bundle.js",
   },
   plugins: [
     new CopyWebpackPlugin([
       {
         from: "src/images",
-        to: "images"
+        to: "images",
       },
       {
         from: "src/fonts",
-        to: "fonts"
-      }
-    ])
+        to: "fonts",
+      },
+    ]),
   ],
   module: {
     rules: [
@@ -24,20 +24,15 @@ module.exports = {
         enforce: "pre",
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "eslint-loader"
+        loader: "eslint-loader",
       },
       {
         test: /\.css$/,
-        use: [
-          "style-loader",
-          "css-loader"
-        ]
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          "file-loader"
-        ]
+        use: ["file-loader"],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
@@ -52,10 +47,10 @@ module.exports = {
 
             // Output below fonts directory
             name: "./fonts/[name].[ext]",
-            publicPath: "../" // Take the directory into account
-          }
-        }
-      }
-    ]
-  }
+            publicPath: "../", // Take the directory into account
+          },
+        },
+      },
+    ],
+  },
 };

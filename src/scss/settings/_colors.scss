@@ -1,26 +1,10 @@
 ///////////////////////// Variables////////////////////////////////////
-
-
-// Color system
-
 $white: #fff;
 $gray: #707070;
 $gray-light: #e5e5e5;
 $gray-lighter: #f4f4f4;
 $gray-dark: #212529;
 $black: #282828;
-
-
-$grays: ();
-// stylelint-disable-next-line scss/dollar-variable-default
-$grays: map-merge(
-                (
-                        "100": $gray-light,
-                        "400": $gray,
-                        "900": $gray-dark,
-                ),
-                $grays
-);
 
 $orange: #f48245;
 $orange-lighter: #fef3ec;
@@ -58,27 +42,77 @@ $navy-light: #a9c7db;
 $navy-dark: #184662;
 $navy-darker: #081721;
 
-
 $red: #dc3545;
-$green: #34A84D;
+$green: #34a84d;
 
-$colors: ();
-$colors: map-merge(
-                (
-                        "blue": $blue,
-                        "lime": $lime,
-                        "red": $red,
-                        "orange": $orange,
-                        "lemon": $lemon,
-                        "navy": $navy,
-                        "cyan": $cyan,
-                        "white": $white,
-                        "gray": $gray,
-                        "dark": $black,
-                ),
-                $colors
+// Color system
+:root {
+  --white: #fff;
+  --gray: #707070;
+  --gray-light: #e5e5e5;
+  --gray-lighter: #f4f4f4;
+  --gray-dark: #212529;
+  --black: #282828;
+
+  --orange: #f48245;
+  --orange-lighter: #fef3ec;
+  --orange-light: #f9c0a2;
+  --orange-dark: #c36837;
+  --orange-darker: #311a0e;
+
+  --blue: #55a2d9;
+  --blue-lighter: #eef6fb;
+  --blue-light: #bbdaf0;
+  --blue-dark: #336182;
+  --blue-darker: #11202b;
+
+  --lemon: #fccc2e;
+  --lemon-lighter: #fffaea;
+  --lemon-light: #feebab;
+  --lemon-dark: #977a1c;
+  --lemon-darker: #322909;
+
+  --lime: #c4d93c;
+  --lime-lighter: #f9fbec;
+  --lime-light: #e7f0b1;
+  --lime-dark: #768224;
+  --lime-darker: #272b0c;
+
+  --cyan: #66c9d5;
+  --cyan-lighter: #f0fafb;
+  --cyan-light: #c2e9ee;
+  --cyan-dark: #3d7980;
+  --cyan-darker: #14282b;
+
+  --navy: #2874a4;
+  --navy-lighter: #eaf1f6;
+  --navy-light: #a9c7db;
+  --navy-dark: #184662;
+  --navy-darker: #081721;
+
+  --red: #dc3545;
+  --green: #34a84d;
+
+  --primary: var(--orange);
+  --secondary: var(--gray);
+  --success: var(--green);
+  --info: var(--cyan);
+  --warning: var(--lemon);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--gray-dark);
+}
+
+$grays: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-light,
+    "400": $gray,
+    "900": $gray-dark,
+  ),
+  $grays
 );
-
 $primary: $orange;
 $secondary: $gray;
 $success: $green;
@@ -88,20 +122,134 @@ $danger: $red;
 $light: $gray-light;
 $dark: $gray-dark;
 
+$--primary: --primary;
+$--secondary: --secondary;
+$--success: --success;
+$--info: --info;
+$--warning: --warning;
+$--danger: --danger;
+$--light: --light;
+$--dark: --dark;
+
 $theme-colors: ();
 $theme-colors: map-merge(
-                (
-                        "primary": $primary,
-                        "secondary": $secondary,
-                        "success": $success,
-                        "info": $info,
-                        "warning": $warning,
-                        "danger": $danger,
-                        "light": $light,
-                        "dark": $dark,
-                ),
-                $theme-colors
+  (
+    "primary": $--primary,
+    "secondary": $--secondary,
+    "success": $--success,
+    "info": $--info,
+    "warning": $--warning,
+    "danger": $--danger,
+    "light": $--light,
+    "dark": $--dark,
+  ),
+  $theme-colors
 );
+
+$--blue: --blue;
+$--lime: --lime;
+$--red: --red;
+$--orange: --orange;
+$--lemon: --lime;
+$--navy: --navy;
+$--cyan: --cyan;
+$--white: --white;
+$--gray: --gray;
+$--black: --black;
+
+$colors: ();
+$colors: map-merge(
+  (
+    "blue": $--blue,
+    "lime": $--lime,
+    "red": $--red,
+    "orange": $--orange,
+    "lemon": $--lemon,
+    "navy": $--navy,
+    "cyan": $--cyan,
+    "white": $--white,
+    "gray": $--gray,
+    "dark": $--black,
+  ),
+  $colors
+);
+
+////////////////////////////////theming//////////////////////////////
+
+$theme-map-light: (
+  $--primary: #fff,
+  $--secondary: #ddd,
+  $--success: green,
+  $--info: cyan,
+  $--warning: yellow,
+  $--danger: $--red,
+  $--light: #ddd,
+  $--dark: #494949,
+  $--blue: $--red,
+  $--red: $--red,
+  $--orange: $--orange,
+  $--lemon: $--lemon,
+  $--navy: $--navy,
+  $--cyan: $--cyan,
+  $--white: $--white,
+  $--gray: $--gray,
+  $--black: $--black,
+);
+
+$theme-map-dark: (
+  $--primary: #000,
+  $--secondary: #ddd,
+  $--success: green,
+  $--info: cyan,
+  $--warning: yellow,
+  $--danger: $--red,
+  $--light: #ddd,
+  $--dark: #494949,
+  $--blue: $--white,
+  $--red: $--red,
+  $--orange: $--orange,
+  $--lemon: $--lemon,
+  $--navy: $--navy,
+  $--cyan: $--cyan,
+  $--white: $--white,
+  $--gray: $--gray,
+  $--black: $--black,
+);
+
+@mixin spread-map($map: ()) {
+  @each $key, $value in $map {
+    #{$key}: $value;
+  }
+}
+
+@function theme-var($key, $fallback: null, $map: $theme-map-light) {
+  @if not map-has-key($map, $key) {
+    @error "key: '#{$key}', is not a key in map: #{$map}";
+  }
+  @if ($fallback) {
+    @return var($key, $fallback);
+  } @else {
+    @return var($key);
+  }
+}
+
+:root.theme-light {
+  @include spread-map($theme-map-light);
+}
+
+:root.theme-dark {
+  @include spread-map($theme-map-dark);
+}
+
+#pageWrapper {
+  //background-color: var(--primary);
+  //color: var(--dark);
+  z-index: 1;
+  background-color: theme-var($--primary);
+  color: theme-var($--info);
+}
+
+//////////////////////Theming////////////////////////////
 
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8%;
@@ -110,107 +258,14 @@ $theme-color-interval: 8%;
 $yiq-contrasted-threshold: 150;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark: $gray-dark;
-$yiq-text-light: $white;
+$yiq-text-dark: $--dark;
+$yiq-text-light: $--white;
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (
-                ("<", "%3c"),
-                (">", "%3e"),
-                ("#", "%23"),
-                ("(", "%28"),
-                (")", "%29")
+  ("<", "%3c"),
+  (">", "%3e"),
+  ("#", "%23"),
+  ("(", "%28"),
+  (")", "%29")
 );
-
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-
-$enable-caret: true;
-$enable-rounded: true;
-$enable-shadows: false;
-$enable-gradients: false;
-$enable-transitions: true;
-$enable-prefers-reduced-motion-media-query: true;
-$enable-hover-media-query: false; // Deprecated, no longer affects any compiled CSS
-$enable-grid-classes: true;
-$enable-pointer-cursor-for-buttons: true;
-$enable-print-styles: true;
-$enable-responsive-font-sizes: false;
-$enable-validation-icons: true;
-$enable-deprecation-messages: true;
-
-// Spacing
-//
-// Control the default styling of most DesignSystem elements by modifying these
-// variables. Mostly focused on spacing.
-// You can add more entries to the $global-spacers map, should you need more variation.
-
-$global-spacer: 1rem;
-$global-spacers: ();
-// stylelint-disable-next-line scss/dollar-variable-default
-$global-spacers: map-merge(
-                (
-                        micro: (
-                                $global-spacer * 0.25,
-                        ),
-                        tiny: (
-                                $global-spacer * 0.5,
-                        ),
-                        small: $global-spacer,
-                        mid: (
-                                $global-spacer * 2,
-                        ),
-                        large: (
-                                $global-spacer * 4,
-                        ),
-                        xlarge: (
-                                $global-spacer * 8,
-                        ),
-                ),
-                $global-spacers
-);
-
-$global-spacer-micro: $global-spacer * 0.25;
-$global-spacer-tiny: $global-spacer * 0.5;
-$global-spacer-mid: $global-spacer * 2;
-$global-spacer-large: $global-spacer * 4;
-$global-spacer-xlarge: $global-spacer * 8;
-
-// This variable affects the `.h-*` and `.w-*` classes.
-$sizes: ();
-// stylelint-disable-next-line scss/dollar-variable-default
-$sizes: map-merge(
-                (
-                        25: 25%,
-                        50: 50%,
-                        75: 75%,
-                        100: 100%,
-                        auto: auto,
-                ),
-                $sizes
-);
-
-// Body
-//
-// Settings for the `<body>` element.
-
-$body-bg: $white;
-$body-color: $gray-dark;
-
-// Links
-//
-// Style anchor elements.
-
-$link-color: theme-color("primary");
-$link-decoration: none;
-$link-hover-color: darken($link-color, 15%);
-$link-hover-decoration: underline;
-// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
-$emphasized-link-hover-darken-percentage: 15%;
-
-// Paragraphs
-//
-// Style p element.
-
-$paragraph-margin-bottom: 1rem;

@@ -1,18 +1,21 @@
 @font-face {
-  font-family: 'design-system-icons';
-  src:  url('fonts/design-system-icons.eot?th2wsb');
-  src:  url('fonts/design-system-icons.eot?th2wsb#iefix') format('embedded-opentype'),
-  url('fonts/design-system-icons.ttf?th2wsb') format('truetype'),
-  url('fonts/design-system-icons.woff?th2wsb') format('woff'),
-  url('fonts/design-system-icons.svg?th2wsb#design-system-icons') format('svg');
+  font-family: "design-system-icons";
+  src: url("fonts/design-system-icons.eot?th2wsb");
+  src: url("fonts/design-system-icons.eot?th2wsb#iefix")
+      format("embedded-opentype"),
+    url("fonts/design-system-icons.ttf?th2wsb") format("truetype"),
+    url("fonts/design-system-icons.woff?th2wsb") format("woff"),
+    url("fonts/design-system-icons.svg?th2wsb#design-system-icons")
+      format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'design-system-icons' !important;
+  font-family: "design-system-icons" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;

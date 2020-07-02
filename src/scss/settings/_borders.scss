@@ -21,7 +21,6 @@
   }
 }
 
-
 @mixin border-top-radius($radius) {
   @if $enable-rounded {
     border-top-left-radius: valid-radius($radius);

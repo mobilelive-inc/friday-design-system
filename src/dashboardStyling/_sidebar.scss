@@ -11,19 +11,33 @@
     text-align: center;
     margin-left: 15px;
     margin-top: 20px;
-    img{
+    img {
       max-width: 100%;
       height: auto;
     }
   }
-
 }
 
-.sidebar{
-  background: #F48720; /* Old browsers */
-  background: -moz-linear-gradient(top,  #F48720 0%, #F28F32 63%, #F2B276 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #F48720 0%,#F28F32 63%,#F2B276 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #F48720 0%,#F28F32 63%,#F2B276 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+.sidebar {
+  background: #f48720; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #f48720 0%,
+    #f28f32 63%,
+    #f2b276 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #f48720 0%,
+    #f28f32 63%,
+    #f2b276 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #f48720 0%,
+    #f28f32 63%,
+    #f2b276 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=‘#F48720’, endColorstr=‘#F2B276’,GradientType=0 ); /* IE6-9 */
   height: calc(100vh - 90px);
   width: 230px;
@@ -67,36 +81,33 @@
           font-size: 13px;
           padding: 10px 8px;
           line-height: 1.5;
-          i{
+          i {
             font-size: 17px;
             float: left;
             margin-right: 12px;
             color: white;
-            &:before{
+            &:before {
               color: #fff;
             }
           }
-          &:hover{
-            color: #E5E5E5;
-            i{
-              &:before{
-                color: #E5E5E5;
+          &:hover {
+            color: #e5e5e5;
+            i {
+              &:before {
+                color: #e5e5e5;
               }
             }
             &:before {
-              background-color: #E5E5E5;
+              background-color: #e5e5e5;
             }
           }
-
         }
-
-
 
         &.active > a {
           background: transparent;
-          i{
+          i {
             color: white;
-            &:before{
+            &:before {
               color: #fff;
             }
           }
@@ -115,14 +126,7 @@
       }
     }
   }
-
-
-
 }
-
-
-
-
 
 @media screen and (max-width: 991px) {
   .sidebar {
@@ -140,5 +144,4 @@
     overflow-y: visible;
     padding: 0;
   }
-
 }

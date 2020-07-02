@@ -1,12 +1,18 @@
 {
-  "plugins": ["stylelint-prettier"],
+  "extends": "stylelint-config-standard",
   "rules": {
-    "prettier/prettier": true,
-    "block-no-empty": true,
-    "color-hex-case": "lower",
-    "color-hex-length": "short",
-    "color-no-invalid-hex": true,
-    "declaration-colon-space-after": "always",
-    "max-empty-lines": 2
+    "at-rule-no-unknown": null,
+    "at-rule-empty-line-before": null,
+    "block-opening-brace-space-before": null,
+    "block-opening-brace-space-after": null,
+    "block-closing-brace-newline-after": null,
+    "custom-property-empty-line-before": null,
+    "selector-pseudo-element-colon-notation": null,
+    "color-hex-case": null,
+    "function-comma-space-after": null,
+    "rule-empty-line-before": null,
+    "declaration-colon-newline-after": null,
+    "declaration-empty-line-before": null,
+    "function-name-case": null
   }
 }

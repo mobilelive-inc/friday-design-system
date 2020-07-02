@@ -3,14 +3,19 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["plugin:prettier/recommended"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "rules": {
-    "semi": ["error", "always"],
-    "quotes": ["error", "double"],
-    "prettier/prettier": true
-  }
+    "strict": [2, "global"],
+    "quotes": [2, "single"],
+    "indent": [2, 4],
+    "eqeqeq": [2, "smart"],
+    "semi": [2, "always"],
+    "max-depth": [2, 4],
+    "max-statements": [2, 15],
+    "complexity": [2, 5]
+  },
+  "extends": ["prettier"]
 }

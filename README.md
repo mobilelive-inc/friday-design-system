@@ -11,6 +11,7 @@ This README would normally document whatever steps are necessary to get your app
 ### How do I get set up?
 
 It uses:
+
 - SCSS with linting and autoprefixer
 - JavaScript with webpack using babel and linting
 - html partials and minify with post-html
@@ -25,15 +26,42 @@ The compiled files will go to the directory "/dist"
 ## Getting Started
 
 1. Install dependencies
+
 ```
 npm install
 ```
 
 2. Build resources
+
 ```
-npm run build
+npm run build****
 ```
 
 3. Watch for changes
+
 ```
 npm run watch
+```
+
+### Run pretier to format the scss code
+
+npx prettier --write .
+
+### Run StyleLint to check errors in the scss code
+
+npx stylelint "\*_/_.css"
+
+# Information about root files
+
+```
+.pre-commit-config.yaml
+```
+
+- Have configs of pre commit hooks
+
+```
+.stylelintrc
+```
+
+- Have standard configurations of liniting
+- some custom pre defined rules can be over ride
