@@ -42,3 +42,7 @@ npm run build
 ```
 npm run watch
 ```
+
+# Run pretier to format the scss code
+
+npx prettier --write .

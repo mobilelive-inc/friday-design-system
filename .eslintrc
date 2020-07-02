@@ -3,7 +3,6 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["plugin:prettier/recommended"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
@@ -12,5 +11,6 @@
     "semi": ["error", "always"],
     "quotes": ["error", "double"],
     "prettier/prettier": true
-  }
+  },
+  "extends": ["some-other-config-you-use", "prettier"]
 }

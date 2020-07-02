@@ -26,25 +26,25 @@ $global-spacer: 1rem;
 $global-spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $global-spacers: map-merge(
-        (
-            micro: (
-                $global-spacer * 0.25,
-            ),
-            tiny: (
-                $global-spacer * 0.5,
-            ),
-            small: $global-spacer,
-            mid: (
-                $global-spacer * 2,
-            ),
-            large: (
-                $global-spacer * 4,
-            ),
-            xlarge: (
-                $global-spacer * 8,
-            ),
-        ),
-        $global-spacers
+  (
+    micro: (
+      $global-spacer * 0.25,
+    ),
+    tiny: (
+      $global-spacer * 0.5,
+    ),
+    small: $global-spacer,
+    mid: (
+      $global-spacer * 2,
+    ),
+    large: (
+      $global-spacer * 4,
+    ),
+    xlarge: (
+      $global-spacer * 8,
+    ),
+  ),
+  $global-spacers
 );
 
 $global-spacer-micro: $global-spacer * 0.25;
@@ -57,13 +57,12 @@ $global-spacer-xlarge: $global-spacer * 8;
 $sizes: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $sizes: map-merge(
-        (
-            25: 25%,
-            50: 50%,
-            75: 75%,
-            100: 100%,
-            auto: auto,
-        ),
-        $sizes
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto,
+  ),
+  $sizes
 );
-
