@@ -49,7 +49,7 @@ npx prettier --write .
 
 ### Run StyleLint to check errors in the scss code
 
-npx stylelint "**/*.css"
+npx stylelint "\*_/_.css"
 
 # Information about root files
 
