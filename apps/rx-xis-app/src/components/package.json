@@ -4,7 +4,6 @@
   "description": "mobileLIVE design system for react",
   "main": "index.js",
   "dependencies": {
-    "@angular-devkit/schematics": "^10.0.0",
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.1",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
@@ -82,18 +81,6 @@
     "storybook-addon-intl": "^2.4.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "webpack-dev-server",
-    "start": "npm run server -- --env.mode development",
-    "build": "npm run webpack -- --env.mode production",
-    "lint": "eslint \"src/**/*.{js,jsx}\"",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "webpack": "webpack",
-    "start2": "webpack-dev-server --open --env.mode development",
-    "clean": "rm -rf dist/",
-    "prepare": "npm run clean && babel src/components -d dist && npm run emotion",
-    "bundle": "rm -rf /build && cross-env NODE_ENV=emotion babel src/components -d build"
   },
   "browserslist": "> 0.25%, not dead",
   "husky": {
