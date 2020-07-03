@@ -28,9 +28,11 @@
     "help": "nx help",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "rx:bundle": "rm -rf /build && cross-env NODE_ENV=emotion babel src/components -d build"
+    "rx:bundle": "rm -rf /build && cross-env NODE_ENV=emotion babel apps/rx-xis-app/src/components -d build",
+    "rx:publish": "yarn publish build"
+
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^9.1.0",
     "@angular/common": "^9.1.0",

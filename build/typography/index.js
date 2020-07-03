@@ -21,7 +21,7 @@ var _mediaQuery = _interopRequireDefault(require("../../utils/mediaQuery"));
 
 var Text = (0, _styledComponents.default)(_styledComponents2.Text).withConfig({
   displayName: "typography__Text",
-  componentId: "sc-13f9e2i-0"
+  componentId: "a2n5i3-0"
 })((0, _styledSystem.compose)(_styledSystem.border, _styledSystem.color, _styledSystem.typography, _styledSystem.layout, _styledSystem.space, (0, _styledSystem.variant)({
   scale: 'typography'
 })));
