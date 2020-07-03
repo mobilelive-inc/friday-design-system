@@ -13,6 +13,8 @@
     "rule-empty-line-before": null,
     "declaration-colon-newline-after": null,
     "declaration-empty-line-before": null,
-    "function-name-case": null
+    "function-name-case": null,
+    "indentation": null,
+    "block-no-empty": null
   }
 }

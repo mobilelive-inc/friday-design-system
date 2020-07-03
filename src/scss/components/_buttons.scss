@@ -16,8 +16,9 @@
   user-select: none;
   background-color: transparent;
   border: $btn-border-width solid transparent;
+  min-height: $btn-standard-hight;
   @include button-size(
-    $btn-padding-y,
+    $btn-padding-y-sm,
     $btn-padding-x,
     $btn-font-size,
     $btn-line-height,
@@ -56,14 +57,19 @@
     }
   }
   span {
-    padding-left: 8px;
     padding-right: 8px;
   }
-  &.btn-curved {
+  span ~ span {
+    padding-left: 8px;
+    padding-right: 0;
+  }
+
+  &.btn-rounded {
     border-radius: $btn-border-radius-rounded !important;
   }
-  &.btn-rounded {
-    border-radius: $btn-border-radius-rounded;
+
+  &.btn-curved {
+    border-radius: $btn-border-radius-curved;
   }
 }
 
@@ -96,6 +102,8 @@ fieldset:disabled a.btn {
     @include button-outline-variant($value);
     border-radius: 0;
     border: none;
+    padding: 0;
+    min-height: auto;
     @include hover() {
       color: lighten($body-color, 40%);
       text-decoration: none;
@@ -119,6 +127,7 @@ fieldset:disabled a.btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: auto;
     @include button-size(
       $btn-padding-y-sm,
       $btn-padding-x-sm,
@@ -128,7 +137,7 @@ fieldset:disabled a.btn {
     );
 
     span {
-      font-style: $font-size-base;
+      font-size: $font-size-base;
       padding: 0 !important;
     }
 
@@ -147,13 +156,13 @@ fieldset:disabled a.btn {
 @each $color, $value in $theme-colors {
   .btn-icon-#{$color}-outline {
     @include button-variant($value, $value);
-    //border: $btn-border-width solid transparent;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
+    min-height: auto;
     color: $body-color;
     @include button-size(
       $btn-padding-y-sm,
@@ -164,11 +173,8 @@ fieldset:disabled a.btn {
     );
 
     span {
-      font-style: $font-size-base;
+      font-size: $font-size-base;
       padding: 0 !important;
-    }
-
-    @include hover() {
     }
 
     &:focus,
