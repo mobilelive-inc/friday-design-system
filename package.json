@@ -30,7 +30,6 @@
     "build-storybook": "build-storybook",
     "rx:bundle": "rm -rf /build && cross-env NODE_ENV=emotion babel apps/rx-xis-app/src/components -d build",
     "rx:publish": "yarn publish build"
-
   },
   "private": false,
   "dependencies": {
