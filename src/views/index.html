@@ -55,16 +55,10 @@
     <div class="theme-switcher">
       <h5 class="h5">Switch Theme</h5>
       <div class="btns-switcher-holder">
-        <button
-          class="btn btn-dark dark-theme-btn btn-sm"
-          onclick="switchDarkTheme()"
-        >
+        <button class="btn dark-theme-btn btn-sm" onclick="switchDarkTheme()">
           Dark
         </button>
-        <button
-          class="btn btn-light light-theme-btn btn-sm"
-          onclick="switchLightTheme()"
-        >
+        <button class="btn btn-light btn-sm" onclick="switchLightTheme()">
           Light
         </button>
       </div>
@@ -133,15 +127,15 @@
 
     <script>
       function switchDarkTheme() {
-        var element = document.getElementById("pageWrapper");
-        element.classList.add("theme-dark");
-        element.classList.remove("theme-light");
+        var root = document.getElementsByTagName("html")[0];
+        root.classList.add("theme-dark");
+        root.classList.remove("theme-light");
       }
 
       function switchLightTheme() {
-        var element = document.getElementById("pageWrapper");
-        element.classList.add("theme-light");
-        element.classList.remove("theme-dark");
+        var root = document.getElementsByTagName("html")[0];
+        root.classList.add("theme-light");
+        root.classList.remove("theme-dark");
       }
     </script>
   </body>

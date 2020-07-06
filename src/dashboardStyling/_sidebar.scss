@@ -38,7 +38,6 @@
     #f28f32 63%,
     #f2b276 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=‘#F48720’, endColorstr=‘#F2B276’,GradientType=0 ); /* IE6-9 */
   height: calc(100vh - 90px);
   width: 230px;
   position: fixed;
@@ -69,7 +68,7 @@
         list-style: none;
         > a {
           margin: 0 15px 0;
-          color: var(--white);
+          color: var(--white, #fff);
           display: flex;
           align-items: center;
           flex-direction: row;

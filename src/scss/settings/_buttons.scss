@@ -1,3 +1,4 @@
+/*
 // Settings buttons
 
 // Button variants
@@ -57,33 +58,33 @@
     }
   }
 
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active,
-  .show > &.dropdown-toggle {
-    color: color-yiq($active-background);
-    background-color: $active-background;
-    @if $enable-gradients {
-      background-image: none; // Remove the gradient for the pressed/active state
-    }
-    border-color: $active-border;
-
-    &:focus {
-      @if $enable-shadows and $btn-active-box-shadow != none {
-        @include box-shadow(
-          $btn-active-box-shadow,
-          0 0 0 $btn-focus-width
-            rgba(mix(color-yiq($background), $border, 15%), 0.5)
-        );
-      } @else {
-        // Avoid using mixin so we can pass custom focus shadow properly
-        box-shadow: 0
-          0
-          0
-          $btn-focus-width
-          rgba(mix(color-yiq($background), $border, 15%), 0.5);
-      }
-    }
-  }
+  //&:not(:disabled):not(.disabled):active,
+  //&:not(:disabled):not(.disabled).active,
+  //.show > &.dropdown-toggle {
+  //  color: color-yiq($active-background);
+  //  background-color: $active-background;
+  //  @if $enable-gradients {
+  //    background-image: none; // Remove the gradient for the pressed/active state
+  //  }
+  //  border-color: $active-border;
+  //
+  //  &:focus {
+  //    @if $enable-shadows and $btn-active-box-shadow != none {
+  //      @include box-shadow(
+  //        $btn-active-box-shadow,
+  //        0 0 0 $btn-focus-width
+  //          rgba(mix(color-yiq($background), $border, 15%), 0.5)
+  //      );
+  //    } @else {
+  //      // Avoid using mixin so we can pass custom focus shadow properly
+  //      box-shadow: 0
+  //        0
+  //        0
+  //        $btn-focus-width
+  //        rgba(mix(color-yiq($background), $border, 15%), 0.5);
+  //    }
+  //  }
+  //}
 }
 
 @mixin button-outline-variant(
@@ -112,25 +113,25 @@
     background-color: transparent;
   }
 
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active,
-  .show > &.dropdown-toggle {
-    color: color-yiq($active-background);
-    background-color: $active-background;
-    border-color: $active-border;
-
-    &:focus {
-      @if $enable-shadows and $btn-active-box-shadow != none {
-        @include box-shadow(
-          $btn-active-box-shadow,
-          0 0 0 $btn-focus-width rgba($color, 0.5)
-        );
-      } @else {
-        // Avoid using mixin so we can pass custom focus shadow properly
-        box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.5);
-      }
-    }
-  }
+  //&:not(:disabled):not(.disabled):active,
+  //&:not(:disabled):not(.disabled).active,
+  //.show > &.dropdown-toggle {
+  //  color: color-yiq($active-background);
+  //  background-color: $active-background;
+  //  border-color: $active-border;
+  //
+  //  &:focus {
+  //    @if $enable-shadows and $btn-active-box-shadow != none {
+  //      @include box-shadow(
+  //        $btn-active-box-shadow,
+  //        0 0 0 $btn-focus-width rgba($color, 0.5)
+  //      );
+  //    } @else {
+  //      // Avoid using mixin so we can pass custom focus shadow properly
+  //      box-shadow: 0 0 0 $btn-focus-width rgba($color, 0.5);
+  //    }
+  //  }
+  //}
 }
 
 // Button sizes
@@ -146,3 +147,4 @@
   line-height: $line-height;
   @include border-radius($border-radius, 0);
 }
+*/
