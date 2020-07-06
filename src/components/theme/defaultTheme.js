@@ -1,5 +1,10 @@
 import { colors } from './colors'
-import { buttons } from './buttons';
+import {
+  buttons, borderCurved, borderRounded
+} from './buttons';
+import { iconMarginLeft, iconMarginRight,
+  micro, tiny, small, mid, large, xLarge
+} from './spacing';
 
 // Typography
 const fonts = {
@@ -50,7 +55,7 @@ export const lineHeights = [
   '0.875rem', // 0
   '1rem', // 1
   '1.125rem', // 2
-  '1.2rem', //3
+  '1.2rem', // 3
   '1.25rem', // 4
   '1.5rem', // 5
   '1.75rem', // 6
@@ -201,19 +206,29 @@ export const typography = {
   }
 }
 
+const opacity = 0.6;
 
 export default {
   breakpoints,
   buttons,
+  borderCurved,
   colors,
   font,
   fontFamilies,
   fontSizes,
   fontWeights,
+  iconMarginLeft,
+  iconMarginRight,
   lineHeights,
   letterSpacings,
   radius,
+  borderRounded,
   space,
+  opacity,
   zIndices,
-  typography
+  typography,
+  micro, tiny,
+  small, mid,
+  large,
+  xLarge
 };

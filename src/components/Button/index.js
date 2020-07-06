@@ -7,15 +7,22 @@ import {
   variant,
   space,
   typography,
+  color,
 } from 'styled-system';
 import { PROPS_FOR_THEME_ATTRIBUTES } from '../../utils/constants';
+import { capitalizeFirstLetter } from '../../utils/utils';
 
-const Button = styled.button(
+const Button = styled('button')(
   {
     boxSizing: 'border-box',
     cursor: 'pointer',
+    // please dont judge, they made me do it
+    borderRadius: props =>
+      `${props.theme[`border${capitalizeFirstLetter(props.borderType)}`]} !important`,
+    alignItems: props => (props.withIcon ? 'center' : 'center'),
+    justifyContent: props => (props.withIcon ? 'space-evenly' : 'center'),
     '&:disabled': {
-      opacity: 0.65,
+      opacity: props => props.theme.opacity,
     },
   },
   compose(
@@ -23,13 +30,11 @@ const Button = styled.button(
     layout,
     space,
     typography,
+    color,
     variant({ scale: 'buttons' }),
   ),
 );
 
-/**
- * Button
- */
 
 Button.defaultProps = {
   disabled: false,
@@ -38,11 +43,12 @@ Button.defaultProps = {
   lineHeight: [4],
   m: [0],
   fontWeight: [3],
-  display: ['inline-block'],
+  // display: ['inline-block'],
   width: [1],
   textAlign: ['center'],
   borderRadius: [0],
   onClick: () => {},
+  withIcon: false,
 };
 
 Button.propTypes = {
@@ -56,15 +62,7 @@ Button.propTypes = {
   /** Option to disable Button */
   disabled: PropTypes.bool,
   /** Variant primary or secondary */
-  variant: PropTypes.oneOf([
-    'primary',
-    'primaryDark',
-    'secondary',
-    'secondaryDark',
-    'secondaryDarkFooter',
-    'greyed',
-    'none',
-  ]),
+  variant: PropTypes.string,
   fontSize: PROPS_FOR_THEME_ATTRIBUTES,
   lineHeight: PROPS_FOR_THEME_ATTRIBUTES,
   fontWeight: PROPS_FOR_THEME_ATTRIBUTES,
@@ -91,6 +89,8 @@ Button.propTypes = {
   pb: PROPS_FOR_THEME_ATTRIBUTES,
   px: PROPS_FOR_THEME_ATTRIBUTES,
   py: PROPS_FOR_THEME_ATTRIBUTES,
+  withIcon: PropTypes.bool,
+  borderType: PropTypes.oneOf(['curved', 'rounded'])
 };
 
 export default Button;

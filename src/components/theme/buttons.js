@@ -2,6 +2,9 @@ import { lighten } from '../../utils/lighten';
 import { colors } from './colors'
 
 const buttonBorder = '2px solid transparent';
+export const borderCurved = "10px";
+export const borderRounded = "50px"
+const padding = "1rem 2rem";
 const getBorder = (color) => {
   return `2px solid ${color}`
 }
@@ -9,7 +12,7 @@ export const buttons = {
   primary: {
     color: colors.black,
     backgroundColor: colors.primary,
-    padding: '1em 2em',
+    padding,
     border: buttonBorder,
     '&:hover': {
       color: colors.white
@@ -18,7 +21,7 @@ export const buttons = {
   secondary: {
     color: colors.white,
     backgroundColor: colors.grayDark,
-    padding: '1em 2em',
+    padding,
     border: buttonBorder,
     '&:hover': {
       backgroundColor: lighten(colors.grayDark, -20)
@@ -27,7 +30,7 @@ export const buttons = {
   success: {
     color: colors.white,
     backgroundColor: colors.success,
-    padding: '1em 2em',
+    padding,
     border: buttonBorder,
     '&:hover': {
       backgroundColor: lighten(colors.success, -20)
@@ -36,7 +39,7 @@ export const buttons = {
   danger: {
     color: colors.white,
     backgroundColor: colors.danger,
-    padding: '1em 2em',
+    padding,
     border: buttonBorder,
     '&:hover': {
       backgroundColor: lighten(colors.danger, -20)
@@ -45,7 +48,7 @@ export const buttons = {
   warning: {
     color: colors.black,
     backgroundColor: colors.warning,
-    padding: '1em 2em',
+    padding,
     border: buttonBorder,
     '&:hover': {
       backgroundColor: lighten(colors.warning, -5)
@@ -54,7 +57,7 @@ export const buttons = {
   info: {
     color: colors.black,
     backgroundColor: colors.info,
-    padding: '1em 2em',
+    padding,
     border: buttonBorder,
     '&:hover': {
       backgroundColor: lighten(colors.info, -20)
@@ -63,7 +66,7 @@ export const buttons = {
   light: {
     color: colors.black,
     backgroundColor: colors.light,
-    padding: '1em 2em',
+    padding,
     border: buttonBorder,
     '&:hover': {
       backgroundColor: lighten(colors.light, -20)
@@ -72,7 +75,7 @@ export const buttons = {
   outlinePrimary: {
     color: colors.primary,
     backgroundColor: colors.white,
-    padding: '1em 2em',
+    padding,
     border: getBorder(colors.primary),
     '&:hover': {
       backgroundColor: colors.primary,
@@ -82,7 +85,7 @@ export const buttons = {
   outlineSecondary: {
     color: colors.secondary,
     backgroundColor: colors.white,
-    padding: '1em 2em',
+    padding,
     border: getBorder(colors.secondary),
     '&:hover': {
       backgroundColor: colors.secondary,
@@ -92,7 +95,7 @@ export const buttons = {
   outlineSuccess: {
     color: colors.success,
     backgroundColor: colors.white,
-    padding: '1em 2em',
+    padding,
     border: getBorder(colors.success),
     '&:hover': {
       backgroundColor: colors.success,
@@ -102,7 +105,7 @@ export const buttons = {
   outlineDanger: {
     color: colors.danger,
     backgroundColor: colors.white,
-    padding: '1em 2em',
+    padding,
     border: getBorder(colors.danger),
     '&:hover': {
       backgroundColor: colors.danger,
@@ -112,7 +115,7 @@ export const buttons = {
   outlineInfo: {
     color: colors.info,
     backgroundColor: colors.white,
-    padding: '1em 2em',
+    padding,
     border: getBorder(colors.info),
     '&:hover': {
       backgroundColor: colors.info,
@@ -122,7 +125,7 @@ export const buttons = {
   outlineWarning: {
     color: colors.warning,
     backgroundColor: colors.white,
-    padding: '1em 2em',
+    padding,
     border: getBorder(colors.warning),
     '&:hover': {
       backgroundColor: colors.warning,
@@ -132,7 +135,7 @@ export const buttons = {
   outlineLight: {
     color: colors.light,
     backgroundColor: colors.white,
-    padding: '1em 2em',
+    padding,
     border: getBorder(colors.light),
     '&:hover': {
       backgroundColor: colors.light,
@@ -142,11 +145,22 @@ export const buttons = {
   outlineDark: {
     color: colors.black,
     backgroundColor: colors.white,
-    padding: '1em 2em',
+    padding,
     border: getBorder(colors.black),
     '&:hover': {
       backgroundColor: colors.black,
       color: colors.white
     }
+  },
+  iconBtn: {
+    color: colors.black,
+    backgroundColor: colors.white,
+    padding: "0.5rem 0.5rem",
+    border: buttonBorder,
+  },
+  link: {
+    color: colors.black,
+    backgroundColor: colors.white,
+    border: buttonBorder,
   }
 };
