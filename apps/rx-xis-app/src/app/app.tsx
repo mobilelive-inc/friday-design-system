@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { RxXis } from '@nx-hybrid-demo/rx-xis';
+// import { RxXis } from '@nx-hybrid-demo/rx-xis';
 
 import styled from 'styled-components';
 
