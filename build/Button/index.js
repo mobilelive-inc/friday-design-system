@@ -24,7 +24,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 // import { Button as BaseButton } from 'rebass/styled-components';
 var BaseButton = _styledComponents.default.button.withConfig({
   displayName: "Button__BaseButton",
-  componentId: "sc-998uke-0"
+  componentId: "xw2fa0-0"
 })(["background-color:#f48245;color:white;width:150px;height:50px;cursor:pointer;", ""], _styledSystem.width);
 
 var Button = (_ref) => {
