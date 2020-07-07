@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import {
   compose,
   color,
@@ -20,3 +21,10 @@ export const Text = styled(RebassText)(
     variant({ scale: 'typography' }),
   ),
 );
+
+Text.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
+};
