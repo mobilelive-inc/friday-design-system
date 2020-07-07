@@ -33,5 +33,6 @@ export default create({
 
   brandTitle: 'The Andromaida',
   brandUrl: 'https://mobilelive.ca/',
-  brandImage: 'https://images.ctfassets.net/6krz4kg7somr/4rbWt1PlMkYo4wM0AG404E/3f7fd80ac8a62bd48a235d98bc04127e/logo.png',
+  brandImage:
+    'https://images.ctfassets.net/6krz4kg7somr/4rbWt1PlMkYo4wM0AG404E/3f7fd80ac8a62bd48a235d98bc04127e/logo.png',
 });
