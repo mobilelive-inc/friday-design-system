@@ -160,16 +160,20 @@ $input-btn-border-width: $border-width;
 
 $btn-padding-y: $global-spacer;
 $btn-padding-x: $global-spacer-mid;
+$btn-padding-y-sm: $global-spacer-tiny;
+$btn-padding-x-sm: $global-spacer-tiny;
+$btn-padding-y-lg: $global-spacer;
+$btn-padding-x-lg: $global-spacer-mid;
+
+$btn-standard-hight: 56px;
 $btn-font-family: $input-btn-font-family;
 $btn-font-size: $input-btn-font-size;
 $btn-line-height: $input-btn-line-height;
 $btn-white-space: null; // Set to `nowrap` to prevent text wrapping
-$btn-padding-y-sm: $global-spacer-tiny;
-$btn-padding-x-sm: $global-spacer-tiny;
+
 $btn-font-size-sm: $input-btn-font-size-sm;
 $btn-line-height-sm: $input-btn-line-height-sm;
-$btn-padding-y-lg: $global-spacer;
-$btn-padding-x-lg: $global-spacer-mid;
+
 $btn-font-size-lg: $input-btn-font-size-lg;
 $btn-line-height-lg: $input-btn-line-height-lg;
 $btn-border-width: $input-btn-border-width;

@@ -55,16 +55,45 @@
 //  --dark: var(--gray-dark);
 //}
 
-////Theme Light
-//.theme-light {
-//  --primary: #{$white};
-//
+:root {
+  //Theme Light
+  &.theme-light {
+    --primary: #66c9d5;
+    --secondary: #c4d93c;
+    --success: #2874a4;
+    --info: #fccc2e;
+    --warning: #f48245;
+    --danger: #c36837;
+    --light: #fff;
+    --dark: #282828;
+  }
+
+  //Theme dark
+  &.theme-dark {
+    --primary: #f48245;
+    --secondary: #2874a4;
+    --success: #c36837;
+    --info: #66c9d5;
+    --warning: #fccc2e;
+    --danger: #c4d93c;
+    --light: #282828;
+    --dark: #fff;
+  }
+}
+
+//:root.theme-light {
+//  @include spread-map($theme-map-light);
 //}
 //
-////Theme dark
-//.theme-dark {
-//  --primary: #{$dark};
+//:root.theme-dark {
+//  @include spread-map($theme-map-dark);
 //}
+
+#pageWrapper {
+  background-color: var(--light);
+  color: var(--dark);
+  z-index: 1;
+}
 
 .theme-switcher {
   position: fixed;

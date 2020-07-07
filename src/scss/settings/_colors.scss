@@ -45,63 +45,15 @@ $navy-darker: #081721;
 $red: #dc3545;
 $green: #34a84d;
 
-// Color system
-:root {
-  --white: #fff;
-  --gray: #707070;
-  --gray-light: #e5e5e5;
-  --gray-lighter: #f4f4f4;
-  --gray-dark: #212529;
-  --black: #282828;
-
-  --orange: #f48245;
-  --orange-lighter: #fef3ec;
-  --orange-light: #f9c0a2;
-  --orange-dark: #c36837;
-  --orange-darker: #311a0e;
-
-  --blue: #55a2d9;
-  --blue-lighter: #eef6fb;
-  --blue-light: #bbdaf0;
-  --blue-dark: #336182;
-  --blue-darker: #11202b;
-
-  --lemon: #fccc2e;
-  --lemon-lighter: #fffaea;
-  --lemon-light: #feebab;
-  --lemon-dark: #977a1c;
-  --lemon-darker: #322909;
-
-  --lime: #c4d93c;
-  --lime-lighter: #f9fbec;
-  --lime-light: #e7f0b1;
-  --lime-dark: #768224;
-  --lime-darker: #272b0c;
-
-  --cyan: #66c9d5;
-  --cyan-lighter: #f0fafb;
-  --cyan-light: #c2e9ee;
-  --cyan-dark: #3d7980;
-  --cyan-darker: #14282b;
-
-  --navy: #2874a4;
-  --navy-lighter: #eaf1f6;
-  --navy-light: #a9c7db;
-  --navy-dark: #184662;
-  --navy-darker: #081721;
-
-  --red: #dc3545;
-  --green: #34a84d;
-
-  --primary: var(--orange);
-  --secondary: var(--gray);
-  --success: var(--green);
-  --info: var(--cyan);
-  --warning: var(--lemon);
-  --danger: var(--red);
-  --light: var(--gray-light);
-  --dark: var(--gray-dark);
-}
+// Theme Default Colors
+$primary: $orange;
+$secondary: $gray;
+$success: $green;
+$info: $cyan;
+$warning: $lemon;
+$danger: $red;
+$light: $gray-light;
+$dark: $gray-dark;
 
 $grays: ();
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -113,141 +65,38 @@ $grays: map-merge(
   ),
   $grays
 );
-$primary: $orange;
-$secondary: $gray;
-$success: $green;
-$info: $cyan;
-$warning: $lemon;
-$danger: $red;
-$light: $gray-light;
-$dark: $gray-dark;
-
-$--primary: --primary;
-$--secondary: --secondary;
-$--success: --success;
-$--info: --info;
-$--warning: --warning;
-$--danger: --danger;
-$--light: --light;
-$--dark: --dark;
 
 $theme-colors: ();
 $theme-colors: map-merge(
   (
-    "primary": $--primary,
-    "secondary": $--secondary,
-    "success": $--success,
-    "info": $--info,
-    "warning": $--warning,
-    "danger": $--danger,
-    "light": $--light,
-    "dark": $--dark,
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
   ),
   $theme-colors
 );
 
-$--blue: --blue;
-$--lime: --lime;
-$--red: --red;
-$--orange: --orange;
-$--lemon: --lime;
-$--navy: --navy;
-$--cyan: --cyan;
-$--white: --white;
-$--gray: --gray;
-$--black: --black;
-
 $colors: ();
 $colors: map-merge(
   (
-    "blue": $--blue,
-    "lime": $--lime,
-    "red": $--red,
-    "orange": $--orange,
-    "lemon": $--lemon,
-    "navy": $--navy,
-    "cyan": $--cyan,
-    "white": $--white,
-    "gray": $--gray,
-    "dark": $--black,
+    "blue": $blue,
+    "lime": $lime,
+    "red": $red,
+    "orange": $orange,
+    "lemon": $lemon,
+    "navy": $navy,
+    "cyan": $cyan,
+    "white": $white,
+    "gray": $gray,
+    "dark": $black,
   ),
   $colors
 );
-
-////////////////////////////////theming//////////////////////////////
-
-$theme-map-light: (
-  $--primary: #fff,
-  $--secondary: #ddd,
-  $--success: green,
-  $--info: cyan,
-  $--warning: yellow,
-  $--danger: $--red,
-  $--light: #ddd,
-  $--dark: #494949,
-  $--blue: $--red,
-  $--red: $--red,
-  $--orange: $--orange,
-  $--lemon: $--lemon,
-  $--navy: $--navy,
-  $--cyan: $--cyan,
-  $--white: $--white,
-  $--gray: $--gray,
-  $--black: $--black,
-);
-
-$theme-map-dark: (
-  $--primary: #000,
-  $--secondary: #ddd,
-  $--success: green,
-  $--info: cyan,
-  $--warning: yellow,
-  $--danger: $--red,
-  $--light: #ddd,
-  $--dark: #494949,
-  $--blue: $--white,
-  $--red: $--red,
-  $--orange: $--orange,
-  $--lemon: $--lemon,
-  $--navy: $--navy,
-  $--cyan: $--cyan,
-  $--white: $--white,
-  $--gray: $--gray,
-  $--black: $--black,
-);
-
-@mixin spread-map($map: ()) {
-  @each $key, $value in $map {
-    #{$key}: $value;
-  }
-}
-
-@function theme-var($key, $fallback: null, $map: $theme-map-light) {
-  @if not map-has-key($map, $key) {
-    @error "key: '#{$key}', is not a key in map: #{$map}";
-  }
-  @if ($fallback) {
-    @return var($key, $fallback);
-  } @else {
-    @return var($key);
-  }
-}
-
-:root.theme-light {
-  @include spread-map($theme-map-light);
-}
-
-:root.theme-dark {
-  @include spread-map($theme-map-dark);
-}
-
-#pageWrapper {
-  //background-color: var(--primary);
-  //color: var(--dark);
-  z-index: 1;
-  background-color: theme-var($--primary);
-  color: theme-var($--info);
-}
 
 //////////////////////Theming////////////////////////////
 
@@ -258,8 +107,8 @@ $theme-color-interval: 8%;
 $yiq-contrasted-threshold: 150;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark: $--dark;
-$yiq-text-light: $--white;
+$yiq-text-dark: $dark;
+$yiq-text-light: $white;
 
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (

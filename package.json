@@ -20,6 +20,7 @@
     "watch:js": "onchange \"src/js\" -- webpack --mode=development",
     "precommit": "pretty-quick --staged",
     "prepush": "npm run lint",
+    "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
     "build": "run-s build:*",
     "serve": "browser-sync start --server \"dist\" --files \"dist\"",
     "watch": "run-p serve watch:*"
@@ -61,7 +62,7 @@
       "eslint --fix"
     ],
     "**/*.scss": [
-      "prettier --write .",
+      "prettier --write **/*.scss",
       "pretty-quick --staged",
       "stylelint --syntax scss"
     ]
