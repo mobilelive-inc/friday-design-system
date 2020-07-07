@@ -3,18 +3,19 @@
 @import "settings/global.functions";
 
 @import "settings/colors";
+@import "settings/borders";
 @import "settings/spacing";
 @import "settings/typography";
+@import "settings/buttons";
 @import "settings/gridLayout";
 @import "settings/utilities";
-@import "settings/buttons";
-@import "settings/borders";
 @import "settings/forms";
 @import "settings/tables";
 @import "settings/images";
 @import "settings/modals";
 
 @import "generic/root";
+@import "generic/base";
 
 //Tools
 @import "tools/tool.grid";

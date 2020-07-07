@@ -32,7 +32,7 @@ $input-border-radius-lg: $border-radius-lg;
 $input-border-radius-sm: $border-radius-sm;
 
 $input-focus-bg: $input-bg;
-$input-focus-border-color: lighten($component-active-bg, 25%);
+$input-focus-border-color: var(--blue-lighter);
 $input-focus-color: $input-color;
 $input-focus-width: $input-btn-focus-width;
 $input-focus-box-shadow: $input-btn-focus-box-shadow;
@@ -110,7 +110,7 @@ $custom-control-indicator-focus-box-shadow: $input-focus-box-shadow;
 $custom-control-indicator-focus-border-color: $input-focus-border-color;
 
 $custom-control-indicator-active-color: $component-active-color;
-$custom-control-indicator-active-bg: lighten($component-active-bg, 35%);
+$custom-control-indicator-active-bg: var(--blue-lighter);
 $custom-control-indicator-active-box-shadow: none;
 $custom-control-indicator-active-border-color: $custom-control-indicator-active-bg;
 
@@ -197,7 +197,7 @@ $custom-range-thumb-box-shadow: 0 0.1rem 0.25rem rgba($black, 0.1);
 $custom-range-thumb-focus-box-shadow: 0 0 0 1px $body-bg,
   $input-focus-box-shadow;
 $custom-range-thumb-focus-box-shadow-width: $input-focus-width; // For focus box shadow issue in IE/Edge
-$custom-range-thumb-active-bg: lighten($component-active-bg, 35%);
+$custom-range-thumb-active-bg: var(--blue-lighter);
 $custom-range-thumb-disabled-bg: $gray;
 
 $custom-file-height: $input-height;

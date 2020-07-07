@@ -1,5 +1,12 @@
-// Settings Borders
+//Borders
+$border-width: 2px;
+$border-color: $gray-light;
+$border-radius-none: 0;
+$border-radius: 0.25rem;
+$border-radius-lg: 0.3rem;
+$border-radius-sm: 0.2rem;
 
+// Settings Borders
 // Helper function to replace negative values with 0
 @function valid-radius($radius) {
   $return: ();

@@ -56,13 +56,17 @@
     }
   }
 
-  span {
+  [class*="icon-"] {
     padding-right: 8px;
-  }
 
-  span ~ span {
-    padding-left: 8px;
-    padding-right: 0;
+    ~ [class*="icon-"] {
+      padding-left: 8px;
+      padding-right: 0;
+    }
+
+    ~ i {
+      font-style: normal;
+    }
   }
 
   &.btn-rounded {
@@ -685,6 +689,7 @@
     font-size: 1rem;
     line-height: 1;
     border-radius: 0;
+
     span {
       font-size: 1rem;
       padding: 0 !important;
@@ -1122,52 +1127,14 @@
       border-color: var(--dark);
     }
   }
-
-  &.btn-link {
-    font-weight: 400;
-    color: #55a2d9;
-    text-decoration: none;
-
-    &:hover {
-      color: #297db8;
-      text-decoration: underline;
-    }
-
-    &:focus,
-    &.focus {
-      text-decoration: underline;
-    }
-
-    &:disabled,
-    &.disabled {
-      color: var(--secondary);
-      pointer-events: none;
-    }
-  }
-
-  &.btn-lg {
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    border-radius: 0.3rem;
-  }
-
-  &.btn-sm {
-    padding: 0.5rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1;
-    border-radius: 0.2rem;
-  }
-
-  &.btn-block {
-    display: block;
-    width: 100%;
-
-    + &.btn-block {
-      margin-top: 0.5rem;
-    }
-  }
 }
+
+//@each $color, $value in $theme-colors { //todo : if need to make iteration of classes
+//  .btn-#{$color} {
+//    background-color: $value;
+//    color: var(--light);
+//  }
+//}
 
 // Disabling of clicks on `<a>` elements
 a.btn.disabled,
