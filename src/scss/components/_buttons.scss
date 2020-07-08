@@ -69,15 +69,15 @@
     }
   }
 
-  &.btn-rounded {
+  &.btn--rounded {
     border-radius: $btn-border-radius-rounded !important;
   }
 
-  &.btn-curved {
+  &.btn--curved {
     border-radius: $btn-border-radius-curved;
   }
 
-  &.btn-primary {
+  &.btn--primary {
     color: var(--dark);
     background-color: var(--primary);
     border-color: var(--primary);
@@ -104,7 +104,7 @@
     }
   }
 
-  &.btn-secondary {
+  &.btn--secondary {
     color: var(--white);
     background-color: var(--secondary);
     border-color: var(--secondary);
@@ -131,7 +131,7 @@
     }
   }
 
-  &.btn-success {
+  &.btn--success {
     color: var(--white);
     background-color: var(--success);
     border-color: var(--success);
@@ -158,7 +158,7 @@
     }
   }
 
-  &.btn-info {
+  &.btn--info {
     color: var(--dark);
     background-color: var(--info);
     border-color: var(--info);
@@ -185,7 +185,7 @@
     }
   }
 
-  &.btn-warning {
+  &.btn--warning {
     color: var(--dark);
     background-color: var(--warning);
     border-color: var(--warning);
@@ -212,7 +212,7 @@
     }
   }
 
-  &.btn-danger {
+  &.btn--danger {
     color: var(--white);
     background-color: var(--danger);
     border-color: var(--danger);
@@ -239,7 +239,7 @@
     }
   }
 
-  &.btn-light {
+  &.btn--light {
     color: var(--dark);
     background-color: var(--light);
     border-color: var(--light);
@@ -266,7 +266,7 @@
     }
   }
 
-  &.btn-dark {
+  &.btn--dark {
     color: var(--white);
     background-color: var(--dark);
     border-color: var(--dark);
@@ -293,7 +293,7 @@
     }
   }
 
-  &.btn-outline-primary {
+  &.btn--outline-primary {
     color: var(--primary);
     border-color: var(--primary);
 
@@ -315,7 +315,7 @@
     }
   }
 
-  &.btn-outline-secondary {
+  &.btn--outline-secondary {
     color: var(--secondary);
     border-color: var(--secondary);
 
@@ -337,7 +337,7 @@
     }
   }
 
-  &.btn-outline-success {
+  &.btn--outline-success {
     color: var(--success);
     border-color: var(--success);
 
@@ -359,7 +359,7 @@
     }
   }
 
-  &.btn-outline-info {
+  &.btn--outline-info {
     color: var(--info);
     border-color: var(--info);
 
@@ -381,7 +381,7 @@
     }
   }
 
-  &.btn-outline-warning {
+  &.btn--outline-warning {
     color: var(--warning);
     border-color: var(--warning);
 
@@ -403,7 +403,7 @@
     }
   }
 
-  &.btn-outline-danger {
+  &.btn--outline-danger {
     color: var(--danger);
     border-color: var(--danger);
 
@@ -425,7 +425,7 @@
     }
   }
 
-  &.btn-outline-light {
+  &.btn--outline-light {
     color: var(--light);
     border-color: var(--light);
 
@@ -447,7 +447,7 @@
     }
   }
 
-  &.btn-outline-dark {
+  &.btn--outline-dark {
     color: var(--dark);
     border-color: var(--dark);
 
@@ -469,17 +469,24 @@
     }
   }
 
-  &.btn-tooltip-primary {
-    color: var(--primary);
-    border-color: var(--primary);
+  &[class*="btn__tooltip--"] {
     border-radius: 0;
     border: none;
     padding: 0;
     min-height: auto;
+    &:hover {
+      color: var(--dark);
+      background-color: transparent;
+      border-color: var(--primary);
+    }
+  }
+
+  &.btn__tooltip--primary {
+    color: var(--primary);
+    border-color: var(--primary);
 
     &:hover {
       color: var(--dark);
-      background-color: var(--primary);
       border-color: var(--primary);
     }
 
@@ -495,17 +502,12 @@
     }
   }
 
-  &.btn-tooltip-secondary {
+  &.btn__tooltip--secondary {
     color: var(--secondary);
     border-color: var(--secondary);
-    border-radius: 0;
-    border: none;
-    padding: 0;
-    min-height: auto;
 
     &:hover {
       color: var(--white);
-      background-color: var(--secondary);
       border-color: var(--secondary);
     }
 
@@ -521,17 +523,12 @@
     }
   }
 
-  &.btn-tooltip-success {
+  &.btn__tooltip--success {
     color: var(--success);
     border-color: var(--success);
-    border-radius: 0;
-    border: none;
-    padding: 0;
-    min-height: auto;
 
     &:hover {
       color: var(--white);
-      background-color: var(--success);
       border-color: var(--success);
     }
 
@@ -547,17 +544,12 @@
     }
   }
 
-  &.btn-tooltip-info {
+  &.btn__tooltip--info {
     color: var(--info);
     border-color: var(--info);
-    border-radius: 0;
-    border: none;
-    padding: 0;
-    min-height: auto;
 
     &:hover {
       color: var(--dark);
-      background-color: var(--info);
       border-color: var(--info);
     }
 
@@ -573,17 +565,12 @@
     }
   }
 
-  &.btn-tooltip-warning {
+  &.btn__tooltip--warning {
     color: var(--warning);
     border-color: var(--warning);
-    border-radius: 0;
-    border: none;
-    padding: 0;
-    min-height: auto;
 
     &:hover {
       color: var(--dark);
-      background-color: var(--warning);
       border-color: var(--warning);
     }
 
@@ -599,17 +586,12 @@
     }
   }
 
-  &.btn-tooltip-danger {
+  &.btn__tooltip--danger {
     color: var(--danger);
     border-color: var(--danger);
-    border-radius: 0;
-    border: none;
-    padding: 0;
-    min-height: auto;
 
     &:hover {
       color: var(--white);
-      background-color: var(--danger);
       border-color: var(--danger);
     }
 
@@ -625,17 +607,12 @@
     }
   }
 
-  &.btn-tooltip-light {
+  &.btn__tooltip--light {
     color: var(--light);
     border-color: var(--light);
-    border-radius: 0;
-    border: none;
-    padding: 0;
-    min-height: auto;
 
     &:hover {
       color: var(--dark);
-      background-color: var(--light);
       border-color: var(--light);
     }
 
@@ -651,17 +628,12 @@
     }
   }
 
-  &.btn-tooltip-dark {
+  &.btn__tooltip--dark {
     color: var(--dark);
     border-color: var(--dark);
-    border-radius: 0;
-    border: none;
-    padding: 0;
-    min-height: auto;
 
     &:hover {
       color: var(--white);
-      background-color: var(--dark);
       border-color: var(--dark);
     }
 
@@ -677,7 +649,7 @@
     }
   }
 
-  &[class*="btn-icon"] {
+  &[class*="btn__icon"] {
     /* WE USE * HERE */
     width: 40px;
     height: 40px;
@@ -696,7 +668,7 @@
     }
   }
 
-  &.btn-icon-primary {
+  &.btn__icon--primary {
     color: var(--dark);
     background-color: var(--primary);
     border-color: var(--primary);
@@ -723,7 +695,7 @@
     }
   }
 
-  &.btn-icon-secondary {
+  &.btn__icon--secondary {
     color: var(--white);
     background-color: var(--secondary);
     border-color: var(--secondary);
@@ -750,7 +722,7 @@
     }
   }
 
-  &.btn-icon-success {
+  &.btn__icon--success {
     color: var(--white);
     background-color: var(--success);
     border-color: var(--success);
@@ -777,7 +749,7 @@
     }
   }
 
-  &.btn-icon-info {
+  &.btn__icon--info {
     color: var(--dark);
     background-color: var(--info);
     border-color: var(--info);
@@ -804,7 +776,7 @@
     }
   }
 
-  &.btn-icon-warning {
+  &.btn__icon--warning {
     color: var(--dark);
     background-color: var(--warning);
     border-color: var(--warning);
@@ -831,7 +803,7 @@
     }
   }
 
-  &.btn-icon-danger {
+  &.btn__icon--danger {
     color: var(--white);
     background-color: var(--danger);
     border-color: var(--danger);
@@ -858,7 +830,7 @@
     }
   }
 
-  &.btn-icon-light {
+  &.btn__icon--light {
     color: var(--dark);
     background-color: var(--light);
     border-color: var(--light);
@@ -885,7 +857,7 @@
     }
   }
 
-  &.btn-icon-dark {
+  &.btn__icon--dark {
     color: var(--white);
     background-color: var(--dark);
     border-color: var(--dark);
@@ -912,7 +884,7 @@
     }
   }
 
-  &.btn-icon-primary-outline {
+  &.btn__icon--primary--outline {
     color: var(--dark);
     background-color: transparent;
     border-color: var(--primary);
@@ -939,7 +911,7 @@
     }
   }
 
-  &.btn-icon-secondary-outline {
+  &.btn__icon--secondary--outline {
     color: var(--white);
     background-color: transparent;
     border-color: var(--secondary);
@@ -966,7 +938,7 @@
     }
   }
 
-  &.btn-icon-success-outline {
+  &.btn__icon--success--outline {
     color: var(--white);
     background-color: transparent;
     border-color: var(--success);
@@ -993,7 +965,7 @@
     }
   }
 
-  &.btn-icon-info-outline {
+  &.btn__icon--info--outline {
     color: var(--dark);
     background-color: transparent;
     border-color: var(--info);
@@ -1020,7 +992,7 @@
     }
   }
 
-  &.btn-icon-warning-outline {
+  &.btn__icon--warning--outline {
     color: var(--dark);
     background-color: transparent;
     border-color: var(--warning);
@@ -1047,7 +1019,7 @@
     }
   }
 
-  &.btn-icon-danger-outline {
+  &.btn__icon--danger--outline {
     color: var(--white);
     background-color: transparent;
     border-color: var(--danger);
@@ -1074,7 +1046,7 @@
     }
   }
 
-  &.btn-icon-light-outline {
+  &.btn__icon--light--outline {
     color: var(--dark);
     background-color: transparent;
     border-color: var(--light);
@@ -1101,7 +1073,7 @@
     }
   }
 
-  &.btn-icon-dark-outline {
+  &.btn__icon--dark--outline {
     color: var(--white);
     background-color: transparent;
     border-color: var(--dark);
@@ -1130,7 +1102,7 @@
 }
 
 //@each $color, $value in $theme-colors { //todo : if need to make iteration of classes
-//  .btn-#{$color} {
+//  .btn--#{$color} {
 //    background-color: $value;
 //    color: var(--light);
 //  }
@@ -1143,7 +1115,7 @@ fieldset:disabled a.btn {
 }
 
 // Link buttons
-.btn-link {
+.btn--link {
   font-weight: $font-weight-normal;
   color: $link-color;
   text-decoration: $link-decoration;
@@ -1166,7 +1138,7 @@ fieldset:disabled a.btn {
 }
 
 // Button Sizes
-.btn-lg {
+.btn--lg {
   @include button-size(
     $btn-padding-y-lg,
     $btn-padding-x-lg,
@@ -1176,7 +1148,7 @@ fieldset:disabled a.btn {
   );
 }
 
-.btn-sm {
+.btn--sm {
   @include button-size(
     $btn-padding-y-sm,
     $btn-padding-x-sm,
@@ -1187,11 +1159,11 @@ fieldset:disabled a.btn {
 }
 
 // Block button
-.btn-block {
+.btn--block {
   display: block;
   width: 100%;
   // Vertically space out multiple block buttons
-  + .btn-block {
+  + .btn--block {
     margin-top: $btn-block-spacing-y;
   }
 }
@@ -1200,7 +1172,7 @@ fieldset:disabled a.btn {
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  &.btn-block {
+  &.btn--block {
     width: 100%;
   }
 }

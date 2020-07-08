@@ -2,7 +2,7 @@
 
 $jumbotron-padding: 1rem !default;
 $jumbotron-color: null !default;
-$jumbotron-bg: $gray-lighter !default;
+$jumbotron-bg: var(--gray-light) er !default;
 
 .jumbotron {
   padding: $jumbotron-padding ($jumbotron-padding / 2);

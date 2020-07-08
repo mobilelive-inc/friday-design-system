@@ -100,9 +100,9 @@ $lead-text-color: var(--dark);
 
 $small-font-size: 80%;
 
-$text-muted: $gray;
+$text-muted: var(--gray);
 
-$blockquote-small-color: $gray;
+$blockquote-small-color: var(--gray);
 $blockquote-small-font-size: $small-font-size;
 $blockquote-font-size: $font-size-base * 1.25;
 
@@ -113,7 +113,7 @@ $mark-padding: 0.2em;
 
 $dt-font-weight: $font-weight-bold;
 
-$kbd-box-shadow: inset 0 -0.1rem 0 rgba($black, 0.25);
+$kbd-box-shadow: inset 0 -0.1rem 0 rgba(var(--dark), 0.25);
 $nested-kbd-font-weight: $font-weight-bold;
 
 $list-inline-padding: 0.5rem;
@@ -153,37 +153,37 @@ $alert-color-level: 6;
 // List group
 
 $list-group-color: null;
-$list-group-bg: $white;
-$list-group-border-color: rgba($black, 0.125);
+$list-group-bg: var(--white);
+$list-group-border-color: rgba(var(--dark), 0.125);
 $list-group-border-width: $border-width;
 $list-group-border-radius: $border-radius;
 
 $list-group-item-padding-y: 0.75rem;
 $list-group-item-padding-x: 1.25rem;
 
-$list-group-hover-bg: $gray-light;
+$list-group-hover-bg: var(--gray-light);
 $list-group-active-color: $component-active-color;
 $list-group-active-bg: $component-active-bg;
 $list-group-active-border-color: $list-group-active-bg;
 
-$list-group-disabled-color: $gray;
+$list-group-disabled-color: var(--gray);
 $list-group-disabled-bg: $list-group-bg;
 
-$list-group-action-color: $gray-dark;
+$list-group-action-color: var(--gray-dark);
 $list-group-action-hover-color: $list-group-action-color;
 
 $list-group-action-active-color: $body-color;
-$list-group-action-active-bg: $gray-light;
+$list-group-action-active-bg: var(--gray-light);
 
 // Code
 $code-font-size: 1.25rem;
-$code-color: $orange-dark;
+$code-color: var(--orange-dark);
 $kbd-padding-y: 0.2rem;
 $kbd-padding-x: 0.4rem;
 $kbd-font-size: $code-font-size;
-$kbd-color: $white;
-$kbd-bg: $gray-dark;
-$pre-color: $gray-dark;
+$kbd-color: var(--white);
+$kbd-bg: var(--gray-dark);
+$pre-color: var(--gray-dark);
 $pre-scrollable-max-height: 340px;
 
 // Characters which are escaped by the escape-svg function

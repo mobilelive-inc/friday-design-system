@@ -17,6 +17,7 @@
     "indentation": null,
     "block-no-empty": null,
     "no-descending-specificity": null,
-    "value-list-comma-newline-after": null
+    "value-list-comma-newline-after": null,
+    "font-family-no-missing-generic-family-keyword": null
   }
 }
