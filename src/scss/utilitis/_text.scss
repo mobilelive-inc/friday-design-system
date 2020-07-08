@@ -13,31 +13,32 @@
   #{$parent} {
     color: $color !important;
   }
-  @if $emphasized-link-hover-darken-percentage != 0 {
-    a#{$parent} {
-      @include hover-focus() {
-        color: darken(
-          $color,
-          $emphasized-link-hover-darken-percentage
-        ) !important;
-      }
-    }
-  }
+  //@if $emphasized-link-hover-darken-percentage != 0 {
+  //  a#{$parent} {
+  //    @include hover-focus() {
+  //      color: darken($color,
+  //        $emphasized-link-hover-darken-percentage
+  //      ) !important;
+  //    }
+  //  }
+  //}
   //@include deprecate("`text-emphasis-variant()`", "v4.4.0", "v5", $ignore-warning);
 }
 
 @mixin text-hide($ignore-warning: false) {
-  // stylelint-disable-next-line font-family-no-missing-generic-family-keyword
-  font: 0/0 a;
+  //font: 0/0 a;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
   border: 0;
 }
 
-//
-// Text
-//
+// Lead
+.lead {
+  @include font-size($lead-font-size);
+  font-weight: $lead-font-weight;
+  color: $lead-text-color;
+}
 
 .text-monospace {
   font-family: $font-family-monospace !important;
