@@ -26,7 +26,7 @@ const Flex = styled(BaseFlex)(
   ),
 );
 
-const Box = styled(BaseBox)(
+export const Box = styled(BaseBox)(
   compose(
     border,
     background,
@@ -83,7 +83,7 @@ const Colors = () => {
       }}>
       <Flex
         pl={["0px", "25%"]}>
-        <h3>Andromeda</h3>
+        <h3>Sirius</h3>
       </Flex>
       <Flex
         color="gray"

@@ -1,49 +1,77 @@
-"use strict";
-
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
-var _react = _interopRequireDefault(require("react"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _styledSystem = require("styled-system");
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-// import { Button as BaseButton } from 'rebass/styled-components';
-var BaseButton = _styledComponents.default.button.withConfig({
-  displayName: "Button__BaseButton",
-  componentId: "xw2fa0-0"
-})(["background-color:#f48245;color:white;width:150px;height:50px;cursor:pointer;", ""], _styledSystem.width);
-
-var Button = (_ref) => {
-  var {
-    children,
-    status
-  } = _ref;
-  return /*#__PURE__*/_react.default.createElement(BaseButton, {
-    type: "button",
-    value: status
-  }, children);
-};
-
-var _default = Button;
-exports.default = _default;
-Button.propTypes = _objectSpread(_objectSpread({}, _styledSystem.width.propTypes), {}, {
-  status: _propTypes.default.oneOf(['positive', 'negative', 'neutral', 'error', 'warning']),
-  children: _propTypes.default.oneOfType([_propTypes.default.arrayOf(_propTypes.default.node), _propTypes.default.node])
-});
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { compose, border, layout, variant, space, typography, color } from 'styled-system';
+import { PROPS_FOR_THEME_ATTRIBUTES } from '../../utils/constants';
+import { capitalizeFirstLetter } from '../../utils/utils';
+const Button = /*#__PURE__*/styled('button').withConfig({
+  displayName: "Button",
+  componentId: "fu7qve-0"
+})({
+  boxSizing: 'border-box',
+  cursor: 'pointer',
+  // please dont judge, they made me do it
+  borderRadius: props => `${props.theme[`border${capitalizeFirstLetter(props.borderType)}`]} !important`,
+  alignItems: props => props.withIcon ? 'center' : 'center',
+  justifyContent: props => props.withIcon ? 'space-evenly' : 'center',
+  '&:disabled': {
+    opacity: props => props.theme.opacity
+  }
+}, compose(border, layout, space, typography, color, variant({
+  scale: 'buttons'
+})));
 Button.defaultProps = {
-  status: 'neutral'
+  disabled: false,
+  variant: 'primary',
+  fontSize: [2, 3],
+  lineHeight: [4],
+  m: [0],
+  fontWeight: [3],
+  // display: ['inline-block'],
+  width: [1],
+  textAlign: ['center'],
+  borderRadius: [0],
+  onClick: () => {},
+  withIcon: false
 };
+Button.propTypes = {
+  /** Text for Button could be string or node */
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
+
+  /** Click handler for Button */
+  onClick: PropTypes.func,
+
+  /** Option to disable Button */
+  disabled: PropTypes.bool,
+
+  /** Variant primary or secondary */
+  variant: PropTypes.string,
+  fontSize: PROPS_FOR_THEME_ATTRIBUTES,
+  lineHeight: PROPS_FOR_THEME_ATTRIBUTES,
+  fontWeight: PROPS_FOR_THEME_ATTRIBUTES,
+  display: PROPS_FOR_THEME_ATTRIBUTES,
+  width: PROPS_FOR_THEME_ATTRIBUTES,
+  height: PROPS_FOR_THEME_ATTRIBUTES,
+  textAlign: PROPS_FOR_THEME_ATTRIBUTES,
+  borderRadius: PROPS_FOR_THEME_ATTRIBUTES,
+  border: PropTypes.string,
+  borderX: PropTypes.string,
+  borderY: PropTypes.string,
+  color: PropTypes.string,
+  m: PROPS_FOR_THEME_ATTRIBUTES,
+  ml: PROPS_FOR_THEME_ATTRIBUTES,
+  mr: PROPS_FOR_THEME_ATTRIBUTES,
+  mt: PROPS_FOR_THEME_ATTRIBUTES,
+  mb: PROPS_FOR_THEME_ATTRIBUTES,
+  mx: PROPS_FOR_THEME_ATTRIBUTES,
+  my: PROPS_FOR_THEME_ATTRIBUTES,
+  p: PROPS_FOR_THEME_ATTRIBUTES,
+  pl: PROPS_FOR_THEME_ATTRIBUTES,
+  pr: PROPS_FOR_THEME_ATTRIBUTES,
+  pt: PROPS_FOR_THEME_ATTRIBUTES,
+  pb: PROPS_FOR_THEME_ATTRIBUTES,
+  px: PROPS_FOR_THEME_ATTRIBUTES,
+  py: PROPS_FOR_THEME_ATTRIBUTES,
+  withIcon: PropTypes.bool,
+  borderType: PropTypes.oneOf(['curved', 'rounded'])
+};
+export default Button;

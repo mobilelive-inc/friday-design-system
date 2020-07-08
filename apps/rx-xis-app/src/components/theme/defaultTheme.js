@@ -1,3 +1,11 @@
+import { colors } from './colors'
+import {
+  buttons, borderCurved, borderRounded
+} from './buttons';
+import { iconMarginLeft, iconMarginRight,
+  micro, tiny, small, mid, large, xLarge
+} from './spacing';
+
 // Typography
 const fonts = {
   Gotham:
@@ -47,7 +55,7 @@ export const lineHeights = [
   '0.875rem', // 0
   '1rem', // 1
   '1.125rem', // 2
-  '1.2rem', //3
+  '1.2rem', // 3
   '1.25rem', // 4
   '1.5rem', // 5
   '1.75rem', // 6
@@ -71,35 +79,6 @@ export const borderWidths = {
   read: '0', // 0
   hover: '1px', // 1
   unread: '4px', // 2
-};
-// Colors
-export const colors = {
-  primary: '#F48245',
-  secondary: '#707070',
-  success: '#34A84D',
-  danger: '#DF4B4B',
-  warning: '#ffc107',
-  info: '#66C9D5',
-  white: '#fff',
-  grayLighter: '#F2F2F2',
-  grayLight: '#dee2e6',
-  grayDark: '#707070',
-  grayDarker: '#282828',
-  grayDarkest: '#191919',
-  black: '#000',
-  orange: '#F48245',
-  blue: '#55A2D9',
-  lemon: '#FCCC2E',
-  lime: '#C4D93C',
-  cyan: '#66C9D5',
-  navy: '#F48245',
-  indigo: '#6610f2',
-  purple: '#6f42c1',
-  pink: '#e83e8c',
-  red: '#DF4B4B',
-  yellow: '#ffc107',
-  green: '#34A84D',
-  teal: '#20c997'
 };
 
 export const breakpoints = [
@@ -187,57 +166,59 @@ export const zIndices = [
 export const typography = {
   H1 : {
     fontSize: fontSizes[11],
-    marginTop: space[0],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
   },
   H2: {
     fontSize: fontSizes[9],
-    marginTop: space[0],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
   },
   H3: {
     fontSize: fontSizes[8],
-    marginTop: space[0],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
   },
   H4: {
     fontSize: fontSizes[7],
-    marginTop: space[0],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
   },
   H5: {
     fontSize: fontSizes[5],
-    marginTop: space[0],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
   },
   H6: {
     fontSize: fontSizes[3],
-    marginTop: space[0],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
   },
-  paragraph:{
-    marginTop: space[0],
-    marginBottom: space[7]
-  }
 }
+
+const opacity = 0.6;
 
 export default {
   breakpoints,
+  buttons,
+  borderCurved,
   colors,
   font,
   fontFamilies,
   fontSizes,
   fontWeights,
+  iconMarginLeft,
+  iconMarginRight,
   lineHeights,
   letterSpacings,
   radius,
+  borderRounded,
   space,
+  opacity,
   zIndices,
-  typography
+  typography,
+  micro, tiny,
+  small, mid,
+  large,
+  xLarge
 };

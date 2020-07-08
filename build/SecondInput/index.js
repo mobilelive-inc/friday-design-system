@@ -1,19 +1,8 @@
-"use strict";
+import React from 'react';
+import Input from '../Input';
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _Input = _interopRequireDefault(require("../Input"));
-
-var index = () => {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Input.default, null), " hskjdhasjkhdkja");
+const index = () => {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Input, null), " hskjdhasjkhdkja");
 };
 
-var _default = index;
-exports.default = _default;
+export default index;

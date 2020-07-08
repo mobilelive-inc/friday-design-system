@@ -11,12 +11,13 @@ import {
 import {
   Flex as BaseFlex, Image
 } from 'rebass/styled-components';
+import galaxy from '../../src/assets/galaxy.jpg';
 
 /**
  * Rebass Flex with additional support
  */
 
-const Flex = styled(BaseFlex)(
+export const Flex = styled(BaseFlex)(
   compose(
     border,
     background,
@@ -37,7 +38,7 @@ const GetStarted = () => {
         alignItems="center"
         justifyContent="center">
         <Image
-          src="https://6cb60bfa-a-62cb3a1a-s-sites.googlegroups.com/site/celeblianeyan/andromeda-galaxy/Energie-sexuelle-2.jpg?attachauth=ANoY7creW_a6P7uriZe-S4Exxsb02_5-I6CBfS9jq_bay1xxlSo7pe4vEqVt_Ce4pA7oh1CAKvJmoUxcC3iNR_gtQPZ_pQCQ9I90ErYknxZb5i_ygeV1ztdlcZxBmSJpRTIf_VaY_4pzdhq4tdvf4JLkH7Y2Bz4KwxQI-sQ0fhe1umlelLUm36jeSFGD2WA1vQ3xRB1nttPA5qjnH3n1yayG1qyI6YusVSW--aZeguNerfbCrgVckK2SqC2uOAIeejdW1f28jQkJ&attredirects=0"
+          src={galaxy}
           sx={{
             width: [ '100%', '50%' ],
             borderRadius: 8,
@@ -45,11 +46,11 @@ const GetStarted = () => {
       </Flex>
       <Flex
         pl={["0px", "25%"]}>
-        <h3>Andromeda</h3>
+        <h3>Sirius</h3>
       </Flex>
       <Flex
         px={["0px", "25%"]}>
-        <p>{`The Andromeda is an opinionated assemblage of open-source tools 
+        <p>{`Sirius is an opinionated assemblage of open-source tools 
           and libraries that allow you to accelerate the development of your 
           web application.The choice of tools, their composition, and a set of foundational 
           components guides you on how to build a constraint-based system.`}</p>
@@ -62,7 +63,7 @@ const GetStarted = () => {
         px={["0px", "25%"]}>
         <p>
           {
-            `Andromeda is built following the philosophy of composition.
+            `Sirius is built following the philosophy of composition.
             It provides a ranged of UI components that can be composed together
             to build a web application.
             `
