@@ -10,6 +10,7 @@ import Button from './components/Button'
 // import Button from '../../../build';
 import { Text } from './components/typography';
 import Span from './components/span/span';
+import Input from './components/Input';
 import theme from './components/theme/defaultTheme';
 import "./components/icomons_styles.scss"
 
@@ -241,11 +242,16 @@ function App(){
             <Span className="icon-delete_24px" />
             Delete
           </Button>
-          <Button borderType="curved">Cureved or Rounded</Button>
-          <Button borderType="rounded">Cureved or Rounded</Button>
         </Box>
+        <Input
+          type="text"
+          value=""
+          placeholder="Email"
+          label="Email"
+          id="email"
+          showErrorMessage
+          errorMessage="you have got errors"/>
       </Flex>
-
     </ThemeProvider>
   )
 }
