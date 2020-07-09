@@ -1,4 +1,4 @@
-.theme-light {
+.theme-gray {
   --primary: #66c9d5;
   --secondary: #c4d93c;
   --success: #2874a4;
@@ -7,6 +7,7 @@
   --danger: #c36837;
   --light: #fff;
   --dark: #282828;
+  --white: #e5e5e5;
 }
 
 //Theme dark
@@ -19,10 +20,11 @@
   --danger: #c4d93c;
   --light: #282828;
   --dark: #fff;
+  --white: #282828;
 }
 
 #pageWrapper {
-  background-color: var(--light);
+  background-color: var(--white);
   //color: var(--dark);
   z-index: 1;
 }
