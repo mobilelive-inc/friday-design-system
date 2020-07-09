@@ -354,8 +354,9 @@
     border-radius: 0;
   }
 
-  .btn__text {
-    margin: 0 8px;
+  .btn__text + i,
+  i + .btn__text {
+    margin-left: 8px;
   }
 
   i {
@@ -363,19 +364,6 @@
     font-size: 1rem;
   }
 }
-
-//[class*="icon-"] {
-//  padding-right: 8px;
-//
-//  ~ [class*="icon-"] {
-//    padding-left: 8px;
-//    padding-right: 0;
-//  }
-//
-//  ~ i {
-//    font-style: normal;
-//  }
-//}
 
 // Disabling of clicks on `<a>` elements
 a.btn.disabled,
