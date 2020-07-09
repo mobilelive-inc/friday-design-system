@@ -41,6 +41,7 @@
   &:disabled {
     opacity: $btn-disabled-opacity;
     @include box-shadow(none);
+    pointer-events: none;
   }
 
   &:not(:disabled):not(.disabled) {
@@ -63,15 +64,15 @@
 
     &:hover {
       color: var(--white);
-      background-color: var(--primary);
-      border-color: #f16215;
+      background-color: var(--primary-hover);
+      border-color: var(--primary-hover);
     }
 
     &:focus,
     .focus {
       color: var(--white);
-      background-color: var(--primary);
-      border-color: var(--primary);
+      background-color: var(--primary-hover);
+      border-color: var(--primary-hover);
       box-shadow: 0 0 0 0.2rem rgba(212, 116, 65, 0.5);
     }
 
@@ -90,15 +91,15 @@
 
     &:hover {
       color: var(--white);
-      background-color: #5d5d5d;
-      border-color: #575757;
+      background-color: var(--secondary-hover);
+      border-color: var(--secondary-hover);
     }
 
     &:focus,
     .focus {
       color: var(--white);
-      background-color: #5d5d5d;
-      border-color: #575757;
+      background-color: var(--secondary-hover);
+      border-color: var(--secondary-hover);
       box-shadow: 0 0 0 0.2rem rgba(133, 133, 133, 0.5);
     }
 
@@ -117,15 +118,15 @@
 
     &:hover {
       color: var(--white);
-      background-color: #2b8b40;
-      border-color: #28813b;
+      background-color: var(--success-hover);
+      border-color: var(--success-hover);
     }
 
     &:focus,
     .focus {
       color: var(--white);
-      background-color: #2b8b40;
-      border-color: #28813b;
+      background-color: var(--success-hover);
+      border-color: var(--success-hover);
       box-shadow: 0 0 0 0.2rem rgba(82, 181, 104, 0.5);
     }
 
@@ -144,15 +145,15 @@
 
     &:hover {
       color: var(--dark);
-      background-color: #48becd;
-      border-color: #3ebbca;
+      background-color: var(--info-hover);
+      border-color: var(--info-hover);
     }
 
     &:focus,
     .focus {
       color: var(--dark);
-      background-color: #48becd;
-      border-color: #3ebbca;
+      background-color: var(--info-hover);
+      border-color: var(--info-hover);
       box-shadow: 0 0 0 0.2rem rgba(92, 176, 187, 0.5);
     }
 
@@ -171,15 +172,15 @@
 
     &:hover {
       color: var(--dark);
-      background-color: #fbc308;
-      border-color: #f4bc03;
+      background-color: var(--warning-hover);
+      border-color: var(--warning-hover);
     }
 
     &:focus,
     .focus {
       color: var(--dark);
-      background-color: #fbc308;
-      border-color: #f4bc03;
+      background-color: var(--warning-hover);
+      border-color: var(--warning-hover);
       box-shadow: 0 0 0 0.2rem rgba(219, 179, 45, 0.5);
     }
 
@@ -198,15 +199,15 @@
 
     &:hover {
       color: var(--white);
-      background-color: #c82333;
-      border-color: #bd2130;
+      background-color: var(--danger-hover);
+      border-color: var(--danger-hover);
     }
 
     &:focus,
     .focus {
       color: var(--white);
-      background-color: #c82333;
-      border-color: #bd2130;
+      background-color: var(--danger-hover);
+      border-color: var(--danger-hover);
       box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
     }
 
@@ -225,15 +226,15 @@
 
     &:hover {
       color: var(--dark);
-      background-color: #d2d2d2;
-      border-color: #ccc;
+      background-color: var(--light-hover);
+      border-color: var(--light-hover);
     }
 
     &:focus,
     .focus {
       color: var(--dark);
-      background-color: #d2d2d2;
-      border-color: #ccc;
+      background-color: var(--light-hover);
+      border-color: var(--light-hover);
       box-shadow: 0 0 0 0.2rem rgba(200, 200, 201, 0.5);
     }
 
@@ -252,15 +253,15 @@
 
     &:hover {
       color: var(--white);
-      background-color: #101214;
-      border-color: #0a0c0d;
+      background-color: var(--dark-hover);
+      border-color: var(--dark-hover);
     }
 
     &:focus,
     .focus {
       color: var(--white);
-      background-color: #101214;
-      border-color: #0a0c0d;
+      background-color: var(--dark-hover);
+      border-color: var(--dark-hover);
       box-shadow: 0 0 0 0.2rem rgba(66, 70, 73, 0.5);
     }
 
@@ -331,13 +332,26 @@
   &__tooltip {
     border-radius: 0;
     border: none;
-    padding: 0;
+    padding: 5px;
     min-height: auto;
     background-color: transparent;
 
+    //@include hover() {
+    //  background-color: transparent;
+    //}
+    //
+    //&:focus,
+    //&.focus {
+    //  box-shadow: $btn-focus-box-shadow;
+    //}
     &:hover {
       background-color: transparent;
-      border: none;
+    }
+
+    &:focus,
+    .focus {
+      background-color: transparent;
+      box-shadow: 0 0 0 0.2rem rgba(166, 166, 169, 0.5);
     }
   }
 

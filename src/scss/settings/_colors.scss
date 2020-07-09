@@ -8,7 +8,6 @@
   --black: #282828;
 
   --orange: #f48245;
-  --orange1: rgba(244, 130, 69, 0.5);
   --orange-lighter: #fef3ec;
   --orange-light: #f9c0a2;
   --orange-dark: #c36837;
@@ -46,6 +45,7 @@
 
   --red: #dc3545;
   --green: #34a84d;
+
   //ML Standard Colors
   --primary: var(--orange);
   --secondary: var(--gray);
@@ -55,6 +55,15 @@
   --danger: var(--red);
   --light: var(--gray-light);
   --dark: var(--gray-dark);
+
+  --primary-hover: var(--orange-dark);
+  --secondary-hover: var(--gray-dark);
+  --info-hover: var(--cyan-dark);
+  --success-hover: var(--lime-dark);
+  --danger-hover: var(---red-dark);
+  --warning-hover: var(--lemon-dark);
+  --light-hover: var(--gray);
+  --dark-hover: var(--gray-light);
 }
 
 $colors: (

@@ -10,7 +10,12 @@
       <code class="">&lt;button class="btn"&gt;</code> and
       <code class="">&lt;a class="btn"&gt;</code>, are available. Use these
       classes
-      <code class="">.btn__primary, btn__secondary, btn__success etc </code>
+      <code class="">.btn__primary, btn__secondary, btn__success</code> etc.
+    </p>
+    <p class="lead">
+      All The buttons are styled with
+      <b class="font-weight-bold">BEM</b> technique which is based on Block,
+      elements and modifiers
     </p>
     <p class="lead font-weight-bold">Here are some Button examples</p>
 
@@ -35,7 +40,7 @@
       <button type="button" aria-label="Info" class="btn btn__info">
         Info
       </button>
-      <button type="button" aria-label="Light" class="btn btn--light">
+      <button type="button" aria-label="Light" class="btn btn__light">
         Light
       </button>
       <button type="button" aria-label="Dark" class="btn btn__dark">
@@ -455,45 +460,49 @@
       <button
         type="button"
         aria-label="Secondary"
-        class="btn btn__primary btn--curved"
+        class="btn btn__primary btn--curved btn__outline"
       >
         Primary
       </button>
       <button
         type="button"
         aria-label="Secondary"
-        class="btn btn__secondary btn--curved"
+        class="btn btn__secondary btn--curved btn__outline"
       >
         Secondary
       </button>
       <button
         type="button"
         aria-label="Secondary"
-        class="btn btn__success btn--curved"
+        class="btn btn__success btn--curved btn__outline"
       >
         Success
       </button>
       <button
         type="button"
         aria-label="Danger"
-        class="btn btn__danger btn--curved"
+        class="btn btn__danger btn--curved btn__outline"
       >
         Danger
       </button>
       <button
         type="button"
         aria-label="Warning"
-        class="btn btn__warning btn--curved"
+        class="btn btn__warning btn--curved btn__outline"
       >
         Warning
       </button>
-      <button type="button" aria-label="Info" class="btn btn__info btn--curved">
+      <button
+        type="button"
+        aria-label="Info"
+        class="btn btn__info btn--curved btn__outline"
+      >
         Info
       </button>
       <button
         type="button"
         aria-label="Light"
-        class="btn btn__light btn--curved"
+        class="btn btn__light btn--curved btn__outline"
       >
         Light
       </button>
@@ -503,7 +512,7 @@
       <button
         type="button"
         aria-label="Disabled"
-        class="btn btn__primary btn--curved disabled"
+        class="btn btn__primary btn--curved btn__outline disabled"
       >
         Disabled
       </button>
@@ -885,7 +894,7 @@
         <i class="icon-cloud-architecture"></i>
         <span class="btn__text">Info</span>
       </button>
-      <button type="button" aria-label="Light" class="btn btn--light">
+      <button type="button" aria-label="Light" class="btn btn__light">
         <i class="icon-accuracy"></i> <span class="btn__text">Light</span>
       </button>
       <button type="button" aria-label="Dark" class="btn btn__dark">
@@ -929,7 +938,7 @@
         <span class="btn__text">Info</span>
         <i class="icon-favorite_24px"></i>
       </button>
-      <button type="button" aria-label="Light" class="btn btn--light">
+      <button type="button" aria-label="Light" class="btn btn__light">
         <i class="icon-accuracy"></i>
         <span class="btn__text">Light</span>
         <i class="icon-check_circle_outline_24px"></i>
