@@ -55,11 +55,14 @@
     <div class="theme-switcher">
       <h5 class="h5">Switch Theme</h5>
       <div class="btns-switcher-holder">
-        <button class="btn dark-theme-btn btn-sm" onclick="switchDarkTheme()">
+        <button
+          class="btn btn__dark dark-theme-btn btn-sm"
+          onclick="switchDarkTheme()"
+        >
           Dark
         </button>
-        <button class="btn btn-light btn-sm" onclick="switchLightTheme()">
-          Light
+        <button class="btn btn__secondary btn-sm" onclick="switchLightTheme()">
+          Gray
         </button>
       </div>
     </div>
@@ -89,25 +92,26 @@
           <!--Colors-->
 
           <hr />
-
           <!--Typography-->
           <module href="/components/_partial.typography.html"></module>
           <!--/Typography-->
 
           <hr />
-
           <!--Buttons-->
           <module href="/components/_partial.buttons.html"></module>
           <!--Buttons-->
 
           <hr />
+          <!--Forms-->
+          <module href="/components/_partial.forms.html"></module>
+          <!--Forms-->
 
+          <hr />
           <!--Typography-->
           <module href="/components/_partial.iconogrpahy.html"></module>
           <!--/Typography-->
 
           <hr />
-
           <!--Grids-->
           <div class="my-mid" id="Grid_sections">
             <!--<h3 class="h3">Grid</h3>-->
@@ -129,12 +133,12 @@
       function switchDarkTheme() {
         var root = document.getElementsByTagName("html")[0];
         root.classList.add("theme-dark");
-        root.classList.remove("theme-light");
+        root.classList.remove("theme-gray");
       }
 
       function switchLightTheme() {
         var root = document.getElementsByTagName("html")[0];
-        root.classList.add("theme-light");
+        root.classList.add("theme-gray");
         root.classList.remove("theme-dark");
       }
     </script>

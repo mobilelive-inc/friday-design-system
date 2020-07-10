@@ -1,7 +1,7 @@
 // Text truncate
 // Requires inline-block or block for proper styling
 
-@mixin text-truncate() {
+@mixin text--truncate() {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -9,7 +9,7 @@
 
 // Typography
 
-@mixin text-emphasis-variant($parent, $color, $ignore-warning: false) {
+@mixin text--emphasis-variant($parent, $color, $ignore-warning: false) {
   #{$parent} {
     color: $color !important;
   }
@@ -22,10 +22,10 @@
   //    }
   //  }
   //}
-  //@include deprecate("`text-emphasis-variant()`", "v4.4.0", "v5", $ignore-warning);
+  //@include deprecate("`text--emphasis-variant()`", "v4.4.0", "v5", $ignore-warning);
 }
 
-@mixin text-hide($ignore-warning: false) {
+@mixin text--hide($ignore-warning: false) {
   //font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -40,23 +40,23 @@
   color: $lead-text-color;
 }
 
-.text-monospace {
+.text--monospace {
   font-family: $font-family-monospace !important;
 }
 
 // Alignment
 
-.text-justify {
+.text--justify {
   text-align: justify !important;
 }
-.text-wrap {
+.text--wrap {
   white-space: normal !important;
 }
-.text-nowrap {
+.text--nowrap {
   white-space: nowrap !important;
 }
-.text-truncate {
-  @include text-truncate();
+.text--truncate {
+  @include text--truncate();
 }
 
 // Responsive alignment
@@ -79,13 +79,13 @@
 
 // Transformation
 
-.text-lowercase {
+.text--lowercase {
   text-transform: lowercase !important;
 }
-.text-uppercase {
+.text--uppercase {
   text-transform: uppercase !important;
 }
-.text-capitalize {
+.text--capitalize {
   text-transform: capitalize !important;
 }
 
@@ -112,44 +112,44 @@
 
 // Contextual colors
 
-.text-white {
-  color: $white !important;
+.text--white {
+  color: var(--white) !important;
 }
 
 @each $color, $value in $theme-colors {
-  @include text-emphasis-variant(".text-#{$color}", $value, true);
+  @include text--emphasis-variant(".text__#{$color}", $value, true);
 }
 
-.text-body {
+.text--body {
   color: $body-color !important;
 }
-.text-muted {
+.text--muted {
   color: $text-muted !important;
 }
 
-.text-black-50 {
-  color: rgba($black, 0.5) !important;
+.text--black-50 {
+  color: rgba(var(--dark), 0.5) !important;
 }
-.text-white-50 {
-  color: rgba($white, 0.5) !important;
+.text--white-50 {
+  color: rgba(var(--white), 0.5) !important;
 }
 
 // Misc
 
-.text-hide {
-  @include text-hide($ignore-warning: true);
+.text--hide {
+  @include text--hide($ignore-warning: true);
 }
 
-.text-decoration-none {
+.text--decoration-none {
   text-decoration: none !important;
 }
 
-.text-break {
+.text--break {
   word-wrap: break-word !important;
 }
 
 // Reset
 
-.text-reset {
+.text--reset {
   color: inherit !important;
 }

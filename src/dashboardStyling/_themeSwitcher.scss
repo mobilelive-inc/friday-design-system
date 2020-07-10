@@ -1,62 +1,4 @@
-:root {
-  --white: #fff;
-  --gray: #707070;
-  --gray-light: #e5e5e5;
-  --gray-lighter: #f4f4f4;
-  --gray-dark: #212529;
-  --black: #282828;
-
-  --orange: #f48245;
-  --orange-lighter: #fef3ec;
-  --orange-light: #f9c0a2;
-  --orange-dark: #c36837;
-  --orange-darker: #311a0e;
-
-  --blue: #55a2d9;
-  --blue-lighter: #eef6fb;
-  --blue-light: #bbdaf0;
-  --blue-dark: #336182;
-  --blue-darker: #11202b;
-
-  --lemon: #fccc2e;
-  --lemon-lighter: #fffaea;
-  --lemon-light: #feebab;
-  --lemon-dark: #977a1c;
-  --lemon-darker: #322909;
-
-  --lime: #c4d93c;
-  --lime-lighter: #f9fbec;
-  --lime-light: #e7f0b1;
-  --lime-dark: #768224;
-  --lime-darker: #272b0c;
-
-  --cyan: #66c9d5;
-  --cyan-lighter: #f0fafb;
-  --cyan-light: #c2e9ee;
-  --cyan-dark: #3d7980;
-  --cyan-darker: #14282b;
-
-  --navy: #2874a4;
-  --navy-lighter: #eaf1f6;
-  --navy-light: #a9c7db;
-  --navy-dark: #184662;
-  --navy-darker: #081721;
-
-  --red: #dc3545;
-  --green: #34a84d;
-
-  //mobileLIVE Default Standard Colors
-  --primary: var(--orange);
-  --secondary: var(--gray);
-  --success: var(--green);
-  --info: var(--cyan);
-  --warning: var(--lemon);
-  --danger: var(--red);
-  --light: var(--gray-light);
-  --dark: var(--gray-dark);
-}
-
-.theme-light {
+.theme-gray {
   --primary: #66c9d5;
   --secondary: #c4d93c;
   --success: #2874a4;
@@ -65,22 +7,42 @@
   --danger: #c36837;
   --light: #fff;
   --dark: #282828;
+  --white: #e5e5e5;
+
+  --primary-hover: #d07240;
+  --secondary-hover: #4a89bd;
+  --success-hover: #b7c43f;
+  --info-hover: #3fadb4;
+  --warning-hover: #c0a21d;
+  --danger-hover: #3a83c2;
+  --dark-hover: #94afb3;
+  --light-hover: #a6babe;
 }
 
 //Theme dark
 .theme-dark {
-  --primary: #c36837;
-  --secondary: #2874a4;
-  --success: #66c9d5;
-  --info: #f48245;
-  --warning: #fccc2e;
-  --danger: #c4d93c;
-  --light: #282828;
-  --dark: #fff;
+  --primary: #87f7a3;
+  --secondary: #008463;
+  --success: #003789;
+  --info: #f3ebd6;
+  --warning: #d9bd80;
+  --danger: #d4876e;
+  --light: #f95792;
+  --dark: #cb0045;
+  --white: #282828;
+
+  --primary-hover: #b45f38;
+  --secondary-hover: #32597a;
+  --success-hover: #74802a;
+  --info-hover: #3c7e85;
+  --warning-hover: #8e711c;
+  --danger-hover: #285a86;
+  --dark-hover: #6b8084;
+  --light-hover: #9fb4b8;
 }
 
 #pageWrapper {
-  background-color: var(--light);
+  background-color: var(--white);
   //color: var(--dark);
   z-index: 1;
 }
