@@ -4,17 +4,17 @@
 
 @import "settings/colors";
 @import "settings/borders";
-@import "settings/spacing";
 @import "settings/typography";
+@import "settings/spacing";
 @import "settings/buttons";
-@import "settings/forms";
+//@import "settings/forms";
 @import "settings/gridLayout";
 @import "settings/utilities";
 @import "settings/images";
 @import "settings/modals";
 
 @import "generic/root";
-@import "generic/base";
+//@import "generic/base";
 
 //Tools
 @import "tools/tool.grid";
@@ -25,7 +25,7 @@
 @import "elements/element.headings";
 @import "components/buttons";
 @import "components/images";
-@import "components/forms";
+//@import "components/forms";
 
 //utilities
 @import "utilitis/align";

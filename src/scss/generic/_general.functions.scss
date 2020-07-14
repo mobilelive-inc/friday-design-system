@@ -169,7 +169,7 @@
 // stylelint-disable property-blacklist
 @mixin transition($transition...) {
   @if length($transition) == 0 {
-    $transition: $transition-base;
+    $transition: var(--transition-base);
   }
 
   @if length($transition) > 1 {

@@ -1,3 +1,13 @@
+:root {
+  --global-spacer: 1rem;
+
+  --global-spacer-micro: calc(var(--global-spacer) * 0.25);
+  --global-spacer-tiny: calc(var(--global-spacer) * 0.5);
+  --global-spacer-mid: calc(var(--global-spacer) * 2);
+  --global-spacer-large: calc(var(--global-spacer) * 4);
+  --global-spacer-xlarge: calc(var(--global-spacer) * 8);
+}
+
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
@@ -22,47 +32,31 @@ $enable-deprecation-messages: true;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $global-spacers map, should you need more variation.
 
-$global-spacer: 1rem;
-$global-spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
-$global-spacers: map-merge(
-  (
-    micro: (
-      $global-spacer * 0.25,
-    ),
-    tiny: (
-      $global-spacer * 0.5,
-    ),
-    small: $global-spacer,
-    mid: (
-      $global-spacer * 2,
-    ),
-    large: (
-      $global-spacer * 4,
-    ),
-    xlarge: (
-      $global-spacer * 8,
-    ),
+$global-spacers: (
+  micro: (
+    calc(var(--global-spacer) * 0.25),
   ),
-  $global-spacers
+  tiny: (
+    calc(var(--global-spacer) * 0.5),
+  ),
+  small: var(--global-spacer),
+  mid: (
+    calc(var(--global-spacer) * 2),
+  ),
+  large: (
+    calc(var(--global-spacer) * 4),
+  ),
+  xlarge: (
+    calc(var(--global-spacer) * 8),
+  ),
 );
 
-$global-spacer-micro: $global-spacer * 0.25;
-$global-spacer-tiny: $global-spacer * 0.5;
-$global-spacer-mid: $global-spacer * 2;
-$global-spacer-large: $global-spacer * 4;
-$global-spacer-xlarge: $global-spacer * 8;
-
-// This variable affects the `.h-*` and `.w-*` classes.
-$sizes: ();
 // stylelint-disable-next-line scss/dollar-variable-default
-$sizes: map-merge(
-  (
-    25: 25%,
-    50: 50%,
-    75: 75%,
-    100: 100%,
-    auto: auto,
-  ),
-  $sizes
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  auto: auto,
 );

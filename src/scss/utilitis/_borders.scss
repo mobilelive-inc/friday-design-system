@@ -87,7 +87,7 @@
 }
 
 .rounded-pill {
-  border-radius: $rounded-pill !important;
+  border-radius: var(--rounded-pill) !important;
 }
 
 .rounded-0 {

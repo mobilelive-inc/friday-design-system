@@ -8,7 +8,7 @@
 .dashboard-styling {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat";
+  font-family: var(--font-family-base);
 
   .highlighted-block {
     border: 3px solid #f2f2f2;

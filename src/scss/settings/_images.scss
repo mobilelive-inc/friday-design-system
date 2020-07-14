@@ -1,6 +1,6 @@
 // Image thumbnails
 $thumbnail-padding: 0.25rem;
-$thumbnail-bg: $body-bg;
+$thumbnail-bg: var(--body-bg);
 $thumbnail-border-width: $border-width;
 $thumbnail-border-color: var(--gray-light);
 $thumbnail-border-radius: $border-radius;

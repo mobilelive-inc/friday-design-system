@@ -12,7 +12,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: $zindex-fixed;
+  z-index: var(--zindex-fixed);
 }
 
 .fixed-bottom {
@@ -20,13 +20,13 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $zindex-fixed;
+  z-index: var(--zindex-fixed);
 }
 
 .sticky-top {
   @supports (position: sticky) {
     position: sticky;
     top: 0;
-    z-index: $zindex-sticky;
+    z-index: var(--zindex-sticky);
   }
 }

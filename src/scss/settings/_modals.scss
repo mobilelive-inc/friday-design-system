@@ -9,7 +9,7 @@ $modal-footer-margin-between: 0.5rem;
 $modal-dialog-margin: 0.5rem;
 $modal-dialog-margin-y-sm-up: 1.75rem;
 
-$modal-title-line-height: $line-height-base;
+$modal-title-line-height: var(--line-height-base);
 
 $modal-content-color: null;
 $modal-content-bg: var(--white);
