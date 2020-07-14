@@ -146,7 +146,7 @@ $embed-responsive-aspect-ratios: join(
 );
 
 $hr-border-color: rgba(#000, 0.1);
-$hr-border-width: $border-width;
+$hr-border-width: var(--border-width);
 
 $mark-padding: 0.2em;
 
@@ -169,8 +169,8 @@ $mark-bg: #fcf8e3;
 //$list-group-color: null;
 //$list-group-bg: var(--white);
 //$list-group-border-color: rgba(var(--dark), 0.125);
-//$list-group-border-width: $border-width;
-//$list-group-border-radius: $border-radius;
+//$list-group-border-width: var(--border-width);
+//$list-group-border-radius: var(--border-radius);
 //
 //$list-group-item-padding-y: 0.75rem;
 //$list-group-item-padding-x: 1.25rem;

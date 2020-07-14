@@ -14,8 +14,8 @@ $modal-title-line-height: var(--line-height-base);
 $modal-content-color: null;
 $modal-content-bg: var(--white);
 $modal-content-border-color: rgba(var(--dark), 0.2);
-$modal-content-border-width: $border-width;
-$modal-content-border-radius: $border-radius-lg;
+$modal-content-border-width: var(--border-width);
+$modal-content-border-radius: var(--border-radius)-lg;
 $modal-content-inner-border-radius: subtract(
   $modal-content-border-radius,
   $modal-content-border-width
@@ -25,7 +25,7 @@ $modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba(var(--dark), 0.5);
 
 $modal-backdrop-bg: var(--dark);
 $modal-backdrop-opacity: 0.5;
-$modal-header-border-color: $border-color;
+$modal-header-border-color: var(--border-color);
 $modal-footer-border-color: $modal-header-border-color;
 $modal-header-border-width: $modal-content-border-width;
 $modal-footer-border-width: $modal-header-border-width;

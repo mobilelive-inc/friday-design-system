@@ -16,7 +16,7 @@ kbd {
   @include font-size(var(--kbd-font-size));
   color: var(--kbd-color);
   background-color: var(--kbd-bg);
-  @include border-radius($border-radius-sm);
+  @include border-radius(var(--border-radius)-sm);
   @include box-shadow($kbd-box-shadow);
 
   kbd {

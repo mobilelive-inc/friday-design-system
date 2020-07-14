@@ -5,25 +5,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: $btn-font-family;
-  font-weight: $btn-font-weight;
+  font-family: var(--btn-font-family);
+  font-weight: var(--btn-font-weight);
   color: var(--body-color);
   text-align: center;
   text-decoration: var(--link-decoration);
-  white-space: $btn-white-space;
+  white-space: var(--btn-white-space);
   vertical-align: middle;
   user-select: none;
   background-color: transparent;
-  border: $btn-border-width solid transparent;
-  min-height: $btn-standard-hight;
-  @include button-size(
-    $btn-padding-y-sm,
-    $btn-padding-x,
-    $btn-font-size,
-    $btn-line-height,
-    $btn-border-radius
-  );
-  @include transition($btn-transition);
+  border: var(--btn-border-width) solid transparent;
+  min-height: var(--btn-standard-hight);
+  padding: var(--btn-padding-y-sm) var(--btn-padding-x);
+  font-size: var(--btn-font-size);
+  line-height: var(--btn-line-height);
+  border-radius: var(--btn-border-radius);
+  @include transition(var(--btn-transition));
 
   @include hover() {
     color: var(--body-color);
@@ -33,13 +30,13 @@
   &:focus,
   &.focus {
     outline: 0;
-    box-shadow: $btn-focus-box-shadow;
+    box-shadow: var(--btn-focus-box-shadow);
   }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    opacity: $btn-disabled-opacity;
+    opacity: var(--btn-disabled-opacit) y;
     @include box-shadow(none);
     pointer-events: none;
   }
@@ -49,16 +46,18 @@
 
     &:active,
     &.active {
-      @include box-shadow($btn-active-box-shadow);
+      @include box-shadow(var(--btn-active-box-shadow));
 
       &:focus {
-        @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+        @include box-shadow(
+          var(--btn-focus-box-shadow),
+          var(--btn-active-box-shadow)
+        );
       }
     }
   }
 
   &__primary {
-    //color: var(--dark);
     background-color: var(--primary);
     border-color: var(--primary);
 
@@ -85,7 +84,6 @@
   }
 
   &__success {
-    //color: var(--white);
     background-color: var(--success);
     border-color: var(--success);
 
@@ -99,7 +97,6 @@
   }
 
   &__info {
-    //color: var(--dark);
     background-color: var(--info);
     border-color: var(--info);
 
@@ -113,7 +110,6 @@
   }
 
   &__warning {
-    //color: var(--dark);
     background-color: var(--warning);
     border-color: var(--warning);
 
@@ -127,7 +123,6 @@
   }
 
   &__danger {
-    //color: var(--white);
     background-color: var(--danger);
     border-color: var(--danger);
 
@@ -175,11 +170,11 @@
   }
 
   &--rounded {
-    border-radius: $btn-border-radius-rounded !important;
+    border-radius: var(--btn-border-radius-rounded) !important;
   }
 
   &--curved {
-    border-radius: $btn-border-radius-curved;
+    border-radius: var(--btn-border-radius-curved);
   }
 
   &--link {
@@ -199,29 +194,23 @@
 
     &:disabled,
     &.disabled {
-      color: $btn-link-disabled-color;
+      color: var(--btn-link-disabled-color);
       pointer-events: none;
     }
   }
 
   &--lg {
-    @include button-size(
-      $btn-padding-y-lg,
-      $btn-padding-x-lg,
-      $btn-font-size-lg,
-      $btn-line-height,
-      $btn-border-radius-lg
-    );
+    padding: var(--btn-padding-y-lg) var(--btn-padding-x-lg);
+    font-size: var(--btn-font-size-lg);
+    line-height: var(--btn-line-height);
+    border-radius: var(--btn-border-radius-lg);
   }
 
   &--sm {
-    @include button-size(
-      $btn-padding-y-sm,
-      $btn-padding-x-sm,
-      $btn-font-size-sm,
-      $btn-line-height,
-      $btn-border-radius-sm
-    );
+    padding: var(--btn-padding-y-sm) var(--btn-padding-x-sm);
+    font-size: var(--btn-font-size-sm);
+    line-height: var(--btn-line-height);
+    border-radius: var(--btn-border-radius-sm);
   }
 
   &__tooltip {
@@ -230,15 +219,6 @@
     padding: 5px;
     min-height: auto;
     background-color: transparent;
-
-    //@include hover() {
-    //  background-color: transparent;
-    //}
-    //
-    //&:focus,
-    //&.focus {
-    //  box-shadow: $btn-focus-box-shadow;
-    //}
     &:hover,
     &:focus,
     .focus {
@@ -255,9 +235,6 @@
   &__icon {
     width: 40px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: auto;
     padding: 0.5rem 0.5rem;
     font-size: 1rem;
@@ -288,7 +265,7 @@ fieldset:disabled a.btn {
   width: 100%;
   // Vertically space out multiple block buttons
   + .btn--block {
-    margin-top: $btn-block-spacing-y;
+    margin-top: var(--btn-block-spacing-y);
   }
 }
 

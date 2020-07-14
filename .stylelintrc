@@ -19,6 +19,7 @@
     "no-descending-specificity": null,
     "value-list-comma-newline-after": null,
     "font-family-no-missing-generic-family-keyword": null,
-    "value-keyword-case": null
+    "value-keyword-case": null,
+    "function-whitespace-after": null
   }
 }
