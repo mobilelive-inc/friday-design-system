@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box } from 'rebass/styled-components';
+import Box from '../box';
 import {
   Label, Input, InputContainer, Flex
 } from './css';
