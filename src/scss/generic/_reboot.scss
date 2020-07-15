@@ -426,8 +426,8 @@
 //
 //[type='search'] {
 //  // This overrides the extra rounded corners on search inputs in iOS so that our
-//  // `.form-control` class can properly style them. Note that this cannot simply
-//  // be added to `.form-control` as it's not specific enough. For details, see
+//  // `.formControl` class can properly style them. Note that this cannot simply
+//  // be added to `.formControl` as it's not specific enough. For details, see
 //  // https://github.com/twbs/designSystem/issues/11586.
 //  outline-offset: -2px; // 2. Correct the outline style in Safari.
 //  -webkit-appearance: none;
