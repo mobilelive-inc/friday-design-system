@@ -1,25 +1,56 @@
 import styled from 'styled-components';
+import {
+  compose,
+  border,
+  layout,
+  variant,
+  space,
+  typography,
+  color,
+} from 'styled-system';
+import { capitalizeFirstLetter } from '../../utils/utils';
 
-export const Label = styled.label`
-  color: ${props => props.theme.colors.black};
-  left: 0;
-  top: -0.5em;
-  cursor: text;
-  font-weight: 300;
-  opacity: 1;
-  transition: all 0.2s;
-  letter-spacing: -0.2px;
-`;
+const getDerivedProps = (props) => {
+  const {
+    theme: {
+      colors: {
+        red, black
+      }, borderCurved, borderRounded,
+    },
+    error,
+    borderType,
+    withBottomBorderOnly
+  } = props;
+  // baseline styles
+  
+  const styles = {
+    color: error ? red : black,
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '1em 4em 0.2em 0',
+    letterSpacing: '0.125em',
+    lineHeight: '28px',
+    fontSize: '1rem',
+    fontWeight: 500,
+  };
+  // conditional styles
+  if(!withBottomBorderOnly && borderType && borderType === 'curved'){
+    styles.borderRadius = borderCurved
+  }
+  if(!withBottomBorderOnly && borderType && borderType === 'rounded'){
+    styles.borderRadius = borderRounded
+  }
+  if(withBottomBorderOnly){
+    styles.borderColor= 'transparent';
+    styles.borderBottom = `0.125em solid ${error ? red : black}`
+  }
+  else{
+    styles.border = `0.125em solid ${error ? red : black}`
+  }
+  return styles;
+};
 
-export const Input = styled.input`
-  color: ${props => (props.error ? props.theme.colors.red : props.theme.colors.black)};
-  // border-color: transparent;
-  border: 0.125em solid ${props => (props.error ? props.theme.colors.red : props.theme.colors.black)};
-  width: 100%;
-  box-sizing: border-box;
-  padding: 1em 4em 0.2em 0;
-  letter-spacing: 0.125em;
-  line-height: 28px;
-  font-size: 1rem;
-  font-weight: 500;
-`;
+export const Input = styled.input(
+  (props) => getDerivedProps(props),
+  compose(border, layout, space, typography, color)
+);

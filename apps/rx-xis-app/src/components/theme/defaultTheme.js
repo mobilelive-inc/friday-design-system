@@ -196,6 +196,22 @@ export const typography = {
   },
 }
 
+export const checkBoxes = {
+  unchecked: {
+    cursor: 'pointer',
+    background: `${colors.white}`,
+  },
+  checked: {
+    cursor: 'pointer',
+    background: `${colors.blue}`,
+  },
+  disabled: {
+    cursor: 'default',
+    background: `${colors.grey}`,
+  },
+};
+
+
 const opacity = 0.6;
 
 export default {
@@ -203,6 +219,7 @@ export default {
   buttons,
   borderCurved,
   colors,
+  checkBoxes,
   font,
   fontFamilies,
   fontSizes,
