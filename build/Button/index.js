@@ -1,27 +1,50 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { compose, border, layout, variant, space, typography, color } from 'styled-system';
-import { PROPS_FOR_THEME_ATTRIBUTES } from '../../utils/constants';
-import { capitalizeFirstLetter } from '../../utils/utils';
-const Button = /*#__PURE__*/styled('button').withConfig({
-  displayName: "Button",
-  componentId: "fu7qve-0"
-})({
-  boxSizing: 'border-box',
-  cursor: 'pointer',
-  // please dont judge, they made me do it
-  borderRadius: props => `${props.theme[`border${capitalizeFirstLetter(props.borderType)}`]} !important`,
-  alignItems: props => props.withIcon ? 'center' : 'center',
-  justifyContent: props => props.withIcon ? 'space-evenly' : 'center',
-  '&:disabled': {
-    opacity: props => props.theme.opacity
+import { capitalizeFirstLetter } from '../utils/utils';
+
+const getDerivedStyles = props => {
+  const {
+    theme,
+    borderType,
+    withIcon
+  } = props; // default styles for button
+
+  const styles = {
+    boxSizing: 'border-box',
+    cursor: 'pointer',
+    borderRadius: `${theme[`border${capitalizeFirstLetter(borderType)}`]} !important`,
+    '&:disabled': {
+      opacity: theme.opacity
+    }
+  }; // styles conditionally applied w.r.t props
+
+  if (withIcon) {
+    styles.alignItems = "center";
+    styles.justifyContent = "space-evenly";
   }
-}, compose(border, layout, space, typography, color, variant({
+
+  return styles;
+};
+
+const BaseButton = /*#__PURE__*/styled('button').withConfig({
+  displayName: "Button__BaseButton",
+  componentId: "fu7qve-0"
+})(props => getDerivedStyles(props), compose(border, layout, space, typography, color, variant({
   scale: 'buttons'
 })));
+
+const Button = props => {
+  return (
+    /*#__PURE__*/
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    React.createElement(BaseButton, props)
+  );
+};
+
 Button.defaultProps = {
   disabled: false,
-  variant: 'primary',
   fontSize: [2, 3],
   lineHeight: [4],
   m: [0],
@@ -34,7 +57,7 @@ Button.defaultProps = {
   withIcon: false
 };
 Button.propTypes = {
-  /** Text for Button could be string or node */
+  /** Text for Button could be string or node. */
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]).isRequired,
 
   /** Click handler for Button */
@@ -43,35 +66,56 @@ Button.propTypes = {
   /** Option to disable Button */
   disabled: PropTypes.bool,
 
-  /** Variant primary or secondary */
+  /** button variant consumes buttons object in the theme file */
   variant: PropTypes.string,
-  fontSize: PROPS_FOR_THEME_ATTRIBUTES,
-  lineHeight: PROPS_FOR_THEME_ATTRIBUTES,
-  fontWeight: PROPS_FOR_THEME_ATTRIBUTES,
-  display: PROPS_FOR_THEME_ATTRIBUTES,
-  width: PROPS_FOR_THEME_ATTRIBUTES,
-  height: PROPS_FOR_THEME_ATTRIBUTES,
-  textAlign: PROPS_FOR_THEME_ATTRIBUTES,
-  borderRadius: PROPS_FOR_THEME_ATTRIBUTES,
+
+  /** The props needs to be passed in when using icons in buttons */
+  withIcon: PropTypes.bool,
+
+  /** borderType consumes borderCurved and borderRounded variables from Theme file */
+  borderType: PropTypes.oneOf(['curved', 'rounded']),
+
+  /** Defines font size of child elements. Accepts responsive value from theme */
+  fontSize: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string), PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
+
+  /** Defines line height of child elements. Accepts responsive value from theme */
+  lineHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string), PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
+
+  /** Defines font weight of child elements. Accepts responsive value from theme */
+  fontWeight: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string), PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
+
+  /** The display property specifies the display behavior (the type of rendering box) of an element. */
+  display: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string), PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
+
+  /** Defines width of button. Accepts responsive value from theme */
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string), PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
+
+  /** Defines height of button. Accepts responsive value from theme */
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string), PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
+
+  /** textAlign property specifies the horizontal
+   * alignment of text in an element. Accepts responsive value from theme */
+  textAlign: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string), PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
+
+  /** Defines border radius on the button. Accepts responsive value from theme. */
+  borderRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string), PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
+
+  /** Defines button's border. It's a shorthand for border-width, border-style, and border-color.  */
   border: PropTypes.string,
   borderX: PropTypes.string,
   borderY: PropTypes.string,
   color: PropTypes.string,
-  m: PROPS_FOR_THEME_ATTRIBUTES,
-  ml: PROPS_FOR_THEME_ATTRIBUTES,
-  mr: PROPS_FOR_THEME_ATTRIBUTES,
-  mt: PROPS_FOR_THEME_ATTRIBUTES,
-  mb: PROPS_FOR_THEME_ATTRIBUTES,
-  mx: PROPS_FOR_THEME_ATTRIBUTES,
-  my: PROPS_FOR_THEME_ATTRIBUTES,
-  p: PROPS_FOR_THEME_ATTRIBUTES,
-  pl: PROPS_FOR_THEME_ATTRIBUTES,
-  pr: PROPS_FOR_THEME_ATTRIBUTES,
-  pt: PROPS_FOR_THEME_ATTRIBUTES,
-  pb: PROPS_FOR_THEME_ATTRIBUTES,
-  px: PROPS_FOR_THEME_ATTRIBUTES,
-  py: PROPS_FOR_THEME_ATTRIBUTES,
-  withIcon: PropTypes.bool,
-  borderType: PropTypes.oneOf(['curved', 'rounded'])
+
+  /** Shorthand to add margin to button. ml, mr, mt, mb, my and mx are also supported to
+   * to add margins on left, right, top, bottom, y-axis and x-axis respectively.
+   * Accepts responsive value from theme
+   */
+  m: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string), PropTypes.number, PropTypes.arrayOf(PropTypes.number)]),
+
+  /** Shorthand to add padding to button. pl, pr, pt, pb, py and px are also supported to
+   * to add paddings on left, right, top, bottom, y-axis and x-axis respectively.
+   * Accepts responsive value from theme
+   */
+  p: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string), PropTypes.number, PropTypes.arrayOf(PropTypes.number)])
 };
 export default Button;

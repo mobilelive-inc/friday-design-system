@@ -12,6 +12,7 @@ import { Text } from './components/typography';
 import Span from './components/span/span';
 import theme from './components/theme/defaultTheme';
 import "./components/icomons_styles.scss"
+import { Button as BuildButton } from '../../../build';
 
 function App(){
   return(
@@ -244,6 +245,7 @@ function App(){
           <Button borderType="curved">Cureved or Rounded</Button>
           <Button borderType="rounded">Cureved or Rounded</Button>
         </Box>
+        <BuildButton>I am base button</BuildButton>
       </Flex>
 
     </ThemeProvider>
