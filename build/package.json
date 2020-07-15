@@ -1,6 +1,6 @@
 {
   "name": "ml-ds-dep-test",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "mobileLIVE design system for react",
   "main": "index.js",
   "dependencies": {
