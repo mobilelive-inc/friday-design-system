@@ -84,7 +84,7 @@
 //$custom-control-indicator-checked-color: var(--component-active-color);
 //$custom-control-indicator-checked-bg: var(--component-active-bg);
 //$custom-control-indicator-checked-disabled-bg: rgba(
-//  theme-color("primary"),
+//  theme-color('primary'),
 //  0.5
 //);
 //$custom-control-indicator-checked-box-shadow: none;
@@ -99,16 +99,16 @@
 //$custom-control-indicator-active-border-color: $custom-control-indicator-active-bg;
 //
 //$custom-checkbox-indicator-border-radius: var(--border-radius);
-//$custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>");
+//$custom-checkbox-indicator-icon-checked: url('data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>');
 //
 //$custom-checkbox-indicator-indeterminate-bg: var(--component-active-bg);
 //$custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color;
-//$custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'><path stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/></svg>");
+//$custom-checkbox-indicator-icon-indeterminate: url('data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'><path stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/></svg>');
 //$custom-checkbox-indicator-indeterminate-box-shadow: none;
 //$custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-bg;
 //
 //$custom-radio-indicator-border-radius: 50%;
-//$custom-radio-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>");
+//$custom-radio-indicator-icon-checked: url('data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>');
 //
 //$custom-switch-width: $custom-control-indicator-size * 1.75;
 //$custom-switch-indicator-border-radius: $custom-control-indicator-size / 2;
@@ -130,7 +130,7 @@
 //$custom-select-disabled-bg: var(--gray-lighter);
 //$custom-select-bg-size: 8px 10px; // In pixels because image dimensions
 //$custom-select-indicator-color: var(--gray-dark);
-//$custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>");
+//$custom-select-indicator: url('data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>');
 //$custom-select-background: escape-svg($custom-select-indicator) no-repeat right
 //  $custom-select-padding-x center / $custom-select-bg-size; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 //
@@ -186,32 +186,32 @@
 //$custom-file-button-color: $custom-file-color;
 //$custom-file-button-bg: $input-group-addon-bg;
 //$custom-file-text: (
-//  en: "Browse",
+//  en: 'Browse',
 //);
 //
 //// Form validation
 //
 //$form-feedback-margin-top: $form-text-margin-top;
 //$form-feedback-font-size: $small-font-size;
-//$form-feedback-valid-color: theme-color("success");
-//$form-feedback-invalid-color: theme-color("danger");
+//$form-feedback-valid-color: theme-color('success');
+//$form-feedback-invalid-color: theme-color('danger');
 //
 //$form-feedback-icon-valid-color: $form-feedback-valid-color;
-//$form-feedback-icon-valid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>");
+//$form-feedback-icon-valid: url('data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>');
 //$form-feedback-icon-invalid-color: $form-feedback-invalid-color;
-//$form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>");
+//$form-feedback-icon-invalid: url('data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>');
 //
 //$form-validation-states: ();
 //// stylelint-disable-next-line scss/dollar-variable-default
 //$form-validation-states: map-merge(
 //  (
-//    "valid": (
-//      "color": $form-feedback-valid-color,
-//      "icon": $form-feedback-icon-valid,
+//    'valid': (
+//      'color': $form-feedback-valid-color,
+//      'icon': $form-feedback-icon-valid,
 //    ),
-//    "invalid": (
-//      "color": $form-feedback-invalid-color,
-//      "icon": $form-feedback-icon-invalid,
+//    'invalid': (
+//      'color': $form-feedback-invalid-color,
+//      'icon': $form-feedback-icon-invalid,
 //    ),
 //  ),
 //  $form-validation-states
@@ -261,13 +261,13 @@
 //// This mixin uses an `if()` technique to be compatible with Dart Sass
 //// See https://github.com/sass/sass/issues/1873#issuecomment-152293725 for more details
 //@mixin form-validation-state-selector($state) {
-//  @if ($state == "valid" or $state == "invalid") {
-//    .was-validated #{if(&, "&", "")}:#{$state},
-//    #{if(&, "&", "")}.is-#{$state} {
+//  @if ($state == 'valid' or $state == 'invalid') {
+//    .was-validated #{if(&, '&', "")}:#{$state},
+//    #{if(&, '&', "")}.is-#{$state} {
 //      @content;
 //    }
 //  } @else {
-//    #{if(&, "&", "")}.is-#{$state} {
+//    #{if(&, '&', "")}.is-#{$state} {
 //      @content;
 //    }
 //  }

@@ -4,26 +4,26 @@
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
+ xs: 0,
+ sm: 576px,
+ md: 768px,
+ lg: 992px,
+ xl: 1200px
 );
 
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+@include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
+@include _assert-starts-at-zero($grid-breakpoints, '$grid-breakpoints');
 
 // Grid containers
 // maximum width of `.container` for different screen sizes.
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
+ sm: 540px,
+ md: 720px,
+ lg: 960px,
+ xl: 1140px
 );
 
-@include _assert-ascending($container-max-widths, "$container-max-widths");
+@include _assert-ascending($container-max-widths, '$container-max-widths');
 
 // Grid columns
 // Set the number of columns
@@ -49,16 +49,16 @@ $grid-row-columns: 6;
 //    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
 //    md
 @function breakpoint-next(
-  $name,
-  $breakpoints: $grid-breakpoints,
-  $breakpoint-names: map-keys($breakpoints)
+ $name,
+ $breakpoints: $grid-breakpoints,
+ $breakpoint-names: map-keys($breakpoints)
 ) {
-  $n: index($breakpoint-names, $name);
-  @return if(
-    $n != null and $n < length($breakpoint-names),
-    nth($breakpoint-names, $n + 1),
-    null
-  );
+ $n: index($breakpoint-names, $name);
+ @return if(
+  $n != null and $n < length($breakpoint-names),
+  nth($breakpoint-names, $n + 1),
+  null
+ );
 }
 
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
@@ -66,8 +66,8 @@ $grid-row-columns: 6;
 //    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    576px
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-  $min: map-get($breakpoints, $name);
-  @return if($min != 0, $min, null);
+ $min: map-get($breakpoints, $name);
+ @return if($min != 0, $min, null);
 }
 
 // Maximum breakpoint width. Null for the largest (last) breakpoint.
@@ -80,8 +80,8 @@ $grid-row-columns: 6;
 //    >> breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    767.98px
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
-  $next: breakpoint-next($name, $breakpoints);
-  @return if($next, breakpoint-min($next, $breakpoints) - 0.02, null);
+ $next: breakpoint-next($name, $breakpoints);
+ @return if($next, breakpoint-min($next, $breakpoints) - 0.02, null);
 }
 
 // Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
@@ -90,82 +90,82 @@ $grid-row-columns: 6;
 //    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
 //    ""  (Returns a blank string)
 //    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
-//    "-sm"
+//    '-sm'
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+ @return if(breakpoint-min($name, $breakpoints) == null, '', '-#{$name}');
 }
 
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
 // Makes the @content apply to the given breakpoint and wider.
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  @if $min {
-    @media (min-width: $min) {
-      @content;
-    }
-  } @else {
-    @content;
+ $min: breakpoint-min($name, $breakpoints);
+ @if $min {
+  @media (min-width: $min) {
+   @content;
   }
+ } @else {
+  @content;
+ }
 }
 
 // Media of at most the maximum breakpoint width. No query for the largest breakpoint.
 // Makes the @content apply to the given breakpoint and narrower.
 @mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
-  $max: breakpoint-max($name, $breakpoints);
-  @if $max {
-    @media (max-width: $max) {
-      @content;
-    }
-  } @else {
-    @content;
+ $max: breakpoint-max($name, $breakpoints);
+ @if $max {
+  @media (max-width: $max) {
+   @content;
   }
+ } @else {
+  @content;
+ }
 }
 
 // Media that spans multiple breakpoint widths.
 // Makes the @content apply between the min and max breakpoints
 @mixin media-breakpoint-between(
-  $lower,
-  $upper,
-  $breakpoints: $grid-breakpoints
+ $lower,
+ $upper,
+ $breakpoints: $grid-breakpoints
 ) {
-  $min: breakpoint-min($lower, $breakpoints);
-  $max: breakpoint-max($upper, $breakpoints);
+ $min: breakpoint-min($lower, $breakpoints);
+ $max: breakpoint-max($upper, $breakpoints);
 
-  @if $min != null and $max != null {
-    @media (min-width: $min) and (max-width: $max) {
-      @content;
-    }
-  } @else if $max == null {
-    @include media-breakpoint-up($lower, $breakpoints) {
-      @content;
-    }
-  } @else if $min == null {
-    @include media-breakpoint-down($upper, $breakpoints) {
-      @content;
-    }
+ @if $min != null and $max != null {
+  @media (min-width: $min) and (max-width: $max) {
+   @content;
   }
+ } @else if $max == null {
+  @include media-breakpoint-up($lower, $breakpoints) {
+   @content;
+  }
+ } @else if $min == null {
+  @include media-breakpoint-down($upper, $breakpoints) {
+   @content;
+  }
+ }
 }
 
 // Media between the breakpoint's minimum and maximum widths.
 // No minimum for the smallest breakpoint, and no maximum for the largest one.
 // Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
 @mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  $max: breakpoint-max($name, $breakpoints);
+ $min: breakpoint-min($name, $breakpoints);
+ $max: breakpoint-max($name, $breakpoints);
 
-  @if $min != null and $max != null {
-    @media (min-width: $min) and (max-width: $max) {
-      @content;
-    }
-  } @else if $max == null {
-    @include media-breakpoint-up($name, $breakpoints) {
-      @content;
-    }
-  } @else if $min == null {
-    @include media-breakpoint-down($name, $breakpoints) {
-      @content;
-    }
+ @if $min != null and $max != null {
+  @media (min-width: $min) and (max-width: $max) {
+   @content;
   }
+ } @else if $max == null {
+  @include media-breakpoint-up($name, $breakpoints) {
+   @content;
+  }
+ } @else if $min == null {
+  @include media-breakpoint-down($name, $breakpoints) {
+   @content;
+  }
+ }
 }
 
 /// Grid system
@@ -173,59 +173,59 @@ $grid-row-columns: 6;
 // Generate semantic grid columns with these mixins.
 
 @mixin make-container($gutter: $grid-gutter-width) {
-  width: 100%;
-  padding-right: $gutter / 2;
-  padding-left: $gutter / 2;
-  margin-right: auto;
-  margin-left: auto;
+ width: 100%;
+ padding-right: $gutter / 2;
+ padding-left: $gutter / 2;
+ margin-right: auto;
+ margin-left: auto;
 }
 
 // For each breakpoint, define the maximum width of the container in a media query
 @mixin make-container-max-widths(
-  $max-widths: $container-max-widths,
-  $breakpoints: $grid-breakpoints
+ $max-widths: $container-max-widths,
+ $breakpoints: $grid-breakpoints
 ) {
-  @each $breakpoint, $container-max-width in $max-widths {
-    @include media-breakpoint-up($breakpoint, $breakpoints) {
-      max-width: $container-max-width;
-    }
+ @each $breakpoint, $container-max-width in $max-widths {
+  @include media-breakpoint-up($breakpoint, $breakpoints) {
+   max-width: $container-max-width;
   }
+ }
 }
 
 @mixin make-row($gutter: $grid-gutter-width) {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -$gutter / 2;
-  margin-left: -$gutter / 2;
+ display: flex;
+ flex-wrap: wrap;
+ margin-right: -$gutter / 2;
+ margin-left: -$gutter / 2;
 }
 
 @mixin make-col-ready($gutter: $grid-gutter-width) {
-  position: relative;
-  // Prevent columns from becoming too narrow when at smaller grid tiers by
-  // always setting `width: 100%;`. This works because we use `flex` values
-  // later on to override this initial width.
-  width: 100%;
-  padding-right: $gutter / 2;
-  padding-left: $gutter / 2;
+ position: relative;
+ // Prevent columns from becoming too narrow when at smaller grid tiers by
+ // always setting `width: 100%;`. This works because we use `flex` values
+ // later on to override this initial width.
+ width: 100%;
+ padding-right: $gutter / 2;
+ padding-left: $gutter / 2;
 }
 
 @mixin make-col($size, $columns: $grid-columns) {
-  flex: 0 0 percentage($size / $columns);
-  // Add a `max-width` to ensure content within each column does not blow out
-  // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
-  // do not appear to require this.
-  max-width: percentage($size / $columns);
+ flex: 0 0 percentage($size / $columns);
+ // Add a `max-width` to ensure content within each column does not blow out
+ // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+ // do not appear to require this.
+ max-width: percentage($size / $columns);
 }
 
 @mixin make-col-auto() {
-  flex: 0 0 auto;
-  width: auto;
-  max-width: 100%; // Reset earlier grid tiers
+ flex: 0 0 auto;
+ width: auto;
+ max-width: 100%; // Reset earlier grid tiers
 }
 
 @mixin make-col-offset($size, $columns: $grid-columns) {
-  $num: $size / $columns;
-  margin-left: if($num == 0, 0, percentage($num));
+ $num: $size / $columns;
+ margin-left: if($num == 0, 0, percentage($num));
 }
 
 // Row columns
@@ -234,10 +234,10 @@ $grid-row-columns: 6;
 // numberof columns. Supports wrapping to new lines, but does not do a Masonry
 // style grid.
 @mixin row-cols($count) {
-  & > * {
-    flex: 0 0 100% / $count;
-    max-width: 100% / $count;
-  }
+ & > * {
+  flex: 0 0 100% / $count;
+  max-width: 100% / $count;
+ }
 }
 
 // Framework grid generation
@@ -246,89 +246,89 @@ $grid-row-columns: 6;
 // any value of `$grid-columns`.
 
 @mixin make-grid-columns(
-  $columns: $grid-columns,
-  $gutter: $grid-gutter-width,
-  $breakpoints: $grid-breakpoints
+ $columns: $grid-columns,
+ $gutter: $grid-gutter-width,
+ $breakpoints: $grid-breakpoints
 ) {
-  // Common properties for all breakpoints
-  %grid-column {
-    position: relative;
-    width: 100%;
-    padding-right: $gutter / 2;
-    padding-left: $gutter / 2;
+ // Common properties for all breakpoints
+ %grid-column {
+  position: relative;
+  width: 100%;
+  padding-right: $gutter / 2;
+  padding-left: $gutter / 2;
+ }
+
+ @each $breakpoint in map-keys($breakpoints) {
+  $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+  @if $columns > 0 {
+   // Allow columns to stretch full width below their breakpoints
+   @for $i from 1 through $columns {
+    .col#{$infix}-#{$i} {
+     @extend %grid-column;
+    }
+   }
   }
 
-  @each $breakpoint in map-keys($breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $breakpoints);
-
-    @if $columns > 0 {
-      // Allow columns to stretch full width below their breakpoints
-      @for $i from 1 through $columns {
-        .col#{$infix}-#{$i} {
-          @extend %grid-column;
-        }
-      }
-    }
-
-    .col#{$infix},
-    .col#{$infix}-auto {
-      @extend %grid-column;
-    }
-
-    @include media-breakpoint-up($breakpoint, $breakpoints) {
-      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
-      .col#{$infix} {
-        flex-basis: 0;
-        flex-grow: 1;
-        min-width: 0; // See https://github.com/twbs/DesignSystem/issues/25410
-        max-width: 100%;
-      }
-
-      @if $grid-row-columns > 0 {
-        @for $i from 1 through $grid-row-columns {
-          .row-cols#{$infix}-#{$i} {
-            @include row-cols($i);
-          }
-        }
-      }
-
-      .col#{$infix}-auto {
-        @include make-col-auto();
-      }
-
-      @if $columns > 0 {
-        @for $i from 1 through $columns {
-          .col#{$infix}-#{$i} {
-            @include make-col($i, $columns);
-          }
-        }
-      }
-
-      .order#{$infix}-first {
-        order: -1;
-      }
-
-      .order#{$infix}-last {
-        order: $columns + 1;
-      }
-
-      @for $i from 0 through $columns {
-        .order#{$infix}-#{$i} {
-          order: $i;
-        }
-      }
-
-      @if $columns > 0 {
-        // `$columns - 1` because offsetting by the width of an entire row isn't possible
-        @for $i from 0 through ($columns - 1) {
-          @if not($infix == "" and $i == 0) {
-            // Avoid emitting useless .offset-0
-            .offset#{$infix}-#{$i} {
-              @include make-col-offset($i, $columns);
-            }
-          }
-        }
-      }
-    }
+  .col#{$infix},
+  .col#{$infix}-auto {
+   @extend %grid-column;
   }
+
+  @include media-breakpoint-up($breakpoint, $breakpoints) {
+   // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+   .col#{$infix} {
+    flex-basis: 0;
+    flex-grow: 1;
+    min-width: 0; // See https://github.com/twbs/DesignSystem/issues/25410
+    max-width: 100%;
+   }
+
+   @if $grid-row-columns > 0 {
+    @for $i from 1 through $grid-row-columns {
+     .row-cols#{$infix}-#{$i} {
+      @include row-cols($i);
+     }
+    }
+   }
+
+   .col#{$infix}-auto {
+    @include make-col-auto();
+   }
+
+   @if $columns > 0 {
+    @for $i from 1 through $columns {
+     .col#{$infix}-#{$i} {
+      @include make-col($i, $columns);
+     }
+    }
+   }
+
+   .order#{$infix}-first {
+    order: -1;
+   }
+
+   .order#{$infix}-last {
+    order: $columns + 1;
+   }
+
+   @for $i from 0 through $columns {
+    .order#{$infix}-#{$i} {
+     order: $i;
+    }
+   }
+
+   @if $columns > 0 {
+    // `$columns - 1` because offsetting by the width of an entire row isn't possible
+    @for $i from 0 through ($columns - 1) {
+     @if not($infix == '' and $i == 0) {
+      // Avoid emitting useless .offset-0
+      .offset#{$infix}-#{$i} {
+       @include make-col-offset($i, $columns);
+      }
+     }
+    }
+   }
+  }
+ }
 }

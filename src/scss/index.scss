@@ -1,45 +1,45 @@
-@import "vendors/rfs_autofontSizing";
+@import 'vendors/rfs_autofontSizing';
 
-@import "generic/general.functions";
+@import 'generic/general.functions';
 
-@import "settings/colors";
-@import "settings/borders";
-@import "settings/typography";
-@import "settings/spacing";
-@import "settings/buttons";
-//@import "settings/forms";
-@import "settings/gridLayout";
-@import "settings/utilities";
-@import "settings/images";
-@import "settings/modals";
+@import 'settings/colors';
+@import 'settings/borders';
+@import 'settings/typography';
+@import 'settings/spacing';
+@import 'settings/buttons';
+//@import 'settings/forms';
+@import 'settings/gridLayout';
+@import 'settings/utilities';
+@import 'settings/images';
+@import 'settings/modals';
 
-@import "generic/root";
-//@import "generic/base";
+@import 'generic/root';
+//@import 'generic/base';
 
 //Tools
-@import "tools/tool.grid";
-@import "tools/tool.shadows";
-@import "tools/tool.clearfix";
-@import "tools/tool.vendor-prefixes";
+@import 'tools/tool.grid';
+@import 'tools/tool.shadows';
+@import 'tools/tool.clearfix';
+@import 'tools/tool.vendor-prefixes';
 
-@import "elements/element.headings";
-@import "components/buttons";
-@import "components/images";
-//@import "components/forms";
+@import 'elements/element.headings';
+@import 'components/buttons';
+@import 'components/images';
+//@import 'components/forms';
 
 //utilities
-@import "utilitis/align";
-@import "utilitis/borders";
-@import "utilitis/flex";
-@import "utilitis/position";
-@import "utilitis/sizing";
-@import "utilitis/spacing";
-@import "utilitis/text";
-@import "utilitis/visibility";
-@import "utilitis/background";
-@import "utilitis/jumbotron";
-@import "utilitis/code";
+@import 'utilitis/align';
+@import 'utilitis/borders';
+@import 'utilitis/flex';
+@import 'utilitis/position';
+@import 'utilitis/sizing';
+@import 'utilitis/spacing';
+@import 'utilitis/text';
+@import 'utilitis/visibility';
+@import 'utilitis/background';
+@import 'utilitis/jumbotron';
+@import 'utilitis/code';
 
 //vendors
 
-@import "vendors/icomons_styles";
+@import 'vendors/icomons_styles';

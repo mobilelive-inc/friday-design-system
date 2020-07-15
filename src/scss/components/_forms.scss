@@ -59,10 +59,10 @@
 //  }
 //}
 //
-//input[type="date"],
-//input[type="time"],
-//input[type="datetime-local"],
-//input[type="month"] {
+//input[type='date'],
+//input[type='time'],
+//input[type='datetime-local'],
+//input[type='month'] {
 //  &.form-control {
 //    appearance: none; // Fix appearance for date inputs in Safari
 //  }
@@ -199,7 +199,7 @@
 //  margin-left: -$form-grid-gutter-width / 2;
 //
 //  > .col,
-//  > [class*="col-"] {
+//  > [class*='col-'] {
 //    padding-right: $form-grid-gutter-width / 2;
 //    padding-left: $form-grid-gutter-width / 2;
 //  }
@@ -291,7 +291,7 @@
 //      margin-bottom: 0;
 //    }
 //
-//    // Inline-block all the things for "inline"
+//    // Inline-block all the things for 'inline'
 //    .form-group {
 //      display: flex;
 //      flex: 0 0 auto;

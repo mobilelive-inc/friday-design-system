@@ -1,11 +1,11 @@
 :root {
-  --global-spacer: 1rem;
+ --global-spacer: 1rem;
 
-  --global-spacer-micro: calc(var(--global-spacer) * 0.25);
-  --global-spacer-tiny: calc(var(--global-spacer) * 0.5);
-  --global-spacer-mid: calc(var(--global-spacer) * 2);
-  --global-spacer-large: calc(var(--global-spacer) * 4);
-  --global-spacer-xlarge: calc(var(--global-spacer) * 8);
+ --global-spacer-micro: calc(var(--global-spacer) * 0.25);
+ --global-spacer-tiny: calc(var(--global-spacer) * 0.5);
+ --global-spacer-mid: calc(var(--global-spacer) * 2);
+ --global-spacer-large: calc(var(--global-spacer) * 4);
+ --global-spacer-xlarge: calc(var(--global-spacer) * 8);
 }
 
 // Options
@@ -34,29 +34,29 @@ $enable-deprecation-messages: true;
 
 // stylelint-disable-next-line scss/dollar-variable-default
 $global-spacers: (
-  micro: (
-    calc(var(--global-spacer) * 0.25),
-  ),
-  tiny: (
-    calc(var(--global-spacer) * 0.5),
-  ),
-  small: var(--global-spacer),
-  mid: (
-    calc(var(--global-spacer) * 2),
-  ),
-  large: (
-    calc(var(--global-spacer) * 4),
-  ),
-  xlarge: (
-    calc(var(--global-spacer) * 8),
-  ),
+ micro: (
+  calc(var(--global-spacer) * 0.25)
+ ),
+ tiny: (
+  calc(var(--global-spacer) * 0.5)
+ ),
+ small: var(--global-spacer),
+ mid: (
+  calc(var(--global-spacer) * 2)
+ ),
+ large: (
+  calc(var(--global-spacer) * 4)
+ ),
+ xlarge: (
+  calc(var(--global-spacer) * 8)
+ )
 );
 
 // stylelint-disable-next-line scss/dollar-variable-default
 $sizes: (
-  25: 25%,
-  50: 50%,
-  75: 75%,
-  100: 100%,
-  auto: auto,
+ 25: 25%,
+ 50: 50%,
+ 75: 75%,
+ 100: 100%,
+ auto: auto
 );
