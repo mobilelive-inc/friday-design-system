@@ -11,6 +11,9 @@
     padding: var(--input-padding-y) 2rem var(--input-padding-y)
       var(--input-padding-x);
   }
+  .searchClear {
+    padding: var(--input-padding-y) 2rem;
+  }
 }
 .formControl {
   display: block;
@@ -81,6 +84,23 @@
     z-index: 20;
     cursor: pointer;
     text-decoration: none;
+    color: var(--gray-dark);
+  }
+  &.searchClear {
+    ~ .clearCross {
+      position: absolute;
+      left: calc(100% - 25px);
+      width: 20px;
+      top: 10px;
+      font-size: 16px;
+      z-index: 20;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--gray-dark);
+    }
+    ~ .searchInput {
+      left: 8px;
+    }
   }
 
   ~ .successOption {
@@ -116,7 +136,7 @@
     color: var(--danger);
   }
   &.error {
-    border: var(--input-border-width) solid var(--input-border-color-error);
+    border-color: var(--input-border-color-error);
     ~ .errorOptionx {
       display: block;
     }
