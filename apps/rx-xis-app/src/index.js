@@ -15,6 +15,7 @@ import theme from './components/theme/defaultTheme';
 import './components/icomons_styles.scss';
 import Checkbox from './components/checkbox';
 import Radio from './components/radio';
+import Select from './components/select';
 
 function App() {
   console.log("radio is ", Radio)
@@ -22,6 +23,39 @@ function App() {
   const [gender, setGender] = React.useState("male")
   return (
     <ThemeProvider theme={theme}>
+      <Flex>
+        <Select 
+          name="greetings"
+          width="50%"
+          height="40px"
+          border="5px solid primary">
+          <option value="1">Hey</option>
+          <option value="2">There</option>
+          <option value="3">Hello</option>
+        </Select>
+      </Flex>
+      <Flex mt={20}>
+        <Select 
+          name="greetings"
+          width="50%"
+          height="40px"
+          borderRadius="50px">
+          <option value="1">Hey</option>
+          <option value="2">There</option>
+          <option value="3">Hello</option>
+        </Select>
+      </Flex>
+      <Flex mt={20}>
+        <Select 
+          name="greetings"
+          width="50%"
+          height="40px"
+          borderRadius="10px">
+          <option value="1">Hey</option>
+          <option value="2">There</option>
+          <option value="3">Hello</option>
+        </Select>
+      </Flex>
       Checkboxes
       <Flex>
         <Box p={10}>
