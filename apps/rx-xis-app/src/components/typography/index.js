@@ -30,6 +30,8 @@ export const Text = (props) => {
   )
 }
 
+export default Text;
+
 Text.propTypes = {
   /** Text for Text could be string or node. */
   children: PropTypes.oneOfType([
