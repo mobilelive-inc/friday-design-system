@@ -29,7 +29,7 @@
  }
 
  // Customize the `:focus` state to imitate native WebKit styles.
- @include formControl-focus;
+ //@include formControl-focus;
 
  // Placeholder
  &::placeholder {
@@ -58,11 +58,13 @@
   border-radius: var(--input-border-radius);
   border-width: 0 0 1px 0;
  }
+
  &--bg {
   border-color: transparent;
   background-color: var(--gray-light);
  }
 }
+
 label {
  display: inline-block;
  margin-bottom: 0.5rem;
@@ -207,8 +209,8 @@ textarea.formControl {
 .form-row {
  display: flex;
  flex-wrap: wrap;
- margin-right: -calc(var(--form-grid-gutter-width) / 2);
- margin-left: -calc(var(--form-grid-gutter-width) / 2);
+ margin-right: calc(var(--form-grid-gutter-width) / 2 * -1);
+ margin-left: calc(var(--form-grid-gutter-width) / 2 * -1);
 
  > .col,
  > [class*='col-'] {
@@ -221,26 +223,252 @@ textarea.formControl {
 //
 // Indent the labels to position radios/checkboxes as hanging controls.
 
-.form-check {
+/* Create a custom checkbox */
+.formCheck {
  position: relative;
- display: block;
- padding-left: var(--form-check-input-gutter);
-}
-
-.form-check-input {
- position: absolute;
- margin-top: var(--form-check-input-margin-y);
- margin-left: -var(--form-check-input-gutter);
-
- // Use [disabled] and :disabled for workaround https://github.com/twbs/bootstrap/issues/28247
- &[disabled] ~ .form-check-label,
- &:disabled ~ .form-check-label {
-  color: var(--text-muted);
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: flex-start;
+ background-color: transparent;
+ padding: 0 1rem;
+ /* Styling Checkbox Starts */
+ .checkLabel {
+  color: var(--gray-dark);
+  margin: 0 0 0 0.5rem;
+  cursor: pointer;
  }
-}
 
-.form-check-label {
- margin-bottom: 0; // Override default `<label>` bottom margin
+ .checkBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  width: auto;
+  min-height: 30px;
+
+  input {
+   position: relative;
+   z-index: 10;
+   opacity: 0;
+   margin: 0;
+   cursor: pointer;
+   width: 30px;
+   height: 30px;
+
+   &:hover {
+    ~ .checkboxFake {
+     border: 2px solid var(--gray);
+    }
+   }
+
+   &:focus {
+    ~ .checkboxFake {
+     outline: inherit;
+     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+    }
+   }
+
+   &:checked ~ .checkboxFake {
+    background-color: #ffffff;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    border: 2px solid var(--gray-dark);
+    border-radius: var(--border-radius-none);
+
+    &:after {
+     -webkit-transform: rotate(45deg) scale(1);
+     -ms-transform: rotate(45deg) scale(1);
+     transform: rotate(45deg) scale(1);
+     opacity: 1;
+     left: 9px;
+     top: 4px;
+     width: 6px;
+     height: 12px;
+     border: solid var(--gray-dark);
+     border-width: 0 3px 3px 0;
+     background-color: transparent;
+     border-radius: 0;
+    }
+   }
+  }
+
+  .checkboxFake {
+   color: var(--gray-dark);
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 5;
+   height: 30px;
+   width: 30px;
+   background-color: transparent;
+   transition: all 0.3s ease-out;
+   -webkit-transition: all 0.2s ease-out;
+   -moz-transition: all 0.2s ease-out;
+   -o-transition: all 0.2s ease-out;
+   border: 2px solid var(--gray-dark);
+   border-radius: var(--border-radius-none);
+
+   &:after {
+    position: absolute;
+    content: '';
+    left: 12px;
+    top: 12px;
+    height: 0;
+    width: 0;
+    border-radius: 5px;
+    border: solid #009bff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(0deg) scale(0);
+    -ms-transform: rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(0);
+    opacity: 1;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+   }
+  }
+  &--curved {
+   input {
+    &:checked ~ .checkboxFake {
+     border-radius: var(--border-radius-lg);
+    }
+   }
+
+   .checkboxFake {
+    border-radius: var(--border-radius-lg);
+   }
+  }
+
+  &--rounded {
+   input {
+    &:checked ~ .checkboxFake {
+     border-radius: 50%;
+    }
+   }
+
+   .checkboxFake {
+    border-radius: 50%;
+   }
+  }
+
+  &__bg {
+   input {
+    &:checked ~ .checkboxFake {
+     background-color: currentColor;
+
+     &:after {
+      border: solid var(--gray-lighter);
+      border-width: 0 3px 3px 0;
+     }
+    }
+
+    &:hover {
+     ~ .checkboxFake {
+      border: 2px solid var(--gray);
+      background-color: var(--gray);
+     }
+    }
+   }
+
+   .checkboxFake {
+    background-color: currentColor;
+   }
+
+   ///if error class comes with bg
+   &.checkBox__error {
+    input {
+     &:checked ~ .checkboxFake {
+      border-color: var(--danger);
+      background-color: var(--danger);
+
+      &:after {
+       border: solid var(--gray-lighter);
+       border-width: 0 3px 3px 0;
+      }
+     }
+
+     &:hover {
+      ~ .checkboxFake {
+       border: 2px solid var(--danger);
+       background-color: var(--danger);
+      }
+     }
+    }
+
+    .checkboxFake {
+     color: var(--danger);
+     border-color: var(--danger);
+     background-color: var(--danger);
+    }
+   }
+  }
+ }
+
+ &__error {
+  input {
+   &:checked ~ .checkboxFake {
+    border-color: var(--danger);
+
+    &:after {
+     border: solid var(--danger);
+     border-width: 0 3px 3px 0;
+    }
+   }
+
+   &:hover {
+    ~ .checkboxFake {
+     border: 2px solid var(--danger);
+    }
+   }
+  }
+
+  .checkboxFake {
+   border-color: var(--danger);
+  }
+ }
+
+ &.disabled {
+  cursor: default;
+  pointer-events: none;
+  input {
+   pointer-events: none;
+
+   &:checked ~ .checkboxFake {
+    border-color: var(--gray) !important;
+    background-color: var(--gray);
+
+    &:after {
+     border: solid var(--gray-lighter);
+     border-width: 0 3px 3px 0;
+    }
+   }
+
+   &:hover {
+    ~ .checkboxFake {
+     border: 2px solid var(--gray);
+     background-color: var(--gray);
+    }
+   }
+  }
+
+  ~ .checkboxFake {
+   border-color: var(--gray) !important;
+   background-color: var(--gray);
+  }
+
+  .checkLabel {
+   cursor: default;
+   pointer-events: none;
+   color: var(--gray);
+  }
+ }
 }
 
 .form-check-inline {
