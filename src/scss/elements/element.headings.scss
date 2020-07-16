@@ -14,61 +14,61 @@ h6,
 .h4,
 .h5,
 .h6 {
-    margin-bottom: var(--headings-margin-bottom);
-    font-family: var(--headings-font-family);
-    font-weight: var(--headings-font-weight);
-    line-height: var(--headings-line-height);
-    color: var(--headings-color);
-    margin-top: 0;
+   margin-bottom: var(--headings-margin-bottom);
+   font-family: var(--headings-font-family);
+   font-weight: var(--headings-font-weight);
+   line-height: var(--headings-line-height);
+   color: var(--headings-color);
+   margin-top: 0;
 }
 
 h1,
 .h1 {
-    @include font-size(var(--h1-font-size));
+   @include font-size(var(--h1-font-size));
 }
 
 h2,
 .h2 {
-    @include font-size(var(--h2-font-size));
+   @include font-size(var(--h2-font-size));
 }
 
 h3,
 .h3 {
-    @include font-size(var(--h3-font-size));
+   @include font-size(var(--h3-font-size));
 }
 
 h4,
 .h4 {
-    @include font-size(var(--h4-font-size));
+   @include font-size(var(--h4-font-size));
 }
 
 h5,
 .h5 {
-    @include font-size(var(--h5-font-size));
+   @include font-size(var(--h5-font-size));
 }
 
 h6,
 .h6 {
-    @include font-size(var(--h6-font-size));
+   @include font-size(var(--h6-font-size));
 }
 
 // Type display classes
 .display-1 {
-    @include font-size(var(--display1-size));
-    font-weight: var(--display1-weight);
+   @include font-size(var(--display1-size));
+   font-weight: var(--display1-weight);
 }
 
 .display-2 {
-    @include font-size(var(--display2-size));
-    font-weight: var(--display2-weight);
+   @include font-size(var(--display2-size));
+   font-weight: var(--display2-weight);
 }
 
 .display-3 {
-    @include font-size(var(--display3-size));
-    font-weight: var(--display3-weight);
+   @include font-size(var(--display3-size));
+   font-weight: var(--display3-weight);
 }
 
 .display-4 {
-    @include font-size(var(--display4-size));
-    font-weight: var(--display4-weight);
+   @include font-size(var(--display4-size));
+   font-weight: var(--display4-weight);
 }

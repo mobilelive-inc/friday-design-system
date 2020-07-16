@@ -17,8 +17,8 @@ $modal-content-border-color: rgba(var(--dark), 0.2);
 $modal-content-border-width: var(--border-width);
 $modal-content-border-radius: var(--border-radius)-lg;
 $modal-content-inner-border-radius: subtract(
-    $modal-content-border-radius,
-    $modal-content-border-width
+   $modal-content-border-radius,
+   $modal-content-border-width
 );
 $modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba(var(--dark), 0.5);
 $modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba(var(--dark), 0.5);
