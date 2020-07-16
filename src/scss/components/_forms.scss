@@ -3,102 +3,213 @@
 //
 // Textual form controls
 //
-
+.formControlHolder {
+  position: relative;
+  max-width: var(--input-width);
+  height: auto;
+  .formControl {
+    padding: var(--input-padding-y) 2rem var(--input-padding-y)
+      var(--input-padding-x);
+  }
+}
 .formControl {
-   display: block;
-   width: 100%;
-   max-width: var(--input-width);
-   height: var(--input-height);
-   padding: var(--input-padding-y) var(--input-padding-x);
-   font-family: var(--input-font-family);
-   @include font-size(var(--input-font-size));
-   font-weight: var(--input-font-weight);
-   line-height: var(--input-line-height);
-   color: var(--input-color);
-   background-color: var(--input-bg);
-   background-clip: padding-box;
-   border: var(--input-border-width) solid var(--input-border-color);
-   border-radius: var(--input-border-radius);
-   box-shadow: var(--input-box-shadow);
-   transition: var(--input-transition);
+  display: block;
+  width: 100%;
+  max-width: var(--input-width);
+  height: var(--input-height);
+  padding: var(--input-padding-y) var(--input-padding-x);
+  font-family: var(--input-font-family);
+  @include font-size(var(--input-font-size));
+  font-weight: var(--input-font-weight);
+  line-height: var(--input-line-height);
+  color: var(--input-color);
+  background-color: var(--input-bg);
+  background-clip: padding-box;
+  border: var(--input-border-width) solid var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  box-shadow: var(--input-box-shadow);
+  transition: var(--input-transition);
 
-   // Remove select outline from select box in FF
-   &:-moz-focusring {
-      color: transparent;
-      text-shadow: 0 0 0 var(--input-color);
-   }
+  // Remove select outline from select box in FF
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 var(--input-color);
+  }
 
-   // Customize the `:focus` state to imitate native WebKit styles.
-   //@include formControl-focus;
+  // Customize the `:focus` state to imitate native WebKit styles.
+  //@include formControl-focus;
 
-   // Placeholder
-   &::placeholder {
-      color: var(--input-placeholder-color);
-      // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-      opacity: 1;
-   }
+  // Placeholder
+  &::placeholder {
+    color: var(--input-placeholder-color);
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
 
-   // Disabled and read-only inputs
-   &:disabled,
-   &[readonly] {
-      background-color: var(--input-disabled-bg);
-      // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
-      opacity: 1;
-   }
+  // Disabled and read-only inputs
+  &:disabled,
+  &[readonly] {
+    background-color: var(--input-disabled-bg);
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
 
-   &--curved {
-      border-radius: var(--input-border-radius-sm);
-   }
+  &--curved {
+    border-radius: var(--input-border-radius-sm);
+  }
 
-   &--rounded {
-      border-radius: var(--input-border-radius-lg);
-   }
+  &--rounded {
+    border-radius: var(--input-border-radius-lg);
+  }
 
-   &--textOnly {
-      border-radius: var(--input-border-radius);
-      border-width: 0 0 1px 0;
-   }
+  &--textOnly {
+    border-radius: var(--input-border-radius);
+    border-width: 0 0 1px 0;
+  }
 
-   &--bg {
-      border-color: transparent;
-      background-color: var(--gray-light);
-   }
+  &--bg {
+    border-color: transparent;
+    background-color: var(--gray-light);
+  }
+
+  ~ .searchInput {
+    position: absolute;
+    left: calc(100% - 25px);
+    width: 20px;
+    top: 10px;
+    font-size: 16px;
+    z-index: 20;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  ~ .successOption {
+    position: absolute;
+    left: calc(100% + 10px);
+    width: 20px;
+    top: 10px;
+    font-size: 18px;
+    color: var(--success);
+    display: none;
+  }
+  ~ .errorOptionx {
+    position: absolute;
+    left: calc(100% + 10px);
+    width: 20px;
+    top: 10px;
+    font-size: 18px;
+    color: var(--danger);
+    display: none;
+  }
+  &.success {
+    //border: var(--input-border-width) solid var(--input-border-color-success);
+    ~ .successOption {
+      display: block;
+    }
+  }
+  ~ .text-danger {
+    display: none;
+    font-size: 10px;
+    line-height: 1;
+    padding-top: 3px;
+    margin: 0;
+    color: var(--danger);
+  }
+  &.error {
+    border: var(--input-border-width) solid var(--input-border-color-error);
+    ~ .errorOptionx {
+      display: block;
+    }
+    ~ .text-danger {
+      display: block;
+    }
+  }
 }
 
+//.formGroup {
+//  margin-bottom: 16px;
+//  .border-danger {
+//	border-color: #e02925 !important;
+//	&:focus, &:active{
+//	  background-color: #fff !important;
+//	  border-color: #e02925 !important;
+//	}
+//  }
+//  .border-success {
+//	border-color: #00afab;
+//	&:focus, &:active{
+//	  background-color: #fff !important;
+//	  border-color: #00afab !important;
+//	}
+//  }
+//  .fidoxtra-icon-error, .fidoxtra-icon-approved {
+//	display: none;
+//  }
+//  .border-danger ~ .fidoxtra-icon-error {
+//	font-size: 20px;
+//	display: block;
+//	color: #e02925;
+//	float: right;
+//	margin-right: 5px;
+//	margin-top: -25px;
+//  }
+//  .border-danger ~ .text-danger {
+//	display: block;
+//  }
+//  .border-success {
+//	border-color: #00afab !important;
+//  }
+//  .border-success ~ .fidoxtra-icon-approved {
+//	font-size: 20px;
+//	display: block;
+//	color: #00afab;
+//	float: right;
+//	margin-right: 5px;
+//	margin-top: -25px;
+//  }
+//  .text-danger {
+//	color: #e02925;
+//	font-size: 12px;
+//	line-height: 14px;
+//	display: none;
+//	margin-top: 3px;
+//  }
+//}
+
 label {
-   display: inline-block;
-   margin-bottom: 0.5rem;
-   font-weight: var(--font-weight-bold);
-   font-size: var(--font-size-base);
-   line-height: 1;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  line-height: 1;
 }
 
 input[type='date'],
 input[type='time'],
 input[type='datetime-local'],
 input[type='month'] {
-   &.formControl {
-      appearance: none; // Fix appearance for date inputs in Safari
-   }
+  &.formControl {
+    appearance: none; // Fix appearance for date inputs in Safari
+  }
 }
 
 select.formControl {
-   &:focus::-ms-value {
-      // Suppress the nested default white text on blue background highlight given to
-      // the selected option text when the (still closed) <select> receives focus
-      // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
-      // match the appearance of the native widget.
-      // See https://github.com/twbs/bootstrap/issues/19398.
-      color: var(--input-color);
-      background-color: var(--input-bg);
-   }
+  &:focus::-ms-value {
+    // Suppress the nested default white text on blue background highlight given to
+    // the selected option text when the (still closed) <select> receives focus
+    // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+    // match the appearance of the native widget.
+    // See https://github.com/twbs/bootstrap/issues/19398.
+    color: var(--input-color);
+    background-color: var(--input-bg);
+  }
 }
 
 // Make file inputs better match text inputs by forcing them to new lines.
 .formControl-file,
 .formControl-range {
-   display: block;
-   width: 100%;
+  display: block;
+  width: 100%;
 }
 
 //
@@ -108,25 +219,25 @@ select.formControl {
 // For use with horizontal and inline forms, when you need the label (or legend)
 // text to align with the form controls.
 .col-form-label {
-   padding-top: add(var(--input-padding-y), var(--input-border-width));
-   padding-bottom: add(var(--input-padding-y), var(--input-border-width));
-   margin-bottom: 0; // Override the `<label>/<legend>` default
-   @include font-size(inherit); // Override the `<legend>` default
-   line-height: var(--input-line-height);
+  padding-top: add(var(--input-padding-y), var(--input-border-width));
+  padding-bottom: add(var(--input-padding-y), var(--input-border-width));
+  margin-bottom: 0; // Override the `<label>/<legend>` default
+  @include font-size(inherit); // Override the `<legend>` default
+  line-height: var(--input-line-height);
 }
 
 .col-form-label-lg {
-   padding-top: add(var(--input-padding-y) -lg, var(--input-border-width));
-   padding-bottom: add(var(--input-padding-y) -lg, var(--input-border-width));
-   @include font-size(var(--input-font-size-lg));
-   line-height: var(--input-line-height-lg);
+  padding-top: add(var(--input-padding-y) -lg, var(--input-border-width));
+  padding-bottom: add(var(--input-padding-y) -lg, var(--input-border-width));
+  @include font-size(var(--input-font-size-lg));
+  line-height: var(--input-line-height-lg);
 }
 
 .col-form-label-sm {
-   padding-top: add(var(--input-padding-y) -sm, var(--input-border-width));
-   padding-bottom: add(var(--input-padding-y) -sm, var(--input-border-width));
-   @include font-size(var(--input-font-size-sm));
-   line-height: var(--input-line-height-sm);
+  padding-top: add(var(--input-padding-y) -sm, var(--input-border-width));
+  padding-bottom: add(var(--input-padding-y) -sm, var(--input-border-width));
+  @include font-size(var(--input-font-size-sm));
+  line-height: var(--input-line-height-sm);
 }
 
 // Readonly controls as plain text
@@ -135,22 +246,22 @@ select.formControl {
 // text (without any border, background color, focus indicator)
 
 .formControl-plaintext {
-   display: block;
-   width: 100%;
-   padding: var(--input-padding-y) 0;
-   margin-bottom: 0; // match inputs if this class comes on inputs with default margins
-   @include font-size(var(--input-font-size));
-   line-height: var(--input-line-height);
-   color: var(--input-plaintext-color);
-   background-color: transparent;
-   border: solid transparent;
-   border-width: var(--input-border-width) 0;
+  display: block;
+  width: 100%;
+  padding: var(--input-padding-y) 0;
+  margin-bottom: 0; // match inputs if this class comes on inputs with default margins
+  @include font-size(var(--input-font-size));
+  line-height: var(--input-line-height);
+  color: var(--input-plaintext-color);
+  background-color: transparent;
+  border: solid transparent;
+  border-width: var(--input-border-width) 0;
 
-   &.formControl-sm,
-   &.formControl-lg {
-      padding-right: 0;
-      padding-left: 0;
-   }
+  &.formControl-sm,
+  &.formControl-lg {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 // Form control sizing
@@ -161,31 +272,31 @@ select.formControl {
 // Repeated in `_input_group.scss` to avoid Sass extend issues.
 
 .formControl-sm {
-   height: var(--input-height-sm);
-   padding: var(--input-padding-y-sm) var(--input-padding-x-sm);
-   @include font-size(var(--input-font-size-sm));
-   line-height: var(--input-line-height-sm);
-   @include border-radius(var(--input-border-radius-sm));
+  height: var(--input-height-sm);
+  padding: var(--input-padding-y-sm) var(--input-padding-x-sm);
+  @include font-size(var(--input-font-size-sm));
+  line-height: var(--input-line-height-sm);
+  @include border-radius(var(--input-border-radius-sm));
 }
 
 .formControl-lg {
-   height: var(--input-height-lg);
-   padding: var(--input-padding-y-lg) var(--input-padding-x-lg);
-   @include font-size(var(--input-font-size-lg));
-   line-height: var(--input-line-height-lg);
-   @include border-radius(var(--input-border-radius-lg));
+  height: var(--input-height-lg);
+  padding: var(--input-padding-y-lg) var(--input-padding-x-lg);
+  @include font-size(var(--input-font-size-lg));
+  line-height: var(--input-line-height-lg);
+  @include border-radius(var(--input-border-radius-lg));
 }
 
 // stylelint-disable-next-line no-duplicate-selectors
 select.formControl {
-   &[size],
-   &[multiple] {
-      height: auto;
-   }
+  &[size],
+  &[multiple] {
+    height: auto;
+  }
 }
 
 textarea.formControl {
-   height: auto;
+  height: auto;
 }
 
 // Form groups
@@ -194,12 +305,12 @@ textarea.formControl {
 // horizontal forms, use the predefined grid classes.
 
 .formGroup {
-   margin-bottom: var(--formGroup-margin-bottom);
+  margin-bottom: var(--formGroup-margin-bottom);
 }
 
 .form-text {
-   display: block;
-   margin-top: var(--form-text-margin-top);
+  display: block;
+  margin-top: var(--form-text-margin-top);
 }
 
 // Form grid
@@ -207,16 +318,16 @@ textarea.formControl {
 // Special replacement for our grid system's `.row` for tighter form layouts.
 
 .form-row {
-   display: flex;
-   flex-wrap: wrap;
-   margin-right: calc(var(--form-grid-gutter-width) / 2 * -1);
-   margin-left: calc(var(--form-grid-gutter-width) / 2 * -1);
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(var(--form-grid-gutter-width) / 2 * -1);
+  margin-left: calc(var(--form-grid-gutter-width) / 2 * -1);
 
-   > .col,
-   > [class*='col-'] {
-      padding-right: calc(var(--form-grid-gutter-width) / 2);
-      padding-left: calc(var(--form-grid-gutter-width) / 2);
-   }
+  > .col,
+  > [class*='col-'] {
+    padding-right: calc(var(--form-grid-gutter-width) / 2);
+    padding-left: calc(var(--form-grid-gutter-width) / 2);
+  }
 }
 
 // Checkboxes and radios
@@ -225,267 +336,269 @@ textarea.formControl {
 
 /* Create a custom checkbox */
 .formCheck {
-   position: relative;
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: flex-start;
-   background-color: transparent;
-   padding: 0 1rem;
-   /* Styling Checkbox Starts */
-   .checkLabel {
-      color: var(--gray-dark);
-      margin: 0 0 0 0.5rem;
-      cursor: pointer;
-   }
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  padding: 0 1rem;
+  /* Styling Checkbox Starts */
+  .checkLabel {
+    color: var(--gray-dark);
+    margin: 0 0 0 0.5rem;
+    cursor: pointer;
+  }
 
-   .checkBox {
-      display: inline-flex;
-      align-items: center;
-      justify-content: flex-start;
+  .checkBox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    width: auto;
+    min-height: 30px;
+
+    input {
       position: relative;
+      z-index: 10;
+      opacity: 0;
+      margin: 0;
       cursor: pointer;
-      font-size: var(--font-size-base);
-      line-height: var(--line-height-base);
-      width: auto;
-      min-height: 30px;
+      width: 30px;
+      height: 30px;
 
+      &:hover {
+        ~ .checkboxFake {
+          border: 2px solid var(--gray);
+        }
+      }
+
+      &:focus {
+        ~ .checkboxFake {
+          outline: inherit;
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+        }
+      }
+
+      &:checked ~ .checkboxFake {
+        background-color: #ffffff;
+        -webkit-transform: rotate(0deg) scale(1);
+        -ms-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+        border: 2px solid var(--gray-dark);
+        border-radius: var(--border-radius-none);
+
+        &:after {
+          -webkit-transform: rotate(45deg) scale(1);
+          -ms-transform: rotate(45deg) scale(1);
+          transform: rotate(45deg) scale(1);
+          opacity: 1;
+          left: 9px;
+          top: 4px;
+          width: 6px;
+          height: 12px;
+          border: solid var(--gray-dark);
+          border-width: 0 3px 3px 0;
+          background-color: transparent;
+          border-radius: 0;
+        }
+      }
+    }
+
+    .checkboxFake {
+      color: var(--gray-dark);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      height: 30px;
+      width: 30px;
+      background-color: transparent;
+      transition: all 0.3s ease-out;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      border: 2px solid var(--gray-dark);
+      border-radius: var(--border-radius-none);
+
+      &:after {
+        position: absolute;
+        content: '';
+        left: 12px;
+        top: 12px;
+        height: 0;
+        width: 0;
+        border-radius: 5px;
+        border: solid #009bff;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(0deg) scale(0);
+        -ms-transform: rotate(0deg) scale(0);
+        transform: rotate(0deg) scale(0);
+        opacity: 1;
+        transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+      }
+    }
+
+    &--curved {
       input {
-         position: relative;
-         z-index: 10;
-         opacity: 0;
-         margin: 0;
-         cursor: pointer;
-         width: 30px;
-         height: 30px;
-
-         &:hover {
-            ~ .checkboxFake {
-               border: 2px solid var(--gray);
-            }
-         }
-
-         &:focus {
-            ~ .checkboxFake {
-               outline: inherit;
-               box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-            }
-         }
-
-         &:checked ~ .checkboxFake {
-            background-color: #ffffff;
-            -webkit-transform: rotate(0deg) scale(1);
-            -ms-transform: rotate(0deg) scale(1);
-            transform: rotate(0deg) scale(1);
-            opacity: 1;
-            border: 2px solid var(--gray-dark);
-            border-radius: var(--border-radius-none);
-
-            &:after {
-               -webkit-transform: rotate(45deg) scale(1);
-               -ms-transform: rotate(45deg) scale(1);
-               transform: rotate(45deg) scale(1);
-               opacity: 1;
-               left: 9px;
-               top: 4px;
-               width: 6px;
-               height: 12px;
-               border: solid var(--gray-dark);
-               border-width: 0 3px 3px 0;
-               background-color: transparent;
-               border-radius: 0;
-            }
-         }
+        &:checked ~ .checkboxFake {
+          border-radius: var(--border-radius-lg);
+        }
       }
 
       .checkboxFake {
-         color: var(--gray-dark);
-         position: absolute;
-         top: 0;
-         left: 0;
-         z-index: 5;
-         height: 30px;
-         width: 30px;
-         background-color: transparent;
-         transition: all 0.3s ease-out;
-         -webkit-transition: all 0.2s ease-out;
-         -moz-transition: all 0.2s ease-out;
-         -o-transition: all 0.2s ease-out;
-         border: 2px solid var(--gray-dark);
-         border-radius: var(--border-radius-none);
+        border-radius: var(--border-radius-lg);
+      }
+    }
 
-         &:after {
-            position: absolute;
-            content: '';
-            left: 12px;
-            top: 12px;
-            height: 0;
-            width: 0;
-            border-radius: 5px;
-            border: solid #009bff;
+    &--rounded {
+      input {
+        &:checked ~ .checkboxFake {
+          border-radius: 50%;
+        }
+      }
+
+      .checkboxFake {
+        border-radius: 50%;
+      }
+    }
+
+    &__bg {
+      input {
+        &:checked ~ .checkboxFake {
+          background-color: currentColor;
+
+          &:after {
+            border: solid var(--gray-lighter);
             border-width: 0 3px 3px 0;
-            -webkit-transform: rotate(0deg) scale(0);
-            -ms-transform: rotate(0deg) scale(0);
-            transform: rotate(0deg) scale(0);
-            opacity: 1;
-            transition: all 0.3s ease-out;
-            -webkit-transition: all 0.3s ease-out;
-            -moz-transition: all 0.3s ease-out;
-            -o-transition: all 0.3s ease-out;
-         }
-      }
+          }
+        }
 
-      &--curved {
-         input {
-            &:checked ~ .checkboxFake {
-               border-radius: var(--border-radius-lg);
-            }
-         }
-
-         .checkboxFake {
-            border-radius: var(--border-radius-lg);
-         }
-      }
-
-      &--rounded {
-         input {
-            &:checked ~ .checkboxFake {
-               border-radius: 50%;
-            }
-         }
-
-         .checkboxFake {
-            border-radius: 50%;
-         }
-      }
-
-      &__bg {
-         input {
-            &:checked ~ .checkboxFake {
-               background-color: currentColor;
-
-               &:after {
-                  border: solid var(--gray-lighter);
-                  border-width: 0 3px 3px 0;
-               }
-            }
-
-            &:hover {
-               ~ .checkboxFake {
-                  border: 2px solid var(--gray);
-                  background-color: var(--gray);
-               }
-            }
-         }
-
-         .checkboxFake {
-            background-color: currentColor;
-         }
-
-         ///if error class comes with bg
-         &.checkBox__error {
-            input {
-               &:checked ~ .checkboxFake {
-                  border-color: var(--danger);
-                  background-color: var(--danger);
-
-                  &:after {
-                     border: solid var(--gray-lighter);
-                     border-width: 0 3px 3px 0;
-                  }
-               }
-
-               &:hover {
-                  ~ .checkboxFake {
-                     border: 2px solid var(--danger);
-                     background-color: var(--danger);
-                  }
-               }
-            }
-
-            .checkboxFake {
-               color: var(--danger);
-               border-color: var(--danger);
-               background-color: var(--danger);
-            }
-         }
-      }
-   }
-
-   &__error {
-      input {
-         &:checked ~ .checkboxFake {
-            border-color: var(--danger);
-
-            &:after {
-               border: solid var(--danger);
-               border-width: 0 3px 3px 0;
-            }
-         }
-
-         &:hover {
-            ~ .checkboxFake {
-               border: 2px solid var(--danger);
-            }
-         }
+        &:hover {
+          ~ .checkboxFake {
+            border: 2px solid var(--gray);
+            background-color: var(--gray);
+          }
+        }
       }
 
       .checkboxFake {
-         border-color: var(--danger);
+        background-color: currentColor;
       }
-   }
 
-   &.disabled {
-      cursor: default;
+      ///if error class comes with bg
+    }
+  }
+
+  &__error {
+    .checkBox {
+      input {
+        &:checked ~ .checkboxFake {
+          border-color: var(--danger);
+
+          &:after {
+            border: solid var(--danger);
+            border-width: 0 3px 3px 0;
+          }
+        }
+
+        &:hover {
+          ~ .checkboxFake {
+            border: 2px solid var(--danger);
+          }
+        }
+      }
+
+      .checkboxFake {
+        border-color: var(--danger);
+      }
+
+      &.checkBox__bg {
+        input {
+          &:checked ~ .checkboxFake {
+            border-color: var(--danger);
+            background-color: var(--danger);
+
+            &:after {
+              border: solid var(--gray-lighter);
+              border-width: 0 3px 3px 0;
+            }
+          }
+
+          &:hover {
+            ~ .checkboxFake {
+              border: 2px solid var(--danger);
+              background-color: var(--danger);
+            }
+          }
+        }
+
+        .checkboxFake {
+          border-color: var(--danger);
+          background-color: var(--danger);
+        }
+      }
+    }
+  }
+
+  &.disabled {
+    cursor: default;
+    pointer-events: none;
+
+    input {
       pointer-events: none;
 
-      input {
-         pointer-events: none;
+      &:checked ~ .checkboxFake {
+        border-color: var(--gray) !important;
+        background-color: var(--gray);
 
-         &:checked ~ .checkboxFake {
-            border-color: var(--gray) !important;
-            background-color: var(--gray);
-
-            &:after {
-               border: solid var(--gray-lighter);
-               border-width: 0 3px 3px 0;
-            }
-         }
-
-         &:hover {
-            ~ .checkboxFake {
-               border: 2px solid var(--gray);
-               background-color: var(--gray);
-            }
-         }
+        &:after {
+          border: solid var(--gray-lighter);
+          border-width: 0 3px 3px 0;
+        }
       }
 
-      ~ .checkboxFake {
-         border-color: var(--gray) !important;
-         background-color: var(--gray);
+      &:hover {
+        ~ .checkboxFake {
+          border: 2px solid var(--gray);
+          background-color: var(--gray);
+        }
       }
+    }
 
-      .checkLabel {
-         cursor: default;
-         pointer-events: none;
-         color: var(--gray);
-      }
-   }
+    ~ .checkboxFake {
+      border-color: var(--gray) !important;
+      background-color: var(--gray);
+    }
+
+    .checkLabel {
+      cursor: default;
+      pointer-events: none;
+      color: var(--gray);
+    }
+  }
 }
 
 .form-check-inline {
-   display: inline-flex;
-   align-items: center;
-   padding-left: 0; // Override base .form-check
-   margin-right: var(--form-check-inline-margin-x);
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0; // Override base .form-check
+  margin-right: var(--form-check-inline-margin-x);
 
-   // Undo .form-check-input defaults and add some `margin-right`.
-   .form-check-input {
-      position: static;
-      margin-top: 0;
-      margin-right: var(--form-check-inline-input-margin-x);
-      margin-left: 0;
-   }
+  // Undo .form-check-input defaults and add some `margin-right`.
+  .form-check-input {
+    position: static;
+    margin-top: 0;
+    margin-right: var(--form-check-inline-input-margin-x);
+    margin-left: 0;
+  }
 }
 
 // Inline forms
@@ -498,75 +611,75 @@ textarea.formControl {
 // default HTML form controls and our custom form controls (e.g., input groups).
 
 .form-inline {
-   display: flex;
-   flex-flow: row wrap;
-   align-items: center; // Prevent shorter elements from growing to same height as others (e.g., small buttons growing to normal sized button height)
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center; // Prevent shorter elements from growing to same height as others (e.g., small buttons growing to normal sized button height)
 
-   // Because we use flex, the initial sizing of checkboxes is collapsed and
-   // doesn't occupy the full-width (which is what we want for xs grid tier),
-   // so we force that here.
-   .form-check {
-      width: 100%;
-   }
+  // Because we use flex, the initial sizing of checkboxes is collapsed and
+  // doesn't occupy the full-width (which is what we want for xs grid tier),
+  // so we force that here.
+  .form-check {
+    width: 100%;
+  }
 
-   // Kick in the inline
-   @include media-breakpoint-up(sm) {
-      label {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         margin-bottom: 0;
-      }
+  // Kick in the inline
+  @include media-breakpoint-up(sm) {
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0;
+    }
 
-      // Inline-block all the things for "inline"
-      .formGroup {
-         display: flex;
-         flex: 0 0 auto;
-         flex-flow: row wrap;
-         align-items: center;
-         margin-bottom: 0;
-      }
+    // Inline-block all the things for "inline"
+    .formGroup {
+      display: flex;
+      flex: 0 0 auto;
+      flex-flow: row wrap;
+      align-items: center;
+      margin-bottom: 0;
+    }
 
-      // Allow folks to *not* use `.formGroup`
-      .formControl {
-         display: inline-block;
-         width: auto; // Prevent labels from stacking above inputs in `.formGroup`
-         vertical-align: middle;
-      }
+    // Allow folks to *not* use `.formGroup`
+    .formControl {
+      display: inline-block;
+      width: auto; // Prevent labels from stacking above inputs in `.formGroup`
+      vertical-align: middle;
+    }
 
-      // Make static controls behave like regular ones
-      .formControl-plaintext {
-         display: inline-block;
-      }
+    // Make static controls behave like regular ones
+    .formControl-plaintext {
+      display: inline-block;
+    }
 
-      .input-group,
-      .custom-select {
-         width: auto;
-      }
+    .input-group,
+    .custom-select {
+      width: auto;
+    }
 
-      // Remove default margin on radios/checkboxes that were used for stacking, and
-      // then undo the floating of radios and checkboxes to match.
-      .form-check {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         width: auto;
-         padding-left: 0;
-      }
-      .form-check-input {
-         position: relative;
-         flex-shrink: 0;
-         margin-top: 0;
-         margin-right: var(--form-check-input-margin-x);
-         margin-left: 0;
-      }
+    // Remove default margin on radios/checkboxes that were used for stacking, and
+    // then undo the floating of radios and checkboxes to match.
+    .form-check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      padding-left: 0;
+    }
+    .form-check-input {
+      position: relative;
+      flex-shrink: 0;
+      margin-top: 0;
+      margin-right: var(--form-check-input-margin-x);
+      margin-left: 0;
+    }
 
-      .custom-control {
-         align-items: center;
-         justify-content: center;
-      }
-      .custom-control-label {
-         margin-bottom: 0;
-      }
-   }
+    .custom-control {
+      align-items: center;
+      justify-content: center;
+    }
+    .custom-control-label {
+      margin-bottom: 0;
+    }
+  }
 }
