@@ -1,56 +1,72 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '../box';
-
 import {
-  RadioBoxContainer,
-  Flex,
-  HiddenRadioBox,
-} from './radioContainer';
-import Label from '../label';
+   Input, InputContainer, Flex
+} from './css';
+import Span from '../span/span';
 
-const Radio = ({
-  id,
-  checked,
+import Label from '../label';
+/**
+ * Checkbox
+ */
+function Checkbox(props) {
+  const {id,
   label,
   onChange,
   name,
-  value,
   testId,
-  disabled,
-}) => {
-  const checkedBg = checked ? 'blue' : 'pureWhite';
-  const bg = disabled ? 'grey' : checkedBg;
+  errorMessage,
+  backgroundColor,
+  color,
+  border,
+  isFilled,
+  variant,
+  borderType
+} = props;
+console.log("parent props ", props)
+  const isChecked = variant === 'checked';
+  const isDisabled = variant === 'disabled';
   return (
-    <RadioBoxContainer onClick={onChange} data-testid="radio">
-      <Flex>
-        <HiddenRadioBox
-          checked={checked}
-          id={id}
-          name={name}
-          value={value}
-          onChange={onChange}
-          data-testid={testId}
-          disabled={disabled}/>
-        <Box
-          width="2.25em"
-          height="2.25em"
-          bg={bg}
-          p={disabled ? [11] : 0}
-          className="radio-box"
-          sx={disabled && { cursor: 'auto' }}/>
-      </Flex>
+    <Flex alignItems="center" data-testid="checkbox">
+      <Box>
+        <InputContainer
+          variant={variant}
+          error={errorMessage}
+          bg={backgroundColor}
+          isFilled={isFilled}
+          border={border}
+          borderType={borderType}
+          color={color}>
+          {variant === 'checked' && (
+            <Span
+              className="icon-check_circle_outline_24px"/>
+          )}
+          <Input
+            checked={variant === 'checked'}
+            disabled={isDisabled}
+            id={name}
+            name={name}
+            onChange={onChange}
+            />
+        </InputContainer>
+      </Box>
       <Label
         htmlFor={id}
-        fontWeight={checked ? 500 : 300}
-        x-ms-format-detection="none">
+        error={errorMessage}
+        pl={[17]}
+        mb={0}
+        lineHeight={10}
+        color={errorMessage && !isChecked ? 'errorRed' : 'charcoal'}
+        fontWeight={isChecked ? [2] : [0]}
+        as="label">
         {label}
       </Label>
-    </RadioBoxContainer>
+    </Flex>
   );
-};
+}
 
-Radio.propTypes = {
+Checkbox.propTypes = {
   /**
    * The label.
    */
@@ -60,35 +76,27 @@ Radio.propTypes = {
    */
   id: PropTypes.string.isRequired,
   /**
-   * Associate this radio with a group. Set as the HTML name attribute.
+   * Associate this checkbox with a group. Set as the HTML name attribute.
    */
   name: PropTypes.string.isRequired,
   /**
-   * The value. Must be unique within the group.
+   * The variant state
    */
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.bool,
-  ]).isRequired,
+  variant: PropTypes.oneOf(['unchecked', 'checked', 'disabled']),
   /**
-   * The checked state.
-   */
-  checked: PropTypes.bool,
-  /**
-   * A callback function to be invoked when the radio is checked or unchecked.
+   * A callback function to be invoked when the checkbox is checked or unchecked.
    */
   onChange: PropTypes.func,
-  testId: PropTypes.string,
-  disabled: PropTypes.bool,
+  /** It is a validation's error message */
+  errorMessage: PropTypes.string,
+  borderType: PropTypes.oneOf(['curved', 'rounded'])
 };
 
-Radio.defaultProps = {
-  checked: false,
-  disabled: false,
+Checkbox.defaultProps = {
+  variant: 'unchecked',
   onChange: () => {},
-  testId: '',
+  errorMessage: '',
+  size: 2,
 };
 
-export default Radio;
-
+export default Checkbox;

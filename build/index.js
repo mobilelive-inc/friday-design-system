@@ -65,4 +65,5 @@ import "core-js/modules/web.url-search-params";
 import '@babel/polyfill';
 export { default as Button } from './Button';
 export { default as Innput } from './Input';
+export { default as Text } from './typography';
 export { default as Theme } from './theme/defaultTheme';

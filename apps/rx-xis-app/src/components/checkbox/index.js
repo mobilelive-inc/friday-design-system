@@ -2,23 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '../box';
 import {
-  Label, Input, InputContainer, Flex
+   Input, InputContainer, Flex
 } from './css';
 import Span from '../span/span';
 
+import Label from '../label';
 /**
  * Checkbox
  */
-function Checkbox({
-  id,
+function Checkbox(props) {
+  const {id,
   label,
   onChange,
   name,
   testId,
   errorMessage,
   backgroundColor,
+  color,
+  border,
+  isFilled,
   variant,
-}) {
+  borderType
+} = props;
+console.log("parent props ", props)
   const isChecked = variant === 'checked';
   const isDisabled = variant === 'disabled';
   return (
@@ -26,19 +32,12 @@ function Checkbox({
       <Box>
         <InputContainer
           variant={variant}
-          data-testid={testId}
           error={errorMessage}
-          p={0}
-          width="38px"
-          height="38px"
-          // borderRadius="50px"
-          mt={1}
-          position="relative"
-          display="flex"
-          lineHeight="0"
-          justifyContent="center"
-          alignItems="center"
-          bg={backgroundColor}>
+          bg={backgroundColor}
+          isFilled={isFilled}
+          border={border}
+          borderType={borderType}
+          color={color}>
           {variant === 'checked' && (
             <Span
               className="icon-check_circle_outline_24px"/>
@@ -49,16 +48,7 @@ function Checkbox({
             id={name}
             name={name}
             onChange={onChange}
-            top={0}
-            bottom={0}
-            left={0}
-            right={0}
-            p={0}
-            overflow="hidden"
-            border="0"
-            width="100%"
-            height="100%"
-            position="absolute"/>
+            />
         </InputContainer>
       </Box>
       <Label
@@ -97,19 +87,14 @@ Checkbox.propTypes = {
    * A callback function to be invoked when the checkbox is checked or unchecked.
    */
   onChange: PropTypes.func,
-  /**
-   * Unique Test Id of the toggle button for testing
-   */
-  testId: PropTypes.string,
   /** It is a validation's error message */
   errorMessage: PropTypes.string,
-  size: PropTypes.number,
+  borderType: PropTypes.oneOf(['curved', 'rounded'])
 };
 
 Checkbox.defaultProps = {
   variant: 'unchecked',
   onChange: () => {},
-  testId: '',
   errorMessage: '',
   size: 2,
 };
