@@ -2,156 +2,156 @@
 // Requires inline-block or block for proper styling
 
 @mixin text--truncate() {
-   overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 // Typography
 
 @mixin text--emphasis-variant($parent, $color, $ignore-warning: false) {
-   #{$parent} {
-      color: $color !important;
-   }
-   //@if $emphasized-link-hover-darken-percentage != 0 {
-   //  a#{$parent} {
-   //    @include hover-focus() {
-   //      color: darken($color,
-   //        $emphasized-link-hover-darken-percentage
-   //      ) !important;
-   //    }
-   //  }
-   //}
-   //@include deprecate('`text--emphasis-variant()`', 'v4.4.0', 'v5', $ignore-warning);
+  #{$parent} {
+    color: $color !important;
+  }
+  //@if $emphasized-link-hover-darken-percentage != 0 {
+  //  a#{$parent} {
+  //    @include hover-focus() {
+  //      color: darken($color,
+  //        $emphasized-link-hover-darken-percentage
+  //      ) !important;
+  //    }
+  //  }
+  //}
+  //@include deprecate('`text--emphasis-variant()`', 'v4.4.0', 'v5', $ignore-warning);
 }
 
 @mixin text--hide($ignore-warning: false) {
-   //font: 0/0 a;
-   color: transparent;
-   text-shadow: none;
-   background-color: transparent;
-   border: 0;
+  //font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 // Lead
 .lead {
-   @include font-size(var(--lead-font-size));
-   font-weight: var(--lead-font-weight);
-   color: var(--lead-text-color);
+  @include font-size(var(--lead-font-size));
+  font-weight: var(--lead-font-weight);
+  color: var(--lead-text-color);
 }
 
 .text--monospace {
-   font-family: var(--font-family-monospace) !important;
+  font-family: var(--font-family-monospace) !important;
 }
 
 // Alignment
 
 .text--justify {
-   text-align: justify !important;
+  text-align: justify !important;
 }
 .text--wrap {
-   white-space: normal !important;
+  white-space: normal !important;
 }
 .text--nowrap {
-   white-space: nowrap !important;
+  white-space: nowrap !important;
 }
 .text--truncate {
-   @include text--truncate();
+  @include text--truncate();
 }
 
 // Responsive alignment
 
 @each $breakpoint in map-keys($grid-breakpoints) {
-   @include media-breakpoint-up($breakpoint) {
-      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-      .text#{$infix}-left {
-         text-align: left !important;
-      }
-      .text#{$infix}-right {
-         text-align: right !important;
-      }
-      .text#{$infix}-center {
-         text-align: center !important;
-      }
-   }
+    .text#{$infix}-left {
+      text-align: left !important;
+    }
+    .text#{$infix}-right {
+      text-align: right !important;
+    }
+    .text#{$infix}-center {
+      text-align: center !important;
+    }
+  }
 }
 
 // Transformation
 
 .text--lowercase {
-   text-transform: lowercase !important;
+  text-transform: lowercase !important;
 }
 .text--uppercase {
-   text-transform: uppercase !important;
+  text-transform: uppercase !important;
 }
 .text--capitalize {
-   text-transform: capitalize !important;
+  text-transform: capitalize !important;
 }
 
 // Weight and italics
 
 .font-weight-light {
-   font-weight: var(--font-weight-light) !important;
+  font-weight: var(--font-weight-light) !important;
 }
 .font-weight-lighter {
-   font-weight: var(--font-weight-lighter) !important;
+  font-weight: var(--font-weight-lighter) !important;
 }
 .font-weight-normal {
-   font-weight: var(--font-weight-normal) !important;
+  font-weight: var(--font-weight-normal) !important;
 }
 .font-weight-bold {
-   font-weight: var(--font-weight-bold) !important;
+  font-weight: var(--font-weight-bold) !important;
 }
 .font-weight-bolder {
-   font-weight: var(--font-weight-bolder) !important;
+  font-weight: var(--font-weight-bolder) !important;
 }
 .font-italic {
-   font-style: italic !important;
+  font-style: italic !important;
 }
 
 // Contextual colors
 
 .text--white {
-   color: var(--white) !important;
+  color: var(--white) !important;
 }
 
 @each $color, $value in $theme-colors {
-   @include text--emphasis-variant('.text__#{$color}', $value, true);
+  @include text--emphasis-variant('.text__#{$color}', $value, true);
 }
 
 .text--body {
-   color: var(--body-color) !important;
+  color: var(--body-color) !important;
 }
 .text--muted {
-   color: var(--text-muted);
+  color: var(--text-muted);
 }
 
 .text--black-50 {
-   color: rgba(var(--dark), 0.5) !important;
+  color: rgba(var(--dark), 0.5) !important;
 }
 .text--white-50 {
-   color: rgba(var(--white), 0.5) !important;
+  color: rgba(var(--white), 0.5) !important;
 }
 
 // Misc
 
 .text--hide {
-   @include text--hide($ignore-warning: true);
+  @include text--hide($ignore-warning: true);
 }
 
 .text--decoration-none {
-   text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .text--break {
-   word-wrap: break-word !important;
+  word-wrap: break-word !important;
 }
 
 // Reset
 
 .text--reset {
-   color: inherit !important;
+  color: inherit !important;
 }
 
 //
@@ -159,24 +159,24 @@
 //
 
 hr {
-   margin-top: var(--hr-margin-y);
-   margin-bottom: var(--hr-margin-y);
-   border: 0;
-   border-top: $hr-border-width solid $hr-border-color;
+  margin-top: var(--hr-margin-y);
+  margin-bottom: var(--hr-margin-y);
+  border: 0;
+  border-top: $hr-border-width solid $hr-border-color;
 }
 
 // Emphasis
 
 small,
 .small {
-   font-size: var(--font-size-sm);
-   font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
 }
 
 mark,
 .mark {
-   padding: $mark-padding;
-   background-color: $mark-bg;
+  padding: $mark-padding;
+  background-color: $mark-bg;
 }
 
 //
@@ -184,22 +184,22 @@ mark,
 //
 
 .list-unstyled {
-   padding-left: 0;
-   list-style: none;
+  padding-left: 0;
+  list-style: none;
 }
 
 // Inline turns list items into inline-block
 .list-inline {
-   padding-left: 0;
-   list-style: none;
+  padding-left: 0;
+  list-style: none;
 }
 
 .list-inline-item {
-   display: inline-block;
+  display: inline-block;
 
-   &:not(:last-child) {
-      margin-right: $list-inline-padding;
-   }
+  &:not(:last-child) {
+    margin-right: $list-inline-padding;
+  }
 }
 
 //
@@ -208,15 +208,15 @@ mark,
 
 // Blockquotes
 .blockquote {
-   margin-bottom: var(--global-spacer);
-   @include font-size(var(--blockquote-font-size));
+  margin-bottom: var(--global-spacer);
+  @include font-size(var(--blockquote-font-size));
 }
 
 .blockquote-footer {
-   display: block;
-   color: var(--blockquote-small-color);
+  display: block;
+  color: var(--blockquote-small-color);
 
-   &:before {
-      content: '\2014\00A0'; // em dash, nbsp
-   }
+  &:before {
+    content: '\2014\00A0'; // em dash, nbsp
+  }
 }
