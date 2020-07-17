@@ -43,13 +43,14 @@ npm run build****
 npm run watch
 ```
 
-### Run pretier to format the scss code
+### Run prettier to format the scss code
 
-npx prettier --write .
+for all files: npx prettier --write .
+npx prettier --write \*_/_.scss
 
 ### Run StyleLint to check errors in the scss code
 
-npx stylelint "\*_/_.css"
+npx stylelint \*_/_.scss
 
 # Information about root files
 

@@ -30,13 +30,13 @@
 //    background-image: url($file-2x);
 //    background-size: $width-1x $height-1x;
 //  }
-//  @include deprecate("`img-retina()`", "v4.3.0", "v5");
+//  @include deprecate('`img-retina()`', 'v4.3.0', 'v5');
 //}
 //
 //// Responsive images (ensure images don't scale beyond their parents)
 ////
 //// This is purposefully opt-in via an explicit class rather than being the default for all `<img>`s.
-//// We previously tried the "images are responsive by default" approach in designSystem v2,
+//// We previously tried the 'images are responsive by default' approach in designSystem v2,
 //// and abandoned it in designSystem v3 because it breaks lots of third-party widgets (including Google Maps)
 //// which weren't expecting the images within themselves to be involuntarily resized.
 //// See also https://github.com/twbs/designSystem/issues/18178
@@ -66,7 +66,7 @@
 //}
 //
 //.figure-img {
-//  margin-bottom: $global-spacer / 2;
+//  margin-bottom: var(--global-spacer) / 2;
 //  line-height: 1;
 //}
 //

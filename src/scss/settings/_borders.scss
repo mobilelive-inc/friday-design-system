@@ -1,10 +1,12 @@
 //Borders
-$border-width: 2px;
-$border-color: var(--gray-light);
-$border-radius-none: 0;
-$border-radius: 0.25rem;
-$border-radius-lg: 0.3rem;
-$border-radius-sm: 0.2rem;
+:root {
+  --border-width: 2px;
+  --border-color: var(--gray-light);
+  --border-radius-none: 0;
+  --border-radius: 0.25rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-sm: 0.2rem;
+}
 
 // Settings Borders
 // Helper function to replace negative values with 0
@@ -20,7 +22,10 @@ $border-radius-sm: 0.2rem;
   @return $return;
 }
 
-@mixin border-radius($radius: $border-radius, $fallback-border-radius: false) {
+@mixin border-radius(
+  $radius: var(--border-radius),
+  $fallback-border-radius: false
+) {
   @if $enable-rounded {
     border-radius: valid-radius($radius);
   } @else if $fallback-border-radius != false {

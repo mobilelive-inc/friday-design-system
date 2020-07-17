@@ -20,16 +20,16 @@ section {
 
 body {
   margin: 0; // 1
-  font-family: $font-family-base;
-  @include font-size($font-size-base);
-  font-weight: $font-weight-base;
-  line-height: $line-height-base;
-  color: $body-color;
+  font-family: var(font-family-base, Montserrat);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-base);
+  color: var(--body-color);
   text-align: left; // 3
-  background-color: $body-bg; // 2
+  background-color: var(--body-bg); // 2
 }
 
-[tabindex="-1"]:focus:not(:focus-visible) {
+[tabindex='-1']:focus:not(:focus-visible) {
   outline: 0 !important;
 }
 
@@ -44,16 +44,16 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: $headings-margin-bottom;
+  margin-bottom: var(--headings-margin-bottom);
 }
 
 p {
   margin-top: 0;
-  margin-bottom: $paragraph-margin-bottom;
+  margin-bottom: var(--paragraph-margin-bottom);
 }
 
 address {
-  margin-bottom: $font-size-base;
+  margin-bottom: Var(--font-size-base);
   font-style: normal;
   line-height: inherit;
 }
@@ -87,7 +87,9 @@ blockquote {
 
 b,
 strong {
-  font-weight: $font-weight-bolder; // Add the correct font weight in Chrome, Edge, and Safari
+  font-weight: var(
+    --font-weight-bolder
+  ); // Add the correct font weight in Chrome, Edge, and Safari
 }
 
 small {

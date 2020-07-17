@@ -5,41 +5,38 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: $btn-font-family;
-  font-weight: $btn-font-weight;
-  color: $body-color;
+  font-family: var(--btn-font-family);
+  font-weight: var(--btn-font-weight);
+  color: var(--body-color);
   text-align: center;
-  text-decoration: if($link-decoration == none, null, none);
-  white-space: $btn-white-space;
+  text-decoration: var(--link-decoration);
+  white-space: var(--btn-white-space);
   vertical-align: middle;
   user-select: none;
   background-color: transparent;
-  border: $btn-border-width solid transparent;
-  min-height: $btn-standard-hight;
-  @include button-size(
-    $btn-padding-y-sm,
-    $btn-padding-x,
-    $btn-font-size,
-    $btn-line-height,
-    $btn-border-radius
-  );
-  @include transition($btn-transition);
+  border: var(--btn-border-width) solid transparent;
+  min-height: var(--btn-standard-hight);
+  padding: var(--btn-padding-y-sm) var(--btn-padding-x);
+  font-size: var(--btn-font-size);
+  line-height: var(--btn-line-height);
+  border-radius: var(--btn-border-radius);
+  @include transition(var(--btn-transition));
 
   @include hover() {
-    color: $body-color;
+    color: var(--body-color);
     text-decoration: none;
   }
 
   &:focus,
   &.focus {
     outline: 0;
-    box-shadow: $btn-focus-box-shadow;
+    box-shadow: var(--btn-focus-box-shadow);
   }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    opacity: $btn-disabled-opacity;
+    opacity: var(--btn-disabled-opacit) y;
     @include box-shadow(none);
     pointer-events: none;
   }
@@ -49,173 +46,92 @@
 
     &:active,
     &.active {
-      @include box-shadow($btn-active-box-shadow);
+      @include box-shadow(var(--btn-active-box-shadow));
 
       &:focus {
-        @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+        @include box-shadow(
+          var(--btn-focus-box-shadow),
+          var(--btn-active-box-shadow)
+        );
       }
     }
   }
 
   &__primary {
-    //color: var(--dark);
     background-color: var(--primary);
     border-color: var(--primary);
 
-    &:hover {
-      color: var(--white);
-      background-color: var(--primary-hover);
-      border-color: var(--primary-hover);
-    }
-
+    &:hover,
     &:focus,
     .focus {
       color: var(--white);
       background-color: var(--primary-hover);
       border-color: var(--primary-hover);
-      box-shadow: 0 0 0 0.2rem rgba(212, 116, 65, 0.5);
-    }
-
-    .disabled,
-    :disabled {
-      color: var(--dark);
-      background-color: var(--primary);
-      border-color: var(--primary);
     }
   }
 
   &__secondary {
-    //color: var(--dark);
     background-color: var(--secondary);
     border-color: var(--secondary);
 
-    &:hover {
-      color: var(--white);
-      background-color: var(--secondary-hover);
-      border-color: var(--secondary-hover);
-    }
-
+    &:hover,
     &:focus,
     .focus {
       color: var(--white);
       background-color: var(--secondary-hover);
       border-color: var(--secondary-hover);
-      box-shadow: 0 0 0 0.2rem rgba(133, 133, 133, 0.5);
-    }
-
-    .disabled,
-    :disabled {
-      color: var(--white);
-      background-color: var(--secondary);
-      border-color: var(--secondary);
     }
   }
 
   &__success {
-    //color: var(--white);
     background-color: var(--success);
     border-color: var(--success);
 
-    &:hover {
-      color: var(--white);
-      background-color: var(--success-hover);
-      border-color: var(--success-hover);
-    }
-
+    &:hover,
     &:focus,
     .focus {
       color: var(--white);
       background-color: var(--success-hover);
       border-color: var(--success-hover);
-      box-shadow: 0 0 0 0.2rem rgba(82, 181, 104, 0.5);
-    }
-
-    .disabled,
-    :disabled {
-      color: var(--white);
-      background-color: var(--success);
-      border-color: var(--success);
     }
   }
 
   &__info {
-    //color: var(--dark);
     background-color: var(--info);
     border-color: var(--info);
 
-    &:hover {
-      color: var(--dark);
-      background-color: var(--info-hover);
-      border-color: var(--info-hover);
-    }
-
+    &:hover,
     &:focus,
     .focus {
       color: var(--dark);
       background-color: var(--info-hover);
       border-color: var(--info-hover);
-      box-shadow: 0 0 0 0.2rem rgba(92, 176, 187, 0.5);
-    }
-
-    .disabled,
-    :disabled {
-      color: var(--dark);
-      background-color: var(--info);
-      border-color: var(--info);
     }
   }
 
   &__warning {
-    //color: var(--dark);
     background-color: var(--warning);
     border-color: var(--warning);
 
-    &:hover {
-      color: var(--dark);
-      background-color: var(--warning-hover);
-      border-color: var(--warning-hover);
-    }
-
+    &:hover,
     &:focus,
     .focus {
       color: var(--dark);
       background-color: var(--warning-hover);
       border-color: var(--warning-hover);
-      box-shadow: 0 0 0 0.2rem rgba(219, 179, 45, 0.5);
-    }
-
-    .disabled,
-    :disabled {
-      color: var(--dark);
-      background-color: var(--warning);
-      border-color: var(--warning);
     }
   }
 
   &__danger {
-    //color: var(--white);
     background-color: var(--danger);
     border-color: var(--danger);
 
-    &:hover {
-      color: var(--white);
-      background-color: var(--danger-hover);
-      border-color: var(--danger-hover);
-    }
-
+    &:hover,
     &:focus,
     .focus {
       color: var(--white);
       background-color: var(--danger-hover);
       border-color: var(--danger-hover);
-      box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
-    }
-
-    .disabled,
-    :disabled {
-      color: var(--white);
-      background-color: var(--danger);
-      border-color: var(--danger);
     }
   }
 
@@ -224,25 +140,12 @@
     background-color: var(--light);
     border-color: var(--light);
 
-    &:hover {
-      color: var(--dark);
-      background-color: var(--light-hover);
-      border-color: var(--light-hover);
-    }
-
+    &:hover,
     &:focus,
     .focus {
       color: var(--dark);
       background-color: var(--light-hover);
       border-color: var(--light-hover);
-      box-shadow: 0 0 0 0.2rem rgba(200, 200, 201, 0.5);
-    }
-
-    .disabled,
-    :disabled {
-      color: var(--dark);
-      background-color: var(--light);
-      border-color: var(--light);
     }
   }
 
@@ -251,25 +154,12 @@
     background-color: var(--dark);
     border-color: var(--dark);
 
-    &:hover {
-      color: var(--white);
-      background-color: var(--dark-hover);
-      border-color: var(--dark-hover);
-    }
-
+    &:hover,
     &:focus,
     .focus {
       color: var(--white);
       background-color: var(--dark-hover);
       border-color: var(--dark-hover);
-      box-shadow: 0 0 0 0.2rem rgba(66, 70, 73, 0.5);
-    }
-
-    .disabled,
-    :disabled {
-      color: var(--white);
-      background-color: var(--dark);
-      border-color: var(--dark);
     }
   }
 
@@ -280,53 +170,47 @@
   }
 
   &--rounded {
-    border-radius: $btn-border-radius-rounded !important;
+    border-radius: var(--btn-border-radius-rounded) !important;
   }
 
   &--curved {
-    border-radius: $btn-border-radius-curved;
+    border-radius: var(--btn-border-radius-curved);
   }
 
   &--link {
-    font-weight: $font-weight-normal;
-    color: $link-color;
-    text-decoration: $link-decoration;
+    font-weight: var(--font-weight-normal);
+    color: var(--link-color);
+    text-decoration: var(--link-decoration);
 
     @include hover() {
-      color: $link-hover-color;
-      text-decoration: $link-hover-decoration;
+      color: var(--link-hover-color);
+      text-decoration: var(--link-hover-decoration);
     }
 
     &:focus,
     &.focus {
-      text-decoration: $link-hover-decoration;
+      text-decoration: var(--link-hover-decoration);
     }
 
     &:disabled,
     &.disabled {
-      color: $btn-link-disabled-color;
+      color: var(--btn-link-disabled-color);
       pointer-events: none;
     }
   }
 
   &--lg {
-    @include button-size(
-      $btn-padding-y-lg,
-      $btn-padding-x-lg,
-      $btn-font-size-lg,
-      $btn-line-height,
-      $btn-border-radius-lg
-    );
+    padding: var(--btn-padding-y-lg) var(--btn-padding-x-lg);
+    font-size: var(--btn-font-size-lg);
+    line-height: var(--btn-line-height);
+    border-radius: var(--btn-border-radius-lg);
   }
 
   &--sm {
-    @include button-size(
-      $btn-padding-y-sm,
-      $btn-padding-x-sm,
-      $btn-font-size-sm,
-      $btn-line-height,
-      $btn-border-radius-sm
-    );
+    padding: var(--btn-padding-y-sm) var(--btn-padding-x-sm);
+    font-size: var(--btn-font-size-sm);
+    line-height: var(--btn-line-height);
+    border-radius: var(--btn-border-radius-sm);
   }
 
   &__tooltip {
@@ -335,16 +219,9 @@
     padding: 5px;
     min-height: auto;
     background-color: transparent;
-
-    //@include hover() {
-    //  background-color: transparent;
-    //}
-    //
-    //&:focus,
-    //&.focus {
-    //  box-shadow: $btn-focus-box-shadow;
-    //}
-    &:hover {
+    &:hover,
+    &:focus,
+    .focus {
       background-color: transparent;
     }
 
@@ -358,9 +235,6 @@
   &__icon {
     width: 40px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: auto;
     padding: 0.5rem 0.5rem;
     font-size: 1rem;
@@ -391,14 +265,14 @@ fieldset:disabled a.btn {
   width: 100%;
   // Vertically space out multiple block buttons
   + .btn--block {
-    margin-top: $btn-block-spacing-y;
+    margin-top: var(--btn-block-spacing-y);
   }
 }
 
 // Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   &.btn--block {
     width: 100%;
   }

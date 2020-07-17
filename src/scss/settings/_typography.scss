@@ -2,90 +2,142 @@
 //
 // Font, line-height, and color for body text, headings, and more.
 
+:root {
+  --font-family-sans-serif: 'Montserrat', sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+  --font-family-base: var(--font-family-sans-serif);
+
+  --font-size-base: 1rem;
+
+  --font-weight-lighter: lighter;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-bolder: bolder;
+
+  --font-size-lg: calc(var(--font-size-base) * 1.25);
+  --font-size-sm: calc(var(--font-size-base) * 0.875);
+
+  --font-weight-base: --font-weight-normal;
+  --line-height-base: 1.2;
+
+  --h1-font-size: calc(var(--font-size-base) * 2.5);
+  --h2-font-size: calc(var(--font-size-base) * 2);
+  --h3-font-size: calc(var(--font-size-base) * 1.75);
+  --h4-font-size: calc(var(--font-size-base) * 1.5);
+  --h5-font-size: calc(var(--font-size-base) * 1.25);
+  --h6-font-size: var(--font-size-base);
+
+  --headings-margin-bottom: var(--global-spacer);
+  --headings-font-family: var(--font-family-base);
+  --headings-font-weight: 500;
+  --headings-line-height: 1.2;
+  --headings-color: var(--dark);
+
+  --display1-size: 6rem;
+  --display2-size: 5.5rem;
+  --display3-size: 4.5rem;
+  --display4-size: 3.5rem;
+
+  --display1-weight: 300;
+  --display2-weight: 300;
+  --display3-weight: 300;
+  --display4-weight: 300;
+  --display-line-height: var(--headings-line-height);
+
+  --body-bg: var(--light);
+  --body-color: var(--dark);
+
+  // Links
+
+  --link-color: var(--blue);
+  --link-decoration: none;
+  --link-hover-color: var(--blue-lighter);
+  --link-hover-decoration: underline;
+  // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+  --emphasized-link-hover-darken-percentage: 15%;
+
+  // Paragraphs
+  //
+  // Style p element.
+  --paragraph-margin-bottom: 1rem;
+  --paragraph-text-color: var(--dark);
+
+  // Components
+  // Define common padding and border radius sizes and more.
+
+  --line-height-lg: 1.5;
+  --line-height-sm: 1.5;
+
+  --rounded-pill: 50rem;
+
+  --box-shadow-sm: 0 0.125rem 0.25rem rgba(#000000, 0.075);
+  --box-shadow: 0 0.5rem 1rem rgba(#000000, 0.15);
+  --box-shadow-lg: 0 1rem 3rem rgba(#000000, 0.175);
+
+  --component-active-color: var(--light);
+  --component-active-bg: var(--blue);
+
+  --transition-base: all 0.2s ease-in-out;
+  --transition-fade: opacity 0.15s linear;
+  --transition-collapse: height 0.35s ease;
+
+  --lead-font-size: calc(var(--font-size-base) * 1.25);
+  --lead-font-weight: 300;
+  --lead-text-color: var(--dark);
+
+  --small-font-size: 80%;
+
+  --text-muted: var(--gray);
+
+  --blockquote-small-color: var(--gray);
+  --blockquote-font-size: calc(var(--font-size-base) * 1.25);
+
+  --zindex-dropdown: 1000;
+  --zindex-sticky: 1020;
+  --zindex-fixed: 1030;
+  --zindex-modal-backdrop: 1040;
+  --zindex-modal: 1050;
+  --zindex-popover: 1060;
+  --zindex-tooltip: 1070;
+
+  // Alerts
+  //
+  // Define alert colors, border radius, and padding.
+
+  --alert-padding-y: 0.75rem;
+  --alert-padding-x: 1.25rem;
+  --alert-margin-bottom: 1rem;
+  --alert-border-radius: var(--border-radius);
+  --alert-link-font-weight: var(--font-weight-bold);
+  --alert-border-width: var(--border-width);
+
+  --alert-bg-level: -10;
+  --alert-border-level: -9;
+  --alert-color-level: 6;
+
+  --hr-margin-y: var(--global-spacer);
+
+  --code-font-size: 1.25rem;
+  --code-color: var(--orange-dark);
+  --kbd-padding-y: 0.2rem;
+  --kbd-padding-x: 0.4rem;
+  --kbd-font-size: var(--code-font-size);
+  --kbd-color: var(--orange-dark);
+  --kbd-bg: var(--orange-dark);
+  --pre-color: var(--orange-dark);
+  --pre-scrollable-max-height: 340px;
+}
+
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-  "Liberation Mono", "Courier New", monospace;
-$font-family-base: $font-family-sans-serif;
 
-$font-size-base: 1rem; // Assumes the browser default, typically `16px`
-$font-size-lg: $font-size-base * 1.25;
-$font-size-sm: $font-size-base * 0.875;
-
-$font-weight-lighter: lighter;
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-bold: 700;
-$font-weight-bolder: bolder;
-
-$font-weight-base: $font-weight-normal;
-$line-height-base: 1.2;
-
-$h1-font-size: $font-size-base * 2.5;
-$h2-font-size: $font-size-base * 2;
-$h3-font-size: $font-size-base * 1.75;
-$h4-font-size: $font-size-base * 1.5;
-$h5-font-size: $font-size-base * 1.25;
-$h6-font-size: $font-size-base;
-
-$headings-margin-bottom: $global-spacer;
-$headings-font-family: null;
-$headings-font-weight: 500;
-$headings-line-height: 1.2;
-$headings-color: var(--dark);
-
-$display1-size: 6rem;
-$display2-size: 5.5rem;
-$display3-size: 4.5rem;
-$display4-size: 3.5rem;
-
-$display1-weight: 300;
-$display2-weight: 300;
-$display3-weight: 300;
-$display4-weight: 300;
-$display-line-height: $headings-line-height;
+//calc(var(--font-size-base): var(--font-size-base);
+//var(calc(var(--font-size-base)): 1rem; // Assumes the browser default, typically `16px`
 
 // Body
 //
 // Settings for the `<body>` element.
-$body-bg: var(--light);
-$body-color: var(--dark);
-
-// Links
-
-$link-color: var(--blue);
-$link-decoration: none;
-$link-hover-color: var(--blue-lighter);
-$link-hover-decoration: underline;
-// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
-$emphasized-link-hover-darken-percentage: 15%;
-
-// Paragraphs
-//
-// Style p element.
-$paragraph-margin-bottom: 1rem;
-$paragraph-text-color: var(--dark);
-
-// Components
-// Define common padding and border radius sizes and more.
-
-$line-height-lg: 1.5;
-$line-height-sm: 1.5;
-
-$rounded-pill: 50rem;
-
-$box-shadow-sm: 0 0.125rem 0.25rem rgba(#000, 0.075);
-$box-shadow: 0 0.5rem 1rem rgba(#000, 0.15);
-$box-shadow-lg: 0 1rem 3rem rgba(#000, 0.175);
-
-$component-active-color: var(--light);
-$component-active-bg: var(--blue);
-
-$transition-base: all 0.2s ease-in-out;
-$transition-fade: opacity 0.15s linear;
-$transition-collapse: height 0.35s ease;
 
 $embed-responsive-aspect-ratios: ();
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -94,171 +146,26 @@ $embed-responsive-aspect-ratios: join(
   $embed-responsive-aspect-ratios
 );
 
-$lead-font-size: $font-size-base * 1.25;
-$lead-font-weight: 300;
-$lead-text-color: var(--dark);
-
-$small-font-size: 80%;
-
-$text-muted: var(--gray);
-
-$blockquote-small-color: var(--gray);
-$blockquote-small-font-size: $small-font-size;
-$blockquote-font-size: $font-size-base * 1.25;
-
-$hr-border-color: rgba(#000, 0.1);
-$hr-border-width: $border-width;
+$hr-border-color: rgba(#000000, 0.1);
+$hr-border-width: var(--border-width);
 
 $mark-padding: 0.2em;
 
-$dt-font-weight: $font-weight-bold;
+$dt-font-weight: var(--font-weight-bold);
 
 $kbd-box-shadow: inset 0 -0.1rem 0 rgba(var(--dark), 0.25);
-$nested-kbd-font-weight: $font-weight-bold;
+$nested-kbd-font-weight: var(--font-weight-bold);
 
 $list-inline-padding: 0.5rem;
 
 $mark-bg: #fcf8e3;
 
-$hr-margin-y: $global-spacer;
-
-// Z-index master list
-//
-// Warning: Avoid customizing these values. They're used for a bird's eye view
-// of components dependent on the z-axis and are designed to all work together.
-
-$zindex-dropdown: 1000;
-$zindex-sticky: 1020;
-$zindex-fixed: 1030;
-$zindex-modal-backdrop: 1040;
-$zindex-modal: 1050;
-$zindex-popover: 1060;
-$zindex-tooltip: 1070;
-
-// Alerts
-//
-// Define alert colors, border radius, and padding.
-
-$alert-padding-y: 0.75rem;
-$alert-padding-x: 1.25rem;
-$alert-margin-bottom: 1rem;
-$alert-border-radius: $border-radius;
-$alert-link-font-weight: $font-weight-bold;
-$alert-border-width: $border-width;
-
-$alert-bg-level: -10;
-$alert-border-level: -9;
-$alert-color-level: 6;
-
-// List group
-
-$list-group-color: null;
-$list-group-bg: var(--white);
-$list-group-border-color: rgba(var(--dark), 0.125);
-$list-group-border-width: $border-width;
-$list-group-border-radius: $border-radius;
-
-$list-group-item-padding-y: 0.75rem;
-$list-group-item-padding-x: 1.25rem;
-
-$list-group-hover-bg: var(--gray-light);
-$list-group-active-color: $component-active-color;
-$list-group-active-bg: $component-active-bg;
-$list-group-active-border-color: $list-group-active-bg;
-
-$list-group-disabled-color: var(--gray);
-$list-group-disabled-bg: $list-group-bg;
-
-$list-group-action-color: var(--gray-dark);
-$list-group-action-hover-color: $list-group-action-color;
-
-$list-group-action-active-color: $body-color;
-$list-group-action-active-bg: var(--gray-light);
-
 // Code
-$code-font-size: 1.25rem;
-$code-color: var(--orange-dark);
-$kbd-padding-y: 0.2rem;
-$kbd-padding-x: 0.4rem;
-$kbd-font-size: $code-font-size;
-$kbd-color: var(--white);
-$kbd-bg: var(--gray-dark);
-$pre-color: var(--gray-dark);
-$pre-scrollable-max-height: 340px;
-
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (
-  ("<", "%3c"),
-  (">", "%3e"),
-  ("#", "%23"),
-  ("(", "%28"),
-  (")", "%29")
+  ('<', '%3c'),
+  ('>', '%3e'),
+  ('#', '%23'),
+  ('(', '%28'),
+  (')', '%29')
 );
-
-//
-// Horizontal rules
-//
-
-hr {
-  margin-top: $hr-margin-y;
-  margin-bottom: $hr-margin-y;
-  border: 0;
-  border-top: $hr-border-width solid $hr-border-color;
-}
-
-// Emphasis
-
-small,
-.small {
-  @include font-size($small-font-size);
-  font-weight: $font-weight-normal;
-}
-
-mark,
-.mark {
-  padding: $mark-padding;
-  background-color: $mark-bg;
-}
-
-//
-// Lists
-//
-
-.list-unstyled {
-  padding-left: 0;
-  list-style: none;
-}
-
-// Inline turns list items into inline-block
-.list-inline {
-  padding-left: 0;
-  list-style: none;
-}
-
-.list-inline-item {
-  display: inline-block;
-
-  &:not(:last-child) {
-    margin-right: $list-inline-padding;
-  }
-}
-
-//
-// Misc
-//
-
-// Blockquotes
-.blockquote {
-  margin-bottom: $global-spacer;
-  @include font-size($blockquote-font-size);
-}
-
-.blockquote-footer {
-  display: block;
-  @include font-size($blockquote-small-font-size);
-  color: $blockquote-small-color;
-
-  &::before {
-    content: "\2014\00A0"; // em dash, nbsp
-  }
-}

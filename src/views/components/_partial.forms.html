@@ -2,26 +2,1173 @@
   <h2 class="h2">Forms</h2>
 
   <form>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input
-        type="email"
-        class="form-control"
-        id="exampleInputEmail1"
-        aria-describedby="emailHelp"
-      />
-      <small id="emailHelp" class="form-text text-muted"
-        >We'll never share your email with anyone else.
-      </small>
+    <!--Input Field-->
+    <div class="infoBlock">
+      <!--Input form Fields-->
+      <h5 class="h5 u-mb-small">basic Input form Fields</h5>
+      <div class="form-row u-mb-mid">
+        <div class="formGroup col-3">
+          <label for="formDefault" class="sr-only">Default</label>
+          <input
+            type="email"
+            class="formControl"
+            id="formDefault"
+            placeholder="Default Input"
+            aria-describedby="emailHelp"
+          />
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="emailCurved" class="sr-only">Email Curved</label>
+          <input
+            type="email"
+            class="formControl formControl--curved"
+            placeholder="Curved Input"
+            id="emailCurved"
+            aria-describedby="emailHelp"
+          />
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="emailRounded" class="sr-only">Email Rounded</label>
+          <input
+            type="email"
+            class="formControl formControl--rounded"
+            placeholder="Rounded Input"
+            id="emailRounded"
+            aria-describedby="emailHelp"
+          />
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="emailtextONly" class="sr-only">Email Rounded</label>
+          <input
+            type="email"
+            class="formControl formControl--textOnly"
+            placeholder="Text Input"
+            id="emailtextONly"
+            aria-describedby="emailHelp"
+          />
+        </div>
+      </div>
+      <!--Input form Fields-->
+
+      <!--Input form Fields with labels-->
+      <h5 class="h5 u-mb-small">Input form Fields With labels</h5>
+      <div class="form-row u-mb-mid">
+        <div class="formGroup col-3">
+          <label for="formDefault1" class="">Default</label>
+          <input
+            type="email"
+            class="formControl"
+            id="formDefault1"
+            placeholder="Default Input"
+            aria-describedby="emailHelp"
+          />
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="emailCurved1" class="">Email Curved</label>
+          <input
+            type="email"
+            class="formControl formControl--curved"
+            placeholder="Curved Input"
+            id="emailCurved1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="emailRounded1" class="">Email Rounded</label>
+          <input
+            type="email"
+            class="formControl formControl--rounded"
+            placeholder="Rounded Input"
+            id="emailRounded1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="emailtextONl1" class="">Email Rounded</label>
+          <input
+            type="email"
+            class="formControl formControl--textOnly"
+            placeholder="Text Input"
+            id="emailtextONl1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+      </div>
+      <!--Input form Fields with labels-->
+
+      <!--With Search icons-->
+      <h5 class="h5 u-mb-small">Input form Fields With Icons</h5>
+      <div class="form-row u-mb-mid">
+        <div class="formGroup col-3">
+          <label for="FirstName">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl"
+              id="FirstName"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+          </div>
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="FirstName4">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl formControl--curved"
+              id="FirstName4"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+          </div>
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="FirstName24">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl formControl--rounded"
+              id="FirstName24"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+          </div>
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="FirstName24s4">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl formControl--textOnly"
+              id="FirstName24s4"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+          </div>
+        </div>
+      </div>
+      <!--/With Search icons-->
+
+      <!--With Search icons + error + success-->
+      <div class="form-row u-mb-mid">
+        <div class="formGroup col-3">
+          <label for="FirstName2">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl success"
+              id="FirstName2"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+          </div>
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="FirstName22">Error</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl formControl--curved error"
+              id="FirstName22"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+            <span class="text-danger hide">Error Message</span>
+          </div>
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="FirstNam44">Success</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl formControl--rounded success"
+              id="FirstNam44"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+            <span class="text-danger hide">Error Message</span>
+          </div>
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="FirstNam444">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl formControl--textOnly success"
+              id="FirstNam444"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+            <span class="text-danger hide">Error Message</span>
+          </div>
+        </div>
+      </div>
+      <!--/With Search icons + error + success-->
+
+      <!--With Search icons on both sides-->
+      <h5 class="h5 u-mb-mid">Input form Fields With Icons (dual)</h5>
+      <div class="form-row u-mb-mid">
+        <div class="formGroup col-3">
+          <label for="FirstName1">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl searchClear"
+              id="FirstName1"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+          </div>
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="FirstName42">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl formControl--curved searchClear"
+              id="FirstName42"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+          </div>
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="FirstName242">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl formControl--rounded searchClear"
+              id="FirstName242"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+          </div>
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="FirstName244">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl formControl--textOnly searchClear"
+              id="FirstName244"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+          </div>
+        </div>
+      </div>
+      <!--/With Search icons on both sides-->
+
+      <!--With Search icons on both sides + success + errors-->
+      <h5 class="h5 u-mb-small">
+        Input form Fields With Icons (Dual) + Error + Success
+      </h5>
+      <div class="form-row u-mb-mid">
+        <div class="formGroup col-3">
+          <label for="FirstName122">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl searchClear success"
+              id="FirstName122"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+          </div>
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="FirstName4212">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl formControl--curved searchClear error"
+              id="FirstName4212"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+            <span class="text-danger hide">Error Message</span>
+          </div>
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="FirstName2426">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl formControl--rounded searchClear success"
+              id="FirstName2426"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+          </div>
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="FirstName2440">Label</label>
+          <div class="formControlHolder">
+            <input
+              type="text"
+              class="formControl formControl--textOnly searchClear error"
+              id="FirstName2440"
+              name="FirstName"
+              required
+            />
+            <button
+              type="button"
+              class="icon-search_24px searchInput"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="icon-check_circle_24px successOption"></span>
+            <span class="text-danger hide">Error Message</span>
+          </div>
+        </div>
+      </div>
+      <!--/With Search icons on both sides-->
+
+      <!--Input form Fields with backgrounds-->
+      <h5 class="h5 u-mb-small">Input form Fields With backgrounds</h5>
+      <div class="form-row u-mb-mid">
+        <div class="formGroup col-3">
+          <label for="formDefault2" class="sr-only">Default</label>
+          <input
+            type="email"
+            class="formControl formControl--bg"
+            id="formDefault2"
+            placeholder="Default Input"
+            aria-describedby="emailHelp"
+          />
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="emailCurved2" class="sr-only">Email Curved</label>
+          <input
+            type="email"
+            class="formControl formControl--curved formControl--bg"
+            placeholder="Curved Input"
+            id="emailCurved2"
+            aria-describedby="emailHelp"
+          />
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="emailRounded2" class="sr-only">Email Rounded</label>
+          <input
+            type="email"
+            class="formControl formControl--rounded formControl--bg"
+            placeholder="Rounded Input"
+            id="emailRounded2"
+            aria-describedby="emailHelp"
+          />
+        </div>
+
+        <div class="formGroup col-3">
+          <label for="emailtextONl2" class="sr-only">Email Rounded</label>
+          <input
+            type="email"
+            class="formControl formControl--textOnly formControl--bg"
+            placeholder="Text Input"
+            id="emailtextONl2"
+            aria-describedby="emailHelp"
+          />
+        </div>
+      </div>
+      <!--/Input form Fields with backgrounds-->
     </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" />
+    <!--/Input Field-->
+
+    <!--Select-->
+    <div class="infoBlock">
+      <h1 class="h1 u-mb-small">Selects</h1>
+      <!--With Search icons + error + success-->
+      <div class="form-row u-mb-mid">
+        <!--simple select-->
+        <div class="formGroup col-3">
+          <label for="myselect">Label</label>
+          <div class="formControlHolder formControlHolder__select">
+            <select
+              class="formControl formControl__select"
+              name="course"
+              id="myselect"
+              required
+            >
+              <option value="">Pick an option</option>
+
+              <option>Pottery</option>
+
+              <option>Gardening</option>
+
+              <option>Art</option>
+
+              <option>Photography</option>
+
+              <option>Entrepreneurship</option>
+            </select>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+          </div>
+        </div>
+        <!--/Simple Select-->
+
+        <!--Select with cross button-->
+        <div class="formGroup col-3">
+          <label for="myselect1">Select Label</label>
+          <div
+            class="formControlHolder formControlHolder__select formControlHolder__selectCross"
+          >
+            <select
+              class="formControl formControl__select"
+              name="course"
+              id="myselect1"
+              required
+            >
+              <option value="">Pick an option</option>
+
+              <option>Pottery</option>
+
+              <option>Gardening</option>
+
+              <option>Art</option>
+
+              <option>Photography</option>
+
+              <option>Entrepreneurship</option>
+            </select>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="text-danger hide">Please Select any option</span>
+          </div>
+        </div>
+        <!--Select with cross button-->
+
+        <!--Select with cross button + error-->
+        <div class="formGroup col-3">
+          <label for="myselect12">Select Label</label>
+          <div
+            class="formControlHolder formControlHolder__select formControlHolder__selectCross"
+          >
+            <select
+              class="formControl formControl__select error"
+              name="course"
+              id="myselect12"
+              required
+            >
+              <option value="">Pick an option</option>
+
+              <option>Pottery</option>
+
+              <option>Gardening</option>
+
+              <option>Art</option>
+
+              <option>Photography</option>
+
+              <option>Entrepreneurship</option>
+            </select>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="text-danger hide">Please Select any option</span>
+          </div>
+        </div>
+        <!--Select with cross button + error-->
+
+        <!--Select with cross button + error-->
+        <div class="formGroup col-3">
+          <label for="myselect123">Select Label</label>
+          <div
+            class="formControlHolder formControlHolder__select formControlHolder__selectCross"
+          >
+            <select
+              class="formControl formControl__select formControl--textOnly"
+              name="course"
+              id="myselect123"
+              required
+            >
+              <option value="">Pick an option</option>
+
+              <option>Pottery</option>
+
+              <option>Gardening</option>
+
+              <option>Art</option>
+
+              <option>Photography</option>
+
+              <option>Entrepreneurship</option>
+            </select>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="text-danger hide">Please Select any option</span>
+          </div>
+        </div>
+        <!--Select with cross button + error-->
+
+        <!--Select with Calender-->
+        <div class="formGroup col-3">
+          <label for="myselect124">Select Label</label>
+          <div
+            class="formControlHolder formControlHolder__select formControlHolder__calendar"
+          >
+            <select
+              class="formControl formControl__select"
+              name="course"
+              id="myselect124"
+              required
+            >
+              <option value="">Pick an option</option>
+
+              <option>Pottery</option>
+
+              <option>Gardening</option>
+
+              <option>Art</option>
+
+              <option>Photography</option>
+
+              <option>Entrepreneurship</option>
+            </select>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-today_24px calender"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="text-danger hide">Please Select any option</span>
+          </div>
+        </div>
+        <!--Select with cross button-->
+
+        <!--Select with Calender error-->
+        <div class="formGroup col-3">
+          <label for="myselect125">Select Label</label>
+          <div
+            class="formControlHolder formControlHolder__select formControlHolder__calendar"
+          >
+            <select
+              class="formControl formControl__select error"
+              name="course"
+              id="myselect125"
+              required
+            >
+              <option value="">Pick an option</option>
+
+              <option>Pottery</option>
+
+              <option>Gardening</option>
+
+              <option>Art</option>
+
+              <option>Photography</option>
+
+              <option>Entrepreneurship</option>
+            </select>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-today_24px calender"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="text-danger hide">Please Select any option</span>
+          </div>
+        </div>
+        <!--Select with calendar error-->
+
+        <!--Select with Calender rounded-->
+        <div class="formGroup col-3">
+          <label for="myselect126">Select Label</label>
+          <div
+            class="formControlHolder formControlHolder__select formControlHolder__calendar"
+          >
+            <select
+              class="formControl formControl__select formControl--rounded"
+              name="course"
+              id="myselect126"
+              required
+            >
+              <option value="">Pick an option</option>
+
+              <option>Pottery</option>
+
+              <option>Gardening</option>
+
+              <option>Art</option>
+
+              <option>Photography</option>
+
+              <option>Entrepreneurship</option>
+            </select>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-today_24px calender"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="text-danger hide">Please Select any option</span>
+          </div>
+        </div>
+        <!--Select with Calender rounded-->
+
+        <!--Select with Calender text only-->
+        <div class="formGroup col-3">
+          <label for="myselect127">Select Label</label>
+          <div
+            class="formControlHolder formControlHolder__select formControlHolder__calendar"
+          >
+            <select
+              class="formControl formControl__select formControl--textOnly"
+              name="course"
+              id="myselect127"
+              required
+            >
+              <option value="">Pick an option</option>
+
+              <option>Pottery</option>
+
+              <option>Gardening</option>
+
+              <option>Art</option>
+
+              <option>Photography</option>
+
+              <option>Entrepreneurship</option>
+            </select>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-today_24px calender"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="text-danger hide">Please Select any option</span>
+          </div>
+        </div>
+        <!--Select with Calender text only-->
+
+        <!--Select with Calender bg-->
+        <div class="formGroup col-3">
+          <label for="myselect128">Select Label</label>
+          <div
+            class="formControlHolder formControlHolder__select formControlHolder__calendar"
+          >
+            <select
+              class="formControl formControl__select formControl--bg"
+              name="course"
+              id="myselect128"
+              required
+            >
+              <option value="">Pick an option</option>
+
+              <option>Pottery</option>
+
+              <option>Gardening</option>
+
+              <option>Art</option>
+
+              <option>Photography</option>
+
+              <option>Entrepreneurship</option>
+            </select>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-today_24px calender"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="text-danger hide">Please Select any option</span>
+          </div>
+        </div>
+        <!--Select with Calender bg-->
+
+        <!--Select with Calender bg cross-->
+        <div class="formGroup col-3">
+          <label for="myselect129">Select Label</label>
+          <div
+            class="formControlHolder formControlHolder__select formControlHolder__selectCross"
+          >
+            <select
+              class="formControl formControl__select formControl--bg"
+              name="course"
+              id="myselect129"
+              required
+            >
+              <option value="">Pick an option</option>
+
+              <option>Pottery</option>
+
+              <option>Gardening</option>
+
+              <option>Art</option>
+
+              <option>Photography</option>
+
+              <option>Entrepreneurship</option>
+            </select>
+            <button
+              type="button"
+              class="icon-clear_24px clearCross"
+              aria-label="Label"
+            ></button>
+            <button
+              type="button"
+              class="icon-today_24px calender"
+              aria-label="Label"
+            ></button>
+            <span class="icon-info_24px errorOptionx"></span>
+            <span class="text-danger hide">Please Select any option</span>
+          </div>
+        </div>
+        <!--Select with Calender bg cross-->
+      </div>
+      <!--/With Search icons + error + success-->
     </div>
-    <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <!--/Select-->
+
+    <!--CheckBoxes-->
+    <div class="infoBlock">
+      <!--Check Boxes-->
+      <h5 class="h5 u-mb-small">CheckBoxs with Variations</h5>
+      <div class="form-row u-mb-mid">
+        <div class="formCheck col-1">
+          <div class="checkBox">
+            <input type="checkbox" id="checkbox1" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel sr-only" for="checkbox1">label</label>
+        </div>
+
+        <div class="formCheck col-1">
+          <div class="checkBox checkBox--curved">
+            <input type="checkbox" id="checkbox2" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel sr-only" for="checkbox2">label</label>
+        </div>
+
+        <div class="formCheck col-1">
+          <div class="checkBox checkBox--rounded">
+            <input type="checkbox" id="checkbox3" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel sr-only" for="checkbox3">label</label>
+        </div>
+
+        <!--BG class-->
+        <div class="formCheck col-1">
+          <div class="checkBox checkBox__bg">
+            <input type="checkbox" id="checkbox4" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel sr-only" for="checkbox4">label</label>
+        </div>
+
+        <div class="formCheck col-1">
+          <div class="checkBox checkBox__bg checkBox--curved">
+            <input type="checkbox" id="checkbox5" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel sr-only" for="checkbox5">label</label>
+        </div>
+
+        <div class="formCheck col-1">
+          <div class="checkBox checkBox__bg checkBox--rounded">
+            <input type="checkbox" id="checkbox6" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel sr-only" for="checkbox6">label</label>
+        </div>
+
+        <!--Error class-->
+        <div class="formCheck col-1 formCheck__error">
+          <div class="checkBox">
+            <input type="checkbox" id="checkbox89" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel sr-only" for="checkbox89">label</label>
+        </div>
+
+        <div class="formCheck formCheck__error col-1">
+          <div class="checkBox checkBox--curved">
+            <input type="checkbox" id="checkbox99" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel sr-only" for="checkbox99">label</label>
+        </div>
+
+        <div class="formCheck formCheck__error col-1">
+          <div class="checkBox checkBox--rounded">
+            <input type="checkbox" id="checkbox79" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel sr-only" for="checkbox79">Danger</label>
+        </div>
+
+        <!--BG class Error-->
+        <div class="formCheck col-1 formCheck__error">
+          <div class="checkBox checkBox__bg">
+            <input type="checkbox" id="checkbox8" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel sr-only" for="checkbox8">label</label>
+        </div>
+
+        <div class="formCheck formCheck__error col-1">
+          <div class="checkBox checkBox__bg checkBox--curved">
+            <input type="checkbox" id="checkbox9" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel sr-only" for="checkbox9">label</label>
+        </div>
+
+        <div class="formCheck formCheck__error col-1">
+          <div class="checkBox checkBox__bg checkBox--rounded">
+            <input type="checkbox" id="checkbox7" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel sr-only" for="checkbox7">Danger</label>
+        </div>
+      </div>
+      <!--/Check Boxes-->
+
+      <!--Check Boxes With labes-->
+      <h5 class="h5 u-mb-small">CheckBoxs with Labels & Variations</h5>
+      <div class="form-row u-mb-mid">
+        <div class="formCheck col-1">
+          <div class="checkBox">
+            <input type="checkbox" id="checkbox12" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel" for="checkbox12">label</label>
+        </div>
+
+        <div class="formCheck col-1">
+          <div class="checkBox checkBox--curved">
+            <input type="checkbox" id="checkbox23" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel" for="checkbox23">label</label>
+        </div>
+
+        <div class="formCheck col-1">
+          <div class="checkBox checkBox--rounded">
+            <input type="checkbox" id="checkbox32" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel" for="checkbox32">label</label>
+        </div>
+
+        <!--BG class-->
+        <div class="formCheck col-1">
+          <div class="checkBox checkBox__bg">
+            <input type="checkbox" id="checkbox62" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel" for="checkbox62">label</label>
+        </div>
+
+        <div class="formCheck col-1">
+          <div class="checkBox checkBox__bg checkBox--curved">
+            <input type="checkbox" id="checkbox42" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel" for="checkbox42">label</label>
+        </div>
+
+        <div class="formCheck col-1">
+          <div class="checkBox checkBox__bg checkBox--rounded">
+            <input type="checkbox" id="checkbox52" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel" for="checkbox52">label</label>
+        </div>
+
+        <!--Error class-->
+        <!--Error class-->
+        <div class="formCheck col-1 formCheck__error">
+          <div class="checkBox">
+            <input type="checkbox" id="checkbox83" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel" for="checkbox83">label</label>
+        </div>
+
+        <div class="formCheck formCheck__error col-1">
+          <div class="checkBox checkBox--curved">
+            <input type="checkbox" id="checkbox93" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel" for="checkbox93">label</label>
+        </div>
+
+        <div class="formCheck formCheck__error col-1">
+          <div class="checkBox checkBox--rounded">
+            <input type="checkbox" id="checkbox73" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel" for="checkbox73">Danger</label>
+        </div>
+
+        <!--BG class Error-->
+        <div class="formCheck col-1 formCheck__error">
+          <div class="checkBox checkBox__bg">
+            <input type="checkbox" id="checkbox832" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel" for="checkbox832">label</label>
+        </div>
+
+        <div class="formCheck formCheck__error col-1">
+          <div class="checkBox checkBox__bg checkBox--curved">
+            <input type="checkbox" id="checkbox932" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel" for="checkbox932">label</label>
+        </div>
+
+        <div class="formCheck formCheck__error col-1">
+          <div class="checkBox checkBox__bg checkBox--rounded">
+            <input type="checkbox" id="checkbox731" />
+            <span class="checkboxFake"></span>
+          </div>
+          <label class="checkLabel" for="checkbox731">Danger</label>
+        </div>
+      </div>
+      <!--/Check Boxes With labes-->
+
+      <!--CheckBoxes With Groups-->
+      <h5 class="h5 u-mb-small">CheckBoxs with Groups</h5>
+      <div class="form-row u-mb-mid">
+        <fieldset>
+          <legend>Select your pizza toppings:</legend>
+
+          <div class="formCheck">
+            <div class="checkBox">
+              <input type="checkbox" id="checkbox123" />
+              <span class="checkboxFake"></span>
+            </div>
+            <label class="checkLabel" for="checkbox123">Ham</label>
+          </div>
+
+          <div class="formCheck">
+            <div class="checkBox checkBox--curved">
+              <input type="checkbox" id="checkbox233" />
+              <span class="checkboxFake"></span>
+            </div>
+            <label class="checkLabel" for="checkbox233">Pepperoni</label>
+          </div>
+
+          <div class="formCheck">
+            <div class="checkBox checkBox--rounded">
+              <input type="checkbox" id="checkbox323" />
+              <span class="checkboxFake"></span>
+            </div>
+            <label class="checkLabel" for="checkbox323">Mushrooms</label>
+          </div>
+        </fieldset>
+      </div>
+      <!--/CheckBoxes With Groups-->
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <!--/CheckBoxes-->
   </form>
 </section>

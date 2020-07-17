@@ -68,7 +68,7 @@
         list-style: none;
         > a {
           margin: 0 15px 0;
-          color: #fff;
+          color: #ffffff;
           display: flex;
           align-items: center;
           flex-direction: row;
@@ -86,7 +86,7 @@
             margin-right: 12px;
             color: white;
             &:before {
-              color: #fff;
+              color: #ffffff;
             }
           }
           &:hover {
@@ -107,12 +107,12 @@
           i {
             color: white;
             &:before {
-              color: #fff;
+              color: #ffffff;
             }
           }
 
           &:before {
-            content: " ";
+            content: ' ';
             position: absolute;
             height: 6px;
             width: 6px;

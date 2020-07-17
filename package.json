@@ -1,75 +1,76 @@
 {
-  "name": "mobilelive-design-system-static",
-  "version": "1.0.0",
-  "description": "mobileLive Designs System Static",
-  "author": "Mutahar Aslam",
-  "license": "Mobilelive",
-  "repository": {
-    "type": "git",
-    "url": "https://bitbucket.org/mobilelive/mobilelive-design-system-static-components/src"
-  },
-  "scripts": {
-    "clean": "rimraf dist/*",
-    "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
-    "css:scss": "node-sass --output-style compressed -o dist src/styles",
-    "build:css": "npm run css:scss && npm run css:autoprefixer",
-    "build:js": "webpack --mode=production",
-    "build:html": "posthtml -c posthtml.json",
-    "watch:css": "onchange \"src\" -- npm run build:css",
-    "watch:html": "onchange \"src/views\" -- npm run build:html",
-    "watch:js": "onchange \"src/js\" -- webpack --mode=development",
-    "precommit": "pretty-quick --staged",
-    "prepush": "npm run lint",
-    "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
-    "build": "run-s build:*",
-    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
-    "watch": "run-p serve watch:*"
-  },
-  "devDependencies": {
-    "autoprefixer": "^9.8.4",
-    "babel-loader": "^8.1.0",
-    "browser-sync": "^2.26.7",
-    "copy-webpack-plugin": "^5.1.1",
-    "css-loader": "^3.6.0",
-    "eslint": "^6.8.0",
-    "eslint-loader": "^3.0.4",
-    "file-loader": "^6.0.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "node-sass": "^4.14.1",
-    "npm-run-all": "^4.1.5",
-    "onchange": "^6.1.1",
-    "postcss-cli": "^7.1.1",
-    "posthtml": "^0.12.3",
-    "posthtml-cli": "^0.5.4",
-    "posthtml-modules": "^0.4.3",
-    "prettier": "2.0.5",
-    "pretty-quick": "^2.0.1",
-    "style-loader": "^1.2.1",
-    "stylelint": "^13.6.1",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0",
-    "url-loader": "^3.0.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
-  },
-  "dependencies": {
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4"
-  },
-  "lint-staged": {
-    "**/*.js": [
-      "eslint --fix"
-    ],
-    "**/*.scss": [
-      "prettier --write **/*.scss",
-      "pretty-quick --staged",
-      "stylelint --syntax scss"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+ "name": "mobilelive-design-system-static",
+ "version": "1.0.0",
+ "description": "mobileLive Designs System Static",
+ "author": "Mutahar Aslam",
+ "license": "Mobilelive",
+ "repository": {
+  "type": "git",
+  "url": "https://bitbucket.org/mobilelive/mobilelive-design-system-static-components/src"
+ },
+ "scripts": {
+  "clean": "rimraf dist/*",
+  "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
+  "css:scss": "node-sass --output-style compressed -o dist src/styles",
+  "build:css": "npm run css:scss && npm run css:autoprefixer",
+  "build:js": "webpack --mode=production",
+  "build:html": "posthtml -c posthtml.json",
+  "watch:css": "onchange \"src\" -- npm run build:css",
+  "watch:html": "onchange \"src/views\" -- npm run build:html",
+  "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+  "precommit": "pretty-quick --staged",
+  "prepush": "npm run lint",
+  "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
+  "build": "run-s build:*",
+  "serve": "browser-sync start --server \"dist\" --files \"dist\"",
+  "watch": "run-p serve watch:*"
+ },
+ "devDependencies": {
+  "autoprefixer": "^9.8.4",
+  "babel-loader": "^8.1.0",
+  "browser-sync": "^2.26.7",
+  "copy-webpack-plugin": "^5.1.1",
+  "css-loader": "^3.6.0",
+  "eslint": "^6.8.0",
+  "eslint-config-prettier": "^6.11.0",
+  "eslint-loader": "^3.0.4",
+  "file-loader": "^6.0.0",
+  "husky": "^4.2.5",
+  "lint-staged": "^10.2.11",
+  "node-sass": "^4.14.1",
+  "npm-run-all": "^4.1.5",
+  "onchange": "^6.1.1",
+  "postcss-cli": "^7.1.1",
+  "posthtml": "^0.12.3",
+  "posthtml-cli": "^0.5.4",
+  "posthtml-modules": "^0.4.3",
+  "prettier": "2.0.5",
+  "pretty-quick": "^2.0.1",
+  "style-loader": "^1.2.1",
+  "stylelint": "^13.6.1",
+  "stylelint-config-prettier": "^8.0.2",
+  "stylelint-config-standard": "^20.0.0",
+  "url-loader": "^3.0.0",
+  "webpack": "^4.43.0",
+  "webpack-cli": "^3.3.12"
+ },
+ "dependencies": {
+  "eslint-plugin-prettier": "^3.1.4",
+  "stylelint-scss": "^3.18.0"
+ },
+ "lint-staged": {
+  "**/*.js": [
+   "eslint --fix"
+  ],
+  "**/*.scss": [
+   "prettier --write **/*.scss",
+   "pretty-quick --staged",
+   "stylelint --syntax scss"
+  ]
+ },
+ "husky": {
+  "hooks": {
+   "pre-commit": "lint-staged"
   }
+ }
 }
