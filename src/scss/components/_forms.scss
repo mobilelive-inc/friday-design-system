@@ -85,6 +85,9 @@
     cursor: pointer;
     text-decoration: none;
     color: var(--gray-dark);
+    background-color: transparent;
+    padding: 0;
+    border: none;
   }
   &.searchClear {
     ~ .clearCross {
@@ -97,6 +100,9 @@
       cursor: pointer;
       text-decoration: none;
       color: var(--gray-dark);
+      background-color: transparent;
+      padding: 0;
+      border: none;
     }
     ~ .searchInput {
       left: 8px;
