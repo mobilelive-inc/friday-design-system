@@ -66,9 +66,9 @@
   ~ .searchInput {
     position: absolute;
     left: calc(100% - 25px);
-    width: 20px;
-    top: 10px;
-    font-size: 16px;
+    width: 14px;
+    top: 0px;
+    font-size: 13px;
     z-index: 20;
     cursor: pointer;
     text-decoration: none;
@@ -76,15 +76,18 @@
     background-color: transparent;
     padding: 0;
     border: none;
+    display: flex;
+    align-items: center;
+    height: var(--input-height);
   }
 
   &.searchClear {
     ~ .clearCross {
       position: absolute;
       left: calc(100% - 25px);
-      width: 20px;
-      top: 10px;
-      font-size: 16px;
+      width: 10px;
+      top: 0;
+      font-size: 10px;
       z-index: 20;
       cursor: pointer;
       text-decoration: none;
@@ -92,6 +95,7 @@
       background-color: transparent;
       padding: 0;
       border: none;
+      height: var(--input-height);
     }
 
     ~ .searchInput {
@@ -157,10 +161,13 @@
   position: relative;
   max-width: var(--input-width);
   height: auto;
+  .formControl--textOnly {
+    padding-right: var(--input-padding-x-sm);
+  }
 
   .formControl {
-    padding: var(--input-padding-y) 2rem var(--input-padding-y)
-      var(--input-padding-x);
+    padding: var(--input-padding-y) calc(var(--input-padding-x) * 2)
+      var(--input-padding-y) var(--input-padding-x);
   }
 
   .searchClear {
@@ -170,10 +177,10 @@
   .clearCross,
   .calender {
     position: absolute;
-    left: calc(100% - 50px);
-    width: 20px;
-    top: 10px;
-    font-size: 16px;
+    left: calc(100% - 42px);
+    width: 10px;
+    top: 0;
+    font-size: 10px;
     z-index: 20;
     cursor: pointer;
     text-decoration: none;
@@ -181,6 +188,8 @@
     background-color: transparent;
     padding: 0;
     border: none;
+    height: var(--input-height);
+    align-items: center;
     display: none;
   }
 
@@ -193,7 +202,7 @@
       right: 8px;
       top: 0;
       font-family: 'design-system-icons' !important;
-      font-size: 10px;
+      font-size: 8px;
       pointer-events: none;
       color: var(--gray-dark);
       display: flex;
@@ -205,26 +214,31 @@
 
     //if input takes .formControlHolder__selectCross class following code will run todo
     &.formControlHolder__selectCross {
+      .formControl {
+        padding: var(--input-padding-y) calc(var(--input-padding-x) * 3.5)
+          var(--input-padding-y) var(--input-padding-x);
+      }
       .clearCross {
-        display: block;
+        display: flex;
       }
     }
 
     //if input takes .formControlHolder__calendar class following code will run todo
     &.formControlHolder__calendar {
       .formControl {
-        padding: var(--input-padding-y) var(--input-padding-x)
-          var(--input-padding-y) 2.15rem;
+        padding: var(--input-padding-y) calc(var(--input-padding-x) * 1.8)
+          var(--input-padding-y);
       }
       .calender {
         left: 8px;
-        display: block;
+        display: flex;
+        width: 13px;
+        font-size: 13px;
       }
     }
-  }
-  .formControl--textOnly {
-    padding: var(--input-padding-y) var(--input-padding-x)
-      var(--input-padding-y) var(--input-padding-x-sm);
+    .clearCross {
+      display: none;
+    }
   }
 }
 
