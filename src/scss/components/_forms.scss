@@ -6,7 +6,7 @@
 .formControl {
   display: block;
   width: 100%;
-  max-width: var(--input-width);
+  //max-width: var(--input-width);
   height: var(--input-height);
   padding: var(--input-padding-y) var(--input-padding-x);
   font-family: var(--input-font-family);
@@ -67,7 +67,7 @@
     position: absolute;
     left: calc(100% - 25px);
     width: 14px;
-    top: 0px;
+    top: 0;
     font-size: 13px;
     z-index: 20;
     cursor: pointer;
@@ -159,7 +159,7 @@
 
 .formControlHolder {
   position: relative;
-  max-width: var(--input-width);
+  //max-width: var(--input-width);
   height: auto;
   .formControl--textOnly {
     padding-right: var(--input-padding-x-sm);
@@ -251,6 +251,7 @@ fieldset {
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-base);
     line-height: 1;
+    color: var(--gray-dark);
   }
   .formCheck {
     padding: 0;
@@ -263,6 +264,7 @@ label {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-base);
   line-height: 1;
+  color: var(--gray-dark);
 }
 
 input[type='date'],
