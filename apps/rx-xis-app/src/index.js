@@ -23,7 +23,7 @@ function App() {
   const [gender, setGender] = React.useState("male")
   return (
     <ThemeProvider theme={theme}>
-      <Flex>
+      {/* <Flex>
         <Select 
           name="greetings"
           width="50%"
@@ -234,7 +234,7 @@ function App() {
           // borderRadius="10px"
           withBottomBorderOnly
           disabled={false}/>
-      </Flex>
+      </Flex> */}
       <Flex mt={10}>
         <Input
           type="Email"
@@ -290,6 +290,27 @@ function App() {
           borderType="rounded"
           // borderRadius="10px"
           // withBottomBorderOnly
+          disabled={false}/>
+      </Flex>
+      <Flex width="100%" mt={10}>
+        <Input
+          type="Email"
+          value=""
+          placeholder="Email"
+          label="Email"
+          id="Email"
+          showErrorMessage
+          errorMessage=""
+          isClearButtonVisible
+          leftIcon="icon-search_24px"
+          validationIcon="icon-check_circle_24px"
+          isValid
+          // leftIconClick={() => alert("left icon clicked")}
+          rightIcon="icon-clear_24px"
+          // rightIconClick={() => alert("right icon clicked")}
+          borderType="rounded"
+          // borderRadius="10px"
+          withBottomBorderOnly
           disabled={false}/>
       </Flex>
     </ThemeProvider>

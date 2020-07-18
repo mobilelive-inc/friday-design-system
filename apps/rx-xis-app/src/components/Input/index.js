@@ -1,8 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Input as BaseInput } from './css';
+import {
+  Input as BaseInput, RightIconButton,LeftIconButton, InputWrapper, ValidationIcon
+} from './css';
 import { Text } from '../typography';
 import Span from '../span/span';
+import Label from '../label';
+
+
+const inputIconDiv={
+  position: 'relative',
+  height: 'auto',
+}
 
 const Input = (props) => {
   const {
@@ -15,6 +24,7 @@ const Input = (props) => {
     onBlur,
     showErrorMessage,
     errorMessage,
+    isValid,
     disabled,
     leftIcon,
     onLeftIconClick,
@@ -23,16 +33,17 @@ const Input = (props) => {
     validationIcon,
     ...restProps
   } = props;
+  
   return (
     <>
-      <div>
+      <InputWrapper rightIcon={rightIcon} leftIcon={leftIcon}>
         {
-          label && <p>{label}</p>
+          label && <Label fontWeight={600}>{label}</Label>
         }
         {leftIcon && (
-          <button type="button" onClick={onLeftIconClick}>
+          <LeftIconButton type="button" onClick={onLeftIconClick}>
             <Span className={leftIcon} />
-          </button>
+          </LeftIconButton>
         )}
         <BaseInput
           id={id}
@@ -43,20 +54,21 @@ const Input = (props) => {
           onChange={onChange}
           onBlur={onBlur}
           disabled={disabled}
+          mt={5}
           // eslint-disable-next-line react/jsx-props-no-spreading
           {...restProps}/>
         {
           validationIcon && (
-            <Span className={validationIcon}/>
+            <ValidationIcon className={validationIcon} isValid={isValid}/>
           )
         }
       
         {rightIcon && (
-          <button type="button" onClick={rightIconClick}>
-            <Span className={rightIcon} />
-          </button>
+          <RightIconButton type="button" onClick={rightIconClick}>
+            <span className={rightIcon} />
+          </RightIconButton>
         )}
-      </div>
+      </InputWrapper>
       <div>
         {showErrorMessage && errorMessage && (
           <Text as="p">{errorMessage}</Text>
