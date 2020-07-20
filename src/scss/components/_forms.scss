@@ -63,7 +63,7 @@
     background-color: var(--gray-light);
   }
 
-  ~ .searchInput {
+  ~ .searchInputBtn {
     position: absolute;
     left: calc(100% - 25px);
     width: 14px;
@@ -81,27 +81,11 @@
     height: var(--input-height);
   }
 
-  &.searchClear {
-    ~ .clearCross {
-      position: absolute;
-      left: calc(100% - 25px);
-      width: 10px;
-      top: 0;
-      font-size: 10px;
-      z-index: 20;
-      cursor: pointer;
-      text-decoration: none;
-      color: var(--gray-dark);
-      background-color: transparent;
-      padding: 0;
-      border: none;
-      height: var(--input-height);
-    }
-
-    ~ .searchInput {
-      left: 8px;
-    }
-  }
+  //&.searchClear {
+  //~ .searchInputBtn {
+  //  left: 8px;
+  //}
+  //}
 
   ~ .successOption {
     position: absolute;
@@ -150,10 +134,31 @@
       display: block;
     }
   }
+}
 
-  &__select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
+input[type='search'] {
+  &::-webkit-search-cancel-button {
+    position: absolute;
+    left: calc(100% - 22px);
+    width: 10px;
+    font-size: 15px;
+    color: var(--gray-dark);
+    padding: 1px;
+    border: none;
+    height: var(--input-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'design-system-icons' !important;
+    cursor: pointer;
+    margin: 0;
+    &:before {
+      content: 'x';
+    }
+  }
+
+  ~ .searchInputBtn {
+    left: 8px;
   }
 }
 
@@ -161,6 +166,7 @@
   position: relative;
   //max-width: var(--input-width);
   height: auto;
+
   .formControl--textOnly {
     padding-right: var(--input-padding-x-sm);
   }
@@ -174,10 +180,8 @@
     padding: var(--input-padding-y) 2rem;
   }
 
-  .clearCross,
-  .calender {
+  .calenderBtn {
     position: absolute;
-    left: calc(100% - 42px);
     width: 10px;
     top: 0;
     font-size: 10px;
@@ -193,8 +197,17 @@
     display: none;
   }
 
+  .clearCrossBtn {
+    display: none;
+  }
+
   &__select {
     position: relative;
+
+    select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
 
     &:after {
       position: absolute;
@@ -212,32 +225,45 @@
       cursor: pointer;
     }
 
-    //if input takes .formControlHolder__selectCross class following code will run todo
-    &.formControlHolder__selectCross {
-      .formControl {
+    .searchClear {
+      &.formControl {
         padding: var(--input-padding-y) calc(var(--input-padding-x) * 3.5)
           var(--input-padding-y) var(--input-padding-x);
       }
-      .clearCross {
-        display: flex;
-      }
+    }
+
+    .clearCrossBtn {
+      position: absolute;
+      left: calc(100% - 40px) !important;
+      width: 10px;
+      top: 0;
+      font-size: 10px;
+      z-index: 20;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--gray-dark);
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      height: var(--input-height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     //if input takes .formControlHolder__calendar class following code will run todo
-    &.formControlHolder__calendar {
-      .formControl {
+    .formControl__calendar {
+      &.formControl {
         padding: var(--input-padding-y) calc(var(--input-padding-x) * 1.8)
           var(--input-padding-y);
       }
-      .calender {
+
+      ~ .calenderBtn {
         left: 8px;
         display: flex;
         width: 13px;
         font-size: 13px;
       }
-    }
-    .clearCross {
-      display: none;
     }
   }
 }
@@ -245,6 +271,7 @@
 fieldset {
   padding: 0;
   border: none;
+
   legend {
     display: inline-block;
     margin-bottom: 0.5rem;
@@ -253,11 +280,13 @@ fieldset {
     line-height: 1;
     color: var(--gray-dark);
   }
+
   .formCheck {
     padding: 0;
     margin-bottom: 0.5rem;
   }
 }
+
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
