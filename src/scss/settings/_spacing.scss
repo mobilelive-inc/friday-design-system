@@ -34,6 +34,9 @@ $enable-deprecation-messages: true;
 
 // stylelint-disable-next-line scss/dollar-variable-default
 $global-spacers: (
+  none: (
+    calc(var(--global-spacer) * 0)
+  ),
   micro: (
     calc(var(--global-spacer) * 0.25)
   ),
