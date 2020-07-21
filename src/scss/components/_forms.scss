@@ -309,7 +309,7 @@ select.formControl {
   &:focus::-ms-value {
     // Suppress the nested default white text on blue background highlight given to
     // the selected option text when the (still closed) <select> receives focus
-    // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+    // in IE and (under certain conditions) Edge, as  it looks bad and cannot be made to
     // match the appearance of the native widget.
     // See https://github.com/twbs/bootstrap/issues/19398.
     color: var(--input-color);
@@ -698,6 +698,205 @@ textarea.formControl {
   }
 }
 
+//Radio
+.formRadio {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  /* Styling Checkbox Starts */
+  .radioLabel {
+    color: var(--gray-dark);
+    margin: 0 0 0 0.5rem;
+    cursor: pointer;
+  }
+
+  .radioBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    width: var(--form-radio-width);
+    min-height: var(--form-radio-height);
+
+    input {
+      position: relative;
+      z-index: 10;
+      opacity: 0;
+      margin: 0;
+      cursor: pointer;
+      width: var(--form-radio-width);
+      min-height: var(--form-radio-height);
+
+      &:hover {
+        ~ .radioBtnFake {
+          border: 2px solid var(--gray);
+          &:after {
+            background-color: var(--gray);
+          }
+        }
+      }
+
+      &:focus {
+        ~ .radioBtnFake {
+          outline: inherit;
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+        }
+      }
+
+      &:checked ~ .radioBtnFake {
+        background-color: #ffffff;
+        -webkit-transform: rotate(0deg) scale(1);
+        -ms-transform: rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+        border: 2px solid var(--gray-dark);
+        border-radius: var(--border-radius-none);
+
+        &:after {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .radioBtnFake {
+      color: var(--gray-dark);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      height: 30px;
+      width: 30px;
+      background-color: transparent;
+      transition: all 0.3s ease-out;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      border: 2px solid var(--gray-dark);
+      border-radius: var(--border-radius-none);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: currentColor;
+        -webkit-transform: rotate(0deg) scale(0);
+        -ms-transform: rotate(0deg) scale(0);
+        transform: rotate(0deg) scale(0);
+        transition: all 0.3s ease-out;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+      }
+    }
+
+    &--rounded {
+      input {
+        &:checked ~ .radioBtnFake {
+          border-radius: 50%;
+          &:after {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+
+      .radioBtnFake {
+        border-radius: 50%;
+        &:after {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__error {
+    .radioBtn {
+      input {
+        &:checked ~ .radioBtnFake {
+          border-color: var(--danger);
+
+          &:after {
+            background-color: var(--danger);
+          }
+        }
+
+        &:hover {
+          ~ .radioBtnFake {
+            border-color: var(--danger);
+          }
+        }
+
+        &:focus {
+          ~ .radioBtnFake {
+            box-shadow: 0 0 0 0.2rem rgba(var(--danger), 0.5);
+          }
+        }
+      }
+
+      .radioBtnFake {
+        border-color: var(--danger);
+      }
+    }
+  }
+
+  &.disabled {
+    cursor: default;
+    pointer-events: none;
+
+    input {
+      pointer-events: none;
+
+      &:checked ~ .radioBtnFake {
+        border-color: var(--gray) !important;
+        background-color: var(--gray);
+
+        &:after {
+          border: solid var(--gray-lighter);
+          border-width: 0 3px 3px 0;
+        }
+      }
+
+      &:hover {
+        ~ .radioBtnFake {
+          border: 2px solid var(--gray);
+          background-color: var(--gray);
+        }
+      }
+    }
+
+    ~ .checkboxFake {
+      border-color: var(--gray) !important;
+      background-color: var(--gray);
+    }
+
+    .radioLabel {
+      cursor: default;
+      pointer-events: none;
+      color: var(--gray);
+    }
+  }
+}
+
 .form-check-inline {
   display: inline-flex;
   align-items: center;
@@ -712,15 +911,6 @@ textarea.formControl {
     margin-left: 0;
   }
 }
-
-// Inline forms
-//
-// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
-// forms begin stacked on extra small (mobile) devices and then go inline when
-// viewports reach <768px.
-//
-// Requires wrapping inputs and labels with `.formGroup` for proper display of
-// default HTML form controls and our custom form controls (e.g., input groups).
 
 .form-inline {
   display: flex;
