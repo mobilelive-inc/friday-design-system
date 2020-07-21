@@ -6,250 +6,334 @@ import { ThemeProvider } from 'styled-components';
 import {
   Flex, Box
 } from 'rebass/styled-components';
-import Button from './components/Button'
+import Button from './components/Button';
 // import Button from '../../../build';
 import { Text } from './components/typography';
 import Span from './components/span/span';
+import Input from './components/Input';
 import theme from './components/theme/defaultTheme';
-import "./components/icomons_styles.scss"
-import { Button as BuildButton } from '../../../build';
+import './components/icomons_styles.scss';
+import Checkbox from './components/checkbox';
+import Radio from './components/radio';
+import Select from './components/select';
+import Label from './components/label';
 
-function App(){
-  return(
+function App() {
+  console.log("radio is ", Radio)
+  const [isChecked, setIschecked] = React.useState(false)
+  const [gender, setGender] = React.useState("male")
+  return (
     <ThemeProvider theme={theme}>
-      <Text variant="H3" m={[5]}>Buttons</Text>
-      <Text variant="H5" m={[5]}>Solid buttons with block border</Text>
-      <Button
-        width="10%" m="10px">Primary</Button>
-      <Button
-        variant="secondary"
-        width="10%" m="10px">Secondary</Button>
-      <Button
-        variant="success"
-        width="10%" m="10px">Success</Button>
-      <Button
-        variant="danger"
-        width="10%" m="10px">Danger</Button>
-      <Button
-        variant="warning"
-        width="10%" m="10px">Warning</Button>
-      <Button
-        variant="info"
-        width="10%" m="10px">Info</Button>
-      <Button
-        variant="light"
-        width="10%" m="10px">Light</Button>
-      <Text variant="H5" m={[5]}>Outline buttons with block border</Text>
-      <Button
-        variant="outlinePrimary"
-        width="10%" m="10px">Primary</Button>
-      <Button
-        variant="outlineSecondary"
-        width="10%" m="10px">Secondary</Button>
-      <Button
-        variant="outlineSuccess"
-        width="10%" m="10px">Success</Button>
-      <Button
-        variant="outlineDanger"
-        width="10%" m="10px">Danger</Button>
-      <Button
-        variant="outlineInfo"
-        width="10%" m="10px">Info</Button>
-      <Button
-        variant="outlineLight"
-        width="10%" m="10px">Light</Button>
-      <Button
-        variant="outlineDark"
-        width="10%" m="10px">Dark</Button>
-      <br></br>
-      <Text variant="H5" m={[5]}>Curved Buttons</Text>
-      <Button
-        variant="outlinePrimary"
-        borderRadius="10px"
-        width="10%" m="10px">Primary</Button>
-      <Button
-        variant="outlineSecondary"
-        borderRadius="10px"
-        width="10%" m="10px">Secondary</Button>
-      <Button
-        variant="outlineSuccess"
-        borderRadius="10px"
-        width="10%" m="10px">Success</Button>
-      <Button
-        variant="outlineDanger"
-        borderRadius="10px"
-        width="10%" m="10px">Danger</Button>
-      <Button
-        variant="outlineInfo"
-        borderRadius="10px"
-        width="10%" m="10px">Info</Button>
-      <Button
-        variant="outlineLight"
-        borderRadius="10px"
-        width="10%" m="10px">Light</Button>
-      <Button
-        variant="outlineDark"
-        borderRadius="10px"
-        width="10%" m="10px">Dark</Button>
-      <br></br>
-      <Text variant="H5" m={[5]}>Rounded Buttons</Text>
-      <Button
-        variant="primary"
-        borderRadius="50px"
-        width="10%" m="10px">Primary</Button>
-      <Button
-        variant="secondary"
-        borderRadius="50px"
-        width="10%" m="10px">Secondary</Button>
-      <Button
-        variant="success"
-        borderRadius="50px"
-        width="10%" m="10px">Success</Button>
-      <Button
-        variant="danger"
-        borderRadius="50px"
-        width="10%" m="10px">Danger</Button>
-      <Button
-        variant="info"
-        borderRadius="50px"
-        width="10%" m="10px">Info</Button>
-      <Button
-        variant="light"
-        borderRadius="50px"
-        width="10%" m="10px">Light</Button>
-      <Text variant="H5" m={[5]}>Buttons With Icons</Text>
       <Flex>
-        <Box width="10%" mr={10}>
-          <Button
-            variant="outlinePrimary"
-            m="10px" withIcon display="flex">
-            <Span mr="10px" className="icon-accuracy"/>
-            Primary
-          </Button>
+        <Select
+          name="greetings"
+          width="50%"
+          height="40px"
+          border="5px solid primary">
+          <option value="1">Hey</option>
+          <option value="2">There</option>
+          <option value="3">Hello</option>
+        </Select>
+      </Flex>
+      <Flex mt={20}>
+        <Select
+          name="greetings"
+          width="50%"
+          height="40px"
+          borderRadius="50px">
+          <option value="1">Hey</option>
+          <option value="2">There</option>
+          <option value="3">Hello</option>
+        </Select>
+      </Flex>
+      <Flex mt={20}>
+        <Select
+          name="greetings"
+          width="50%"
+          height="40px"
+          borderRadius="10px">
+          <option value="1">Hey</option>
+          <option value="2">There</option>
+          <option value="3">Hello</option>
+        </Select>
+      </Flex>
+      Checkboxes
+      <Flex>
+        <Box p={10}>
+          <Checkbox
+            name="services" value="internet" label="Internet"
+            backgroundColor="green"
+            color="black"
+            errorMessage="asdas"
+            isFilled
+            variant={isChecked ? "checked":"unchecked"}
+            onChange={() => {setIschecked(!isChecked)}}/>
         </Box>
-        <Box width="10%" mr={10}>
-          <Button
-            variant="outlineSecondary"
-            m="10px" withIcon display="flex">
-            <Span mr="10px" className="icon-cloud-architecture"/>
-            Secondary
-          </Button>
-        </Box>
-        <Box width="10%" mr={10}>
-          <Button
-            variant="outlineSuccess"
-            m="10px" withIcon display="flex">
-            <Span mr="10px" className="icon-accuracy"/>
-            Success
-          </Button>
-        </Box>
-        <Box width="10%" mr={10}>
-          <Button
-            variant="outlineDanger"
-            m="10px" withIcon display="flex">
-            <Span iconMarginRight className="icon-cloud-architecture"/>
-            Dangerours
-          </Button>
+        <Box p={10}>
+          <Checkbox
+            name="services" value="internet" label="Internet"
+            backgroundColor="green"
+            color="black"
+            errorMessage="asdas"
+            isFilled
+            variant="unchecked"
+            onChange={() => {setIschecked(!isChecked)}}/>
         </Box>
       </Flex>
-      <Text variant="H5" m={[5]}>Buttons With Icons on both sides</Text>
       <Flex>
-        <Box width="10%" mr={10}>
-          <Button
-            variant="outlinePrimary"
-            m="10px" withIcon display="flex">
-            {/* <Span mr="10px" className="icon-accuracy"/> */}
-            <Span leftAlign className="icon-favorite_24px"/>
-            Primary
-          </Button>
-        </Box>
-        <Box width="10%" mr={10}>
-          <Button
-            variant="outlineSecondary"
-            m={[10]} withIcon display="flex">
-            <Span mr="10px" className="icon-cloud-architecture"/>
-            Secondary
-            <Span ml="10px" className="icon-favorite_24px"/>
-          </Button>
-        </Box>
-        <Box width="10%" mr={10}>
-          <Button
-            variant="outlineSuccess"
-            m="10px" withIcon display="flex">
-            <Span mr="10px" className="icon-accuracy"/>
-            Success
-            <Span ml="10px" className="icon-check_circle_outline_24px"/>
-          </Button>
-        </Box>
-        <Box width="10%" mr={10}>
-          <Button
-            variant="outlineDanger"
-            m="10px" withIcon display="flex">
-            <Span iconMarginRight className="icon-cloud-architecture"/>
-            Dangerous
-            <Span ml="10px" className="icon-favorite_24px"/>
-          </Button>
-        </Box>
-      </Flex>
-      <Text variant="H5" m={[5]}>Icon Only Buttons</Text>
-      <Flex>
-        <Box  mr={10}>
-          <Button
-            variant="iconBtn"
+        <Box p={10}>
+          <Checkbox
+            name="services1" value="internet1" label="Internet"
             backgroundColor="black"
             color="white"
-            withIcon
-            m="10px"
-            width="40px">
-            <Span className="icon-info_24px" />
-          </Button>
+            errorMessage=""
+            isFilled
+            variant="checked"
+            onChange={() => {setIschecked(!isChecked)}}/>
         </Box>
-        <Box mr={10}>
-          <Button
-            variant="iconBtn"
-            border="2px solid black"
-            withIcon
-            m="10px"
-            borderRadius={[10]}
-            width="40px">
-            <Span className="icon-delete_24px" />
-          </Button>
-        </Box>
-        <Box mr={10}>
-          <Button
-            variant="iconBtn"
-            withIcon
-            m="10px"
-            width="40px">
-            <Span className="icon-delete_24px" />
-          </Button>
+        <Box p={10}>
+          <Checkbox
+            name="services1" value="internet1" label="Internet"
+            backgroundColor="black"
+            color="white"
+            errorMessage=""
+            isFilled
+            variant="unchecked"
+            onChange={() => {setIschecked(!isChecked)}}/>
         </Box>
       </Flex>
-      <Text variant="H5" m={[5]}>Buttons as tooltips</Text>
       <Flex>
-        <Box  ml={12}>
-          <Button
-            variant="link"
-            width="8%" m="10px" withIcon display="flex">
-            <Span mr="10px" className="icon-info_24px" />
-            Tooltip
-          </Button>
+        <Box p={10}>
+          <Checkbox
+            name="services1" value="internet1" label="Internet"
+            backgroundColor="black"
+            color="black"
+            errorMessage=""
+            isFilled={false}
+            variant="checked"
+            onChange={() => {setIschecked(!isChecked)}}/>
         </Box>
-        <Box  ml={12}>
-          <Button
-            variant="link"
-            width="8%" m="10px" withIcon display="flex">
-            <Span className="icon-delete_24px" />
-            Delete
-          </Button>
-          <Button borderType="curved">Cureved or Rounded</Button>
-          <Button borderType="rounded">Cureved or Rounded</Button>
+        <Box p={10}>
+          <Checkbox
+            name="services1" value="internet1" label="Internet"
+            backgroundColor="black"
+            color="black"
+            errorMessage=""
+            isFilled={false}
+            variant="unchecked"
+            onChange={() => {setIschecked(!isChecked)}}/>
         </Box>
-        <BuildButton>I am base button</BuildButton>
       </Flex>
-
+      <Flex>
+        <Box p={10}>
+          <Checkbox
+            name="services1" value="internet1" label="Internet"
+            backgroundColor="primary"
+            color="primary"
+            errorMessage=""
+            isFilled={false}
+            variant="checked"
+            onChange={() => {setIschecked(!isChecked)}}/>
+        </Box>
+        <Box p={10}>
+          <Checkbox
+            name="services1" value="internet1" label="Internet"
+            backgroundColor="primary"
+            color="primary"
+            errorMessage=""
+            isFilled={false}
+            variant="unchecked"
+            onChange={() => {setIschecked(!isChecked)}}/>
+        </Box>
+      </Flex>
+      <Flex>
+        <Box p={10}>
+          <Checkbox
+            name="services1" value="internet1" label=""
+            backgroundColor="primary"
+            color="primary"
+            borderType="curved"
+            isFilled={false}
+            variant="checked"
+            onChange={() => {setIschecked(!isChecked)}}/>
+        </Box>
+        <Box p={10}>
+          <Checkbox
+            name="services1" value="internet1" label=""
+            backgroundColor="primary"
+            color="primary"
+            borderType="curved"
+            isFilled={false}
+            variant="unchecked"
+            onChange={() => {setIschecked(!isChecked)}}/>
+        </Box>
+      </Flex>
+      <Flex>
+        <Box p={10}>
+          <Checkbox
+            name="services1" value="internet1" label=""
+            backgroundColor="primary"
+            color="primary"
+            borderType="rounded"
+            isFilled={false}
+            variant="checked"
+            onChange={() => {setIschecked(!isChecked)}}/>
+        </Box>
+        <Box p={10}>
+          <Checkbox
+            name="services1" value="internet1" label=""
+            backgroundColor="primary"
+            color="primary"
+            errorMessage="dasdasd"
+            borderType="rounded"
+            isFilled={false}
+            variant="disabled"
+            onChange={() => {setIschecked(!isChecked)}}/>
+        </Box>
+      </Flex>
+      Redio Buttons
+      <Flex>
+        <Radio
+          name="male" value="male" label="Male"
+          backgroundColor="primary"
+          color="primary"
+          errorMessage="dasdasd"
+          borderType="rounded"
+          isFilled={false}
+          variant={gender === 'male' ? 'checked':'unchecked'}
+          onChange={() => {setGender('male')}}/>
+      </Flex>
+      <Flex>
+        <Radio
+          name="female" value="female" label="female"
+          backgroundColor="primary"
+          color="black"
+          errorMessage="dasdasd"
+          borderType="rounded"
+          isFilled={false}
+          variant={gender === 'female' ? 'checked':'unchecked'}
+          onChange={() => {setGender('female')}}/>
+      </Flex>
+      Text Fields
+      <Flex>
+      <Label position="absolute">This is outside label</Label>
+        <Input
+          type="Password"
+          value=""
+          placeholder="Password"
+          label=""
+          id="Password"
+          showErrorMessage
+          errorMessage=""
+          isClearButtonVisible
+          // leftIcon="icon-delete_24px"
+          // leftIconClick={() => alert("left icon clicked")}
+          // rightIcon="icon-delete_24px"
+          // rightIconClick={() => alert("right icon clicked")}
+          clearButtonClasses="icon-delete_24px"
+          onClear={() => {}}
+          // borderType="curved"
+          // borderRadius="10px"
+          withBottomBorderOnly
+          disabled={false}/>
+      </Flex>
+      <Flex mt={10}>
+        <Label>This is outside label</Label>
+        <Input
+          type="Email"
+          value=""
+          placeholder="Email"
+          label="Email"
+          id="Email"
+          showErrorMessage
+          errorMessage=""
+          isClearButtonVisible
+          // leftIcon="icon-delete_24px"
+          // leftIconClick={() => alert("left icon clicked")}
+          // rightIcon="icon-delete_24px"
+          // rightIconClick={() => alert("right icon clicked")}
+          // borderType="curved"
+          // borderRadius="10px"
+          // withBottomBorderOnly
+          disabled={false}/>
+      </Flex>
+      <Flex mt={10}>
+        <Input
+          type="Email"
+          value=""
+          placeholder="Email"
+          label="Email"
+          id="Email"
+          showErrorMessage
+          errorMessage=""
+          isClearButtonVisible
+          // leftIcon="icon-delete_24px"
+          // leftIconClick={() => alert("left icon clicked")}
+          // rightIcon="icon-delete_24px"
+          // rightIconClick={() => alert("right icon clicked")}
+          borderType="curved"
+          // borderRadius="10px"
+          // withBottomBorderOnly
+          disabled={false}/>
+      </Flex>
+      <Flex mt={10}>
+        <Input
+          type="search"
+          value="sdfsdf"
+          placeholder="Emasdfsdfsdfil"
+          label="Email"
+          id="Email"
+          showErrorMessage
+          errorMessage=""
+          isClearButtonVisible
+          // leftIcon="icon-delete_24px"
+          // leftIconClick={() => alert("left icon clicked")}
+          // rightIcon="icon-delete_24px"
+          // rightIconClick={() => alert("right icon clicked")}
+          borderType="rounded"
+          // borderRadius="10px"
+          // withBottomBorderOnly
+          disabled={false}/>
+      </Flex>
+      <Flex width="100%" mt={10}>
+        <Input
+          type="Email"
+          value="asdasdasdas"
+          textAlign="right"
+          bg="primary"
+          placeholder="Email"
+          label="Email"
+          id="Email"
+          showErrorMessage
+          errorMessage=""
+          isClearButtonVisible
+          leftIcon="icon-search_24px"
+          validationIcon="icon-check_circle_24px"
+          isValid
+          // leftIconClick={() => alert("left icon clicked")}
+          rightIcon="icon-clear_24px"
+          // rightIconClick={() => alert("right icon clicked")}
+          borderType="rounded"
+          // borderRadius="10px"
+          color="orange"
+          borderBottom="5px solid red"
+          withBottomBorderOnly
+          disabled={false}/>
+      </Flex>
+      {/* <Flex>
+        <Box mt={10}>
+          <Checkbox
+            name="services" value="internet" label="Internet"
+            backgroundColor="yellow"
+            color="black"
+            errorMessage=""
+            isFilled
+            variant={isChecked ? "checked":"unchecked"}
+            onChange={() => {setIschecked(!isChecked)}}/>
+        </Box>
+      </Flex> */}
     </ThemeProvider>
-  )
+  );
 }
 
 export default App;
