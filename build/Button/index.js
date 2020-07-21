@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { compose, border, layout, variant, space, typography, color } from 'styled-system';
-import { capitalizeFirstLetter } from '../../utils/utils';
+import { capitalizeFirstLetter } from '../utils/utils';
 
 const getDerivedStyles = props => {
   const {
@@ -45,7 +45,6 @@ const Button = props => {
 
 Button.defaultProps = {
   disabled: false,
-  variant: 'primary',
   fontSize: [2, 3],
   lineHeight: [4],
   m: [0],

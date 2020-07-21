@@ -16,6 +16,7 @@ import './components/icomons_styles.scss';
 import Checkbox from './components/checkbox';
 import Radio from './components/radio';
 import Select from './components/select';
+import Label from './components/label';
 
 function App() {
   console.log("radio is ", Radio)
@@ -23,8 +24,8 @@ function App() {
   const [gender, setGender] = React.useState("male")
   return (
     <ThemeProvider theme={theme}>
-      {/* <Flex>
-        <Select 
+      <Flex>
+        <Select
           name="greetings"
           width="50%"
           height="40px"
@@ -35,7 +36,7 @@ function App() {
         </Select>
       </Flex>
       <Flex mt={20}>
-        <Select 
+        <Select
           name="greetings"
           width="50%"
           height="40px"
@@ -46,7 +47,7 @@ function App() {
         </Select>
       </Flex>
       <Flex mt={20}>
-        <Select 
+        <Select
           name="greetings"
           width="50%"
           height="40px"
@@ -215,6 +216,7 @@ function App() {
       </Flex>
       Text Fields
       <Flex>
+      <Label position="absolute">This is outside label</Label>
         <Input
           type="Password"
           value=""
@@ -234,8 +236,9 @@ function App() {
           // borderRadius="10px"
           withBottomBorderOnly
           disabled={false}/>
-      </Flex> */}
+      </Flex>
       <Flex mt={10}>
+        <Label>This is outside label</Label>
         <Input
           type="Email"
           value=""
@@ -275,9 +278,9 @@ function App() {
       </Flex>
       <Flex mt={10}>
         <Input
-          type="Email"
-          value=""
-          placeholder="Email"
+          type="search"
+          value="sdfsdf"
+          placeholder="Emasdfsdfsdfil"
           label="Email"
           id="Email"
           showErrorMessage
@@ -295,7 +298,9 @@ function App() {
       <Flex width="100%" mt={10}>
         <Input
           type="Email"
-          value=""
+          value="asdasdasdas"
+          textAlign="right"
+          bg="primary"
           placeholder="Email"
           label="Email"
           id="Email"
@@ -310,9 +315,23 @@ function App() {
           // rightIconClick={() => alert("right icon clicked")}
           borderType="rounded"
           // borderRadius="10px"
+          color="orange"
+          borderBottom="5px solid red"
           withBottomBorderOnly
           disabled={false}/>
       </Flex>
+      {/* <Flex>
+        <Box mt={10}>
+          <Checkbox
+            name="services" value="internet" label="Internet"
+            backgroundColor="yellow"
+            color="black"
+            errorMessage=""
+            isFilled
+            variant={isChecked ? "checked":"unchecked"}
+            onChange={() => {setIschecked(!isChecked)}}/>
+        </Box>
+      </Flex> */}
     </ThemeProvider>
   );
 }

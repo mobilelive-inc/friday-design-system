@@ -14,7 +14,7 @@ const getDerivedProps = (props) => {
   const {
     theme: {
       colors: {
-        red, black, white, grayDark
+        red, black, white, grayDark, grayLight
       }, borderCurved, borderRounded,
     },
     error,
@@ -38,6 +38,10 @@ const getDerivedProps = (props) => {
       color: grayDark,
       opacity: 1,
     },
+    '&:disabled':{
+      backgroundColor: grayLight,
+      border: 'none'
+    }
   };
   // conditional styles
   if(!withBottomBorderOnly && borderType && borderType === 'curved'){
@@ -84,7 +88,9 @@ export const Input = styled.input(
 // )
 
 export const InputWrapper = styled.div`
-  height: 'auto',
+  height: 'auto';
+  width: ${props => (props.width ? props.width : '100%')};
+  display: ${props => (props.display ? props.display : 'block')};
   ${
   props => props.rightIcon &&
   `position:relative;
@@ -103,7 +109,7 @@ export const RightIconButton = styled.button`
   position: absolute;
   left: calc(100% - 30px);
   width: 20px;
-  top: 40px;
+  top: calc(100% - 25px);
   font-size: 16px;
   z-index: 20;
   cursor: pointer;
@@ -119,10 +125,24 @@ export const LeftIconButton = styled.button`
   position: absolute;
   right: calc(100% - 30px);
   width: 20px;
-  top: 40px;
+  top: calc(100% - 25px);
   font-size: 16px;
   z-index: 20;
   cursor: pointer;
+  text-decoration: none;
+  cursor:pointer;
+  background-color: transparent !important;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+`
+export const LeftIcon = styled.span`
+  position: absolute;
+  right: calc(100% - 30px);
+  width: 20px;
+  top: calc(100% - 25px);
+  font-size: 16px;
+  z-index: 20;
   text-decoration: none;
   cursor:pointer;
   background-color: transparent !important;
@@ -134,7 +154,7 @@ export const ValidationIcon = styled.span`
   position: absolute;
   left: calc(100% + 10px);
   width: 20px;
-  top: 40px;
+  top: 40px;top: calc(100% - 25px);
   color: ${props => (props.isValid ? 'green': 'red')};
   font-size: 18px;
 `;

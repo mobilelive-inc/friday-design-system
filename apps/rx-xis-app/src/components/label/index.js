@@ -4,6 +4,7 @@ import {
   color,
   layout,
   space,
+  position,
   typography
 } from 'styled-system';
 
@@ -16,6 +17,7 @@ const Label = styled('label')(
     color,
     space,
     typography,
+    position,
     layout,
   ),
 );

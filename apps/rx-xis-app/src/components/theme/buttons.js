@@ -1,4 +1,4 @@
-import { lighten } from '../../utils/lighten';
+import { lighten } from '../utils/lighten';
 import { colors } from './colors'
 
 const buttonBorder = '2px solid transparent';

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '../box';
 import {
-   Input, InputContainer, Flex
+  Input, InputContainer, Flex
 } from './css';
 import Span from '../span/span';
 
@@ -10,55 +10,55 @@ import Label from '../label';
 /**
  * Checkbox
  */
-function Checkbox(props) {
-  const {id,
-  label,
-  onChange,
-  name,
-  testId,
-  errorMessage,
-  backgroundColor,
-  color,
-  border,
-  isFilled,
-  variant,
-  borderType
-} = props;
-console.log("parent props ", props)
+function Radio(props) {
+  const {
+    id,
+    label,
+    onChange,
+    name,
+    testId,
+    errorMessage,
+    backgroundColor,
+    color,
+    border,
+    isFilled,
+    variant,
+    className,
+    borderType
+  } = props;
   const isChecked = variant === 'checked';
   const isDisabled = variant === 'disabled';
   return (
-    <Flex alignItems="center" data-testid="checkbox">
-      <Box>
-        <InputContainer
-          variant={variant}
-          error={errorMessage}
-          bg={backgroundColor}
-          isFilled={isFilled}
-          border={border}
-          borderType={borderType}
-          color={color}>
-          {variant === 'checked' && (
-            <Span
-              className="icon-check_circle_outline_24px"/>
-          )}
-          <Input
-            checked={variant === 'checked'}
-            disabled={isDisabled}
-            id={name}
-            name={name}
-            onChange={onChange}
-            />
-        </InputContainer>
-      </Box>
+    <Flex alignItems="center" data-testid="radio">
+      <InputContainer
+        variant={variant}
+        error={errorMessage}
+        bg={backgroundColor}
+        isFilled={isFilled}
+        border={border}
+        borderType={borderType}
+        className={className}
+        color={color}>
+        {variant === 'checked' && (
+          <Span
+            className="icon-check_circle_outline_24px"/>
+        )}
+        <Input
+          checked={variant === 'checked'}
+          disabled={isDisabled}
+          id={name}
+          testId={testId}
+          name={name}
+          onChange={onChange}/>
+      </InputContainer>
       <Label
         htmlFor={id}
         error={errorMessage}
-        pl={[17]}
-        mb={0}
+        pl={[10]}
+        mt='-22px'
         lineHeight={10}
-        color={errorMessage && !isChecked ? 'errorRed' : 'charcoal'}
-        fontWeight={isChecked ? [2] : [0]}
+        fontWeight={600}
+        color={errorMessage && !isChecked ? 'error' : 'black'}
         as="label">
         {label}
       </Label>
@@ -66,7 +66,7 @@ console.log("parent props ", props)
   );
 }
 
-Checkbox.propTypes = {
+Radio.propTypes = {
   /**
    * The label.
    */
@@ -92,11 +92,10 @@ Checkbox.propTypes = {
   borderType: PropTypes.oneOf(['curved', 'rounded'])
 };
 
-Checkbox.defaultProps = {
+Radio.defaultProps = {
   variant: 'unchecked',
   onChange: () => {},
   errorMessage: '',
-  size: 2,
 };
 
-export default Checkbox;
+export default Radio;
