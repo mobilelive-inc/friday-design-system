@@ -66,6 +66,7 @@ function Checkbox(props) {
   );
 }
 
+
 Checkbox.propTypes = {
   /**
    * The label.
