@@ -1,13 +1,25 @@
-import { colors } from './colors';
-import { buttons, borderCurved, borderRounded } from './buttons';
-import { iconMarginLeft, iconMarginRight, micro, tiny, small, mid, large, xLarge } from './spacing'; // Typography
+"use strict";
 
-const fonts = {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.typography = exports.zIndices = exports.radius = exports.space = exports.mediaqueryBreakpoints = exports.breakpoints = exports.borderWidths = exports.letterSpacings = exports.lineHeights = exports.fontWeights = exports.fontSizes = exports.fontFamilies = exports.font = void 0;
+
+var _colors = require("./colors");
+
+var _buttons = require("./buttons");
+
+var _spacing = require("./spacing");
+
+// Typography
+var fonts = {
   Gotham: "Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif"
 };
-export const font = fonts.Gotham;
-export const fontFamilies = fonts;
-export const fontSizes = ['0.625rem', // 0
+var font = fonts.Gotham;
+exports.font = font;
+var fontFamilies = fonts;
+exports.fontFamilies = fontFamilies;
+var fontSizes = ['0.625rem', // 0
 '0.75rem', // 1
 '0.875rem', // 2
 '1rem', // 3
@@ -34,12 +46,14 @@ export const fontSizes = ['0.625rem', // 0
 '5.75rem', // 24
 '6rem' // 25
 ];
-export const fontWeights = [300, // 0
+exports.fontSizes = fontSizes;
+var fontWeights = [300, // 0
 400, // 1
 500, // 2
 700 // 3
 ];
-export const lineHeights = ['0.875rem', // 0
+exports.fontWeights = fontWeights;
+var lineHeights = ['0.875rem', // 0
 '1rem', // 1
 '1.125rem', // 2
 '1.2rem', // 3
@@ -53,13 +67,15 @@ export const lineHeights = ['0.875rem', // 0
 '3rem', // 11
 '2rem' // 12
 ];
-export const letterSpacings = [1.6, // 0
+exports.lineHeights = lineHeights;
+var letterSpacings = [1.6, // 0
 1.2, // 1
 -0.2, // 2
 1, // 3
 2.0 // 4
 ];
-export const borderWidths = {
+exports.letterSpacings = letterSpacings;
+var borderWidths = {
   read: '0',
   // 0
   hover: '1px',
@@ -67,20 +83,23 @@ export const borderWidths = {
   unread: '4px' // 2
 
 };
-export const breakpoints = ['0', // 0
+exports.borderWidths = borderWidths;
+var breakpoints = ['0', // 0
 '576px', // 1
 '768px', // 2
 '992px', // 3
 '1200px' // 4
 ];
-export const mediaqueryBreakpoints = {
+exports.breakpoints = breakpoints;
+var mediaqueryBreakpoints = {
   xs: breakpoints[0],
   sm: breakpoints[1],
   md: breakpoints[2],
   lg: breakpoints[3],
   xl: breakpoints[4]
 };
-export const space = ['0', // 0
+exports.mediaqueryBreakpoints = mediaqueryBreakpoints;
+var space = ['0', // 0
 '0.25rem', // 1
 '0.375rem', // 2
 '0.5rem', // 3
@@ -119,17 +138,19 @@ export const space = ['0', // 0
 '-1rem', // 36
 '6.25rem' // 37
 ];
-export const radius = 4;
-const zindexDropdown = 1000;
-const zindexSticky = 1020;
-const zindexFixed = 1030;
-const zindexModalBackdrop = 1040;
-const zindexModal = 1050;
-const zindexPopover = 1060;
-const zindexTooltip = 1070;
-const zindexPlanHeader = 0;
-const zindexPlanContent = -1;
-export const zIndices = [zindexDropdown, // 0
+exports.space = space;
+var radius = 4;
+exports.radius = radius;
+var zindexDropdown = 1000;
+var zindexSticky = 1020;
+var zindexFixed = 1030;
+var zindexModalBackdrop = 1040;
+var zindexModal = 1050;
+var zindexPopover = 1060;
+var zindexTooltip = 1070;
+var zindexPlanHeader = 0;
+var zindexPlanContent = -1;
+var zIndices = [zindexDropdown, // 0
 zindexSticky, // 1
 zindexFixed, // 2
 zindexModalBackdrop, // 3
@@ -140,7 +161,8 @@ zindexPlanHeader, // 7
 zindexPlanContent // 8
 ]; // variants definitions
 
-export const typography = {
+exports.zIndices = zIndices;
+var typography = {
   H1: {
     fontSize: fontSizes[11],
     fontWeight: fontWeights[2],
@@ -172,30 +194,32 @@ export const typography = {
     lineHeight: lineHeights[3]
   }
 };
-const opacity = 0.6;
-export default {
+exports.typography = typography;
+var opacity = 0.6;
+var _default = {
   breakpoints,
-  buttons,
-  borderCurved,
-  colors,
+  buttons: _buttons.buttons,
+  borderCurved: _buttons.borderCurved,
+  colors: _colors.colors,
   font,
   fontFamilies,
   fontSizes,
   fontWeights,
-  iconMarginLeft,
-  iconMarginRight,
+  iconMarginLeft: _spacing.iconMarginLeft,
+  iconMarginRight: _spacing.iconMarginRight,
   lineHeights,
   letterSpacings,
   radius,
-  borderRounded,
+  borderRounded: _buttons.borderRounded,
   space,
   opacity,
   zIndices,
   typography,
-  micro,
-  tiny,
-  small,
-  mid,
-  large,
-  xLarge
+  micro: _spacing.micro,
+  tiny: _spacing.tiny,
+  small: _spacing.small,
+  mid: _spacing.mid,
+  large: _spacing.large,
+  xLarge: _spacing.xLarge
 };
+exports.default = _default;

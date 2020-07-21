@@ -1,70 +1,51 @@
-let _ = t => t,
-    _t,
-    _t2,
-    _t3;
+"use strict";
 
-import { createGlobalStyle } from 'styled-components';
-import MediaQuery from '../../utils/mediaQuery';
-import { colors } from './colors'; // add style from reset here
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-const GlobalStyle = /*#__PURE__*/createGlobalStyle(_t || (_t = _`
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
-  @font-face { font-display: swap; }
+var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
 
-  body {
-    font-family: Gotham SSm A, Gotham SSm B, sans-serif !important;
-    font-style: normal;
-  }
+var _styledComponents = require("styled-components");
 
-  html,
-  body {
-    height: 100%;
-    width: 100%;
-  }
+var _mediaQuery = _interopRequireDefault(require("../../utils/mediaQuery"));
 
-  body {
-    background-color: ${0};
-  }
+var _colors = require("./colors");
 
-  body.disable-scroll {
-   overflow:hidden;
-   ${0};
- }
+function _templateObject3() {
+  var data = (0, _taggedTemplateLiteral2.default)(["\n      position: relative;\n    "]);
 
-  p,
-  span,
-  label {
-    line-height: 1.5em;
-    font-weight: 300;
-  }
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
 
-  input, select, textarea {
-    background-color: transparent;
-    border-style: none;
-    color: inherit;
-    font-size: 1em;
-    margin: 0;
-  }
+  return data;
+}
 
-  body, h1, h2, h3, h4 {
-    margin: 0;
-  }
-  .ReactModal__Body--open {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    ${0};
-  }
+function _templateObject2() {
+  var data = (0, _taggedTemplateLiteral2.default)(["\n     overflow:visible;\n   "]);
 
-  .noPaddingLeftRight div {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  
-`), colors.white, MediaQuery.desktop(_t2 || (_t2 = _`
-     overflow:visible;
-   `)), MediaQuery.desktop(_t3 || (_t3 = _`
-      position: relative;
-    `)));
-export default GlobalStyle;
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = (0, _taggedTemplateLiteral2.default)(["\n\n  @font-face { font-display: swap; }\n\n  body {\n    font-family: Gotham SSm A, Gotham SSm B, sans-serif !important;\n    font-style: normal;\n  }\n\n  html,\n  body {\n    height: 100%;\n    width: 100%;\n  }\n\n  body {\n    background-color: ", ";\n  }\n\n  body.disable-scroll {\n   overflow:hidden;\n   ", ";\n }\n\n  .ReactModal__Body--open {\n    overflow: hidden;\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    ", ";\n  }\n\n  .noPaddingLeftRight div {\n    padding-left: 0 !important;\n    padding-right: 0 !important;\n  }\n  \n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+// add style from reset here
+var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject(), _colors.colors.white, _mediaQuery.default.desktop(_templateObject2()), _mediaQuery.default.desktop(_templateObject3()));
+var _default = GlobalStyle;
+exports.default = _default;

@@ -8,7 +8,7 @@ import {
   typography,
   color,
 } from 'styled-system';
-import { capitalizeFirstLetter } from '../../utils/utils';
+import { capitalizeFirstLetter } from '../utils/utils';
 
 const getDerivedProps = (props) => {
   const {
