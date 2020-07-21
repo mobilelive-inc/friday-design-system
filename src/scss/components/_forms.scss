@@ -230,6 +230,9 @@ input[type='search'] {
         padding: var(--input-padding-y) calc(var(--input-padding-x) * 3.5)
           var(--input-padding-y) var(--input-padding-x);
       }
+      ~ .clearCrossBtn {
+        display: flex;
+      }
     }
 
     .clearCrossBtn {
@@ -246,7 +249,6 @@ input[type='search'] {
       padding: 0;
       border: none;
       height: var(--input-height);
-      display: flex;
       align-items: center;
       justify-content: center;
     }
@@ -434,6 +436,7 @@ textarea.formControl {
   flex-wrap: wrap;
   margin-right: calc(var(--form-grid-gutter-width) / 2 * -1);
   margin-left: calc(var(--form-grid-gutter-width) / 2 * -1);
+  align-items: flex-end;
 
   > .col,
   > [class*='col-'] {
