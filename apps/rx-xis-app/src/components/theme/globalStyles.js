@@ -30,24 +30,6 @@ const GlobalStyle = createGlobalStyle`
    `};
  }
 
-  p,
-  span,
-  label {
-    line-height: 1.5em;
-    font-weight: 300;
-  }
-
-  input, select, textarea {
-    background-color: transparent;
-    border-style: none;
-    color: inherit;
-    font-size: 1em;
-    margin: 0;
-  }
-
-  body, h1, h2, h3, h4 {
-    margin: 0;
-  }
   .ReactModal__Body--open {
     overflow: hidden;
     position: fixed;
