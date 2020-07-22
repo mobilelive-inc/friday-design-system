@@ -180,7 +180,7 @@ input[type='search'] {
     padding: var(--input-padding-y) 2rem;
   }
 
-  .calenderBtn {
+  .eventBtn {
     position: absolute;
     width: 10px;
     top: 0;
@@ -200,7 +200,7 @@ input[type='search'] {
   .clearCrossBtn {
     display: none;
   }
-
+  //select styling
   &__select {
     position: relative;
 
@@ -254,13 +254,13 @@ input[type='search'] {
     }
 
     //if input takes .formControlHolder__calendar class following code will run todo
-    .formControl__calendar {
+    .formControl__event {
       &.formControl {
         padding: var(--input-padding-y) calc(var(--input-padding-x) * 1.8)
           var(--input-padding-y);
       }
 
-      ~ .calenderBtn {
+      ~ .eventBtn {
         left: 8px;
         display: flex;
         width: 13px;
@@ -268,6 +268,7 @@ input[type='search'] {
       }
     }
   }
+  //select styling
 }
 
 fieldset {
@@ -289,15 +290,6 @@ fieldset {
   }
 }
 
-label {
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-base);
-  line-height: 1;
-  color: var(--gray-dark);
-}
-
 input[type='date'],
 input[type='time'],
 input[type='datetime-local'],
@@ -306,111 +298,44 @@ input[type='month'] {
     appearance: none; // Fix appearance for date inputs in Safari
   }
 }
-
-select.formControl {
-  &:focus::-ms-value {
-    // Suppress the nested default white text on blue background highlight given to
-    // the selected option text when the (still closed) <select> receives focus
-    // in IE and (under certain conditions) Edge, as  it looks bad and cannot be made to
-    // match the appearance of the native widget.
-    // See https://github.com/twbs/bootstrap/issues/19398.
-    color: var(--input-color);
-    background-color: var(--input-bg);
-  }
-}
-
-// Make file inputs better match text inputs by forcing them to new lines.
-.formControl-file,
-.formControl-range {
-  display: block;
-  width: 100%;
-}
-
 //
 // Labels
 //
-
-// For use with horizontal and inline forms, when you need the label (or legend)
-// text to align with the form controls.
-.col-form-label {
-  padding-top: add(var(--input-padding-y), var(--input-border-width));
-  padding-bottom: add(var(--input-padding-y), var(--input-border-width));
-  margin-bottom: 0; // Override the `<label>/<legend>` default
-  @include font-size(inherit); // Override the `<legend>` default
+label {
+  display: inline-block;
+  margin-bottom: var(--label-margin-bottom);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
   line-height: var(--input-line-height);
-}
-
-.col-form-label-lg {
-  padding-top: add(var(--input-padding-y) -lg, var(--input-border-width));
-  padding-bottom: add(var(--input-padding-y) -lg, var(--input-border-width));
-  @include font-size(var(--input-font-size-lg));
-  line-height: var(--input-line-height-lg);
-}
-
-.col-form-label-sm {
-  padding-top: add(var(--input-padding-y) -sm, var(--input-border-width));
-  padding-bottom: add(var(--input-padding-y) -sm, var(--input-border-width));
-  @include font-size(var(--input-font-size-sm));
-  line-height: var(--input-line-height-sm);
-}
-
-// Readonly controls as plain text
-//
-// Apply class to a readonly input to make it appear like regular plain
-// text (without any border, background color, focus indicator)
-
-.formControl-plaintext {
-  display: block;
-  width: 100%;
-  padding: var(--input-padding-y) 0;
-  margin-bottom: 0; // match inputs if this class comes on inputs with default margins
-  @include font-size(var(--input-font-size));
-  line-height: var(--input-line-height);
-  color: var(--input-plaintext-color);
-  background-color: transparent;
-  border: solid transparent;
-  border-width: var(--input-border-width) 0;
-
-  &.formControl-sm,
-  &.formControl-lg {
-    padding-right: 0;
-    padding-left: 0;
+  color: var(--gray-dark);
+  position: relative;
+  &.required {
+    &:after {
+      content: '*';
+      color: var(--danger);
+    }
   }
-}
-
-// Form control sizing
-//
-// Build on `.formControl` with modifier classes to decrease or increase the
-// height and font-size of form controls.
-//
-// Repeated in `_input_group.scss` to avoid Sass extend issues.
-
-.formControl-sm {
-  height: var(--input-height-sm);
-  padding: var(--input-padding-y-sm) var(--input-padding-x-sm);
-  @include font-size(var(--input-font-size-sm));
-  line-height: var(--input-line-height-sm);
-  @include border-radius(var(--input-border-radius-sm));
-}
-
-.formControl-lg {
-  height: var(--input-height-lg);
-  padding: var(--input-padding-y-lg) var(--input-padding-x-lg);
-  @include font-size(var(--input-font-size-lg));
-  line-height: var(--input-line-height-lg);
-  @include border-radius(var(--input-border-radius-lg));
-}
-
-// stylelint-disable-next-line no-duplicate-selectors
-select.formControl {
-  &[size],
-  &[multiple] {
-    height: auto;
+  &.info {
+    &:after {
+      content: '\e93d';
+      font-family: 'design-system-icons' !important;
+      color: var(--dark);
+      font-size: inherit;
+      position: relative;
+      right: -4px;
+      top: 1px;
+    }
   }
-}
-
-textarea.formControl {
-  height: auto;
+  &--lg {
+    padding-bottom: calc(var(--label-margin-bottom) * 1.5rem);
+    @include font-size(var(--input-font-size-lg));
+    line-height: var(--input-line-height-lg);
+  }
+  &--sm {
+    padding-bottom: calc(var(--label-margin-bottom) * 0.5rem);
+    @include font-size(var(--input-font-size-sm));
+    line-height: var(--input-line-height-sm);
+  }
 }
 
 // Form groups
@@ -420,11 +345,6 @@ textarea.formControl {
 
 .formGroup {
   margin-bottom: var(--formGroup-margin-bottom);
-}
-
-.form-text {
-  display: block;
-  margin-top: var(--form-text-margin-top);
 }
 
 // Form grid
@@ -862,20 +782,22 @@ textarea.formControl {
     }
   }
 
-  &.disabled {
+  .disabled {
     cursor: default;
     pointer-events: none;
 
     input {
       pointer-events: none;
+      background-color: var(--gray);
+      cursor: default;
 
       &:checked ~ .radioBtnFake {
         border-color: var(--gray) !important;
         background-color: var(--gray);
 
         &:after {
-          border: solid var(--gray-lighter);
-          border-width: 0 3px 3px 0;
+          border: solid var(--gray);
+          background-color: var(--gray);
         }
       }
 
@@ -887,104 +809,15 @@ textarea.formControl {
       }
     }
 
-    ~ .checkboxFake {
+    .radioBtnFake {
       border-color: var(--gray) !important;
       background-color: var(--gray);
     }
 
-    .radioLabel {
+    ~ .radioLabel {
       cursor: default;
-      pointer-events: none;
       color: var(--gray);
-    }
-  }
-}
-
-.form-check-inline {
-  display: inline-flex;
-  align-items: center;
-  padding-left: 0; // Override base .form-check
-  margin-right: var(--form-check-inline-margin-x);
-
-  // Undo .form-check-input defaults and add some `margin-right`.
-  .form-check-input {
-    position: static;
-    margin-top: 0;
-    margin-right: var(--form-check-inline-input-margin-x);
-    margin-left: 0;
-  }
-}
-
-.form-inline {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center; // Prevent shorter elements from growing to same height as others (e.g., small buttons growing to normal sized button height)
-
-  // Because we use flex, the initial sizing of checkboxes is collapsed and
-  // doesn't occupy the full-width (which is what we want for xs grid tier),
-  // so we force that here.
-  .form-check {
-    width: 100%;
-  }
-
-  // Kick in the inline
-  @include media-breakpoint-up(sm) {
-    label {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 0;
-    }
-
-    // Inline-block all the things for "inline"
-    .formGroup {
-      display: flex;
-      flex: 0 0 auto;
-      flex-flow: row wrap;
-      align-items: center;
-      margin-bottom: 0;
-    }
-
-    // Allow folks to *not* use `.formGroup`
-    .formControl {
-      display: inline-block;
-      width: auto; // Prevent labels from stacking above inputs in `.formGroup`
-      vertical-align: middle;
-    }
-
-    // Make static controls behave like regular ones
-    .formControl-plaintext {
-      display: inline-block;
-    }
-
-    .input-group,
-    .custom-select {
-      width: auto;
-    }
-
-    // Remove default margin on radios/checkboxes that were used for stacking, and
-    // then undo the floating of radios and checkboxes to match.
-    .form-check {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: auto;
-      padding-left: 0;
-    }
-    .form-check-input {
-      position: relative;
-      flex-shrink: 0;
-      margin-top: 0;
-      margin-right: var(--form-check-input-margin-x);
-      margin-left: 0;
-    }
-
-    .custom-control {
-      align-items: center;
-      justify-content: center;
-    }
-    .custom-control-label {
-      margin-bottom: 0;
+      pointer-events: none;
     }
   }
 }
