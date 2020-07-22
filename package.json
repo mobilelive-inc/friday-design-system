@@ -27,11 +27,14 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
+    "webpack": "webpack",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "rx:build":"npm run webpack -- --env.mode production",
     "rx:bundle": "rm -rf /build && cross-env NODE_ENV=emotion babel apps/rx-xis-app/src/components -d build",
     "rx:publish": "yarn publish build",
     "ng:a11y": "a11y http://localhost:4200/"
+
   },
   "private": false,
   "dependencies": {

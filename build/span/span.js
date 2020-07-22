@@ -1,8 +1,18 @@
-import styled from 'styled-components';
-import { compose, layout, space, typography } from 'styled-system';
+"use strict";
 
-const getDerivedStyles = spanProps => {
-  const styles = {};
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _styledSystem = require("styled-system");
+
+var getDerivedStyles = spanProps => {
+  var styles = {};
   if (!spanProps) return styles;
 
   if (spanProps.iconMarginLeft) {
@@ -16,8 +26,9 @@ const getDerivedStyles = spanProps => {
   return styles;
 };
 
-const Span = /*#__PURE__*/styled('div').withConfig({
+var Span = (0, _styledComponents.default)('div').withConfig({
   displayName: "span__Span",
   componentId: "sc-173pz2m-0"
-})(props => getDerivedStyles(props), compose(typography, space, layout));
-export default Span;
+})(props => getDerivedStyles(props), (0, _styledSystem.compose)(_styledSystem.typography, _styledSystem.space, _styledSystem.layout));
+var _default = Span;
+exports.default = _default;

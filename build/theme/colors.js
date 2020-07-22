@@ -1,4 +1,10 @@
-export const colors = {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.colors = void 0;
+var colors = {
   primary: '#F48245',
   secondary: '#707070',
   success: '#34A84D',
@@ -6,6 +12,7 @@ export const colors = {
   warning: '#ffc107',
   info: '#66C9D5',
   light: '#e5e5e5',
+  error: '#DF4B4B',
   white: '#fff',
   grayLighter: '#F2F2F2',
   grayLight: '#dee2e6',
@@ -28,3 +35,4 @@ export const colors = {
   green: '#34A84D',
   teal: '#20c997'
 };
+exports.colors = colors;

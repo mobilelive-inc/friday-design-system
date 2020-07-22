@@ -17,22 +17,45 @@ import Checkbox from './components/checkbox';
 import Radio from './components/radio';
 import Select from './components/select';
 import Label from './components/label';
+import Option from './components/option';
 
 function App() {
+  const options = [
+    {
+      id:0,
+      value: 'Javascript'
+    },
+    {
+      id:2,
+      value: 'Java'
+    },
+    {
+      id:3,
+      value: 'C++'
+    }
+  ]
   console.log("radio is ", Radio)
   const [isChecked, setIschecked] = React.useState(false)
-  const [gender, setGender] = React.useState("male")
+  const [gender, setGender] = React.useState("male");
+  const [selected, setSelected] = React.useState(null);
   return (
     <ThemeProvider theme={theme}>
       <Flex>
         <Select
           name="greetings"
-          width="50%"
+          width="30%"
           height="40px"
-          border="5px solid primary">
-          <option value="1">Hey</option>
-          <option value="2">There</option>
-          <option value="3">Hello</option>
+          rightIcon="icon-delete_24px"
+          backgroundColor="gray"
+          placeholder="select on option"
+          chevron="icon-keyboard_arrow_down_24px"
+          value={selected}
+          onChange={(e) => setSelected(e.target.value)}
+          color="white">
+          
+          {
+            options.map((option) => <Option value={option.id}>{option.value}</Option>)
+          }
         </Select>
       </Flex>
       <Flex mt={20}>
@@ -216,7 +239,7 @@ function App() {
       </Flex>
       Text Fields
       <Flex>
-      <Label position="absolute">This is outside label</Label>
+        <Label position="absolute">This is outside label</Label>
         <Input
           type="Password"
           value=""

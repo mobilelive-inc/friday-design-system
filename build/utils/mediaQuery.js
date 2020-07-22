@@ -1,7 +1,20 @@
-import { css } from 'styled-components';
-import { mediaqueryBreakpoints } from '../components/theme/defaultTheme';
-export const desktopOnly = `@media only screen and (min-width: ${mediaqueryBreakpoints.md})`;
-const MediaQuery = {
-  desktop: (...args) => css(["", "{", ";}"], desktopOnly, css(...args))
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.desktopOnly = void 0;
+
+var _styledComponents = require("styled-components");
+
+var _defaultTheme = require("../components/theme/defaultTheme");
+
+var desktopOnly = "@media only screen and (min-width: ".concat(_defaultTheme.mediaqueryBreakpoints.md, ")");
+exports.desktopOnly = desktopOnly;
+var MediaQuery = {
+  desktop: function desktop() {
+    return (0, _styledComponents.css)(["", "{", ";}"], desktopOnly, (0, _styledComponents.css)(...arguments));
+  }
 };
-export default MediaQuery;
+var _default = MediaQuery;
+exports.default = _default;
