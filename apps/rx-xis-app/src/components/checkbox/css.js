@@ -42,7 +42,7 @@ export const Input = styled.input.attrs({ type: 'checkbox' })(
 );
 
 
-const getDerivedStyles = (props) => {
+const getDerivedStyles = (props) => { 
   const {
     isFilled, theme:{
       colors, borderCurved, borderRounded
