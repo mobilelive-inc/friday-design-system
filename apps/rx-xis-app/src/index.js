@@ -43,15 +43,21 @@ function App() {
       <Flex>
         <Select
           name="greetings"
-          width="30%"
+          width="15%"
           height="40px"
           rightIcon="icon-delete_24px"
-          backgroundColor="gray"
+          leftIcon="icon-delete_24px"
+          onLeftIconClick={() => alert("on left")}
+          // backgroundColor="gray"
           placeholder="select on option"
+          // borderType="rounded"
+          errorMessage="this is error"
+          validationIcon="icon-check_circle_24px"
+          // withBorderBottomOnly
           chevron="icon-keyboard_arrow_down_24px"
           value={selected}
           onChange={(e) => setSelected(e.target.value)}
-          color="white">
+          color="black">
           
           {
             options.map((option) => <Option value={option.id}>{option.value}</Option>)

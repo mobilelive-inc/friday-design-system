@@ -17,7 +17,6 @@ function Checkbox(props) {
     className,
     onChange,
     name,
-    testId,
     errorMessage,
     backgroundColor,
     color,

@@ -7,9 +7,8 @@ import {
 import Span from '../span/span';
 
 import Label from '../label';
-/**
- * Checkbox
- */
+
+
 function Radio(props) {
   const {
     id,
