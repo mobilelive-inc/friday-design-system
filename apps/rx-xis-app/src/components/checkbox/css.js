@@ -43,14 +43,12 @@ export const Input = styled.input.attrs({ type: 'checkbox' })(
 
 
 const getDerivedStyles = (props) => {
-  console.log("props are ", props)
   const {
     isFilled, theme:{
       colors, borderCurved, borderRounded
     }, error, borderType
   } = props;
   const bg = error ? colors.error : colors[props.bg];
-  console.log("bg is ", bg)
   const styles = {
     boxSizing: 'border-box',
     p:"0",
@@ -62,12 +60,10 @@ const getDerivedStyles = (props) => {
     alignItems:"center",
     cursor: 'pointer',
     boxAlign: 'center',
-    alignItems: 'center',
     boxPack: 'center',
     outline: 0,
     transition: 'border-color 0.1s linear 0s, background-color 0.1s linear 0s',
   }
-  console.log("is filled is ", isFilled)
   if(isFilled){
     styles.backgroundColor = `${bg} !important`
   }
@@ -81,7 +77,6 @@ const getDerivedStyles = (props) => {
   else if(borderType === "curved"){
     styles.borderRadius = borderCurved
   }
-  console.log("returning styles ", styles)
   return styles;
 }
 
