@@ -3,12 +3,10 @@ import {
   compose,
   border,
   layout,
-  variant,
   space,
   typography,
   color,
 } from 'styled-system';
-import { capitalizeFirstLetter } from '../utils/utils';
 
 const getDerivedProps = (props) => {
   const {
@@ -51,6 +49,7 @@ const getDerivedProps = (props) => {
     styles.borderRadius = borderRounded
   }
   if(withBottomBorderOnly){
+    // styles.border = 'none';
     styles.borderColor= 'transparent';
     styles.borderBottom = `1px solid ${error ? red : black}`
   }
