@@ -23,7 +23,8 @@ function Radio(props) {
     isFilled,
     variant,
     className,
-    borderType
+    borderType,
+    checkedIconClass
   } = props;
   const isChecked = variant === 'checked';
   const isDisabled = variant === 'disabled';
@@ -40,7 +41,7 @@ function Radio(props) {
         color={color}>
         {variant === 'checked' && (
           <Span
-            className="icon-check_circle_outline_24px"/>
+            className={checkedIconClass}/>
         )}
         <Input
           checked={variant === 'checked'}
