@@ -926,7 +926,7 @@ label {
     &:before {
       width: 28px;
       height: 28px;
-      background-color: var(--gray-nobel);
+      background-color: var(--gray);
       top: 50%;
       transform: translateY(-50%);
       left: -14px;
@@ -988,15 +988,15 @@ label {
         }
 
         &:after {
-          background-color: var(--gray-nobel);
-          border-color: var(--gray-nobel);
+          background-color: var(--gray);
+          border-color: var(--gray);
         }
       }
 
       &.dark {
         input[type='checkbox']:checked + label:after,
         label:after {
-          border-color: var(--gray-nobel);
+          border-color: var(--gray);
           background-color: var(--white);
         }
         input[type='checkbox']:checked + label:before,
