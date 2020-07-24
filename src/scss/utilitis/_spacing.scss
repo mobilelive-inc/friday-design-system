@@ -20,19 +20,19 @@
           #{$prop}: $length !important;
         }
         .u-#{$abbrev}t#{$infix}-#{$size},
-        .#{$abbrev}y#{$infix}-#{$size} {
+        .u-#{$abbrev}y#{$infix}-#{$size} {
           #{$prop}-top: $length !important;
         }
         .u-#{$abbrev}r#{$infix}-#{$size},
-        .#{$abbrev}x#{$infix}-#{$size} {
+        .u-#{$abbrev}x#{$infix}-#{$size} {
           #{$prop}-right: $length !important;
         }
         .u-#{$abbrev}b#{$infix}-#{$size},
-        .#{$abbrev}y#{$infix}-#{$size} {
+        .u-#{$abbrev}y#{$infix}-#{$size} {
           #{$prop}-bottom: $length !important;
         }
         .u-#{$abbrev}l#{$infix}-#{$size},
-        .#{$abbrev}x#{$infix}-#{$size} {
+        .u-#{$abbrev}x#{$infix}-#{$size} {
           #{$prop}-left: $length !important;
         }
       }
