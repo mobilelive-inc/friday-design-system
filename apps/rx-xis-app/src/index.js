@@ -47,6 +47,7 @@ function App() {
           height="40px"
           rightIcon="icon-delete_24px"
           leftIcon="icon-delete_24px"
+          disabled
           onLeftIconClick={() => alert("on left")}
           // backgroundColor="gray"
           placeholder="select on option"
@@ -210,13 +211,14 @@ function App() {
         </Box>
         <Box p={10}>
           <Checkbox
-            name="services1" value="internet1" label=""
+            name="services1" value="internet1" label="dong"
             backgroundColor="primary"
             color="primary"
             errorMessage="dasdasd"
+            checkedIconClass="icon-check_circle_24px"
             borderType="rounded"
             isFilled={false}
-            variant="disabled"
+            variant="checked"
             onChange={() => {setIschecked(!isChecked)}}/>
         </Box>
       </Flex>

@@ -1,6 +1,6 @@
 {
   "name": "ml-design-system-nx",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "mobileLIVE design system for react",
   "main": "index.js",
   "dependencies": {
@@ -88,5 +88,5 @@
     }
   },
   "author": "Samaid Saeed",
-  "license": "ISC"
+  "license": "MIT"
 }

@@ -43,7 +43,7 @@ export const BaseSelect = styled('select')(
 
 export const SelectWrapper = styled.div`
   width: ${props => (props.width ? props.width: '100%') };
-  position: absolute;
+  position: relative;
   ${
   props => props.leftIcon &&
     `& > select{
