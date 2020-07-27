@@ -22,6 +22,7 @@ function Checkbox(props) {
     color,
     border,
     isFilled,
+    checkedIconClass,
     variant,
     borderType
   } = props;
@@ -40,7 +41,7 @@ function Checkbox(props) {
         color={color}>
         {variant === 'checked' && (
           <Span
-            className="icon-check_circle_outline_24px"/>
+            className={checkedIconClass}/>
         )}
         <Input
           checked={variant === 'checked'}
