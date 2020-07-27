@@ -30,6 +30,7 @@ const Select = (props) => {
     ...restProps
   } = props;
   return (
+    <>
     <SelectWrapper width={width} leftIcon={leftIcon}>
       {
         leftIcon && (
@@ -65,7 +66,8 @@ const Select = (props) => {
           <ValidationIcon className={validationIcon} isValid={isValid}/>
         )
       }
-      {
+    </SelectWrapper>
+    {
         errorMessage && (
           <Text
             position="absolute"
@@ -74,10 +76,11 @@ const Select = (props) => {
             fontSize="10px"
             lineHeight="1px"
             pl={3}
+            mt={17}
             pt={0}>{errorMessage}</Text>
         )
       }
-    </SelectWrapper>
+    </>
   )
 }
 
