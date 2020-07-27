@@ -1,6 +1,6 @@
 {
   "name": "ml-design-system-nx",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "mobileLIVE design system for react",
   "main": "index.js",
   "dependencies": {
