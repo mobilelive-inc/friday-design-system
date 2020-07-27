@@ -126,20 +126,14 @@
 
   .lbl-toggle {
     display: block;
-
     font-weight: bold;
-    font-family: monospace;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     text-align: center;
-
     padding: 1rem;
-
     color: var(--orange-darker);
     background: var(--orange-lighter);
-
     cursor: pointer;
-
     border-radius: 7px;
     transition: all 0.25s ease-out;
   }

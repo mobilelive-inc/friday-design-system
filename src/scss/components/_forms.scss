@@ -136,6 +136,27 @@
   }
 }
 
+textarea.formControl{
+  min-height: 100px;
+  max-width: 100%;
+  &:focus{
+    outline:none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+  ~ .successOption {
+    left: auto;
+    right:10px;
+  }
+  ~ .errorOptionx {
+    left: auto;
+    right:10px;
+  }
+}
+#textChar{
+  font-size: 10px;
+  margin-top:5px;
+}
+
 input[type='search'] {
   &::-webkit-search-cancel-button {
     position: absolute;
@@ -939,7 +960,7 @@ label {
     }
 
     &:after {
-      border: 2px solid #b3b3b3;
+      border: 2px solid var(--gray);
       border-radius: 100px;
       left: 0;
       top: 0;
@@ -992,17 +1013,16 @@ label {
           border-color: var(--gray);
         }
       }
-
-      &.dark {
-        input[type='checkbox']:checked + label:after,
-        label:after {
-          border-color: var(--gray);
-          background-color: var(--white);
-        }
-        input[type='checkbox']:checked + label:before,
-        label:before {
-          background-color: var(--gray);
-        }
+    }
+    &.dark {
+      input[type='checkbox']:checked + label:after,
+      label:after {
+        border-color: var(--gray);
+        background-color: var(--white);
+      }
+      input[type='checkbox']:checked + label:before,
+      label:before {
+        background-color: var(--gray);
       }
     }
   }
