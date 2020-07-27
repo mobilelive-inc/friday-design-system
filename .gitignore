@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/dist
+dist
 
 # misc
 .DS_Store
@@ -16,6 +16,7 @@ modules.xml
 vcs.xml
 misc.xml
 Project.xml
+.idea/workspace.xml
 
 
 npm-debug.log*
