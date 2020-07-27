@@ -13,40 +13,40 @@
   />
   <link rel="stylesheet" type="text/css" href="/styles.css" />
   <script>
-   // (function (global) {
-   //  var s = document.createElement('script');
-   //
-   //  function loaderCallback() {
-   //   // Do actions before ASLint starts
-   //  }
-   //
-   //  function resultsCallback(results) {
-   //   console.log(results);
-   //  }
-   //
-   //  s.type = 'text/javascript';
-   //  s.async = true;
-   //  s.src =
-   //   (document.location.protocol === 'https:' ? 'https:' : 'http:') +
-   //   '//www.aslint.org/api/aslint/loader/loader.js';
-   //
-   //  global.aslint = {
-   //   config: {
-   //    asyncRunner: true,
-   //    context: '',
-   //    contextDescription: '',
-   //    reportFormat: { JSON: true },
-   //    resultsCallback: resultsCallback,
-   //    visibleUI: true
-   //   }
-   //  };
-   //
-   //  if (typeof s.addEventListener === 'function') {
-   //   s.addEventListener('load', loaderCallback);
-   //  }
-   //
-   //  document.body.appendChild(s);
-   // })(this);
+   (function (global) {
+    var s = document.createElement('script');
+
+    function loaderCallback() {
+     // Do actions before ASLint starts
+    }
+
+    function resultsCallback(results) {
+     console.log(results);
+    }
+
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src =
+     (document.location.protocol === 'https:' ? 'https:' : 'http:') +
+     '//www.aslint.org/api/aslint/loader/loader.js';
+
+    global.aslint = {
+     config: {
+      asyncRunner: true,
+      context: '',
+      contextDescription: '',
+      reportFormat: { JSON: true },
+      resultsCallback: resultsCallback,
+      visibleUI: true
+     }
+    };
+
+    if (typeof s.addEventListener === 'function') {
+     s.addEventListener('load', loaderCallback);
+    }
+
+    document.body.appendChild(s);
+   })(this);
   </script>
  </head>
 
@@ -141,26 +141,6 @@
     root.classList.add('theme-gray');
     root.classList.remove('theme-dark');
    }
-
-   var textareaEl;
-   var maxVal = 144;
-   var countRemaining = 0;
-   var countContent = document.getElementById('textChar');
-   countContent.textContent = countRemaining + " / " +  maxVal;
-
-   function countCharacters(e) {
-    var textEntered, counter;
-    textEntered = document.getElementById('textarea').value;
-    counter = textEntered.length;
-    countRemaining = counter;
-    if(counter <= maxVal){
-     countContent.textContent = countRemaining + " / " +  maxVal;
-    }
-
-   }
-   textareaEl = document.getElementById('textarea');
-   textareaEl.addEventListener('keyup', countCharacters, false);
-
   </script>
  </body>
 </html>
