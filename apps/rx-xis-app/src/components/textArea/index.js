@@ -31,7 +31,7 @@ const TextArea = (props) => {
   
   return (
     <>
-      <InputWrapper rightIcon={rightIcon} leftIcon={leftIcon} width={width} display={display}>
+      <InputWrapper rightIcon={rightIcon} leftIcon={leftIcon} width="auto" display={display}>
         {leftIcon && (
           <LeftIcon className={leftIcon} />
         )}

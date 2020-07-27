@@ -44,7 +44,8 @@ function App() {
       <Flex>
         <TextArea
           type="text"
-          width="50%"
+          // width="auto"
+          // height=""
           value=""
           placeholder="Text Area"
           label="Search"

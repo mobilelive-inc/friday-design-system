@@ -148,7 +148,7 @@ export const ValidationIcon = styled.span`
   position: absolute;
   left: calc(100% + -25px);
   width: 20px;
-  top: 40px;top: calc(100% - 150px);
+  top: 1rem;
   color: ${props => (props.isValid ? 'green': 'red')};
   font-size: 18px;
 `;
