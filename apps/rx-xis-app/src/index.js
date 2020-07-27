@@ -51,6 +51,7 @@ function App() {
           // backgroundColor="gray"
           placeholder="select on option"
           // borderType="rounded"
+          
           errorMessage="this is error"
           validationIcon="icon-check_circle_24px"
           // withBorderBottomOnly
@@ -80,6 +81,7 @@ function App() {
           name="greetings"
           width="50%"
           height="40px"
+          errorMessage="this is error"
           borderRadius="10px">
           <option value="1">Hey</option>
           <option value="2">There</option>
