@@ -231,6 +231,11 @@ input[type='search'] {
   border: solid var(--input-border-color);
   border-width: var(--input-border-width);
 
+  &.hasBg {
+    border-color: transparent;
+    background-color: var(--gray-light);
+  }
+
   &.curved {
     border-radius: var(--input-border-radius-sm);
   }
@@ -244,10 +249,6 @@ input[type='search'] {
     border-width: 0 0 var(--input-border-width) 0;
   }
 
-  .formControl--textOnly {
-    padding-right: var(--input-padding-x-sm);
-  }
-
   .formControl {
     padding: var(--input-padding-y) var(--input-padding-x);
     background-color: transparent;
@@ -259,12 +260,14 @@ input[type='search'] {
 
   &.icnLeft {
     .formControl {
+      width: calc(100% - var(--btn-standard-width));
       padding: var(--input-padding-y) var(--input-padding-x)
         var(--input-padding-y) var(--spacer-micro);
     }
   }
   &.icnRight {
     .formControl {
+      width: calc(100% - var(--btn-standard-width));
       padding: var(--input-padding-y) var(--spacer-micro) var(--input-padding-y)
         var(--input-padding-x);
     }
