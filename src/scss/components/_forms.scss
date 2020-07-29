@@ -6,7 +6,6 @@
 .formControl {
   display: block;
   width: 100%;
-  //max-width: var(--input-width);
   height: var(--input-height);
   padding: var(--input-padding-y) var(--input-padding-x);
   font-family: var(--input-font-family);
@@ -16,10 +15,14 @@
   color: var(--input-color);
   background-color: var(--input-bg);
   background-clip: padding-box;
-  border: var(--input-border-width) solid var(--input-border-color);
+  border: 0;
   border-radius: var(--input-border-radius);
   box-shadow: var(--input-box-shadow);
   transition: var(--input-transition);
+
+  &::-webkit-input-placeholder {
+    line-height: normal !important;
+  }
 
   // Remove select outline from select box in FF
   &:-moz-focusring {
@@ -32,6 +35,8 @@
 
   // Placeholder
   &::placeholder {
+    @include font-size(var(--input-font-size));
+    line-height: var(--input-line-height);
     color: var(--input-placeholder-color);
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
     opacity: 1;
@@ -63,23 +68,23 @@
     background-color: var(--gray-light);
   }
 
-  ~ .searchInputBtn {
-    position: absolute;
-    left: calc(100% - 25px);
-    width: 14px;
-    top: 0;
-    font-size: 13px;
-    z-index: 20;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--gray-dark);
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    display: flex;
-    align-items: center;
-    height: var(--input-height);
-  }
+  //~ .searchInputBtn {
+  //  position: absolute;
+  //  left: calc(100% - 25px);
+  //  width: 14px;
+  //  top: 0;
+  //  font-size: 13px;
+  //  z-index: 20;
+  //  cursor: pointer;
+  //  text-decoration: none;
+  //  color: var(--gray-dark);
+  //  background-color: transparent;
+  //  padding: 0;
+  //  border: none;
+  //  display: flex;
+  //  align-items: center;
+  //  height: var(--input-height);
+  //}
 
   //&.searchClear {
   //~ .searchInputBtn {
@@ -87,14 +92,13 @@
   //}
   //}
 
-  ~ .successOption {
+  .successOption {
     position: absolute;
     left: calc(100% + 10px);
     width: 20px;
     top: 10px;
     font-size: 18px;
     color: var(--success);
-    display: none;
   }
 
   ~ .errorOptionx {
@@ -108,7 +112,6 @@
   }
 
   &.success {
-    //border: var(--input-border-width) solid var(--input-border-color-success);
     ~ .successOption {
       display: block;
     }
@@ -116,9 +119,7 @@
 
   ~ .text-danger {
     display: none;
-    font-size: 10px;
     line-height: 1;
-    padding-top: 3px;
     margin: 0;
     color: var(--danger);
   }
@@ -134,6 +135,34 @@
       display: block;
     }
   }
+}
+
+.searchInputBtn {
+  padding: 0;
+  @include font-size(var(--font-size-sm));
+  margin: 0;
+  z-index: 20;
+  cursor: pointer;
+  color: var(--gray-dark);
+  background-color: transparent;
+  border: none;
+  height: var(--input-height);
+}
+
+.text-danger {
+  @include font-size(var(--font-size-tiny));
+  color: var(--danger);
+  flex-basis: 95%;
+}
+
+.errorOptionx {
+  @include font-size(var(--font-size-lg));
+  color: var(--danger);
+}
+
+.successOption {
+  @include font-size(var(--font-size-lg));
+  color: var(--success);
 }
 
 textarea.formControl {
@@ -157,44 +186,88 @@ textarea.formControl {
   margin-top: 5px;
 }
 
-input[type='search'] {
-  &::-webkit-search-cancel-button {
-    position: absolute;
-    left: calc(100% - 22px);
-    width: 10px;
-    font-size: 15px;
-    color: var(--gray-dark);
-    padding: 1px;
-    border: none;
-    height: var(--input-height);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'design-system-icons' !important;
-    cursor: pointer;
-    margin: 0;
-    &:before {
-      content: 'x';
-    }
-  }
-
-  ~ .searchInputBtn {
-    left: 8px;
-  }
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  -webkit-appearance: none;
 }
+input[type='search'] {
+  -webkit-appearance: none !important;
+}
+
+//input[type='search'] {
+//
+//
+//
+//  //&::-webkit-search-cancel-button {
+//  //  position: absolute;
+//  //  left: calc(100% - 22px);
+//  //  width: 10px;
+//  //  font-size: 15px;
+//  //  color: var(--gray-dark);
+//  //  padding: 1px;
+//  //  border: none;
+//  //  height: var(--input-height);
+//  //  display: flex;
+//  //  align-items: center;
+//  //  justify-content: center;
+//  //  font-family: 'design-system-icons' !important;
+//  //  cursor: pointer;
+//  //  margin: 0;
+//  //  &:before {
+//  //    content: 'x';
+//  //  }
+//  }
+//
+//  ~ .searchInputBtn {
+//    left: 8px;
+//  }
+//}
 
 .formControlHolder {
   position: relative;
-  //max-width: var(--input-width);
-  height: auto;
+  flex: 1;
+  border: solid var(--input-border-color);
+  border-width: var(--input-border-width);
+
+  &.curved {
+    border-radius: var(--input-border-radius-sm);
+  }
+
+  &.rounded {
+    border-radius: var(--input-border-radius-lg);
+  }
+
+  &.textOnly {
+    border-radius: var(--input-border-radius);
+    border-width: 0 0 var(--input-border-width) 0;
+  }
 
   .formControl--textOnly {
     padding-right: var(--input-padding-x-sm);
   }
 
   .formControl {
-    padding: var(--input-padding-y) calc(var(--input-padding-x) * 2)
-      var(--input-padding-y) var(--input-padding-x);
+    padding: var(--input-padding-y) var(--input-padding-x);
+    background-color: transparent;
+  }
+
+  &.error {
+    border-color: var(--input-border-color-error);
+  }
+
+  &.icnLeft {
+    .formControl {
+      padding: var(--input-padding-y) var(--input-padding-x)
+        var(--input-padding-y) var(--spacer-micro);
+    }
+  }
+  &.icnRight {
+    .formControl {
+      padding: var(--input-padding-y) var(--spacer-micro) var(--input-padding-y)
+        var(--input-padding-x);
+    }
   }
 
   .searchClear {
@@ -205,7 +278,7 @@ input[type='search'] {
     position: absolute;
     width: 10px;
     top: 0;
-    font-size: 10px;
+    @include font-size(var(--lead-font-size));
     z-index: 20;
     cursor: pointer;
     text-decoration: none;

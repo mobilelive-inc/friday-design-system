@@ -10,6 +10,14 @@
   visibility: hidden !important;
 }
 
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
