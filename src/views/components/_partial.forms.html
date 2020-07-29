@@ -1,7 +1,7 @@
 <section id="forms_info">
   <h2 class="h2">Forms</h2>
 
-  <form>
+  <div>
     <!--Input Field-->
     <div class="infoBlock">
       <h3 class="h3">Input element</h3>
@@ -12,13 +12,17 @@
         <div class="row mb-mid">
           <div class="formGroup col-4">
             <label for="formDefault" class="sr-only">Default</label>
-            <input
-              type="email"
-              class="formControl"
-              id="formDefault"
-              placeholder="Default Input"
-              aria-describedby="emailHelp"
-            />
+            <div class="formControlWrap flex-wrap d-flex align-items-center">
+              <div class="formControlHolder d-flex align-items-center">
+                <input
+                  type="email"
+                  class="formControl"
+                  id="formDefault"
+                  placeholder="Default Input"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -70,35 +74,47 @@
         <div class="row mb-small">
           <div class="formGroup col-3">
             <label for="emailCurved" class="sr-only">Email Curved</label>
-            <input
-              type="email"
-              class="formControl formControl--curved"
-              placeholder="Curved Input"
-              id="emailCurved"
-              aria-describedby="emailHelp"
-            />
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center curved">
+                <input
+                  type="email"
+                  class="formControl"
+                  placeholder="Curved Input"
+                  id="emailCurved"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
           </div>
 
           <div class="formGroup col-3">
             <label for="emailRounded" class="sr-only">Email Rounded</label>
-            <input
-              type="email"
-              class="formControl formControl--rounded"
-              placeholder="Rounded Input"
-              id="emailRounded"
-              aria-describedby="emailHelp"
-            />
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center rounded">
+                <input
+                  type="email"
+                  class="formControl"
+                  placeholder="Rounded Input"
+                  id="emailRounded"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
           </div>
 
           <div class="formGroup col-3">
             <label for="emailtextONly" class="sr-only">Email Rounded</label>
-            <input
-              type="email"
-              class="formControl formControl--textOnly"
-              placeholder="Text Input"
-              id="emailtextONly"
-              aria-describedby="emailHelp"
-            />
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center textOnly">
+                <input
+                  type="email"
+                  class="formControl formControl--textOnly"
+                  placeholder="Text Input"
+                  id="emailtextONly"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -111,7 +127,7 @@
               <pre
                 style="
                   background-color: transparent;
-                  color: #000000;
+                  color: #000;
                   font-family: 'Montserrat';
                   font-size: 9pt;
                 "
@@ -206,46 +222,62 @@
         <div class="row mb-mid">
           <div class="formGroup col-3">
             <label for="formDefault1" class="info">Default</label>
-            <input
-              type="email"
-              class="formControl"
-              id="formDefault1"
-              placeholder="Default Input"
-              aria-describedby="emailHelp"
-            />
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center">
+                <input
+                  type="email"
+                  class="formControl"
+                  id="formDefault1"
+                  placeholder="Default Input"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
           </div>
 
           <div class="formGroup col-3">
             <label for="emailCurved1" class="required">Email Curved</label>
-            <input
-              type="email"
-              class="formControl formControl--curved"
-              placeholder="Curved Input"
-              id="emailCurved1"
-              aria-describedby="emailHelp"
-            />
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center curved">
+                <input
+                  type="email"
+                  class="formControl"
+                  placeholder="Curved Input"
+                  id="emailCurved1"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
           </div>
 
           <div class="formGroup col-3">
             <label for="emailRounded1" class="">Email Rounded</label>
-            <input
-              type="email"
-              class="formControl formControl--rounded"
-              placeholder="Rounded Input"
-              id="emailRounded1"
-              aria-describedby="emailHelp"
-            />
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center rounded">
+                <input
+                  type="email"
+                  class="formControl"
+                  placeholder="Rounded Input"
+                  id="emailRounded1"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
           </div>
 
           <div class="formGroup col-3">
-            <label for="emailtextONl1" class="">Email Rounded</label>
-            <input
-              type="email"
-              class="formControl formControl--textOnly"
-              placeholder="Text Input"
-              id="emailtextONl1"
-              aria-describedby="emailHelp"
-            />
+            <label for="emailtextONl1" class="">Email TextOnly</label>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center textOnly">
+                <input
+                  type="email"
+                  class="formControl formControl--textOnly"
+                  placeholder="Text Input"
+                  id="emailtextONl1"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -298,81 +330,104 @@
         <div class="row mb-mid">
           <div class="formGroup col-3">
             <label for="FirstName">Label</label>
-            <div class="formControlHolder">
-              <input
-                type="text"
-                class="formControl"
-                id="FirstName"
-                name="FirstName"
-                required
-              />
-              <button
-                type="button"
-                class="icon-search_24px searchInputBtn"
-                aria-label="Label"
-              ></button>
-              <span class="icon-info_24px errorOptionx"></span>
-              <span class="icon-check_circle_24px successOption"></span>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="icnRight formControlHolder d-flex align-items-center">
+                <input
+                  type="text"
+                  class="formControl"
+                  id="FirstName"
+                  name="FirstName"
+                  required
+                />
+                <button
+                  type="button"
+                  class="p-tiny icon-search_24px searchInputBtn"
+                  aria-label="Label"
+                ></button>
+              </div>
+              <span class="pl-small hide icon-info_24px errorOptionx"></span>
+              <span
+                class="pl-small show icon-check_circle_24px successOption"
+              ></span>
             </div>
           </div>
 
           <div class="formGroup col-3">
             <label for="FirstName4">Label</label>
-            <div class="formControlHolder">
-              <input
-                type="text"
-                class="formControl formControl--curved"
-                id="FirstName4"
-                name="FirstName"
-                required
-              />
-              <button
-                type="button"
-                class="icon-search_24px searchInputBtn"
-                aria-label="Label"
-              ></button>
-              <span class="icon-info_24px errorOptionx"></span>
-              <span class="icon-check_circle_24px successOption"></span>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex curved align-items-center">
+                <input
+                  type="text"
+                  class="formControl"
+                  id="FirstName4"
+                  name="FirstName"
+                  placeholder="Text"
+                  required
+                />
+                <button
+                  type="button"
+                  class="p-tiny icon-search_24px searchInputBtn"
+                  aria-label="Label"
+                ></button>
+              </div>
+              <span class="pl-small hide icon-info_24px errorOptionx"></span>
+              <span
+                class="pl-small show icon-check_circle_24px successOption"
+              ></span>
             </div>
           </div>
 
           <div class="formGroup col-3">
             <label for="FirstName24">Label</label>
-            <div class="formControlHolder">
-              <input
-                type="text"
-                class="formControl formControl--rounded"
-                id="FirstName24"
-                name="FirstName"
-                required
-              />
-              <button
-                type="button"
-                class="icon-search_24px searchInputBtn"
-                aria-label="Label"
-              ></button>
-              <span class="icon-info_24px errorOptionx"></span>
-              <span class="icon-check_circle_24px successOption"></span>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div
+                class="icnRight formControlHolder d-flex rounded align-items-center"
+              >
+                <input
+                  type="text"
+                  class="formControl"
+                  id="FirstName24"
+                  name="FirstName"
+                  placeholder="Text"
+                  required
+                />
+                <button
+                  type="button"
+                  class="p-tiny icon-search_24px searchInputBtn"
+                  aria-label="Label"
+                ></button>
+              </div>
+              <span class="pl-small hide icon-info_24px errorOptionx"></span>
+              <span
+                class="pl-small show icon-check_circle_24px successOption"
+              ></span>
             </div>
           </div>
 
           <div class="formGroup col-3">
             <label for="FirstName24s4">Label</label>
-            <div class="formControlHolder">
-              <input
-                type="text"
-                class="formControl formControl--textOnly"
-                id="FirstName24s4"
-                name="FirstName"
-                required
-              />
-              <button
-                type="button"
-                class="icon-search_24px searchInputBtn"
-                aria-label="Label"
-              ></button>
-              <span class="icon-info_24px errorOptionx"></span>
-              <span class="icon-check_circle_24px successOption"></span>
+            <div class="formControlWrap d-flex align-items-center flex-wrap">
+              <div
+                class="icnRight formControlHolder textOnly d-flex align-items-center"
+              >
+                <input
+                  type="text"
+                  class="formControl"
+                  id="FirstName24s4"
+                  name="FirstName"
+                  placeholder="Text"
+                  required
+                />
+                <button
+                  type="button"
+                  class="p-tiny icon-search_24px searchInputBtn"
+                  aria-label="Label"
+                ></button>
+              </div>
+              <span class="pl-small hide icon-info_24px errorOptionx"></span>
+              <span
+                class="pl-small show icon-check_circle_24px successOption"
+              ></span>
             </div>
           </div>
         </div>
@@ -442,87 +497,116 @@
           Input Fields with Error and Success States
         </h5>
         <div class="row mb-mid justify-content-start">
-          <div class="formGroup col-2 mr-mid">
+          <div class="formGroup col-3">
             <label for="FirstName2">Label</label>
-            <div class="formControlHolder">
-              <input
-                type="text"
-                class="formControl success"
-                id="FirstName2"
-                name="FirstName"
-                required
-              />
-              <button
-                type="button"
-                class="icon-search_24px searchInputBtn"
-                aria-label="Label"
-              ></button>
-              <span class="icon-info_24px errorOptionx"></span>
-              <span class="icon-check_circle_24px successOption"></span>
-              <span class="text-danger hide">Error Message</span>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="icnLeft formControlHolder d-flex align-items-center">
+                <button
+                  type="button"
+                  class="p-tiny icon-search_24px searchInputBtn"
+                  aria-label="Label"
+                ></button>
+                <input
+                  type="search"
+                  class="formControl"
+                  id="FirstName2"
+                  name="FirstName"
+                  placeholder="Text"
+                  required
+                />
+              </div>
+              <span
+                for="FirstName2"
+                class="pl-small hide icon-info_24px errorOptionx"
+              ></span>
+              <span
+                class="pl-small show icon-check_circle_24px successOption"
+              ></span>
+              <span class="hide pt-micro text-danger">Error Message</span>
             </div>
           </div>
 
-          <div class="formGroup col-2 mr-mid">
+          <div class="formGroup col-3">
             <label for="FirstName22">Error</label>
-            <div class="formControlHolder">
-              <input
-                type="text"
-                class="formControl formControl--curved error"
-                id="FirstName22"
-                name="FirstName"
-                required
-              />
-              <button
-                type="button"
-                class="icon-search_24px searchInputBtn"
-                aria-label="Label"
-              ></button>
-              <span class="icon-info_24px errorOptionx"></span>
-              <span class="icon-check_circle_24px successOption"></span>
-              <span class="text-danger hide">Error Message</span>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div
+                class="icnRight d-flex align-items-center formControlHolder curved error"
+              >
+                <input
+                  type="search"
+                  class="formControl"
+                  id="FirstName22"
+                  name="FirstName"
+                  placeholder="Text"
+                  required
+                />
+                <button
+                  type="button"
+                  class="p-tiny icon-search_24px searchInputBtn"
+                  aria-label="Label"
+                ></button>
+              </div>
+              <span class="pl-small show icon-info_24px errorOptionx"></span>
+              <span
+                class="pl-small hide icon-check_circle_24px successOption"
+              ></span>
+              <span class="pt-micro text-danger">Error Message</span>
             </div>
           </div>
 
-          <div class="formGroup col-2 mr-mid">
+          <div class="formGroup col-3">
             <label for="FirstNam44">Success</label>
-            <div class="formControlHolder">
-              <input
-                type="text"
-                class="formControl formControl--rounded success"
-                id="FirstNam44"
-                name="FirstName"
-                required
-              />
-              <button
-                type="button"
-                class="icon-search_24px searchInputBtn"
-                aria-label="Label"
-              ></button>
-              <span class="icon-info_24px errorOptionx"></span>
-              <span class="icon-check_circle_24px successOption"></span>
-              <span class="text-danger hide">Error Message</span>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div
+                class="icnRight d-flex align-items-center formControlHolder rounded"
+              >
+                <input
+                  type="search"
+                  class="formControl"
+                  id="FirstNam44"
+                  name="FirstName"
+                  placeholder="Text"
+                  required
+                />
+                <button
+                  type="button"
+                  class="p-tiny icon-search_24px searchInputBtn"
+                  aria-label="Label"
+                ></button>
+              </div>
+              <span class="pl-small hide icon-info_24px errorOptionx"></span>
+              <span
+                class="pl-small show icon-check_circle_24px successOption"
+              ></span>
+              <span class="pt-micro text-danger hide">Error Message</span>
             </div>
           </div>
 
-          <div class="formGroup col-2">
+          <div class="formGroup col-3">
             <label for="FirstNam444">Label</label>
-            <div class="formControlHolder">
-              <input
-                type="text"
-                class="formControl formControl--textOnly success"
-                id="FirstNam444"
-                name="FirstName"
-                required
-              />
-              <button
-                type="button"
-                class="icon-search_24px searchInputBtn"
-                aria-label="Label"
-              ></button>
-              <span class="icon-info_24px errorOptionx"></span>
-              <span class="icon-check_circle_24px successOption"></span>
-              <span class="text-danger hide">Error Message</span>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div
+                class="icnRight formControlHolder d-flex align-items-center textOnly"
+              >
+                <input
+                  type="text"
+                  class="formControl success pl-tiny"
+                  id="FirstNam444"
+                  name="FirstName"
+                  placeholder="Text"
+                  required
+                />
+                <button
+                  type="button"
+                  class="p-tiny icon-search_24px searchInputBtn"
+                  aria-label="Label"
+                ></button>
+              </div>
+              <span class="pl-small hide icon-info_24px errorOptionx"></span>
+              <span
+                class="pl-small show icon-check_circle_24px successOption"
+              ></span>
+              <span class="pt-micro text-danger hide">Error Message</span>
             </div>
           </div>
         </div>
@@ -638,89 +722,113 @@
       <!--With Search icons on both sides-->
       <div class="infoBlockPiece">
         <h5 class="h5 mb-mid">
-          Input search Fields With Search Icon on left
+          Input search Fields With Search Icon
         </h5>
         <div class="row mb-mid">
-          <div class="formGroup col-2 mr-mid">
+          <div class="formGroup col-3">
             <label for="FirstName1">Label</label>
-            <div class="formControlHolder">
-              <input
-                type="search"
-                class="formControl searchClear"
-                id="FirstName1"
-                name="FirstName"
-                required
-              />
-              <button
-                type="button"
-                class="icon-search_24px searchInputBtn"
-                aria-label="Label"
-              ></button>
-              <span class="icon-info_24px errorOptionx"></span>
-              <span class="icon-check_circle_24px successOption"></span>
-              <span class="text-danger hide">Error Message</span>
-            </div>
-          </div>
-
-          <div class="formGroup col-2 mr-mid">
-            <label for="FirstName42">Label</label>
-            <div class="formControlHolder">
-              <input
-                type="search"
-                class="formControl formControl--curved searchClear"
-                id="FirstName42"
-                name="FirstName"
-                required
-              />
-              <button
-                type="button"
-                class="icon-search_24px searchInputBtn"
-                aria-label="Label"
-              ></button>
-              <span class="icon-info_24px errorOptionx"></span>
-              <span class="icon-check_circle_24px successOption"></span>
-              <span class="text-danger hide">Error Message</span>
-            </div>
-          </div>
-
-          <div class="formGroup col-2 mr-mid">
-            <label for="FirstName242">Label</label>
-            <div class="formControlHolder">
-              <input
-                type="search"
-                class="formControl formControl--rounded searchClear error"
-                id="FirstName242"
-                name="FirstName"
-                required
-              />
-              <button
-                type="button"
-                class="icon-search_24px searchInputBtn"
-                aria-label="Label"
-              ></button>
-              <span class="icon-info_24px errorOptionx"></span>
-              <span class="icon-check_circle_24px successOption"></span>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="icnRight formControlHolder d-flex align-items-center">
+                <input
+                  type="search"
+                  class="formControl searchClear"
+                  id="FirstName1"
+                  name="FirstName"
+                  placeholder="Text"
+                  required
+                />
+                <button
+                  type="button"
+                  class="p-tiny icon-search_24px searchInputBtn"
+                  aria-label="Label"
+                ></button>
+              </div>
+              <span class="pl-tiny hide icon-info_24px errorOptionx"></span>
+              <span
+                class="pl-tiny show icon-check_circle_24px successOption"
+              ></span>
               <span class="text-danger hide">Error Message</span>
             </div>
           </div>
 
           <div class="formGroup col-3">
+            <label for="FirstName42">Label</label>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder curved d-flex align-items-center">
+                <input
+                  type="search"
+                  class="formControl searchClear"
+                  id="FirstName42"
+                  name="FirstName"
+                  placeholder="Text"
+                  required
+                />
+                <button
+                  type="button"
+                  class="p-tiny icon-search_24px searchInputBtn"
+                  aria-label="Label"
+                ></button>
+              </div>
+              <span class="pl-tiny hide icon-info_24px errorOptionx"></span>
+              <span
+                class="pl-tiny show icon-check_circle_24px successOption"
+              ></span>
+              <span class="hide text-danger">Error Message</span>
+            </div>
+          </div>
+
+          <div class="formGroup col-3">
+            <label for="FirstName242">Label</label>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div
+                class="icnRight formControlHolder d-flex align-items-center rounded error"
+              >
+                <input
+                  type="search"
+                  class="formControl searchClear"
+                  id="FirstName242"
+                  name="FirstName"
+                  placeholder="Text"
+                  required
+                />
+                <button
+                  type="button"
+                  class="p-tiny icon-search_24px searchInputBtn"
+                  aria-label="Label"
+                ></button>
+              </div>
+              <span class="pl-tiny show icon-info_24px errorOptionx"></span>
+              <span
+                class="pl-tiny hide icon-check_circle_24px successOption"
+              ></span>
+              <span class="text-danger">Error Message</span>
+            </div>
+          </div>
+
+          <div class="formGroup col-3">
             <label for="FirstName244">Label</label>
-            <div class="formControlHolder">
-              <input
-                type="search"
-                class="formControl formControl--textOnly searchClear"
-                id="FirstName244"
-                name="FirstName"
-                required
-              />
-              <button
-                type="button"
-                class="icon-search_24px searchInputBtn"
-                aria-label="Label"
-              ></button>
-              <span class="icon-info_24px errorOptionx"></span>
-              <span class="icon-check_circle_24px successOption"></span>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div
+                class="icnRight formControlHolder d-flex align-items-center textOnly"
+              >
+                <input
+                  type="search"
+                  class="formControl searchClear"
+                  id="FirstName244"
+                  name="FirstName"
+                  placeholder="Text"
+                  required
+                />
+                <button
+                  type="button"
+                  class="p-tiny icon-search_24px searchInputBtn"
+                  aria-label="Label"
+                ></button>
+              </div>
+              <span class="pl-tiny hide icon-info_24px errorOptionx"></span>
+              <span
+                class="pl-tiny show icon-check_circle_24px successOption"
+              ></span>
               <span class="text-danger hide">Error Message</span>
             </div>
           </div>
@@ -735,7 +843,7 @@
               <pre
                 style="
                   background-color: transparent;
-                  color: #000000;
+                  color: #000;
                   font-family: 'Montserrat';
                   font-size: 9pt;
                 "
@@ -795,46 +903,62 @@
         <div class="row mb-mid align-items-end">
           <div class="formGroup col-3">
             <label for="formDefault2" class="">Default</label>
-            <input
-              type="email"
-              class="formControl formControl--bg"
-              id="formDefault2"
-              placeholder="Default Input"
-              aria-describedby="emailHelp"
-            />
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center">
+                <input
+                  type="email"
+                  class="formControl formControl--bg"
+                  id="formDefault2"
+                  placeholder="Default Input"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
           </div>
 
           <div class="formGroup col-3">
             <label for="emailCurved2" class="sr-only">Email Curved</label>
-            <input
-              type="email"
-              class="formControl formControl--curved formControl--bg"
-              placeholder="Curved Input"
-              id="emailCurved2"
-              aria-describedby="emailHelp"
-            />
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center">
+                <input
+                  type="email"
+                  class="formControl formControl--curved formControl--bg"
+                  placeholder="Curved Input"
+                  id="emailCurved2"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
           </div>
 
           <div class="formGroup col-3">
             <label for="emailRounded2" class="sr-only">Email Rounded</label>
-            <input
-              type="email"
-              class="formControl formControl--rounded formControl--bg"
-              placeholder="Rounded Input"
-              id="emailRounded2"
-              aria-describedby="emailHelp"
-            />
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center">
+                <input
+                  type="email"
+                  class="formControl formControl--rounded formControl--bg"
+                  placeholder="Rounded Input"
+                  id="emailRounded2"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
           </div>
 
           <div class="formGroup col-3">
             <label for="emailtextONl2" class="sr-only">Email Rounded</label>
-            <input
-              type="email"
-              class="formControl formControl--textOnly formControl--bg"
-              placeholder="Text Input"
-              id="emailtextONl2"
-              aria-describedby="emailHelp"
-            />
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center">
+                <input
+                  type="email"
+                  class="formControl formControl--textOnly formControl--bg"
+                  placeholder="Text Input"
+                  id="emailtextONl2"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -951,7 +1075,7 @@
         </div>
 
         <!--Code-->
-				<!--@todo: need to remove-->
+        <!--@todo: need to remove-->
         <div class="wrap-collabsible">
           <input id="collapsible06" class="toggle" type="checkbox" />
           <label for="collapsible06" class="lbl-toggle"></label>
@@ -1655,7 +1779,7 @@
               <pre
                 style="
                   background-color: transparent;
-                  color: #000000;
+                  color: #000;
                   font-family: 'Montserrat';
                   font-size: 9pt;
                 "
@@ -1981,8 +2105,8 @@
             <div class="content-inner">
               <pre
                 style="
-                  background-color: #ffffff;
-                  color: #000000;
+                  background-color: #fff;
+                  color: #000;
                   font-family: 'Montserrat';
                   font-size: 9pt;
                 "
@@ -2656,7 +2780,51 @@
           <input id="collapsible96" class="toggle" type="checkbox" />
           <label for="collapsible96" class="lbl-toggle"></label>
           <div class="collapsible-content">
-            <div class="content-inner"></div>
+            <div class="content-inner">
+              <pre
+                style="
+                  background-color: transparent;
+                  color: #000;
+                  font-family: 'Montserrat';
+                  font-size: 11pt;
+                  font-weight: bold;
+                "
+              ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+</span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;accessible&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro disabled&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn2&quot; </span><span style="color:rgb(0,0,128);">disabled </span><span style="color:rgb(0,0,128);">/&gt;
+ </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn2&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;accessible&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro rounded&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn3&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+ </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn3&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;accessible&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro rounded filled&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn4&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+ </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn4&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;accessible&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro rounded dark&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn5&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+ </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn5&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;accessible&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+							</pre>
+            </div>
           </div>
         </div>
       </div>
@@ -2727,13 +2895,62 @@
           <input id="collapsible97" class="toggle" type="checkbox" />
           <label for="collapsible97" class="lbl-toggle"></label>
           <div class="collapsible-content">
-            <div class="content-inner"></div>
+            <div class="content-inner">
+              <pre
+                style="
+                  background-color: transparent;
+                  color: #000;
+                  font-family: 'Montserrat';
+                  font-size: 11pt;
+                  font-weight: bold;
+                "
+              ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn6&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+</span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn6&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span><span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;accessible&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro disabled&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn7&quot; </span><span style="color:rgb(0,0,128);">disabled </span><span style="color:rgb(0,0,128);">/&gt;
+ </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn7&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span><span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span> <span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;accessible&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro rounded&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn8&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+ </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn8&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span><span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span> <span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;accessible&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro rounded filled&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn9&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+ </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn9&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span><span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span> <span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;accessible&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro rounded dark&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn10&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+ </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn10&quot;</span><span style="color:rgb(0,0,128);">&gt;
+ </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span><span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span> <span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;accessible&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+ </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+							</pre>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!--/Toggle Buttons-->
-  </form>
+  </div>
 </section>
 
 <section class="">

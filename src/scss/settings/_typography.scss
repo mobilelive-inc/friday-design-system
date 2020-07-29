@@ -18,6 +18,8 @@
 
   --font-size-lg: calc(var(--font-size-base) * 1.25);
   --font-size-sm: calc(var(--font-size-base) * 0.875);
+  --font-size-micro: calc(var(--font-size-base) * 0.625);
+  --font-size-tiny: calc(var(--font-size-base) * 0.75);
 
   --font-weight-base: --font-weight-normal;
   --line-height-base: 1.2;

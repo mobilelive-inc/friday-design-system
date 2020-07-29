@@ -1,6 +1,6 @@
 // Width and height
 
-// We will use u-* on the start of the spacing class as which will exhibit it as utility
+// We will use * on the start of the spacing class as which will exhibit it as utility
 
 // It will output Following class
 // w-25, h-25,
@@ -13,7 +13,7 @@
 // xlarge
 @each $prop, $abbrev in (width: w, height: h) {
   @each $size, $length in $sizes {
-    .u-#{$abbrev}-#{$size} {
+    .#{$abbrev}-#{$size} {
       #{$prop}: $length !important;
     }
   }

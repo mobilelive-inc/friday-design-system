@@ -4,7 +4,7 @@
 :root {
   //Spacing
   --input-btn-padding-y: var(--global-spacer);
-  --input-btn-padding-x: var(--global-spacer-mid);
+  --input-btn-padding-x: var(--spacer-mid);
   --input-btn-font-family: var(--font-family-base);
   --input-btn-font-size: var(--font-size-base);
   --input-btn-line-height: 1;
@@ -28,11 +28,11 @@
   // For each of DesignSystem's buttons, define text, background, and border color.
 
   --btn-padding-y: var(--global-spacer);
-  --btn-padding-x: var(--global-spacer-mid);
-  --btn-padding-y-sm: var(--global-spacer-tiny);
-  --btn-padding-x-sm: var(--global-spacer-tiny);
-  --btn-padding-y-lg: var(--global-spacer);
-  --btn-padding-x-lg: var(--global-spacer-mid);
+  --btn-padding-x: var(--spacer-mid);
+  --btn-padding-y-sm: var(--spacer-tiny);
+  --btn-padding-x-sm: var(--spacer-tiny);
+  --btn-padding-y-lg: var(--spacer-mid);
+  --btn-padding-x-lg: var(--spacer-mid);
 
   --btn-standard-hight: 56px;
   --btn-font-family: var(--input-btn-font-family);
