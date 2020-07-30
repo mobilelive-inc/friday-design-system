@@ -46,17 +46,21 @@ function App() {
           type="text"
           // width="auto"
           // height=""
-          value=""
+          value={gender}
           placeholder="Text Area"
           label="Search"
+          onChange={(e) => {
+              setGender(e.target.value)
+          }}
           borderType="rounded"
-          disabled
+          // disabled
           errorMessage="required field"
           error
           id="search"
-          rows="100"
-          colums="14"
+          rows="20"
+          cols="14"
           validationIcon="icon-check_circle_24px"
+          bottomValidationIcon="icon-check_circle_24px"
           isValid={true} />
       </Flex>
      

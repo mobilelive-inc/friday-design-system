@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  TextArea as BaseTextArea, RightIconButton,LeftIconButton, InputWrapper, ValidationIcon, LeftIcon
+  TextArea as BaseTextArea, InputWrapper, ValidationIcon, BottomValidationIcon
 } from './css';
 import { Text } from '../typography';
 
@@ -12,36 +12,30 @@ const TextArea = (props) => {
     placeholder,
     value,
     type,
+    rows,
+    cols,
     onChange,
     onBlur,
     error,
     errorMessage,
     isValid,
     disabled,
-    leftIcon,
-    leftIconBtn,
-    onLeftIconBtnClick,
-    rightIcon,
     width,
     display,
-    rightIconClick,
     validationIcon,
+    bottomValidationIcon,
     ...restProps
   } = props;
   
   return (
     <>
-      <InputWrapper rightIcon={rightIcon} leftIcon={leftIcon} width="auto" display={display}>
-        {leftIcon && (
-          <LeftIcon className={leftIcon} />
-        )}
-        {
-          leftIconBtn && (
-            <LeftIconButton type="button" onClick={onLeftIconBtnClick}>
-              <span className={rightIcon} />
-            </LeftIconButton>
+      <InputWrapper width="auto" display={display}>
+      {
+          bottomValidationIcon && (
+            <BottomValidationIcon className={bottomValidationIcon} isValid={isValid}/>
           )
         }
+        <ValidationIcon className={validationIcon} isValid={isValid}/>
         <BaseTextArea
           id={id}
           placeholder={placeholder}
@@ -51,6 +45,8 @@ const TextArea = (props) => {
           onChange={onChange}
           onBlur={onBlur}
           disabled={disabled}
+          rows={rows}
+          cols={cols}
           mt={5}
           // eslint-disable-next-line react/jsx-props-no-spreading
           {...restProps}/>
@@ -59,12 +55,6 @@ const TextArea = (props) => {
             <ValidationIcon className={validationIcon} isValid={isValid}/>
           )
         }
-      
-        {rightIcon && (
-          <RightIconButton type="button" onClick={rightIconClick}>
-            <span className={rightIcon} />
-          </RightIconButton>
-        )}
         <div>
           {error && errorMessage && (
             <Text

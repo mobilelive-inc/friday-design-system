@@ -99,37 +99,6 @@ export const InputWrapper = styled.div`
   `};
 `;
 
-export const RightIconButton = styled.button`
-  position: absolute;
-  left: calc(100% - 30px);
-  width: 20px;
-  top: calc(100% - 25px);
-  font-size: 16px;
-  z-index: 20;
-  cursor: pointer;
-  text-decoration: none;
-  cursor:pointer;
-  background-color: transparent !important;
-  padding: 0;
-  border: none;
-  box-shadow: none;
-`
-
-export const LeftIconButton = styled.button`
-  position: absolute;
-  right: calc(100% - 30px);
-  width: 20px;
-  top: calc(100% - 25px);
-  font-size: 16px;
-  z-index: 20;
-  cursor: pointer;
-  text-decoration: none;
-  cursor:pointer;
-  background-color: transparent !important;
-  padding: 0;
-  border: none;
-  box-shadow: none;
-`
 export const LeftIcon = styled.span`
   position: absolute;
   right: calc(100% - 30px);
@@ -151,4 +120,13 @@ export const ValidationIcon = styled.span`
   top: 1rem;
   color: ${props => (props.isValid ? 'green': 'red')};
   font-size: 18px;
+`;
+
+export const BottomValidationIcon = styled.span`
+position: absolute;
+width: 20px;
+top: calc(100% + -55px);
+margin-left: 5px;
+color: ${props => (props.isValid ? 'green': 'red')};
+font-size: 18px;
 `;

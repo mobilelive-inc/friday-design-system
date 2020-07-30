@@ -43,7 +43,7 @@ export const BaseSelect = styled('select')(
 
 export const SelectWrapper = styled.div`
   width: ${props => (props.width ? props.width: '100%') };
-  position: absolute;
+  position: relative;
   ${
   props => props.leftIcon &&
     `& > select{
@@ -52,13 +52,8 @@ export const SelectWrapper = styled.div`
     `};
 `
 
-
-export const LeftIconButton = styled.button`
+const common = `
   position: absolute;
-  right: calc(100% - 30px);
-  width: 20px;
-  top: calc(100% - 50px);
-  font-size: 16px;
   z-index: 20;
   cursor: pointer;
   text-decoration: none;
@@ -67,45 +62,38 @@ export const LeftIconButton = styled.button`
   padding: 0;
   border: none;
   box-shadow: none;
+`
+
+export const LeftIconButton = styled.button`
+right: calc(100% - 30px);
+top: 0;
+transform: translateY(50%);
+font-size: 16px;
+${common}
 `
 
 export const RightIconButton = styled.button`
-  position: absolute;
   left: calc(100% - 50px);
-  width: 20px;
-  top: calc(100% - 50px);
+  top: 0;
+  transform: translateY(50%);
   font-size: 16px;
-  z-index: 20;
-  cursor: pointer;
-  text-decoration: none;
-  cursor:pointer;
-  background-color: transparent !important;
-  padding: 0;
-  border: none;
-  box-shadow: none;
+  ${common}
 `
 
 export const ChevronDownIcon = styled.span`
-  position: absolute;
   left: calc(100% - 20px);
-  width: 20px;
-  top: calc(100% - 45px);
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 8px;
-  z-index: 20;
-  cursor: pointer;
-  text-decoration: none;
-  cursor:pointer;
-  background-color: transparent !important;
-  padding: 0;
-  border: none;
-  box-shadow: none;
+  ${common}
 `
 
 export const ValidationIcon = styled.span`
   position: absolute;
   left: calc(100% + 10px);
   width: 20px;
-  top: 40px;top: calc(100% - 50px);
+  top: 0;
+  transform: translateY(50%);
   color: ${props => (props.isValid ? 'green': 'red')};
   font-size: 18px;
 `;
