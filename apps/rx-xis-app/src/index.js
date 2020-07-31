@@ -18,6 +18,7 @@ import Radio from './components/radio';
 import Select from './components/select';
 import Label from './components/label';
 import Option from './components/option';
+import Toggle from './components/toggle';
 
 function App() {
   const options = [
@@ -38,8 +39,49 @@ function App() {
   const [isChecked, setIschecked] = React.useState(false)
   const [gender, setGender] = React.useState("male");
   const [selected, setSelected] = React.useState(null);
+  const [ isOn, setIsOn ] = React.useState(false)
   return (
     <ThemeProvider theme={theme}>
+      <Toggle shortDescription="Test toggle"
+       identity="bt1" 
+      //  styles={{
+      //   toggledOnBgColor: 'green',
+      //   toggledOffBgColor: 'white',
+      //   switchOnColor: 'orange',
+      //   switchOffColor: 'black',
+      //  }}
+       size='lg'
+       isToggled={isOn}
+       error
+       label="On"
+       onChange={() => {setIsOn(!isOn)}}/>
+       <Toggle shortDescription="Test toggle"
+       identity="bt1" 
+       styles={{
+        toggledOnBgColor: 'green',
+        toggledOffBgColor: 'white',
+        switchOnColor: 'orange',
+        switchOffColor: 'black',
+        toggledOffBorder: '1px solid black',
+       }}
+       size='sm'
+       isToggled={isOn}
+       onChange={() => {setIsOn(!isOn)}}/>
+
+<Toggle shortDescription="Test toggle"
+       identity="bt1" 
+       styles={{
+        toggledOnBgColor: 'white',
+        toggledOffBgColor: 'white',
+        switchOnColor: 'black',
+        switchOffColor: 'black',
+        toggledOffBorder: '1px solid black',
+        toggledOnBorder: '1px solid black'
+       }}
+       label="On"
+       size='sm'
+       isToggled={isOn}
+       onChange={() => {setIsOn(!isOn)}}/>
       <Flex>
         <Select
           name="greetings"
