@@ -36,6 +36,7 @@
 // Lead
 .lead {
   @include font-size(var(--lead-font-size));
+  line-height: var(--line-height-lg);
   font-weight: var(--lead-font-weight);
   color: var(--lead-text-color);
 }

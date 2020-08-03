@@ -11,7 +11,7 @@
   font-family: var(--input-font-family);
   @include font-size(var(--input-font-size));
   font-weight: var(--input-font-weight);
-  line-height: var(--input-line-height);
+  //line-height: var(--input-line-height);
   color: var(--input-color);
   background-color: var(--input-bg);
   background-clip: padding-box;
@@ -19,6 +19,8 @@
   border-radius: var(--input-border-radius);
   box-shadow: var(--input-box-shadow);
   transition: var(--input-transition);
+  min-width: 1px;
+  line-height: normal;
 
   &::-webkit-input-placeholder {
     line-height: normal !important;
@@ -26,8 +28,8 @@
 
   // Remove select outline from select box in FF
   &:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 var(--input-color);
+    //color: transparent;
+    //text-shadow: 0 0 0 var(--input-color);
   }
 
   // Customize the `:focus` state to imitate native WebKit styles.
@@ -36,8 +38,9 @@
   // Placeholder
   &::placeholder {
     @include font-size(var(--input-font-size));
-    line-height: var(--input-line-height);
+    //line-height: var(--input-line-height);
     color: var(--input-placeholder-color);
+    line-height: normal;
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
     opacity: 1;
   }
@@ -50,23 +53,23 @@
     opacity: 1;
   }
 
-  &--curved {
-    border-radius: var(--input-border-radius-sm);
-  }
-
-  &--rounded {
-    border-radius: var(--input-border-radius-lg);
-  }
-
-  &--textOnly {
-    border-radius: var(--input-border-radius);
-    border-width: 0 0 1px 0;
-  }
-
-  &--bg {
-    border-color: transparent;
-    background-color: var(--gray-light);
-  }
+  //&--curved {
+  //  border-radius: var(--input-border-radius-sm);
+  //}
+  //
+  //&--rounded {
+  //  border-radius: var(--input-border-radius-lg);
+  //}
+  //
+  //&--textOnly {
+  //  border-radius: var(--input-border-radius);
+  //  border-width: 0 0 1px 0;
+  //}
+  //
+  //&--bg {
+  //  border-color: transparent;
+  //  background-color: var(--gray-light);
+  //}
 
   //~ .searchInputBtn {
   //  position: absolute;
@@ -92,25 +95,6 @@
   //}
   //}
 
-  .successOption {
-    position: absolute;
-    left: calc(100% + 10px);
-    width: 20px;
-    top: 10px;
-    font-size: 18px;
-    color: var(--success);
-  }
-
-  ~ .errorOptionx {
-    position: absolute;
-    left: calc(100% + 10px);
-    width: 20px;
-    top: 10px;
-    font-size: 18px;
-    color: var(--danger);
-    display: none;
-  }
-
   &.success {
     ~ .successOption {
       display: block;
@@ -126,14 +110,6 @@
 
   &.error {
     border-color: var(--input-border-color-error);
-
-    ~ .errorOptionx {
-      display: block;
-    }
-
-    ~ .text-danger {
-      display: block;
-    }
   }
 }
 
@@ -166,24 +142,42 @@
 }
 
 textarea.formControl {
-  min-height: 100px;
+  min-height: var(--form-textarea-height);
+  min-width: 100%;
   max-width: 100%;
+  resize: vertical;
+
   &:focus {
     outline: none;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
   }
-  ~ .successOption {
-    left: auto;
-    right: 10px;
-  }
-  ~ .errorOptionx {
-    left: auto;
-    right: 10px;
+}
+
+.formControlWrap {
+  &.intIcn {
+    position: relative;
+    .successOption {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      @include font-size(var(--font-size-lg));
+      color: var(--success);
+    }
+
+    .errorOptionx {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      @include font-size(var(--font-size-lg));
+      color: var(--danger);
+    }
   }
 }
+
 #textChar {
   font-size: 10px;
   margin-top: 5px;
+  flex-basis: 95%;
 }
 
 input[type='search']::-webkit-search-decoration,
@@ -260,14 +254,12 @@ input[type='search'] {
 
   &.icnLeft {
     .formControl {
-      width: calc(100% - var(--btn-standard-width));
       padding: var(--input-padding-y) var(--input-padding-x)
         var(--input-padding-y) var(--spacer-micro);
     }
   }
   &.icnRight {
     .formControl {
-      width: calc(100% - var(--btn-standard-width));
       padding: var(--input-padding-y) var(--spacer-micro) var(--input-padding-y)
         var(--input-padding-x);
     }
@@ -299,8 +291,6 @@ input[type='search'] {
   }
   //select styling
   &__select {
-    position: relative;
-
     select {
       -moz-appearance: none;
       -webkit-appearance: none;

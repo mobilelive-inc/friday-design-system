@@ -9,6 +9,8 @@
   margin: 0;
   padding: 0;
   font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-lg);
 
   .highlighted-block {
     border: 3px solid #f2f2f2;
@@ -167,13 +169,13 @@
   }
 
   .collapsible-content {
-    max-height: 0;
+    height: 0;
     overflow: hidden;
     transition: max-height 0.25s ease-in-out;
   }
 
   .toggle:checked + .lbl-toggle + .collapsible-content {
-    max-height: 100vh;
+    height: 100%;
   }
 
   .toggle:checked + .lbl-toggle {
