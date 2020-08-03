@@ -18,6 +18,7 @@ import Radio from './components/radio';
 import Select from './components/select';
 import Label from './components/label';
 import Option from './components/option';
+import Tooltip from './components/tooltip';
 
 function App() {
   const options = [
@@ -38,9 +39,13 @@ function App() {
   const [isChecked, setIschecked] = React.useState(false)
   const [gender, setGender] = React.useState("male");
   const [selected, setSelected] = React.useState(null);
+  const [tootipVisible, setTooltipVisible] = React.useState(false);
   return (
     <ThemeProvider theme={theme}>
-      <Flex>
+      <Flex style={{float: 'right'}}>
+      <Tooltip isVisible={tootipVisible}/>
+      </Flex>
+      <Flex mt="50px">
         <Select
           name="greetings"
           width="15%"
