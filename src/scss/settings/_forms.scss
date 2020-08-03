@@ -4,7 +4,6 @@
 
 :root {
   --label-margin-bottom: 0.5rem;
-
   --input-padding-y: 0.5rem;
   --input-padding-x: 1rem;
   --input-font-family: var(--input-btn-font-family);
@@ -74,6 +73,8 @@
 
   --input-transition: border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
+
+  --form-textarea-height: calc(var(--global-spacer) * 6);
 
   --form-text-margin-top: 0.25rem;
 
