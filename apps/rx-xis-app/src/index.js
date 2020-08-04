@@ -63,6 +63,28 @@ function App() {
           validationIcon="icon-check_circle_24px"
           bottomValidationIcon="icon-check_circle_24px"
           isValid={true} />
+          <TextArea
+          type="text"
+          // width="auto"
+          // height=""
+          value={gender}
+          ml={10}
+          placeholder="Text Area"
+          label="Search"
+          onChange={(e) => {
+              setGender(e.target.value)
+          }}
+          borderType="rounded"
+          // disabled
+          errorMessage="required field"
+          error
+          id="search"
+          rows="20"
+          cols="14"
+          iconPosition="inside"
+          validationIcon="icon-check_circle_24px"
+          bottomValidationIcon="icon-check_circle_24px"
+          isValid={true} />
       </Flex>
      
     </ThemeProvider>
