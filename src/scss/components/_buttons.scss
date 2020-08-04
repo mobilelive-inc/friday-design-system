@@ -1,5 +1,22 @@
 //
 // Base styles
+.btnGroup {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
 
 .btn {
   display: inline-flex;
@@ -7,7 +24,7 @@
   justify-content: center;
   font-family: var(--btn-font-family);
   font-weight: var(--btn-font-weight);
-  color: var(--body-color);
+  color: var(--btn-color);
   text-align: center;
   text-decoration: var(--link-decoration);
   white-space: var(--btn-white-space);
@@ -21,6 +38,19 @@
   line-height: var(--btn-line-height);
   border-radius: var(--btn-border-radius);
   @include transition(var(--btn-transition));
+
+  .btnGroup & {
+    margin: 0;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
   @include hover() {
     color: var(--body-color);
@@ -61,6 +91,12 @@
     background-color: var(--primary);
     border-color: var(--primary);
 
+    &.clear {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--primary);
+    }
+
     &:hover,
     &:focus,
     .focus {
@@ -73,6 +109,12 @@
   &__secondary {
     background-color: var(--secondary);
     border-color: var(--secondary);
+
+    &.clear {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--secondary);
+    }
 
     &:hover,
     &:focus,
@@ -87,6 +129,12 @@
     background-color: var(--success);
     border-color: var(--success);
 
+    &.clear {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--success);
+    }
+
     &:hover,
     &:focus,
     .focus {
@@ -99,6 +147,12 @@
   &__info {
     background-color: var(--info);
     border-color: var(--info);
+
+    &.clear {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--info);
+    }
 
     &:hover,
     &:focus,
@@ -113,6 +167,12 @@
     background-color: var(--warning);
     border-color: var(--warning);
 
+    &.clear {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--warning);
+    }
+
     &:hover,
     &:focus,
     .focus {
@@ -125,6 +185,12 @@
   &__danger {
     background-color: var(--danger);
     border-color: var(--danger);
+
+    &.clear {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--danger);
+    }
 
     &:hover,
     &:focus,
@@ -140,6 +206,12 @@
     background-color: var(--light);
     border-color: var(--light);
 
+    &.clear {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--light);
+    }
+
     &:hover,
     &:focus,
     .focus {
@@ -153,6 +225,12 @@
     color: var(--white);
     background-color: var(--dark);
     border-color: var(--dark);
+
+    &.clear {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--dark);
+    }
 
     &:hover,
     &:focus,
@@ -196,6 +274,11 @@
     &.disabled {
       color: var(--btn-link-disabled-color);
       pointer-events: none;
+      &.clear {
+        background-color: transparent;
+        border-color: transparent;
+        color: var(--btn-link-disabled-color);
+      }
     }
   }
 
@@ -250,6 +333,70 @@
   i {
     font-style: normal;
     font-size: 1rem;
+  }
+  &.expand-sm-only {
+    @media screen and (max-width: 767px) {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &.expand-md-only {
+    @media screen and (max-width: 1023px) and (min-width: 768px) {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &.expand-md-up {
+    @media screen and (min-width: 768px) {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &.expand-lg-up {
+    @media screen and (min-width: 1024px) {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &.expand-md-down {
+    @media screen and (max-width: 1023px) {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &.expand-lg-down {
+    @media screen and (max-width: 1199px) {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &.expand-lg-only {
+    @media screen and (max-width: 1199px) and (min-width: 1024px) {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &.expand-xl-only {
+    @media screen and (min-width: 1200px) {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }
 

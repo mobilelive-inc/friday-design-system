@@ -27,6 +27,8 @@
   //
   // For each of DesignSystem's buttons, define text, background, and border color.
 
+  --btn-color: var(--white);
+  --btn-color-alt: var(--black);
   --btn-padding-y: var(--global-spacer);
   --btn-padding-x: var(--spacer-mid);
   --btn-padding-y-sm: var(--spacer-tiny);
