@@ -72,6 +72,9 @@ const getDerivedStyles = (props) => {
   else if(borderType === "curved"){
     styles.borderRadius = borderCurved
   }
+  if(error){
+    styles.border = `2px solid ${colors.error} !important`;
+  }
   return styles;
 }
 
@@ -89,10 +92,10 @@ export const InputContainer = styled('div')(
 
 const getInnerBoxProps = (props) => {
   const { borderType, theme:{
-    borderCurved, borderRounded
-  }, color } = props;
+    borderCurved, borderRounded, colors
+  }, color, error } = props;
   const styles = {
-    backgroundColor: color,
+    backgroundColor: error ? colors.error: color,
     width: '18px',
     height: '18px',
     transition: 'all 0.2s ease-out'
