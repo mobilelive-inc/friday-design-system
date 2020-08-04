@@ -229,10 +229,8 @@ function App() {
         <Radio
           name="male" value="male" label="Male"
           backgroundColor="primary"
-          color="primary"
-          errorMessage="dasdasd"
+          color="black"
           borderType="rounded"
-          isFilled={false}
           variant={gender === 'male' ? 'checked':'unchecked'}
           onChange={() => {setGender('male')}}/>
       </Flex>
@@ -240,10 +238,10 @@ function App() {
         <Radio
           name="female" value="female" label="female"
           backgroundColor="primary"
-          color="black"
-          errorMessage="dasdasd"
-          borderType="rounded"
-          isFilled={false}
+          color="blue"
+          // errorMessage="dasdasd"
+          // borderType="rounded"
+          checkedIconClass="icon-check_circle_24px"
           variant={gender === 'female' ? 'checked':'unchecked'}
           onChange={() => {setGender('female')}}/>
       </Flex>

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '../box';
 import {
-  Input, InputContainer, Flex
+  Input, InputContainer, Flex, InnerBox
 } from './css';
 import Span from '../span/span';
 
@@ -39,9 +39,12 @@ function Radio(props) {
         borderType={borderType}
         className={className}
         color={color}>
-        {variant === 'checked' && (
+        {/* {variant === 'checked' && (
           <Span
             className={checkedIconClass}/>
+        )} */}
+        {variant === 'checked' && (
+          <InnerBox color={color} borderType={borderType}></InnerBox>
         )}
         <Input
           checked={variant === 'checked'}
