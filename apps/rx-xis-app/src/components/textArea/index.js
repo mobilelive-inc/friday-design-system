@@ -23,19 +23,13 @@ const TextArea = (props) => {
     width,
     display,
     validationIcon,
-    bottomValidationIcon,
+    iconPosition,
     ...restProps
   } = props;
   
   return (
     <>
       <InputWrapper width="auto" display={display}>
-      {
-          bottomValidationIcon && (
-            <BottomValidationIcon className={bottomValidationIcon} isValid={isValid}/>
-          )
-        }
-        <ValidationIcon className={validationIcon} isValid={isValid}/>
         <BaseTextArea
           id={id}
           placeholder={placeholder}
@@ -52,7 +46,7 @@ const TextArea = (props) => {
           {...restProps}/>
         {
           validationIcon && (
-            <ValidationIcon className={validationIcon} isValid={isValid}/>
+            <ValidationIcon className={validationIcon} isValid={isValid} position={iconPosition}/>
           )
         }
         <div>
@@ -107,6 +101,8 @@ TextArea.propTypes = {
   rightIconClick: PropTypes.func,
   /** Validation icon class for successfull or unsuccessfull validation */
   validationIcon: PropTypes.string,
+  /** Validation icon's position with respect to the textarea */
+  iconPosition: PropTypes.oneOfType(['inside', 'outside']),
   /** Boolean to represent validation state of input field */
   isValid: PropTypes.bool,
   /** Defines font size of child elements. Accepts responsive value from theme */

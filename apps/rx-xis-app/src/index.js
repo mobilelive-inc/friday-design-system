@@ -59,6 +59,7 @@ function App() {
           id="search"
           rows="20"
           cols="14"
+          iconPosition="inside"
           validationIcon="icon-check_circle_24px"
           bottomValidationIcon="icon-check_circle_24px"
           isValid={true} />
