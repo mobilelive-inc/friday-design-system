@@ -1,7 +1,7 @@
 // Inline code
 code {
   @include font-size(var(--code-font-size));
-  color: var(--kbd-color);
+  color: var(--primary);
   word-wrap: break-word;
 
   // Streamline the style when inside anchors to avoid broken underline and more
