@@ -43,6 +43,106 @@
   --gray-dark: #fbf6ff;
   --gray: #66636a;
 }
+//--primary: var(--orange);
+//--secondary: var(--gray);
+//--success: var(--green);
+//--info: var(--cyan);
+//--warning: var(--lemon);
+//--danger: var(--red);
+//--light: var(--gray-light);
+//--dark: var(--gray-dark);
+
+.navy {
+  --primary: var(--blue);
+  --primary-light: var(--blue-light);
+  --primary-lighter: var(--blue-lighter);
+  --primary-dark: var(--blue-dark);
+  --primary-darker: var(--blue-darker);
+
+  --secondary: var(--primary-light);
+  --success: var(--gray);
+  --info: var(--primary-dark);
+  --warning: var(--primary-darker);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--gray-dark);
+  --primary-hover: var(--blue-dark);
+  --secondary-hover: var(--gray-dark);
+  --info-hover: var(--cyan-dark);
+  --success-hover: var(--lime-dark);
+  --danger-hover: var(--red);
+  --warning-hover: var(--blue-dark);
+  --light-hover: var(--gray);
+  --dark-hover: var(--gray-light);
+
+  .bg__warning,
+  .bg__info {
+    color: var(--btn-color) !important;
+  }
+  .bg__secondary,
+  .bg__light {
+    color: var(--btn-color-alt) !important;
+  }
+}
+
+.lemon {
+  // Standard Colors
+  --primary: var(--lemon);
+  --primary-light: var(--lemon-light);
+  --primary-lighter: var(--lemon-lighter);
+  --primary-dark: var(--lemon-dark);
+  --primary-darker: var(--lemon-darker);
+
+  --secondary: var(--gray);
+  --success: var(--green-darker);
+  --info: var(--primary-light);
+  --warning: var(--primary-dark);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--primary-darker);
+
+  --primary-hover: var(--primary-dark);
+  --secondary-hover: var(--gray-dark);
+  --info-hover: var(--cyan-dark);
+  --success-hover: var(--primary-dark);
+  --danger-hover: var(--red);
+  --warning-hover: var(--primary-dark);
+  --light-hover: var(--gray);
+  --dark-hover: var(--gray-light);
+
+  .bg__warning {
+    color: var(--btn-color) !important;
+  }
+}
+
+.lime {
+  // Standard Colors
+  --primary: var(--lime);
+  --primary-light: var(--lime-light);
+  --primary-lighter: var(--lime-lighter);
+  --primary-dark: var(--lime-dark);
+  --primary-darker: var(--lime-darker);
+
+  --secondary: var(--gray);
+  --success: var(--green-dark);
+  --info: var(--primary-light);
+  --warning: var(--primary-dark);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--primary-darker);
+  --primary-hover: var(--primary-dark);
+  --secondary-hover: var(--gray-dark);
+  --info-hover: var(--cyan-dark);
+  --success-hover: var(--primary-dark);
+  --danger-hover: var(--red);
+  --warning-hover: var(--primary-dark);
+  --light-hover: var(--gray);
+  --dark-hover: var(--gray-light);
+
+  .bg__warning {
+    color: var(--btn-color) !important;
+  }
+}
 
 #pageWrapper {
   background-color: var(--white);
@@ -53,16 +153,12 @@
 .theme-switcher {
   position: fixed;
   right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 20px;
-  box-shadow: 0 0 20px 14px rgba(0, 0, 0, 0.15);
-  background-color: #d8d8d8;
+  padding: 1px 30px 15px;
+  background-color: var(--primary-light);
   z-index: 20;
-  border-radius: 10px;
-  opacity: 0.2;
+  border-radius: 3px;
+  opacity: 0.85;
+  transition: opacity 0.25s linear;
 
   &:hover {
     opacity: 1;

@@ -19,25 +19,25 @@
 }
 
 .sidebar {
-  background: #f48720; /* Old browsers */
-  background: -moz-linear-gradient(
-    top,
-    #f48720 0%,
-    #f28f32 63%,
-    #f2b276 100%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    #f48720 0%,
-    #f28f32 63%,
-    #f2b276 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #f48720 0%,
-    #f28f32 63%,
-    #f2b276 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: var(--primary); /* Old browsers */
+  //background: -moz-linear-gradient(
+  //  top,
+  //  #f48720 0%,
+  //  #f28f32 63%,
+  //  #f2b276 100%
+  //); /* FF3.6-15 */
+  //background: -webkit-linear-gradient(
+  //  top,
+  //  #f48720 0%,
+  //  #f28f32 63%,
+  //  #f2b276 100%
+  //); /* Chrome10-25,Safari5.1-6 */
+  //background: linear-gradient(
+  //  to bottom,
+  //  #f48720 0%,
+  //  #f28f32 63%,
+  //  #f2b276 100%
+  //); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   height: calc(100vh - 90px);
   width: 230px;
   position: fixed;
@@ -47,7 +47,7 @@
   background-size: cover;
   background-position: center center;
   display: block;
-  box-shadow: 1px 11px 30px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 8px 20px 0 rgba(0, 0, 0, 0.6);
   margin-top: 110px;
   margin-left: 15px;
   border-radius: 5px;
@@ -68,7 +68,7 @@
         list-style: none;
         > a {
           margin: 0 15px 0;
-          color: #ffffff;
+          color: var(--btn-color-alt);
           display: flex;
           align-items: center;
           flex-direction: row;
@@ -86,7 +86,7 @@
             margin-right: 12px;
             color: white;
             &:before {
-              color: #ffffff;
+              color: var(--btn-color-alt);
             }
           }
           &:hover {
@@ -104,10 +104,11 @@
 
         &.active > a {
           background: transparent;
+          color: var(--btn-color);
           i {
             color: white;
             &:before {
-              color: #ffffff;
+              color: var(--btn-color);
             }
           }
 

@@ -13,6 +13,12 @@
   --orange-dark: #c36837;
   --orange-darker: #311a0e;
 
+  //default
+  --primary-lighter: var(--orange-lighter);
+  --primary-light: var(--orange-light);
+  --primary-dark: var(--orange-dark);
+  --primary-darker: var(--orange-darker);
+
   --blue: #55a2d9;
   --blue-lighter: #eef6fb;
   --blue-light: #bbdaf0;
@@ -46,6 +52,10 @@
   --red: #dc3545;
   --red-dark: #b02a37;
   --green: #34a84d;
+  --green-dark: #2f9745;
+  --green-darker: #247636;
+
+  --headings-color: var(--primary-dark);
 
   //ML Standard Colors
   --primary: var(--orange);
@@ -66,6 +76,18 @@
   --light-hover: var(--gray);
   --dark-hover: var(--gray-light);
 }
+
+//Primary Colors
+$theme-colors: (
+  'primary': var(--primary),
+  'secondary': var(--secondary),
+  'success': var(--success),
+  'info': var(--info),
+  'warning': var(--warning),
+  'danger': var(--danger),
+  'light': var(--light),
+  'dark': var(--dark)
+);
 
 $colors: (
   'blue': var(--blue),
@@ -110,18 +132,6 @@ $color-variants: (
   'navy-light': var(--navy-light),
   'navy-dark': var(--navy-dark),
   'navy-darker': var(--navy-darker)
-);
-
-//Primary Colors
-$theme-colors: (
-  'primary': var(--primary),
-  'secondary': var(--secondary),
-  'success': var(--success),
-  'info': var(--info),
-  'warning': var(--warning),
-  'danger': var(--danger),
-  'light': var(--light),
-  'dark': var(--dark)
 );
 
 //SCSS Variables

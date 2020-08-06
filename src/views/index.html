@@ -53,16 +53,19 @@
   <body class="dashboard-styling">
     <!--theme switcher-->
     <div class="theme-switcher">
-      <h5 class="h5">Switch Theme</h5>
+      <p>Choose Theme:</p>
       <div class="btns-switcher-holder">
-        <button
-          class="btn btn__dark dark-theme-btn btn-sm"
-          onclick="switchDarkTheme()"
-        >
-          Dark
+        <button class="btn btn__primary btn--sm" onclick="switchTheme(1)">
+          Navy
         </button>
-        <button class="btn btn__secondary btn-sm" onclick="switchLightTheme()">
-          Gray
+        <button class="btn btn__primary btn--sm" onclick="switchTheme(2)">
+          Lemon
+        </button>
+        <button class="btn btn__primary btn--sm" onclick="switchTheme(3)">
+          Lime
+        </button>
+        <button class="btn btn__primary btn--sm" onclick="switchTheme(4)">
+          Default
         </button>
       </div>
     </div>
@@ -130,16 +133,26 @@
     <script src="/bundle.js"></script>
 
     <script>
-      function switchDarkTheme() {
+      function switchTheme(n) {
+        var i = n;
         var root = document.getElementsByTagName('html')[0];
-        root.classList.add('theme-dark');
-        root.classList.remove('theme-gray');
-      }
-
-      function switchLightTheme() {
-        var root = document.getElementsByTagName('html')[0];
-        root.classList.add('theme-gray');
-        root.classList.remove('theme-dark');
+        if (i === 1) {
+          root.classList.add('navy');
+          root.classList.remove('lemon');
+          root.classList.remove('lime');
+        } else if (i === 2) {
+          root.classList.add('lemon');
+          root.classList.remove('navy');
+          root.classList.remove('lime');
+        } else if (i === 3) {
+          root.classList.add('lime');
+          root.classList.remove('navy');
+          root.classList.remove('lemon');
+        } else if (i === 4) {
+          root.classList.remove('navy');
+          root.classList.remove('lemon');
+          root.classList.remove('lime');
+        }
       }
 
       var el;

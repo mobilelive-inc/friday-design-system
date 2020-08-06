@@ -1,13 +1,23 @@
 <section id="forms_info">
-  <h2 class="h2">Forms</h2>
-  <div>
+  <div class="infoBlockPiece">
+    <h2 class="h2">Forms</h2>
+    <p>
+      Creating a form is designed to be easy and flexible. Forms are built with
+      standard form elements and some standard classes to make sure their proper
+      rendering across different browsers.
+    </p>
     <!--Input Field-->
     <div class="infoBlock">
       <h3 class="h3">Input element</h3>
+      <p>
+        Use relevant attribute on all inputs (input type = "email" for email
+        address or input type="search" for Search fields).
+      </p>
       <!--Input form Fields-->
-      <div class="infoBlockPiece">
-        <h5 class="h5 mb-mid">Basic input form field</h5>
-        <div class="row mb-mid">
+      <div class="jumbotron">
+        <h5 class="h5 mb-tiny">Basic Input</h5>
+        <p>Use class="form-control" on Input for pre-defined styles.</p>
+        <div class="row mb-tiny">
           <div class="formGroup col-4">
             <label for="formDefault" class="sr-only">Default</label>
             <div class="formControlWrap flex-wrap d-flex align-items-center">
@@ -52,9 +62,13 @@
       </div>
 
       <!--Input Variations-->
-      <div class="infoBlockPiece">
-        <h5 class="h5 mb-mid">Inputs with Variations</h5>
-        <div class="row mb-small">
+      <div class="jumbotron">
+        <h5 class="h5 mb-tiny">Input with Variations</h5>
+        <p>
+          Use additional classes on Input holder ( Curved, Rounded, Textonly )
+          for variations.
+        </p>
+        <div class="row mb-tiny">
           <div class="formGroup col-3">
             <label for="emailCurved" class="sr-only">Email Curved</label>
             <div class="formControlWrap d-flex flex-wrap align-items-center">
@@ -86,7 +100,7 @@
           </div>
 
           <div class="formGroup col-3">
-            <label for="emailtextONly" class="sr-only">Email Rounded</label>
+            <label for="emailtextONly" class="sr-only">Email TextOnly</label>
             <div class="formControlWrap d-flex flex-wrap align-items-center">
               <div class="formControlHolder d-flex align-items-center textOnly">
                 <input
@@ -165,8 +179,12 @@
       <!--/Input Variations-->
 
       <!--Input form Fields with labels-->
-      <div class="infoBlockPiece">
-        <h5 class="h5 mb-small">Input form Fields With labels</h5>
+      <div class="jumbotron">
+        <h5 class="h5 mb-tiny">Input form Fields With labels</h5>
+        <p>
+          Label is paired with Input ( using ID ) so that click on Label shifts
+          focus inside Input.
+        </p>
         <div class="row mb-mid">
           <div class="formGroup col-3">
             <label for="formDefault1" class="info">Default</label>
@@ -228,7 +246,6 @@
             </div>
           </div>
         </div>
-
         <!--Code-->
         <div class="wrap-collabsible">
           <input id="collapsible2" class="toggle" type="checkbox" />
@@ -309,12 +326,12 @@
         </div>
       </div>
       <!--Input form Fields with labels-->
-
       <!--With Search icons-->
 
-      <div class="infoBlockPiece">
-        <h5 class="h5 mb-small">Input Fields With Search Icon</h5>
-        <div class="row mb-mid">
+      <div class="jumbotron">
+        <h5 class="h5 mb-tiny">Input Fields With Search Icon</h5>
+        <p>Add additional icon for description.</p>
+        <div class="row mb-tiny">
           <div class="formGroup col-3">
             <label for="FirstName">Label</label>
             <div class="formControlWrap d-flex flex-wrap align-items-center">
@@ -334,7 +351,7 @@
               </div>
               <span class="pl-tiny hide icon-info_24px errorOptionx"></span>
               <span
-                class="pl-tiny show icon-check_circle_24px successOption"
+                class="pl-tiny hide icon-check_circle_24px successOption"
               ></span>
             </div>
           </div>
@@ -361,7 +378,7 @@
               </div>
               <span class="pl-tiny hide icon-info_24px errorOptionx"></span>
               <span
-                class="pl-tiny show icon-check_circle_24px successOption"
+                class="pl-tiny hide icon-check_circle_24px successOption"
               ></span>
             </div>
           </div>
@@ -388,7 +405,7 @@
               </div>
               <span class="pl-tiny hide icon-info_24px errorOptionx"></span>
               <span
-                class="pl-tiny show icon-check_circle_24px successOption"
+                class="pl-tiny hide icon-check_circle_24px successOption"
               ></span>
             </div>
           </div>
@@ -415,7 +432,7 @@
               </div>
               <span class="pl-tiny hide icon-info_24px errorOptionx"></span>
               <span
-                class="pl-tiny show icon-check_circle_24px successOption"
+                class="pl-tiny hide icon-check_circle_24px successOption"
               ></span>
             </div>
           </div>
@@ -447,7 +464,7 @@
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info_24px errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-check_circle_24px successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-check_circle_24px successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
 </span><span style="color:rgb(0, 0, 128);">&lt;/div&gt;
 </span></pre>
@@ -473,7 +490,7 @@
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info_24px errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-check_circle_24px successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-check_circle_24px successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
 </span><span style="color:rgb(0, 0, 128);">&lt;/div&gt;
 </span></pre>
@@ -499,7 +516,7 @@
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info_24px errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-check_circle_24px successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-check_circle_24px successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
 </span><span style="color:rgb(0, 0, 128);">&lt;/div&gt;
 </span></pre>
@@ -525,7 +542,7 @@
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info_24px errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-check_circle_24px successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-check_circle_24px successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
 </span><span style="color:rgb(0, 0, 128);">&lt;/div&gt;
 </span></pre>
@@ -534,13 +551,14 @@
         </div>
       </div>
       <!--/With Search icons-->
-
       <!--With Search icons + error + success-->
-      <div class="infoBlockPiece">
-        <h5 class="h5 mb-small">
-          Input Fields with Error and Success States
-        </h5>
-        <div class="row mb-mid justify-content-start">
+      <div class="jumbotron">
+        <h5 class="h5 mb-tiny">With Error and Success icons</h5>
+        <p>
+          Inputs can have success and error feedback. Success is shown with
+          green icon while error state is shown by red icon and the red border.
+        </p>
+        <div class="row mb-tiny justify-content-start">
           <div class="formGroup col-3">
             <label for="FirstName2">Label</label>
             <div class="formControlWrap d-flex flex-wrap align-items-center">
@@ -651,7 +669,6 @@
             </div>
           </div>
         </div>
-
         <!--Code-->
         <div class="wrap-collabsible">
           <input id="collapsible4" class="toggle" type="checkbox" />
@@ -770,11 +787,11 @@
         </div>
       </div>
       <!--/With Search icons + error + success-->
-
       <!--With Search icons on both sides-->
-      <div class="infoBlockPiece">
-        <h5 class="h5 mb-mid">Input search Fields With Search Icon</h5>
-        <div class="row mb-mid">
+      <div class="jumbotron">
+        <h5 class="h5 mb-tiny">Input Search Fields With Search Icon</h5>
+        <p>use input type="search" for search fields.</p>
+        <div class="row mb-tiny">
           <div class="formGroup col-3">
             <label for="FirstName1">Label</label>
             <div class="formControlWrap d-flex flex-wrap align-items-center">
@@ -856,7 +873,6 @@
               <span class="text-danger">Error Message</span>
             </div>
           </div>
-
           <div class="formGroup col-3">
             <label for="FirstName244">Label</label>
             <div class="formControlWrap d-flex flex-wrap align-items-center">
@@ -885,7 +901,6 @@
             </div>
           </div>
         </div>
-
         <!--Code-->
         <div class="wrap-collabsible">
           <input id="collapsible5" class="toggle" type="checkbox" />
@@ -1004,11 +1019,11 @@
         </div>
       </div>
       <!--/With Search icons on both sides-->
-
       <!--Input form Fields with backgrounds-->
-      <div class="infoBlockPiece">
-        <h5 class="h5 mb-small">Input form Fields With backgrounds</h5>
-        <div class="row mb-mid align-items-end">
+      <div class="jumbotron">
+        <h5 class="h5 mb-tiny">Input form Fields With backgrounds</h5>
+        <p>Add additional class on Input Holder for background variation</p>
+        <div class="row mb-tiny align-items-end">
           <div class="formGroup col-3">
             <label for="formDefault2">Default</label>
             <div class="formControlWrap d-flex flex-wrap align-items-center">
@@ -1158,9 +1173,13 @@
       <!--/Input form Fields with backgrounds-->
 
       <!--Text area-->
-      <div class="infoBlockPiece">
-        <h5 class="h5 mb-small">Text Area ( Icons Inside )</h5>
-        <div class="row mb-mid">
+      <div class="jumbotron">
+        <h5 class="h5 mb-tiny">Text Area ( Icons Inside )</h5>
+        <p>
+          Similar to Input, the purpose of TextArea is to take multi line user
+          Input.
+        </p>
+        <div class="row">
           <div class="formGroup col-3">
             <div class="formControlWrap d-flex flex-wrap align-items-center">
               <div class="formControlHolder d-flex align-items-center">
@@ -1242,9 +1261,8 @@
             </div>
           </div>
         </div>
-
         <!--Text Area-->
-        <div class="wrap-collabsible">
+        <div class="mb-mid wrap-collabsible">
           <input id="collapsible06" class="toggle" type="checkbox" />
           <label for="collapsible06" class="lbl-toggle"></label>
           <div class="collapsible-content">
@@ -1355,13 +1373,10 @@
             </div>
           </div>
         </div>
-      </div>
-      <!--/Text Area-->
 
-      <!--Text area-->
-      <div class="infoBlockPiece">
-        <h5 class="h5 mb-small">Text Area ( Icons Outside )</h5>
-        <div class="row mb-mid">
+        <h5 class="h5 mb-tiny">Text Area ( Icons Outside )</h5>
+        <p>Just another TextArea variation with Icons outside TextArea.</p>
+        <div class="row">
           <div class="formGroup col-3">
             <div class="formControlWrap d-flex flex-wrap">
               <div class="formControlHolder d-flex">
@@ -1402,7 +1417,6 @@
             </div>
           </div>
         </div>
-
         <!--Text Area-->
         <div class="wrap-collabsible">
           <input id="collapsible07" class="toggle" type="checkbox" />
@@ -1467,15 +1481,12 @@
 
     <!--Select-->
     <div class="infoBlock">
-      <h3 class="h3 mb-small">Select</h3>
       <!--basic select-->
-      <div class="infoBlockPiece">
-        <!--        <h5 class="h5">Basic Select implementation</h5>-->
+      <div class="jumbotron">
+        <h3 class="h3 mb-small">SELECT</h3>
         <div class="row mb-small">
           <div class="formGroup col-3">
-            <label for="myselect"
-              >Basic Select implementation - I'm a Label
-            </label>
+            <label for="myselect">Basic Implementation</label>
             <div class="formControlWrap d-flex flex-wrap align-items-center">
               <div class="formControlHolder formControlHolder__select">
                 <select
@@ -1497,15 +1508,13 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny icon-info_24px errorOptionx"></span>
-              <span class="text-danger">Please Select any option</span>
+              <span class="hide pl-tiny icon-info_24px errorOptionx"></span>
+              <span class="hide text-danger">Please Select any option</span>
             </div>
           </div>
 
           <div class="formGroup col-3">
-            <label for="myselect1"
-              >Select with search cross icon- I'm a Label</label
-            >
+            <label for="myselect1">With Cross Icon</label>
             <div class="formControlWrap d-flex align-items-center flex-wrap">
               <div class="formControlHolder formControlHolder__select">
                 <select
@@ -1527,15 +1536,13 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny icon-info_24px errorOptionx"></span>
+              <span class="hide pl-tiny icon-info_24px errorOptionx"></span>
               <span class="text-danger hide">Please Select any option</span>
             </div>
           </div>
 
           <div class="formGroup col-3">
-            <label for="myselect14"
-              >Select with error state - I'm a Label</label
-            >
+            <label for="myselect14">With Error State</label>
             <div class="formControlWrap d-flex align-items-center flex-wrap">
               <div class="formControlHolder formControlHolder__select error">
                 <select
@@ -1558,7 +1565,7 @@
                 ></button>
               </div>
               <span class="pl-tiny icon-info_24px errorOptionx"></span>
-              <span class="text-danger hide">Please Select any option</span>
+              <span class="text-danger">Please Select any option</span>
             </div>
           </div>
         </div>
@@ -1574,9 +1581,7 @@
         <!--Select with Calender error-->
         <div class="row mb-small">
           <div class="formGroup col-3">
-            <label for="myselect124"
-              >Select with Date Picker and error state - I'm a Label</label
-            >
+            <label for="myselect124">Select with Date Picker</label>
             <div class="formControlWrap d-flex align-items-center flex-wrap">
               <div class="formControlHolder formControlHolder__select">
                 <select
@@ -1603,15 +1608,13 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny icon-info_24px errorOptionx"></span>
+              <span class="hide pl-tiny icon-info_24px errorOptionx"></span>
               <span class="text-danger hide">Please Select any option</span>
             </div>
           </div>
           <!--Select with cross button-->
           <div class="formGroup col-3">
-            <label for="myselect125"
-              >Select with Error State - I'm a Label</label
-            >
+            <label for="myselect125">Error State</label>
             <div class="formControlWrap d-flex align-items-center flex-wrap">
               <div class="formControlHolder formControlHolder__select error">
                 <select
@@ -1639,12 +1642,12 @@
                 ></button>
               </div>
               <span class="pl-tiny icon-info_24px errorOptionx"></span>
-              <span class="text-danger hide">Please Select any option</span>
+              <span class="text-danger">Please Select any option</span>
             </div>
           </div>
         </div>
         <!--Code-->
-        <div class="wrap-collabsible">
+        <div class="wrap-collabsible mb-mid">
           <input id="collapsible91" class="toggle" type="checkbox" />
           <label for="collapsible91" class="lbl-toggle"></label>
           <div class="collapsible-content">
@@ -1654,11 +1657,11 @@
         <!--Select with Calender error-->
 
         <!--Select with Calender error-->
-        <h5 class="h5">Select with Variations</h5>
+        <h5 class="h5">SELECT with Variations</h5>
         <div class="row mb-small">
           <!--Select with cross button-->
           <div class="formGroup col-3">
-            <label for="myselect126">Select Label</label>
+            <label for="myselect126">Rounded border</label>
             <div class="formControlWrap d-flex align-items-center flex-wrap">
               <div class="formControlHolder formControlHolder__select rounded">
                 <select
@@ -1668,15 +1671,10 @@
                   required
                 >
                   <option value="">Pick an option</option>
-
                   <option>Pottery</option>
-
                   <option>Gardening</option>
-
                   <option>Art</option>
-
                   <option>Photography</option>
-
                   <option>Entrepreneurship</option>
                 </select>
                 <button
@@ -1690,13 +1688,13 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny icon-info_24px errorOptionx"></span>
+              <span class="hide pl-tiny icon-info_24px errorOptionx"></span>
               <span class="text-danger hide">Please Select any option</span>
             </div>
           </div>
 
           <div class="formGroup col-3">
-            <label for="myselect127">Select Label</label>
+            <label for="myselect127">Text Only</label>
             <div class="formControlWrap d-flex align-items-center flex-wrap">
               <div class="formControlHolder formControlHolder__select textOnly">
                 <select
@@ -1706,15 +1704,10 @@
                   required
                 >
                   <option value="">Pick an option</option>
-
                   <option>Pottery</option>
-
                   <option>Gardening</option>
-
                   <option>Art</option>
-
                   <option>Photography</option>
-
                   <option>Entrepreneurship</option>
                 </select>
                 <button
@@ -1728,13 +1721,13 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny icon-info_24px errorOptionx"></span>
+              <span class="hide pl-tiny icon-info_24px errorOptionx"></span>
               <span class="text-danger hide">Please Select any option</span>
             </div>
           </div>
 
           <div class="formGroup col-3">
-            <label for="myselect128">Select Label</label>
+            <label for="myselect128">BG + Icon</label>
             <div class="formControlWrap d-flex align-items-center flex-wrap">
               <div class="formControlHolder formControlHolder__select hasBg">
                 <select
@@ -1744,15 +1737,10 @@
                   required
                 >
                   <option value="">Pick an option</option>
-
                   <option>Pottery</option>
-
                   <option>Gardening</option>
-
                   <option>Art</option>
-
                   <option>Photography</option>
-
                   <option>Entrepreneurship</option>
                 </select>
                 <button
@@ -1766,13 +1754,13 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny icon-info_24px errorOptionx"></span>
+              <span class="hide pl-tiny icon-info_24px errorOptionx"></span>
               <span class="text-danger hide">Please Select any option</span>
             </div>
           </div>
 
           <div class="formGroup col-3">
-            <label for="myselect129">Select Label</label>
+            <label for="myselect129">BG Only</label>
             <div class="formControlWrap d-flex align-items-center flex-wrap">
               <div class="formControlHolder formControlHolder__select hasBg">
                 <select
@@ -1782,15 +1770,10 @@
                   required
                 >
                   <option value="">Pick an option</option>
-
                   <option>Pottery</option>
-
                   <option>Gardening</option>
-
                   <option>Art</option>
-
                   <option>Photography</option>
-
                   <option>Entrepreneurship</option>
                 </select>
                 <button
@@ -1804,8 +1787,8 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny icon-info_24px errorOptionx"></span>
-              <span class="text-danger">Please Select any option</span>
+              <span class="hide pl-tiny icon-info_24px errorOptionx"></span>
+              <span class="hide text-danger">Please Select any option</span>
             </div>
           </div>
           <!--Select with Calender bg cross-->
@@ -2033,9 +2016,9 @@
 
     <!--CheckBoxes-->
     <div class="infoBlock">
-      <h3 class="h3 mb-small">CheckBox</h3>
       <!--Check Boxes-->
-      <div class="infoBlockPiece">
+      <div class="jumbotron">
+        <h3 class="h3 mb-small">CheckBox</h3>
         <div class="row mb-mid">
           <div class="formCheck col-1">
             <div class="checkBox">
@@ -2136,7 +2119,6 @@
             <label class="checkLabel sr-only" for="checkbox7">Danger</label>
           </div>
         </div>
-
         <!--Code-->
         <div class="wrap-collabsible mb-mid">
           <input id="collapsible92" class="toggle" type="checkbox" />
@@ -2276,11 +2258,9 @@
             </div>
           </div>
         </div>
-
         <!--/Check Boxes-->
-
         <!--Check Boxes With labes-->
-        <h5 class="h5 mb-small">CheckBoxs with Labels & Variations</h5>
+        <h5 class="h5 mb-small">CheckBox with Label</h5>
         <div class="row mb-mid">
           <div class="formCheck col-1">
             <div class="checkBox">
@@ -2304,82 +2284,6 @@
               <span class="checkboxFake"></span>
             </div>
             <label class="checkLabel" for="checkbox32">label</label>
-          </div>
-
-          <!--BG class-->
-          <div class="formCheck col-1">
-            <div class="checkBox checkBox__bg">
-              <input type="checkbox" id="checkbox62" />
-              <span class="checkboxFake"></span>
-            </div>
-            <label class="checkLabel" for="checkbox62">label</label>
-          </div>
-
-          <div class="formCheck col-1">
-            <div class="checkBox checkBox__bg checkBox--curved">
-              <input type="checkbox" id="checkbox42" />
-              <span class="checkboxFake"></span>
-            </div>
-            <label class="checkLabel" for="checkbox42">label</label>
-          </div>
-
-          <div class="formCheck col-1">
-            <div class="checkBox checkBox__bg checkBox--rounded">
-              <input type="checkbox" id="checkbox52" checked />
-              <span class="checkboxFake"></span>
-            </div>
-            <label class="checkLabel" for="checkbox52">label</label>
-          </div>
-
-          <!--Error class-->
-          <!--Error class-->
-          <div class="formCheck col-1 formCheck__error">
-            <div class="checkBox">
-              <input type="checkbox" id="checkbox83" />
-              <span class="checkboxFake"></span>
-            </div>
-            <label class="checkLabel" for="checkbox83">label</label>
-          </div>
-
-          <div class="formCheck formCheck__error col-1">
-            <div class="checkBox checkBox--curved">
-              <input type="checkbox" id="checkbox93" />
-              <span class="checkboxFake"></span>
-            </div>
-            <label class="checkLabel" for="checkbox93">label</label>
-          </div>
-
-          <div class="formCheck formCheck__error col-1">
-            <div class="checkBox checkBox--rounded">
-              <input type="checkbox" id="checkbox73" />
-              <span class="checkboxFake"></span>
-            </div>
-            <label class="checkLabel" for="checkbox73">Danger</label>
-          </div>
-
-          <!--BG class Error-->
-          <div class="formCheck col-1 formCheck__error">
-            <div class="checkBox checkBox__bg">
-              <input type="checkbox" id="checkbox832" checked />
-              <span class="checkboxFake"></span>
-            </div>
-            <label class="checkLabel" for="checkbox832">label</label>
-          </div>
-
-          <div class="formCheck formCheck__error col-1">
-            <div class="checkBox checkBox__bg checkBox--curved">
-              <input type="checkbox" id="checkbox932" />
-              <span class="checkboxFake"></span>
-            </div>
-            <label class="checkLabel" for="checkbox932">label</label>
-          </div>
-
-          <div class="formCheck formCheck__error col-1">
-            <div class="checkBox checkBox__bg checkBox--rounded">
-              <input type="checkbox" id="checkbox731" />
-              <span class="checkboxFake"></span>
-            </div>
-            <label class="checkLabel" for="checkbox731">Danger</label>
           </div>
         </div>
         <!--/Check Boxes With labes-->
@@ -2471,7 +2375,6 @@
             </div>
           </fieldset>
         </div>
-
         <!--Code-->
         <div class="wrap-collabsible">
           <input id="collapsible94" class="toggle" type="checkbox" />
@@ -2575,10 +2478,9 @@
 
     <!--Radio Buttons-->
     <div class="infoBlock">
-      <h3 class="h3 mb-small">Radios</h3>
-      <div class="infoBlockPiece">
+      <div class="jumbotron">
         <!--Radio Buttons With labels-->
-
+        <h3 class="h3 mb-small">Radio Buttons</h3>
         <div class="row mb-mid">
           <div class="col-3">
             <div class="formRadio">
@@ -2661,7 +2563,6 @@
           </div>
         </div>
         <!--/Radio Buttons With labels-->
-
         <!--Code-->
         <div class="wrap-collabsible">
           <input id="collapsible95" class="toggle" type="checkbox" />
@@ -2764,8 +2665,8 @@
 
     <!--Toggle Buttons-->
     <div class="infoBlock">
-      <h3 class="h3 mb-small">Toggle Buttons</h3>
-      <div class="infoBlockPiece">
+      <div class="jumbotron">
+        <h3 class="h3 mb-small">Toggle Buttons</h3>
         <!--icons only-->
         <div class="row mb-mid">
           <div class="col-3">
@@ -2814,7 +2715,6 @@
           </div>
         </div>
         <!--/icons only-->
-
         <!--Code-->
         <div class="wrap-collabsible">
           <input id="collapsible96" class="toggle" type="checkbox" />
@@ -2870,13 +2770,11 @@
       </div>
     </div>
     <!--/Toggle Buttons-->
-
     <!--Toggle Buttons-->
     <div class="infoBlock">
-      <h3 class="h3 mb-small">Toggle Buttons (Icons + Label)</h3>
-      <div class="infoBlockPiece">
+      <div class="jumbotron">
+        <h3 class="h3 mb-small">Toggle Buttons (Icons + Label)</h3>
         <!--icons only-->
-
         <div class="row mb-mid">
           <div class="col-3">
             <div class="toggleBtn p-micro">
@@ -2991,173 +2889,191 @@
     </div>
     <!--/Toggle Buttons-->
   </div>
-</section>
-
-<section class="">
-  <h1>Example Form</h1>
-  <form class="col-9 p-mid">
-    <div class="row mb-small">
-      <div class="formGroup col-6">
-        <label for="Firstnamee" class="">First Name*</label>
-        <input
-          type="text"
-          class="formControl"
-          id="Firstnamee"
-          placeholder="First Name"
-          aria-describedby="emailHelp"
-        />
+  <div class="infoBlockPiece">
+    <h1>Example Form</h1>
+    <form class="col-9 p-mid">
+      <div class="row mb-small">
+        <div class="formGroup col-6">
+          <label for="FirstNamee" class="">First Name*</label>
+          <div class="formControlWrap d-flex align-items-center flex-wrap">
+            <div class="formControlHolder d-flex">
+              <input
+                type="text"
+                class="formControl"
+                id="FirstNamee"
+                placeholder="First Name"
+                aria-describedby="emailHelp"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="formGroup col-6">
+          <label for="lastName" class="">Last Name*</label>
+          <div class="formControlWrap d-flex align-items-center flex-wrap">
+            <div class="formControlHolder d-flex">
+              <input
+                type="text"
+                class="formControl formControl--curved"
+                placeholder="Last Name"
+                id="lastName"
+                aria-describedby="emailHelp"
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="formGroup col-6">
-        <label for="lastName" class="">Last Name*</label>
-        <input
-          type="text"
-          class="formControl formControl--curved"
-          placeholder="Last Name"
-          id="lastName"
-          aria-describedby="emailHelp"
-        />
-      </div>
-    </div>
-
-    <div class="row mb-small">
-      <div class="formGroup col-12">
-        <label for="Email" class="required">Email</label>
-        <input
-          type="email"
-          class="formControl"
-          id="Email"
-          placeholder="Enter Email"
-          aria-describedby="emailHelp"
-          required
-        />
-      </div>
-    </div>
-
-    <div class="row mb-small">
-      <div class="formGroup col-12">
-        <label for="pass" class="info">Password</label>
-        <input
-          type="password"
-          class="formControl"
-          id="pass"
-          placeholder="Enter Password"
-          aria-describedby="emailHelp"
-          required
-        />
-      </div>
-    </div>
-
-    <div class="row mb-small">
-      <!--simple select-->
-      <div class="formGroup col-12 mr-mid">
-        <label for="gender">Gender</label>
-        <div class="formControlHolder formControlHolder__select">
-          <select class="formControl" name="course" id="gender" required>
-            <option value="">Your Gender</option>
-
-            <option>Male</option>
-
-            <option>Female</option>
-
-            <option>Other</option>
-          </select>
-          <button
-            type="button"
-            class="icon-clear_24px clearCrossBtn"
-            aria-label="Label"
-          ></button>
-          <span class="icon-info_24px errorOptionx"></span>
+      <div class="row mb-small">
+        <div class="formGroup col-12">
+          <label for="Email" class="required">Email</label>
+          <div class="formControlWrap d-flex align-items-center flex-wrap">
+            <div class="formControlHolder d-flex">
+              <input
+                type="email"
+                class="formControl"
+                id="Email"
+                placeholder="Enter Email"
+                aria-describedby="emailHelp"
+                required
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <!--/Simple Select-->
-    </div>
 
-    <div class="row mb-smal justify-content-between">
-      <fieldset class="col-3">
-        <legend>Select your Languages:</legend>
-
-        <div class="formCheck">
-          <div class="checkBox">
-            <input type="checkbox" id="checkboxs" />
-            <span class="checkboxFake"></span>
+      <div class="row mb-small">
+        <div class="formGroup col-12">
+          <label for="pass" class="info">Password</label>
+          <div class="formControlWrap d-flex align-items-center flex-wrap">
+            <div class="formControlHolder d-flex">
+              <input
+                type="password"
+                class="formControl"
+                id="pass"
+                placeholder="Enter Password"
+                aria-describedby="emailHelp"
+                required
+              />
+            </div>
           </div>
-          <label class="checkLabel" for="checkboxs">Urdu</label>
-        </div>
-
-        <div class="formCheck">
-          <div class="checkBox">
-            <input type="checkbox" id="checkbox233s" checked />
-            <span class="checkboxFake"></span>
-          </div>
-          <label class="checkLabel" for="checkbox233s">English</label>
-        </div>
-
-        <div class="formCheck">
-          <div class="checkBox">
-            <input type="checkbox" id="checkbox323s" />
-            <span class="checkboxFake"></span>
-          </div>
-          <label class="checkLabel" for="checkbox323s">Persian</label>
-        </div>
-
-        <div class="formCheck">
-          <div class="checkBox">
-            <input type="checkbox" id="checkbox323sx" />
-            <span class="checkboxFake"></span>
-          </div>
-          <label class="checkLabel" for="checkbox323sx">Hindi</label>
-        </div>
-      </fieldset>
-      <div class="col-3">
-        <strong class="mb-small d-flex">Select your Cofee</strong>
-        <div class="formRadio">
-          <div class="radioBtn">
-            <input type="radio" name="coffee" id="radioBtn123" />
-            <span class="radioBtnFake"></span>
-          </div>
-          <label class="radioLabel" for="radioBtn123">Espresso</label>
-        </div>
-        <div class="formRadio">
-          <div class="radioBtn">
-            <input type="radio" name="coffee" id="radioBtn233" checked />
-            <span class="radioBtnFake"></span>
-          </div>
-          <label class="radioLabel" for="radioBtn233">Cappuccino</label>
-        </div>
-
-        <div class="formRadio">
-          <div class="radioBtn">
-            <input type="radio" name="coffee" id="radioBtn323" />
-            <span class="radioBtnFake"></span>
-          </div>
-          <label class="radioLabel" for="radioBtn323">Latte</label>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-12 d-flex justify-content-end">
-        <button type="submit" class="btn btn__primary btn__outline">
-          Submit Form
-        </button>
+      <div class="row mb-small">
+        <!--simple select-->
+        <div class="formGroup col-12 mr-mid">
+          <label for="gender">Gender</label>
+          <div class="formControlWrap d-flex align-items-center flex-wrap">
+            <div class="formControlHolder formControlHolder__select">
+              <select class="formControl" name="course" id="gender" required>
+                <option value="">Your Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+              <button
+                type="button"
+                class="icon-clear_24px clearCrossBtn"
+                aria-label="Label"
+              ></button>
+              <button
+                type="button"
+                class="icon-today_24px eventBtn"
+                aria-label="Label"
+              ></button>
+            </div>
+            <span class="hide pl-tiny icon-info_24px errorOptionx"></span>
+            <span class="hide text-danger">Please Select any option</span>
+          </div>
+        </div>
+        <!--/Simple Select-->
       </div>
-    </div>
-  </form>
-  <!--Code-->
-  <div class="wrap-collabsible">
-    <input id="collapsible915" class="toggle" type="checkbox" />
-    <label for="collapsible915" class="lbl-toggle"></label>
-    <div class="collapsible-content">
-      <div class="content-inner">
-        <pre
-          style="
-            background-color: transparent;
-            color: #000000;
-            font-family: 'Montserrat';
-            font-size: 9pt;
-          "
-        ><span style="font-size: 14px;">&lt;<span style="color: rgb(0, 0, 128); font-weight: bold;">form </span><span style="color: rgb(0, 0, 255); font-weight: bold;">class=</span><span style="color: rgb(0, 128, 0); font-weight: bold;">&quot;col-9 p-mid&quot;</span>&gt;
+
+      <div class="row mb-smal justify-content-between">
+        <fieldset class="col-3">
+          <legend>Select your Languages:</legend>
+
+          <div class="formCheck">
+            <div class="checkBox">
+              <input type="checkbox" id="checkboxs" />
+              <span class="checkboxFake"></span>
+            </div>
+            <label class="checkLabel" for="checkboxs">Urdu</label>
+          </div>
+
+          <div class="formCheck">
+            <div class="checkBox">
+              <input type="checkbox" id="checkbox233s" checked />
+              <span class="checkboxFake"></span>
+            </div>
+            <label class="checkLabel" for="checkbox233s">English</label>
+          </div>
+
+          <div class="formCheck">
+            <div class="checkBox">
+              <input type="checkbox" id="checkbox323s" />
+              <span class="checkboxFake"></span>
+            </div>
+            <label class="checkLabel" for="checkbox323s">Persian</label>
+          </div>
+
+          <div class="formCheck">
+            <div class="checkBox">
+              <input type="checkbox" id="checkbox323sx" />
+              <span class="checkboxFake"></span>
+            </div>
+            <label class="checkLabel" for="checkbox323sx">Hindi</label>
+          </div>
+        </fieldset>
+        <div class="col-3">
+          <strong class="mb-small d-flex">Select your Cofee</strong>
+          <div class="formRadio">
+            <div class="radioBtn">
+              <input type="radio" name="coffee" id="radioBtn123" />
+              <span class="radioBtnFake"></span>
+            </div>
+            <label class="radioLabel" for="radioBtn123">Espresso</label>
+          </div>
+          <div class="formRadio">
+            <div class="radioBtn">
+              <input type="radio" name="coffee" id="radioBtn233" checked />
+              <span class="radioBtnFake"></span>
+            </div>
+            <label class="radioLabel" for="radioBtn233">Cappuccino</label>
+          </div>
+
+          <div class="formRadio">
+            <div class="radioBtn">
+              <input type="radio" name="coffee" id="radioBtn323" />
+              <span class="radioBtnFake"></span>
+            </div>
+            <label class="radioLabel" for="radioBtn323">Latte</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+          <button type="submit" class="btn btn__primary btn__outline">
+            Submit Form
+          </button>
+        </div>
+      </div>
+    </form>
+    <!--Code-->
+    <div class="wrap-collabsible">
+      <input id="collapsible915" class="toggle" type="checkbox" />
+      <label for="collapsible915" class="lbl-toggle"></label>
+      <div class="collapsible-content">
+        <div class="content-inner">
+          <pre
+            style="
+              background-color: transparent;
+              color: #000000;
+              font-family: 'Montserrat';
+              font-size: 9pt;
+            "
+          ><span style="font-size: 14px;">&lt;<span style="color: rgb(0, 0, 128); font-weight: bold;">form </span><span style="color: rgb(0, 0, 255); font-weight: bold;">class=</span><span style="color: rgb(0, 128, 0); font-weight: bold;">&quot;col-9 p-mid&quot;</span>&gt;
 &lt;<span style="color: rgb(0, 0, 128); font-weight: bold;">div </span><span style="color: rgb(0, 0, 255); font-weight: bold;">class=</span><span style="color: rgb(0, 128, 0); font-weight: bold;">&quot;row mb-small&quot;</span>&gt;
   &lt;<span style="color: rgb(0, 0, 128); font-weight: bold;">div </span><span style="color: rgb(0, 0, 255); font-weight: bold;">class=</span><span style="color: rgb(0, 128, 0); font-weight: bold;">&quot;formGroup col-6&quot;</span>&gt;
    &lt;<span style="color: rgb(0, 0, 128); font-weight: bold;">label </span><span style="color: rgb(0, 0, 255); font-weight: bold;">for=</span><span style="color: rgb(0, 128, 0); font-weight: bold;">&quot;Firstnamee&quot; </span><span style="color: rgb(0, 0, 255); font-weight: bold;">class=</span><span style="color: rgb(0, 128, 0); font-weight: bold;">&quot;&quot;</span>&gt;First Name&lt;/<span style="color: rgb(0, 0, 128); font-weight: bold;">label</span>&gt;
@@ -3307,6 +3223,7 @@
   &lt;/<span style="color: rgb(0, 0, 128); font-weight: bold;">div</span>&gt;
 &lt;/<span style="color: rgb(0, 0, 128); font-weight: bold;">div</span>&gt;
  &lt;/<span style="color: rgb(0, 0, 128); font-weight: bold;">form</span>&gt;</span></pre>
+        </div>
       </div>
     </div>
   </div>
