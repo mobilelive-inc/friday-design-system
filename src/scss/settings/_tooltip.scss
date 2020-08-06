@@ -1,0 +1,68 @@
+// ToolTip Generic Styles
+
+:root {
+  --tooltipWidth: 154px;
+  --tooltipArrowWidth: 8px;
+}
+
+.tooltip-holder {
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    span[data-tooltip] {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+span[data-tooltip] {
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  min-width: var(--tooltipWidth);
+  background-color: var(--black);
+  color: var(--btn-color);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-sm);
+  font-family: var(--font-family-base);
+
+  &.curved {
+    border-radius: calc(var(--border-radius) * 2);
+  }
+
+  &.arrow--top {
+    &:before {
+      width: 0;
+      left: 50%;
+      bottom: 0;
+      border: var(--tooltipArrowWidth) solid transparent;
+      border-bottom: 0;
+      border-top: var(--tooltipArrowWidth) solid var(--black);
+      transform: translate(
+        calc(-50% + calc(var(--tooltipArrowWidth) / 2)),
+        100%
+      );
+    }
+  }
+
+  &[data-position='top'] {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: var(--label-margin-bottom-sm);
+  }
+
+  &[data-arrow='true'] {
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+    }
+  }
+}
