@@ -4,6 +4,7 @@
   --tooltipWidth: 9.625rem;
   --tooltipArrowWidth: 0.6875rem;
   --tooltipPosition: 1rem;
+  --toolTipMaxWidth: 21.5rem;
 }
 
 .tooltipWrap {
@@ -11,6 +12,7 @@
   position: relative;
   max-width: 800px;
   margin: 0 auto;
+  z-index: 2;
 }
 
 .tooltipInnerWrap {
@@ -101,12 +103,27 @@ span[data-tooltip] {
   -moz-transition: all 0.25s linear;
   -o-transition: all 0.25s linear;
   min-width: var(--tooltipWidth);
-  background-color: var(--black);
-  color: var(--btn-color);
   font-size: var(--font-size-base);
   line-height: var(--line-height-sm);
   font-family: var(--font-family-base);
   width: max-content;
+  max-width: var(--toolTipMaxWidth);
+
+  &.dark {
+    background-color: var(--black);
+    color: var(--btn-color);
+    &:before {
+      --arrowColor: var(--black);
+    }
+  }
+
+  &.light {
+    background-color: var(--bg-light);
+    color: var(--btn-color-alt);
+    &:before {
+      --arrowColor: var(--bg-light);
+    }
+  }
 
   &.curved {
     border-radius: calc(var(--border-radius) * 2);
@@ -130,7 +147,7 @@ span[data-tooltip] {
       width: 0;
       border-bottom: 0;
       border: var(--tooltipArrowWidth) solid transparent;
-      border-top: var(--tooltipArrowWidth) solid var(--black);
+      border-top: var(--tooltipArrowWidth) solid var(--arrowColor);
       left: var(--tooltipPosition);
       bottom: 0;
       transform: translate(0, 100%);
@@ -166,7 +183,7 @@ span[data-tooltip] {
       width: 0;
       border-top: 0;
       border: var(--tooltipArrowWidth) solid transparent;
-      border-bottom: var(--tooltipArrowWidth) solid var(--black);
+      border-bottom: var(--tooltipArrowWidth) solid var(--arrowColor);
       left: 50%;
       top: 0;
       transform: translate(-50%, -100%);
@@ -203,7 +220,7 @@ span[data-tooltip] {
       width: 0;
       border-right: 0;
       border: var(--tooltipArrowWidth) solid transparent;
-      border-left: var(--tooltipArrowWidth) solid var(--black);
+      border-left: var(--tooltipArrowWidth) solid var(--arrowColor);
       left: 100%;
       top: 50%;
       transform: translate(0, -50%);
@@ -230,7 +247,7 @@ span[data-tooltip] {
       width: 0;
       border-left: 0;
       border: var(--tooltipArrowWidth) solid transparent;
-      border-right: var(--tooltipArrowWidth) solid var(--black);
+      border-right: var(--tooltipArrowWidth) solid var(--arrowColor);
       right: 100%;
       top: 50%;
       transform: translate(0, -50%);
