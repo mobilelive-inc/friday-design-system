@@ -1,11 +1,13 @@
 ///////////////////////// Variables////////////////////////////////////
 :root {
   --white: #ffffff;
+  --off-white: #f2f2f2;
   --gray: #707070;
   --gray-light: #e5e5e5;
   --gray-lighter: #f4f4f4;
   --gray-dark: #282828;
   --black: #191919;
+  --bg-light: var(--off-white);
 
   --orange: #f48245;
   --orange-lighter: #fef3ec;
