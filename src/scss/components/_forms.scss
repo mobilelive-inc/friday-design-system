@@ -365,10 +365,10 @@ fieldset {
   legend {
     display: inline-block;
     margin-bottom: 0.5rem;
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-base);
+    font-weight: var(--headings-font-weight);
+    font-size: var(--h6-font-size);
     line-height: 1;
-    color: var(--gray-dark);
+    color: var(--primary-dark);
   }
 
   .formCheck {
@@ -464,7 +464,7 @@ label {
   align-items: center;
   justify-content: flex-start;
   background-color: transparent;
-  padding: 0 1rem;
+
   /* Styling Checkbox Starts */
   .checkLabel {
     color: var(--gray-dark);
@@ -839,7 +839,7 @@ label {
     }
   }
 
-  &__error {
+  &.error {
     .radioBtn {
       input {
         &:checked ~ .radioBtnFake {
@@ -866,6 +866,9 @@ label {
       .radioBtnFake {
         border-color: var(--danger);
       }
+    }
+    label {
+      color: var(--danger);
     }
   }
 
