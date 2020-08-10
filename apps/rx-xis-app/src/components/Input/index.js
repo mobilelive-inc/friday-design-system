@@ -60,7 +60,7 @@ const Input = (props) => {
             <ValidationIcon className={validationIcon} isValid={isValid}/>
           )
         }
-      
+        {/* right icon */}
         {rightIcon && (
           <RightIconButton type="button" onClick={rightIconClick}>
             <span className={rightIcon} />

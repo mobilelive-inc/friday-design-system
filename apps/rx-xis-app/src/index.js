@@ -18,8 +18,12 @@ import Radio from './components/radio';
 import Select from './components/select';
 import Label from './components/label';
 import Option from './components/option';
+<<<<<<< HEAD
 import Tooltip from './components/tooltip';
 import { TooltipWrapper } from './components/tooltip/css';
+=======
+import Toggle from './components/toggle';
+>>>>>>> 71e64b1c58ea7dae310e01fafaa0cf505d01ec13
 
 function App() {
   const options = [
@@ -40,34 +44,50 @@ function App() {
   const [isChecked, setIschecked] = React.useState(false)
   const [gender, setGender] = React.useState("male");
   const [selected, setSelected] = React.useState(null);
-  const [tootipVisible, setTooltipVisible] = React.useState(false);
+  const [ isOn, setIsOn ] = React.useState(false)
   return (
     <ThemeProvider theme={theme}>
-      <Flex 
-      // style={{float:'right'}} 
-      ml="230px"
-      mt="130px">
-        
+      <Toggle shortDescription="Test toggle"
+       identity="bt1" 
+      //  styles={{
+      //   toggledOnBgColor: 'green',
+      //   toggledOffBgColor: 'white',
+      //   switchOnColor: 'orange',
+      //   switchOffColor: 'black',
+      //  }}
+       size='lg'
+       isToggled={isOn}
+       error
+       label="On"
+       onChange={() => {setIsOn(!isOn)}}/>
+       <Toggle shortDescription="Test toggle"
+       identity="bt1" 
+       styles={{
+        toggledOnBgColor: 'green',
+        toggledOffBgColor: 'white',
+        switchOnColor: 'orange',
+        switchOffColor: 'black',
+        toggledOffBorder: '1px solid black',
+       }}
+       size='sm'
+       isToggled={isOn}
+       onChange={() => {setIsOn(!isOn)}}/>
 
-        <TooltipWrapper>
-        {/* <button>Hover for tips</button> */}
-        <img src="https://img.yts.mx/assets/images/movies/Erin_Brockovich_2000/large-screenshot2.jpg"
-          height="100px"/>
-          <Tooltip position="right" withArrow 
-          text="this is sparta"/>
-        </TooltipWrapper>
-        
-      </Flex>
-      {/* <Flex>
-        <TooltipWrapper>
-        <img src="https://img.yts.mx/assets/images/movies/Erin_Brockovich_2000/large-screenshot2.jpg"
-          height="100px"/>
-          <Tooltip position="bottom" withArrow 
-          backgroundColor="gray" color="white"
-          text="It the image of julia roberts"/>
-        </TooltipWrapper>
-      </Flex> */}
-      <Flex mt="10px">
+<Toggle shortDescription="Test toggle"
+       identity="bt1" 
+       styles={{
+        toggledOnBgColor: 'white',
+        toggledOffBgColor: 'white',
+        switchOnColor: 'black',
+        switchOffColor: 'black',
+        toggledOffBorder: '1px solid black',
+        toggledOnBorder: '1px solid black'
+       }}
+       label="On"
+       size='sm'
+       isToggled={isOn}
+       onChange={() => {setIsOn(!isOn)}}/>
+      <Flex>
         <Select
           name="greetings"
           width="15%"
@@ -256,10 +276,8 @@ function App() {
         <Radio
           name="male" value="male" label="Male"
           backgroundColor="primary"
-          color="primary"
-          errorMessage="dasdasd"
+          color="black"
           borderType="rounded"
-          isFilled={false}
           variant={gender === 'male' ? 'checked':'unchecked'}
           onChange={() => {setGender('male')}}/>
       </Flex>
@@ -267,10 +285,10 @@ function App() {
         <Radio
           name="female" value="female" label="female"
           backgroundColor="primary"
-          color="black"
-          errorMessage="dasdasd"
-          borderType="rounded"
-          isFilled={false}
+          color="blue"
+          // errorMessage="dasdasd"
+          // borderType="rounded"
+          checkedIconClass="icon-check_circle_24px"
           variant={gender === 'female' ? 'checked':'unchecked'}
           onChange={() => {setGender('female')}}/>
       </Flex>

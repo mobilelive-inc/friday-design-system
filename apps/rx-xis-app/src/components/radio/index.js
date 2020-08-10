@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '../box';
 import {
-  Input, InputContainer, Flex
+  Input, InputContainer, Flex, InnerBox
 } from './css';
 import Span from '../span/span';
 
@@ -16,15 +16,12 @@ function Radio(props) {
     onChange,
     name,
     testId,
-    errorMessage,
-    backgroundColor,
+    error,
     color,
-    border,
-    isFilled,
     variant,
     className,
     borderType,
-    checkedIconClass
+    ...restProps
   } = props;
   const isChecked = variant === 'checked';
   const isDisabled = variant === 'disabled';
@@ -32,16 +29,13 @@ function Radio(props) {
     <Flex alignItems="center" data-testid="radio">
       <InputContainer
         variant={variant}
-        error={errorMessage}
-        bg={backgroundColor}
-        isFilled={isFilled}
-        border={border}
+        error={error}
         borderType={borderType}
         className={className}
-        color={color}>
+        color={color}
+        {...restProps}>
         {variant === 'checked' && (
-          <Span
-            className={checkedIconClass}/>
+          <InnerBox color={color} borderType={borderType} error={error}></InnerBox>
         )}
         <Input
           checked={variant === 'checked'}
@@ -53,12 +47,12 @@ function Radio(props) {
       </InputContainer>
       <Label
         htmlFor={id}
-        error={errorMessage}
+        error={error}
         pl={[10]}
         mt='-22px'
         lineHeight={10}
         fontWeight={600}
-        color={errorMessage && !isChecked ? 'error' : 'black'}
+        color={error ? 'error' : 'black'}
         as="label">
         {label}
       </Label>
@@ -87,15 +81,20 @@ Radio.propTypes = {
    * A callback function to be invoked when the checkbox is checked or unchecked.
    */
   onChange: PropTypes.func,
+  /**
+   * color controld the color for border and fill color.
+   */
+  color: PropTypes.string,
   /** It is a validation's error message */
-  errorMessage: PropTypes.string,
-  borderType: PropTypes.oneOf(['curved', 'rounded'])
+  error: PropTypes.bool,
+  borderType: PropTypes.oneOf(['curved', 'rounded']),
+  className: PropTypes.string
 };
 
 Radio.defaultProps = {
   variant: 'unchecked',
   onChange: () => {},
-  errorMessage: '',
+  error: false
 };
 
 export default Radio;
