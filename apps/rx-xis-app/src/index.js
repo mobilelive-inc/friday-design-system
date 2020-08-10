@@ -19,11 +19,15 @@ import Select from './components/select';
 import Label from './components/label';
 import Option from './components/option';
 <<<<<<< HEAD
+import TextArea from './components/textArea';
+=======
+<<<<<<< HEAD
 import Tooltip from './components/tooltip';
 import { TooltipWrapper } from './components/tooltip/css';
 =======
 import Toggle from './components/toggle';
 >>>>>>> 71e64b1c58ea7dae310e01fafaa0cf505d01ec13
+>>>>>>> 413e1fb6d749fd81aeb499d5ec7de2b583c0ab7e
 
 function App() {
   const options = [
@@ -88,6 +92,18 @@ function App() {
        isToggled={isOn}
        onChange={() => {setIsOn(!isOn)}}/>
       <Flex>
+<<<<<<< HEAD
+        <TextArea
+          type="text"
+          // width="auto"
+          // height=""
+          value={gender}
+          placeholder="Text Area"
+          label="Search"
+          onChange={(e) => {
+              setGender(e.target.value)
+          }}
+=======
         <Select
           name="greetings"
           width="15%"
@@ -368,48 +384,42 @@ function App() {
           // leftIconClick={() => alert("left icon clicked")}
           // rightIcon="icon-delete_24px"
           // rightIconClick={() => alert("right icon clicked")}
+>>>>>>> 413e1fb6d749fd81aeb499d5ec7de2b583c0ab7e
           borderType="rounded"
-          // borderRadius="10px"
-          // withBottomBorderOnly
-          disabled={false}/>
-      </Flex>
-      <Flex width="100%" mt={10}>
-        <Input
-          type="Email"
-          value="asdasdasdas"
-          textAlign="right"
-          bg="primary"
-          placeholder="Email"
-          label="Email"
-          id="Email"
-          showErrorMessage
-          errorMessage=""
-          isClearButtonVisible
-          leftIcon="icon-search_24px"
+          // disabled
+          errorMessage="required field"
+          error
+          id="search"
+          rows="20"
+          cols="14"
+          iconPosition="inside"
           validationIcon="icon-check_circle_24px"
-          isValid
-          // leftIconClick={() => alert("left icon clicked")}
-          rightIcon="icon-clear_24px"
-          // rightIconClick={() => alert("right icon clicked")}
+          bottomValidationIcon="icon-check_circle_24px"
+          isValid={true} />
+          <TextArea
+          type="text"
+          // width="auto"
+          // height=""
+          value={gender}
+          ml={10}
+          placeholder="Text Area"
+          label="Search"
+          onChange={(e) => {
+              setGender(e.target.value)
+          }}
           borderType="rounded"
-          // borderRadius="10px"
-          color="orange"
-          borderBottom="5px solid red"
-          withBottomBorderOnly
-          disabled={false}/>
+          // disabled
+          errorMessage="required field"
+          error
+          id="search"
+          rows="20"
+          cols="14"
+          iconPosition="inside"
+          validationIcon="icon-check_circle_24px"
+          bottomValidationIcon="icon-check_circle_24px"
+          isValid={true} />
       </Flex>
-      {/* <Flex>
-        <Box mt={10}>
-          <Checkbox
-            name="services" value="internet" label="Internet"
-            backgroundColor="yellow"
-            color="black"
-            errorMessage=""
-            isFilled
-            variant={isChecked ? "checked":"unchecked"}
-            onChange={() => {setIschecked(!isChecked)}}/>
-        </Box>
-      </Flex> */}
+     
     </ThemeProvider>
   );
 }
