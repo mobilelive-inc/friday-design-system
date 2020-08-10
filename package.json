@@ -30,11 +30,10 @@
     "webpack": "webpack",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "rx:build":"npm run webpack -- --env.mode production",
+    "rx:build": "npm run webpack -- --env.mode production",
     "rx:bundle": "rm -rf /build && cross-env NODE_ENV=emotion babel apps/rx-xis-app/src/components -d build",
     "rx:publish": "yarn publish build",
     "ng:a11y": "a11y http://localhost:4200/"
-
   },
   "private": false,
   "dependencies": {
@@ -98,6 +97,7 @@
     "react-intl": "^4.6.5",
     "react-is": "16.13.1",
     "react-router-dom": "5.2.0",
+    "react-spring": "^8.0.27",
     "rebass": "^4.0.7",
     "replace-in-file-webpack-plugin": "^1.0.6",
     "rxjs": "~6.5.4",

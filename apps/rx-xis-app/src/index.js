@@ -18,7 +18,12 @@ import Radio from './components/radio';
 import Select from './components/select';
 import Label from './components/label';
 import Option from './components/option';
+<<<<<<< HEAD
+import Tooltip from './components/tooltip';
+import { TooltipWrapper } from './components/tooltip/css';
+=======
 import Toggle from './components/toggle';
+>>>>>>> 71e64b1c58ea7dae310e01fafaa0cf505d01ec13
 
 function App() {
   const options = [
