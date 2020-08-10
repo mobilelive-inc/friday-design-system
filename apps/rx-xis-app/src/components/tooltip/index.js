@@ -1,21 +1,52 @@
 import React from 'react';
-import { TooltipWrapper, TootlTipArrow, TooltipLabel } from './css';
+import PropTypes from 'prop-types';
+import { TooltipWrapper, ToolTip } from './css';
 import {useSpring, animated} from 'react-spring';
 
-const Tooltip = () => {
-  const styleProps = useSpring({opacity: 1, from: {opacity: 0}});
-  const [tootipVisible, setTooltipVisible] = React.useState(false);
+const Tooltip = ({
+  position,
+  withArrow,
+  curved,
+  backgroundColor,
+  color,
+  text,
+  ...restProps
+}) => {
   return (
-    <animated.div>
-      <button onClick={() => setTooltipVisible(!tootipVisible)}>Tooltip</button>
-      { tootipVisible && <TooltipWrapper position="right">
-      <TootlTipArrow />
-      <TooltipLabel>
-              This is a tooltip
-      </TooltipLabel>
-  </TooltipWrapper>}
-    </animated.div>
+      <ToolTip
+      data-arrow={withArrow}
+      withArrow = {!withArrow}
+      data-position={position}
+      tabindex="1"
+      backgroundColor={backgroundColor}
+      color={color}
+      data-tooltip
+      tabindex="1"
+      curved={curved}
+      // mb={mb}
+      // marginBottom={marginBottom}
+      {...restProps}
+      >
+      {text}
+      </ToolTip
+    >
   )
+}
+
+Tooltip.propTypes = {
+  position: PropTypes.oneOf(['top','top-left','top-right','bottom','bottom-left','bottom-right',
+  'left','left-start','left-end','right','right-start','right-end']),
+  withArrow: PropTypes.bool,
+  backgroundColor: PropTypes.string,
+  color: PropTypes.string,
+  text: PropTypes.string,
+  mb:"1rem"
+}
+ToolTip.defaultProps={
+  backgroundColor:'black',
+  color:'white',
+  position:'bottom',
+  withArrow: true
 }
 
 export default Tooltip;

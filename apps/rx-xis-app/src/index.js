@@ -19,6 +19,7 @@ import Select from './components/select';
 import Label from './components/label';
 import Option from './components/option';
 import Tooltip from './components/tooltip';
+import { TooltipWrapper } from './components/tooltip/css';
 
 function App() {
   const options = [
@@ -42,10 +43,31 @@ function App() {
   const [tootipVisible, setTooltipVisible] = React.useState(false);
   return (
     <ThemeProvider theme={theme}>
-      <Flex style={{float: 'right'}}>
-      <Tooltip isVisible={tootipVisible}/>
+      <Flex 
+      // style={{float:'right'}} 
+      ml="230px"
+      mt="130px">
+        
+
+        <TooltipWrapper>
+        {/* <button>Hover for tips</button> */}
+        <img src="https://img.yts.mx/assets/images/movies/Erin_Brockovich_2000/large-screenshot2.jpg"
+          height="100px"/>
+          <Tooltip position="right" withArrow 
+          text="this is sparta"/>
+        </TooltipWrapper>
+        
       </Flex>
-      <Flex mt="50px">
+      {/* <Flex>
+        <TooltipWrapper>
+        <img src="https://img.yts.mx/assets/images/movies/Erin_Brockovich_2000/large-screenshot2.jpg"
+          height="100px"/>
+          <Tooltip position="bottom" withArrow 
+          backgroundColor="gray" color="white"
+          text="It the image of julia roberts"/>
+        </TooltipWrapper>
+      </Flex> */}
+      <Flex mt="10px">
         <Select
           name="greetings"
           width="15%"
