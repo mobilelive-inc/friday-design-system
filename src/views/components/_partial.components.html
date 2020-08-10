@@ -1,0 +1,478 @@
+<section id="components_info">
+  <section id="tooltips_info">
+    <div class="infoBlockPiece">
+      <div class="jumbotron">
+        <h2>ToolTips</h2>
+        <p>
+          Tooltips are used to display extended information for an element or an
+          action on the page. A basic tooltip shows information on hover and
+          does not require additional JavaScript functions.
+        </p>
+        <h5 class="mb-tiny">Tooltip with no arrow</h5>
+        <div>
+          <p>
+            This is a tooltip with dark background. Hover on icon to reveal
+            tooltip
+            <span
+              style="color: var(--primary);"
+              class="ml-tiny tooltip-holder sample icon-info_24px"
+            >
+              <span
+                class="dark curved py-tiny px-small text--center"
+                data-arrow="false"
+                data-position="top"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip
+              </span>
+            </span>
+          </p>
+        </div>
+        <div style="text-align: right;">
+          <p>
+            <span
+              style="color: var(--primary);"
+              class="ml-tiny tooltip-holder sample icon-info_24px"
+            >
+              <span
+                class="light curved py-tiny px-small text--center"
+                data-arrow="false"
+                data-position="top"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip
+              </span>
+            </span>
+            This is a tooltip with light background. Hover on icon to reveal
+            tooltip
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsibletoolTip" class="toggle" type="checkbox" />
+          <label for="collapsibletoolTip" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;ml-tiny tooltip-holder sample icon-info_24px&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark curved py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;false&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span></pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;ml-tiny tooltip-holder sample icon-info_24px&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;light curved py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;false&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h5>Tooltip with arrow</h5>
+        <p class="mb-mid">Hover on each element to reveal tooltip:</p>
+        <div class="tooltipWrap">
+          <div class="tooltipInnerWrap topLeft">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Top Start
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="top-start"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap topRight">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Top End
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="top-end"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap topCenter">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Top
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="top"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap leftTop">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Left Start
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="left-start"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap leftCenter">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Left
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="left"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap leftBottom">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Left End
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="left-end"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap rightTop">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Right Start
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="right-start"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap rightCenter">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Right
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="right"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap rightBottom">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Right End
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="right-end"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap bottomLeft">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Bottom Start
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="bottom-start"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap bottomCenter">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Bottom
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="bottom"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap bottomRight">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Bottom End
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="bottom-end"
+                data-tooltip
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsibletoolTip1" class="toggle" type="checkbox" />
+          <label for="collapsibletoolTip1" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Top Start
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top-start&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Top End
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top-end&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Top
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Left Start
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;left-start&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Left
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;left&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Left End
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;left-end&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Right Start
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;right-start&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Right
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;right&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Right End
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;right-end&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Bottom Start
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;bottom-start&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Bottom
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;bottom&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Bottom End
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;bottom-end&quot; </span><span style="color:rgb(0,0,255);">data-tooltip tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h5>Tooltip Paragraphs</h5>
+        <p>
+          Some times there is detailed description required in tooltips. In such
+          case the content increases although a max. character limit should be
+          set.
+        </p>
+        <div>
+          <p>
+            Hover on icon to reveal tooltip:
+            <span
+              style="color: var(--dark);"
+              class="ml-tiny tooltip-holder sample icon-info_24px"
+            >
+              <span
+                class="dark curved py-tiny px-small"
+                data-arrow="true"
+                data-position="top"
+                data-tooltip
+                tabindex="1"
+                >A cupcake is a small cake designed to serve one person, which
+                may be baked in a small thin paper or aluminum cup.
+              </span>
+            </span>
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsibletoolTip12" class="toggle" type="checkbox" />
+          <label for="collapsibletoolTip12" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,0);">&lt;span
+  </span><span style="color:rgb(0,0,0);">    </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,0,128);">=&quot;dark curved py-tiny px-small&quot;
+  </span><span style="color:rgb(0,0,128);">    </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,0,128);">=&quot;true&quot;
+  </span><span style="color:rgb(0,0,128);">    </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,0,128);">=&quot;top&quot;
+  </span><span style="color:rgb(0,0,128);">    </span><span style="color:rgb(0,0,255);">data-tooltip
+  </span><span style="color:rgb(0,0,255);">    tabindex</span><span style="color:rgb(0,0,128);">=&quot;1&quot;</span><span style="color:rgb(0,0,0);">&gt;</span>A cupcake is a small cake designed to serve one person, which may be baked in a small thin paper or aluminum cup.
+  <span style="color:rgb(0,0,0);">&lt;/span&gt;</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

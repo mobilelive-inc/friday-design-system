@@ -4,6 +4,9 @@
 
 :root {
   --label-margin-bottom: 0.5rem;
+  --label-margin-bottom-sm: 0.6875rem;
+  --label-margin-bottom-md: 0.875rem;
+  --label-margin-bottom-lg: 1rem;
 
   --input-padding-y: 0.5rem;
   --input-padding-x: 1rem;
@@ -74,6 +77,8 @@
 
   --input-transition: border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
+
+  --form-textarea-height: calc(var(--global-spacer) * 6);
 
   --form-text-margin-top: 0.25rem;
 
