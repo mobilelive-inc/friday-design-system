@@ -1,17 +1,27 @@
 ///////////////////////// Variables////////////////////////////////////
 :root {
   --white: #ffffff;
+  --off-white: #f2f2f2;
   --gray: #707070;
   --gray-light: #e5e5e5;
   --gray-lighter: #f4f4f4;
   --gray-dark: #282828;
   --black: #191919;
+  --bg-light: var(--off-white);
+  --primary-text: var(--black);
+  --secondary-text: var(--white);
 
   --orange: #f48245;
   --orange-lighter: #fef3ec;
   --orange-light: #f9c0a2;
   --orange-dark: #c36837;
   --orange-darker: #311a0e;
+
+  //default
+  --primary-lighter: var(--orange-lighter);
+  --primary-light: var(--orange-light);
+  --primary-dark: var(--orange-dark);
+  --primary-darker: var(--orange-darker);
 
   --blue: #55a2d9;
   --blue-lighter: #eef6fb;
@@ -44,7 +54,12 @@
   --navy-darker: #081721;
 
   --red: #dc3545;
+  --red-dark: #b02a37;
   --green: #34a84d;
+  --green-dark: #2f9745;
+  --green-darker: #247636;
+
+  --headings-color: var(--primary-dark);
 
   //ML Standard Colors
   --primary: var(--orange);
@@ -60,11 +75,23 @@
   --secondary-hover: var(--gray-dark);
   --info-hover: var(--cyan-dark);
   --success-hover: var(--lime-dark);
-  --danger-hover: var(--red);
+  --danger-hover: var(--red-dark);
   --warning-hover: var(--lemon-dark);
   --light-hover: var(--gray);
   --dark-hover: var(--gray-light);
 }
+
+//Primary Colors
+$theme-colors: (
+  'primary': var(--primary),
+  'secondary': var(--secondary),
+  'success': var(--success),
+  'info': var(--info),
+  'warning': var(--warning),
+  'danger': var(--danger),
+  'light': var(--light),
+  'dark': var(--dark)
+);
 
 $colors: (
   'blue': var(--blue),
@@ -109,18 +136,6 @@ $color-variants: (
   'navy-light': var(--navy-light),
   'navy-dark': var(--navy-dark),
   'navy-darker': var(--navy-darker)
-);
-
-//Primary Colors
-$theme-colors: (
-  'primary': var(--primary),
-  'secondary': var(--secondary),
-  'success': var(--success),
-  'info': var(--info),
-  'warning': var(--warning),
-  'danger': var(--danger),
-  'light': var(--light),
-  'dark': var(--dark)
 );
 
 //SCSS Variables

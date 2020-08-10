@@ -9,9 +9,11 @@
   margin: 0;
   padding: 0;
   font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-lg);
 
   .highlighted-block {
-    border: 3px solid #f2f2f2;
+    border: 3px solid var(--primary-lighter);
     padding: 30px;
   }
 
@@ -105,8 +107,8 @@
     //border-radius: 5px;
     //border: 1px solid var(--gray-light);
     //box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.12);
-    padding: 30px 20px;
-    margin-bottom: 30px;
+    padding: 20px 0;
+    //margin-bottom: 30px;
   }
 
   .infoBlock {
@@ -126,22 +128,16 @@
 
   .lbl-toggle {
     display: block;
-
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 1.2rem;
+    font-weight: 600;
+    font-size: 0.875rem;
     text-transform: uppercase;
     text-align: center;
-
-    padding: 1rem;
-
-    color: var(--orange-darker);
-    background: var(--orange-lighter);
-
+    padding: 0.875rem;
+    color: var(--btn-color-alt);
+    background: var(--primary-light);
     cursor: pointer;
-
-    border-radius: 7px;
-    transition: all 0.25s ease-out;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
   }
 
   .lbl-toggle::after {
@@ -162,30 +158,32 @@
 
   .toggle:checked + .lbl-toggle::before {
     transform: rotate(90deg) translateX(-3px);
+    color: var(--btn-color);
   }
 
   .toggle:checked + .lbl-toggle::after {
     content: 'Hide Code';
+    color: var(--btn-color);
   }
 
   .collapsible-content {
-    max-height: 0;
+    height: 0;
     overflow: hidden;
     transition: max-height 0.25s ease-in-out;
   }
 
   .toggle:checked + .lbl-toggle + .collapsible-content {
-    max-height: 100vh;
+    height: 100%;
   }
 
   .toggle:checked + .lbl-toggle {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    background: var(--orange);
+    background: var(--primary-dark);
   }
 
   .collapsible-content .content-inner {
-    background: var(--orange-lighter);
+    background: var(--primary-lighter);
     border-bottom: 1px solid rgba(250, 224, 66, 0.45);
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;

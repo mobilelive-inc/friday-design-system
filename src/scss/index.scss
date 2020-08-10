@@ -12,9 +12,10 @@
 @import 'settings/utilities';
 @import 'settings/images';
 @import 'settings/modals';
+@import 'settings/tooltip';
 
 @import 'generic/root';
-//@import 'generic/base';
+@import 'generic/base';
 
 //Tools
 @import 'tools/tool.grid';

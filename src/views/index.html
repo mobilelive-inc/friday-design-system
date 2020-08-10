@@ -1,146 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" />
-  <title>mobileLIVE Design System - Static Components</title>
-  <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" />
+    <title>mobileLIVE Design System - Static Components</title>
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
 
-  <link
-   href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap"
-   rel="stylesheet"
-  />
-  <link rel="stylesheet" type="text/css" href="/styles.css" />
-  <script>
-   (function (global) {
-    var s = document.createElement('script');
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <script>
+      (function (global) {
+        var s = document.createElement('script');
 
-    function loaderCallback() {
-     // Do actions before ASLint starts
-    }
+        function loaderCallback() {
+          // Do actions before ASLint starts
+        }
 
-    function resultsCallback(results) {
-     console.log(results);
-    }
+        function resultsCallback(results) {
+          console.log(results);
+        }
 
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src =
-     (document.location.protocol === 'https:' ? 'https:' : 'http:') +
-     '//www.aslint.org/api/aslint/loader/loader.js';
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src =
+          (document.location.protocol === 'https:' ? 'https:' : 'http:') +
+          '//www.aslint.org/api/aslint/loader/loader.js';
 
-    global.aslint = {
-     config: {
-      asyncRunner: true,
-      context: '',
-      contextDescription: '',
-      reportFormat: { JSON: true },
-      resultsCallback: resultsCallback,
-      visibleUI: true
-     }
-    };
+        global.aslint = {
+          config: {
+            asyncRunner: true,
+            context: '',
+            contextDescription: '',
+            reportFormat: { JSON: true },
+            resultsCallback: resultsCallback,
+            visibleUI: true
+          }
+        };
 
-    if (typeof s.addEventListener === 'function') {
-     s.addEventListener('load', loaderCallback);
-    }
+        if (typeof s.addEventListener === 'function') {
+          s.addEventListener('load', loaderCallback);
+        }
 
-    document.body.appendChild(s);
-   })(this);
-  </script>
- </head>
+        document.body.appendChild(s);
+      })(this);
+    </script>
+  </head>
 
- <body class="dashboard-styling">
-  <!--theme switcher-->
-  <div class="theme-switcher">
-   <h5 class="h5">Switch Theme</h5>
-   <div class="btns-switcher-holder">
-    <button
-     class="btn btn__dark dark-theme-btn btn-sm"
-     onclick="switchDarkTheme()"
-    >
-     Dark
-    </button>
-    <button class="btn btn__secondary btn-sm" onclick="switchLightTheme()">
-     Gray
-    </button>
-   </div>
-  </div>
-
-  <!--theme switcher-->
-  <div class="wrapper" id="pageWrapper">
-   <!--Sidebar-->
-   <module href="/components/sidebarNav.html"></module>
-   <!--Sidebar-->
-
-   <!--Header-->
-   <main class="main-panel">
-    <!-- Navbar -->
-    <div class="logo">
-     <a c href="javascript:void(0)" class="logo-mini">
-      <img
-       class="img-fluid"
-       src="https://images.ctfassets.net/6krz4kg7somr/4rbWt1PlMkYo4wM0AG404E/3f7fd80ac8a62bd48a235d98bc04127e/logo.png"
-       alt="mobileLive"
-      />
-     </a>
+  <body class="dashboard-styling">
+    <!--theme switcher-->
+    <div class="theme-switcher">
+      <p>Choose Theme:</p>
+      <div class="btns-switcher-holder">
+        <button class="btn btn__primary btn--sm" onclick="switchTheme(1)">
+          Navy
+        </button>
+        <button class="btn btn__primary btn--sm" onclick="switchTheme(2)">
+          Lemon
+        </button>
+        <button class="btn btn__primary btn--sm" onclick="switchTheme(3)">
+          Lime
+        </button>
+        <button class="btn btn__primary btn--sm" onclick="switchTheme(4)">
+          Default
+        </button>
+      </div>
     </div>
 
-    <div class="content">
-     <!--Colors-->
-     <module href="/components/_partial.colorplatte.html"></module>
-     <!--Colors-->
+    <!--theme switcher-->
+    <div class="wrapper" id="pageWrapper">
+      <!--Sidebar-->
+      <module href="/components/sidebarNav.html"></module>
+      <!--Sidebar-->
 
-     <hr />
-     <!--Typography-->
-     <module href="/components/_partial.typography.html"></module>
-     <!--/Typography-->
+      <!--Header-->
+      <main class="main-panel">
+        <!-- Navbar -->
+        <div class="logo">
+          <a c href="javascript:void(0)" class="logo-mini">
+            <img
+              class="img-fluid"
+              src="https://images.ctfassets.net/6krz4kg7somr/4rbWt1PlMkYo4wM0AG404E/3f7fd80ac8a62bd48a235d98bc04127e/logo.png"
+              alt="mobileLive"
+            />
+          </a>
+        </div>
 
-     <hr />
-     <!--Buttons-->
-     <module href="/components/_partial.buttons.html"></module>
-     <!--Buttons-->
+        <div class="content">
+          <!--Colors-->
+          <module href="/components/_partial.colorplatte.html"></module>
+          <!--Colors-->
 
-     <hr />
-     <!--Forms-->
-     <module href="/components/_partial.forms.html"></module>
-     <!--Forms-->
+          <hr />
+          <!--Typography-->
+          <module href="/components/_partial.typography.html"></module>
+          <!--/Typography-->
 
-     <hr />
-     <!--Typography-->
-     <module href="/components/_partial.iconogrpahy.html"></module>
-     <!--/Typography-->
+          <hr />
+          <!--Buttons-->
+          <module href="/components/_partial.buttons.html"></module>
+          <!--Buttons-->
 
-     <hr />
-     <!--Grids-->
-     <div class="my-mid" id="Grid_sections">
-      <!--<h3 class="h3">Grid</h3>-->
-     </div>
+          <hr />
+          <!--Forms-->
+          <module href="/components/_partial.forms.html"></module>
+          <!--Forms-->
+
+          <hr />
+          <!--Forms-->
+          <module href="/components/_partial.components.html"></module>
+          <!--Forms-->
+
+          <hr />
+          <!--Typography-->
+          <module href="/components/_partial.iconogrpahy.html"></module>
+          <!--/Typography-->
+
+          <hr />
+          <!--Grids-->
+          <div class="my-mid" id="Grid_sections">
+            <!--<h3 class="h3">Grid</h3>-->
+          </div>
+        </div>
+      </main>
+      <!--/Header-->
+
+      <!--Footer-->
+      <footer class="footer">
+        <div class="container-fluid"></div>
+      </footer>
+      <!--Footer-->
     </div>
-   </main>
-   <!--/Header-->
 
-   <!--Footer-->
-   <footer class="footer">
-    <div class="container-fluid"></div>
-   </footer>
-   <!--Footer-->
-  </div>
+    <script src="/bundle.js"></script>
 
-  <script src="/bundle.js"></script>
+    <script>
+      function switchTheme(n) {
+        var i = n;
+        var root = document.getElementsByTagName('html')[0];
+        if (i === 1) {
+          root.classList.add('navy');
+          root.classList.remove('lemon');
+          root.classList.remove('lime');
+        } else if (i === 2) {
+          root.classList.add('lemon');
+          root.classList.remove('navy');
+          root.classList.remove('lime');
+        } else if (i === 3) {
+          root.classList.add('lime');
+          root.classList.remove('navy');
+          root.classList.remove('lemon');
+        } else if (i === 4) {
+          root.classList.remove('navy');
+          root.classList.remove('lemon');
+          root.classList.remove('lime');
+        }
+      }
 
-  <script>
-   function switchDarkTheme() {
-    var root = document.getElementsByTagName('html')[0];
-    root.classList.add('theme-dark');
-    root.classList.remove('theme-gray');
-   }
+      var el;
+      var counter = 0;
+      var maxVal = 144;
+      var countVal = document.getElementById('textChar');
+      countVal.textContent = counter + ' / ' + maxVal;
 
-   function switchLightTheme() {
-    var root = document.getElementsByTagName('html')[0];
-    root.classList.add('theme-gray');
-    root.classList.remove('theme-dark');
-   }
-  </script>
- </body>
+      function countCharacters(e) {
+        var textEntered, countRemaining, counter;
+        textEntered = document.getElementById('textarea').value;
+        counter = maxVal - textEntered.length;
+        countVal.textContent = counter + ' / ' + maxVal;
+      }
+      el = document.getElementById('textarea');
+      el.addEventListener('keyup', countCharacters, false);
+    </script>
+  </body>
 </html>
