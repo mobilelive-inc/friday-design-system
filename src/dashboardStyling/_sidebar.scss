@@ -59,6 +59,10 @@
     position: relative;
     overflow: auto;
 
+    p {
+      margin: 0;
+    }
+
     .nav {
       margin-top: 20px;
       display: block;
@@ -66,6 +70,7 @@
 
       li {
         list-style: none;
+        margin-bottom: 1rem;
         > a {
           margin: 0 15px 0;
           color: var(--btn-color-alt);

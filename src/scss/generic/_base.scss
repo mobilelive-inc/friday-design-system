@@ -14,6 +14,7 @@ header,
 hgroup,
 main,
 nav,
+hr,
 section {
   display: block;
 }
@@ -26,7 +27,7 @@ body {
   line-height: var(--line-height-base);
   color: var(--body-color);
   text-align: left; // 3
-  background-color: var(--body-bg); // 2
+  //background-color: var(--body-bg); // 2
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
