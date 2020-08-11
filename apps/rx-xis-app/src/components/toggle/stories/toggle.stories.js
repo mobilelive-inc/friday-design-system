@@ -39,28 +39,14 @@ export const ToggleButton = () => {
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1" 
-          styles={{
-            toggledOnBgColor: 'green',
-            toggledOffBgColor: 'white',
-            switchOnColor: '#f48245',
-            switchOffColor: 'black',
-          }}
+          id="bt1"
           size='lg'
           isToggled={true}
           />
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt2" 
-          styles={{
-            toggledOnBgColor: 'white',
-            toggledOffBgColor: 'white',
-            switchOnColor: '#f48245',
-            switchOffColor: 'black',
-            toggledOffBorder: '1px solid black',
-            toggledOnBorder: '1px solid black'
-          }}
+          id="bt2"
           size='sm'
           isToggled={toggle}
           onChange={() => {setToggle(!toggle)}}
@@ -69,14 +55,6 @@ export const ToggleButton = () => {
         <Box p={10} width={1/4}>
           <Toggle
           id="bt1" 
-          styles={{
-            toggledOnBgColor: 'white',
-            toggledOffBgColor: 'white',
-            switchOnColor: '#f48245',
-            switchOffColor: 'black',
-            toggledOffBorder: '1px solid black',
-            toggledOnBorder: '1px solid black'
-          }}
           size='sm'
           isToggled={true}
           />
@@ -88,6 +66,14 @@ export const ToggleButton = () => {
           <Toggle
           id="bt1Labeled"
           size='lg'
+          styles= {{
+            toggledOffBgColor: '#B3B3B3',
+            toggledOffBorderColor: '#B3B3B3',
+            toggledOnBgColor:'#34A84D',
+            toggledOnBorderColor: '#34A84D',
+            switchOnColor: 'white',
+            switchOffColor: 'white',
+          }}
           isToggled={isOnLabeled}
           label={isOnLabeled ? "ON":"OFF"}
           onChange={() => {setIsOnLabeled(!isOnLabeled)}}
@@ -95,29 +81,22 @@ export const ToggleButton = () => {
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1" 
-          styles={{
-            toggledOnBgColor: 'green',
-            toggledOffBgColor: 'white',
-            switchOnColor: '#f48245',
-            switchOffColor: 'black',
-          }}
+          id="bt1"
           size='lg'
+          styles= {{
+            toggledOffBgColor: '#34A84D',
+            toggledOffBorderColor: '#B3B3B3',
+            toggledOnBorderColor: '#34A84D',
+            switchOnColor: 'white',
+            switchOffColor: 'white',
+          }}
           label={"ON"}
           isToggled={true}
           />
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt2Labled" 
-          styles={{
-            toggledOnBgColor: 'white',
-            toggledOffBgColor: 'white',
-            switchOnColor: '#f48245',
-            switchOffColor: 'black',
-            toggledOffBorder: '1px solid black',
-            toggledOnBorder: '1px solid black'
-          }}
+          id="bt2Labled"
           size='sm'
           isToggled={toggleLabeled}
           label={toggleLabeled ? "ON":"OFF"}
@@ -126,15 +105,7 @@ export const ToggleButton = () => {
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1error" 
-          styles={{
-            toggledOnBgColor: 'white',
-            toggledOffBgColor: 'white',
-            switchOnColor: '#f48245',
-            switchOffColor: 'black',
-            toggledOffBorder: '1px solid black',
-            toggledOnBorder: '1px solid black'
-          }}
+          id="bt1error"
           size='sm'
           isToggled={true}
           label={"ON"}
@@ -154,13 +125,7 @@ export const ToggleButton = () => {
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1" 
-          styles={{
-            toggledOnBgColor: 'green',
-            toggledOffBgColor: 'white',
-            switchOnColor: '#f48245',
-            switchOffColor: 'black',
-          }}
+          id="bt1"
           size='lg'
           error
           label={"ON"}
@@ -171,14 +136,6 @@ export const ToggleButton = () => {
           <Toggle
           id="bt2Lablederror" 
           error
-          styles={{
-            toggledOnBgColor: 'white',
-            toggledOffBgColor: 'white',
-            switchOnColor: '#f48245',
-            switchOffColor: 'black',
-            toggledOffBorder: '1px solid black',
-            toggledOnBorder: '1px solid black'
-          }}
           size='sm'
           isToggled={false}
           label="OFF"
@@ -188,14 +145,6 @@ export const ToggleButton = () => {
           <Toggle
           id="bt1error" 
           error
-          styles={{
-            toggledOnBgColor: 'white',
-            toggledOffBgColor: 'white',
-            switchOnColor: '#f48245',
-            switchOffColor: 'black',
-            toggledOffBorder: '1px solid black',
-            toggledOnBorder: '1px solid black'
-          }}
           size='sm'
           isToggled={true}
           label={"ON"}

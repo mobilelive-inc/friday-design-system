@@ -25,19 +25,19 @@ export const Flex = styled.div`
 export const InnerBox = styled(Box)`
   position: absolute;
   cursor: pointer;
-  height: ${props => props.size === 'lg' ? '2rem': '1rem'};
-  width: 3.5em;
+  height: ${props => props.size === 'lg' ? `${props.theme.space[13]}`: `${props.theme.space[7]}`};
+  width: ${props => props.theme.space[19]};
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 50px;
+  border-radius: ${props => props.theme.borderRounded};
   border: ${props => props => {
     const {isError, toggleStatus, toggledOnBorder, toggledOffBorder,
       theme:{colors:{error}}
       } = props;
       if(isError){
-        return `1px solid ${error}`;
+        return `2px solid ${error}`;
       }
       else{
         return toggleStatus ? toggledOnBorder: toggledOffBorder
@@ -50,11 +50,11 @@ export const InnerBox = styled(Box)`
     props.toggleStatus ? `background-color: ${props.toggledOnBgColor};` : ``} &:before {
     position: absolute;
     content: '';
-    height: 1.5em;
-    width: 1.5em;
+    height: ${props => props.theme.space[11]};
+    width: ${props => props.theme.space[11]};
     border-radius:50px;
-    left: ${props => props.size === 'lg' ? '0.25rem': '-0.25rem'};
-    bottom: ${props => props.size === 'lg' ? '0.20rem': '-0.30rem'};
+    left: ${props => props.size === 'lg' ? '0.15rem': '-0.25rem'};
+    bottom: ${props => props.size === 'lg' ? '0.15rem': '-0.30rem'};
     background-color: ${(props) =>{
         const {isError, toggleStatus, switchOnColor, switchOffColor,
         theme:{colors:{error}}
@@ -84,9 +84,9 @@ export const InnerBox = styled(Box)`
   }
 `;
 export const CheckIconContainer = styled(Box)`
-  margin-left: 3.6em;
+  margin-left: ${props => props.theme.space[19]};
   position: absolute;
-  top: 1em;
+  top: ${props => props.theme.space[7]};
   opacity: 0;
   transition-timing-function: ease-in;
   transition: 0.2s;
@@ -101,14 +101,14 @@ export const CheckIconContainer = styled(Box)`
 export const Label = styled.label`
   position: relative;
   display: inline-block;
-  width: 2.75em;
-  height: 3em;
+  width: ${props => props.theme.space[16]};
+  height: ${props => props.theme.space[17]};
 `;
 
 export const ToggleLable = styled.label`
-  margin-left: 40px;
-  font-size: 16px;
-  font-weight: 600;
+  margin-left: ${props => props.theme.space[15]};
+  font-size: ${props => props.theme.space[7]};
+  font-weight: ${props => props.theme.fontWeights[3]};
   color: ${props => props.error ? props.theme.colors.error: props.theme.colors.black};
   cursor: pointer;
 `
