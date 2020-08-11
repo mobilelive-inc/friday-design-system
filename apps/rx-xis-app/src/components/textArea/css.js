@@ -11,6 +11,7 @@ import {
 const getDerivedProps = (props) => {
   const {
     theme: {
+      space, fontWeights,
       colors: {
         red, black, white, grayDark, grayLight
       }, borderCurved, borderRounded,
@@ -26,11 +27,11 @@ const getDerivedProps = (props) => {
     width: '100%',
     height: '8.25rem',
     boxSizing: 'border-box',
-    padding: '1rem 1rem',
-    letterSpacing: '0.125em',
-    lineHeight: '28px',
-    fontSize: '1rem',
-    fontWeight: 500,
+    padding: `${space[7]} ${space[7]}`,
+    letterSpacing: 1,
+    lineHeight: 1,
+    fontSize: `${space[7]}`,
+    fontWeight: `${fontWeights[2]}`,
     backgroundColor: 'transparent',
     '::placeholder':{
       color: grayDark,
@@ -101,10 +102,10 @@ export const InputWrapper = styled.div`
 
 export const LeftIcon = styled.span`
   position: absolute;
-  right: calc(100% - 30px);
-  width: 20px;
-  top: calc(100% - 25px);
-  font-size: 16px;
+  right: calc(100% - ${props => props.theme.space[12]});
+  width: ${props => props.theme.space[9]};
+  top: calc(100% - ${props => props.theme.space[11]});
+  font-size: ${props => props.theme.space[7]};
   z-index: 20;
   text-decoration: none;
   cursor:pointer;
@@ -115,9 +116,10 @@ export const LeftIcon = styled.span`
 `
 export const ValidationIcon = styled.span`
   position: absolute;
-  left: ${props => props.position === 'inside' ? 'calc(100% + -25px)': 'calc(100% + 5px)'};
-  width: 20px;
-  top: 1rem;
+  left: ${props => props.position === 'inside' ? 
+  `calc(100% - ${props.theme.space[12]})`: `calc(100% + ${props.theme.space[2]})`};
+  width: ${props => props.theme.space[9]};
+  top: ${props => props.theme.space[7]};
   color: ${props => (props.isValid ? 'green': 'red')};
-  font-size: 18px;
+  font-size: ${props => props.theme.space[7]};
 `;
