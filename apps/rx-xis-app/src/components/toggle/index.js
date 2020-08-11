@@ -18,8 +18,8 @@ const Toggle = (props) => {
   const { id, isToggled, onChange, styles : { 
     toggledOnBgColor,
     toggledOffBgColor,
-    toggledOnBorder,
-    toggledOffBorder,
+    toggledOnBorderColor,
+    toggledOffBorderColor,
     switchOnColor,
     switchOffColor},
     className,
@@ -33,6 +33,7 @@ const Toggle = (props) => {
           <HiddenCheckbox
             onChange={(e) => {onChange(e)}}
             id={id}
+            aria-checked={isToggled}
           />
           <InnerBox toggleStatus={isToggled} 
             className={`toggle-box ${className}`}
@@ -40,8 +41,8 @@ const Toggle = (props) => {
             toggledOffBgColor={toggledOffBgColor}
             switchOnColor={switchOnColor}
             switchOffColor={switchOffColor}
-            toggledOnBorder={toggledOnBorder}
-            toggledOffBorder={toggledOffBorder}
+            toggledOnBorder={`2px solid ${toggledOnBorderColor}`}
+            toggledOffBorder={`2px solid ${toggledOffBorderColor}`}
             isError={error}
             size={size}
             >
@@ -97,8 +98,8 @@ Toggle.propTypes = {
     toggledOffBgColor: PropTypes.string,
     switchOnColor: PropTypes.string,
     switchOffColor:PropTypes.string,
-    toggledOnBorder: PropTypes.string,
-    toggledOffBorder: PropTypes.string,
+    toggledOnBorderColor: PropTypes.string,
+    toggledOffBorderColor: PropTypes.string,
   }),
 
   /** className to pass class based styles to the toggle */
@@ -111,13 +112,12 @@ Toggle.defaultProps = {
   id: 'toggle',
   isToggled: false,
   size: 'lg',
-  styles: { 
+  styles: {
     toggledOnBgColor: 'white',
-    toggledOffBgColor: 'white',
-    switchOnColor:'black',
-    switchOffColor:'black',
-    toggledOffBorder: '1px solid black',
-    toggledOnBorder: '1px solid black'
+    toggledOffBorderColor: '#B3B3B3',
+    toggledOnBorderColor: '#B3B3B3',
+    switchOnColor: '#34A84D',
+    switchOffColor: '#B3B3B3',
   }
 };
 
