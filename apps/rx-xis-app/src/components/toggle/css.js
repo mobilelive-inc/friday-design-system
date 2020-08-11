@@ -25,7 +25,7 @@ export const Flex = styled.div`
 export const InnerBox = styled(Box)`
   position: absolute;
   cursor: pointer;
-  height: ${props => props.size === 'lg' ? '2rem': '1rem'};
+  height: ${props => props.size === 'lg' ? `${props.theme.space[13]}`: `${props.theme.space[7]}`};
   width: ${props => props.theme.space[19]};
   top: 0;
   left: 0;
