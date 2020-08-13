@@ -1,0 +1,7 @@
+div.tippy-tooltip{
+  background-color: lightgray;
+  color: black;
+}
+div.arrow-big{
+  border-bottom: 10px solid lightgray !important;
+}
