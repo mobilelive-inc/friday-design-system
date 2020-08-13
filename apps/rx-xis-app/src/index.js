@@ -18,16 +18,9 @@ import Radio from './components/radio';
 import Select from './components/select';
 import Label from './components/label';
 import Option from './components/option';
-<<<<<<< HEAD
 import TextArea from './components/textArea';
-=======
-<<<<<<< HEAD
 import Tooltip from './components/tooltip';
-import { TooltipWrapper } from './components/tooltip/css';
-=======
 import Toggle from './components/toggle';
->>>>>>> 71e64b1c58ea7dae310e01fafaa0cf505d01ec13
->>>>>>> 413e1fb6d749fd81aeb499d5ec7de2b583c0ab7e
 
 function App() {
   const options = [
@@ -51,8 +44,9 @@ function App() {
   const [ isOn, setIsOn ] = React.useState(false)
   return (
     <ThemeProvider theme={theme}>
+      
       <Toggle shortDescription="Test toggle"
-       identity="bt1" 
+       id="bt1" 
       //  styles={{
       //   toggledOnBgColor: 'green',
       //   toggledOffBgColor: 'white',
@@ -92,18 +86,6 @@ function App() {
        isToggled={isOn}
        onChange={() => {setIsOn(!isOn)}}/>
       <Flex>
-<<<<<<< HEAD
-        <TextArea
-          type="text"
-          // width="auto"
-          // height=""
-          value={gender}
-          placeholder="Text Area"
-          label="Search"
-          onChange={(e) => {
-              setGender(e.target.value)
-          }}
-=======
         <Select
           name="greetings"
           width="15%"
@@ -128,6 +110,17 @@ function App() {
             options.map((option) => <Option value={option.id}>{option.value}</Option>)
           }
         </Select>
+        <Tooltip
+      labelText="This"
+      arrow
+      arrowSize="big"
+      animation="fade"
+      theme="light"
+      size="regular"
+      position="bottom-start"
+      >
+        <button aria-expanded="false">Tooltip</button>
+      </Tooltip>
       </Flex>
       <Flex mt={20}>
         <Select
@@ -384,7 +377,6 @@ function App() {
           // leftIconClick={() => alert("left icon clicked")}
           // rightIcon="icon-delete_24px"
           // rightIconClick={() => alert("right icon clicked")}
->>>>>>> 413e1fb6d749fd81aeb499d5ec7de2b583c0ab7e
           borderType="rounded"
           // disabled
           errorMessage="required field"

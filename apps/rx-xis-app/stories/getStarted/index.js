@@ -46,11 +46,11 @@ const GetStarted = () => {
       </Flex>
       <Flex
         pl={["0px", "25%"]}>
-        <h3>Sirius</h3>
+        <h3>Friday</h3>
       </Flex>
       <Flex
         px={["0px", "25%"]}>
-        <p>{`Sirius is an opinionated assemblage of open-source tools 
+        <p>{`Friday is an opinionated assemblage of open-source tools 
           and libraries that allow you to accelerate the development of your 
           web application.The choice of tools, their composition, and a set of foundational 
           components guides you on how to build a constraint-based system.`}</p>
@@ -63,7 +63,7 @@ const GetStarted = () => {
         px={["0px", "25%"]}>
         <p>
           {
-            `Sirius is built following the philosophy of composition.
+            `Friday is built following the philosophy of composition.
             It provides a ranged of UI components that can be composed together
             to build a web application.
             `
