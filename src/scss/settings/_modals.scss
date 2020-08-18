@@ -1,0 +1,44 @@
+// Modals
+
+// Padding applied to the modal body
+$modal-inner-padding: 1rem;
+
+// Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
+$modal-footer-margin-between: 0.5rem;
+
+$modal-dialog-margin: 0.5rem;
+$modal-dialog-margin-y-sm-up: 1.75rem;
+
+$modal-title-line-height: var(--line-height-base);
+
+$modal-content-color: null;
+$modal-content-bg: var(--white);
+$modal-content-border-color: rgba(var(--dark), 0.2);
+$modal-content-border-width: var(--border-width);
+$modal-content-border-radius: var(--border-radius)-lg;
+$modal-content-inner-border-radius: subtract(
+  $modal-content-border-radius,
+  $modal-content-border-width
+);
+$modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba(var(--dark), 0.5);
+$modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba(var(--dark), 0.5);
+
+$modal-backdrop-bg: var(--dark);
+$modal-backdrop-opacity: 0.5;
+$modal-header-border-color: var(--border-color);
+$modal-footer-border-color: $modal-header-border-color;
+$modal-header-border-width: $modal-content-border-width;
+$modal-footer-border-width: $modal-header-border-width;
+$modal-header-padding-y: 1rem;
+$modal-header-padding-x: 1rem;
+$modal-header-padding: $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
+
+$modal-xl: 1140px;
+$modal-lg: 800px;
+$modal-md: 500px;
+$modal-sm: 300px;
+
+$modal-fade-transform: translate(0, -50px);
+$modal-show-transform: none;
+$modal-transition: transform 0.3s ease-out;
+$modal-scale-transform: scale(1.02);
