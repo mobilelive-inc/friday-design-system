@@ -33,6 +33,7 @@ const Toggle = (props) => {
           <HiddenCheckbox
             onChange={(e) => {onChange(e)}}
             id={id}
+            aria-labelledby={id}
             aria-checked={isToggled}
           />
           <InnerBox toggleStatus={isToggled} 
