@@ -2890,13 +2890,27 @@
           Next to that, create a <code>&lt;label&gt;</code> Give the
           <code>&lt;input&gt;</code> a unique ID and point the
           <code>&lt;label&gt;</code> to it with the for attribute. This makes
-          the toggle button clickable.
+          the toggle button clickable. Also add <code>toggle</code> class on
+          input with <code>aria-hidden="true"</code>. The status of toggle
+          button is calculated from status of
+          <code>aria-checked</code> attribute.
+        </p>
+        <p>
+          Inside the Toggle label is screen reader-only text, which uses the
+          .sr-only class to add accessibility feature.
         </p>
         <!--icons only-->
         <div class="row mb-mid">
           <div class="col-3">
             <div class="toggleBtn p-micro">
-              <input type="checkbox" id="toggleBtn" checked />
+              <input
+                class="toggle"
+                type="checkbox"
+                id="toggleBtn"
+                aria-hidden="true"
+                aria-checked="true"
+                checked
+              />
               <label for="toggleBtn">
                 <span class="sr-only">Toggle:</span>
               </label>
@@ -2905,7 +2919,14 @@
 
           <div class="col-3">
             <div class="toggleBtn p-micro disabled">
-              <input type="checkbox" id="toggleBtn2" disabled />
+              <input
+                class="toggle"
+                type="checkbox"
+                aria-hidden="true"
+                aria-checked="true"
+                id="toggleBtn2"
+                disabled
+              />
               <label for="toggleBtn2">
                 <span class="sr-only">Toggle:</span>
               </label>
@@ -2914,7 +2935,14 @@
 
           <div class="col-3">
             <div class="toggleBtn rounded p-micro">
-              <input type="checkbox" id="toggleBtn3" checked />
+              <input
+                type="checkbox"
+                id="toggleBtn3"
+                class="toggle"
+                aria-hidden="true"
+                aria-checked="true"
+                checked
+              />
               <label for="toggleBtn3">
                 <span class="sr-only">Toggle:</span>
               </label>
@@ -2923,7 +2951,14 @@
 
           <div class="col-3">
             <div class="toggleBtn rounded filled p-micro">
-              <input type="checkbox" id="toggleBtn4" checked />
+              <input
+                type="checkbox"
+                id="toggleBtn4"
+                class="toggle"
+                aria-hidden="true"
+                aria-checked="true"
+                checked
+              />
               <label for="toggleBtn4">
                 <span class="sr-only">Toggle:</span>
               </label>
@@ -2932,7 +2967,14 @@
 
           <div class="col-3">
             <div class="toggleBtn rounded dark p-micro">
-              <input type="checkbox" id="toggleBtn5" checked />
+              <input
+                type="checkbox"
+                id="toggleBtn5"
+                class="toggle"
+                aria-hidden="true"
+                aria-checked="true"
+                checked
+              />
               <label for="toggleBtn5">
                 <span class="sr-only">Toggle:</span>
               </label>
@@ -2947,47 +2989,49 @@
           <div class="collapsible-content">
             <div class="content-inner">
               <pre
-                style="
-                  background-color: transparent;
-                  color: #000;
-                  font-family: 'Montserrat';
-                  font-size: 12pt;
-                "
+                style="font-family: 'Montserrat'; font-size: 12pt;"
               ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro&quot;</span><span style="color:rgb(0,0,128);">&gt;
-</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
-</span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn&quot;</span><span style="color:rgb(0,0,128);">&gt;
-</span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggle&quot; </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,255);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn&quot; </span><span style="color:rgb(0,0,255);">aria-hidden</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">aria-checked</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
-</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
 
-<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro disabled&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn2&quot; </span><span style="color:rgb(0,0,128);">disabled </span><span style="color:rgb(0,0,128);">/&gt;
- </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn2&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
-</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro disabled&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggle&quot; </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,255);">aria-hidden</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">aria-checked</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn2&quot; </span><span style="color:rgb(0,0,255);">disabled </span><span style="color:rgb(0,0,128);">/&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn2&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
 
-<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro rounded&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn3&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
- </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn3&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
-</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn rounded p-micro&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,255);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn3&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggle&quot; </span><span style="color:rgb(0,0,255);">aria-hidden</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">aria-checked</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn3&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
 
-<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro rounded filled&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn4&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
- </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn4&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
-</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn rounded filled p-micro&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,255);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn4&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggle&quot; </span><span style="color:rgb(0,0,255);">aria-hidden</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">aria-checked</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn4&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
 
-<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro rounded dark&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn5&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
- </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn5&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
-</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
-							</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn rounded dark p-micro&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,255);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn5&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggle&quot; </span><span style="color:rgb(0,0,255);">aria-hidden</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">aria-checked</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn5&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
             </div>
           </div>
         </div>
@@ -3002,58 +3046,88 @@
         <div class="row mb-mid">
           <div class="col-3">
             <div class="toggleBtn p-micro">
-              <input type="checkbox" id="toggleBtn6" checked />
+              <input
+                type="checkbox"
+                id="toggleBtn6"
+                class="toggle"
+                aria-checked="true"
+                aria-hidden="true"
+                checked
+              />
               <label for="toggleBtn6">
-                <span class="text"></span>
-                <span class="sr-only">Toggle:</span>
+                <span class="labelTxt">Label On</span>
               </label>
             </div>
           </div>
 
           <div class="col-3">
             <div class="toggleBtn p-micro disabled">
-              <input type="checkbox" id="toggleBtn7" disabled />
+              <input
+                type="checkbox"
+                id="toggleBtn7"
+                class="toggle"
+                aria-checked="false"
+                aria-hidden="true"
+                disabled
+              />
               <label for="toggleBtn7">
-                <span class="text"></span>
-                <span class="sr-only">Toggle:</span>
+                <span class="labelTxt">Label Off</span>
               </label>
             </div>
           </div>
 
           <div class="col-3">
             <div class="toggleBtn rounded p-micro">
-              <input type="checkbox" id="toggleBtn8" checked />
+              <input
+                type="checkbox"
+                id="toggleBtn8"
+                class="toggle"
+                aria-checked="true"
+                aria-hidden="true"
+                checked
+              />
               <label for="toggleBtn8">
-                <span class="text"></span>
-                <span class="sr-only">Toggle:</span>
+                <span class="labelTxt">Label On</span>
               </label>
             </div>
           </div>
 
           <div class="col-3">
             <div class="toggleBtn rounded filled p-micro">
-              <input type="checkbox" id="toggleBtn9" checked />
+              <input
+                type="checkbox"
+                id="toggleBtn9"
+                class="toggle"
+                aria-checked="true"
+                aria-hidden="true"
+                checked
+              />
               <label for="toggleBtn9">
-                <span class="text"></span>
-                <span class="sr-only">Toggle:</span>
+                <span class="labelTxt">Label On</span>
               </label>
             </div>
           </div>
 
           <div class="col-3">
             <div class="toggleBtn rounded dark p-micro">
-              <input type="checkbox" id="toggleBtn10" checked />
+              <input
+                type="checkbox"
+                id="toggleBtn10"
+                class="toggle"
+                aria-checked="false"
+                aria-hidden="true"
+              />
               <label for="toggleBtn10">
-                <span class="text"></span>
-                <span class="sr-only">Toggle:</span>
+                <span class="labelTxt">Label Off</span>
               </label>
             </div>
           </div>
         </div>
         <!--/icons only-->
         <p>
-          Inside the Toggle label is screen reader-only text, which uses the
-          .sr-only class to add accessibility feature.
+          For toggle with label, there is additional span in the label, the
+          status of this span is updated based on the status of
+          <code>aria-checked</code> attribute.
         </p>
 
         <!--Code-->
@@ -3063,52 +3137,49 @@
           <div class="collapsible-content">
             <div class="content-inner">
               <pre
-                style="
-                  background-color: transparent;
-                  color: #000;
-                  font-family: 'Montserrat';
-                  font-size: 12pt;
-                "
+                style="font-family: 'Montserrat'; font-size: 12pt;"
               ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro&quot;</span><span style="color:rgb(0,0,128);">&gt;
-</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn6&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
-</span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn6&quot;</span><span style="color:rgb(0,0,128);">&gt;
-</span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span><span style="color:rgb(0,0,128);">&lt;/span&gt;
-</span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,255);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn6&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggle&quot; </span><span style="color:rgb(0,0,255);">aria-checked</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">aria-hidden</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn6&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;labelTxt&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Label On<span style="color:rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
-</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
 
-<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro disabled&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn7&quot; </span><span style="color:rgb(0,0,128);">disabled </span><span style="color:rgb(0,0,128);">/&gt;
- </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn7&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span><span style="color:rgb(0,0,128);">&lt;/span&gt;
-</span> <span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
-</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro disabled&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,255);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn7&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggle&quot; </span><span style="color:rgb(0,0,255);">aria-checked</span><span style="color:rgb(0,128,0);">=&quot;false&quot; </span><span style="color:rgb(0,0,255);">aria-hidden</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">disabled </span><span style="color:rgb(0,0,128);">/&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn7&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;labelTxt&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Label Off<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
 
-<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro rounded&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn8&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
- </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn8&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span><span style="color:rgb(0,0,128);">&lt;/span&gt;
-</span> <span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
-</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn rounded p-micro&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,255);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn8&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggle&quot; </span><span style="color:rgb(0,0,255);">aria-checked</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">aria-hidden</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn8&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;labelTxt&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Label On<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
 
-<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro rounded filled&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn9&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
- </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn9&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span><span style="color:rgb(0,0,128);">&lt;/span&gt;
-</span> <span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
-</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn rounded filled p-micro&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,255);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn9&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggle&quot; </span><span style="color:rgb(0,0,255);">aria-checked</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">aria-hidden</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">checked </span><span style="color:rgb(0,0,128);">/&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn9&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;labelTxt&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Label On<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
 
-<span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn p-micro rounded dark&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,128);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn10&quot; </span><span style="color:rgb(0,0,128);">checked </span><span style="color:rgb(0,0,128);">/&gt;
- </span><span style="color:rgb(0,0,128">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn10&quot;</span><span style="color:rgb(0,0,128);">&gt;
- </span><span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span><span style="color:rgb(0,0,128);">&lt;/span&gt;
-</span> <span style="color:rgb(0,0,128";>    &lt;span </span><span style="color:rgb(0,0,255)">class</span><span style="color:rgb(0,128,0);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Toggle:<span style="color:rgb(0,0,128);">&lt;/span&gt;
- </span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
-</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
-							</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn rounded dark p-micro&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;input </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;checkbox&quot; </span><span style="color:rgb(0,0,255);">id</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn10&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;toggle&quot; </span><span style="color:rgb(0,0,255);">aria-checked</span><span style="color:rgb(0,128,0);">=&quot;false&quot; </span><span style="color:rgb(0,0,255);">aria-hidden</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,128);">/&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;label </span><span style="color:rgb(0,0,255);">for</span><span style="color:rgb(0,128,0);">=&quot;toggleBtn10&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;labelTxt&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Label Off<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/label&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
             </div>
           </div>
         </div>
