@@ -150,17 +150,22 @@
   z-index: 1;
 }
 
+.btns-switcher-holder {
+  max-width: 75px;
+}
+
 .theme-switcher {
   position: fixed;
-  right: 0;
-  padding: 1px 30px 15px;
+  right: -10px;
+  padding: 1px 15px 15px;
   background-color: var(--primary-light);
   z-index: 20;
   border-radius: 3px;
   opacity: 0.85;
-  transition: opacity 0.25s linear;
+  transition: all 0.25s linear;
 
   &:hover {
     opacity: 1;
+    right: 0;
   }
 }

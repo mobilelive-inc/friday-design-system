@@ -54,18 +54,30 @@
   <body class="dashboard-styling">
     <!--theme switcher-->
     <div class="theme-switcher">
-      <p>Choose Theme:</p>
+      <p class="text--center">Choose <br />Theme:</p>
       <div class="btns-switcher-holder">
-        <button class="btn btn__primary btn--sm" onclick="switchTheme(1)">
+        <button
+          class="mb-tiny w-100 btn btn__primary btn--sm"
+          onclick="switchTheme(1)"
+        >
           Navy
         </button>
-        <button class="btn btn__primary btn--sm" onclick="switchTheme(2)">
+        <button
+          class="mb-tiny w-100 btn btn__primary btn--sm"
+          onclick="switchTheme(2)"
+        >
           Lemon
         </button>
-        <button class="btn btn__primary btn--sm" onclick="switchTheme(3)">
+        <button
+          class="mb-tiny w-100 btn btn__primary btn--sm"
+          onclick="switchTheme(3)"
+        >
           Lime
         </button>
-        <button class="btn btn__primary btn--sm" onclick="switchTheme(4)">
+        <button
+          class="mb-tiny w-100 btn btn__primary btn--sm"
+          onclick="switchTheme(4)"
+        >
           Default
         </button>
       </div>
@@ -91,6 +103,10 @@
         </div>
 
         <div class="content">
+          <!--General-->
+          <module href="/components/_partial.general.html"></module>
+          <!--General-->
+
           <!--Colors-->
           <module href="/components/_partial.colorplatte.html"></module>
           <!--Colors-->
