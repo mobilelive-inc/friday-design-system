@@ -71,7 +71,14 @@
       li {
         list-style: none;
         margin-bottom: 1rem;
-        > a {
+        ul > li {
+          margin-bottom: 0.25rem;
+          a {
+            margin: 0 0 0 25px;
+            padding: 0;
+          }
+        }
+        a {
           margin: 0 15px 0;
           color: var(--btn-color-alt);
           display: flex;
@@ -85,6 +92,7 @@
           font-size: 13px;
           padding: 10px 8px;
           line-height: 1.5;
+
           i {
             font-size: 17px;
             float: left;
