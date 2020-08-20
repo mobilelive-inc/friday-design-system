@@ -3207,7 +3207,7 @@
       "properties": {
         "order": 742,
         "id": 728,
-        "name": "cancel_24px",
+        "name": "cancel",
         "prevSize": 32,
         "code": 60037
       },
@@ -12147,7 +12147,7 @@
       "properties": {
         "order": 337,
         "id": 340,
-        "name": "clear_24px",
+        "name": "cross",
         "prevSize": 32,
         "code": 60425
       },
@@ -15338,7 +15338,7 @@
       "properties": {
         "order": 208,
         "id": 202,
-        "name": "loop_24px",
+        "name": "loop",
         "prevSize": 32,
         "code": 60563
       },
@@ -16576,7 +16576,7 @@
       "properties": {
         "order": 161,
         "id": 148,
-        "name": "error_24px",
+        "name": "error",
         "prevSize": 32,
         "code": 60617
       },
@@ -16599,7 +16599,7 @@
       "properties": {
         "order": 162,
         "id": 147,
-        "name": "error_outline_24px",
+        "name": "warning-circle",
         "prevSize": 32,
         "code": 60618
       },
@@ -16645,7 +16645,7 @@
       "properties": {
         "order": 164,
         "id": 145,
-        "name": "warning_24px",
+        "name": "warning",
         "prevSize": 32,
         "code": 60620
       },
@@ -18853,7 +18853,7 @@
       "properties": {
         "order": 91,
         "id": 49,
-        "name": "highlight_off_24px",
+        "name": "cross-circle",
         "prevSize": 32,
         "code": 59848
       },
