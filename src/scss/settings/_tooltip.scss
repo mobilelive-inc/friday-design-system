@@ -5,6 +5,8 @@
   --tooltipArrowWidth: 0.6875rem;
   --tooltipPosition: 1rem;
   --toolTipMaxWidth: 21.5rem;
+  --popOverMaxWidth: 28rem;
+  --iconFontSize: 1.5rem;
 }
 
 .tooltipWrap {
@@ -69,11 +71,12 @@
   }
 }
 
-.tooltip-holder {
+.tooltip-holder,
+.popup-holder {
   position: relative;
   cursor: pointer;
   &:hover {
-    span[data-tooltip] {
+    [data-type='tooltip'] {
       visibility: visible;
       opacity: 1;
     }
@@ -92,7 +95,11 @@
   }
 }
 
-span[data-tooltip] {
+[data-type='tooltip'],
+[data-type='popover'],
+.tooltip,
+.popover {
+  text-align: left;
   position: absolute;
   font-weight: normal;
   z-index: 1;
@@ -115,6 +122,35 @@ span[data-tooltip] {
     &:before {
       --arrowColor: var(--black);
     }
+    .btn--close {
+      color: var(--btn-color);
+    }
+    .title,
+    .popoverLink {
+      color: var(--btn-color);
+    }
+    .btn--popup {
+      color: var(--btn-color-alt);
+      background-color: var(--btn-color);
+      &:hover {
+        color: var(--btn-color);
+        background-color: transparent;
+        border-color: var(--btn-color);
+      }
+      &.btn__outline {
+        color: var(--btn-color);
+        border-color: var(--btn-color);
+        background-color: transparent;
+        &:hover {
+          background-color: var(--btn-color);
+          color: var(--btn-color-alt);
+        }
+      }
+      &.clear {
+        background-color: transparent;
+        color: var(--btn-color);
+      }
+    }
   }
 
   &.light {
@@ -123,10 +159,43 @@ span[data-tooltip] {
     &:before {
       --arrowColor: var(--bg-light);
     }
+    .btn--close,
+    .popoverLink {
+      color: var(--btn-color-alt);
+    }
+    .title {
+      color: var(--btn-color-alt);
+    }
+
+    .btn--popup {
+      color: var(--btn-color);
+      background-color: var(--btn-color-alt);
+      &:hover {
+        background-color: transparent;
+        border-color: var(--btn-color-alt);
+        color: var(--btn-color-alt);
+      }
+      &.btn__outline {
+        color: var(--btn-color-alt);
+        border-color: var(--btn-color-alt);
+        background-color: transparent;
+        &:hover {
+          background-color: var(--btn-color-alt);
+          color: var(--btn-color);
+        }
+      }
+      &.clear {
+        background-color: transparent;
+        color: var(--btn-color-alt);
+      }
+    }
   }
 
   &.curved {
     border-radius: calc(var(--border-radius) * 2);
+    button {
+      border-radius: var(--border-radius-lg);
+    }
   }
 
   &[data-arrow='true'] {
@@ -268,5 +337,78 @@ span[data-tooltip] {
     &[data-position='top'] {
       margin-bottom: var(--tooltipPosition);
     }
+  }
+
+  .icon {
+    font-size: var(--iconFontSize);
+  }
+  .title {
+    margin: 0;
+    line-height: 1.5;
+  }
+  button {
+    border-radius: var(--border-radius-none);
+  }
+
+  footer,
+  .footer {
+    .btn,
+    button {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &[data-type='popover'],
+  &.popover {
+    max-width: var(--popOverMaxWidth);
+    cursor: default;
+  }
+}
+
+.popoverLink {
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 0.25s linear;
+  -webkit-transition: opacity 0.25s linear;
+  -moz-transition: opacity 0.25s linear;
+  -o-transition: opacity 0.25s linear;
+
+  &:hover {
+    opacity: 0.85;
+    text-decoration: none;
+  }
+}
+
+.popupWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.linkMore {
+  color: var(--lemon);
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 0.25s linear;
+  -webkit-transition: opacity 0.25s linear;
+  -moz-transition: opacity 0.25s linear;
+  -o-transition: opacity 0.25s linear;
+  &:hover {
+    opacity: 0.85;
+    text-decoration: none;
+  }
+}
+
+.btn--close {
+  text-decoration: none;
+  transition: opacity 0.25s linear;
+  -webkit-transition: opacity 0.25s linear;
+  -moz-transition: opacity 0.25s linear;
+  -o-transition: opacity 0.25s linear;
+  &:hover {
+    opacity: 0.85;
+    text-decoration: none;
   }
 }
