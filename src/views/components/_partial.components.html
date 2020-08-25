@@ -15,7 +15,7 @@
             tooltip
             <span
               style="color: var(--primary);"
-              class="ml-tiny tooltip-holder sample icon-info_24px"
+              class="ml-tiny tooltip-holder sample icon-info"
             >
               <span
                 class="dark curved py-tiny px-small text--center"
@@ -32,7 +32,7 @@
           <p>
             <span
               style="color: var(--primary);"
-              class="ml-tiny tooltip-holder sample icon-info_24px"
+              class="ml-tiny tooltip-holder sample icon-info"
             >
               <span
                 class="light curved py-tiny px-small text--center"
@@ -54,13 +54,13 @@
             <div class="content-inner">
               <pre
                 style="font-family: 'Montserrat'; font-size: 12pt;"
-              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;ml-tiny tooltip-holder sample icon-info_24px&quot;</span><span style="color:rgb(0,0,128);">&gt;
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;ml-tiny tooltip-holder sample icon-info&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark curved py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;false&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span></pre>
 
               <pre
                 style="font-family: 'Montserrat'; font-size: 12pt;"
-              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;ml-tiny tooltip-holder sample icon-info_24px&quot;</span><span style="color:rgb(0,0,128);">&gt;
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;ml-tiny tooltip-holder sample icon-info&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;light curved py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;false&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span></pre>
             </div>
@@ -441,7 +441,7 @@
             Hover on icon to reveal tooltip:
             <span
               style="color: var(--dark);"
-              class="ml-tiny tooltip-holder sample icon-info_24px"
+              class="ml-tiny tooltip-holder sample icon-info"
             >
               <span
                 class="dark curved py-tiny px-small"
@@ -474,316 +474,428 @@
         </div>
       </div>
     </div>
-    <div class="infoBlockPiece">
+    <div class="infoBlockPiece" id="popover">
       <h3>Popovers</h3>
       <p class="mb-large">
         As compared to tooltip, the purpose of popover is to provide additional
         information. They can also contain action buttons, links and alert
         messages.
       </p>
-      <br /><br />
-      <div class="text--center mb-large">
-        <span class="popup-holder">
-          <span
-            class="icon-warning-circle"
-            style="font-size: 1.5rem; font-color: var(--primary);"
-          ></span>
-          <div
-            class="d-flex align-items-start dark p-small"
-            data-arrow="false"
-            data-position="top"
-            data-type="popover"
-            tabindex="1"
-            style="opacity: 1; visibility: visible;"
-          >
-            <span class="icon icon-error pr-tiny"></span>
-            <span>This is a dark popover (no Arrow) with a close button.</span>
-            <span class="icon icon-cross-circle pl-small"></span>
-          </div>
-        </span>
-      </div>
-      <br /><br />
-      <div class="text--center mb-large">
-        <span class="popup-holder">
-          <span
-            class="icon-warning-circle"
-            style="font-size: 1.5rem; font-color: var(--primary);"
-          ></span>
-          <div
-            class="d-flex align-items-start dark p-small"
-            data-arrow="true"
-            data-position="top"
-            data-type="popover"
-            tabindex="1"
-            style="opacity: 1; visibility: visible;"
-          >
-            <span class="icon icon-error pr-tiny"></span>
+      <div class="highlighted-block">
+        <br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
             <span
-              >This is a dark popover (with Arrow) with a close button.</span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; font-color: var(--primary);"
             >
-            <span class="icon icon-cross-circle pl-small"></span>
-          </div>
-        </span>
-      </div>
-      <br /><br />
-      <div class="text--center mb-large">
-        <span class="popup-holder">
-          <span
-            class="icon-warning-circle"
-            style="font-size: 1.5rem; color: var(--primary);"
-          ></span>
-          <div
-            class="d-flex align-items-start light p-small"
-            data-arrow="true"
-            data-position="top"
-            data-type="popover"
-            tabindex="1"
-            style="opacity: 1; visibility: visible;"
-          >
-            <span class="icon icon-error pr-tiny"></span>
+              <span class="sr-only">info-icon</span>
+            </span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="false"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <span tabindex="1" class="icon icon-error mr-tiny">
+                <span class="sr-only">info-icon</span>
+              </span>
+              <span tabindex="1"
+                >This is a dark popover (no Arrow) with a close button.</span
+              >
+              <a href="#" class="btn--close ml-small">
+                <span tabindex="1" class="icon icon-cross-circle">
+                  <span class="sr-only">close button</span>
+                </span>
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
             <span
-              >This is a light popover (with Arrow) with a close button.</span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; font-color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
             >
-            <span class="icon icon-cross-circle pl-small"></span>
-          </div>
-        </span>
-      </div>
-      <br /><br />
-      <div class="text--center mb-large">
-        <span class="popup-holder">
-          <span
-            class="icon-warning-circle"
-            style="font-size: 1.5rem; color: var(--primary);"
-          ></span>
-          <div
-            class="d-flex align-items-start dark p-small curved"
-            data-arrow="true"
-            data-position="top"
-            data-type="popover"
-            tabindex="1"
-            style="opacity: 1; visibility: visible;"
-          >
-            <span class="icon icon-error pr-tiny"></span>
+              <span tabindex="1" class="icon icon-error mr-small"
+                ><span class="sr-only">info-icon</span></span
+              >
+              <span tabindex="1"
+                >This is a dark popover (with Arrow) with a close button.</span
+              >
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                >
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
             <span
-              >This is a popover (with Arrow and rounded curves) with a close
-              button.</span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start light p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
             >
-            <span class="icon icon-cross-circle pl-small"></span>
-          </div>
-        </span>
-      </div>
-      <br /><br />
-      <div class="text--center mb-large">
-        <span class="popup-holder">
-          <span
-            class="icon-warning-circle pl-small"
-            style="font-size: 1.5rem; color: var(--primary);"
-          ></span>
-          <div
-            class="d-flex align-items-start dark p-small"
-            data-arrow="true"
-            data-position="top-start"
-            data-type="popover"
-            tabindex="1"
-            style="opacity: 1; visibility: visible;"
-          >
-            <span class="icon icon-error pr-tiny"></span>
+              <span tabindex="1" class="icon icon-error mr-small"
+                ><span class="sr-only">info-icon</span></span
+              >
+              <span tabindex="1"
+                >This is a light popover (with Arrow) with a close button.</span
+              >
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                >
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
             <span
-              >This is a dark popover (with Left aligned Arrow) with a close
-              button.</span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small curved"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
             >
-            <a href="#" class="btn--close pl-small"
-              ><span class="icon icon-cross-circle"></span
-            ></a>
-          </div>
-        </span>
-      </div>
-      <br /><br />
-      <div class="text--center mb-large">
-        <span class="popup-holder">
-          <span
-            class="icon-warning-circle pr-small"
-            style="font-size: 1.5rem; color: var(--primary);"
-          ></span>
-          <div
-            class="d-flex align-items-start dark p-small"
-            data-arrow="true"
-            data-position="top-end"
-            data-type="popover"
-            tabindex="1"
-            style="opacity: 1; visibility: visible;"
-          >
-            <span class="icon icon-error pr-tiny"></span>
+              <span tabindex="1" class="icon icon-error mr-small"
+                ><span class="sr-only">info-icon</span></span
+              >
+              <span tabindex="1"
+                >This is a popover (with Arrow and rounded curves) with a close
+                button.</span
+              >
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                >
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
             <span
-              >This is a dark popover (with Right aligned Arrow) with a close
-              button.</span
+              class="icon-warning-circle pl-small"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top-start"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
             >
-            <a href="#" class="btn--close pl-small"
-              ><span class="icon icon-cross-circle"></span
-            ></a>
-          </div>
-        </span>
-      </div>
-      <br /><br /><br /><br />
-      <div class="text--center mb-large">
-        <span class="popup-holder">
-          <span
-            class="icon-warning-circle"
-            style="font-size: 1.5rem; color: var(--primary);"
-          ></span>
-          <div
-            class="d-flex align-items-start dark p-small"
-            data-arrow="true"
-            data-position="top"
-            data-type="popover"
-            tabindex="1"
-            style="opacity: 1; visibility: visible;"
-          >
-            <span class="icon icon-error pr-tiny"></span>
+              <span tabindex="1" class="icon icon-error mr-small"
+                ><span class="sr-only">info-icon</span></span
+              >
+              <span tabindex="1"
+                >This is a dark popover (with Left aligned Arrow) with a close
+                button.</span
+              >
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span>
+                </span></a
+              >
+            </div>
+          </span>
+        </div>
+        <br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
             <span
-              ><h5 class="title">This is a title</h5>
-              A cupcake is a small cake designed to serve one person, which may
-              be baked in a small thin paper or aluminum cup.</span
+              class="icon-warning-circle pr-small"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top-end"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
             >
-            <a href="#" class="btn--close pl-small"
-              ><span class="icon icon-cross-circle"></span
-            ></a>
-          </div>
-        </span>
-      </div>
-      <br /><br /><br /><br /><br /><br />
-      <div class="text--center mb-large">
-        <span class="popup-holder">
-          <span
-            class="icon-warning-circle"
-            style="font-size: 1.5rem; color: var(--primary);"
-          ></span>
-          <div
-            class="d-flex align-items-start dark p-small"
-            data-arrow="true"
-            data-position="top"
-            data-type="popover"
-            tabindex="1"
-            style="opacity: 1; visibility: visible;"
-          >
-            <div class="popupWrap">
-              <span class="mb-small"
-                ><h5 class="title">This is a title</h5>
+              <span tabindex="1" class="icon icon-error mr-small"
+                ><span class="sr-only">info-icon</span></span
+              >
+              <span tabindex="1"
+                >This is a dark popover (with Right aligned Arrow) with a close
+                button.</span
+              >
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                >
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <span tabindex="1" class="icon icon-error mr-small"
+                ><span class="sr-only">info-icon</span></span
+              >
+              <span tabindex="1">
+                <strong class="title">This is a title</strong>
                 A cupcake is a small cake designed to serve one person, which
                 may be baked in a small thin paper or aluminum cup.</span
               >
-              <footer><a class="popoverLink" href="#">Link</a></footer>
+              <a href="#" class="btn--close ml-small">
+                <span tabindex="1" class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                >
+              </a>
             </div>
-            <a href="#" class="btn--close pl-small"
-              ><span class="icon icon-cross-circle"></span
-            ></a>
-          </div>
-        </span>
-      </div>
-      <br /><br /><br /><br />
-      <div class="text--center mb-large">
-        <span class="popup-holder">
-          <span
-            class="icon-warning-circle"
-            style="font-size: 1.5rem; color: var(--primary);"
-          ></span>
-          <div
-            class="d-flex align-items-start dark p-small"
-            data-arrow="true"
-            data-position="top"
-            data-type="popover"
-            tabindex="1"
-            style="opacity: 1; visibility: visible;"
-          >
-            <div class="popupWrap">
-              <span
-                >A cupcake is a small cake designed to serve one person, which
-                may be baked in a small thin paper or aluminum
-                cup.&nbsp;&nbsp;<a class="linkMore" href="#"
-                  >Learn More</a
-                ></span
+          </span>
+        </div>
+        <br /><br /><br /><br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <div class="popupWrap">
+                <span tabindex="1" class="mb-small"
+                  ><strong class="title">This is a title</strong> A cupcake is a
+                  small cake designed to serve one person, which may be baked in
+                  a small thin paper or aluminum cup.</span
+                >
+                <footer tabindex="1">
+                  <a class="popoverLink" href="#">Link</a>
+                </footer>
+              </div>
+              <a tabindex="1" href="#" class="btn--close ml-small"
+                ><span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                ></a
               >
             </div>
-            <a href="#" class="btn--close pl-small"
-              ><span class="icon icon-cross-circle"></span
-            ></a>
-          </div>
-        </span>
-      </div>
-      <br /><br /><br /><br /><br /><br /><br />
-      <div class="text--center mb-large">
-        <span class="popup-holder">
-          <span
-            class="icon-warning-circle"
-            style="font-size: 1.5rem; color: var(--primary);"
-          ></span>
-          <div
-            class="curved d-flex align-items-start dark p-small"
-            data-arrow="true"
-            data-position="top"
-            data-type="popover"
-            tabindex="1"
-            style="opacity: 1; visibility: visible;"
-          >
-            <div class="popupWrap">
-              <span class="mb-small"
-                ><h5 class="title">This is a title</h5>
-                A cupcake is a small cake designed to serve one person, which
-                may be baked in a small thin paper or aluminum cup.</span
-              >
-              <footer>
-                <button class="btn btn__outline btn--popup">
-                  Action1
-                </button>
-                <button class="btn btn--popup">Action2</button>
-                <button class="btn btn--popup clear">Action3</button>
-              </footer>
+          </span>
+        </div>
+        <br /><br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <div class="popupWrap">
+                <span tabindex="1"
+                  >A cupcake is a small cake designed to serve one person, which
+                  may be baked in a small thin paper or aluminum
+                  cup.&nbsp;&nbsp;<a class="linkMore" href="#">Learn More</a>
+                </span>
+              </div>
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle">
+                  <span class="sr-only">close button</span>
+                </span>
+              </a>
             </div>
-            <a href="#" class="btn--close pl-small"
-              ><span class="icon icon-cross-circle"></span
-            ></a>
-          </div>
-        </span>
-      </div>
-      <br /><br /><br /><br /><br /><br /><br />
-      <div class="text--center mb-large">
-        <span class="popup-holder">
-          <span
-            class="icon-warning-circle"
-            style="font-size: 1.5rem; color: var(--primary);"
-          ></span>
-          <div
-            class="d-flex align-items-start light p-small"
-            data-arrow="true"
-            data-position="top"
-            data-type="popover"
-            tabindex="1"
-            style="opacity: 1; visibility: visible;"
-          >
-            <div class="popupWrap">
-              <span class="mb-small"
-                ><h5 class="title">This is a title</h5>
-                A cupcake is a small cake designed to serve one person, which
-                may be baked in a small thin paper or aluminum cup.</span
+          </span>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="curved d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <div class="popupWrap">
+                <span tabindex="1" class="mb-small"
+                  ><strong class="title">This is a title</strong> A cupcake is a
+                  small cake designed to serve one person, which may be baked in
+                  a small thin paper or aluminum cup.</span
+                >
+                <footer>
+                  <button tabindex="1" class="btn btn__outline btn__light">
+                    Action1
+                  </button>
+                  <button tabindex="1" class="btn btn__light">Action2</button>
+                  <button tabindex="1" class="btn btn__light clear">
+                    Action3
+                  </button>
+                </footer>
+              </div>
+              <a tabindex="1" href="#" class="btn--close ml-small"
+                ><span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                ></a
               >
-              <footer>
-                <button class="btn btn btn__outline btn--popup">
-                  Action1
-                </button>
-                <button class="btn btn--popup">Action2</button>
-                <button class="btn btn--popup clear">Action3</button>
-              </footer>
             </div>
-            <a href="#" class="btn--close pl-small"
-              ><span class="icon icon-cross-circle"></span
-            ></a>
+          </span>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start light p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <div class="popupWrap">
+                <span tabindex="1" class="mb-small"
+                  ><strong class="title">This is a title</strong> A cupcake is a
+                  small cake designed to serve one person, which may be baked in
+                  a small thin paper or aluminum cup.</span
+                >
+                <footer>
+                  <button tabindex="1" class="btn btn btn__outline btn__dark">
+                    Action1
+                  </button>
+                  <button tabindex="1" class="btn btn__dark">Action2</button>
+                  <button tabindex="1" class="btn btn__dark clear">
+                    Action3
+                  </button>
+                </footer>
+              </div>
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                >
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              tabindex="1"
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <div class="popupWrap">
+                <ul class="mb-small popupActionList list-unstyled">
+                  <li tabindex="1" class="mb-small">
+                    <a class="d-flex" href="#"
+                      ><span class="mr-small icon icon-note-add"></span>Add a
+                      Note</a
+                    >
+                  </li>
+                  <li tabindex="1" class="mb-small">
+                    <a class="d-flex" href="#"
+                      ><span class="mr-small icon icon-bookmarks"></span
+                      >Bookmark this</a
+                    >
+                  </li>
+                  <li tabindex="1" class="mb-small">
+                    <a class="d-flex" href="#"
+                      ><span class="mr-small icon icon-heart"></span>Like it</a
+                    >
+                  </li>
+                  <li tabindex="1" class="mb-small">
+                    <a class="d-flex" href="#"
+                      ><span class="mr-small icon icon-mail"></span>Email it</a
+                    >
+                  </li>
+                </ul>
+                <footer tabindex="1">
+                  <a href="#" class="btn--close d-flex"
+                    ><span class="mr-small icon icon-cross-circle"></span
+                    >Close</a
+                  >
+                </footer>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblepopover" class="toggle" type="checkbox" />
+          <label for="collapsiblepopover" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner"></div>
           </div>
-        </span>
+        </div>
+        <p>
+          Unlike tooltips, Popovers require additional JavaScript functions to
+          activate.
+        </p>
       </div>
-      <p>
-        Unlike tooltips, Popovers require additional JavaScript functions to
-        activate.
-      </p>
     </div>
   </section>
 </section>

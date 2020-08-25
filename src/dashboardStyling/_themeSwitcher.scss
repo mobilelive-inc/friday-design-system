@@ -152,6 +152,12 @@
 
 .btns-switcher-holder {
   max-width: 75px;
+  .default {
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    color: #2a2a2a;
+  }
 }
 
 .theme-switcher {
