@@ -1,0 +1,196 @@
+///////////////////////// Variables////////////////////////////////////
+:root {
+  --white: #ffffff;
+  --off-white: #f2f2f2;
+  --gray: #707070;
+  --gray-light: #e5e5e5;
+  --gray-lighter: #f4f4f4;
+  --gray-dark: #282828;
+  --black: #191919;
+  --bg-light: var(--off-white);
+  --primary-text: var(--black);
+  --secondary-text: var(--white);
+
+  --orange: #f48245;
+  --orange-lighter: #fef3ec;
+  --orange-light: #f9c0a2;
+  --orange-dark: #c36837;
+  --orange-darker: #311a0e;
+
+  //default
+  --primary-lighter: var(--orange-lighter);
+  --primary-light: var(--orange-light);
+  --primary-dark: var(--orange-dark);
+  --primary-darker: var(--orange-darker);
+
+  --blue: #55a2d9;
+  --blue-lighter: #eef6fb;
+  --blue-light: #bbdaf0;
+  --blue-dark: #336182;
+  --blue-darker: #11202b;
+
+  --lemon: #fccc2e;
+  --lemon-lighter: #fffaea;
+  --lemon-light: #feebab;
+  --lemon-dark: #977a1c;
+  --lemon-darker: #322909;
+
+  --lime: #c4d93c;
+  --lime-lighter: #f9fbec;
+  --lime-light: #e7f0b1;
+  --lime-dark: #768224;
+  --lime-darker: #272b0c;
+
+  --cyan: #66c9d5;
+  --cyan-lighter: #f0fafb;
+  --cyan-light: #c2e9ee;
+  --cyan-dark: #3d7980;
+  --cyan-darker: #14282b;
+
+  --navy: #2874a4;
+  --navy-lighter: #eaf1f6;
+  --navy-light: #a9c7db;
+  --navy-dark: #184662;
+  --navy-darker: #081721;
+
+  --red: #dc3545;
+  --red-dark: #b02a37;
+  --green: #34a84d;
+  --green-dark: #2f9745;
+  --green-darker: #247636;
+
+  --headings-color: var(--primary-dark);
+
+  //ML Standard Colors
+  --primary: var(--orange);
+  --secondary: var(--gray);
+  --success: var(--green);
+  --info: var(--cyan);
+  --warning: var(--lemon);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--gray-dark);
+
+  --primary-hover: var(--orange-dark);
+  --secondary-hover: var(--gray-dark);
+  --info-hover: var(--cyan-dark);
+  --success-hover: var(--lime-dark);
+  --danger-hover: var(--red-dark);
+  --warning-hover: var(--lemon-dark);
+  --light-hover: var(--gray);
+  --dark-hover: var(--gray-light);
+}
+
+//Primary Colors
+$theme-colors: (
+  'primary': var(--primary),
+  'secondary': var(--secondary),
+  'success': var(--success),
+  'info': var(--info),
+  'warning': var(--warning),
+  'danger': var(--danger),
+  'light': var(--light),
+  'dark': var(--dark)
+);
+
+$colors: (
+  'blue': var(--blue),
+  'lime': var(--lime),
+  'red': var(--red),
+  'orange': var(--orange),
+  'lemon': var(--lemon),
+  'navy': var(--navy),
+  'cyan': var(--cyan),
+  'white': var(--white),
+  'gray': var(--gray),
+  'dark': var(--black),
+  'black': var(--black)
+);
+
+// Color Variants which are light, lighter and dark, darker
+$color-variants: (
+  'gray-light': var(--gray-light),
+  'gray-lighter': var(--gray-light),
+  'gray-dark': var(--gray-dark),
+  'orange-lighter': var(--orange-lighter),
+  'orange-light': var(--orange-light),
+  'orange-dark': var(--orange-dark),
+  'orange-darker': var(--orange-darker),
+  'blue-lighter': var(--blue-lighter),
+  'blue-light': var(--blue-light),
+  'blue-dark': var(--blue-dark),
+  'blue-darker': var(--blue-darker),
+  'lemon-lighter': var(--lemon-lighter),
+  'lemon-light': var(--lemon-light),
+  'lemon-dark': var(--lemon-dark),
+  'lemon-darker': var(--lemon-darker),
+  'lime-lighter': var(--lime-lighter),
+  'lime-light': var(--lime-light),
+  'lime-dark': var(--lime-dark),
+  'lime-darker': var(--lime-darker),
+  'cyan-lighter': var(--cyan-lighter),
+  'cyan-light': var(--cyan-light),
+  'cyan-dark': var(--cyan-dark),
+  'cyan-darker': var(--cyan-darker),
+  'navy-lighter': var(--navy-lighter),
+  'navy-light': var(--navy-light),
+  'navy-dark': var(--navy-dark),
+  'navy-darker': var(--navy-darker)
+);
+
+//SCSS Variables
+
+$white: #ffffff;
+$gray: #707070;
+$gray-light: #e5e5e5;
+$gray-lighter: #f4f4f4;
+$gray-dark: #212529;
+$black: #282828;
+
+$orange: #f48245;
+$orange-lighter: #fef3ec;
+$orange-light: #f9c0a2;
+$orange-dark: #c36837;
+$orange-darker: #311a0e;
+
+$blue: #55a2d9;
+$blue-lighter: #eef6fb;
+$blue-light: #bbdaf0;
+$blue-dark: #336182;
+$blue-darker: #11202b;
+
+$lemon: #fccc2e;
+$lemon-lighter: #fffaea;
+$lemon-light: #feebab;
+$lemon-dark: #977a1c;
+$lemon-darker: #322909;
+
+$lime: #c4d93c;
+$lime-lighter: #f9fbec;
+$lime-light: #e7f0b1;
+$lime-dark: #768224;
+$lime-darker: #272b0c;
+
+$cyan: #66c9d5;
+$cyan-lighter: #f0fafb;
+$cyan-light: #c2e9ee;
+$cyan-dark: #3d7980;
+$cyan-darker: #14282b;
+
+$navy: #2874a4;
+$navy-lighter: #eaf1f6;
+$navy-light: #a9c7db;
+$navy-dark: #184662;
+$navy-darker: #081721;
+
+$red: #dc3545;
+$green: #34a84d;
+
+$primary: var($orange);
+$secondary: var($gray);
+$success: var($green);
+$info: var($cyan);
+$warning: var($lemon);
+$danger: var($red);
+$light: var($gray-light);
+$dark: var($gray-dark);

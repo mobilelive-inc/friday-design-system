@@ -2,5 +2,6 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "types": ["node", "jest"]
-  }
+  },
+  "exclude": ["src/test.ts", "src/**/*.spec.ts", "**/*.stories.ts", "src/jest-config"]
 }

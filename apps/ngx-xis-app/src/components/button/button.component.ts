@@ -5,31 +5,34 @@ import {
 } from '@angular/core';
 
 /**  */
-export type ButtonType = 'icon-and-text' | 'icon-only' | 'text-only' | '';
+export type ButtonVariants = 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
 
-/**
- * `ml-button` implements a button.
- *
- * @experimental
- */
+export type ButtonSize = 'lg' | 'sm' | '';
+
 @Component({
     templateUrl: './button.template.html',
-    styleUrls: ['./button.component.scss'],
+    // styleUrls: ['./button.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent {
     /**
-     * Type of this action button.
-     */
-    @Input() public uType: ActionType = this.options.defaultType;
-
-    /**
      * Variant of this action button.
      */
-    @Input() public uVariant: ActionVariant = this.options.defaultVariant;
+    @Input() public variant: ButtonVariants = 'primary';
 
     /**
      * Size of this action button.
      */
-    @Input() public uSize: ActionSize = '';
+    @Input() public size: ButtonSize = '';
+
+    /**
+     * @private
+     */
+    getClasses() {
+        const classes = [`btn__${this.variant}`];
+        if (this.size) {
+            classes.push(`btn--${this.size}`);
+        }
+        return classes;
+    }
 }

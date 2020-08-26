@@ -1,0 +1,2233 @@
+<div class="row my-mid" id="buttons_info">
+  <div class="col-12">
+    <div class="infoBlockPiece">
+      <h2 class="h2">Buttons</h2>
+      <p>
+        ML Design System includes several predefined button styles. As the
+        buttons serve multi purposes, it's implicit to use the relevant tag. For
+        example, use the <code>&lt;a&gt;</code> tag if the button contains a
+        link. ( <code>&lt;a&gt;</code> works without JavaScript). The
+        <code>&lt;button&gt;</code> tag should be used if the button performs an
+        action that changes something on the page. (
+        <code>&lt;button&gt;</code> always require JavaScript to function).
+      </p>
+
+      <div class="jumbotron">
+
+        <pre style="font-family:'Montserrat';font-size:12.0pt;"><span style="color:#808080;">&lt;!--/ Anchor Links--&gt;</span></pre>
+
+        <a href="#" class="btn btn__primary">Link</a>
+
+        <a href="#" class="btn btn__success">View</a>
+
+        <pre style="font-family:'Montserrat';font-size:12pt;"><span style="color:rgb(0,0,128);">&lt;a </span><span style="color:rgb(0,0,255);">href</span><span style="color:rgb(0,128,0);">=&quot;#&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn btn__primary&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Link<span style="color:rgb(0,0,128);">&lt;/a&gt;
+</span><span style="color:rgb(0,0,128);">
+</span><span style="color:rgb(0,0,128);">&lt;a </span><span style="color:rgb(0,0,255);">href</span><span style="color:rgb(0,128,0);">=&quot;#&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn btn__success&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>View<span style="color:rgb(0,0,128);">&lt;/a&gt;</span></pre>
+
+
+        <pre style="font-family:'Montserrat';font-size:12.0pt;"><span style="color:#808080;">&lt;!--/ Buttons--&gt;</span></pre>
+
+        <button type="button" class="btn btn__primary">Save</button>
+
+        <button type="button" class="btn b tn__success">Delete</button>
+
+        <pre style="font-family:'Montserrat';font-size:12pt;"><span style="color:rgb(0,0,128);">&lt;button </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;button&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn btn__primary&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Save<span style="color:rgb(0,0,128);">&lt;/button&gt;
+</span><span style="color:rgb(0,0,128);">
+</span><span style="color:rgb(0,0,128);">&lt;button </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;button&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn btn__success&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Delete<span style="color:rgb(0,0,128);">&lt;/button&gt;</span></pre>
+
+
+      </div>
+      <p>
+        When using button classes on <code>&lt;a&gt;</code> elements that are
+        used to trigger in-page functionality (like collapsing content), rather
+        than linking to new pages or sections within the current page, these
+        links should be given a <code>role="button"</code> to appropriately
+        convey their purpose to assistive technologies such as screen readers.
+      </p>
+
+      <div class="jumbotron">
+        <pre
+          style="
+            box-sizing: border-box;
+            font-family: Montserrat;
+            font-size: 12pt;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            overflow: auto;
+            display: block;
+            color: rgb(33, 37, 41);
+            padding: 0px;
+            background-color: transparent;
+            border: 0px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-weight: 400;
+            letter-spacing: normal;
+            orphans: 2;
+            text-align: left;
+            text-indent: 0px;
+            text-transform: none;
+            widows: 2;
+            word-spacing: 0px;
+            -webkit-text-stroke-width: 0px;
+            text-decoration-style: initial;
+            text-decoration-color: initial;
+          "
+        ><code
+                class="language-html" data-lang="html"
+                style='box-sizing: border-box; font-family: Montserrat; font-size: 12pt; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;a</span> <span class="na"
+                                                                                                        style="box-sizing: border-box; color: rgb(0, 110, 224);">class=</span><span
+                class="s"
+                style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;btn btn__primary&quot;</span> <span
+                class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">href=</span><span class="s"
+                                                                                                      style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;#&quot;</span> <span
+                class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">role=</span><span class="s"
+                                                                                                      style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;button&quot;</span><span
+                class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Link<span class="nt"
+                                                                                                          style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/a&gt;</span></code></pre>
+      </div>
+
+      <br />
+      <h3 class="h3">Button Variants</h3>
+      <p>Add classes for different button variants:</p>
+      <div class="jumbotron">
+        <h4>Solid</h4>
+        <div class="">
+          <button type="button" aria-label="Primary" class="btn btn__primary">
+            Primary
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__secondary"
+          >
+            Secondary
+          </button>
+          <button type="button" aria-label="Success" class="btn btn__success">
+            Success
+          </button>
+          <button type="button" aria-label="Danger" class="btn btn__danger">
+            Danger
+          </button>
+          <button type="button" aria-label="Warning" class="btn btn__warning">
+            Warning
+          </button>
+          <button type="button" aria-label="Info" class="btn btn__info">
+            Info
+          </button>
+          <button type="button" aria-label="Light" class="btn btn__light">
+            Light
+          </button>
+          <button type="button" aria-label="Dark" class="btn btn__dark">
+            Dark
+          </button>
+          <button
+            type="button"
+            aria-label="Disabled"
+            class="btn btn__dark disabled"
+          >
+            Disabled
+          </button>
+        </div>
+        <div class="mb-mid">
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: rgb(0, 0, 0);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >
+Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <span>&lt;</span>a<span>&gt;</span> : </pre
+          >
+
+          <p>
+            <meta charset="utf-8" />
+          </p>
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: var(--pre-color);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >&lt;<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">type</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">aria-label</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;btn btn__primary</span><span style="color: rgb(226, 80, 65); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important;">* </span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">&quot;</span>&gt;Primary&lt;/<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button</span>&gt;</pre>
+          <p>
+            ( <span style="color: rgb(226, 80, 65);">*</span> name according to
+            Theme Standard Colors )
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns-1" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns-1" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__primary&quot;</span>&gt;Primary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__secondary&quot;</span>&gt;Secondary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Success&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__success&quot;</span>&gt;Success&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Danger&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__danger&quot;</span>&gt;Danger&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Warning&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__warning&quot;</span>&gt;Warning&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Info&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__info&quot;</span>&gt;Info&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Light&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__light&quot;</span>&gt;Light&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Dark&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__dark&quot;</span>&gt;Dark&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;disabled&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__dark disabled&quot;</span>&gt;Disabled&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h4>Clear Style</h4>
+        <div class="">
+          <button
+            type="button"
+            aria-label="Primary"
+            class="clear btn btn__primary"
+          >
+            Primary
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="clear btn btn__secondary"
+          >
+            Secondary
+          </button>
+          <button
+            type="button"
+            aria-label="Success"
+            class="clear btn btn__success"
+          >
+            Success
+          </button>
+          <button
+            type="button"
+            aria-label="Danger"
+            class="clear btn btn__danger"
+          >
+            Danger
+          </button>
+          <button
+            type="button"
+            aria-label="Warning"
+            class="clear btn btn__warning"
+          >
+            Warning
+          </button>
+          <button type="button" aria-label="Info" class="clear btn btn__info">
+            Info
+          </button>
+          <button type="button" aria-label="Light" class="clear btn btn__light">
+            Light
+          </button>
+          <button type="button" aria-label="Dark" class="clear btn btn__dark">
+            Dark
+          </button>
+          <button
+            type="button"
+            aria-label="Disabled"
+            class="clear btn btn__dark disabled"
+          >
+            Disabled
+          </button>
+        </div>
+        <div class="mb-mid">
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: rgb(0, 0, 0);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >
+Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <span>&lt;</span>a<span>&gt;</span> : </pre
+          >
+
+          <p>
+            <meta charset="utf-8" />
+          </p>
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: var(--pre-color);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >&lt;<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">type</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">aria-label</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;clear btn btn__primary</span><span style="color: rgb(226, 80, 65); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important;">* </span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">&quot;</span>&gt;Primary&lt;/<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button</span>&gt;</pre>
+          <p>
+            ( <span style="color: rgb(226, 80, 65);">*</span> name according to
+            Theme Standard Colors ). These buttons are useful when used as a
+            secondary action, providing easy management of spacing and
+            line-height:
+          </p>
+          <div class="jumbotron">
+            <p>
+              <button
+                type="button"
+                aria-label="Primary"
+                class="btn btn__primary"
+              >
+                Primary
+              </button>
+              <button
+                type="button"
+                aria-label="Primary"
+                class="clear btn btn__primary"
+              >
+                Primary
+              </button>
+            </p>
+          </div>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;clear btn btn__primary&quot;</span>&gt;Primary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;clear btn btn__secondary&quot;</span>&gt;Secondary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Success&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;clear btn btn__success&quot;</span>&gt;Success&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Danger&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;clear btn btn__danger&quot;</span>&gt;Danger&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Warning&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;clear btn btn__warning&quot;</span>&gt;Warning&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Info&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;clear btn btn__info&quot;</span>&gt;Info&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Light&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;clear btn btn__light&quot;</span>&gt;Light&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Dark&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;clear btn btn__dark&quot;</span>&gt;Dark&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;disabled&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;clear btn btn__dark disabled&quot;</span>&gt;Disabled&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h4>Outline</h4>
+        <div class="">
+          <button
+            type="button"
+            aria-label="Primary"
+            class="btn btn__primary btn__outline"
+          >
+            Primary
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__secondary btn__outline"
+          >
+            Secondary
+          </button>
+          <button
+            type="button"
+            aria-label="Success"
+            class="btn btn__success btn__outline"
+          >
+            Success
+          </button>
+          <button
+            type="button"
+            aria-label="Danger"
+            class="btn btn__danger btn__outline"
+          >
+            Danger
+          </button>
+          <button
+            type="button"
+            aria-label="Warning"
+            class="btn btn__warning btn__outline"
+          >
+            Warning
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__info btn__outline"
+          >
+            Info
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__light btn__outline"
+          >
+            Light
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__dark btn__outline"
+          >
+            Dark
+          </button>
+        </div>
+        <div class="mb-mid">
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: rgb(0, 0, 0);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >
+Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <span>&lt;</span>a<span>&gt;</span> : </pre
+          >
+
+          <p>
+            <meta charset="utf-8" />
+          </p>
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: var(--pre-color);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >&lt;<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">type</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">aria-label</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;btn btn__outline btn__primary</span><span style="color: rgb(226, 80, 65); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important;">* </span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">&quot;</span>&gt;Primary&lt;/<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button</span>&gt;</pre>
+          <p>
+            ( <span style="color: rgb(226, 80, 65);">*</span> name according to
+            Theme Standard Colors )
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns2" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns2" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__primary btn__outline&quot;</span>&gt;Primary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__secondary btn__outline&quot;</span>&gt;Secondary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Success&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__success btn__outline&quot;</span>&gt;Success&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Danger&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__danger btn__outline&quot;</span>&gt;Danger&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Warning&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__warning btn__outline&quot;</span>&gt;Warning&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Info&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__info btn__outline&quot;</span>&gt;Info&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Light&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__light btn__outline&quot;</span>&gt;Light&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Dark&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__dark btn__outline&quot;</span>&gt;Dark&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Block Border-->
+      <div class="jumbotron">
+        <!--Round Border-->
+        <h4>Rounded</h4>
+        <div class="">
+          <button
+            type="button"
+            aria-label="Primary"
+            class="btn btn__primary btn--rounded"
+          >
+            Primary
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__secondary btn--rounded"
+          >
+            Secondary
+          </button>
+          <button
+            type="button"
+            aria-label="Success"
+            class="btn btn__success btn--rounded"
+          >
+            Success
+          </button>
+          <button
+            type="button"
+            aria-label="Danger"
+            class="btn btn__danger btn--rounded"
+          >
+            Danger
+          </button>
+          <button
+            type="button"
+            aria-label="Warning"
+            class="btn btn__warning btn--rounded"
+          >
+            Warning
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__info btn--rounded"
+          >
+            Info
+          </button>
+          <button
+            type="button"
+            aria-label="Light"
+            class="btn btn__light btn--rounded"
+          >
+            Light
+          </button>
+          <button
+            type="button"
+            aria-label="Dark"
+            class="btn btn__dark btn--rounded"
+          >
+            Dark
+          </button>
+          <button
+            type="button"
+            aria-label="Disabled"
+            class="btn btn__dark btn--rounded disabled"
+          >
+            Disabled
+          </button>
+        </div>
+        <div class="mb-mid">
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: rgb(0, 0, 0);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >
+Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <span>&lt;</span>a<span>&gt;</span> : </pre
+          >
+          <p>
+            <meta charset="utf-8" />
+          </p>
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: var(--pre-color);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >&lt;<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">type</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">aria-label</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;btn btn--rounded btn__primary</span><span style="color: rgb(226, 80, 65); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important;">* </span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">&quot;</span>&gt;Primary&lt;/<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button</span>&gt;</pre>
+          <p>
+            ( <span style="color: rgb(226, 80, 65);">*</span> name according to
+            Theme Standard Colors )
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns3" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns3" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__primary btn--rounded&quot;</span>&gt;Primary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__secondary btn--rounded&quot;</span>&gt;Secondary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Success&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__success btn--rounded&quot;</span>&gt;Success&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Danger&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__danger btn--rounded&quot;</span>&gt;Danger&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Warning&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__warning btn--rounded&quot;</span>&gt;Warning&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Info&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__info btn--rounded&quot;</span>&gt;Info&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;light&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__light btn--rounded&quot;</span>&gt;Light&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Dark&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__dark btn--rounded&quot;</span>&gt;Dark&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Disabled&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__dark btn--rounded disabled&quot;</span>&gt;Dark&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h4>Rounded Outline</h4>
+        <div class="">
+          <button
+            type="button"
+            aria-label="Primary"
+            class="btn btn__primary btn--rounded btn__outline"
+          >
+            Primary
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__secondary btn--rounded btn__outline"
+          >
+            Secondary
+          </button>
+          <button
+            type="button"
+            aria-label="Success"
+            class="btn btn__success btn--rounded btn__outline"
+          >
+            Success
+          </button>
+          <button
+            type="button"
+            aria-label="Danger"
+            class="btn btn__danger btn--rounded btn__outline"
+          >
+            Danger
+          </button>
+          <button
+            type="button"
+            aria-label="Warning"
+            class="btn btn__warning btn--rounded btn__outline"
+          >
+            Warning
+          </button>
+          <button
+            type="button"
+            aria-label="Info"
+            class="btn btn__info btn--rounded btn__outline"
+          >
+            Info
+          </button>
+          <button
+            type="button"
+            aria-label="Light"
+            class="btn btn__light btn--rounded btn__outline"
+          >
+            Light
+          </button>
+          <button
+            type="button"
+            aria-label="Dark"
+            class="btn btn__dark btn--rounded btn__outline"
+          >
+            Dark
+          </button>
+          <button
+            type="button"
+            aria-label="Dark"
+            class="btn btn__dark btn--rounded disabled btn__outline"
+          >
+            Disabled
+          </button>
+        </div>
+        <div class="mb-mid">
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: rgb(0, 0, 0);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >
+Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <span>&lt;</span>a<span>&gt;</span> : </pre
+          >
+
+          <p>
+            <meta charset="utf-8" />
+          </p>
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: var(--pre-color);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >&lt;<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">type</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">aria-label</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;btn btn__outline btn--rounded btn__primary</span><span style="color: rgb(226, 80, 65); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important;">* </span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">&quot;</span>&gt;Primary&lt;/<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button</span>&gt;</pre>
+          <p>
+            ( <span style="color: rgb(226, 80, 65);">*</span> name according to
+            Theme Standard Colors )
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns4" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns4" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__primary btn__outline btn--rounded&quot;</span>&gt;Primary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__secondary btn__outline btn--rounded&quot;</span>&gt;Secondary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Success&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__success btn__outline btn--rounded&quot;</span>&gt;Success&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Danger&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__danger btn__outline btn--rounded&quot;</span>&gt;Danger&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Warning&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__warning btn__outline btn--rounded&quot;</span>&gt;Warning&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Info&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__info btn__outline btn--rounded&quot;</span>&gt;Info&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Light&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__light btn__outline btn--rounded&quot;</span>&gt;Light&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Dark&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__dark btn__outline btn--rounded&quot;</span>&gt;Dark&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Dark&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__dark btn__outline btn--rounded disabled&quot;</span>&gt;Disabled&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Round Border-->
+      <div class="jumbotron">
+        <!--Curved Border-->
+        <h4>Curved</h4>
+        <div class="">
+          <button
+            type="button"
+            aria-label="Primary"
+            class="btn btn__primary btn--curved"
+          >
+            Primary
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__secondary btn--curved"
+          >
+            Secondary
+          </button>
+          <button
+            type="button"
+            aria-label="Success"
+            class="btn btn__success btn--curved"
+          >
+            Success
+          </button>
+          <button
+            type="button"
+            aria-label="Danger"
+            class="btn btn__danger btn--curved"
+          >
+            Danger
+          </button>
+          <button
+            type="button"
+            aria-label="Warning"
+            class="btn btn__warning btn--curved"
+          >
+            Warning
+          </button>
+          <button
+            type="button"
+            aria-label="Info"
+            class="btn btn__info btn--curved"
+          >
+            Info
+          </button>
+          <button
+            type="button"
+            aria-label="Light"
+            class="btn btn__light btn--curved"
+          >
+            Light
+          </button>
+          <button
+            type="button"
+            aria-label="Dark"
+            class="btn btn__dark btn--curved"
+          >
+            Dark
+          </button>
+          <button
+            type="button"
+            aria-label="Disabled"
+            class="btn btn__dark btn--curved disabled"
+          >
+            Disabled
+          </button>
+        </div>
+        <div class="mb-mid">
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: rgb(0, 0, 0);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >
+Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <span>&lt;</span>a<span>&gt;</span> : </pre
+          >
+
+          <p>
+            <meta charset="utf-8" />
+          </p>
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: var(--pre-color);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >&lt;<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">type</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">aria-label</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;btn btn--curved btn__primary</span><span style="color: rgb(226, 80, 65); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important;">* </span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">&quot;</span>&gt;Primary&lt;/<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button</span>&gt;</pre>
+          <p>
+            ( <span style="color: rgb(226, 80, 65);">*</span> name according to
+            Theme Standard Colors )
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns5" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns5" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__primary btn__outline btn--curved&quot;</span>&gt;Primary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__secondary btn__outline btn--curved&quot;</span>&gt;Secondary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Success&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__success btn__outline btn--curved&quot;</span>&gt;Success&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Danger&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__danger btn__outline btn--curved&quot;</span>&gt;Danger&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Warning&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__warning btn__outline btn--curved&quot;</span>&gt;Warning&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Info&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__info btn__outline btn--curved&quot;</span>&gt;Info&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Light&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__light btn__outline btn--curved&quot;</span>&gt;Light&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Dark&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__dark btn__outline btn--curved&quot;</span>&gt;Dark&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Dark&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__dark btn__outline btn--curved disabled&quot;</span>&gt;Disabled&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h4>Curved Outline</h4>
+        <div class="">
+          <button
+            type="button"
+            aria-label="Primary"
+            class="btn btn__primary btn--curved btn__outline"
+          >
+            Primary
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__secondary btn--curved btn__outline"
+          >
+            Secondary
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__success btn--curved btn__outline"
+          >
+            Success
+          </button>
+          <button
+            type="button"
+            aria-label="Danger"
+            class="btn btn__danger btn--curved btn__outline"
+          >
+            Danger
+          </button>
+          <button
+            type="button"
+            aria-label="Warning"
+            class="btn btn__warning btn--curved btn__outline"
+          >
+            Warning
+          </button>
+          <button
+            type="button"
+            aria-label="Info"
+            class="btn btn__info btn--curved btn__outline"
+          >
+            Info
+          </button>
+          <button
+            type="button"
+            aria-label="Light"
+            class="btn btn__light btn--curved btn__outline"
+          >
+            Light
+          </button>
+          <button
+            type="button"
+            aria-label="Dark"
+            class="btn btn__dark btn--curved btn__outline"
+          >
+            Dark
+          </button>
+          <button
+            type="button"
+            aria-label="Disabled"
+            class="btn btn__dark btn--curved btn__outline disabled"
+          >
+            Disabled
+          </button>
+        </div>
+        <div class="mb-mid">
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: rgb(0, 0, 0);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >
+Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <span>&lt;</span>a<span>&gt;</span> : </pre
+          >
+          <p>
+            <meta charset="utf-8" />
+          </p>
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: var(--pre-color);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >&lt;<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">type</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">aria-label</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;btn btn--curved btn__outline btn__primary</span><span style="color: rgb(226, 80, 65); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important;">* </span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">&quot;</span>&gt;Primary&lt;/<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button</span>&gt;</pre>
+          <p>
+            ( <span style="color: rgb(226, 80, 65);">*</span> name according to
+            Theme Standard Colors )
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns6" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns6" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__primary btn__outline btn--curved btn__outline&quot;</span>&gt;Primary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__secondary btn__outline btn--curved btn__outline&quot;</span>&gt;Secondary&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Success&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__success btn__outline btn--curved btn__outline&quot;</span>&gt;Success&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Danger&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__danger btn__outline btn--curved btn__outline&quot;</span>&gt;Danger&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Warning&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__warning btn__outline btn--curved btn__outline&quot;</span>&gt;Warning&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Info&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__info btn__outline btn--curved btn__outline&quot;</span>&gt;Info&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Light&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__light btn__outline btn--curved btn__outline&quot;</span>&gt;Light&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Dark&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__dark btn__outline btn--curved btn__outline&quot;</span>&gt;Dark&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Dark&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__dark btn__outline btn--curved btn__outline disabled&quot;</span>&gt;Disabled&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Curved Border-->
+      <div class="jumbotron">
+        <!--Buttons with Icons on one or both sides-->
+        <h4 class="h4">Buttons with icons</h4>
+        <div class="">
+          <button
+            type="button"
+            aria-label="Primary"
+            class="btn btn__primary"
+            role="button"
+          >
+            <i class="icon-accuracy"></i> <span class="btn__text">Primary</span>
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__secondary"
+          >
+            <i class="icon-cloud-architecture"></i>
+            <span class="btn__text">Secondary</span>
+          </button>
+          <button type="button" aria-label="Success" class="btn btn__success">
+            <i class="icon-accuracy"></i> <span class="btn__text">Success</span>
+          </button>
+          <button type="button" aria-label="Danger" class="btn btn__danger">
+            <span class="btn__text">Danger</span>
+            <i class="icon-cloud-architecture"></i>
+          </button>
+          <button type="button" aria-label="Warning" class="btn btn__warning">
+            <i class="icon-accuracy"></i> <span class="btn__text">Warning</span>
+          </button>
+          <button type="button" aria-label="Info" class="btn btn__info">
+            <i class="icon-cloud-architecture"></i>
+            <span class="btn__text">Info</span>
+          </button>
+          <button type="button" aria-label="Light" class="btn btn__light">
+            <i class="icon-accuracy"></i> <span class="btn__text">Light</span>
+          </button>
+          <button type="button" aria-label="Dark" class="btn btn__dark">
+            <i class="icon-cloud-architecture"></i
+            ><span class="btn__text"> Dark</span>
+          </button>
+        </div>
+        <div class="mb-mid">
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: rgb(0, 0, 0);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >
+Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <span>&lt;</span>a<span>&gt;</span> : </pre
+          >
+
+          <p>
+            <meta charset="utf-8" />
+          </p>
+          <pre
+            style="font-family: 'Montserrat'; font-size: 12pt;"
+          ><span style="color:rgb(0,0,128);">&lt;button </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;button&quot; </span><span style="color:rgb(0,0,255);">aria-label</span><span style="color:rgb(0,128,0);">=&quot;Primary&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn btn__primary<span style="color: rgb(226, 80, 65);">*</span>&quot; </span><span style="color:rgb(0,0,255);">role</span><span style="color:rgb(0,128,0);">=&quot;button&quot;</span><span style="color:rgb(0,0,128);">&gt;
+  </span><span style="color:rgb(0,0,128);">  &lt;i </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;icon-accuracy&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/i&gt; &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn__text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Primary<span style="color:rgb(0,0,128);">&lt;/span&gt;
+  </span><span style="color:rgb(0,0,128);">&lt;/button&gt;</span></pre>
+          <p>
+            ( <span style="color: rgb(226, 80, 65);">*</span> name according to
+            Theme Standard Colors )
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns9" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns9" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="
+                  white-space: pre-wrap;
+                  overflow-wrap: break-word;
+                  overflow: visible;
+                  color: rgb(0, 0, 0);
+                  font-size: 12pt;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: start;
+                  text-indent: 0px;
+                  text-transform: none;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  font-family: Montserrat;
+                "
+              >
+  &lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__primary&quot; <span style="color: rgb(0, 128, 0);"><span style="color: rgb(0, 0, 255);">role</span><span style="color: rgb(0, 128, 0);">=</span>&quot;button&quot;</span></span>&gt;
+     &lt;<span style="color: rgb(0, 0, 128);">i </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;icon-accuracy&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128);">i</span>&gt; &lt;<span style="color: rgb(0, 0, 128);">span </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn__text&quot;</span>&gt;Primary&lt;/<span style="color: rgb(0, 0, 128);">span</span>
+  &lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__secondary&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128);">i </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;icon-cloud-architecture&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128);">i</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128);">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn__text&quot;</span>&gt;Secondary&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="
+                  white-space: pre-wrap;
+                  overflow-wrap: break-word;
+                  overflow: visible;
+                  color: rgb(0, 0, 0);
+                  font-size: 12pt;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: start;
+                  text-indent: 0px;
+                  text-transform: none;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  font-family: Montserrat;
+                "
+              ></pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Success&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__success&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-accuracy&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt; &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Success&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span>&lt;</span><span><span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Danger&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__danger&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Danger&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-cloud-architecture&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span></span><span>&gt;</span></pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Warning&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__warning&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-accuracy&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt; &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Warning&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Info&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__info&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-cloud-architecture&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Info&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Light&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__light&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-accuracy&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt; &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Light&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Dark&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__dark&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-cloud-architecture&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;&lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt; Dark&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="jumbotron">
+        <!--/Buttons with Icons on one or both sides-->
+        <h4 class="h4">Buttons with icons on both sides</h4>
+        <div class="">
+          <button
+            type="button"
+            aria-label="Primary"
+            class="mb-micro btn btn__primary"
+            role="button"
+          >
+            <i class="icon-accuracy"></i>
+            <span class="btn__text">Primary</span>
+            <i class="icon-favorite_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="mb-micro btn btn__secondary"
+          >
+            <i class="icon-cloud-architecture"></i>
+            <span class="btn__text">Secondary</span>
+            <i class="icon-check_circle_outline_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Success"
+            class="mb-micro btn btn__success"
+          >
+            <i class="icon-accuracy"></i>
+            <span class="btn__text">Success</span>
+            <i class="icon-check_circle_outline_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Danger"
+            class="mb-micro btn btn__danger"
+          >
+            <i class="icon-cloud-architecture"></i>
+            <span class="btn__text">Danger</span>
+            <i class="icon-favorite_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Warning"
+            class="mb-micro btn btn__warning"
+          >
+            <i class="icon-accuracy"></i>
+            <span class="btn__text">Warning</span>
+            <i class="icon-check_circle_outline_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Info"
+            class="mb-micro btn btn__info"
+          >
+            <i class="icon-cloud-architecture"></i>
+            <span class="btn__text">Info</span>
+            <i class="icon-favorite_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Light"
+            class="mb-micro btn btn__light"
+          >
+            <i class="icon-accuracy"></i>
+            <span class="btn__text">Light</span>
+            <i class="icon-check_circle_outline_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Dark"
+            class="mb-micro btn btn__dark"
+          >
+            <i class="icon-cloud-architecture"></i>
+            <span class="btn__text">Dark</span>
+            <i class="icon-favorite_24px"></i>
+          </button>
+        </div>
+        <div class="mb-mid">
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: rgb(0, 0, 0);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >
+Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <span>&lt;</span>a<span>&gt;</span> : </pre
+          >
+
+          <p>
+            <meta charset="utf-8" />
+          </p>
+          <pre
+            style="font-family: 'Montserrat'; font-size: 12pt;"
+          ><span style="color:rgb(0,0,128);">&lt;button </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;button&quot; </span><span style="color:rgb(0,0,255);">aria-label</span><span style="color:rgb(0,128,0);">=&quot;Primary&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn btn__primary<span style="color: rgb(226, 80, 65);">* </span>&quot; </span><span style="color:rgb(0,0,255);">role</span><span style="color:rgb(0,128,0);">=&quot;button&quot;</span><span style="color:rgb(0,0,128);">&gt;
+  </span><span style="color:rgb(0,0,128);">  &lt;i </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;icon-accuracy&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/i&gt;
+  </span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn__text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Primary<span style="color:rgb(0,0,128);">&lt;/span&gt;
+  </span><span style="color:rgb(0,0,128);">  &lt;i </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;icon-favorite_24px&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/i&gt;
+  </span><span style="color:rgb(0,0,128);">&lt;/button&gt;</span></pre>
+          <p>
+            ( <span style="color: rgb(226, 80, 65);">*</span> name according to
+            Theme Standard Colors )
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns10" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns10" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Primary&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__primary&quot; </span><span style="color: rgb(0, 0, 255); ">role</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-accuracy&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt; &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Primary&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-favorite_24px&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__secondary&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-cloud-architecture&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Secondary&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-check_circle_outline_24px&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Success&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__success&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-accuracy&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Success&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-check_circle_outline_24px&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Danger&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__danger&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-cloud-architecture&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Danger&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-favorite_24px&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Warning&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__warning&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-accuracy&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Warning&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-check_circle_outline_24px&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="">&lt;</span><span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Info&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__info&quot;</span><span style="">&gt;</span>
+    <span style="">&lt;</span><span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-cloud-architecture&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128); ">i</span><span style="">&gt;</span>
+    <span style="">&lt;</span><span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span><span style="">&gt;</span>Info<span style="">&lt;/</span><span style="color: rgb(0, 0, 128); ">span</span><span style="">&gt;</span>
+    <span style="">&lt;</span><span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-favorite_24px&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128); ">i</span><span style="">&gt;</span>
+  <span style="">&lt;/</span><span style="color: rgb(0, 0, 128); ">button</span><span style="">&gt;</span></pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Light&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__light&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-accuracy&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Light&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-check_circle_outline_24px&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Dark&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__dark&quot;</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-cloud-architecture&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Dark&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+    &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-favorite_24px&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Tooltips-->
+      <div class="jumbotron">
+        <h4 class="h4">Buttons with Tooltip</h4>
+        <div class="">
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__tooltip text__secondary"
+          >
+            <i class="icon-info_24px"></i>
+            <span class="btn__text">Dark</span>
+          </button>
+          <button
+            type="button"
+            aria-label="Light"
+            class="btn btn__tooltip btn__light text__light"
+          >
+            <i class="icon-info_24px"></i>
+            <span class="btn__text">Light</span>
+          </button>
+          <button
+            type="button"
+            aria-label="Primary"
+            class="btn btn__tooltip text__primary"
+          >
+            <i class="icon-info_24px"></i>
+            <span class="btn__text">Primary tooltip</span>
+          </button>
+          <button
+            type="button"
+            aria-label="Success"
+            class="btn btn__tooltip text__success"
+          >
+            <i class="icon-info_24px"></i>
+            <span class="btn__text">Success</span>
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__tooltip"
+            disabled
+          >
+            <i class="icon-info_24px"></i>
+            <span class="btn__text">Disabled</span>
+          </button>
+        </div>
+        <div class="mb-mid">
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: rgb(0, 0, 0);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >
+Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <span>&lt;</span>a<span>&gt;</span> : </pre
+          >
+          <p>
+            <meta charset="utf-8" />
+          </p>
+          <pre
+            style="font-family: 'Montserrat'; font-size: 12pt;"
+          ><span style="color:rgb(0,0,128);">&lt;button </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;button&quot; </span><span style="color:rgb(0,0,255);">aria-label</span><span style="color:rgb(0,128,0);">=&quot;Secondary&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn btn__tooltip text__secondary<span style="color: rgb(226, 80, 65); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important;">* </span>&quot;</span><span style="color:rgb(0,0,128);">&gt;
+  </span><span style="color:rgb(0,0,128);">  &lt;i </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;icon-info_24px&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/i&gt;
+  </span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn__text&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Dark<span style="color:rgb(0,0,128);">&lt;/span&gt;
+  </span><span style="color:rgb(0,0,128);">&lt;/button&gt;</span></pre>
+          <p>
+            ( <span style="color: rgb(226, 80, 65);">*</span> name according to
+            Theme Standard Colors )
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns11" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns11" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">aria-label</span><span style="color: rgb(0, 128, 0); ">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn__tooltip text__secondary&quot;</span>&gt;
+      &lt;<span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-info_24px&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">i</span>&gt; &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn__text&quot;</span>&gt;Dark&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+  &lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;</pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">button </span><span style="color: rgb(0, 0, 255);  ">type</span><span style="color: rgb(0, 128, 0);  ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);  ">aria-label</span><span style="color: rgb(0, 128, 0);  ">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn btn__tooltip btn__light text__light&quot;</span><span style="">&gt;</span>
+    <span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">i </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;icon-info_24px&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128);  ">i</span><span style="">&gt;</span> <span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">span </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn__text&quot;</span><span style="">&gt;</span>Light<span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">span</span><span style="">&gt;</span>
+  <span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">button</span><span style="">&gt;</span></pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">button </span><span style="color: rgb(0, 0, 255);  ">type</span><span style="color: rgb(0, 128, 0);  ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);  ">aria-label</span><span style="color: rgb(0, 128, 0);  ">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn btn__tooltip text__primary&quot;</span><span style="">&gt;</span>
+    <span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">i </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;icon-info_24px&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128);  ">i</span><span style="">&gt;&lt;</span><span style="color: rgb(0, 0, 128);  ">span </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn__text&quot;</span><span style="">&gt;</span>Primary tooltip<span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">span</span><span style="">&gt;</span>
+  <span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">button</span><span style="">&gt;</span></pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">button </span><span style="color: rgb(0, 0, 255);  ">type</span><span style="color: rgb(0, 128, 0);  ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);  ">aria-label</span><span style="color: rgb(0, 128, 0);  ">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn btn__tooltip text__success&quot;</span><span style="">&gt;</span>
+    <span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">i </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;icon-info_24px&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128);  ">i</span><span style="">&gt;&lt;</span><span style="color: rgb(0, 0, 128);  ">span </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn__text&quot;</span><span style="">&gt;</span>Success<span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">span</span><span style="">&gt;</span>
+  <span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">button</span><span style="">&gt;</span></pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">button </span><span style="color: rgb(0, 0, 255);  ">type</span><span style="color: rgb(0, 128, 0);  ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);  ">aria-label</span><span style="color: rgb(0, 128, 0);  ">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn btn__tooltip&quot; </span><span style="color: rgb(0, 0, 255);  ">disabled</span><span style="">&gt;</span>
+    <span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">i </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;icon-info_24px&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128);  ">i</span><span style="">&gt;</span> <span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">span </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn__text&quot;</span><span style="">&gt;</span>Disabled<span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">span</span><span style="">&gt;</span>
+  <span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">button</span><span style="">&gt;</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/Tooltips-->
+      <div class="jumbotron">
+        <!-- Only Button  Icons-->
+        <h4>Icon Only Buttons</h4>
+        <div class="mb-mid row">
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="mr-mid ml-mid btn btn__icon btn__dark"
+          >
+            <span class="sr-only">Button</span>
+            <i class="icon-info_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="mr-mid btn btn__icon btn__secondary btn__outline btn--rounded"
+          >
+            <span class="sr-only">Button</span>
+            <i class="icon-info_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="mr-mid btn btn__icon btn__dark btn__outline"
+          >
+            <span class="sr-only">Button</span>
+            <i class="icon-delete_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="mr-mid btn btn__icon btn__success btn__outline btn--rounded"
+          >
+            <span class="sr-only">Button</span>
+            <i class="icon-delete_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="mr-mid btn btn__icon btn__dark btn--curved"
+          >
+            <span class="sr-only">Button</span>
+            <i class="icon-delete_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="mr-mid btn btn__icon btn__dark btn__outline btn--curved"
+          >
+            <span class="sr-only">Button</span>
+            <i class="icon-delete_24px"></i>
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="mr-mid btn btn__icon btn__info btn__outline btn--curved"
+          >
+            <span class="sr-only">Button</span>
+            <i class="icon-delete_24px"></i>
+          </button>
+        </div>
+        <div class="mb-mid">
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: rgb(0, 0, 0);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >
+Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <span>&lt;</span>a<span>&gt;</span> : </pre
+          >
+          <p>
+            <meta charset="utf-8" />
+          </p>
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: var(--pre-color);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          ><span style="box-sizing: border-box;">&lt;</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);">button </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">type</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">aria-label</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;btn btn__icon btn__dark<span style="color: rgb(226, 80, 65);">* </span>&quot;</span><span style="box-sizing: border-box;">&gt;</span>
+     <span style="box-sizing: border-box;">&lt;span</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);"> </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;sr-only&quot;</span><span style="box-sizing: border-box;">&gt;Button&lt;/span</span><span style="box-sizing: border-box;">&gt;</span>
+<span style="box-sizing: border-box;">     &lt;</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);">i </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;icon-info_24px&quot;</span><span style="box-sizing: border-box;">&gt;&lt;/</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);">i</span><span style="box-sizing: border-box;">&gt;</span>
+  <span style="box-sizing: border-box;">&lt;/</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);">button</span><span style="box-sizing: border-box;">&gt;</span></pre>
+          <p>
+            ( <span style="color: rgb(226, 80, 65);">*</span> name according to
+            Theme Standard Colors. Add Span with some text and "sr-only" class
+            for screen readers.)
+          </p>
+        </div>
+
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns12" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns12" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="
+                  white-space: pre-wrap;
+                  overflow-wrap: break-word;
+                  overflow: visible;
+                  color: var(--pre-color);
+                  font-size: 12pt;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: start;
+                  text-indent: 0px;
+                  text-transform: none;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  box-sizing: border-box;
+                  display: block;
+                  font-family: Montserrat;
+                "
+              ></pre>
+              <pre
+                style="
+                  white-space: pre-wrap;
+                  overflow-wrap: break-word;
+                  overflow: visible;
+                  color: var(--pre-color);
+                  font-size: 12pt;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-align: start;
+                  text-indent: 0px;
+                  text-transform: none;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  box-sizing: border-box;
+                  display: block;
+                  font-family: Montserrat;
+                "
+              ><span style="box-sizing: border-box;">&lt;</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);">button </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">type</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">aria-label</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;btn btn__icon btn__dark&quot;</span><span style="box-sizing: border-box;">&gt;</span>
+    <span style="box-sizing: border-box;">&lt;span</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);"> </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;sr-only&quot;</span><span style="box-sizing: border-box;">&gt;Button&lt;/span</span><span style="box-sizing: border-box;">&gt;</span>
+<span style="box-sizing: border-box;">    &lt;</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);">i </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;icon-info_24px&quot;</span><span style="box-sizing: border-box;">&gt;&lt;/</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);">i</span><span style="box-sizing: border-box;">&gt;</span>
+<span style="box-sizing: border-box;">&lt;/</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);">button</span><span style="box-sizing: border-box;">&gt;</span></pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__icon btn__primary btn--rounded&quot;</span>&gt;
+   <span style="box-sizing: border-box;">&lt;span</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);"> </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;sr-only&quot;</span><span style="box-sizing: border-box;">&gt;Button&lt;/span</span><span style="box-sizing: border-box;">&gt;</span>
+<span>   </span><span>&lt;<span style="color: rgb(0, 0, 128);">i </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;icon-info_24px&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128);">i</span>&gt;</span>
+<span>&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</span></pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span>&lt;</span><span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__icon btn__dark btn__outline&quot;</span><span>&gt;</span>
+    <span style="box-sizing: border-box;">&lt;span</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);"> </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;sr-only&quot;</span><span style="box-sizing: border-box;">&gt;Button&lt;/span</span><span style="box-sizing: border-box;">&gt;</span>
+<span>    &lt;</span><span style="color: rgb(0, 0, 128);">i </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;icon-delete_24px&quot;</span><span>&gt;&lt;/</span><span style="color: rgb(0, 0, 128);">i</span><span>&gt;</span>
+<span>&lt;/</span><span style="color: rgb(0, 0, 128);">button</span><span>&gt;</span></pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="">&lt;</span><span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__icon btn__success btn__outline btn--rounded&quot;</span><span style="">&gt;</span>
+    <span style="">&lt;</span><span style="color: rgb(0, 0, 128);">i </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;icon-delete_24px&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128);">i</span><span style="">&gt;</span>
+  <span style="">&lt;/</span><span style="color: rgb(0, 0, 128);">button</span><span style="">&gt;</span></pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span>&lt;</span><span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__icon btn__dark btn--curved&quot;</span><span>&gt;</span>
+    <span style="box-sizing: border-box;">&lt;span</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);"> </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;sr-only&quot;</span><span style="box-sizing: border-box;">&gt;Button&lt;/span</span><span style="box-sizing: border-box;">&gt;</span>
+<span>    &lt;</span><span style="color: rgb(0, 0, 128);">i </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;icon-delete_24px&quot;</span><span>&gt;&lt;/</span><span style="color: rgb(0, 0, 128);">i</span><span>&gt;</span>
+<span>&lt;/</span><span style="color: rgb(0, 0, 128);">button&gt;</span></pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span>&lt;</span><span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__icon btn__dark btn__outline btn--curved&quot;</span><span>&gt;</span>
+<span>    <span style="box-sizing: border-box;">&lt;span</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);"> </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;sr-only&quot;</span><span style="box-sizing: border-box;">&gt;Button&lt;/span</span><span style="box-sizing: border-box;">&gt;</span></span>
+    <span>&lt;</span><span style="color: rgb(0, 0, 128);">i </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;icon-delete_24px&quot;</span><span>&gt;&lt;/</span><span style="color: rgb(0, 0, 128);">i</span><span>&gt;</span>
+  <span>&lt;/</span><span style="color: rgb(0, 0, 128);">button</span><span>&gt;</span></pre>
+
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span>&lt;</span><span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__icon btn__info btn__outline btn--curved&quot;</span><span>&gt;</span>
+<span>    <span style="box-sizing: border-box;">&lt;span</span><span style="box-sizing: border-box; color: rgb(0, 0, 128);"> </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;sr-only&quot;</span><span style="box-sizing: border-box;">&gt;Button&lt;/span</span><span style="box-sizing: border-box;">&gt;</span></span>
+    <span>&lt;</span><span style="color: rgb(0, 0, 128);">i </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;icon-delete_24px&quot;</span><span>&gt;&lt;/</span><span style="color: rgb(0, 0, 128);">i</span><span>&gt;</span>
+<span>&lt;/</span><span style="color: rgb(0, 0, 128);">button</span><span>&gt;</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Only Button  Icons-->
+      <div class="jumbotron">
+        <!--Buttons Sizing -->
+        <h4>Button Sizes</h4>
+        <div class="">
+          <button
+            type="button"
+            aria-label="Secondary"
+            class="btn btn__primary btn--lg"
+          >
+            Primary Large
+          </button>
+          <button
+            type="button"
+            aria-label="Secondary large"
+            class="btn btn__secondary btn--lg"
+          >
+            Secondary large
+          </button>
+          <button
+            type="button"
+            aria-label="Small button"
+            class="btn btn__primary btn--sm"
+          >
+            Primary Small
+          </button>
+          <button
+            type="button"
+            aria-label="Small button"
+            class="btn btn__secondary btn--sm"
+          >
+            Secondary Small
+          </button>
+        </div>
+        <div class="mb-mid">
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: rgb(0, 0, 0);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >
+Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <span>&lt;</span>a<span>&gt;</span> : </pre
+          >
+          <p>
+            <meta charset="utf-8" />
+          </p>
+          <pre
+            style="
+              box-sizing: border-box;
+              display: block;
+              font-size: 12pt;
+              color: var(--pre-color);
+              font-style: normal;
+              font-variant-ligatures: normal;
+              font-variant-caps: normal;
+              font-weight: 400;
+              letter-spacing: normal;
+              orphans: 2;
+              text-align: start;
+              text-indent: 0px;
+              text-transform: none;
+              widows: 2;
+              word-spacing: 0px;
+              -webkit-text-stroke-width: 0px;
+              text-decoration-style: initial;
+              text-decoration-color: initial;
+              font-family: Montserrat;
+            "
+          >&lt;<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">type</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">aria-label</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;btn btn--lg btn__primary</span><span style="color: rgb(226, 80, 65); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important;">* </span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">&quot;</span>&gt;Primary Large&lt;/<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button</span>&gt;
+  &lt;<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">type</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">aria-label</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="box-sizing: border-box; color: rgb(0, 0, 255);">class</span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">=&quot;btn btn--sm btn__secondary</span><span style="color: rgb(226, 80, 65); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial; display: inline !important;">* </span><span style="box-sizing: border-box; color: rgb(0, 128, 0);">&quot;</span>&gt;Secondary Small&lt;/<span style="box-sizing: border-box; color: rgb(0, 0, 128);">button</span>&gt;</pre>
+          <p>
+            ( <span style="color: rgb(226, 80, 65);">*</span> name according to
+            Theme Standard Colors )
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns7" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns7" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Primary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__primary btn--lg&quot;</span>&gt;Primary Large&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Secondary&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__secondary btn--lg&quot;</span>&gt;Secondary Large&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Small btn&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__primary btn--sm&quot;</span>&gt;Primary small&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              >&lt;<span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">aria-label</span><span style="color: rgb(0, 128, 0);">=&quot;Small btn&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn__secondary btn--sm&quot;</span>&gt;Secondary small&lt;/<span style="color: rgb(0, 0, 128);">button</span>&gt;</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/Buttons Sizing -->
+      <div class="jumbotron">
+        <h4>Responsive Buttons</h4>
+        <div class="mb-micro">
+          <button
+            class="btn--sm mb-micro expand-sm-only btn btn__primary"
+            aria-label="Primary button"
+            type="button"
+          >
+            Expand in Mobile Only
+          </button>
+          <button
+            class="btn--sm mb-micro expand-md-only btn btn__primary"
+            aria-label="Primary button"
+            type="button"
+          >
+            Expand in Tablet Only
+          </button>
+          <button
+            class="btn--sm mb-micro expand-lg-only btn btn__primary"
+            aria-label="Primary button"
+            type="button"
+          >
+            Expand in Desktop Only
+          </button>
+          <button
+            class="btn--sm mb-micro expand-xl-only btn btn__primary"
+            aria-label="Primary button"
+            type="button"
+          >
+            Expand on Large screen Only
+          </button>
+          <button
+            class="btn--sm mb-micro expand-md-up btn btn__primary"
+            aria-label="Primary button"
+            type="button"
+          >
+            Expand on Tablet and Larger
+          </button>
+          <button
+            class="btn--sm mb-micro expand-lg-up btn btn__primary"
+            aria-label="Primary button"
+            type="button"
+          >
+            Expand on Desktop and Larger
+          </button>
+          <button
+            class="btn--sm mb-micro expand-md-down btn btn__primary"
+            aria-label="Primary button"
+            type="button"
+          >
+            Expand on Tablet and Mobile
+          </button>
+          <button
+            class="btn--sm mb-micro expand-lg-down btn btn__primary"
+            aria-label="Primary button"
+            type="button"
+          >
+            Expand on Desktop, Tablet and Mobile
+          </button>
+        </div>
+        <div class="mb-micro">
+          <p>
+            Add the following additional responsive classes in Buttons or Links
+            for various sizes on various screens:
+          </p>
+          <span>
+            <pre
+              style="font-family: Montserrat; font-size: 11.5pt;"
+            ><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand-sm-only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand in Mobile Only</pre>
+            <pre
+              style="font-family: Montserrat; font-size: 11.5pt;"
+            ><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand-md-only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand in Tablet Only
+
+<span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand-lg-only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand in Desktop Only
+
+<span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand-xl-only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand on Large screen Only
+
+<span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand-md-up</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand on Tablet and Larger
+
+<span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand-lg-up</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand on Desktop and Larger
+
+<span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand-md-down</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand on Tablet and Mobile
+
+<span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand-lg-down</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand on Desktop, Tablet and Mobile</pre>
+          </span>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns8" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns8" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn--sm mb-micro expand-sm-only btn btn__primary&quot; </span><span style="color: rgb(0,0,255);">aria-label</span><span style="color: rgb(0,128,0);">=&quot;Primary button&quot; </span><span style="color: rgb(0,0,255);">type</span><span style="color: rgb(0,128,0);">=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Expand in Mobile Only<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span></pre>
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn--sm mb-micro expand-md-only btn btn__primary&quot; </span><span style="color: rgb(0,0,255);">aria-label</span><span style="color: rgb(0,128,0);">=&quot;Primary button&quot; </span><span style="color: rgb(0,0,255);">type</span><span style="color: rgb(0,128,0);">=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Expand in Mobile Only<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span></pre>
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn--sm mb-micro expand-lg-only btn btn__primary&quot; </span><span style="color: rgb(0,0,255);">aria-label</span><span style="color: rgb(0,128,0);">=&quot;Primary button&quot; </span><span style="color: rgb(0,0,255);">type</span><span style="color: rgb(0,128,0);">=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Expand in Mobile Only<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span></pre>
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn--sm mb-micro expand-xl-only btn btn__primary&quot; </span><span style="color: rgb(0,0,255);">aria-label</span><span style="color: rgb(0,128,0);">=&quot;Primary button&quot; </span><span style="color: rgb(0,0,255);">type</span><span style="color: rgb(0,128,0);">=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Expand in Mobile Only<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span></pre>
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn--sm mb-micro expand-md-up btn btn__primary&quot; </span><span style="color: rgb(0,0,255);">aria-label</span><span style="color: rgb(0,128,0);">=&quot;Primary button&quot; </span><span style="color: rgb(0,0,255);">type</span><span style="color: rgb(0,128,0);">=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Expand in Mobile Only<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span></pre>
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn--sm mb-micro expand-lg-up btn btn__primary&quot; </span><span style="color: rgb(0,0,255);">aria-label</span><span style="color: rgb(0,128,0);">=&quot;Primary button&quot; </span><span style="color: rgb(0,0,255);">type</span><span style="color: rgb(0,128,0);">=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Expand in Mobile Only<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span></pre>
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn--sm mb-micro expand-md-down btn btn__primary&quot; </span><span style="color: rgb(0,0,255);">aria-label</span><span style="color: rgb(0,128,0);">=&quot;Primary button&quot; </span><span style="color: rgb(0,0,255);">type</span><span style="color: rgb(0,128,0);">=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Expand in Mobile Only<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span></pre>
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn--sm mb-micro expand-lg-down btn btn__primary&quot; </span><span style="color: rgb(0,0,255);">aria-label</span><span style="color: rgb(0,128,0);">=&quot;Primary button&quot; </span><span style="color: rgb(0,0,255);">type</span><span style="color: rgb(0,128,0);">=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Expand in Mobile Only<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h4>Button Group</h4>
+        <p>
+          Button Group is a container of buttons of related actions. They're
+          helpful when we need to display a group of actions in a bar.
+        </p>
+        <div class="mb-micro">
+          <div class="btnGroup">
+            <a class="btn btn__primary btn--sm">One</a>
+            <a class="btn btn__secondary btn--sm">Two</a>
+            <a class="btn btn__success btn--sm">Three</a>
+            <a class="btn btn__warning btn--sm">Four</a>
+            <a class="btn btn__info btn--sm">Five</a>
+            <a class="btn btn__dark btn--sm">Six</a>
+          </div>
+        </div>
+        <p>
+          Add the .btnGroup class to parent holder, inside it the buttons are
+          separated by a small (1px) border.
+        </p>
+        <div class="wrap-collabsible">
+          <input id="collapsiblebtns101" class="toggle" type="checkbox" />
+          <label for="collapsiblebtns101" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: Montserrat; font-size: 12pt;"
+              ><span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btnGroup&quot;</span><span style="color: rgb(0,0,128);">&gt;
+</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn__primary&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>One<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn__secondary&quot; type=&quot;button</span><span style="color: rgb(0,128,0);">&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Two<span style="color: rgb(0,0,128);">&lt;/</span><span style="color: rgb(0,0,128);">button</span><span style="color: rgb(0,0,128);">&gt;
+</span><span style="color: rgb(0,0,128);">  &lt;</span><span style="color: rgb(0,0,128);">button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn__success&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Three<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn__warning&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Four<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn__info&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Five<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn__dark&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Six<span style="color: rgb(0,0,128);">&lt;/button&gt;
+</span><span style="color: rgb(0,0,128);">&lt;/div&gt;</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Wrapper-->
+    </div>
+  </div>
+</div>

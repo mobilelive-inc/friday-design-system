@@ -1,0 +1,351 @@
+@font-face {
+  font-family: 'design-system-icons';
+  src: url('fonts/design-system-icons.eot?bhkbpo');
+  src: url('fonts/design-system-icons.eot?bhkbpo#iefix')
+      format('embedded-opentype'),
+    url('fonts/design-system-icons.ttf?bhkbpo') format('truetype'),
+    url('fonts/design-system-icons.woff?bhkbpo') format('woff'),
+    url('fonts/design-system-icons.svg?bhkbpo#design-system-icons')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'design-system-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-reduced-time-to-market:before {
+  content: '\e973';
+}
+.icon-centred-experience-design:before {
+  content: '\e900';
+}
+.icon-velocity-DevOps:before {
+  content: '\e901';
+}
+.icon-academy:before {
+  content: '\e902';
+}
+.icon-accuracy:before {
+  content: '\e903';
+}
+.icon-agile-design-solution-process:before {
+  content: '\e904';
+}
+.icon-AI:before {
+  content: '\e905';
+}
+.icon-cloud-architecture:before {
+  content: '\e906';
+}
+.icon-cloud-expertise:before {
+  content: '\e907';
+}
+.icon-cloud-machine-learning:before {
+  content: '\e908';
+}
+.icon-cloud-managed-services:before {
+  content: '\e909';
+}
+.icon-cloud-migration:before {
+  content: '\e90a';
+}
+.icon-cloud-native-development:before {
+  content: '\e90b';
+}
+.icon-cloud-strategy:before {
+  content: '\e90c';
+}
+.icon-cloud:before {
+  content: '\e90d';
+}
+.icon-control-costs:before {
+  content: '\e90e';
+}
+.icon-Design-Thinking:before {
+  content: '\e90f';
+}
+.icon-eamless-systems-integration:before {
+  content: '\e919';
+}
+.icon-ean--agile-development:before {
+  content: '\e91a';
+}
+.icon-easy-implementation:before {
+  content: '\e91b';
+}
+.icon-eation-jam:before {
+  content: '\e91c';
+}
+.icon-experiencestrategy:before {
+  content: '\e91d';
+}
+.icon-fast-return-on-investment:before {
+  content: '\e926';
+}
+.icon-faster-time-to-market:before {
+  content: '\e927';
+}
+.icon-framework--test-development:before {
+  content: '\e928';
+}
+.icon-Group-15:before {
+  content: '\e929';
+}
+.icon-he-right-problem:before {
+  content: '\e92a';
+}
+.icon-the-right-strategy:before {
+  content: '\e92a';
+}
+.icon-her-revenue:before {
+  content: '\e92b';
+}
+.icon-her-ROI:before {
+  content: '\e92c';
+}
+.icon-innovation:before {
+  content: '\e92d';
+}
+.icon-insights:before {
+  content: '\e92e';
+}
+.icon-nce--accounting:before {
+  content: '\e92f';
+}
+.icon-nced-reliability:before {
+  content: '\e930';
+}
+.icon-ncreased-agility:before {
+  content: '\e931';
+}
+.icon-oT:before {
+  content: '\e932';
+}
+.icon-owering-people-with-creativity:before {
+  content: '\e933';
+}
+.icon-reater-coverage:before {
+  content: '\e934';
+}
+.icon-reporting--dashboards:before {
+  content: '\e936';
+}
+.icon-resources:before {
+  content: '\e937';
+}
+.icon-risk-management:before {
+  content: '\e938';
+}
+.icon-rivalled-quality-assurance:before {
+  content: '\e939';
+}
+.icon-rket-ready-incubation:before {
+  content: '\e961';
+}
+.icon-rocess-automation-strategy:before {
+  content: '\e962';
+}
+.icon-rototypingconcepts:before {
+  content: '\e963';
+}
+.icon-roved-accuracy:before {
+  content: '\e964';
+}
+.icon-roved-product-quality:before {
+  content: '\e965';
+}
+.icon-rt-process-automation:before {
+  content: '\e966';
+}
+.icon-scalable:before {
+  content: '\e967';
+}
+.icon-sprint:before {
+  content: '\e968';
+}
+.icon-test-automation-as-a-service:before {
+  content: '\e969';
+}
+.icon-test-automation-strategy:before {
+  content: '\e96a';
+}
+.icon-tomer-delight:before {
+  content: '\e96b';
+}
+.icon-tools--technology-integration:before {
+  content: '\e96c';
+}
+.icon-tter-design-solution-through-collaboration:before {
+  content: '\e96d';
+}
+.icon-ty-on-demand:before {
+  content: '\e96e';
+}
+.icon-UX-audit:before {
+  content: '\e96f';
+}
+.icon-ve-digital-strategy:before {
+  content: '\e970';
+}
+.icon-ve-test-automation:before {
+  content: '\e971';
+}
+.icon-VR:before {
+  content: '\e972';
+}
+.icon-clear_24px:before {
+  content: '\e935';
+}
+.icon-add_a_photo_24px:before {
+  content: '\e910';
+}
+.icon-add_circle_24px-1:before {
+  content: '\e911';
+}
+.icon-add_circle_24px:before {
+  content: '\e912';
+}
+.icon-add_circle_outline_24px-1:before {
+  content: '\e913';
+}
+.icon-add_circle_outline_24px:before {
+  content: '\e914';
+}
+.icon-chat_bubble_24px:before {
+  content: '\e915';
+}
+.icon-chat_bubble_outline_24px:before {
+  content: '\e916';
+}
+.icon-check_circle_24px:before {
+  content: '\e917';
+}
+.icon-check_circle_outline_24px:before {
+  content: '\e918';
+}
+.icon-cloud_24px:before {
+  content: '\e91e';
+}
+.icon-cloud_queue_24px:before {
+  content: '\e91f';
+}
+.icon-delete_24px:before {
+  content: '\e920';
+}
+.icon-delete_outline_24px:before {
+  content: '\e921';
+}
+.icon-email_24px:before {
+  content: '\e922';
+}
+.icon-favorite_24px:before {
+  content: '\e923';
+}
+.icon-favorite_border_24px:before {
+  content: '\e924';
+}
+.icon-folder_24px:before {
+  content: '\e925';
+}
+.icon-folder_open_24px:before {
+  content: '\e93a';
+}
+.icon-grade_24px:before {
+  content: '\e93b';
+}
+.icon-home_24px:before {
+  content: '\e93c';
+}
+.icon-info_24px:before {
+  content: '\e93d';
+}
+.icon-info_outline_24px:before {
+  content: '\e93e';
+}
+.icon-keyboard_arrow_down_24px:before {
+  content: '\e93f';
+}
+.icon-keyboard_arrow_left_24px:before {
+  content: '\e940';
+}
+.icon-keyboard_arrow_right_24px:before {
+  content: '\e941';
+}
+.icon-keyboard_arrow_up_24px:before {
+  content: '\e942';
+}
+.icon-link_off_24px:before {
+  content: '\e943';
+}
+.icon-lock_open_24px:before {
+  content: '\e944';
+}
+.icon-lock_outline_24px:before {
+  content: '\e945';
+}
+.icon-mail_outline_24px:before {
+  content: '\e946';
+}
+.icon-perm_identity_24px:before {
+  content: '\e947';
+}
+.icon-query_builder_24px:before {
+  content: '\e948';
+}
+.icon-record_voice_over_24px:before {
+  content: '\e949';
+}
+.icon-remove_circle_24px:before {
+  content: '\e94a';
+}
+.icon-remove_circle_outline_24px:before {
+  content: '\e94b';
+}
+.icon-search_24px:before {
+  content: '\e94c';
+}
+.icon-settings_24px:before {
+  content: '\e94d';
+}
+.icon-Shape:before {
+  content: '\e94e';
+}
+.icon-share_24px:before {
+  content: '\e94f';
+}
+.icon-shopping_cart_24px:before {
+  content: '\e950';
+}
+.icon-signal_wifi_statusbar_null_26x24px:before {
+  content: '\e951';
+}
+.icon-today_24px:before {
+  content: '\e952';
+}
+.icon-visibility_24px:before {
+  content: '\e953';
+}
+.icon-visibility_off_24px:before {
+  content: '\e954';
+}
+.icon-volume_off_24px:before {
+  content: '\e955';
+}
+.icon-volume_up_24px:before {
+  content: '\e956';
+}
