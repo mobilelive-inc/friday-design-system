@@ -287,7 +287,7 @@ input[type='search'] {
   }
 
   .clearCrossBtn {
-    display: none;
+    //display: none;
   }
   //select styling
   &__select {
@@ -983,28 +983,15 @@ label {
       outline: none;
     }
 
-    .text {
-      &:before,
-      &:after {
-        transition: all 0.3s ease-out;
-        -webkit-transition: all 0.2s ease-out;
-        -moz-transition: all 0.2s ease-out;
-        -o-transition: all 0.2s ease-out;
-        font-size: 1rem;
-        color: var(--black);
-        position: absolute;
-        left: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-left: 20px;
-      }
-      &:before {
-        content: 'On';
-        opacity: 0;
-      }
-      &:after {
-        content: 'Off';
-      }
+    .labelTxt {
+      font-size: 1rem;
+      color: var(--black);
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 15px;
+      width: max-content;
     }
 
     &:before,
