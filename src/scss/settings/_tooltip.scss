@@ -4,9 +4,15 @@
   --tooltipWidth: 9.625rem;
   --tooltipArrowWidth: 0.6875rem;
   --tooltipPosition: 1rem;
-  --toolTipMaxWidth: 21.5rem;
-  --popOverMaxWidth: 28rem;
+  --toolTipMaxWidth: 15rem;
+  --popOverMaxWidth: 15rem;
   --iconFontSize: 1.5rem;
+}
+@media screen and (min-width: 480px) {
+  :root {
+    --toolTipMaxWidth: 21.5rem;
+    --popOverMaxWidth: 28rem;
+  }
 }
 
 .tooltipWrap {
@@ -129,26 +135,13 @@
     .popoverLink {
       color: var(--btn-color);
     }
-    .btn--popup {
-      color: var(--btn-color-alt);
-      background-color: var(--btn-color);
-      &:hover {
-        color: var(--btn-color);
-        background-color: transparent;
-        border-color: var(--btn-color);
-      }
-      &.btn__outline {
-        color: var(--btn-color);
-        border-color: var(--btn-color);
-        background-color: transparent;
-        &:hover {
-          background-color: var(--btn-color);
-          color: var(--btn-color-alt);
+
+    .popupActionList {
+      border-bottom: 1px solid var(--gray);
+      li {
+        a {
+          color: var(--btn-color);
         }
-      }
-      &.clear {
-        background-color: transparent;
-        color: var(--btn-color);
       }
     }
   }
@@ -167,26 +160,18 @@
       color: var(--btn-color-alt);
     }
 
-    .btn--popup {
-      color: var(--btn-color);
-      background-color: var(--btn-color-alt);
+    .btn__dark {
       &:hover {
-        background-color: transparent;
-        border-color: var(--btn-color-alt);
         color: var(--btn-color-alt);
       }
-      &.btn__outline {
-        color: var(--btn-color-alt);
-        border-color: var(--btn-color-alt);
-        background-color: transparent;
-        &:hover {
-          background-color: var(--btn-color-alt);
-          color: var(--btn-color);
+    }
+
+    .popupActionList {
+      border-bottom: 1px solid var(--dark);
+      li {
+        a {
+          color: var(--btn-color-alt);
         }
-      }
-      &.clear {
-        background-color: transparent;
-        color: var(--btn-color-alt);
       }
     }
   }
@@ -343,11 +328,18 @@
     font-size: var(--iconFontSize);
   }
   .title {
+    font-size: var(--h5-font-size);
+    display: block;
     margin: 0;
     line-height: 1.5;
   }
   button {
     border-radius: var(--border-radius-none);
+  }
+  .btn__outline {
+    &.btn__light {
+      color: var(--btn-color);
+    }
   }
 
   footer,
@@ -364,6 +356,18 @@
   &.popover {
     max-width: var(--popOverMaxWidth);
     cursor: default;
+  }
+}
+
+.popupActionList {
+  li {
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+        opacity: 0.85;
+      }
+    }
   }
 }
 
