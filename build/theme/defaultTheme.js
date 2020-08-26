@@ -50,7 +50,7 @@ exports.fontSizes = fontSizes;
 var fontWeights = [300, // 0
 400, // 1
 500, // 2
-700 // 3
+600 // 3
 ];
 exports.fontWeights = fontWeights;
 var lineHeights = ['0.875rem', // 0

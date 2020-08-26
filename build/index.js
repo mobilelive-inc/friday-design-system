@@ -169,6 +169,24 @@ Object.defineProperty(exports, "Radio", {
     return _radio.default;
   }
 });
+Object.defineProperty(exports, "Label", {
+  enumerable: true,
+  get: function get() {
+    return _label.default;
+  }
+});
+Object.defineProperty(exports, "Select", {
+  enumerable: true,
+  get: function get() {
+    return _select.default;
+  }
+});
+Object.defineProperty(exports, "Option", {
+  enumerable: true,
+  get: function get() {
+    return _option.default;
+  }
+});
 
 require("@babel/polyfill");
 
@@ -183,3 +201,9 @@ var _Input = _interopRequireDefault(require("./Input"));
 var _checkbox = _interopRequireDefault(require("./checkbox"));
 
 var _radio = _interopRequireDefault(require("./radio"));
+
+var _label = _interopRequireDefault(require("./label"));
+
+var _select = _interopRequireDefault(require("./select"));
+
+var _option = _interopRequireDefault(require("./option"));
