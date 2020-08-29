@@ -10,8 +10,9 @@ export type ButtonVariants = 'primary' | 'secondary' | 'success' | 'danger' | 'w
 export type ButtonSize = 'lg' | 'sm' | '';
 
 @Component({
+    selector: 'ml-button',
     templateUrl: './button.template.html',
-    // styleUrls: ['./button.component.scss'],
+    styleUrls: ['./button.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent {
