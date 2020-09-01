@@ -8,6 +8,33 @@
       remove scroll from the <code>&lt;body&gt;</code> so that modal content
       scrolls instead.
     </p>
-    <div class="jumbotron"></div>
+    <div class="jumbotron">
+      <button type="button" class="btn btn__primary" onclick="showModal();">
+        Launch modal
+      </button>
+
+      <div id="modal-backdrop" class="modal-backdrop"></div>
+      <div id="modal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content p-mid">
+            <div class="modal-header d-flex align-items-start">
+              <span class="icon-info-outline"></span>
+              <h5 class="modal-title">notification message</h5>
+              <span class="close icon-close" onclick="hideModal();"></span>
+            </div>
+            <div class="modal-body">
+              <p>
+                This is a notification message. Please read the message and
+                close the window.
+              </p>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
