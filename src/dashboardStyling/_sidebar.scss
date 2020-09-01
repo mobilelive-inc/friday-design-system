@@ -2,20 +2,32 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 0;
+  padding: 0 0 0 17px;
   z-index: 4;
+  width: 270px;
   a.logo-mini {
     opacity: 1;
     float: left;
-    width: 230px;
+    width: 150px;
     text-align: center;
-    margin-left: 15px;
-    margin-top: 20px;
+    margin-left: 40px;
+    //margin-top: 30px;
     img {
       max-width: 100%;
       height: auto;
     }
   }
+}
+
+.ds-name {
+  //font-family: 'Do Hyeon', sans-serif;
+  //font-family: 'MuseoModerno', cursive;
+  //font-family: 'Milonga', cursive;
+  font-family: 'Krona One', sans-serif;
+  font-size: 35px;
+  text-align: left;
+  margin: 10px 0 10px;
+  color: var(--primary);
 }
 
 .sidebar {
@@ -39,7 +51,7 @@
   //  #f2b276 100%
   //); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   height: calc(100vh - 90px);
-  width: 230px;
+  width: 260px;
   position: fixed;
   top: 0;
   left: 0;
@@ -47,7 +59,7 @@
   background-size: cover;
   background-position: center center;
   display: block;
-  box-shadow: 1px 8px 20px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 8px 15px 0 rgba(0, 0, 0, 0.6);
   margin-top: 110px;
   margin-left: 15px;
   border-radius: 5px;
@@ -66,16 +78,28 @@
     .nav {
       margin-top: 20px;
       display: block;
-      padding-left: 20px;
+      padding-left: 0;
 
       li {
         list-style: none;
-        margin-bottom: 1rem;
-        ul > li {
-          margin-bottom: 0.25rem;
-          a {
-            margin: 0 0 0 25px;
-            padding: 0;
+        margin-bottom: 0;
+        border-bottom: 1px solid var(--gray-dark);
+
+        ul {
+          padding-left: 25px;
+
+          > li {
+            margin-bottom: 0.25rem;
+            border-bottom: 1px dotted (var(--gray-dark));
+            &:last-child {
+              border: 0;
+            }
+
+            a {
+              margin: 0 0 0 25px;
+              padding: 3px 0;
+              font-weight: normal;
+            }
           }
         }
         a {
@@ -89,14 +113,15 @@
           position: relative;
           text-transform: uppercase;
           cursor: pointer;
-          font-size: 13px;
-          padding: 10px 8px;
+          font-size: 14px;
+          padding: 15px 8px;
           line-height: 1.5;
+          font-weight: 600;
 
           i {
             font-size: 17px;
             float: left;
-            margin-right: 12px;
+            margin-right: 5px;
             color: white;
             &:before {
               color: var(--btn-color-alt);

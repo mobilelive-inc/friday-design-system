@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,AAAC,CACT,UAAU,CAAE,oBAAoB,CAAC,UAAU,CAC5C,AACD,AAAA,OAAO,AAAC,CACN,UAAU,CAAE,iBAAiB,CAAC,UAAU,CACzC,AACD,AAAA,UAAU,AAAC,CACT,UAAU,CAAE,oBAAoB,CAAC,UAAU,CAC5C,AACD,AAAA,YAAY,AAAC,CACX,UAAU,CAAE,eAAe,CAC5B",
+    "sources": [
+        "../src/scss/tools/tool.shadows.scss"
+    ],
+    "names": [],
+    "file": "tool.shadows.css"
+}
