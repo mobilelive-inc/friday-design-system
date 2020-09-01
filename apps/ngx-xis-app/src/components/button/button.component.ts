@@ -1,5 +1,6 @@
 import {
     ChangeDetectionStrategy,
+    ViewEncapsulation,
     Component,
     Input
 } from '@angular/core';
@@ -13,6 +14,7 @@ export type ButtonSize = 'lg' | 'sm' | '';
     selector: 'ml-button',
     templateUrl: './button.template.html',
     styleUrls: ['./button.component.scss'],
+    encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent {
