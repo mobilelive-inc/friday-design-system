@@ -194,6 +194,23 @@
       }
       el = document.getElementById('textarea');
       el.addEventListener('keyup', countCharacters, false);
+
+      function showModal() {
+        var root = document.getElementsByTagName('body')[0];
+        var modal = document.getElementById('modal');
+        var modal_backdrop = document.getElementById('modal-backdrop');
+        root.classList.add('modal-open');
+        modal.classList.add('show');
+        modal_backdrop.classList.add('show');
+      }
+      function hideModal() {
+        var root = document.getElementsByTagName('body')[0];
+        var modal = document.getElementById('modal');
+        var modal_backdrop = document.getElementById('modal-backdrop');
+        root.classList.remove('modal-open');
+        modal.classList.remove('show');
+        modal_backdrop.classList.remove('show');
+      }
     </script>
   </body>
 </html>

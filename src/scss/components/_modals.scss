@@ -1,1 +1,106 @@
 //Modal styles
+
+// Padding applied to the modal body
+$modal-inner-padding: 1rem;
+
+// Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
+$modal-footer-margin-between: 0.5rem;
+
+$modal-dialog-margin: 0.5rem;
+$modal-dialog-margin-y-sm-up: 1.75rem;
+
+$modal-title-line-height: var(--line-height-base);
+
+$modal-content-color: null;
+$modal-content-bg: var(--white);
+$modal-content-border-color: rgba(var(--dark), 0.2);
+$modal-content-border-width: var(--border-width);
+$modal-content-border-radius: var(--border-radius)-lg;
+$modal-content-inner-border-radius: subtract(
+  $modal-content-border-radius,
+  $modal-content-border-width
+);
+$modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba(var(--dark), 0.5);
+$modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba(var(--dark), 0.5);
+
+$modal-backdrop-bg: var(--dark);
+$modal-backdrop-opacity: 0.5;
+$modal-header-border-color: var(--border-color);
+$modal-footer-border-color: $modal-header-border-color;
+$modal-header-border-width: $modal-content-border-width;
+$modal-footer-border-width: $modal-header-border-width;
+$modal-header-padding-y: 1rem;
+$modal-header-padding-x: 1rem;
+$modal-header-padding: $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
+
+$modal-xl: 1140px;
+$modal-lg: 800px;
+$modal-md: 500px;
+$modal-sm: 300px;
+
+$modal-fade-transform: translate(0, -50px);
+$modal-show-transform: none;
+$modal-transition: transform 0.3s ease-out;
+$modal-scale-transform: scale(1.02);
+
+.modal-backdrop {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1040;
+  position: fixed;
+  visibility: hidden;
+  background-color: #000000;
+  transition: opacity 0.15s linear;
+  &.show {
+    opacity: 0.5;
+    visibility: visible;
+  }
+}
+
+.modal {
+  top: 0;
+  left: 0;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050;
+  display: none;
+  position: fixed;
+  overflow: hidden;
+}
+.modal-dialog {
+  width: auto;
+  max-width: 500px;
+  position: relative;
+  pointer-events: none;
+  margin: 1.75rem auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100% - 3.5rem);
+}
+.modal-content {
+  outline: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  pointer-events: auto;
+  /* border-radius: .3rem; */
+  background-color: $white;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
+/* .modal-header {
+  color: $black;
+} */
+
+.modal-open {
+  .modal {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
