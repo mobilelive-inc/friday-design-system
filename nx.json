@@ -47,12 +47,12 @@
       "tags": [],
       "implicitDependencies": ["ngx-ml-friday"]
     },
-    "angular-portal": {
+    "angular-demos": {
       "tags": []
     },
-    "angular-portal-e2e": {
+    "angular-demos-e2e": {
       "tags": [],
-      "implicitDependencies": ["angular-portal"]
+      "implicitDependencies": ["angular-demos"]
     }
   }
 }

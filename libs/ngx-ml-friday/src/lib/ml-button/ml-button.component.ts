@@ -7,7 +7,7 @@ import {Component, Input, AfterContentInit, TemplateRef, EventEmitter, Output} f
                 [ngClass]="{'btn':true,
                         'p-button-icon-only': (icon && !label),
                         'p-button-vertical': (iconPos === 'top' || iconPos === 'bottom') && label}"
-                (click)="onClick.emit($event)" (focus)="onFocus.emit($event)" (blur)="onBlur.emit($event)" pRipple>
+                (click)="onClick.emit($event)" (focus)="onFocus.emit($event)" (blur)="onBlur.emit($event)">
             <ng-content></ng-content>
             <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
             <span [ngClass]="{'p-button-icon': true,

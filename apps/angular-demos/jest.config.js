@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'angular-portal',
+  name: 'angular-demos',
   preset: '../../jest.config.js',
-  coverageDirectory: '../../coverage/apps/angular-portal',
+  coverageDirectory: '../../coverage/apps/angular-demos',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',
