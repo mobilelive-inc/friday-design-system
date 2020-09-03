@@ -14,7 +14,13 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
       }
     }
   },
@@ -28,17 +34,25 @@
     },
     "rx-xis-app": {
       "tags": ["scope:rx"],
-      "implicitDependencies": ["rx-xis"]
+      "implicitDependencies": []
     },
     "rx-xis-app-e2e": {
       "tags": [],
       "implicitDependencies": ["rx-xis-app"]
     },
-    "rx-xis": {
-      "tags": ["scope:rx"]
-    },
-    "ui": {
+    "ngx-ml-friday": {
       "tags": []
+    },
+    "ngx-ml-friday-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ngx-ml-friday"]
+    },
+    "angular-demos": {
+      "tags": []
+    },
+    "angular-demos-e2e": {
+      "tags": [],
+      "implicitDependencies": ["angular-demos"]
     }
   }
 }

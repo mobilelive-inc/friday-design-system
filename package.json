@@ -35,7 +35,8 @@
     "rx:publish": "yarn publish build",
     "rx:storybook": "cd ./apps/rx-xis-app && start-storybook -p 6006",
     "rx:build-storybook": "cd ./apps/rx-xis-app && build-storybook -o ./build",
-    "ng:a11y": "a11y http://localhost:4200/"
+    "ng:a11y": "a11y http://localhost:4200/",
+    "build:libs": "ng-packagr -p libs/ngx-ml-friday/src/package.json"
   },
   "private": false,
   "dependencies": {
@@ -134,6 +135,7 @@
     "@nrwl/cypress": "9.4.5",
     "@nrwl/jest": "9.4.5",
     "@nrwl/react": "^9.4.5",
+    "@nrwl/storybook": "^10.1.0",
     "@nrwl/web": "9.4.5",
     "@nrwl/workspace": "9.4.5",
     "@storybook/addon-actions": "^5.3.19",
@@ -167,13 +169,19 @@
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "jest-preset-angular": "8.1.2",
-    "ng-packagr": "^9.0.0",
+    "ng-packagr": "^10.1.0",
     "phantomjs-prebuilt": "^2.1.14",
     "prettier": "^2.0.5",
     "storybook-addon-intl": "^2.4.1",
     "ts-jest": "25.2.1",
     "ts-node": "~7.0.0",
     "tslint": "~6.0.0",
-    "typescript": "~3.8.3"
+    "typescript": "~3.8.3",
+    "@storybook/addon-knobs": "5.3.9",
+    "eslint-plugin-cypress": "^2.10.3",
+    "@nrwl/eslint-plugin-nx": "9.4.5",
+    "@typescript-eslint/parser": "2.19.2",
+    "@typescript-eslint/eslint-plugin": "2.19.2",
+    "eslint-config-prettier": "6.0.0"
   }
 }

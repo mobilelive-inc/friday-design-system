@@ -229,80 +229,216 @@
         }
       }
     },
-    "rx-xis": {
-      "root": "libs/rx-xis",
-      "sourceRoot": "libs/rx-xis/src",
+    "ngx-ml-friday": {
       "projectType": "library",
-      "schematics": {},
+      "root": "libs/ngx-ml-friday",
+      "sourceRoot": "libs/ngx-ml-friday/src",
+      "prefix": "fds",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/rx-xis/tsconfig.lib.json",
-              "libs/rx-xis/tsconfig.spec.json"
+              "libs/ngx-ml-friday/tsconfig.lib.json",
+              "libs/ngx-ml-friday/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/rx-xis/**/*"]
-          }
-        },
-        "build": {
-          "builder": "@nrwl/web:package",
-          "options": {
-            "outputPath": "dist/libs/rx-xis",
-            "tsConfig": "libs/rx-xis/tsconfig.lib.json",
-            "project": "libs/rx-xis/package.json",
-            "entryFile": "libs/rx-xis/src/index.ts",
-            "external": ["react", "react-dom", "react-is", "styled-components"],
-            "babelConfig": "@nrwl/react/plugins/bundle-babel",
-            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-            "assets": [
-              {
-                "glob": "README.md",
-                "input": ".",
-                "output": "."
-              }
-            ]
+            "exclude": ["**/node_modules/**", "!libs/ngx-ml-friday/**/*"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/rx-xis/jest.config.js",
-            "tsConfig": "libs/rx-xis/tsconfig.spec.json",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "ui": {
-      "projectType": "library",
-      "root": "libs/ui",
-      "sourceRoot": "libs/ui/src",
-      "prefix": "nx-hybrid-demo",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/ui/tsconfig.lib.json",
-              "libs/ui/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/ui/**/*"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/ui/jest.config.js",
-            "tsConfig": "libs/ui/tsconfig.spec.json",
+            "jestConfig": "libs/ngx-ml-friday/jest.config.js",
+            "tsConfig": "libs/ngx-ml-friday/tsconfig.spec.json",
             "passWithNoTests": true,
-            "setupFile": "libs/ui/src/test-setup.ts"
+            "setupFile": "libs/ngx-ml-friday/src/test-setup.ts"
+          }
+        },
+        "storybook": {
+          "builder": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/ngx-ml-friday/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@nrwl/storybook:build",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "outputPath": "dist/storybook/ngx-ml-friday",
+            "config": {
+              "configFolder": "libs/ngx-ml-friday/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
           }
         }
       },
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
+        }
+      }
+    },
+    "ngx-ml-friday-e2e": {
+      "root": "apps/ngx-ml-friday-e2e",
+      "sourceRoot": "apps/ngx-ml-friday-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/ngx-ml-friday-e2e/cypress.json",
+            "tsConfig": "apps/ngx-ml-friday-e2e/tsconfig.e2e.json",
+            "devServerTarget": "ngx-ml-friday:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "ngx-ml-friday:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": ["apps/ngx-ml-friday-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/ngx-ml-friday-e2e/**/*"]
+          }
+        }
+      }
+    },
+    "angular-demos": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/angular-demos",
+      "sourceRoot": "apps/angular-demos/src",
+      "prefix": "demo",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/angular-demos",
+            "index": "apps/angular-demos/src/index.html",
+            "main": "apps/angular-demos/src/main.ts",
+            "polyfills": "apps/angular-demos/src/polyfills.ts",
+            "tsConfig": "apps/angular-demos/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/angular-demos/src/favicon.ico",
+              "apps/angular-demos/src/assets"
+            ],
+            "styles": ["apps/angular-demos/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/angular-demos/src/environments/environment.ts",
+                  "with": "apps/angular-demos/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "angular-demos:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "angular-demos:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "angular-demos:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/angular-demos/tsconfig.app.json",
+              "apps/angular-demos/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/angular-demos/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/angular-demos/jest.config.js",
+            "tsConfig": "apps/angular-demos/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/angular-demos/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "angular-demos-e2e": {
+      "root": "apps/angular-demos-e2e",
+      "sourceRoot": "apps/angular-demos-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/angular-demos-e2e/cypress.json",
+            "tsConfig": "apps/angular-demos-e2e/tsconfig.e2e.json",
+            "devServerTarget": "angular-demos:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-demos:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/angular-demos-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/angular-demos-e2e/**/*"]
+          }
         }
       }
     }

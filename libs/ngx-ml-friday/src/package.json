@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../node_modules/ng-packagr/package.schema.json",
+  "name": "@ml-designsystem/ngx-ml-friday",
+  "version": "1.0.0",
+  "ngPackage": {
+    "lib": {
+      "entryFile": "index.ts"
+    },
+    "dest": "../../../dist/@ml-designsystem/ngx-ml-friday"
+  }
+}
