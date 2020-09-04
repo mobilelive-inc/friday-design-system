@@ -195,21 +195,132 @@
       el = document.getElementById('textarea');
       el.addEventListener('keyup', countCharacters, false);
 
-      function showModal() {
+      function showModal(n) {
         var root = document.getElementsByTagName('body')[0];
-        var modal = document.getElementById('modal');
-        var modal_backdrop = document.getElementById('modal-backdrop');
-        root.classList.add('modal-open');
-        modal.classList.add('show');
-        modal_backdrop.classList.add('show');
+        var modal1 = document.getElementById('modal1');
+        var modal2 = document.getElementById('modal2');
+        var modal3 = document.getElementById('modal3');
+        var modal4 = document.getElementById('modal4');
+        var modal5 = document.getElementById('modal5');
+        var modal6 = document.getElementById('modal6');
+        var modal7 = document.getElementById('modal7');
+        var modal8 = document.getElementById('modal8');
+        var modal9 = document.getElementById('modal9');
+        var modal10 = document.getElementById('modal10');
+        var modal_backdrop = document.getElementById('modalBackdrop');
+        if (n == 1) {
+          root.classList.add('modalOpen');
+          modal1.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 2) {
+          root.classList.add('modalOpen');
+          modal2.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 3) {
+          root.classList.add('modalOpen');
+          modal3.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 4) {
+          root.classList.add('modalOpen');
+          modal4.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 5) {
+          root.classList.add('modalOpen');
+          modal5.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 6) {
+          root.classList.add('modalOpen');
+          modal6.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 7) {
+          root.classList.add('modalOpen');
+          modal7.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 8) {
+          root.classList.add('modalOpen');
+          modal8.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 9) {
+          root.classList.add('modalOpen');
+          modal9.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 10) {
+          root.classList.add('modalOpen');
+          modal10.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        // add all the elements inside modal which you want to make focusable
+        const focusableElements =
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        const modal = document.querySelector('#modal1'); // select the modal by it's id
+
+        const firstFocusableElement = modal.querySelectorAll(
+          focusableElements
+        )[0]; // get first element to be focused inside modal
+        const focusableContent = modal.querySelectorAll(focusableElements);
+        const lastFocusableElement =
+          focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+
+        document.addEventListener('keydown', function (e) {
+          let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+          if (!isTabPressed) {
+            return;
+          }
+
+          if (e.shiftKey) {
+            // if shift key pressed for shift + tab combination
+            if (document.activeElement === firstFocusableElement) {
+              lastFocusableElement.focus(); // add focus for the last focusable element
+              e.preventDefault();
+            }
+          } else {
+            // if tab key is pressed
+            if (document.activeElement === lastFocusableElement) {
+              // if focused has reached to last focusable element then focus first focusable element after pressing tab
+              firstFocusableElement.focus(); // add focus for the first focusable element
+              e.preventDefault();
+            }
+          }
+        });
+
+        firstFocusableElement.focus();
       }
       function hideModal() {
         var root = document.getElementsByTagName('body')[0];
-        var modal = document.getElementById('modal');
-        var modal_backdrop = document.getElementById('modal-backdrop');
-        root.classList.remove('modal-open');
-        modal.classList.remove('show');
-        modal_backdrop.classList.remove('show');
+        var modal1 = document.getElementById('modal1');
+        var modal2 = document.getElementById('modal2');
+        var modal3 = document.getElementById('modal3');
+        var modal4 = document.getElementById('modal4');
+        var modal5 = document.getElementById('modal5');
+        var modal6 = document.getElementById('modal6');
+        var modal7 = document.getElementById('modal7');
+        var modal8 = document.getElementById('modal8');
+        var modal9 = document.getElementById('modal9');
+        var modal10 = document.getElementById('modal10');
+        var modal_backdrop = document.getElementById('modalBackdrop');
+        root.classList.remove('modalOpen');
+        modal1.classList.remove('showModal');
+        modal2.classList.remove('showModal');
+        modal3.classList.remove('showModal');
+        modal4.classList.remove('showModal');
+        modal5.classList.remove('showModal');
+        modal6.classList.remove('showModal');
+        modal7.classList.remove('showModal');
+        modal8.classList.remove('showModal');
+        modal9.classList.remove('showModal');
+        modal10.classList.remove('showModal');
+        modal_backdrop.classList.remove('showModal');
       }
     </script>
   </body>
