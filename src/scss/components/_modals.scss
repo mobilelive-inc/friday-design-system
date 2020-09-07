@@ -115,6 +115,9 @@ $modal-scale-transform: scale(1.02);
     font-size: var(--font-size-lg);
     text-transform: capitalize;
   }
+  .h6 {
+    color: var(--black);
+  }
   .icnClose {
     top: 0;
     right: 0;
@@ -132,8 +135,10 @@ $modal-scale-transform: scale(1.02);
       margin: 0 auto;
     }
   }
-  label {
-    font-weight: var(--font-weight-normal);
+  .formCheck {
+    label {
+      font-weight: var(--font-weight-normal);
+    }
   }
 }
 .modal-dialog-scrollable .modal-body {
