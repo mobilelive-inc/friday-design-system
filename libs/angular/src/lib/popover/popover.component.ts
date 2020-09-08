@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopoverComponent implements OnInit {
 
+  show = false;
+
   constructor() { }
 
   ngOnInit(): void {

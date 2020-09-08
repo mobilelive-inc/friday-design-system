@@ -1,7 +1,7 @@
 <span class="popup-holder">
-  <button class="btn__primary btn" type="button">Popover</button>
+  <button class="btn__primary btn" type="button" (click)="show=!show">Popover</button>
   <div class="d-flex align-items-start dark p-small" data-arrow="true" data-position="top" data-type="popover"
-       tabindex="1" style="opacity: 1; visibility: visible;">
+       tabindex="1" style="opacity: 1; visibility: visible;" *ngIf="show">
     <span tabindex="1" class="icon icon-error mr-small"><span class="sr-only">info-icon</span></span>
     <span tabindex="1">This is a dark popover (with Arrow) with a close button.</span>
     <a tabindex="1" href="#" class="btn--close ml-small">
