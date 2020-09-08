@@ -8,7 +8,73 @@
       remove scroll from the <code>&lt;body&gt;</code> so that modal content
       scrolls instead.
     </p>
+    <p>
+      There are four size in Modal Small, Default, Large and Extra Large. Use
+      these classes for different sizes: <code>modalSmall</code>,
+      <code>modalLarge</code>, <code>modalExtraLarge</code>.
+    </p>
+    <p>
+      By default whole Modal is scrollable, if scroll is required on Content
+      only, use this class <code>modalDialogScrollable</code>.
+    </p>
     <div class="jumbotron">
+      <hr class="my-mid" />
+
+      <div class="row">
+        <div class="col">
+          <h4>Modals Popup Size</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="d-flex flex-column">
+            <button
+              type="button"
+              class="btn btn__primary mb-small"
+              onclick="showModal(26);"
+            >
+              Small Modal
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex flex-column">
+            <button
+              type="button"
+              class="btn btn__primary mb-small"
+              onclick="showModal(27);"
+            >
+              Inner Scrollbar
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex flex-column">
+            <button
+              type="button"
+              class="btn btn__primary mb-small"
+              onclick="showModal(28);"
+            >
+              Large Modal
+            </button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex flex-column">
+            <button
+              type="button"
+              class="btn btn__primary mb-small"
+              onclick="showModal(29);"
+            >
+              Extra Large Modal
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-mid" />
+
       <div class="row">
         <div class="col">
           <h4>Default: Left-align</h4>
@@ -205,13 +271,6 @@
               type="button"
               class="btn btn__primary mb-small"
               onclick="showModal(21);"
-            >
-              Launch Modal
-            </button>
-            <button
-              type="button"
-              class="btn btn__primary"
-              onclick="showModal();"
             >
               Launch Modal
             </button>
@@ -1607,6 +1666,166 @@
                   >
                     No. I cancel my choice.
                   </button>
+                </div>
+              </div>
+              <button
+                tabindex="1"
+                type="button"
+                class="icnClose icon-close"
+                onclick="hideModal();"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal26" class="modal" tabindex="-1">
+        <div class="modalDialog modalSmall">
+          <div class="modalContent p-mid">
+            <div class="position-relative">
+              <div class="modalBody">
+                <h5 tabindex="1" class="h5 pr-mid">
+                  This is a title.
+                </h5>
+                <div tabindex="1" class="modalDescription">
+                  <p>
+                    A standard cupcake uses the same basic ingredients as
+                    standard-sized cakes: butter, sugar, eggs, and flour. Nearly
+                    any recipe that is suitable for a layer cake can be used to
+                    bake cupcakes. The cake batter used for cupcakes may be
+                    flavored or have other ingredients stirred in, such as
+                    raisins, berries, nuts, or chocolate chips.
+                  </p>
+                </div>
+              </div>
+              <button
+                tabindex="1"
+                type="button"
+                class="icnClose icon-close"
+                onclick="hideModal();"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal27" class="modal" tabindex="-1">
+        <div class="modalDialog modalDialogScrollable">
+          <div class="modalContent p-mid">
+            <div class="position-relative">
+              <div class="modalBody">
+                <h5 tabindex="1" class="h5 pr-mid">
+                  What is cupcake? This is a title.
+                </h5>
+                <div tabindex="1" class="modalDescription">
+                  <p>
+                    A standard cupcake uses the same basic ingredients as
+                    standard-sized cakes: butter, sugar, eggs, and flour. Nearly
+                    any recipe that is suitable for a layer cake can be used to
+                    bake cupcakes. The cake batter used for cupcakes may be
+                    flavored or have other ingredients stirred in, such as
+                    raisins, berries, nuts, or chocolate chips.
+                  </p>
+                  <p>
+                    Because their small size is more efficient for heat
+                    conduction, cupcakes bake much faster than a normal layered
+                    cake.[7] During baking, the volume of the batter initially
+                    increases due to the production of carbon dioxide, then
+                    decreases upon cooling due to the release of leavening
+                    gases.
+                  </p>
+                  <p>
+                    A standard cupcake uses the same basic ingredients as
+                    standard-sized cakes: butter, sugar, eggs, and flour. Nearly
+                    any recipe that is suitable for a layer cake can be used to
+                    bake cupcakes. The cake batter used for cupcakes may be
+                    flavored or have other ingredients stirred in, such as
+                    raisins, berries, nuts, or chocolate chips.
+                  </p>
+                  <p>
+                    Because their small size is more efficient for heat
+                    conduction, cupcakes bake much faster than a normal layered
+                    cake.[7] During baking, the volume of the batter initially
+                    increases due to the production of carbon dioxide, then
+                    decreases upon cooling due to the release of leavening
+                    gases.
+                  </p>
+                </div>
+              </div>
+              <button
+                tabindex="1"
+                type="button"
+                class="icnClose icon-close"
+                onclick="hideModal();"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal28" class="modal" tabindex="-1">
+        <div class="modalDialog modalLarge">
+          <div class="modalContent p-mid">
+            <div class="position-relative">
+              <div class="modalBody">
+                <h5 tabindex="1" class="h5 pr-mid">
+                  What is cupcake? This is a title.
+                </h5>
+                <div tabindex="1" class="modalDescription">
+                  <p>
+                    A standard cupcake uses the same basic ingredients as
+                    standard-sized cakes: butter, sugar, eggs, and flour. Nearly
+                    any recipe that is suitable for a layer cake can be used to
+                    bake cupcakes. The cake batter used for cupcakes may be
+                    flavored or have other ingredients stirred in, such as
+                    raisins, berries, nuts, or chocolate chips.
+                  </p>
+                  <p>
+                    Because their small size is more efficient for heat
+                    conduction, cupcakes bake much faster than a normal layered
+                    cake.[7] During baking, the volume of the batter initially
+                    increases due to the production of carbon dioxide, then
+                    decreases upon cooling due to the release of leavening
+                    gases.
+                  </p>
+                </div>
+              </div>
+              <button
+                tabindex="1"
+                type="button"
+                class="icnClose icon-close"
+                onclick="hideModal();"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal29" class="modal" tabindex="-1">
+        <div class="modalDialog modalExtraLarge">
+          <div class="modalContent p-mid">
+            <div class="position-relative">
+              <div class="modalBody">
+                <h5 tabindex="1" class="h5 pr-mid">
+                  What is cupcake? This is a title.
+                </h5>
+                <div tabindex="1" class="modalDescription">
+                  <p>
+                    A standard cupcake uses the same basic ingredients as
+                    standard-sized cakes: butter, sugar, eggs, and flour. Nearly
+                    any recipe that is suitable for a layer cake can be used to
+                    bake cupcakes. The cake batter used for cupcakes may be
+                    flavored or have other ingredients stirred in, such as
+                    raisins, berries, nuts, or chocolate chips.
+                  </p>
+                  <p>
+                    Because their small size is more efficient for heat
+                    conduction, cupcakes bake much faster than a normal layered
+                    cake.[7] During baking, the volume of the batter initially
+                    increases due to the production of carbon dioxide, then
+                    decreases upon cooling due to the release of leavening
+                    gases.
+                  </p>
                 </div>
               </div>
               <button

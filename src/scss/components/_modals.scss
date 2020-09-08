@@ -69,6 +69,7 @@ $modal-scale-transform: scale(1.02);
   z-index: 1050;
   display: none;
   position: fixed;
+  padding: 0 1rem;
   overflow: hidden;
   transition: opacity 0.15s linear;
   &.showModal {
@@ -95,12 +96,26 @@ $modal-scale-transform: scale(1.02);
   &.modalSmall {
     max-width: $modal-sm;
   }
+  &.modalDialogScrollable {
+    height: calc(100% - 3.5rem);
+    .modalContent {
+      overflow-y: auto;
+    }
+    /* .modalContent { height: calc(100% - 4rem); }
+    .position-relative { height: 100%; } */
+    .modalBody {
+      /* height: 100%; */
+      .modalDescription {
+        //flex: 1 1 auto;
+        /* height: 100%; */
+        //overflow-y: auto;
+      }
+    }
+  }
 }
 .modalContent {
   outline: 0;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   pointer-events: auto;
   /* border-radius: .3rem; */
   background-color: $white;
@@ -141,10 +156,9 @@ $modal-scale-transform: scale(1.02);
     }
   }
 }
-.modal-dialog-scrollable .modal-body {
-  .modalDescription {
-    overflow-y: auto;
-  }
+.modalBody {
+  display: flex;
+  flex-direction: column;
 }
 .modalDescription {
   p {
@@ -178,7 +192,7 @@ $modal-scale-transform: scale(1.02);
 .modalOpen {
   overflow: hidden;
   .modal {
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
   }
 }
