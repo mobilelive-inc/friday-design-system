@@ -53,7 +53,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumError": "150kb"
                 }
               ]
             }
@@ -229,29 +229,29 @@
         }
       }
     },
-    "ngx-ml-friday": {
+    "angular": {
       "projectType": "library",
-      "root": "libs/ngx-ml-friday",
-      "sourceRoot": "libs/ngx-ml-friday/src",
+      "root": "libs/angular",
+      "sourceRoot": "libs/angular/src",
       "prefix": "fds",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/ngx-ml-friday/tsconfig.lib.json",
-              "libs/ngx-ml-friday/tsconfig.spec.json"
+              "libs/angular/tsconfig.lib.json",
+              "libs/angular/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ngx-ml-friday/**/*"]
+            "exclude": ["**/node_modules/**", "!libs/angular/**/*"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/ngx-ml-friday/jest.config.js",
-            "tsConfig": "libs/ngx-ml-friday/tsconfig.spec.json",
+            "jestConfig": "libs/angular/jest.config.js",
+            "tsConfig": "libs/angular/tsconfig.spec.json",
             "passWithNoTests": true,
-            "setupFile": "libs/ngx-ml-friday/src/test-setup.ts"
+            "setupFile": "libs/angular/src/test-setup.ts"
           }
         },
         "storybook": {
@@ -260,7 +260,7 @@
             "uiFramework": "@storybook/angular",
             "port": 4400,
             "config": {
-              "configFolder": "libs/ngx-ml-friday/.storybook"
+              "configFolder": "libs/angular/.storybook"
             }
           },
           "configurations": {
@@ -273,9 +273,9 @@
           "builder": "@nrwl/storybook:build",
           "options": {
             "uiFramework": "@storybook/angular",
-            "outputPath": "dist/storybook/ngx-ml-friday",
+            "outputPath": "dist/storybook/angular",
             "config": {
-              "configFolder": "libs/ngx-ml-friday/.storybook"
+              "configFolder": "libs/angular/.storybook"
             }
           },
           "configurations": {
@@ -291,21 +291,21 @@
         }
       }
     },
-    "ngx-ml-friday-e2e": {
-      "root": "apps/ngx-ml-friday-e2e",
-      "sourceRoot": "apps/ngx-ml-friday-e2e/src",
+    "angular-e2e": {
+      "root": "apps/angular-e2e",
+      "sourceRoot": "apps/angular-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/ngx-ml-friday-e2e/cypress.json",
-            "tsConfig": "apps/ngx-ml-friday-e2e/tsconfig.e2e.json",
-            "devServerTarget": "ngx-ml-friday:storybook"
+            "cypressConfig": "apps/angular-e2e/cypress.json",
+            "tsConfig": "apps/angular-e2e/tsconfig.e2e.json",
+            "devServerTarget": "angular:storybook"
           },
           "configurations": {
             "ci": {
-              "devServerTarget": "ngx-ml-friday:storybook:ci"
+              "devServerTarget": "angular:storybook:ci"
             }
           }
         },
@@ -313,8 +313,8 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "tsConfig": ["apps/ngx-ml-friday-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/ngx-ml-friday-e2e/**/*"]
+            "tsConfig": ["apps/angular-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/angular-e2e/**/*"]
           }
         }
       }
@@ -356,7 +356,7 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
+              "sourceMap": true,
               "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
@@ -371,7 +371,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumError": "150kb"
                 }
               ]
             }

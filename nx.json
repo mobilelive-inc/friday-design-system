@@ -40,12 +40,12 @@
       "tags": [],
       "implicitDependencies": ["rx-xis-app"]
     },
-    "ngx-ml-friday": {
+    "angular": {
       "tags": []
     },
-    "ngx-ml-friday-e2e": {
+    "angular-e2e": {
       "tags": [],
-      "implicitDependencies": ["ngx-ml-friday"]
+      "implicitDependencies": ["angular"]
     },
     "angular-demos": {
       "tags": []

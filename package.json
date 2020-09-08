@@ -36,7 +36,7 @@
     "rx:storybook": "cd ./apps/rx-xis-app && start-storybook -p 6006",
     "rx:build-storybook": "cd ./apps/rx-xis-app && build-storybook -o ./build",
     "ng:a11y": "a11y http://localhost:4200/",
-    "build:libs": "ng-packagr -p libs/ngx-ml-friday/src/package.json"
+    "build:libs": "ng-packagr -p libs/angular/src/package.json"
   },
   "private": false,
   "dependencies": {

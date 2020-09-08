@@ -16,7 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-hybrid-demo/ngx-ml-friday": ["libs/ngx-ml-friday/src/index.ts"]
+      "@nx-hybrid-demo/angular": ["libs/angular/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
