@@ -34,11 +34,26 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     position: fixed;
     width: 100%;
-    height: 100%;
+    // height: 100%;
+    // opacity: 0.5;
+    // background-color: rgba(0,0,0,0.5);
+    transition: opacity 0.15s linear;
     ${MediaQuery.desktop`
       position: relative;
     `};
   }
+  div[data-react-modal-body-trap] {
+    position: absolute;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    opacity: 1 !important;
+    top: 0;
+    left: 0;
+    // z-index: 1049;
+  }
+
 
   .noPaddingLeftRight div {
     padding-left: 0 !important;

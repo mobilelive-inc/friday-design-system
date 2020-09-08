@@ -21,6 +21,8 @@ import Option from './components/option';
 import TextArea from './components/textArea';
 import Tooltip from './components/tooltip';
 import Toggle from './components/toggle';
+import Modal from './components/modal';
+import GlobalStyle from './components/theme/globalStyles'
 
 function App() {
   const options = [
@@ -41,9 +43,28 @@ function App() {
   const [isChecked, setIschecked] = React.useState(false)
   const [gender, setGender] = React.useState("male");
   const [selected, setSelected] = React.useState(null);
-  const [ isOn, setIsOn ] = React.useState(false)
+  const [ isOn, setIsOn ] = React.useState(false);
+  const [ modalIsOpen, setModalIsOpen ] = React.useState(false)
   return (
     <ThemeProvider theme={theme}>
+          <GlobalStyle />
+<button type="button" onClick={() => {setModalIsOpen(!modalIsOpen)}}>
+        Open
+      </button>
+      <Modal
+        isOpen={modalIsOpen}
+        closeOnHeader
+        closeOnFooter
+        onRequestClose={() => {setModalIsOpen(!modalIsOpen)}}>
+        {/* <p>This is sparta</p>
+        <Input type="text" placeholder="some name"/>
+        <Button variant="primary">Submit</Button> */}
+
+        <h3>
+          <span className="icon-info_24px"></span>
+          Notification Message</h3>
+        <p>This is a notification message. Please read the message and close the window.</p>
+      </Modal>
       
       <Toggle shortDescription="Test toggle"
        id="bt1" 
