@@ -25,13 +25,6 @@
     }
   },
   "projects": {
-    "ngx-xis-app": {
-      "tags": []
-    },
-    "ngx-xis-app-e2e": {
-      "tags": [],
-      "implicitDependencies": ["ngx-xis-app"]
-    },
     "rx-xis-app": {
       "tags": ["scope:rx"],
       "implicitDependencies": []
