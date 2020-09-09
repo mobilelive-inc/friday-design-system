@@ -1,0 +1,3 @@
+# Friday - The Design System - Static HTML&CSS
+
+Moving to the monorepo in progress...
