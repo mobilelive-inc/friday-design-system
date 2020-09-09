@@ -11,31 +11,27 @@ import {
 
 const customStyles = {
   overlay: {
-    zIndex: zIndices[4],
-    margin: '0',
-    padding: '1rem',
     top: '0',
     left: '0',
     right: '0',
-    bottom: '0',
-    backgroundColor: 'white',
-    overflowY: 'scroll',
     opacity: 1,
+    bottom: '0',
+    margin: '0',
+    width: '100%',
+    backgroundColor: 'transparent',
+    zIndex: zIndices[4],
+    overflowY: 'scroll',
     minWidth: '200px',
     maxWidth: '600px',
-    width: '100%',
     margin: '2rem auto',
     // height: 'calc(100% - 4rem)',
-    dispaly: 'flex',
+    display: 'flex',
     alignItems: 'center'
   },
   content: {
-    top: '0',
-    left: '0',
-    right: '0',
-    bottom: '0',
+    padding: '1rem',
     borderRadius: '0',
-    margin: '0',
+    backgroundColor: 'white',
     // padding: `${space[15]} ${space[7]}`,
   },
 };
@@ -96,7 +92,7 @@ const Popover = ({
                 background="yellow"
                 border="none"
                 variant="none"
-                position="absolute"
+                position="none"
                 ml={5}
                 mr={5}>
                 <span className="icon-clear_24px"></span>

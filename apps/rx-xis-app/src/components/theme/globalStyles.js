@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    margin: 0;
     background-color: ${colors.white};
   }
 
@@ -43,14 +44,13 @@ const GlobalStyle = createGlobalStyle`
     `};
   }
   div[data-react-modal-body-trap] {
-    position: absolute;
-    opacity: 1;
-    background-color: rgba(0,0,0,0.5);
-    width: 100%;
-    height: 100%;
-    opacity: 1 !important;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 1 !important;
+    background-color: rgba(0,0,0,0.5);
     // z-index: 1049;
   }
 
