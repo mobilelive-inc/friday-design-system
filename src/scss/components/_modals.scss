@@ -43,6 +43,7 @@ $modal-show-transform: none;
 $modal-transition: transform 0.3s ease-out;
 $modal-scale-transform: scale(1.02);
 
+// Modal BackDrop Style
 .modalBackdrop {
   top: 0;
   left: 0;
@@ -60,6 +61,7 @@ $modal-scale-transform: scale(1.02);
   }
 }
 
+// Modal Style
 .modal {
   top: 0;
   left: 0;
@@ -87,6 +89,7 @@ $modal-scale-transform: scale(1.02);
   flex-direction: column;
   justify-content: center;
   min-height: calc(100% - 3.5rem);
+  // Modal Size and Scrollbar Styles
   &.modalExtraLarge {
     max-width: $modal-xl;
   }
@@ -101,23 +104,12 @@ $modal-scale-transform: scale(1.02);
     .modalContent {
       overflow-y: auto;
     }
-    /* .modalContent { height: calc(100% - 4rem); }
-    .position-relative { height: 100%; } */
-    .modalBody {
-      /* height: 100%; */
-      .modalDescription {
-        //flex: 1 1 auto;
-        /* height: 100%; */
-        //overflow-y: auto;
-      }
-    }
   }
 }
 .modalContent {
   outline: 0;
   width: 100%;
   pointer-events: auto;
-  /* border-radius: .3rem; */
   background-color: $white;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
   .icnInfo {
@@ -189,6 +181,8 @@ $modal-scale-transform: scale(1.02);
     }
   }
 }
+
+// Body and Modal style
 .modalOpen {
   overflow: hidden;
   .modal {
