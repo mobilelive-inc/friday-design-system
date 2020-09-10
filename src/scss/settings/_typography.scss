@@ -129,6 +129,14 @@
   --kbd-bg: var(--orange-dark);
   --pre-color: var(--orange-dark);
   --pre-scrollable-max-height: 340px;
+
+  // Modals
+  //
+  // Define Modal colors, font size and border radius.
+  --modal-heading-color: var(--black);
+  --modal-heading-font-size: var(--font-size-lg);
+  --modal-icon-color: var(--black);
+  --modal-icon-size: calc(var(--font-size-lg) * 1.25);
 }
 
 // stylelint-disable value-keyword-case
