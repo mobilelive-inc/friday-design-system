@@ -28,6 +28,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-facebook:before {
+  content: '\e9e5';
+}
+.icon-google:before {
+  content: '\e9e6';
+}
+.icon-instagram:before {
+  content: '\ebc9';
+}
+.icon-linkedin:before {
+  content: '\ebd2';
+}
+.icon-twitter:before {
+  content: '\ec1c';
+}
 .icon-checkbox:before {
   content: '\e9fa';
 }
