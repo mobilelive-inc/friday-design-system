@@ -44,6 +44,9 @@ $global-spacers: (
     calc(var(--global-spacer) * 0.5)
   ),
   small: var(--global-spacer),
+  medium: (
+    calc(var(--global-spacer) * 1.5)
+  ),
   mid: (
     calc(var(--global-spacer) * 2)
   ),

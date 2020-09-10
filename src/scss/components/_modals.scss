@@ -1,1 +1,192 @@
 //Modal styles
+
+// Padding applied to the modal body
+$modal-inner-padding: 1rem;
+
+// Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
+$modal-footer-margin-between: 0.5rem;
+
+$modal-dialog-margin: 0.5rem;
+$modal-dialog-margin-y-sm-up: 1.75rem;
+
+$modal-title-line-height: var(--line-height-base);
+
+$modal-content-color: null;
+$modal-content-bg: var(--white);
+$modal-content-border-color: rgba(var(--dark), 0.2);
+$modal-content-border-width: var(--border-width);
+$modal-content-border-radius: var(--border-radius)-lg;
+$modal-content-inner-border-radius: subtract(
+  $modal-content-border-radius,
+  $modal-content-border-width
+);
+$modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba(var(--dark), 0.5);
+$modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba(var(--dark), 0.5);
+
+$modal-backdrop-bg: var(--dark);
+$modal-backdrop-opacity: 0.5;
+$modal-header-border-color: var(--border-color);
+$modal-footer-border-color: $modal-header-border-color;
+$modal-header-border-width: $modal-content-border-width;
+$modal-footer-border-width: $modal-header-border-width;
+$modal-header-padding-y: 1rem;
+$modal-header-padding-x: 1rem;
+$modal-header-padding: $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
+
+$modal-xl: 1089px;
+$modal-lg: 864px;
+$modal-md: 576px;
+$modal-sm: 300px;
+
+$modal-fade-transform: translate(0, -50px);
+$modal-show-transform: none;
+$modal-transition: transform 0.3s ease-out;
+$modal-scale-transform: scale(1.02);
+
+// Modal BackDrop Style
+.modalBackdrop {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1040;
+  position: fixed;
+  visibility: hidden;
+  background-color: #000000;
+  transition: opacity 0.15s linear;
+  &.showModal {
+    opacity: 0.5;
+    visibility: visible;
+  }
+}
+
+// Modal Style
+.modal {
+  top: 0;
+  left: 0;
+  outline: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050;
+  display: none;
+  position: fixed;
+  padding: 0 1rem;
+  overflow: hidden;
+  transition: opacity 0.15s linear;
+  &.showModal {
+    display: block;
+  }
+}
+.modalDialog {
+  width: auto;
+  max-width: $modal-md;
+  position: relative;
+  pointer-events: none;
+  margin: 1.75rem auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100% - 3.5rem);
+  // Modal Size and Scrollbar Styles
+  &.modalExtraLarge {
+    max-width: $modal-xl;
+  }
+  &.modalLarge {
+    max-width: $modal-lg;
+  }
+  &.modalSmall {
+    max-width: $modal-sm;
+  }
+  &.modalDialogScrollable {
+    height: calc(100% - 3.5rem);
+    .modalContent {
+      overflow-y: auto;
+    }
+  }
+}
+.modalContent {
+  outline: 0;
+  width: 100%;
+  pointer-events: auto;
+  background-color: $white;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  .icnInfo {
+    color: var(--black);
+    font-size: var(--modal-icon-size);
+  }
+  .h5 {
+    font-weight: bold;
+    color: var(--black);
+    font-size: var(--font-size-lg);
+    text-transform: capitalize;
+  }
+  .h6 {
+    color: var(--black);
+  }
+  .icnClose {
+    top: 0;
+    right: 0;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    color: var(--black);
+    background: transparent;
+    font-size: var(--modal-icon-size);
+  }
+  figure {
+    display: flex;
+    img {
+      margin: 0 auto;
+    }
+  }
+  .formCheck {
+    label {
+      font-weight: var(--font-weight-normal);
+    }
+  }
+}
+.modalBody {
+  display: flex;
+  flex-direction: column;
+}
+.modalDescription {
+  p {
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+.modalFooter {
+  .icnClose {
+    font-weight: bold;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+    &:before {
+      content: '\ea89';
+      padding-right: 0.5rem;
+      font-family: 'design-system-icons';
+      font-size: var(--modal-icon-size);
+      line-height: var(--base-line-height);
+    }
+    &.icnFilled {
+      &:before {
+        content: '\ea85';
+      }
+    }
+  }
+}
+
+// Body and Modal style
+.modalOpen {
+  overflow: hidden;
+  .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
