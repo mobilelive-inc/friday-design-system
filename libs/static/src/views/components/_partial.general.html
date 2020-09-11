@@ -1,0 +1,763 @@
+<div id="general" class="mt-mid">
+  <div class="infoBlockPiece">
+    <h3>General</h3>
+    <p>
+      This section describes the Components and Layouts, Containers, a Grid
+      system and Responsive Utility Classes.
+    </p>
+    <div class="mb-mid highlighted-block">
+      <h4>Container</h4>
+      <p>
+        Containers are the most basic layout element and are required while
+        using grid system. The main objective of using Container is to contain
+        and/or center the content. Containers can also be nested as per
+        requirement.
+      </p>
+      <p>There are Three types of Containers in our Design System:</p>
+      <ul style="list-style: none; padding: 0;">
+        <li class="mb-mid">
+          <code>.container</code> sets a max-width at each responsive
+          breakpoint:
+          <div class="p-small">
+            <table style="table-layout: fixed; width: 100%;">
+              <tr>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint &lt;576px
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint ≥576px
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint ≥768px
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint ≥992px
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint ≥1200px
+                </th>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width: 540px;
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width: 720px
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width: 960px
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width: 1140px
+                </td>
+              </tr>
+            </table>
+          </div>
+          <p>
+            <strong>How to use:</strong>
+            <code
+              >&lt;div class="container"&gt; Content here &lt;/div&gt;
+            </code>
+          </p>
+        </li>
+        <li class="mb-mid">
+          <code>.container-fluid</code>, which always has
+          <code>width:100%</code> irrespective of breakpoints:
+          <div class="p-small">
+            <table style="table-layout: fixed; width: 100%;">
+              <tr>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint &lt;576px
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint ≥576px
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint ≥768px
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint ≥992px
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint ≥1200px
+                </th>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+              </tr>
+            </table>
+          </div>
+        </li>
+        <li>
+          <code>.container-{breakpoint}</code>, has
+          <code>width:100%</code> until the set breakpoint:
+          <div class="p-small">
+            <table style="table-layout: fixed; width: 100%;">
+              <tr>
+                <th style="padding: 10px; border: 1px solid #aaa;"></th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint &lt;576px
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint ≥576px
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint ≥768px
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint ≥992px
+                </th>
+                <th
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  breakpoint ≥1200px
+                </th>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  <code>.container-sm</code>
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width:540px
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width:720px
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width:960px
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width:1140px
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  <code>.container-md</code>
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width:720px
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width:960px
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width:1140px
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  <code>.container-lg</code>
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width:960px
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width:1140px
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  <code>.container-xl</code>
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  width:100%
+                </td>
+                <td
+                  style="
+                    padding: 10px;
+                    text-align: center;
+                    border: 1px solid #aaa;
+                  "
+                >
+                  max-width:1140px
+                </td>
+              </tr>
+            </table>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="grid" class="mb-mid">
+      <div class="highlighted-block">
+        <h4>Flex Grid</h4>
+        <p>
+          ML Design System uses mobile-first flexbox grid for all sizes. The
+          grid contains twelve columns, five default responsive breakpoints, and
+          couple of predefined utility classes. The flex grid is only supported
+          in Chrome, Firefox, Safari 6+, IE10+, iOS 7+, and Android 4.4+.
+        </p>
+        <p>
+          Flex grid uses row class ( <code>.row</code> ), and column class (
+          <code>.col</code> ). Basic percentage-based sizing can also be done
+          using the classes: <code>.col-sm-6</code>, <code>.col-md-6</code>, and
+          so on.
+        </p>
+        <div class="jumbotron">
+          <div class="container">
+            <div class="row mb-tiny">
+              <div
+                class="col-sm-6"
+                style="
+                  text-align: center;
+                  background: #eee;
+                  border: 1px solid #aaa;
+                  padding: 10px;
+                "
+              >
+                6 columns
+              </div>
+              <div
+                class="col-sm-6"
+                style="
+                  text-align: center;
+                  background: #eee;
+                  border: 1px solid #aaa;
+                  padding: 10px;
+                "
+              >
+                6 columns
+              </div>
+            </div>
+          </div>
+          <pre
+            style="font-family: 'Montserrat'; font-size: 12pt;"
+          ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;container&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;row&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col-sm-6&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>6 columns<span style="color:rgb(0,0,128);">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col-sm-6&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>6 columns<span style="color:rgb(0,0,128);">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;  </span></pre>
+        </div>
+        <h4>Auto-Width Columns</h4>
+        <p>
+          If we just use <code>.col</code> class, the child elements will
+          equally divide the total width:
+        </p>
+        <div class="jumbotron">
+          <div class="container">
+            <div class="row mb-tiny">
+              <div
+                class="col"
+                style="
+                  text-align: center;
+                  background: #eee;
+                  border: 1px solid #aaa;
+                  padding: 10px;
+                "
+              >
+                Equally divided column
+              </div>
+              <div
+                class="col"
+                style="
+                  text-align: center;
+                  background: #eee;
+                  border: 1px solid #aaa;
+                  padding: 10px;
+                "
+              >
+                Equally divided column
+              </div>
+              <div
+                class="col"
+                style="
+                  text-align: center;
+                  background: #eee;
+                  border: 1px solid #aaa;
+                  padding: 10px;
+                "
+              >
+                Equally divided column
+              </div>
+            </div>
+          </div>
+          <pre
+            style="font-family: 'Montserrat'; font-size: 12pt;"
+          ><span style="color:rgb(0,0,128)">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;container&quot;</span><span style="color:rgb(0,0,128)">&gt;
+</span><span style="color:rgb(0,0,128)">  &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;row&quot;</span><span style="color:rgb(0,0,128)">&gt;
+</span><span style="color:rgb(0,0,128)">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col&quot;</span><span style="color:rgb(0,0,128)">&gt;</span>Equally divided column<span style="color:rgb(0,0,128)">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128)">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col&quot;</span><span style="color:rgb(0,0,128)">&gt;</span>Equally divided column<span style="color:rgb(0,0,128)">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128)">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col&quot;</span><span style="color:rgb(0,0,128)">&gt;</span>Equally divided column<span style="color:rgb(0,0,128)">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128)">  &lt;/div&gt;
+</span><span style="color:rgb(0,0,128)">&lt;/div&gt;</span></pre>
+        </div>
+        <h4>Auto adjust around one column</h4>
+        <p>
+          We can also set width of one column and let the others auto adjust
+          around it:
+        </p>
+        <div class="jumbotron">
+          <div class="container">
+            <div class="row mb-tiny">
+              <div
+                class="col"
+                style="
+                  text-align: center;
+                  background: #eee;
+                  border: 1px solid #aaa;
+                  padding: 10px;
+                "
+              >
+                Equally divided column
+              </div>
+              <div
+                class="col-md-6"
+                style="
+                  text-align: center;
+                  background: #eee;
+                  border: 1px solid #aaa;
+                  padding: 10px;
+                "
+              >
+                50% wide column
+              </div>
+              <div
+                class="col"
+                style="
+                  text-align: center;
+                  background: #eee;
+                  border: 1px solid #aaa;
+                  padding: 10px;
+                "
+              >
+                Equally divided column
+              </div>
+            </div>
+          </div>
+          <pre
+            style="font-family: 'Montserrat'; font-size: 12pt;"
+          ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;container&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;row&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Equally divided column<span style="color:rgb(0,0,128);">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col-md-6&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>50% wide column<span style="color:rgb(0,0,128);">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Equally divided column<span style="color:rgb(0,0,128);">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+        </div>
+      </div>
+    </div>
+    <div id="utilities">
+      <div class="highlighted-block">
+        <h4>Utilities</h4>
+        <p>
+          There are several pre defined utility classes for indents. Use these
+          classes on different breakpoints as per requirement.
+        </p>
+        <h5>Margin Utilities</h5>
+        <ul style="list-style: none; margin: 0; padding: 0;" class="mb-small">
+          <li class="mb-small">
+            Use <code>.my-</code> class to add top and bottom margin. Add
+            required size along with this class: <br />
+            <code>.my-tiny</code>, <code>.my-small</code>, <code>.my-mid</code>,
+            <code>.my-large</code>
+          </li>
+          <li class="mb-small">
+            Use <code>.mx-</code> class to add left and right margin. Add
+            required size along with this class: <br />
+            <code>.mx-tiny</code>, <code>.mx-small</code>, <code>.mx-mid</code>,
+            <code>.mx-large</code>
+          </li>
+          <li class="mb-small">
+            Use <code>.mt-</code> class to add top margin only. Add required
+            size along with this class: <br />
+            <code>.mt-tiny</code>, <code>.mt-small</code>, <code>.mt-mid</code>,
+            <code>.mt-large</code>
+          </li>
+          <li class="mb-small">
+            Use <code>.mb-</code> class to add bottom margin only. Add required
+            size along with this class: <br />
+            <code>.mb-tiny</code>, <code>.mb-small</code>, <code>.mb-mid</code>,
+            <code>.mb-large</code>
+          </li>
+        </ul>
+        <div class="highlighted-block mb-mid">
+          <pre
+            style="font-family: 'Montserrat'; font-size: 12pt;"
+          ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;row&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>
+  <span style="color:rgb(0,0,128);">
+  </span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;my-tiny&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Some Text<span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+  <span style="color:rgb(0,0,128);">
+  </span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;mx-small&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Some Text<span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+
+  <span style="color:rgb(0,0,128);">  <span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;mt-mid&quot;</span><span style="color:rgb(0,0,128);">&gt;</span></span>Some Text<span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></span>
+  <span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);"> </span></span>
+  <span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);">  <span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;mb-large&quot;</span><span style="color:rgb(0,0,128);">&gt;</span></span></span></span>Some Text<span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></span>  </span></span>
+  <span style="color:rgb(0,0,128);">
+  </span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+        </div>
+        <h5>Padding Utilities</h5>
+        <ul style="list-style: none; margin: 0; padding: 0;" class="mb-small">
+          <li class="mb-small">
+            Use <code>.py-</code> class to add top and bottom padding. Add
+            required size along with this class: <br />
+            <code>.py-tiny</code>, <code>.py-small</code>, <code>.py-mid</code>,
+            <code>.py-large</code>
+          </li>
+          <li class="mb-small">
+            Use <code>.px-</code> class to add left and right padding. Add
+            required size along with this class: <br />
+            <code>.px-tiny</code>, <code>.px-small</code>, <code>.px-mid</code>,
+            <code>.px-large</code>
+          </li>
+          <li class="mb-small">
+            Use <code>.pt-</code> class to add top padding only. Add required
+            size along with this class: <br />
+            <code>.pt-tiny</code>, <code>.pt-small</code>, <code>.pt-mid</code>,
+            <code>.pt-large</code>
+          </li>
+          <li class="mb-small">
+            Use <code>.pb-</code> class to add bottom padding only. Add required
+            size along with this class: <br />
+            <code>.pb-tiny</code>, <code>.pb-small</code>, <code>.pb-mid</code>,
+            <code>.pb-large</code>
+          </li>
+        </ul>
+        <div class="highlighted-block">
+          <pre
+            style="font-family: 'Montserrat'; font-size: 12pt;"
+          ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;row&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>
+<span style="color:rgb(0,0,128);">
+</span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;py-tiny&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Some Text<span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+<span style="color:rgb(0,0,128);">
+</span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;px-small&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Some Text<span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color:rgb(0,0,128);">  <span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;pt-mid&quot;</span><span style="color:rgb(0,0,128);">&gt;</span></span>Some Text<span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></span>
+<span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);"> </span></span>
+<span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);">  <span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;pb-large&quot;</span><span style="color:rgb(0,0,128);">&gt;</span></span></span></span>Some Text<span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></span>  </span></span>
+<span style="color:rgb(0,0,128);">
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

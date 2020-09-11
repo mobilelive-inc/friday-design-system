@@ -1,0 +1,1204 @@
+<section id="components_info">
+  <section id="tooltips_info">
+    <div class="infoBlockPiece">
+      <h2>ToolTips</h2>
+      <p>
+        Tooltips are used to display extended information for an element or an
+        action on the page. A basic tooltip shows information on hover and does
+        not require additional JavaScript functions.
+      </p>
+      <div class="jumbotron">
+        <h5 class="mb-tiny">Tooltip with no arrow</h5>
+        <div>
+          <p>
+            This is a tooltip with dark background. Hover on icon to reveal
+            tooltip
+            <span
+              style="color: var(--primary);"
+              class="ml-tiny tooltip-holder sample icon-info"
+            >
+              <span
+                class="dark curved py-tiny px-small text--center"
+                data-arrow="false"
+                data-position="top"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip
+              </span>
+            </span>
+          </p>
+        </div>
+        <div style="text-align: right;">
+          <p>
+            <span
+              style="color: var(--primary);"
+              class="ml-tiny tooltip-holder sample icon-info"
+            >
+              <span
+                class="light curved py-tiny px-small text--center"
+                data-arrow="false"
+                data-position="top"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip
+              </span>
+            </span>
+            This is a tooltip with light background. Hover on icon to reveal
+            tooltip
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsibletoolTip" class="toggle" type="checkbox" />
+          <label for="collapsibletoolTip" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;ml-tiny tooltip-holder sample icon-info&quot;</span><span style="color:rgb(0,0,128);">&gt;
+  </span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark curved py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;false&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+  </span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span></pre>
+
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;ml-tiny tooltip-holder sample icon-info&quot;</span><span style="color:rgb(0,0,128);">&gt;
+  </span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;light curved py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;false&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+  </span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h5>Tooltip with arrow</h5>
+        <p class="mb-mid">Hover on each element to reveal tooltip:</p>
+        <div class="tooltipWrap">
+          <div class="tooltipInnerWrap topLeft">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Top Start
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="top-start"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap topRight">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Top End
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="top-end"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap topCenter">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Top
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="top"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap leftTop">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Left Start
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="left-start"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap leftCenter">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Left
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="left"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap leftBottom">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Left End
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="left-end"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap rightTop">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Right Start
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="right-start"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap rightCenter">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Right
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="right"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap rightBottom">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Right End
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="right-end"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap bottomLeft">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Bottom Start
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="bottom-start"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap bottomCenter">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Bottom
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="bottom"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+          <div class="tooltipInnerWrap bottomRight">
+            <span
+              style="
+                background-color: var(--primary);
+                font-weight: bold;
+                display: inline-block;
+                vertical-align: top;
+              "
+              class="p-small tooltip-holder"
+            >
+              Bottom End
+              <span
+                class="dark py-tiny px-small text--center"
+                data-arrow="true"
+                data-position="bottom-end"
+                data-type="tooltip"
+                tabindex="1"
+                >This is a tooltip</span
+              >
+            </span>
+          </div>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsibletoolTip1" class="toggle" type="checkbox" />
+          <label for="collapsibletoolTip1" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Top Start
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top-start&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Top End
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top-end&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Top
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Left Start
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;left-start&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Left
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;left&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Left End
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;left-end&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Right Start
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;right-start&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Right
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;right&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Right End
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;right-end&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Bottom Start
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;bottom-start&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Bottom
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;bottom&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p-small tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  </span>Bottom End
+  <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py-tiny px-small text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;bottom-end&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span>
+
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h5>Tooltip Paragraphs</h5>
+        <p>
+          Some times there is detailed description required in tooltips. In such
+          case the content increases although a max. character limit should be
+          set.
+        </p>
+        <div>
+          <p>
+            Hover on icon to reveal tooltip:
+            <span
+              style="color: var(--dark);"
+              class="ml-tiny tooltip-holder sample icon-info"
+            >
+              <span
+                class="dark curved py-tiny px-small"
+                data-arrow="true"
+                data-position="top"
+                data-type="tooltip"
+                tabindex="1"
+                >A cupcake is a small cake designed to serve one person, which
+                may be baked in a small thin paper or aluminum cup.
+              </span>
+            </span>
+          </p>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsibletoolTip12" class="toggle" type="checkbox" />
+          <label for="collapsibletoolTip12" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,0);">&lt;span
+  </span><span style="color:rgb(0,0,0);">    </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,0,128);">=&quot;dark curved py-tiny px-small&quot;
+  </span><span style="color:rgb(0,0,128);">    </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,0,128);">=&quot;true&quot;
+  </span><span style="color:rgb(0,0,128);">    </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,0,128);">=&quot;top&quot;
+  </span><span style="color:rgb(0,0,128);">    </span><span style="color:rgb(0,0,255);">data-type="tooltip"
+  </span><span style="color:rgb(0,0,255);">    tabindex</span><span style="color:rgb(0,0,128);">=&quot;1&quot;</span><span style="color:rgb(0,0,0);">&gt;</span>A cupcake is a small cake designed to serve one person, which may be baked in a small thin paper or aluminum cup.
+  <span style="color:rgb(0,0,0);">&lt;/span&gt;</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="infoBlockPiece" id="popover">
+      <h3>Popovers</h3>
+      <p class="mb-large">
+        As compared to tooltip, the purpose of popover is to provide additional
+        information. They can also contain action buttons, links and alert
+        messages.
+      </p>
+      <div class="highlighted-block">
+        <br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; font-color: var(--primary);"
+            >
+              <span class="sr-only">info-icon</span>
+            </span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="false"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <span tabindex="1" class="icon icon-error mr-tiny">
+                <span class="sr-only">info-icon</span>
+              </span>
+              <span tabindex="1"
+                >This is a dark popover (no Arrow) with a close button.</span
+              >
+              <a href="#" class="btn--close ml-small">
+                <span tabindex="1" class="icon icon-cross-circle">
+                  <span class="sr-only">close button</span>
+                </span>
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; font-color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <span tabindex="1" class="icon icon-error mr-small"
+                ><span class="sr-only">info-icon</span></span
+              >
+              <span tabindex="1"
+                >This is a dark popover (with Arrow) with a close button.</span
+              >
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                >
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start light p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <span tabindex="1" class="icon icon-error mr-small"
+                ><span class="sr-only">info-icon</span></span
+              >
+              <span tabindex="1"
+                >This is a light popover (with Arrow) with a close button.</span
+              >
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                >
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small curved"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <span tabindex="1" class="icon icon-error mr-small"
+                ><span class="sr-only">info-icon</span></span
+              >
+              <span tabindex="1"
+                >This is a popover (with Arrow and rounded curves) with a close
+                button.</span
+              >
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                >
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle pl-small"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top-start"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <span tabindex="1" class="icon icon-error mr-small"
+                ><span class="sr-only">info-icon</span></span
+              >
+              <span tabindex="1"
+                >This is a dark popover (with Left aligned Arrow) with a close
+                button.</span
+              >
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span>
+                </span></a
+              >
+            </div>
+          </span>
+        </div>
+        <br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle pr-small"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top-end"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <span tabindex="1" class="icon icon-error mr-small"
+                ><span class="sr-only">info-icon</span></span
+              >
+              <span tabindex="1"
+                >This is a dark popover (with Right aligned Arrow) with a close
+                button.</span
+              >
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                >
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <span tabindex="1" class="icon icon-error mr-small"
+                ><span class="sr-only">info-icon</span></span
+              >
+              <span tabindex="1">
+                <strong class="title">This is a title</strong>
+                A cupcake is a small cake designed to serve one person, which
+                may be baked in a small thin paper or aluminum cup.</span
+              >
+              <a href="#" class="btn--close ml-small">
+                <span tabindex="1" class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                >
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br /><br /><br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <div class="popupWrap">
+                <span tabindex="1" class="mb-small"
+                  ><strong class="title">This is a title</strong> A cupcake is a
+                  small cake designed to serve one person, which may be baked in
+                  a small thin paper or aluminum cup.</span
+                >
+                <footer tabindex="1">
+                  <a class="popoverLink" href="#">Link</a>
+                </footer>
+              </div>
+              <a tabindex="1" href="#" class="btn--close ml-small"
+                ><span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                ></a
+              >
+            </div>
+          </span>
+        </div>
+        <br /><br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <div class="popupWrap">
+                <span tabindex="1"
+                  >A cupcake is a small cake designed to serve one person, which
+                  may be baked in a small thin paper or aluminum
+                  cup.&nbsp;&nbsp;<a class="linkMore" href="#">Learn More</a>
+                </span>
+              </div>
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle">
+                  <span class="sr-only">close button</span>
+                </span>
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="curved d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <div class="popupWrap">
+                <span tabindex="1" class="mb-small"
+                  ><strong class="title">This is a title</strong> A cupcake is a
+                  small cake designed to serve one person, which may be baked in
+                  a small thin paper or aluminum cup.</span
+                >
+                <footer>
+                  <button tabindex="1" class="btn btn__outline btn__light">
+                    Action1
+                  </button>
+                  <button tabindex="1" class="btn btn__light">Action2</button>
+                  <button tabindex="1" class="btn btn__light clear">
+                    Action3
+                  </button>
+                </footer>
+              </div>
+              <a tabindex="1" href="#" class="btn--close ml-small"
+                ><span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                ></a
+              >
+            </div>
+          </span>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start light p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <div class="popupWrap">
+                <span tabindex="1" class="mb-small"
+                  ><strong class="title">This is a title</strong> A cupcake is a
+                  small cake designed to serve one person, which may be baked in
+                  a small thin paper or aluminum cup.</span
+                >
+                <footer>
+                  <button tabindex="1" class="btn btn btn__outline btn__dark">
+                    Action1
+                  </button>
+                  <button tabindex="1" class="btn btn__dark">Action2</button>
+                  <button tabindex="1" class="btn btn__dark clear">
+                    Action3
+                  </button>
+                </footer>
+              </div>
+              <a tabindex="1" href="#" class="btn--close ml-small">
+                <span class="icon icon-cross-circle"
+                  ><span class="sr-only">close button</span></span
+                >
+              </a>
+            </div>
+          </span>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <div class="text--center mb-large">
+          <span class="popup-holder">
+            <span
+              tabindex="1"
+              class="icon-warning-circle"
+              style="font-size: 1.5rem; color: var(--primary);"
+            ></span>
+            <div
+              class="d-flex align-items-start dark p-small"
+              data-arrow="true"
+              data-position="top"
+              data-type="popover"
+              tabindex="1"
+              style="opacity: 1; visibility: visible;"
+            >
+              <div class="popupWrap">
+                <ul class="mb-small popupActionList list-unstyled">
+                  <li tabindex="1" class="mb-small">
+                    <a class="d-flex" href="#"
+                      ><span class="mr-small icon icon-note-add"></span>Add a
+                      Note</a
+                    >
+                  </li>
+                  <li tabindex="1" class="mb-small">
+                    <a class="d-flex" href="#"
+                      ><span class="mr-small icon icon-bookmarks"></span
+                      >Bookmark this</a
+                    >
+                  </li>
+                  <li tabindex="1" class="mb-small">
+                    <a class="d-flex" href="#"
+                      ><span class="mr-small icon icon-heart"></span>Like it</a
+                    >
+                  </li>
+                  <li tabindex="1" class="mb-small">
+                    <a class="d-flex" href="#"
+                      ><span class="mr-small icon icon-mail"></span>Email it</a
+                    >
+                  </li>
+                </ul>
+                <footer tabindex="1">
+                  <a href="#" class="btn--close d-flex"
+                    ><span class="mr-small icon icon-cross-circle"></span
+                    >Close</a
+                  >
+                </footer>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div class="mb-small wrap-collabsible">
+          <input id="collapsiblepopover" class="toggle" type="checkbox" />
+          <label for="collapsiblepopover" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div
+</span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex align-items-start dark p-small&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;false&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-position</span><span style="color:rgb(0,0,255);">=&quot;top&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-type</span><span style="color:rgb(0,0,255);">=&quot;popover&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);"> </span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-error mr-tiny&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>info-icon<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;</span>This is a dark popover (no Arrow) with a close button.<span style="color:rgb(0,0,128);">&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;a </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn--close ml-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-cross-circle&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">      &lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>close button<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/a&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+
+              <p>&lt;!-- 2&nbsp; --&gt;</p>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div
+</span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex align-items-start dark p-small&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-position</span><span style="color:rgb(0,0,255);">=&quot;top&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-type</span><span style="color:rgb(0,0,255);">=&quot;popover&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">style</span><span style="color:rgb(0,0,255);">=&quot;</span><span style="color:rgb(0,128,0);">opacity</span>: <span style="color:#6897bb;">1</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,128,0);">visibility</span>: <span style="color:rgb(0,0,255);">visible</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,0,255);">&quot;
+</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-error mr-small&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>info-icon<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;</span>This is a dark popover (with Arrow) with a close button.<span style="color:rgb(0,0,128);">&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;a </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn--close ml-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-cross-circle&quot;
+</span><span style="color:rgb(0,0,255);">      </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>close button<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">    &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/a&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+
+              <p>&lt;!-- 3 &nbsp;--&gt;</p>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div
+</span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex align-items-start light p-small&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-position</span><span style="color:rgb(0,0,255);">=&quot;top&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-type</span><span style="color:rgb(0,0,255);">=&quot;popover&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">style</span><span style="color:rgb(0,0,255);">=&quot;</span><span style="color:rgb(0,128,0);">opacity</span>: <span style="color:#6897bb;">1</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,128,0);">visibility</span>: <span style="color:rgb(0,0,255);">visible</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,0,255);">&quot;
+</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-error mr-small&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>info-icon<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;</span>This is a light popover (with Arrow) with a close button.<span style="color:rgb(0,0,128);">&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;a </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn--close ml-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-cross-circle&quot;
+</span><span style="color:rgb(0,0,255);">      </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>close button<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">    &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/a&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+
+              <p>&lt;!-- 4 &nbsp;--&gt;</p>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div
+</span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex align-items-start dark p-small curved&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-position</span><span style="color:rgb(0,0,255);">=&quot;top&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-type</span><span style="color:rgb(0,0,255);">=&quot;popover&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">style</span><span style="color:rgb(0,0,255);">=&quot;</span><span style="color:rgb(0,128,0);">opacity</span>: <span style="color:#6897bb;">1</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,128,0);">visibility</span>: <span style="color:rgb(0,0,255);">visible</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,0,255);">&quot;
+</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-error mr-small&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>info-icon<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;</span>This is a popover (with Arrow and rounded curves) with a close
+    button.<span style="color:rgb(0,0,128);">&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;a </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn--close ml-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-cross-circle&quot;
+</span><span style="color:rgb(0,0,255);">      </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>close button<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">    &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/a&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+
+              <p>&lt;!-- 5 --&gt;</p>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div
+</span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex align-items-start dark p-small&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-position</span><span style="color:rgb(0,0,255);">=&quot;top-start&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-type</span><span style="color:rgb(0,0,255);">=&quot;popover&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">style</span><span style="color:rgb(0,0,255);">=&quot;</span><span style="color:rgb(0,128,0);">opacity</span>: <span style="color:#6897bb;">1</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,128,0);">visibility</span>: <span style="color:rgb(0,0,255);">visible</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,0,255);">&quot;
+</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-error mr-small&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>info-icon<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;</span>This is a dark popover (with Left aligned Arrow) with a close
+    button.<span style="color:rgb(0,0,128);">&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;a </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn--close ml-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-cross-circle&quot;
+</span><span style="color:rgb(0,0,255);">      </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>close button<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;/span&gt;&lt;/a
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+
+              <p>&lt;!-- 6 --&gt;</p>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div
+</span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex align-items-start dark p-small&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-position</span><span style="color:rgb(0,0,255);">=&quot;top-end&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-type</span><span style="color:rgb(0,0,255);">=&quot;popover&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">style</span><span style="color:rgb(0,0,255);">=&quot;</span><span style="color:rgb(0,128,0);">opacity</span>: <span style="color:#6897bb;">1</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,128,0);">visibility</span>: <span style="color:rgb(0,0,255);">visible</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,0,255);">&quot;
+</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-error mr-small&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>info-icon<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;</span>This is a dark popover (with Right aligned Arrow) with a close
+    button.<span style="color:rgb(0,0,128);">&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;a </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn--close ml-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-cross-circle&quot;
+</span><span style="color:rgb(0,0,255);">      </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>close button<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">    &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/a&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+
+              <p>&lt;!-- 7 --&gt;</p>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div
+</span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex align-items-start dark p-small&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-position</span><span style="color:rgb(0,0,255);">=&quot;top&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-type</span><span style="color:rgb(0,0,255);">=&quot;popover&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">style</span><span style="color:rgb(0,0,255);">=&quot;</span><span style="color:rgb(0,128,0);">opacity</span>: <span style="color:#6897bb;">1</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,128,0);">visibility</span>: <span style="color:rgb(0,0,255);">visible</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,0,255);">&quot;
+</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-error mr-small&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>info-icon<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;strong </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;title&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a title<span style="color:rgb(0,0,128);">&lt;/strong&gt;
+</span><span style="color:rgb(0,0,128);">    </span>A cupcake is a small cake designed to serve one person, which
+    may be baked in a small thin paper or aluminum cup.<span style="color:rgb(0,0,128);">&lt;/span
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;a </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn--close ml-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-cross-circle&quot;
+</span><span style="color:rgb(0,0,255);">      </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>close button<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">    &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/a&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+
+              <p>&lt;!-- 8 --&gt;</p>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div
+</span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex align-items-start dark p-small&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-position</span><span style="color:rgb(0,0,255);">=&quot;top&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-type</span><span style="color:rgb(0,0,255);">=&quot;popover&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">style</span><span style="color:rgb(0,0,255);">=&quot;</span><span style="color:rgb(0,128,0);">opacity</span>: <span style="color:#6897bb;">1</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,128,0);">visibility</span>: <span style="color:rgb(0,0,255);">visible</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,0,255);">&quot;
+</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;popupWrap&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;mb-small&quot;
+</span><span style="color:rgb(0,0,255);">      </span><span style="color:rgb(0,0,128);">&gt;&lt;strong </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;title&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a title<span style="color:rgb(0,0,128);">&lt;/strong&gt; </span>A cupcake is a
+      small cake designed to serve one person, which may be baked in
+      a small thin paper or aluminum cup.<span style="color:rgb(0,0,128);">&lt;/span
+</span><span style="color:rgb(0,0,128);">    &gt;
+</span><span style="color:rgb(0,0,128);">    &lt;footer </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">      &lt;a </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;popoverLink&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Link<span style="color:rgb(0,0,128);">&lt;/a&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;/footer&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;a </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn--close ml-small&quot;
+</span><span style="color:rgb(0,0,255);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-cross-circle&quot;
+</span><span style="color:rgb(0,0,255);">      </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>close button<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">    &gt;&lt;/a
+</span><span style="color:rgb(0,0,128);">  &gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+
+              <p>&lt;!-- 9 --&gt;</p>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div
+</span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex align-items-start dark p-small&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-position</span><span style="color:rgb(0,0,255);">=&quot;top&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-type</span><span style="color:rgb(0,0,255);">=&quot;popover&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">style</span><span style="color:rgb(0,0,255);">=&quot;</span><span style="color:rgb(0,128,0);">opacity</span>: <span style="color:#6897bb;">1</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,128,0);">visibility</span>: <span style="color:rgb(0,0,255);">visible</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,0,255);">&quot;
+</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;popupWrap&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">      </span><span style="color:rgb(0,0,128);">&gt;</span>A cupcake is a small cake designed to serve one person, which
+      may be baked in a small thin paper or aluminum
+      cup.<span style="color:#6d9cbe;">&amp;nbsp;&amp;nbsp;</span><span style="color:rgb(0,0,128);">&lt;a </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;linkMore&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Learn More<span style="color:rgb(0,0,128);">&lt;/a&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;a </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn--close ml-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-cross-circle&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">      &lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>close button<span style="color:rgb(0,0,128);">&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/a&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+
+              <p>&lt;!-- 10 --&gt;</p>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div
+</span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex align-items-start light p-small&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-position</span><span style="color:rgb(0,0,255);">=&quot;top&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-type</span><span style="color:rgb(0,0,255);">=&quot;popover&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">style</span><span style="color:rgb(0,0,255);">=&quot;</span><span style="color:rgb(0,128,0);">opacity</span>: <span style="color:#6897bb;">1</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,128,0);">visibility</span>: <span style="color:rgb(0,0,255);">visible</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,0,255);">&quot;
+</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;popupWrap&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;mb-small&quot;
+</span><span style="color:rgb(0,0,255);">      </span><span style="color:rgb(0,0,128);">&gt;&lt;strong </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;title&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a title<span style="color:rgb(0,0,128);">&lt;/strong&gt; </span>A cupcake is a
+      small cake designed to serve one person, which may be baked in
+      a small thin paper or aluminum cup.<span style="color:rgb(0,0,128);">&lt;/span
+</span><span style="color:rgb(0,0,128);">    &gt;
+</span><span style="color:rgb(0,0,128);">    &lt;footer&gt;
+</span><span style="color:rgb(0,0,128);">      &lt;button </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn btn btn__outline btn__dark&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">        </span>Action1
+      <span style="color:rgb(0,0,128);">&lt;/button&gt;
+</span><span style="color:rgb(0,0,128);">      &lt;button </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn btn__dark&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Action2<span style="color:rgb(0,0,128);">&lt;/button&gt;
+</span><span style="color:rgb(0,0,128);">      &lt;button </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn btn__dark clear&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">        </span>Action3
+      <span style="color:rgb(0,0,128);">&lt;/button&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;/footer&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;a </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn--close ml-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;icon icon-cross-circle&quot;
+</span><span style="color:rgb(0,0,255);">      </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;sr-only&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>close button<span style="color:rgb(0,0,128);">&lt;/span&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">    &gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/a&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+
+              <p>&lt;!-- 11 --&gt;</p>
+              <pre
+                style="font-family: 'Montserrat'; font-size: 12pt;"
+              ><span style="color:rgb(0,0,128);">&lt;div
+</span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex align-items-start dark p-small&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-position</span><span style="color:rgb(0,0,255);">=&quot;top&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-type</span><span style="color:rgb(0,0,255);">=&quot;popover&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;
+</span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">style</span><span style="color:rgb(0,0,255);">=&quot;</span><span style="color:rgb(0,128,0);">opacity</span>: <span style="color:#6897bb;">1</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,128,0);">visibility</span>: <span style="color:rgb(0,0,255);">visible</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,0,255);">&quot;
+</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;popupWrap&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;ul </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;mb-small popupActionList list-unstyled&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">      &lt;li </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;mb-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">        &lt;a </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot;
+</span><span style="color:rgb(0,0,255);">          </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;mr-small icon icon-note-add&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;</span>Add a
+          Note<span style="color:rgb(0,0,128);">&lt;/a
+</span><span style="color:rgb(0,0,128);">        &gt;
+</span><span style="color:rgb(0,0,128);">      &lt;/li&gt;
+</span><span style="color:rgb(0,0,128);">      &lt;li </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;mb-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">        &lt;a </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot;
+</span><span style="color:rgb(0,0,255);">          </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;mr-small icon icon-bookmarks&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">          &gt;</span>Bookmark this<span style="color:rgb(0,0,128);">&lt;/a
+</span><span style="color:rgb(0,0,128);">        &gt;
+</span><span style="color:rgb(0,0,128);">      &lt;/li&gt;
+</span><span style="color:rgb(0,0,128);">      &lt;li </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;mb-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">        &lt;a </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot;
+</span><span style="color:rgb(0,0,255);">          </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;mr-small icon icon-heart&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;</span>Like it<span style="color:rgb(0,0,128);">&lt;/a
+</span><span style="color:rgb(0,0,128);">        &gt;
+</span><span style="color:rgb(0,0,128);">      &lt;/li&gt;
+</span><span style="color:rgb(0,0,128);">      &lt;li </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;mb-small&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">        &lt;a </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d-flex&quot; </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot;
+</span><span style="color:rgb(0,0,255);">          </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;mr-small icon icon-mail&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;</span>Email it<span style="color:rgb(0,0,128);">&lt;/a
+</span><span style="color:rgb(0,0,128);">        &gt;
+</span><span style="color:rgb(0,0,128);">      &lt;/li&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;/ul&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;footer </span><span style="color:rgb(0,128,0);">tabindex</span><span style="color:rgb(0,0,255);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">      &lt;a </span><span style="color:rgb(0,128,0);">href</span><span style="color:rgb(0,0,255);">=&quot;#&quot; </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;btn--close d-flex&quot;
+</span><span style="color:rgb(0,0,255);">        </span><span style="color:rgb(0,0,128);">&gt;&lt;span </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;mr-small icon icon-cross-circle&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span
+</span><span style="color:rgb(0,0,128);">        &gt;</span>Close<span style="color:rgb(0,0,128);">&lt;/a
+</span><span style="color:rgb(0,0,128);">      &gt;
+</span><span style="color:rgb(0,0,128);">    &lt;/footer&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+            </div>
+          </div>
+        </div>
+        <p>
+          Unlike tooltips, Popovers require additional JavaScript functions to
+          activate.
+        </p>
+      </div>
+    </div>
+  </section>
+</section>
