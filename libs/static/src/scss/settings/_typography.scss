@@ -1,0 +1,180 @@
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+:root {
+  --font-family-sans-serif: 'Montserrat', sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+  --font-family-base: var(--font-family-sans-serif);
+
+  --font-size-base: 1rem;
+
+  --font-weight-lighter: lighter;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-bolder: bolder;
+
+  --font-size-lg: calc(var(--font-size-base) * 1.25);
+  --font-size-sm: calc(var(--font-size-base) * 0.875);
+  --font-size-micro: calc(var(--font-size-base) * 0.625);
+  --font-size-tiny: calc(var(--font-size-base) * 0.75);
+
+  --font-weight-base: --font-weight-normal;
+  --line-height-base: 1.2;
+
+  --h1-font-size: calc(var(--font-size-base) * 2.5);
+  --h2-font-size: calc(var(--font-size-base) * 2);
+  --h3-font-size: calc(var(--font-size-base) * 1.75);
+  --h4-font-size: calc(var(--font-size-base) * 1.5);
+  --h5-font-size: calc(var(--font-size-base) * 1.25);
+  --h6-font-size: var(--font-size-base);
+
+  --headings-margin-bottom: var(--global-spacer);
+  --headings-font-family: var(--font-family-base);
+  --headings-font-weight: 500;
+  --headings-line-height: 1.2;
+
+  --display1-size: 6rem;
+  --display2-size: 5.5rem;
+  --display3-size: 4.5rem;
+  --display4-size: 3.5rem;
+
+  --display1-weight: 300;
+  --display2-weight: 300;
+  --display3-weight: 300;
+  --display4-weight: 300;
+  --display-line-height: var(--headings-line-height);
+
+  --body-bg: var(--light);
+  --body-color: var(--dark);
+
+  // Links
+
+  --link-color: var(--blue);
+  --link-decoration: none;
+  --link-hover-color: var(--blue-lighter);
+  --link-hover-decoration: underline;
+  // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+  --emphasized-link-hover-darken-percentage: 15%;
+
+  // Paragraphs
+  //
+  // Style p element.
+  --paragraph-margin-bottom: 1rem;
+  --paragraph-text-color: var(--dark);
+
+  // Components
+  // Define common padding and border radius sizes and more.
+
+  --line-height-lg: 1.5;
+  --line-height-sm: 1.5;
+
+  --rounded-pill: 50rem;
+
+  --box-shadow-sm: 0 0.125rem 0.25rem rgba(#000000, 0.075);
+  --box-shadow: 0 0.5rem 1rem rgba(#000000, 0.15);
+  --box-shadow-lg: 0 1rem 3rem rgba(#000000, 0.175);
+
+  --component-active-color: var(--light);
+  --component-active-bg: var(--blue);
+
+  --transition-base: all 0.2s ease-in-out;
+  --transition-fade: opacity 0.15s linear;
+  --transition-collapse: height 0.35s ease;
+
+  --lead-font-size: calc(var(--font-size-base) * 1.25);
+  --lead-font-weight: 300;
+  --lead-text-color: var(--dark);
+
+  --small-font-size: 80%;
+
+  --text-muted: var(--gray);
+
+  --blockquote-small-color: var(--gray);
+  --blockquote-font-size: calc(var(--font-size-base) * 1.25);
+
+  --zindex-dropdown: 1000;
+  --zindex-sticky: 1020;
+  --zindex-fixed: 1030;
+  --zindex-modal-backdrop: 1040;
+  --zindex-modal: 1050;
+  --zindex-popover: 1060;
+  --zindex-tooltip: 1070;
+
+  // Alerts
+  //
+  // Define alert colors, border radius, and padding.
+
+  --alert-padding-y: 0.75rem;
+  --alert-padding-x: 1.25rem;
+  --alert-margin-bottom: 1rem;
+  --alert-border-radius: var(--border-radius);
+  --alert-link-font-weight: var(--font-weight-bold);
+  --alert-border-width: var(--border-width);
+
+  --alert-bg-level: -10;
+  --alert-border-level: -9;
+  --alert-color-level: 6;
+
+  --hr-margin-y: var(--global-spacer);
+
+  --code-font-size: 1.25rem;
+  --code-color: var(--orange-dark);
+  --kbd-padding-y: 0.2rem;
+  --kbd-padding-x: 0.4rem;
+  --kbd-font-size: var(--code-font-size);
+  --kbd-color: var(--orange-dark);
+  --kbd-bg: var(--orange-dark);
+  --pre-color: var(--orange-dark);
+  --pre-scrollable-max-height: 340px;
+
+  // Modals
+  //
+  // Define Modal colors, font size and border radius.
+  --modal-heading-color: var(--black);
+  --modal-heading-font-size: var(--font-size-lg);
+  --modal-icon-color: var(--black);
+  --modal-icon-size: calc(var(--font-size-lg) * 1.25);
+}
+
+// stylelint-disable value-keyword-case
+
+//calc(var(--font-size-base): var(--font-size-base);
+//var(calc(var(--font-size-base)): 1rem; // Assumes the browser default, typically `16px`
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$embed-responsive-aspect-ratios: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$embed-responsive-aspect-ratios: join(
+  ((21 9), (16 9), (4 3), (1 1)),
+  $embed-responsive-aspect-ratios
+);
+
+$hr-border-color: rgba(#000000, 0.1);
+$hr-border-width: var(--border-width);
+
+$mark-padding: 0.2em;
+
+$dt-font-weight: var(--font-weight-bold);
+
+$kbd-box-shadow: inset 0 -0.1rem 0 rgba(var(--dark), 0.25);
+$nested-kbd-font-weight: var(--font-weight-bold);
+
+$list-inline-padding: 0.5rem;
+
+$mark-bg: #fcf8e3;
+
+// Code
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (
+  ('<', '%3c'),
+  ('>', '%3e'),
+  ('#', '%23'),
+  ('(', '%28'),
+  (')', '%29')
+);

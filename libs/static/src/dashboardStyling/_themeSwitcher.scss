@@ -1,0 +1,177 @@
+.theme-gray {
+  --primary: #66c9d5;
+  --secondary: #c4d93c;
+  --success: #2874a4;
+  --info: #fccc2e;
+  --warning: #f48245;
+  --danger: #c36837;
+  --light: #ffffff;
+  --dark: #282828;
+  --white: #e5e5e5;
+
+  --primary-hover: #d07240;
+  --secondary-hover: #4a89bd;
+  --success-hover: #b7c43f;
+  --info-hover: #3fadb4;
+  --warning-hover: #c0a21d;
+  --danger-hover: #3a83c2;
+  --dark-hover: #94afb3;
+  --light-hover: #a6babe;
+  //--font-size-base: 2rem;
+}
+
+//Theme dark
+.theme-dark {
+  --primary: #87f7a3;
+  --secondary: #008463;
+  --success: #003789;
+  --info: #f3ebd6;
+  --warning: #d9bd80;
+  --danger: #d4876e;
+  --light: #f95792;
+  --dark: #fbf6ff;
+  --white: #282828;
+
+  --primary-hover: #b45f38;
+  --secondary-hover: #32597a;
+  --success-hover: #74802a;
+  --info-hover: #3c7e85;
+  --warning-hover: #8e711c;
+  --danger-hover: #285a86;
+  --dark-hover: #6b8084;
+  --light-hover: #9fb4b8;
+  --gray-dark: #fbf6ff;
+  --gray: #66636a;
+}
+//--primary: var(--orange);
+//--secondary: var(--gray);
+//--success: var(--green);
+//--info: var(--cyan);
+//--warning: var(--lemon);
+//--danger: var(--red);
+//--light: var(--gray-light);
+//--dark: var(--gray-dark);
+
+.navy {
+  --primary: var(--blue);
+  --primary-light: var(--blue-light);
+  --primary-lighter: var(--blue-lighter);
+  --primary-dark: var(--blue-dark);
+  --primary-darker: var(--blue-darker);
+
+  --secondary: var(--primary-light);
+  --success: var(--gray);
+  --info: var(--primary-dark);
+  --warning: var(--primary-darker);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--gray-dark);
+  --primary-hover: var(--blue-dark);
+  --secondary-hover: var(--gray-dark);
+  --info-hover: var(--cyan-dark);
+  --success-hover: var(--lime-dark);
+  --danger-hover: var(--red);
+  --warning-hover: var(--blue-dark);
+  --light-hover: var(--gray);
+  --dark-hover: var(--gray-light);
+
+  .bg__warning,
+  .bg__info {
+    color: var(--secondary-text) !important;
+  }
+  .bg__secondary,
+  .bg__light {
+    color: var(--primary-text) !important;
+  }
+}
+
+.lemon {
+  // Standard Colors
+  --primary: var(--lemon);
+  --primary-light: var(--lemon-light);
+  --primary-lighter: var(--lemon-lighter);
+  --primary-dark: var(--lemon-dark);
+  --primary-darker: var(--lemon-darker);
+
+  --secondary: var(--gray);
+  --success: var(--green-darker);
+  --info: var(--primary-light);
+  --warning: var(--primary-dark);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--primary-darker);
+
+  --primary-hover: var(--primary-dark);
+  --secondary-hover: var(--gray-dark);
+  --info-hover: var(--cyan-dark);
+  --success-hover: var(--primary-dark);
+  --danger-hover: var(--red);
+  --warning-hover: var(--primary-dark);
+  --light-hover: var(--gray);
+  --dark-hover: var(--gray-light);
+
+  .bg__warning {
+    color: var(--btn-color) !important;
+  }
+}
+
+.lime {
+  // Standard Colors
+  --primary: var(--lime);
+  --primary-light: var(--lime-light);
+  --primary-lighter: var(--lime-lighter);
+  --primary-dark: var(--lime-dark);
+  --primary-darker: var(--lime-darker);
+
+  --secondary: var(--gray);
+  --success: var(--green-dark);
+  --info: var(--primary-light);
+  --warning: var(--primary-dark);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--primary-darker);
+  --primary-hover: var(--primary-dark);
+  --secondary-hover: var(--gray-dark);
+  --info-hover: var(--cyan-dark);
+  --success-hover: var(--primary-dark);
+  --danger-hover: var(--red);
+  --warning-hover: var(--primary-dark);
+  --light-hover: var(--gray);
+  --dark-hover: var(--gray-light);
+
+  .bg__warning {
+    color: var(--btn-color) !important;
+  }
+}
+
+#pageWrapper {
+  background-color: var(--white);
+  //color: var(--dark);
+  z-index: 1;
+}
+
+.btns-switcher-holder {
+  max-width: 75px;
+  .default {
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    color: #2a2a2a;
+  }
+}
+
+.theme-switcher {
+  position: fixed;
+  right: -10px;
+  padding: 1px 15px 15px;
+  background-color: var(--primary-light);
+  z-index: 20;
+  border-radius: 3px;
+  opacity: 0.85;
+  transition: all 0.25s linear;
+
+  &:hover {
+    opacity: 1;
+    right: 0;
+  }
+}

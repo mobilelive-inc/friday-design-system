@@ -1,0 +1,39 @@
+// stylelint-disable declaration-no-important
+@mixin bg-variant($parent, $color, $ignore-warning: false) {
+  #{$parent} {
+    background-color: $color !important;
+  }
+  a#{$parent},
+  button#{$parent} {
+    background-color: #ffffff !important;
+  }
+}
+
+@mixin bg-gradient-variant($parent, $color, $ignore-warning: false) {
+  #{$parent} {
+    background: $color
+      linear-gradient(180deg, mix(var(--body-bg), $color, 15%), $color) repeat-x !important;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  @include bg-variant('.bg__#{$color}', $value, true);
+}
+
+@if $enable-gradients {
+  @each $color, $value in $theme-colors {
+    @include bg-gradient-variant('.bg-gradient__#{$color}', $value, true);
+  }
+}
+
+.bg-white {
+  background-color: var(--white) !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.bg__secondary {
+  color: var(--btn-color);
+}
