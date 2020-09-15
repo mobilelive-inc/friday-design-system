@@ -69,8 +69,8 @@ $rfs-breakpoint-unit-cache: unit($rfs-breakpoint);
   // Cache $fs unit
   $fs-unit: if(type-of($fs) == 'number', unit($fs), false);
 
-  // Add !important suffix if needed
-  $rfs-suffix: if($important, ' !important', '');
+  // Add  suffix if needed
+  $rfs-suffix: if($important, ' ', '');
 
   // If $fs isn't a number (like inherit) or $fs has a unit (not px or rem, like 1.5em) or $ is 0, just print the value
   @if not
