@@ -77,11 +77,11 @@
 
   .bg__warning,
   .bg__info {
-    color: var(--secondary-text) !important;
+    color: var(--secondary-text) ;
   }
   .bg__secondary,
   .bg__light {
-    color: var(--primary-text) !important;
+    color: var(--primary-text) ;
   }
 }
 
@@ -111,7 +111,7 @@
   --dark-hover: var(--gray-light);
 
   .bg__warning {
-    color: var(--btn-color) !important;
+    color: var(--btn-color) ;
   }
 }
 
@@ -140,7 +140,7 @@
   --dark-hover: var(--gray-light);
 
   .bg__warning {
-    color: var(--btn-color) !important;
+    color: var(--btn-color) ;
   }
 }
 
