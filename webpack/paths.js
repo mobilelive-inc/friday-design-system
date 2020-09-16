@@ -21,7 +21,7 @@ module.exports = {
   appPublic: resolveApp('public'),
   publicUrlOrPath,
   outputPath: resolveApp('dist'),
-  entryPath: resolveApp('src/index.js'),
+  entryPath: resolveApp('apps/rx-xis-app/src/index.js'),
   appHtml: resolveApp('public/index.html'),
   images: resolveApp('public/images'),
   imagesFolder: 'images',
