@@ -1,0 +1,23 @@
+{
+  "name": "ng-storybook",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {
+    "@storybook/addon-notes": "^5.3.19",
+    "@storybook/angular": "^5.3.19",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addon-queryparams": "^5.3.19",
+    "@storybook/addon-storysource": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/theming": "^5.3.19",
+    "storybook-addon-intl": "^2.4.1"
+  }
+}

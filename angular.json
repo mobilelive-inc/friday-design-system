@@ -1,0 +1,338 @@
+{
+  "version": 1,
+  "projects": {
+    "ngx-xis-app": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/ngx-xis-app",
+      "sourceRoot": "apps/ngx-xis-app/src",
+      "prefix": "nx-hybrid-demo",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/ngx-xis-app",
+            "index": "apps/ngx-xis-app/src/index.html",
+            "main": "apps/ngx-xis-app/src/main.ts",
+            "polyfills": "apps/ngx-xis-app/src/polyfills.ts",
+            "tsConfig": "apps/ngx-xis-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/ngx-xis-app/src/favicon.ico",
+              "apps/ngx-xis-app/src/assets"
+            ],
+            "styles": ["apps/ngx-xis-app/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ngx-xis-app/src/environments/environment.ts",
+                  "with": "apps/ngx-xis-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ngx-xis-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ngx-xis-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ngx-xis-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/ngx-xis-app/tsconfig.app.json",
+              "apps/ngx-xis-app/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/ngx-xis-app/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/ngx-xis-app/jest.config.js",
+            "tsConfig": "apps/ngx-xis-app/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/ngx-xis-app/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngx-xis-app-e2e": {
+      "root": "apps/ngx-xis-app-e2e",
+      "sourceRoot": "apps/ngx-xis-app-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/ngx-xis-app-e2e/cypress.json",
+            "tsConfig": "apps/ngx-xis-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "ngx-xis-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngx-xis-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/ngx-xis-app-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/ngx-xis-app-e2e/**/*"]
+          }
+        }
+      }
+    },
+    "rx-xis-app": {
+      "root": "apps/rx-xis-app",
+      "sourceRoot": "apps/rx-xis-app/src",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/web:build",
+          "options": {
+            "outputPath": "dist/apps/rx-xis-app",
+            "index": "apps/rx-xis-app/src/index.html",
+            "main": "apps/rx-xis-app/src/main.tsx",
+            "polyfills": "apps/rx-xis-app/src/polyfills.ts",
+            "tsConfig": "apps/rx-xis-app/tsconfig.app.json",
+            "assets": [
+              "apps/rx-xis-app/src/favicon.ico",
+              "apps/rx-xis-app/src/assets"
+            ],
+            "styles": [],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/rx-xis-app/src/environments/environment.ts",
+                  "with": "apps/rx-xis-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "rx-xis-app:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "rx-xis-app:build:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/rx-xis-app/tsconfig.app.json",
+              "apps/rx-xis-app/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/rx-xis-app/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/rx-xis-app/jest.config.js",
+            "tsConfig": "apps/rx-xis-app/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "rx-xis-app-e2e": {
+      "root": "apps/rx-xis-app-e2e",
+      "sourceRoot": "apps/rx-xis-app-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/rx-xis-app-e2e/cypress.json",
+            "tsConfig": "apps/rx-xis-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "rx-xis-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "rx-xis-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/rx-xis-app-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/rx-xis-app-e2e/**/*"]
+          }
+        }
+      }
+    },
+    "rx-xis": {
+      "root": "libs/rx-xis",
+      "sourceRoot": "libs/rx-xis/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/rx-xis/tsconfig.lib.json",
+              "libs/rx-xis/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/rx-xis/**/*"]
+          }
+        },
+        "build": {
+          "builder": "@nrwl/web:package",
+          "options": {
+            "outputPath": "dist/libs/rx-xis",
+            "tsConfig": "libs/rx-xis/tsconfig.lib.json",
+            "project": "libs/rx-xis/package.json",
+            "entryFile": "libs/rx-xis/src/index.ts",
+            "external": ["react", "react-dom", "react-is", "styled-components"],
+            "babelConfig": "@nrwl/react/plugins/bundle-babel",
+            "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+            "assets": [
+              {
+                "glob": "README.md",
+                "input": ".",
+                "output": "."
+              }
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/rx-xis/jest.config.js",
+            "tsConfig": "libs/rx-xis/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ui": {
+      "projectType": "library",
+      "root": "libs/ui",
+      "sourceRoot": "libs/ui/src",
+      "prefix": "nx-hybrid-demo",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui/tsconfig.lib.json",
+              "libs/ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui/jest.config.js",
+            "tsConfig": "libs/ui/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ui/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "e5a39de2-a595-4642-ad87-ee588b9a060e"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/react": {
+      "application": {
+        "style": "styled-components",
+        "linter": "tslint",
+        "babel": true
+      },
+      "component": {
+        "style": "styled-components"
+      },
+      "library": {
+        "style": "styled-components",
+        "linter": "tslint"
+      }
+    }
+  },
+  "defaultProject": "ngx-xis-app"
+}

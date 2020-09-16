@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>NgxXisApp</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <nx-hybrid-demo-root></nx-hybrid-demo-root>
+    <script src="assets/tota11y.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      (function (global) {
+        var s = document.createElement('script');
+
+        function loaderCallback() {
+          // Do actions before ASLint starts
+        }
+
+        function resultsCallback(results) {
+          console.log(results);
+        }
+
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src =
+          (document.location.protocol === 'https:' ? 'https:' : 'http:') +
+          '//www.aslint.org/api/aslint/loader/loader.js';
+
+        global.aslint = {
+          config: {
+            asyncRunner: true,
+            context: '',
+            contextDescription: '',
+            reportFormat: { JSON: true },
+            resultsCallback: resultsCallback,
+            visibleUI: true,
+          },
+        };
+
+        if (typeof s.addEventListener === 'function') {
+          s.addEventListener('load', loaderCallback);
+        }
+
+        document.body.appendChild(s);
+      })(this);
+    </script>
+  </body>
+</html>
