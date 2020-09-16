@@ -69,11 +69,11 @@
 }
 
 @mixin transform-translate-y-dropdown($value) {
-  -webkit-transform: translate3d(0, $value, 0) ;
-  -moz-transform: translate3d(0, $value, 0) ;
-  -o-transform: translate3d(0, $value, 0) ;
-  -ms-transform: translate3d(0, $value, 0) ;
-  transform: translate3d(0, $value, 0) ;
+  -webkit-transform: translate3d(0, $value, 0) !important;
+  -moz-transform: translate3d(0, $value, 0) !important;
+  -o-transform: translate3d(0, $value, 0) !important;
+  -ms-transform: translate3d(0, $value, 0) !important;
+  transform: translate3d(0, $value, 0) !important;
 }
 
 @mixin linear-gradient($color, $states-color) {

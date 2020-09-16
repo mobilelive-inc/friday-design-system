@@ -23,7 +23,7 @@
   line-height: normal;
 
   &::-webkit-input-placeholder {
-    line-height: normal ;
+    line-height: normal !important;
   }
 
   // Remove select outline from select box in FF
@@ -187,7 +187,7 @@ input[type='search']::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
 input[type='search'] {
-  -webkit-appearance: none ;
+  -webkit-appearance: none !important;
 }
 
 //input[type='search'] {
@@ -206,7 +206,7 @@ input[type='search'] {
 //  //  display: flex;
 //  //  align-items: center;
 //  //  justify-content: center;
-//  //  font-family: 'design-system-icons' ;
+//  //  font-family: 'design-system-icons' !important;
 //  //  cursor: pointer;
 //  //  margin: 0;
 //  //  &:before {
@@ -301,7 +301,7 @@ input[type='search'] {
       content: '\e93f';
       right: 8px;
       top: 0;
-      font-family: 'design-system-icons' ;
+      font-family: 'design-system-icons' !important;
       font-size: 8px;
       pointer-events: none;
       color: var(--gray-dark);
@@ -324,7 +324,7 @@ input[type='search'] {
 
     .clearCrossBtn {
       position: absolute;
-      left: calc(100% - 40px) ;
+      left: calc(100% - 40px) !important;
       width: 10px;
       top: 0;
       font-size: 10px;
@@ -405,7 +405,7 @@ label {
   &.info {
     &:after {
       content: '\e93d';
-      font-family: 'design-system-icons' ;
+      font-family: 'design-system-icons' !important;
       color: var(--dark);
       font-size: inherit;
       position: relative;
@@ -678,7 +678,7 @@ label {
       pointer-events: none;
 
       &:checked ~ .checkboxFake {
-        border-color: var(--gray) ;
+        border-color: var(--gray) !important;
         background-color: var(--gray);
 
         &:after {
@@ -696,7 +696,7 @@ label {
     }
 
     ~ .checkboxFake {
-      border-color: var(--gray) ;
+      border-color: var(--gray) !important;
       background-color: var(--gray);
     }
 
@@ -882,7 +882,7 @@ label {
       cursor: default;
 
       &:checked ~ .radioBtnFake {
-        border-color: var(--gray) ;
+        border-color: var(--gray) !important;
         background-color: var(--gray);
 
         &:after {
@@ -900,7 +900,7 @@ label {
     }
 
     .radioBtnFake {
-      border-color: var(--gray) ;
+      border-color: var(--gray) !important;
       background-color: var(--gray);
     }
 
@@ -1007,7 +1007,7 @@ label {
       top: 50%;
       transform: translateY(-50%);
       left: -14px;
-      border-radius: var(--btn-border-radius-rounded) ;
+      border-radius: var(--btn-border-radius-rounded) !important;
       transition: all 0.3s ease-out;
       -webkit-transition: all 0.3s ease-out;
       -moz-transition: all 0.3s ease-out;
@@ -1096,7 +1096,7 @@ label {
     font-size: 1em;
     height: auto;
     outline: thin dotted;
-    position: static ;
+    position: static !important;
     width: auto;
     overflow: visible;
   }
