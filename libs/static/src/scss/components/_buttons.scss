@@ -299,7 +299,7 @@
   }
 
   &--rounded {
-    border-radius: var(--btn-border-radius-rounded) ;
+    border-radius: var(--btn-border-radius-rounded) !important;
   }
 
   &--curved {

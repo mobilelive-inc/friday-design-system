@@ -80,15 +80,15 @@ $modal-scale-transform: scale(1.02);
 }
 .modalDialog {
   width: auto;
-  max-width: $modal-md;
+  display: flex;
   position: relative;
+  max-width: $modal-md;
   pointer-events: none;
   margin: 1.75rem auto;
-  display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
   min-height: calc(100% - 3.5rem);
+
   // Modal Size and Scrollbar Styles
   &.modalExtraLarge {
     max-width: $modal-xl;
@@ -105,6 +105,19 @@ $modal-scale-transform: scale(1.02);
       overflow-y: auto;
     }
   }
+  &.modalBodyContentScrollable {
+    max-height: calc(100vh - 3.5rem);
+    .modalContent {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      max-height: calc(100vh - 3.5rem);
+    }
+    .modalBody {
+      flex: 1 1 auto;
+      overflow-y: auto;
+    }
+  }
 }
 .modalContent {
   outline: 0;
@@ -112,10 +125,33 @@ $modal-scale-transform: scale(1.02);
   pointer-events: auto;
   background-color: $white;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
+.modalHeader {
   .icnInfo {
+    flex-shrink: 0;
+    flex-basis: 25px;
     color: var(--black);
     font-size: var(--modal-icon-size);
   }
+  .h5 {
+    flex-grow: 1;
+    font-weight: bold;
+    color: var(--black);
+    font-size: var(--font-size-lg);
+    text-transform: capitalize;
+  }
+}
+.icnClose {
+  border: 0;
+  padding: 0;
+  flex-shrink: 0;
+  flex-basis: 25px;
+  cursor: pointer;
+  color: var(--black);
+  background: transparent;
+  font-size: var(--modal-icon-size);
+}
+.modalBody {
   .h5 {
     font-weight: bold;
     color: var(--black);
@@ -125,19 +161,14 @@ $modal-scale-transform: scale(1.02);
   .h6 {
     color: var(--black);
   }
-  .icnClose {
-    top: 0;
-    right: 0;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-    position: absolute;
-    color: var(--black);
-    background: transparent;
-    font-size: var(--modal-icon-size);
-  }
   figure {
     display: flex;
+    justify-content: center;
+    span {
+      color: #2874a4;
+      font-size: var(--display1-size);
+      display: inline-block;
+    }
     img {
       margin: 0 auto;
     }
@@ -147,10 +178,6 @@ $modal-scale-transform: scale(1.02);
       font-weight: var(--font-weight-normal);
     }
   }
-}
-.modalBody {
-  display: flex;
-  flex-direction: column;
 }
 .modalDescription {
   p {
