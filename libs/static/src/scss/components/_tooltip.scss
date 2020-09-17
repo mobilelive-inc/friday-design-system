@@ -1,19 +1,4 @@
-// ToolTip Generic Styles
-
-:root {
-  --tooltipWidth: 9.625rem;
-  --tooltipArrowWidth: 0.6875rem;
-  --tooltipPosition: 1rem;
-  --toolTipMaxWidth: 15rem;
-  --popOverMaxWidth: 15rem;
-  --iconFontSize: 1.5rem;
-}
-@media screen and (min-width: 480px) {
-  :root {
-    --toolTipMaxWidth: 21.5rem;
-    --popOverMaxWidth: 28rem;
-  }
-}
+@import '../../../theme/tooltip';
 
 .tooltipWrap {
   height: 500px;
