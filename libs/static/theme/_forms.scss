@@ -1,0 +1,100 @@
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+:root {
+  --label-margin-bottom: 0.5rem;
+  --label-margin-bottom-sm: 0.6875rem;
+  --label-margin-bottom-md: 0.875rem;
+  --label-margin-bottom-lg: 1rem;
+
+  --input-padding-y: 0.5rem;
+  --input-padding-x: 1rem;
+  --input-font-family: var(--input-btn-font-family);
+  --input-font-size: var(--input-btn-font-size);
+  --input-font-weight: var(--font-weight-base);
+  --input-line-height: var(--input-btn-line-height);
+
+  --input-padding-y-sm: var(--input-btn-padding-y-sm);
+  --input-padding-x-sm: var(--input-btn-padding-x-sm);
+  --input-font-size-sm: var(--input-btn-font-size-sm);
+  --input-line-height-sm: var(--input-btn-line-height-sm);
+
+  --input-padding-y-lg: var(--input-btn-padding-y-lg);
+  --input-padding-x-lg: var(--input-btn-padding-x-lg);
+  --input-font-size-lg: var(--input-btn-font-size-lg);
+  --input-line-height-lg: var(--input-btn-line-height-lg);
+
+  --input-bg: var(--white);
+  --input-disabled-bg: var(--gray);
+
+  --input-color: var(--gray-dark);
+  --input-border-color: var(--gray-dark);
+  --input-border-color-success: var(--success);
+  --input-border-color-error: var(--danger);
+  --input-border-width: 1px;
+  --input-box-shadow: inset 0 1px 1px rgba(var(--black), 0.075);
+
+  --input-border-radius: var(--border-radius-none);
+  --input-border-radius-lg: 1rem;
+  --input-border-radius-sm: 0.5rem;
+
+  --input-focus-bg: var(--input-bg);
+  --input-focus-border-color: var(--gray-dark);
+  --input-focus-color: var(--input-color);
+  --input-focus-width: var(--input-btn-focus-width);
+  --input-focus-box-shadow: 0 0 0 var(--input-btn-focus-width)
+    var(--input-btn-focus-color);
+
+  --input-placeholder-color: var(--gray);
+  --input-plaintext-color: var(--body-color);
+
+  --input-height-border: calc(var(--input-border-width * 2));
+
+  --input-height-inner: add(
+    var(--input-line-height) * 1em,
+    var(--input-padding-y) * 2
+  );
+  --input-height-inner-half: add(
+    var(--input-line-height) * 0.5em,
+    var(--input-padding-y)
+  );
+  --input-height-inner-quarter: add(
+    var(--input-line-height) * 0.25em,
+    var(--input-padding-y) / 2
+  );
+
+  --input-height: 2.25rem;
+  --input-width: 200px;
+  --input-height-sm: add(
+    var(--input-line-height) -sm * 1em,
+    add(var(--input-padding-y) -sm * 2, var(--input-height-border), false)
+  );
+  --input-height-lg: add(
+    var(--input-line-height) -lg * 1em,
+    add(var(--input-padding-y) -lg * 2, var(--input-height-border), false)
+  );
+
+  --input-transition: border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+
+  --form-textarea-height: calc(var(--global-spacer) * 6);
+
+  --form-text-margin-top: 0.25rem;
+
+  --form-check-input-gutter: 1.25rem;
+  --form-check-input-margin-y: 0.3rem;
+  --form-check-input-margin-x: 0.25rem;
+
+  --form-radio-width: 30px;
+  --form-radio-height: 30px;
+
+  --form-check-inline-margin-x: 0.75rem;
+  --form-check-inline-input-margin-x: 0.3125rem;
+
+  --form-grid-gutter-width: 10px;
+  --formGroup-margin-bottom: 1rem;
+
+  --input-group-addon-color: var(--input-height-border);
+  --input-group-addon-bg: var(--gray-light);
+}

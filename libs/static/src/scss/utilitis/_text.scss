@@ -163,7 +163,7 @@ hr {
   margin-top: var(--hr-margin-y);
   margin-bottom: var(--hr-margin-y);
   border: 0;
-  border-top: $hr-border-width solid $hr-border-color;
+  border-top: var(--hr-border-width) solid var(--hr-border-color);
 }
 
 // Emphasis
@@ -176,8 +176,8 @@ small,
 
 mark,
 .mark {
-  padding: $mark-padding;
-  background-color: $mark-bg;
+  padding: var(--mark-padding);
+  background-color: var(--mark-bg);
 }
 
 //
@@ -199,7 +199,7 @@ mark,
   display: inline-block;
 
   &:not(:last-child) {
-    margin-right: $list-inline-padding;
+    margin-right: var(--list-inline-padding);
   }
 }
 

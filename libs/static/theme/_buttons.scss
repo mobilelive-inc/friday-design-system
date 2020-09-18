@@ -69,17 +69,3 @@
   --btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
-//// Button sizes
-//@mixin button-size(
-//  $padding-y,
-//  $padding-x,
-//  $font-size,
-//  $line-height,
-//  $border-radius
-//) {
-//  padding: var(--padding-y) var(--padding-x);
-//  @include font-size(var(--font-size));
-//  line-height: var(--line-height);
-//  @include border-radius(var(--border-radius), 0);
-//}

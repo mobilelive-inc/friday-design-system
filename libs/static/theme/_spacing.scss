@@ -1,0 +1,9 @@
+:root {
+  --global-spacer: 1rem;
+
+  --spacer-micro: calc(var(--global-spacer) * 0.25);
+  --spacer-tiny: calc(var(--global-spacer) * 0.5);
+  --spacer-mid: calc(var(--global-spacer) * 1.25);
+  --spacer-large: calc(var(--global-spacer) * 4);
+  --spacer-xlarge: calc(var(--global-spacer) * 8);
+}
