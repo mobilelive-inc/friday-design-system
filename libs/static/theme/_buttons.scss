@@ -68,4 +68,20 @@
 
   --btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  //ML Social Button Colors
+  --googleColorRed: var(--google-red);
+  --googleColorBlue: var(--google-blue);
+  --facebookColor: var(--facebook);
+  --twitterColor: var(--twitter);
+  --linkedinColor: var(--linkedin);
+  --instagramColor: var(--instagram);
+
+  //ML Social Button Hover Colors
+  --googleColorRedHover: var(--google-red-hover);
+  --googleColorBlueHover: var(--google-blue-hover);
+  --facebookColorHover: var(--facebook-hover);
+  --twitterColorHover: var(--twitter-hover);
+  --linkedinColorHover: var(--linkedin-hover);
+  --instagramColorHover: var(--instagram-hover);
 }
