@@ -14,8 +14,8 @@
 
 [class^='icon-'],
 [class*=' icon-'] {
-  /* use  to prevent issues with browser extensions that change fonts */
-  font-family: 'design-system-icons' ;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'design-system-icons' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;

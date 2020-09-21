@@ -31,7 +31,7 @@ body {
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
-  outline: 0 ;
+  outline: 0 !important;
 }
 
 //
@@ -74,7 +74,7 @@ ul ol {
 }
 
 dt {
-  font-weight: $dt-font-weight;
+  font-weight: var(--dt-font-weight);
 }
 
 dd {

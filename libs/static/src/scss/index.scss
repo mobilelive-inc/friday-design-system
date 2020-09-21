@@ -6,13 +6,10 @@
 @import 'settings/borders';
 @import 'settings/typography';
 @import 'settings/spacing';
-@import 'settings/buttons';
 @import 'settings/forms';
 @import 'settings/gridLayout';
 @import 'settings/utilities';
 @import 'settings/images';
-@import 'components/modals';
-@import 'settings/tooltip';
 
 @import 'generic/root';
 @import 'generic/base';
@@ -27,6 +24,8 @@
 @import 'components/buttons';
 @import 'components/images';
 @import 'components/forms';
+@import 'components/modals';
+@import 'components/tooltip';
 
 //utilities
 @import 'utilitis/align';

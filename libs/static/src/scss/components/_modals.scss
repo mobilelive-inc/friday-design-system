@@ -1,47 +1,4 @@
-//Modal styles
-
-// Padding applied to the modal body
-$modal-inner-padding: 1rem;
-
-// Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
-$modal-footer-margin-between: 0.5rem;
-
-$modal-dialog-margin: 0.5rem;
-$modal-dialog-margin-y-sm-up: 1.75rem;
-
-$modal-title-line-height: var(--line-height-base);
-
-$modal-content-color: null;
-$modal-content-bg: var(--white);
-$modal-content-border-color: rgba(var(--dark), 0.2);
-$modal-content-border-width: var(--border-width);
-$modal-content-border-radius: var(--border-radius)-lg;
-$modal-content-inner-border-radius: subtract(
-  $modal-content-border-radius,
-  $modal-content-border-width
-);
-$modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba(var(--dark), 0.5);
-$modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba(var(--dark), 0.5);
-
-$modal-backdrop-bg: var(--dark);
-$modal-backdrop-opacity: 0.5;
-$modal-header-border-color: var(--border-color);
-$modal-footer-border-color: $modal-header-border-color;
-$modal-header-border-width: $modal-content-border-width;
-$modal-footer-border-width: $modal-header-border-width;
-$modal-header-padding-y: 1rem;
-$modal-header-padding-x: 1rem;
-$modal-header-padding: $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
-
-$modal-xl: 1089px;
-$modal-lg: 864px;
-$modal-md: 576px;
-$modal-sm: 300px;
-
-$modal-fade-transform: translate(0, -50px);
-$modal-show-transform: none;
-$modal-transition: transform 0.3s ease-out;
-$modal-scale-transform: scale(1.02);
+@import '../../../theme/modals';
 
 // Modal BackDrop Style
 .modalBackdrop {
@@ -53,7 +10,7 @@ $modal-scale-transform: scale(1.02);
   z-index: 1040;
   position: fixed;
   visibility: hidden;
-  background-color: #000000;
+  background-color: var(--backdrop-bg-color);
   transition: opacity 0.15s linear;
   &.showModal {
     opacity: 0.5;
@@ -80,28 +37,41 @@ $modal-scale-transform: scale(1.02);
 }
 .modalDialog {
   width: auto;
-  max-width: $modal-md;
+  display: flex;
   position: relative;
+  max-width: var(--modal-md);
   pointer-events: none;
   margin: 1.75rem auto;
-  display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
   min-height: calc(100% - 3.5rem);
+
   // Modal Size and Scrollbar Styles
   &.modalExtraLarge {
-    max-width: $modal-xl;
+    max-width: var(--modal-xl);
   }
   &.modalLarge {
-    max-width: $modal-lg;
+    max-width: var(--modal-lg);
   }
   &.modalSmall {
-    max-width: $modal-sm;
+    max-width: var(--modal-sm);
   }
   &.modalDialogScrollable {
     height: calc(100% - 3.5rem);
     .modalContent {
+      overflow-y: auto;
+    }
+  }
+  &.modalBodyContentScrollable {
+    max-height: calc(100vh - 3.5rem);
+    .modalContent {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      max-height: calc(100vh - 3.5rem);
+    }
+    .modalBody {
+      flex: 1 1 auto;
       overflow-y: auto;
     }
   }
@@ -110,12 +80,35 @@ $modal-scale-transform: scale(1.02);
   outline: 0;
   width: 100%;
   pointer-events: auto;
-  background-color: $white;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  background-color: var(--white);
+  box-shadow: var(--modal-box-shadow);
+}
+.modalHeader {
   .icnInfo {
+    flex-shrink: 0;
+    flex-basis: 25px;
     color: var(--black);
     font-size: var(--modal-icon-size);
   }
+  .h5 {
+    flex-grow: 1;
+    font-weight: bold;
+    color: var(--black);
+    font-size: var(--font-size-lg);
+    text-transform: capitalize;
+  }
+}
+.icnClose {
+  border: 0;
+  padding: 0;
+  flex-shrink: 0;
+  flex-basis: 25px;
+  cursor: pointer;
+  color: var(--black);
+  background: transparent;
+  font-size: var(--modal-icon-size);
+}
+.modalBody {
   .h5 {
     font-weight: bold;
     color: var(--black);
@@ -125,19 +118,14 @@ $modal-scale-transform: scale(1.02);
   .h6 {
     color: var(--black);
   }
-  .icnClose {
-    top: 0;
-    right: 0;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-    position: absolute;
-    color: var(--black);
-    background: transparent;
-    font-size: var(--modal-icon-size);
-  }
   figure {
     display: flex;
+    justify-content: center;
+    span {
+      color: var(--modal-content-icon-color);
+      font-size: var(--display1-size);
+      display: inline-block;
+    }
     img {
       margin: 0 auto;
     }
@@ -147,10 +135,6 @@ $modal-scale-transform: scale(1.02);
       font-weight: var(--font-weight-normal);
     }
   }
-}
-.modalBody {
-  display: flex;
-  flex-direction: column;
 }
 .modalDescription {
   p {

@@ -11,14 +11,14 @@
 
 @mixin text--emphasis-variant($parent, $color, $ignore-warning: false) {
   #{$parent} {
-    color: $color ;
+    color: $color !important;
   }
   //@if $emphasized-link-hover-darken-percentage != 0 {
   //  a#{$parent} {
   //    @include hover-focus() {
   //      color: darken($color,
   //        $emphasized-link-hover-darken-percentage
-  //      ) ;
+  //      ) !important;
   //    }
   //  }
   //}
@@ -42,19 +42,19 @@
 }
 
 .text--monospace {
-  font-family: var(--font-family-monospace) ;
+  font-family: var(--font-family-monospace) !important;
 }
 
 // Alignment
 
 .text--justify {
-  text-align: justify ;
+  text-align: justify !important;
 }
 .text--wrap {
-  white-space: normal ;
+  white-space: normal !important;
 }
 .text--nowrap {
-  white-space: nowrap ;
+  white-space: nowrap !important;
 }
 .text--truncate {
   @include text--truncate();
@@ -67,13 +67,13 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     .text#{$infix}--left {
-      text-align: left ;
+      text-align: left !important;
     }
     .text#{$infix}--right {
-      text-align: right ;
+      text-align: right !important;
     }
     .text#{$infix}--center {
-      text-align: center ;
+      text-align: center !important;
     }
   }
 }
@@ -81,40 +81,40 @@
 // Transformation
 
 .text--lowercase {
-  text-transform: lowercase ;
+  text-transform: lowercase !important;
 }
 .text--uppercase {
-  text-transform: uppercase ;
+  text-transform: uppercase !important;
 }
 .text--capitalize {
-  text-transform: capitalize ;
+  text-transform: capitalize !important;
 }
 
 // Weight and italics
 
 .font-weight-light {
-  font-weight: var(--font-weight-light) ;
+  font-weight: var(--font-weight-light) !important;
 }
 .font-weight-lighter {
-  font-weight: var(--font-weight-lighter) ;
+  font-weight: var(--font-weight-lighter) !important;
 }
 .font-weight-normal {
-  font-weight: var(--font-weight-normal) ;
+  font-weight: var(--font-weight-normal) !important;
 }
 .font-weight-bold {
-  font-weight: var(--font-weight-bold) ;
+  font-weight: var(--font-weight-bold) !important;
 }
 .font-weight-bolder {
-  font-weight: var(--font-weight-bolder) ;
+  font-weight: var(--font-weight-bolder) !important;
 }
 .font-italic {
-  font-style: italic ;
+  font-style: italic !important;
 }
 
 // Contextual colors
 
 .text--white {
-  color: var(--white) ;
+  color: var(--white) !important;
 }
 
 @each $color, $value in $theme-colors {
@@ -122,17 +122,17 @@
 }
 
 .text--body {
-  color: var(--body-color) ;
+  color: var(--body-color) !important;
 }
 .text--muted {
   color: var(--text-muted);
 }
 
 .text--black-50 {
-  color: rgba(var(--dark), 0.5) ;
+  color: rgba(var(--dark), 0.5) !important;
 }
 .text--white-50 {
-  color: rgba(var(--white), 0.5) ;
+  color: rgba(var(--white), 0.5) !important;
 }
 
 // Misc
@@ -142,17 +142,17 @@
 }
 
 .text--decoration-none {
-  text-decoration: none ;
+  text-decoration: none !important;
 }
 
 .text--break {
-  word-wrap: break-word ;
+  word-wrap: break-word !important;
 }
 
 // Reset
 
 .text--reset {
-  color: inherit ;
+  color: inherit !important;
 }
 
 //
@@ -163,7 +163,7 @@ hr {
   margin-top: var(--hr-margin-y);
   margin-bottom: var(--hr-margin-y);
   border: 0;
-  border-top: $hr-border-width solid $hr-border-color;
+  border-top: var(--hr-border-width) solid var(--hr-border-color);
 }
 
 // Emphasis
@@ -176,8 +176,8 @@ small,
 
 mark,
 .mark {
-  padding: $mark-padding;
-  background-color: $mark-bg;
+  padding: var(--mark-padding);
+  background-color: var(--mark-bg);
 }
 
 //
@@ -199,7 +199,7 @@ mark,
   display: inline-block;
 
   &:not(:last-child) {
-    margin-right: $list-inline-padding;
+    margin-right: var(--list-inline-padding);
   }
 }
 

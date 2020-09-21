@@ -70,7 +70,7 @@
 //// See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
 //// and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
 //[tabindex='-1']:focus:not(:focus-visible) {
-//  outline: 0 ;
+//  outline: 0 !important;
 //}
 //
 //// Content grouping
@@ -151,7 +151,7 @@
 //}
 //
 //dt {
-//  font-weight: $dt-font-weight;
+//  font-weight: var(--dt-font-weight);
 //}
 //
 //dd {
@@ -471,5 +471,5 @@
 //// Always hide an element with the `hidden` HTML attribute (from PureCSS).
 //// Needed for proper display in IE 10-.
 //[hidden] {
-//  display: none ;
+//  display: none !important;
 //}

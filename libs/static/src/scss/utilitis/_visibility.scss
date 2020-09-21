@@ -3,19 +3,19 @@
 //
 
 .visible {
-  visibility: visible ;
+  visibility: visible !important;
 }
 
 .invisible {
-  visibility: hidden ;
+  visibility: hidden !important;
 }
 
 .hide {
-  display: none ;
+  display: none !important;
 }
 
 .show {
-  display: block ;
+  display: block !important;
 }
 
 .sr-only {
