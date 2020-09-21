@@ -1,9 +1,10 @@
-CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 module.exports = {
  entry: './src/js/main.js',
  output: {
-  path: __dirname + '/dist',
+  path: path.join(__dirname, '/dist'),
   filename: 'bundle.js'
  },
  plugins: [
@@ -13,7 +14,7 @@ module.exports = {
     to: 'images'
    },
    {
-    from: 'src/fonts',
+    from: '../icons/fonts',
     to: 'fonts'
    }
   ])

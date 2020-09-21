@@ -1,4 +1,4 @@
-# README
+# Friday - The Design System - Static HTML&CSS
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
@@ -6,7 +6,7 @@ This README would normally document whatever steps are necessary to get your app
 
 - Quick summary
 - Version
-- https://bitbucket.org/mobilelive/mobilelive-design-system-static-components/src/master/)
+- https://github.com/mobilelive-inc/friday-design-system/tree/master/libs/static
 
 ### How do I get set up?
 
@@ -64,5 +64,5 @@ npx stylelint \*_/_.scss
 .stylelintrc
 ```
 
-- Have standard configurations of liniting
-- some custom pre defined rules can be over ride
+- Have standard configurations of linting
+- some custom pre-defined rules can be over ride
