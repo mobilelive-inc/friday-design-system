@@ -1,14 +1,16 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
+dist/
 /tmp
 /out-tsc
 /build
 
 # dependencies
-/node_modules
-/apps/ngx-xis-app/node_modules
+node_modules/
+
+# helper angular stroybook
+/libs/angular/documentation.json
 
 # IDEs and editors
 /.idea

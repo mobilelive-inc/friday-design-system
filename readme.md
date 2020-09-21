@@ -1,52 +1,68 @@
 # Friday - The Design System
 
+Friday is MobileLIVE's open-source design system for products and digital experiences. With the MobileLIVE Design System as its foundation, the system consists of a working code for multiple frameworks and examples with it.
 
-## Starting in development mode
+To combine the code for multiple implementations in the one project we use the monorepos technology [NX](https://github.com/nrwl/nx).
 
-In order to run React application in development mode, run following command:
+There are several sub-projects with implementations, you can find details by the links below:
 
-```
-nx serve rx-xis-app
-```
-This starts the development server on port 4200.
-
-## Building the Project
-
-In order to build the React project run following command:
-
-```
-npm run rx:bundle
-```
-
-This creates the build on NX directory level
-
-## Starting storybook
-
-In order to start storybook, run following command:
-
-```
-npm run storybook or yarn storybook
-```
-
-## Publishing to NPM
-
-Following commands need to be followed in order to publish React project's build to NPM:
-
-#### Step 1:
-Create build of the React project using aforementioned command.
-
-#### Step 2:
-Update Package.json file in the React project by removing the scripts and updating dependencies. Right this is manual process due to NX quirks.
-
-#### Step 3:
-Run following command to publish the project:
-
-```
-yarn rx:publish
-```
-
-This will ask for updated version number for package and publish package to NPM. If there is no login present, developer will need to log into NPM using company provided credentials.
+* [HTML+CSS](libs/static/README.md)
+* [React](README_REACT.md)
+* [Angular](README_ANGULAR.md)
 
 
+## Components
 
+   &nbsp;     | UX/UI     | HTML+CSS |   React   |  Angular  
+:-------------| :-------: | :-----:  | :-------: | :-------:
+ Spacing units|   ✅      |   ✅      |  ✅      |   ✅  
+ Iconography|   ✅      |   ✅      |  ✅      |  ✅  
+ Theming|   ✅      |   ✅      |  ✅      |   ✅  
+ Heading|   ✅      |   ✅      |  ✅      |    ✅   
+ Typography Colors |   ✅      |   ✅      |  ✅      |   ✅    
+ Layout & Grid System |   ✅      |   ✅      |  ✅      |   ✅  
+ Buttons |   ✅      |   ✅      |  ✅      |   ✅
+ Input  |   ✅      |   ✅      |  ✅      |  🏗
+ Textarea  |   ✅      |   ✅      |  ✅      |  
+ Select  |   ✅      |   ✅      |  ✅      |  
+ Checkbox |   ✅      |   ✅      |  ✅      | 
+ Radio Buttons  |  ✅      |   ✅      |  ✅      |
+ Toggle Buttons  |  ✅      |   ✅      |  ✅      |
+ Form        |  ✅      |   ✅      |  ✅      |   ✅  
+ Tooltips |   ✅      |   ✅      |  ✅      |  
+ Popovers |   ✅      |   ✅      |  ✅      |  
+ Modal |   ✅      |   🏗     |  🏗     |  
+ Date Picker |   🎨      |         |        |  
+ Media|   ✅      |   ✅      |  ✅      |  
+ Social Icons |   ✅      |         |        |  
+ Card Box |   🎨     |         |        |  
+  
+Legend:
+ ✅ - Done
+ 🏗 - Development in progress
+ 🎨 - Specification in progress
 
+## Requirements
+The MobileLIVE Friday Design System team aims to support browsers and screen reader combinations across all internal team segments. 
+This support list gets updated on an occasional basis.
+
+### Browsers support 
+**Desktop browsers (Windows, macOS)**
+* Chrome latest
+* Firefox latest and extended support release (ESR)
+* Safari 2 most recent major versions
+* Microsoft Edge 2 most recent major versions
+* Internet Explorer 11
+
+**Mobile (Android, iOS)**
+* Chrome (Android)  X (10.0), Pie (9.0), Oreo (8.0), Nougat (7.0)
+* Safari (iOS) 2 most recent major versions
+
+### Accessibility support
+
+**Screen readers combinations**
+* Windows + IE11 + JAWS
+* Windows + Firefox + NVDA
+* macOS + Safari + VoiceOver
+* Android + Chrome + Talkback
+* iOS + Safari + VoiceOver
