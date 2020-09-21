@@ -16,7 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-hybrid-demo/rx-xis": ["libs/rx-xis/src/index.ts"]
+      "@fds/angular": ["libs/angular/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

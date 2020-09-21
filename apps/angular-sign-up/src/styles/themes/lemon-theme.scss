@@ -1,0 +1,29 @@
+.lemon-theme {
+  // Standard Colors
+  --primary: var(--lemon);
+  --primary-light: var(--lemon-light);
+  --primary-lighter: var(--lemon-lighter);
+  --primary-dark: var(--lemon-dark);
+  --primary-darker: var(--lemon-darker);
+
+  --secondary: var(--gray);
+  --success: var(--green-darker);
+  --info: var(--primary-light);
+  --warning: var(--primary-dark);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--primary-darker);
+
+  --primary-hover: var(--primary-dark);
+  --secondary-hover: var(--gray-dark);
+  --info-hover: var(--cyan-dark);
+  --success-hover: var(--primary-dark);
+  --danger-hover: var(--red);
+  --warning-hover: var(--primary-dark);
+  --light-hover: var(--gray);
+  --dark-hover: var(--gray-light);
+
+  .bg__warning {
+	color: var(--btn-color) !important;
+  }
+}
