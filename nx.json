@@ -1,5 +1,5 @@
 {
-  "npmScope": "nx-hybrid-demo",
+  "npmScope": "fds",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": {
@@ -14,31 +14,45 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
       }
     }
   },
   "projects": {
-    "ngx-xis-app": {
-      "tags": []
-    },
-    "ngx-xis-app-e2e": {
-      "tags": [],
-      "implicitDependencies": ["ngx-xis-app"]
-    },
     "rx-xis-app": {
       "tags": ["scope:rx"],
-      "implicitDependencies": ["rx-xis"]
+      "implicitDependencies": []
     },
     "rx-xis-app-e2e": {
       "tags": [],
       "implicitDependencies": ["rx-xis-app"]
     },
-    "rx-xis": {
-      "tags": ["scope:rx"]
-    },
-    "ui": {
+    "angular": {
       "tags": []
+    },
+    "angular-e2e": {
+      "tags": [],
+      "implicitDependencies": ["angular"]
+    },
+    "angular-demos": {
+      "tags": []
+    },
+    "angular-demos-e2e": {
+      "tags": [],
+      "implicitDependencies": ["angular-demos"]
+    },
+    "angular-sign-up": {
+      "tags": []
+    },
+    "angular-sign-up-e2e": {
+      "tags": [],
+      "implicitDependencies": ["angular-sign-up"]
     }
   }
 }

@@ -1,0 +1,11 @@
+// Static css for Friday Design System
+label {
+	font-weight: normal !important;
+}
+
+@import 'libs/static/src/scss/index';
+
+// themes
+@import "styles/themes/navy-theme";
+@import "styles/themes/lime-theme";
+@import "styles/themes/lemon-theme";

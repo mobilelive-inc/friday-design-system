@@ -1,0 +1,28 @@
+.btns-switcher-holder {
+  max-width: 75px;
+  .default {
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    color: #2a2a2a;
+  }
+}
+
+.theme-switcher {
+  position: fixed;
+  right: -10px;
+  padding: 12px 15px 15px;
+  background-color: var(--primary-light);
+  z-index: 20;
+  border-radius: 3px;
+  opacity: 0.85;
+  transition: all 0.25s linear;
+
+  --secondary: rgba(69, 69, 69, 0.25);
+  --secondary-hover: rgba(76, 74, 74, 0.6);
+
+  &:hover {
+    opacity: 1;
+    right: 0;
+  }
+}
