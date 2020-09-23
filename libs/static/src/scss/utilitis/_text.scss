@@ -11,7 +11,7 @@
 
 @mixin text--emphasis-variant($parent, $color, $ignore-warning: false) {
   #{$parent} {
-    color: $color !important;
+    color: $color;
   }
   //@if $emphasized-link-hover-darken-percentage != 0 {
   //  a#{$parent} {
@@ -42,19 +42,19 @@
 }
 
 .text--monospace {
-  font-family: var(--font-family-monospace) !important;
+  font-family: var(--font-family-monospace);
 }
 
 // Alignment
 
 .text--justify {
-  text-align: justify !important;
+  text-align: justify;
 }
 .text--wrap {
-  white-space: normal !important;
+  white-space: normal;
 }
 .text--nowrap {
-  white-space: nowrap !important;
+  white-space: nowrap;
 }
 .text--truncate {
   @include text--truncate();
@@ -67,13 +67,13 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     .text#{$infix}--left {
-      text-align: left !important;
+      text-align: left;
     }
     .text#{$infix}--right {
-      text-align: right !important;
+      text-align: right;
     }
     .text#{$infix}--center {
-      text-align: center !important;
+      text-align: center;
     }
   }
 }
@@ -81,40 +81,40 @@
 // Transformation
 
 .text--lowercase {
-  text-transform: lowercase !important;
+  text-transform: lowercase;
 }
 .text--uppercase {
-  text-transform: uppercase !important;
+  text-transform: uppercase;
 }
 .text--capitalize {
-  text-transform: capitalize !important;
+  text-transform: capitalize;
 }
 
 // Weight and italics
 
 .font-weight-light {
-  font-weight: var(--font-weight-light) !important;
+  font-weight: var(--font-weight-light);
 }
 .font-weight-lighter {
-  font-weight: var(--font-weight-lighter) !important;
+  font-weight: var(--font-weight-lighter);
 }
 .font-weight-normal {
-  font-weight: var(--font-weight-normal) !important;
+  font-weight: var(--font-weight-normal);
 }
 .font-weight-bold {
-  font-weight: var(--font-weight-bold) !important;
+  font-weight: var(--font-weight-bold);
 }
 .font-weight-bolder {
-  font-weight: var(--font-weight-bolder) !important;
+  font-weight: var(--font-weight-bolder);
 }
 .font-italic {
-  font-style: italic !important;
+  font-style: italic;
 }
 
 // Contextual colors
 
 .text--white {
-  color: var(--white) !important;
+  color: var(--white);
 }
 
 @each $color, $value in $theme-colors {
@@ -122,17 +122,17 @@
 }
 
 .text--body {
-  color: var(--body-color) !important;
+  color: var(--body-color);
 }
 .text--muted {
   color: var(--text-muted);
 }
 
 .text--black-50 {
-  color: rgba(var(--dark), 0.5) !important;
+  color: rgba(var(--dark), 0.5);
 }
 .text--white-50 {
-  color: rgba(var(--white), 0.5) !important;
+  color: rgba(var(--white), 0.5);
 }
 
 // Misc
@@ -142,17 +142,17 @@
 }
 
 .text--decoration-none {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .text--break {
-  word-wrap: break-word !important;
+  word-wrap: break-word;
 }
 
 // Reset
 
 .text--reset {
-  color: inherit !important;
+  color: inherit;
 }
 
 //
