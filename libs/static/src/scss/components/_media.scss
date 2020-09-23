@@ -1,3 +1,9 @@
 //Media styles
 
 @import '../../../theme/media';
+
+figure.embed-responsive-item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
