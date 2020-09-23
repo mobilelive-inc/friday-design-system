@@ -1,0 +1,8 @@
+@import '../../../theme/divider';
+
+.divider {
+  display: block;
+  height: var(--divider-height);
+  background: var(--divider-bg);
+  margin: var(--divider-margin) 0;
+}
