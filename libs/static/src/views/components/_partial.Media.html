@@ -1,0 +1,124 @@
+<div id="media">
+  <div class="infoBlockPiece">
+    <h2>Media</h2>
+    <p>
+      Create responsive video or slideshow embeds based on the width of the
+      parent by creating an intrinsic ratio that scales on any device.
+    </p>
+    <h3>About</h3>
+    <p>
+      Rules are directly applied to
+      <code>&lt;iframe&gt;, &lt;embed&gt;, &lt;video&gt;,</code> and
+      <code>&lt;p&gt;</code> elements; optionally use an explicit descendant
+      class .embed-responsive-item when you want to match the styling for other
+      attributes.
+    </p>
+
+    <p>
+      <strong>Pro-Tip!</strong> You don’t need to include frameborder="0" in
+      your <code>&lt;iframe&gt;</code>s as we override that for you.
+    </p>
+    <p>
+      Wrap any embed like an <code>&lt;iframe&gt;</code> in a parent element
+      with .embed-responsive and an aspect ratio. The .embed-responsive-item
+      isn’t strictly required, but we encourage it.
+    </p>
+    <div class="jumbotron">
+      <div class="row mb-mid">
+        <div class="col">
+          <h4>Example 21 : 9</h4>
+          <div class="embed-responsive embed-responsive-21by9">
+            <iframe
+              class="embed-responsive-item"
+              src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="col">
+          <h4>Example 16 : 9</h4>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              class="embed-responsive-item"
+              src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="row mb-mid">
+        <div class="col">
+          <h4>Example 4 : 3</h4>
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe
+              class="embed-responsive-item"
+              src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="col">
+          <h4>Example 3 : 2</h4>
+          <div class="embed-responsive embed-responsive-3by2">
+            <iframe
+              class="embed-responsive-item"
+              src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="col">
+          <h4>Example 1 : 1</h4>
+          <div class="embed-responsive embed-responsive-1by1">
+            <iframe
+              class="embed-responsive-item"
+              src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap-collabsible">
+        <input id="collapsiblebtnsmedia" class="toggle" type="checkbox" />
+        <label for="collapsiblebtnsmedia" class="lbl-toggle"></label>
+        <div class="collapsible-content">
+          <div class="content-inner">
+            <pre style="font-family: Montserrat; font-size: 12pt;">
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-21by9&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+
+    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
+
+<span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-16by9&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+
+    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
+
+<span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-4by3&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+
+    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
+
+<span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-3by2&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+
+    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
+
+<span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-1by1&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+
+    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
+
+<span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+              </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

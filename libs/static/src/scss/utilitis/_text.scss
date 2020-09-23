@@ -163,7 +163,9 @@ hr {
   margin-top: var(--hr-margin-y);
   margin-bottom: var(--hr-margin-y);
   border: 0;
-  border-top: var(--hr-border-width) solid var(--hr-border-color);
+  border-top-width: var(--hr-border-width);
+  border-top-style: solid;
+  border-top-color: var(--hr-border-color);
 }
 
 // Emphasis

@@ -130,8 +130,9 @@
   --pre-color: var(--orange-dark);
   --pre-scrollable-max-height: 340px;
 
-  --hr-border-color: rgba(#000000, 0.1);
+  --hr-border-color: rgba(0, 0, 0, 0.1);
   --hr-border-width: var(--border-width);
+
   --mark-padding: 0.2em;
   --dt-font-weight: var(--font-weight-bold);
   --kbd-box-shadow: inset 0 -0.1rem 0 rgba(var(--dark), 0.25);
