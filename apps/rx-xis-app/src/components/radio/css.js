@@ -91,9 +91,11 @@ export const InputContainer = styled('div')(
 );
 
 const getInnerBoxProps = (props) => {
-  const { borderType, theme:{
-    borderCurved, borderRounded, colors
-  }, color, error } = props;
+  const {
+    borderType, theme:{
+      borderCurved, borderRounded, colors
+    }, color, error
+  } = props;
   const styles = {
     backgroundColor: error ? colors.error: color,
     width: '18px',

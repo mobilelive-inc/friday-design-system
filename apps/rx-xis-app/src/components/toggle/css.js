@@ -21,11 +21,11 @@ export const Flex = styled.div`
   display: flex;
   align-items: center;
 `
-// 
+//
 export const InnerBox = styled(Box)`
   position: absolute;
   cursor: pointer;
-  height: ${props => props.size === 'lg' ? `${props.theme.space[13]}`: `${props.theme.space[7]}`};
+  height: ${props => (props.size === 'lg' ? `${props.theme.space[13]}`: `${props.theme.space[7]}`)};
   width: ${props => props.theme.space[19]};
   top: 0;
   left: 0;
@@ -33,53 +33,55 @@ export const InnerBox = styled(Box)`
   bottom: 0;
   border-radius: ${props => props.theme.borderRounded};
   border: ${props => props => {
-    const {isError, toggleStatus, toggledOnBorder, toggledOffBorder,
+    const {
+      isError, toggleStatus, toggledOnBorder, toggledOffBorder,
       theme:{colors:{error}}
-      } = props;
-      if(isError){
-        return `2px solid ${error}`;
-      }
-      else{
-        return toggleStatus ? toggledOnBorder: toggledOffBorder
-      }
+    } = props;
+    if(isError){
+      return `2px solid ${error}`;
+    }
+      
+    return toggleStatus ? toggledOnBorder: toggledOffBorder
+      
   }};
   background-color: ${props => props.toggledOffBgColor};
   -webkit-transition: 0.4s;
   transition: 0.4s;
   ${props =>
-    props.toggleStatus ? `background-color: ${props.toggledOnBgColor};` : ``} &:before {
+    (props.toggleStatus ? `background-color: ${props.toggledOnBgColor};` : ``)} &:before {
     position: absolute;
     content: '';
     height: ${props => props.theme.space[11]};
     width: ${props => props.theme.space[11]};
     border-radius:50px;
-    left: ${props => props.size === 'lg' ? '0.15rem': '-0.25rem'};
-    bottom: ${props => props.size === 'lg' ? '0.15rem': '-0.30rem'};
+    left: ${props => (props.size === 'lg' ? '0.15rem': '-0.25rem')};
+    bottom: ${props => (props.size === 'lg' ? '0.15rem': '-0.30rem')};
     background-color: ${(props) =>{
-        const {isError, toggleStatus, switchOnColor, switchOffColor,
-        theme:{colors:{error}}
-        } = props;
-        if(isError){
-          return error;
-        }
-        else{
-          return toggleStatus ? switchOnColor: switchOffColor
-        }
-    }};
+    const {
+      isError, toggleStatus, switchOnColor, switchOffColor,
+      theme:{colors:{error}}
+    } = props;
+    if(isError){
+      return error;
+    }
+        
+    return toggleStatus ? switchOnColor: switchOffColor
+        
+  }};
     -webkit-transition: 0.4s;
     transition: 0.4s;
     ${props =>
-      props.toggleStatus && props.size === 'lg'
-        ? `-webkit-transform: translateX(1.4rem);
+    (props.toggleStatus && props.size === 'lg'
+      ? `-webkit-transform: translateX(1.4rem);
            -ms-transform: translateX(1.4rem);
            transform: translateX(1.4rem);`
-        : ''};
+      : '')};
         ${props =>
-          props.toggleStatus && props.size === 'sm'
-            ? `-webkit-transform: translateX(2.4rem);
+    (props.toggleStatus && props.size === 'sm'
+      ? `-webkit-transform: translateX(2.4rem);
                -ms-transform: translateX(2.4rem);
                transform: translateX(2.4rem);`
-            : ''};
+      : '')};
       
   }
 `;
@@ -91,11 +93,11 @@ export const CheckIconContainer = styled(Box)`
   transition-timing-function: ease-in;
   transition: 0.2s;
   ${props =>
-    props.toggleStatus
+    (props.toggleStatus
       ? `transition-timing-function: 
          ease-in;transition: 0.2s;
          opacity: 1;`
-      : ''};
+      : '')};
 `;
 
 export const Label = styled.label`
@@ -109,7 +111,7 @@ export const ToggleLable = styled.label`
   margin-left: ${props => props.theme.space[15]};
   font-size: ${props => props.theme.space[7]};
   font-weight: ${props => props.theme.fontWeights[3]};
-  color: ${props => props.error ? props.theme.colors.error: props.theme.colors.black};
+  color: ${props => (props.error ? props.theme.colors.error: props.theme.colors.black)};
   cursor: pointer;
 `
 

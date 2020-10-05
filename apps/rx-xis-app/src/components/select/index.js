@@ -32,43 +32,43 @@ const Select = (props) => {
   } = props;
   return (
     <>
-    <SelectWrapper width={width} leftIcon={leftIcon}>
+      <SelectWrapper width={width} leftIcon={leftIcon}>
+        {
+          leftIcon && (
+            <LeftIconButton onClick={onLeftIconClick}>
+              <span className={leftIcon}/>
+            </LeftIconButton>
+          )
+        }
+        <BaseSelect
+          {...restProps}
+          id={id}
+          name={name}
+          value={value}
+          error={errorMessage}
+          borderType={borderType}
+          withBorderBottomOnly={withBorderBottomOnly}
+          onChange={onChange}>
+          {placeholder && <Option>{placeholder}</Option>}
+          {children}
+        </BaseSelect>
+        {
+          chevron && <ChevronDownIcon className={chevron}/>
+        }
+        {
+          rightIcon && (
+            <RightIconButton onClick={onRightIconButtonClick}>
+              <span className={rightIcon}/>
+            </RightIconButton>
+          )
+        }
+        {
+          validationIcon && (
+            <ValidationIcon className={validationIcon} isValid={isValid}/>
+          )
+        }
+      </SelectWrapper>
       {
-        leftIcon && (
-          <LeftIconButton onClick={onLeftIconClick}>
-            <span className={leftIcon}/>
-          </LeftIconButton>
-        )
-      }
-      <BaseSelect
-        {...restProps}
-        id={id}
-        name={name}
-        value={value}
-        error={errorMessage}
-        borderType={borderType}
-        withBorderBottomOnly={withBorderBottomOnly}
-        onChange={onChange}>
-        {placeholder && <Option>{placeholder}</Option>}
-        {children}
-      </BaseSelect>
-      {
-        chevron && <ChevronDownIcon className={chevron}/>
-      }
-      {
-        rightIcon && (
-          <RightIconButton onClick={onRightIconButtonClick}>
-            <span className={rightIcon}/>
-          </RightIconButton>
-        )
-      }
-      {
-        validationIcon && (
-          <ValidationIcon className={validationIcon} isValid={isValid}/>
-        )
-      }
-    </SelectWrapper>
-    {
         errorMessage && (
           <Text
             position="absolute"

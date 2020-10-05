@@ -31,124 +31,112 @@ export const ToggleButton = () => {
       <Flex>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1"
-          size='lg'
-          isToggled={isOn}
-          onChange={() => {setIsOn(!isOn)}}
-          />
+            id="bt1"
+            size='lg'
+            isToggled={isOn}
+            onChange={() => {setIsOn(!isOn)}}/>
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1"
-          size='lg'
-          isToggled={true}
-          />
+            id="bt1"
+            size='lg'
+            isToggled/>
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt2"
-          size='sm'
-          isToggled={toggle}
-          onChange={() => {setToggle(!toggle)}}
-          />
+            id="bt2"
+            size='sm'
+            isToggled={toggle}
+            onChange={() => {setToggle(!toggle)}}/>
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1" 
-          size='sm'
-          isToggled={true}
-          />
+            id="bt1"
+            size='sm'
+            isToggled/>
         </Box>
       </Flex>
       <Text variant="H5" ml={10}>Toggle Buttons With Label</Text>
       <Flex>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1Labeled"
-          size='lg'
-          styles= {{
-            toggledOffBgColor: '#B3B3B3',
-            toggledOffBorderColor: '#B3B3B3',
-            toggledOnBgColor:'#34A84D',
-            toggledOnBorderColor: '#34A84D',
-            switchOnColor: 'white',
-            switchOffColor: 'white',
-          }}
-          isToggled={isOnLabeled}
-          label={isOnLabeled ? "ON":"OFF"}
-          onChange={() => {setIsOnLabeled(!isOnLabeled)}}
-          />
+            id="bt1Labeled"
+            size='lg'
+            styles= {{
+              toggledOffBgColor: '#B3B3B3',
+              toggledOffBorderColor: '#B3B3B3',
+              toggledOnBgColor:'#34A84D',
+              toggledOnBorderColor: '#34A84D',
+              switchOnColor: 'white',
+              switchOffColor: 'white',
+            }}
+            isToggled={isOnLabeled}
+            label={isOnLabeled ? "ON":"OFF"}
+            onChange={() => {setIsOnLabeled(!isOnLabeled)}}/>
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1"
-          size='lg'
-          styles= {{
-            toggledOffBgColor: '#34A84D',
-            toggledOffBorderColor: '#B3B3B3',
-            toggledOnBorderColor: '#34A84D',
-            switchOnColor: 'white',
-            switchOffColor: 'white',
-          }}
-          label={"ON"}
-          isToggled={true}
-          />
+            id="bt1"
+            size='lg'
+            styles= {{
+              toggledOffBgColor: '#34A84D',
+              toggledOffBorderColor: '#B3B3B3',
+              toggledOnBorderColor: '#34A84D',
+              switchOnColor: 'white',
+              switchOffColor: 'white',
+            }}
+            label="ON"
+            isToggled/>
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt2Labled"
-          size='sm'
-          isToggled={toggleLabeled}
-          label={toggleLabeled ? "ON":"OFF"}
-          onChange={() => {setToggleLabeled(!toggleLabeled)}}
-          />
+            id="bt2Labled"
+            size='sm'
+            isToggled={toggleLabeled}
+            label={toggleLabeled ? "ON":"OFF"}
+            onChange={() => {setToggleLabeled(!toggleLabeled)}}/>
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1error"
-          size='sm'
-          isToggled={true}
-          label={"ON"}
-          />
+            id="bt1error"
+            size='sm'
+            isToggled
+            label="ON"/>
         </Box>
       </Flex>
       <Text variant="H5" ml={10}>Toggle Buttons Error States</Text>
       <Flex>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1Labelederror"
-          size='lg'
-          error
-          isToggled={false}
-          label="OFF"
-          />
+            id="bt1Labelederror"
+            size='lg'
+            error
+            isToggled={false}
+            label="OFF"/>
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1"
-          size='lg'
-          error
-          label={"ON"}
-          isToggled={true}
-          />
+            id="bt1"
+            size='lg'
+            error
+            label="ON"
+            isToggled/>
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt2Lablederror" 
-          error
-          size='sm'
-          isToggled={false}
-          label="OFF"
-          />
+            id="bt2Lablederror"
+            error
+            size='sm'
+            isToggled={false}
+            label="OFF"/>
         </Box>
         <Box p={10} width={1/4}>
           <Toggle
-          id="bt1error" 
-          error
-          size='sm'
-          isToggled={true}
-          label={"ON"}
-          />
+            id="bt1error"
+            error
+            size='sm'
+            isToggled
+            label="ON"/>
         </Box>
       </Flex>
     </ThemeProvider>

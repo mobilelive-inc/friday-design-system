@@ -55,7 +55,7 @@ export const TextFields = () => (
           placeholder="Please Enter Details"
           id="Default"/>
       </Box>
-      </Flex>
+    </Flex>
     <Text variant="H5" ml={10}>Text Area (Icon Outside)</Text>
     <Flex>
       <Box m={10} width="250px">
@@ -89,7 +89,7 @@ export const TextFields = () => (
           placeholder="Please Enter Details"
           id="Default"/>
       </Box>
-      </Flex>
+    </Flex>
   </ThemeProvider>
 );
 

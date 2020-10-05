@@ -1,16 +1,20 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { ThemeProvider } from 'styled-components';
+import {
+  Flex, Box, Image
+} from 'rebass/styled-components';
 import Tooltip from '..';
 import { TooltipWrapper } from '../css';
-import { Wrapper, InnerWrap } from './css';
+import {
+  Wrapper, InnerWrap
+} from './css';
 import Text from '../../typography';
 import Input from '../../Input';
 import Button from '../../Button';
 import Theme from '../../theme/defaultTheme';
 import GlobalStyle from '../../theme/globalStyles';
 import '../../icomoon_icons.css';
-import { Flex, Box, Image } from 'rebass/styled-components';
 // import DeleteIcon from '../src/icons/delete.svg'
 // import Favorite from '../src/icons/favorite.svg';
 // import AddPhoto from '../src/icons/add_a_photo.svg';
@@ -33,8 +37,7 @@ export const Tooltips = () => (
           arrow
           size="big"
           position="top-start"
-          distance={30}
-        >
+          distance={30}>
           <Button variant="primary">Top Start</Button>
         </Tooltip>
       </InnerWrap>
@@ -49,8 +52,7 @@ export const Tooltips = () => (
           arrow
           size="big"
           position="top-end"
-          distance={30}
-        >
+          distance={30}>
           <Button variant="primary">Top End</Button>
         </Tooltip>
       </InnerWrap>
@@ -59,8 +61,7 @@ export const Tooltips = () => (
           labelText="this start tooltip"
           arrow
           size="big"
-          position="left-start"
-        >
+          position="left-start">
           <Button variant="primary">Left Start</Button>
         </Tooltip>
       </InnerWrap>
@@ -95,8 +96,7 @@ export const Tooltips = () => (
           arrow
           size="big"
           distance={30}
-          position="bottom-start"
-        >
+          position="bottom-start">
           <Button variant="primary">Bottom Start</Button>
         </Tooltip>
       </InnerWrap>
@@ -106,8 +106,7 @@ export const Tooltips = () => (
           arrow
           size="big"
           distance={30}
-          position="bottom"
-        >
+          position="bottom">
           <Button variant="primary">Bottom</Button>
         </Tooltip>
       </InnerWrap>
@@ -117,8 +116,7 @@ export const Tooltips = () => (
           arrow
           size="big"
           distance={30}
-          position="bottom-end"
-        >
+          position="bottom-end">
           <Button variant="primary">Bottom End</Button>
         </Tooltip>
       </InnerWrap>
@@ -136,12 +134,12 @@ export const Usage = () => (
             labelText="Click for details"
             arrow
             size="small"
-            position="bottom-end"
-          >
+            position="bottom-end">
             <span
               className="icon-info_24px"
-              style={{ marginLeft: '5px', color: '#F48245' }}
-            />
+              style={{
+                marginLeft: '5px', color: '#F48245'
+              }}/>
           </Tooltip>
         </Text>
       </Box>
@@ -150,8 +148,7 @@ export const Usage = () => (
           labelText="Tooltip on some text"
           arrow
           size="small"
-          position="top-start"
-        >
+          position="top-start">
           <Text>This is Tooltip title</Text>
         </Tooltip>
       </Box>
@@ -160,12 +157,12 @@ export const Usage = () => (
           labelText="Some more info"
           arrow
           size="small"
-          position="bottom"
-        >
+          position="bottom">
           <span
             className="icon-info_24px"
-            style={{ fontSize: '18px', color: '#2874A4' }}
-          />
+            style={{
+              fontSize: '18px', color: '#2874A4'
+            }}/>
         </Tooltip>
       </Box>
     </Flex>
@@ -174,8 +171,7 @@ export const Usage = () => (
         <Tooltip
           labelText="You can search anything"
           size="big"
-          position="top-start"
-        >
+          position="top-start">
           <Input
             width="100%"
             type="text"
@@ -183,8 +179,7 @@ export const Usage = () => (
             placeholder=""
             label="Search"
             id="search"
-            leftIcon="icon-search_24px"
-          />
+            leftIcon="icon-search_24px"/>
         </Tooltip>
       </Box>
       <Box width={1 / 3} textAlign="center" ml={25}>

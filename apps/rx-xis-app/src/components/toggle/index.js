@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Box from '../box';
 import { Heading } from 'rebass';
 import PropTypes from 'prop-types';
+import Box from '../box';
 import Text from '../typography';
 // TODO: Icon
 // import { QuestionCircle } from 'styled-icons/fa-regular/QuestionCircle';
@@ -15,17 +15,20 @@ import {
 } from './css';
 
 const Toggle = (props) => {
-  const { id, isToggled, onChange, styles : { 
-    toggledOnBgColor,
-    toggledOffBgColor,
-    toggledOnBorderColor,
-    toggledOffBorderColor,
-    switchOnColor,
-    switchOffColor},
+  const {
+    id, isToggled, onChange, styles : {
+      toggledOnBgColor,
+      toggledOffBgColor,
+      toggledOnBorderColor,
+      toggledOffBorderColor,
+      switchOnColor,
+      switchOffColor
+    },
     className,
     label,
     size,
-    error } = props;
+    error
+  } = props;
   return (
     <Flex alignItems="center">
       <Box  style={{borderRadius:'50px'}}>
@@ -34,9 +37,9 @@ const Toggle = (props) => {
             onChange={(e) => {onChange(e)}}
             id={id}
             aria-labelledby={id}
-            aria-checked={isToggled}
-          />
-          <InnerBox toggleStatus={isToggled} 
+            aria-checked={isToggled}/>
+          <InnerBox
+            toggleStatus={isToggled}
             className={`toggle-box ${className}`}
             toggledOnBgColor={toggledOnBgColor}
             toggledOffBgColor={toggledOffBgColor}
@@ -45,28 +48,28 @@ const Toggle = (props) => {
             toggledOnBorder={`2px solid ${toggledOnBorderColor}`}
             toggledOffBorder={`2px solid ${toggledOffBorderColor}`}
             isError={error}
-            size={size}
-            >
-            <CheckIconContainer toggleStatus={"toggleState"}>
+            size={size}>
+            <CheckIconContainer toggleStatus="toggleState">
               <span className="icon_checkmark" />
             </CheckIconContainer>
           </InnerBox>
         </Label>
       </Box>
       {
-        label && <Box style={{marginBottom: size === 'lg' ? '14px': '30px'}}>
-        <ToggleLable
-          ml="40px"
-          fontSize="16px"
-          fontWeight={600}
-          as="label"
-          htmlFor={id}
-          error={error}
-          cursor= 'pointer'
-        >
-          {label}
-        </ToggleLable>
-      </Box>
+        label && (
+          <Box style={{marginBottom: size === 'lg' ? '14px': '30px'}}>
+            <ToggleLable
+              ml="40px"
+              fontSize="16px"
+              fontWeight={600}
+              as="label"
+              htmlFor={id}
+              error={error}
+              cursor= 'pointer'>
+              {label}
+            </ToggleLable>
+          </Box>
+        )
       }
     </Flex>
   );

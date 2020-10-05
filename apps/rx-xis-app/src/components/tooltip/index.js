@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import { TooltipWrapper, ToolTip } from './css';
-import {useSpring, animated} from 'react-spring';
+import {
+  useSpring, animated
+} from 'react-spring';
 import {
   Tooltip as BaseTooltip,
 } from 'react-tippy';
@@ -32,28 +34,26 @@ const Tooltip = ({
   },[])
   return (
     <BaseTooltip
-    title={labelText}
-    position={position}
-    arrow={arrow}
-    arrowSize={arrowSize}
-    delay={delay}
-    distance={distance}
-    hideDelay={hideDelay}
-    size={size}
-    interactive
-    trigger="mouseenter focus"
-    // trigger="click"
-    tabIndex={tabIndex}
-    // theme={theme}
-    >
-    {children}
-  </BaseTooltip>
+      title={labelText}
+      position={position}
+      arrow={arrow}
+      arrowSize={arrowSize}
+      delay={delay}
+      distance={distance}
+      hideDelay={hideDelay}
+      size={size}
+      interactive
+      trigger="mouseenter focus"
+      // trigger="click"
+      tabIndex={tabIndex}>
+      {children}
+    </BaseTooltip>
   )
 }
 
 Tooltip.propTypes = {
   position: PropTypes.oneOf(['top','top-start','top-end','bottom','bottom-start','bottom-end',
-  'left','left-start','left-end','right','right-start','right-end']),
+    'left','left-start','left-end','right','right-start','right-end']),
   arrow: PropTypes.bool,
   arrowSize: PropTypes.oneOf(['small', 'regular', 'big']),
   animation: PropTypes.oneOf(['shift', 'perspective', 'fade', 'scale', 'none']),

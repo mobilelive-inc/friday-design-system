@@ -35,7 +35,7 @@ function Radio(props) {
         color={color}
         {...restProps}>
         {variant === 'checked' && (
-          <InnerBox color={color} borderType={borderType} error={error}></InnerBox>
+          <InnerBox color={color} borderType={borderType} error={error} />
         )}
         <Input
           checked={variant === 'checked'}

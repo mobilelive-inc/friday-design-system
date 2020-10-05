@@ -35,7 +35,8 @@
     "rx:publish": "yarn publish build",
     "rx:storybook": "cd ./apps/rx-xis-app && start-storybook -p 6006",
     "rx:build-storybook": "cd ./apps/rx-xis-app && build-storybook -o ./build",
-    "ng:a11y": "a11y http://localhost:4200/"
+    "ng:a11y": "a11y http://localhost:4200/",
+    "rx:lint": "cd ./apps/rx-xis-app && yarn lint"
   },
   "private": false,
   "dependencies": {

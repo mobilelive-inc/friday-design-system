@@ -25,7 +25,7 @@ export const Selects = () => (
     <Text variant="H5" ml={10}>Select</Text>
     <Flex>
       <Box m={10} width={1/3}>
-      <Select
+        <Select
           name="select"
           placeholder="select on option"
           chevron="icon-keyboard_arrow_down_24px"
@@ -38,7 +38,7 @@ export const Selects = () => (
         </Select>
       </Box>
       <Box m={10} width={1/3}>
-      <Select
+        <Select
           name="select"
           placeholder="select on option"
           chevron="icon-keyboard_arrow_down_24px"
@@ -52,7 +52,7 @@ export const Selects = () => (
         </Select>
       </Box>
       <Box m={10} width={1/3}>
-      <Select
+        <Select
           name="select"
           placeholder="select on option"
           chevron="icon-keyboard_arrow_down_24px"
@@ -67,8 +67,8 @@ export const Selects = () => (
       </Box>
     </Flex>
     <Flex>
-    <Box m={10} width={1/3}>
-      <Select
+      <Box m={10} width={1/3}>
+        <Select
           name="select"
           placeholder="select on option"
           chevron="icon-keyboard_arrow_down_24px"
@@ -82,7 +82,7 @@ export const Selects = () => (
         </Select>
       </Box>
       <Box m={10} width={1/3}>
-      <Select
+        <Select
           name="select"
           placeholder="select on option"
           chevron="icon-keyboard_arrow_down_24px"
@@ -96,7 +96,7 @@ export const Selects = () => (
         </Select>
       </Box>
       <Box m={10} width={1/3}>
-      <Select
+        <Select
           name="select"
           placeholder="select on option"
           chevron="icon-keyboard_arrow_down_24px"
@@ -112,8 +112,8 @@ export const Selects = () => (
       </Box>
     </Flex>
     <Flex>
-    <Box m={10} width={1/3}>
-      <Select
+      <Box m={10} width={1/3}>
+        <Select
           name="select"
           placeholder="select on option"
           chevron="icon-keyboard_arrow_down_24px"
@@ -128,7 +128,7 @@ export const Selects = () => (
         </Select>
       </Box>
       <Box m={10} width={1/3}>
-      <Select
+        <Select
           name="select"
           placeholder="select on option"
           chevron="icon-keyboard_arrow_down_24px"
@@ -143,7 +143,7 @@ export const Selects = () => (
         </Select>
       </Box>
       <Box m={10} width={1/3}>
-      <Select
+        <Select
           name="select"
           placeholder="select on option"
           chevron="icon-keyboard_arrow_down_24px"
@@ -160,8 +160,8 @@ export const Selects = () => (
       </Box>
     </Flex>
     <Flex>
-    <Box m={10} width={1/3}>
-      <Select
+      <Box m={10} width={1/3}>
+        <Select
           name="select"
           placeholder="select on option"
           chevron="icon-keyboard_arrow_down_24px"
@@ -177,7 +177,7 @@ export const Selects = () => (
         </Select>
       </Box>
       <Box m={10} width={1/3}>
-      <Select
+        <Select
           name="select"
           placeholder="select on option"
           chevron="icon-keyboard_arrow_down_24px"
@@ -193,7 +193,7 @@ export const Selects = () => (
         </Select>
       </Box>
       <Box m={10} width={1/3}>
-      <Select
+        <Select
           name="select"
           placeholder="select on option"
           chevron="icon-keyboard_arrow_down_24px"

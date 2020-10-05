@@ -2,7 +2,8 @@ import { colors } from './colors'
 import {
   buttons, borderCurved, borderRounded
 } from './buttons';
-import { iconMarginLeft, iconMarginRight,
+import {
+  iconMarginLeft, iconMarginRight,
   micro, tiny, small, mid, large, xLarge
 } from './spacing';
 

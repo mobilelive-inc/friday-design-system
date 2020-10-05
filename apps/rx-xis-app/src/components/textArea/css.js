@@ -116,8 +116,8 @@ export const LeftIcon = styled.span`
 `
 export const ValidationIcon = styled.span`
   position: absolute;
-  left: ${props => props.position === 'inside' ? 
-  `calc(100% - ${props.theme.space[12]})`: `calc(100% + ${props.theme.space[2]})`};
+  left: ${props => (props.position === 'inside' ?
+    `calc(100% - ${props.theme.space[12]})`: `calc(100% + ${props.theme.space[2]})`)};
   width: ${props => props.theme.space[9]};
   top: ${props => props.theme.space[7]};
   color: ${props => (props.isValid ? 'green': 'red')};

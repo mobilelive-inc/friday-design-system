@@ -24,50 +24,50 @@ export const Radios = () => (
     <Text variant="H5" ml={10}>Radios</Text>
     <Flex>
       <Box m={10}>
-      <Radio name="Radio" value="Radio" color="black" variant={"unchecked"}/>
+        <Radio name="Radio" value="Radio" color="black" variant="unchecked"/>
       </Box>
       <Box m={10} ml={21}>
-      <Radio name="Radio" value="Radio" color="black" variant={"checked"}/>
+        <Radio name="Radio" value="Radio" color="black" variant="checked"/>
       </Box>
     </Flex>
     <Flex>
       <Box m={10}>
-      <Radio name="Radio" value="Radio" color="black" variant={"unchecked"} borderType="rounded"/>
+        <Radio name="Radio" value="Radio" color="black" variant="unchecked" borderType="rounded"/>
       </Box>
       <Box m={10} ml={21}>
-      <Radio name="Radio" value="Radio" ml="20px" color="black" variant={"checked"} borderType="rounded"/>
+        <Radio name="Radio" value="Radio" ml="20px" color="black" variant="checked" borderType="rounded"/>
       </Box>
     </Flex>
     <Flex>
       <Box m={10}>
-      <Radio name="Radio" value="Radio" label="Radio" color="black" variant={"unchecked"}/>
+        <Radio name="Radio" value="Radio" label="Radio" color="black" variant="unchecked"/>
       </Box>
       <Box m={10}>
-      <Radio name="Radio" value="Radio" label="Radio" color="black" variant={"checked"}/>
-      </Box>
-    </Flex>
-    <Flex>
-      <Box m={10}>
-      <Radio name="Radio" value="Radio" label="Radio" color="black" variant={"unchecked"} borderType="rounded"/>
-      </Box>
-      <Box m={10}>
-      <Radio name="Radio" value="Radio" label="Radio" color="black" variant={"checked"} borderType="rounded"/>
+        <Radio name="Radio" value="Radio" label="Radio" color="black" variant="checked"/>
       </Box>
     </Flex>
     <Flex>
       <Box m={10}>
-      <Radio name="Radio" value="Radio" label="Radio" color="black" variant={"unchecked"} error/>
+        <Radio name="Radio" value="Radio" label="Radio" color="black" variant="unchecked" borderType="rounded"/>
       </Box>
       <Box m={10}>
-      <Radio name="Radio" value="Radio" label="Radio" color="black" variant={"checked"} error/>
+        <Radio name="Radio" value="Radio" label="Radio" color="black" variant="checked" borderType="rounded"/>
       </Box>
     </Flex>
     <Flex>
       <Box m={10}>
-      <Radio name="Radio" value="Radio" label="Radio" color="black" variant={"unchecked"} error borderType="rounded"/>
+        <Radio name="Radio" value="Radio" label="Radio" color="black" variant="unchecked" error/>
       </Box>
       <Box m={10}>
-      <Radio name="Radio" value="Radio" label="Radio" color="black" variant={"checked"} error borderType="rounded"/>
+        <Radio name="Radio" value="Radio" label="Radio" color="black" variant="checked" error/>
+      </Box>
+    </Flex>
+    <Flex>
+      <Box m={10}>
+        <Radio name="Radio" value="Radio" label="Radio" color="black" variant="unchecked" error borderType="rounded"/>
+      </Box>
+      <Box m={10}>
+        <Radio name="Radio" value="Radio" label="Radio" color="black" variant="checked" error borderType="rounded"/>
       </Box>
     </Flex>
   </ThemeProvider>

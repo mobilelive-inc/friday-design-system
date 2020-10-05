@@ -37,7 +37,7 @@ export const ToolTip = styled.span`
   font-size: 18px;
   // margin-bottom: 1rem;
   // margin-top: 1rem;
-  border-radius: ${props => props.curved ? props.theme.borderCurved : '0px'};
+  border-radius: ${props => (props.curved ? props.theme.borderCurved : '0px')};
   line-height: 1;
   &[data-position='top-start'],
   &[data-position='top'],
@@ -188,6 +188,6 @@ export const ToolTip = styled.span`
   }
   `};
   ${
-    compose(border, layout, space, typography, color)
-  }
+  compose(border, layout, space, typography, color)
+}
 `
