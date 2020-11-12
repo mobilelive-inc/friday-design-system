@@ -53,13 +53,6 @@
     "angular-sign-up-e2e": {
       "tags": [],
       "implicitDependencies": ["angular-sign-up"]
-    },
-    "angular-portal": {
-      "tags": []
-    },
-    "angular-portal-e2e": {
-      "tags": [],
-      "implicitDependencies": ["angular-portal"]
     }
   }
 }
