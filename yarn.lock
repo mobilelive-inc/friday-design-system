@@ -3868,6 +3868,11 @@
     yargs "^11.0.0"
     yargs-parser "10.0.0"
 
+"@popperjs/core@^2.4.4":
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.5.4.tgz#de25b5da9f727985a3757fd59b5d028aba75841a"
+  integrity sha512-ZpKr+WTb8zsajqgDkvCEWgp6d5eJT6Q63Ng2neTbzBO76Lbe91vX/iVIW9dikq+Fs3yEo+ls4cxeXABD2LtcbQ==
+
 "@purtuga/esm-webpack-plugin@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@purtuga/esm-webpack-plugin/-/esm-webpack-plugin-1.2.1.tgz#7d6ac0a2584b8a619d25a21383ce102afff30fa6"
@@ -21801,6 +21806,13 @@ tinycolor2@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
   integrity sha1-9PrTM0R7wLB9TcjpIJ2POaisd+g=
+
+tippy.js@^6.2.7:
+  version "6.2.7"
+  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-6.2.7.tgz#62fb34eda23f7d78151ddca922b62818c1ab9869"
+  integrity sha512-k+kWF9AJz5xLQHBi3K/XlmJiyu+p9gsCyc5qZhxxGaJWIW8SMjw1R+C7saUnP33IM8gUhDA2xX//ejRSwqR0tA==
+  dependencies:
+    "@popperjs/core" "^2.4.4"
 
 tmp@0.0.33, tmp@^0.0.33:
   version "0.0.33"
