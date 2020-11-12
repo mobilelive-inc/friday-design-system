@@ -90,12 +90,12 @@
     color: var(--black);
     font-size: var(--modal-icon-size);
   }
-  .h5 {
+  .h1, .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 {
     flex-grow: 1;
-    font-weight: bold;
-    color: var(--black);
-    font-size: var(--font-size-lg);
-    text-transform: capitalize;
+    //font-weight: bold;
+    //color: var(--black);
+    //font-size: var(--font-size-lg);
+    //text-transform: capitalize;
   }
 }
 .icnClose {

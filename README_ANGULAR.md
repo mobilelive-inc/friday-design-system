@@ -57,6 +57,10 @@ Create a component/directive/service
 ```   
 nx g component dark-button --project=angular-portal 
 nx g service theme-switcher --project=angular-portal  
+nx g module sign-in --route=sign-in --module=app --project=angular-portal
+nx g module shared --module=app --project=angular-portal
+nx g component shared/components/footer --module=shared --prefix=xyz --project=angular-portal 
+nx g component shared/components/header --module=shared --prefix=xyz --project=angular-portal 
 ```
 
 ## Additional information

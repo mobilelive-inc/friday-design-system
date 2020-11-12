@@ -97,4 +97,16 @@
 
   --input-group-addon-color: var(--input-height-border);
   --input-group-addon-bg: var(--gray-light);
+
+  --thumb-dimensions: 2rem;
+  --range-slider-height: 0.75rem;
+  --range-border-radius: 2.5rem;
+  --range-bg-color: #e6e6e6;
+  --thumb-fill-color: var(--primary);
+  --thumb-width: var(--thumb-dimensions);
+  --thumb-height: var(--thumb-dimensions);
+
+  --radioColor: var(--gray-dark);
+  --dropdown-hover-bg: var(--primary);
+  --dropdown-hover-color: var(--white);
 }

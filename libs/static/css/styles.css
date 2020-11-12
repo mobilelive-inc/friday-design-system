@@ -2452,7 +2452,7 @@ input[type='button'].btn--block {
   color: var(--danger);
   flex-basis: 95%;
 }
-.errorOptionx {
+.errorOption {
   font-size: var(--font-size-lg);
   color: var(--danger);
 }
@@ -2480,7 +2480,7 @@ textarea.formControl:focus {
   font-size: var(--font-size-lg);
   color: var(--success);
 }
-.formControlWrap.intIcn .errorOptionx {
+.formControlWrap.intIcn .errorOption {
   position: absolute;
   right: 10px;
   top: 10px;

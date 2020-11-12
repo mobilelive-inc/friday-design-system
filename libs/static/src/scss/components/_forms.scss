@@ -49,10 +49,12 @@
 
   // Disabled and read-only inputs
   &:disabled,
+  &[aria-disabled='true'],
   &[readonly] {
+    pointer-events: none;
     background-color: var(--input-disabled-bg);
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
-    opacity: 1;
+    opacity: 0.5;
   }
 
   //&--curved {
@@ -115,6 +117,107 @@
   }
 }
 
+
+
+
+.slider-wrapper {
+  outline: none;
+  display: block;
+  position: relative;
+  height: var(--range-slider-height);
+}
+.slider-track-wrapper {
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  height: var(--range-slider-height);
+  border-radius: var(--range-border-radius);
+}
+.slider-track-background {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  height: var(--range-slider-height);
+  background-color: var(--range-bg-color);
+}
+.slider-track-fill {
+  width: 100%;
+  position: absolute;
+  transform-origin: 0 0;
+  height: var(--range-slider-height);
+  background-color: var(--primary-dark);
+  border-radius: var(--range-border-radius);
+}
+.slider-ticks-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  height: var(--range-slider-height);
+}
+.slider-ticks {
+  width: 100%;
+  height: var(--range-slider-height);
+}
+.slider-thumb-container {
+  top: 50%;
+  height: 0;
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+}
+.slider-focus-ring {
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+}
+.slider-thumb {
+  top: 50%;
+  left: 100%;
+  position: absolute;
+  border-radius: 50%;
+  width: var(--thumb-width);
+  height: var(--thumb-height);
+  transform: translate(-50%, -50%);
+  background-color: var(--thumb-fill-color);
+  box-shadow: var(--card-shadow-horizontalLength)
+    var(--card-shadow-verticalLength) var(--card-shadow-blurRadius)
+    var(--card-shadow-color);
+}
+.slider:not(.slider-disabled):not(.slider-sliding) .slider-thumb-label,
+.slider:not(.slider-disabled):not(.slider-sliding) .slider-thumb { cursor: grab;}
+.slider-thumb-label {
+  top: -40px;
+  right: -16px;
+  width: 32px;
+  height: 32px;
+  display: none;
+  border-radius: 50%;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+.accent .slider-thumb,
+.accent .slider-thumb-label,
+.accent .slider-track-fill { background-color: var(--range-fill-color); }
+.slider-horizontal .slider-thumb-label-text { transform: rotate(-45deg); }
+.accent .slider-thumb-label-text { color: #fff; }
+.slider-thumb-label-text {
+  z-index: 1;
+  opacity: 0;
+}
+
+
+
+
+
+
+
 .searchInputBtn {
   padding: 0;
   @include font-size(var(--font-size-sm));
@@ -130,10 +233,11 @@
 .text-danger {
   @include font-size(var(--font-size-tiny));
   color: var(--danger);
-  flex-basis: 95%;
+  flex-basis: 100%;
+  padding-right: 1.75rem;
 }
 
-.errorOptionx {
+.errorOption {
   @include font-size(var(--font-size-lg));
   color: var(--danger);
 }
@@ -166,7 +270,7 @@ textarea.formControl {
       color: var(--success);
     }
 
-    .errorOptionx {
+    .errorOption {
       position: absolute;
       right: 10px;
       top: 10px;
@@ -226,6 +330,24 @@ input[type='search'] {
   flex: 1;
   border: solid var(--input-border-color);
   border-width: var(--input-border-width);
+
+  /* &:has(.formControl:disabled),
+  &:has(.formControl:readonly),
+  &[aria-disabled="true"],
+  &[readonly] {
+    pointer-events: none;
+    border-color: red;
+    background-color: var(--input-disabled-bg) !important;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 0.5;
+  } */
+
+  &.disabled,
+  &.readonly {
+    pointer-events: none;
+    background-color: var(--input-disabled-bg);
+    opacity: 0.2;
+  }
 
   &.hasBg {
     border-color: transparent;
@@ -326,8 +448,8 @@ input[type='search'] {
 
     .clearCrossBtn {
       position: absolute;
-      left: calc(100% - 40px) !important;
-      width: 10px;
+      left: calc(100% - 50px) !important;
+      width: 26px;
       top: 0;
       font-size: 10px;
       z-index: 20;
@@ -769,7 +891,7 @@ label {
         -ms-transform: rotate(0deg) scale(1);
         transform: rotate(0deg) scale(1);
         opacity: 1;
-        border: 2px solid var(--gray-dark);
+        border: 2px solid var(--radioColor);
         border-radius: var(--border-radius-none);
 
         &:after {
@@ -810,7 +932,7 @@ label {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: currentColor;
+        background-color: var(--radioColor);
         -webkit-transform: rotate(0deg) scale(0);
         -ms-transform: rotate(0deg) scale(0);
         transform: rotate(0deg) scale(0);

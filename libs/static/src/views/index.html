@@ -103,7 +103,7 @@
         <!-- Navbar -->
         <div class="logo">
           <h4 class="ds-name">Friday</h4>
-          <a c href="javascript:void(0)" class="logo-mini">
+          <a href="javascript:void(0)" class="logo-mini">
             <img
               class="img-fluid"
               src="https://images.ctfassets.net/6krz4kg7somr/4rbWt1PlMkYo4wM0AG404E/3f7fd80ac8a62bd48a235d98bc04127e/logo.png"
@@ -152,6 +152,15 @@
           <!--Card-->
           <module href="/components/_partial.card.html"></module>
           <!--Card-->
+
+          <!--Progressbar-->
+          <module href="/components/_partial.progressbar.html"></module>
+          <!--Progressbar-->
+
+          <!--Notification List-->
+          <module href="/components/_partial.notification-list.html"></module>
+          <!--Notification List-->
+          
 
           <!--Grids-->
           <div class="my-mid" id="Grid_sections">
@@ -498,6 +507,17 @@
         modal28.classList.remove('showModal');
         modal29.classList.remove('showModal');
         modal_backdrop.classList.remove('showModal');
+      }
+
+      var progressBar = document.getElementById('progress-bar');
+      const progressBarWidth = progressBar.style.width && progressBar.style.width.replace('%', '');
+      const widthPercentage = parseFloat(progressBarWidth);
+      if(widthPercentage <= 10){
+        var steperText = document.getElementById('steper-text');
+        steperText.setAttribute("style", "left: 0;transform: translateX(0);");
+      }else if(widthPercentage >= 90) {
+        var steperText = document.getElementById('steper-text');
+        steperText.setAttribute("style", "transform: translateX(-100%);");
       }
     </script>
   </body>

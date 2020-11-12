@@ -59,7 +59,89 @@
         </div>
       </div>
 
+      <h5 class="h5 mb-tiny">Input with Variations</h5>
       <!--Input Variations-->
+      <div class="jumbotron">
+        <h5 class="h5 mb-tiny">Disabled and Readonly Input</h5>
+        <p>
+          Use additional classes on Input holder
+          <code>( disabled, readonly )</code> and add
+          <code>readonly or aria-disabled="true"</code> on input
+        </p>
+        <div class="row mb-tiny">
+          <div class="formGroup col-3">
+            <label for="emailReadonly" class="sr-only">Email Disabled</label>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center readonly">
+                <input
+                  type="email"
+                  class="formControl"
+                  placeholder="Readonly Input"
+                  id="emailReadonly"
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="formGroup col-3">
+            <label for="emaildisabled" class="sr-only">Email Readonly</label>
+            <div class="formControlWrap d-flex flex-wrap align-items-center">
+              <div class="formControlHolder d-flex align-items-center disabled">
+                <input
+                  type="email"
+                  class="formControl"
+                  placeholder="Disabled Input"
+                  id="emaildisabled"
+                  aria-disabled="true"
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrap-collabsible">
+          <input id="collapsible0" class="toggle" type="checkbox" />
+          <label for="collapsible0" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+              <pre style="font-family: 'Montserrat'; font-size: 12.5pt;">
+<span style="color: rgb(0, 0, 128);">&lt;div <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="formGroup col-3"</span>&gt;</span>
+  <span style="color: rgb(0, 0, 128);">&lt;label <span style="color: rgb(0, 0, 255);">for</span><span style="color: rgb(0, 128, 0);">="emailReadonly"</span> <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="sr-only"</span>&gt;<span style="color: var(--pre-color);">Email Readonly</span>&lt;/label&gt;</span>
+    <span style="color: rgb(0, 0, 128);">&lt;div <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="formControlWrap d-flex flex-wrap align-items-center"</span>&gt;</span>
+    <span style="color: rgb(0, 0, 128);">&lt;div <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="formControlHolder d-flex align-items-center readonly"</span>&gt;</span>
+      <span style="color: rgb(0, 0, 128);">&lt;input
+        <span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">="email"</span>
+        <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="formControl"</span>
+        <span style="color: rgb(0, 0, 255);">placeholder</span><span style="color: rgb(0, 128, 0);">="Readonly Input"</span>
+        <span style="color: rgb(0, 0, 255);">id</span><span style="color: rgb(0, 128, 0);">="emailReadonly"</span>
+        <span style="color: rgb(0, 0, 255);">readonly</span><span style="color: rgb(0, 128, 0);">="readonly"</span>
+      /&gt;</span>
+    <span style="color: rgb(0, 0, 128);">&lt;/div&gt;</span>
+  <span style="color: rgb(0, 0, 128);">&lt;/div&gt;</span>
+<span style="color: rgb(0, 0, 128);">&lt;/div&gt;</span>
+
+<span style="color: rgb(0, 0, 128);">&lt;div <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="formGroup col-3"</span>&gt;</span>
+  <span style="color: rgb(0, 0, 128);">&lt;label <span style="color: rgb(0, 0, 255);">for</span><span style="color: rgb(0, 128, 0);">="emailDisabled"</span> <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="sr-only"</span>&gt;<span style="color: var(--pre-color);">Email Disabled</span>&lt;/label&gt;</span>
+    <span style="color: rgb(0, 0, 128);">&lt;div <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="formControlWrap d-flex flex-wrap align-items-center"</span>&gt;</span>
+    <span style="color: rgb(0, 0, 128);">&lt;div <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="formControlHolder d-flex align-items-center disabled"</span>&gt;</span>
+      <span style="color: rgb(0, 0, 128);">&lt;input
+        <span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">="email"</span>
+        <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="formControl"</span>
+        <span style="color: rgb(0, 0, 255);">placeholder</span><span style="color: rgb(0, 128, 0);">="Disabled Input"</span>
+        <span style="color: rgb(0, 0, 255);">id</span><span style="color: rgb(0, 128, 0);">="emailDisabled"</span>
+        <span style="color: rgb(0, 0, 255);">aria-disabled</span><span style="color: rgb(0, 128, 0);">="true"</span>
+        <span style="color: rgb(0, 0, 255);">readonly</span><span style="color: rgb(0, 128, 0);">="readonly"</span>
+      /&gt;</span>
+    <span style="color: rgb(0, 0, 128);">&lt;/div&gt;</span>
+  <span style="color: rgb(0, 0, 128);">&lt;/div&gt;</span>
+<span style="color: rgb(0, 0, 128);">&lt;/div&gt;</span>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="jumbotron">
         <h5 class="h5 mb-tiny">Input with Variations</h5>
         <p>
@@ -315,6 +397,7 @@
             <label for="FirstName">Label</label>
             <div class="formControlWrap d-flex flex-wrap align-items-center">
               <div class="icnRight formControlHolder d-flex align-items-center">
+                <span class="icon-cross p-tiny"></span>
                 <input
                   type="text"
                   class="formControl"
@@ -328,7 +411,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny hide icon-info errorOptionx"></span>
+              <span class="pl-tiny hide icon-info errorOption"></span>
               <span class="pl-tiny hide icon-check successOption"></span>
             </div>
           </div>
@@ -353,7 +436,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny hide icon-info errorOptionx"></span>
+              <span class="pl-tiny hide icon-info errorOption"></span>
               <span class="pl-tiny hide icon-check successOption"></span>
             </div>
           </div>
@@ -378,7 +461,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny hide icon-info errorOptionx"></span>
+              <span class="pl-tiny hide icon-info errorOption"></span>
               <span class="pl-tiny hide icon-check successOption"></span>
             </div>
           </div>
@@ -403,7 +486,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny hide icon-info errorOptionx"></span>
+              <span class="pl-tiny hide icon-info errorOption"></span>
               <span class="pl-tiny hide icon-check successOption"></span>
             </div>
           </div>
@@ -420,8 +503,9 @@
               ><span style="color:rgb(0, 0, 128);">&lt;div </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;formGroup &quot;</span><span style="color:rgb(0, 0, 128);">&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;label </span><span style="color:rgb(0, 0, 255);">for</span><span style="color:rgb(0, 128, 0);">=&quot;FirstName&quot;</span><span style="color:rgb(0, 0, 128);">&gt;</span>Label<span style="color:rgb(0, 0, 128);">&lt;/label&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;div </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;formControlWrap d-flex flex-wrap align-items-center&quot;</span><span style="color:rgb(0, 0, 128);">&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;div </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;icnRight formControlHolder d-flex align-items-center&quot;</span><span style="color:rgb(0, 0, 128);">&gt;
-</span><span style="color:rgb(0, 0, 128);">      &lt;input
+</span><span style="color:rgb(0, 0, 128);">    &lt;div </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;icnRight formControlHolder d-flex align-items-center&quot;</span><span style="color:rgb(0, 0, 128);">&gt;</span>
+    <span style="color: rgb(0, 0, 128);">&lt;span <span style="color: rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">="icon-cross p-tiny"</span>&gt;&lt;/span&gt;</span>
+<span style="color:rgb(0, 0, 128);">      &lt;input
 </span><span style="color:rgb(0, 0, 128);">        </span><span style="color:rgb(0, 0, 255);">type</span><span style="color:rgb(0, 128, 0);">=&quot;text&quot;
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;formControl&quot;
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">id</span><span style="color:rgb(0, 128, 0);">=&quot;FirstName&quot;
@@ -434,7 +518,7 @@
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">aria-label</span><span style="color:rgb(0, 128, 0);">=&quot;Label&quot;
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-check successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
 </span><span style="color:rgb(0, 0, 128);">&lt;/div&gt;
@@ -460,7 +544,7 @@
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">aria-label</span><span style="color:rgb(0, 128, 0);">=&quot;Label&quot;
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-check successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
 </span><span style="color:rgb(0, 0, 128);">&lt;/div&gt;
@@ -486,7 +570,7 @@
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">aria-label</span><span style="color:rgb(0, 128, 0);">=&quot;Label&quot;
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-check successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
 </span><span style="color:rgb(0, 0, 128);">&lt;/div&gt;
@@ -512,7 +596,7 @@
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">aria-label</span><span style="color:rgb(0, 128, 0);">=&quot;Label&quot;
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-check successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
 </span><span style="color:rgb(0, 0, 128);">&lt;/div&gt;
@@ -548,7 +632,7 @@
                   required
                 />
               </div>
-              <span class="pl-tiny hide icon-info errorOptionx"></span>
+              <span class="pl-tiny hide icon-info errorOption"></span>
               <span class="pl-tiny show icon-check successOption"></span>
               <span class="hide pt-micro text-danger">Error Message</span>
             </div>
@@ -574,7 +658,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny show icon-info errorOptionx"></span>
+              <span class="pl-tiny show icon-info errorOption"></span>
               <span class="pl-tiny hide icon-check successOption"></span>
               <span class="pt-micro text-danger">Error Message</span>
             </div>
@@ -600,7 +684,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny hide icon-info errorOptionx"></span>
+              <span class="pl-tiny hide icon-info errorOption"></span>
               <span class="pl-tiny show icon-check successOption"></span>
               <span class="pt-micro text-danger hide">Error Message</span>
             </div>
@@ -626,7 +710,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny hide icon-info errorOptionx"></span>
+              <span class="pl-tiny hide icon-info errorOption"></span>
               <span class="pl-tiny show icon-check successOption"></span>
               <span class="pt-micro text-danger hide">Error Message</span>
             </div>
@@ -658,7 +742,7 @@
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">required
 </span><span style="color:rgb(0, 0, 255);">      </span><span style="color:rgb(0, 0, 128);">/&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-check successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;hide pt-micro text-danger&quot;</span><span style="color:rgb(0, 0, 128);">&gt;</span>Error Message<span style="color:rgb(0, 0, 128);">&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
@@ -685,7 +769,7 @@
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">aria-label</span><span style="color:rgb(0, 128, 0);">=&quot;Label&quot;
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-info errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-info errorOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-check successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pt-micro text-danger&quot;</span><span style="color:rgb(0, 0, 128);">&gt;</span>Error Message<span style="color:rgb(0, 0, 128);">&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
@@ -712,7 +796,7 @@
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">aria-label</span><span style="color:rgb(0, 128, 0);">=&quot;Label&quot;
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-check successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pt-micro text-danger hide&quot;</span><span style="color:rgb(0, 0, 128);">&gt;</span>Error Message<span style="color:rgb(0, 0, 128);">&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
@@ -739,7 +823,7 @@
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">aria-label</span><span style="color:rgb(0, 128, 0);">=&quot;Label&quot;
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-check successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pt-micro text-danger hide&quot;</span><span style="color:rgb(0, 0, 128);">&gt;</span>Error Message<span style="color:rgb(0, 0, 128);">&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
@@ -773,7 +857,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny hide icon-info errorOptionx"></span>
+              <span class="pl-tiny hide icon-info errorOption"></span>
               <span class="pl-tiny show icon-check successOption"></span>
               <span class="text-danger hide">Error Message</span>
             </div>
@@ -799,7 +883,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny hide icon-info errorOptionx"></span>
+              <span class="pl-tiny hide icon-info errorOption"></span>
               <span class="pl-tiny show icon-check successOption"></span>
               <span class="hide text-danger">Error Message</span>
             </div>
@@ -825,7 +909,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny show icon-info errorOptionx"></span>
+              <span class="pl-tiny show icon-info errorOption"></span>
               <span class="pl-tiny hide icon-check successOption"></span>
               <span class="text-danger">Error Message</span>
             </div>
@@ -850,7 +934,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny hide icon-info errorOptionx"></span>
+              <span class="pl-tiny hide icon-info errorOption"></span>
               <span class="pl-tiny show icon-check successOption"></span>
               <span class="text-danger hide">Error Message</span>
             </div>
@@ -882,7 +966,7 @@
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">aria-label</span><span style="color:rgb(0, 128, 0);">=&quot;Label&quot;
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-check successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;text-danger hide&quot;</span><span style="color:rgb(0, 0, 128);">&gt;</span>Error Message<span style="color:rgb(0, 0, 128);">&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
@@ -909,7 +993,7 @@
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">aria-label</span><span style="color:rgb(0, 128, 0);">=&quot;Label&quot;
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-info errorOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-check successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;hide text-danger&quot;</span><span style="color:rgb(0, 0, 128);">&gt;</span>Error Message<span style="color:rgb(0, 0, 128);">&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
@@ -936,7 +1020,7 @@
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">aria-label</span><span style="color:rgb(0, 128, 0);">=&quot;Label&quot;
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-info errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-info errorOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-check successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;text-danger&quot;</span><span style="color:rgb(0, 0, 128);">&gt;</span>Error Message<span style="color:rgb(0, 0, 128);">&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
@@ -963,7 +1047,7 @@
 </span><span style="color:rgb(0, 128, 0);">        </span><span style="color:rgb(0, 0, 255);">aria-label</span><span style="color:rgb(0, 128, 0);">=&quot;Label&quot;
 </span><span style="color:rgb(0, 128, 0);">      </span><span style="color:rgb(0, 0, 128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;/div&gt;
-</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-info errorOptionx&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny show icon-info errorOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;pl-tiny hide icon-check successOption&quot;</span><span style="color:rgb(0, 0, 128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">    &lt;span </span><span style="color:rgb(0, 0, 255);">class</span><span style="color:rgb(0, 128, 0);">=&quot;text-danger&quot;</span><span style="color:rgb(0, 0, 128);">&gt;</span>Error Message<span style="color:rgb(0, 0, 128);">&lt;/span&gt;
 </span><span style="color:rgb(0, 0, 128);">  &lt;/div&gt;
@@ -1116,6 +1200,37 @@
       </div>
       <!--/Input form Fields with backgrounds-->
 
+      <!--Input range slider-->
+      <div class="jumbotron">
+        <h5 class="h5 mb-tiny">Range Slider</h5>
+        <div class="mb-mid">
+
+          <div class="d-flex justify-content-between pb-tiny">
+            <span>$0</span>
+            <span>$2,000,000</span>
+          </div>
+          <div class="slider-wrapper">
+            <div class="slider-track-wrapper">
+              <div class="slider-track-background"></div>
+              <div class="slider-track-fill" style="transform: translateX(0px) scale3d(0.52, 1, 1);"></div>
+            </div>
+            <div class="slider-ticks-container">
+              <div class="slider-ticks" style="background-size: 0% 2px; transform: translateZ(0px) translateX(0%);"></div>
+            </div>
+            <div class="slider-thumb-container" style="transform: translateX(-48%);">
+              <div class="slider-focus-ring"></div>
+              <div class="slider-thumb" role="slider" tabindex="0"></div>
+              <div class="slider-thumb-label">
+                <span class="slider-thumb-label-text">52</span>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <!--/Input range slider-->
+
       <!--Text area-->
       <div class="jumbotron">
         <h3 class="mb-tiny">Text Area</h3>
@@ -1195,7 +1310,7 @@
                   id="textarea1"
                 ></textarea>
               </div>
-              <span class="icon-info errorOptionx"></span>
+              <span class="icon-info errorOption"></span>
               <span class="text-danger">Error Message</span>
             </div>
           </div>
@@ -1304,7 +1419,7 @@
 </span><span style="color: rgb(0,128, 0);">      </span><span style="color: rgb(0,0, 128);">&gt;</span>
 <span style="color: rgb(0,0, 128);">     &lt;/textarea&gt;
 </span><span style="color: rgb(0,0, 128);">   &lt;/div&gt;
-</span><span style="color: rgb(0,0, 128);">   &lt;span </span><span style="color: rgb(0,0, 255);">class</span><span style="color: rgb(0,128, 0);">=&quot;icon-info errorOptionx&quot;</span><span style="color: rgb(0,0, 128);">&gt;&lt;/span&gt;
+</span><span style="color: rgb(0,0, 128);">   &lt;span </span><span style="color: rgb(0,0, 255);">class</span><span style="color: rgb(0,128, 0);">=&quot;icon-info errorOption&quot;</span><span style="color: rgb(0,0, 128);">&gt;&lt;/span&gt;
 </span><span style="color: rgb(0,0, 128);">   &lt;span </span><span style="color: rgb(0,0, 255);">class</span><span style="color: rgb(0,128, 0);">=&quot;text-danger&quot;</span><span style="color: rgb(0,0, 128);">&gt;</span>Error Message<span style="color: rgb(0,0, 128);">&lt;/span&gt;
 </span><span style="color: rgb(0,0, 128);">  &lt;/div&gt;
 </span><span style="color: rgb(0,0, 128);">&lt;/div&gt;
@@ -1348,7 +1463,7 @@
                   placeholder="Text"
                 ></textarea>
               </div>
-              <span class="pl-tiny icon-info errorOptionx"></span>
+              <span class="pl-tiny icon-info errorOption"></span>
               <span class="text-danger">Error Message</span>
             </div>
           </div>
@@ -1402,7 +1517,7 @@
 </span><span style="color: rgb(0,128,0);">     </span><span style="color: rgb(0,0,255);"></span><span style="color: rgb(0,128,0);">=&quot;textarea&quot;
 </span><span style="color: rgb(0,128,0);">   </span><span style="color: rgb(0,0,128);">&gt;&lt;/textarea&gt;
 </span><span style="color: rgb(0,0,128);">  &lt;/div&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;span </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;pl-tiny icon-info errorOptionx&quot;</span><span style="color: rgb(0,0,128);">&gt;&lt;/span&gt;
+</span><span style="color: rgb(0,0,128);">  &lt;span </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;pl-tiny icon-info errorOption&quot;</span><span style="color: rgb(0,0,128);">&gt;&lt;/span&gt;
 </span><span style="color: rgb(0,0,128);">  &lt;span </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;text-danger&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Error Message<span style="color: rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color: rgb(0,0,128);"> &lt;/div&gt;
 </span><span style="color: rgb(0,0,128);">&lt;/div&gt;
@@ -1461,7 +1576,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="hide pl-tiny icon-info errorOptionx"></span>
+              <span class="hide pl-tiny icon-info errorOption"></span>
               <span class="hide text-danger">Please Select any option</span>
             </div>
           </div>
@@ -1489,7 +1604,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="hide pl-tiny icon-info errorOptionx"></span>
+              <span class="hide pl-tiny icon-info errorOption"></span>
               <span class="text-danger hide">Please Select any option</span>
             </div>
           </div>
@@ -1517,7 +1632,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny icon-info errorOptionx"></span>
+              <span class="pl-tiny icon-info errorOption"></span>
               <span class="text-danger">Please Select any option</span>
             </div>
           </div>
@@ -1555,7 +1670,7 @@
 </span><span style="color:rgb(0,128,0);">      </span><span style="color:rgb(0,0,255);">aria-label</span><span style="color:rgb(0,128,0);">=&quot;Label&quot;
 </span><span style="color:rgb(0,128,0);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
-</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOptionx&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOption&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;hide text-danger&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Please Select any option<span style="color:rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">&lt;/div&gt;
 </span></pre>
@@ -1587,7 +1702,7 @@
 </span><span style="color:rgb(0,128,0);">      </span><span style="color:rgb(0,0,255);">aria-label</span><span style="color:rgb(0,128,0);">=&quot;Label&quot;
 </span><span style="color:rgb(0,128,0);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
-</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOptionx&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOption&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;text-danger hide&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Please Select any option<span style="color:rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">&lt;/div&gt;
 </span></pre>
@@ -1619,7 +1734,7 @@
 </span><span style="color:rgb(0,128,0);">      </span><span style="color:rgb(0,0,255);">aria-label</span><span style="color:rgb(0,128,0);">=&quot;Label&quot;
 </span><span style="color:rgb(0,128,0);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
-</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;pl-tiny icon-info errorOptionx&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;pl-tiny icon-info errorOption&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;text-danger&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Please Select any option<span style="color:rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">&lt;/div&gt;
 </span></pre>
@@ -1656,7 +1771,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="hide pl-tiny icon-info errorOptionx"></span>
+              <span class="hide pl-tiny icon-info errorOption"></span>
               <span class="text-danger hide">Please Select any option</span>
             </div>
           </div>
@@ -1689,7 +1804,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="pl-tiny icon-info errorOptionx"></span>
+              <span class="pl-tiny icon-info errorOption"></span>
               <span class="text-danger">Please Select any option</span>
             </div>
           </div>
@@ -1732,7 +1847,7 @@
 </span><span style="color:rgb(0,128,0);">      </span><span style="color:rgb(0,0,255);">aria-label</span><span style="color:rgb(0,128,0);">=&quot;Label&quot;
 </span><span style="color:rgb(0,128,0);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
-</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOptionx&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOption&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;text-danger hide&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Please Select any option<span style="color:rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
 
@@ -1768,7 +1883,7 @@
 </span><span style="color:rgb(0,128,0);">      </span><span style="color:rgb(0,0,255);">aria-label</span><span style="color:rgb(0,128,0);">=&quot;Label&quot;
 </span><span style="color:rgb(0,128,0);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
-</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;pl-tiny icon-info errorOptionx&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;pl-tiny icon-info errorOption&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;text-danger&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Please Select any option<span style="color:rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">&lt;/div&gt;
 </span></pre>
@@ -1809,7 +1924,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="hide pl-tiny icon-info errorOptionx"></span>
+              <span class="hide pl-tiny icon-info errorOption"></span>
               <span class="text-danger hide">Please Select any option</span>
             </div>
           </div>
@@ -1842,7 +1957,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="hide pl-tiny icon-info errorOptionx"></span>
+              <span class="hide pl-tiny icon-info errorOption"></span>
               <span class="text-danger hide">Please Select any option</span>
             </div>
           </div>
@@ -1875,7 +1990,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="hide pl-tiny icon-info errorOptionx"></span>
+              <span class="hide pl-tiny icon-info errorOption"></span>
               <span class="text-danger hide">Please Select any option</span>
             </div>
           </div>
@@ -1908,7 +2023,7 @@
                   aria-label="Label"
                 ></button>
               </div>
-              <span class="hide pl-tiny icon-info errorOptionx"></span>
+              <span class="hide pl-tiny icon-info errorOption"></span>
               <span class="hide text-danger">Please Select any option</span>
             </div>
           </div>
@@ -1952,7 +2067,7 @@
 </span><span style="color:rgb(0,128,0);">      </span><span style="color:rgb(0,0,255);">aria-label</span><span style="color:rgb(0,128,0);">=&quot;Label&quot;
 </span><span style="color:rgb(0,128,0);">    </span><span style="color:rgb(0,0,128);">&gt;&lt;/button&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
-</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOptionx&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOption&quot;</span><span style="color:rgb(0,0,128);">&gt;&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">  &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;text-danger hide&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Please Select any option<span style="color:rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color:rgb(0,0,128);">&lt;/div&gt;
 </span></pre>
@@ -1989,7 +2104,7 @@
 </span><span style="color: rgb(0,128,0);">      </span><span style="color: rgb(0,0,255);">aria-label</span><span style="color: rgb(0,128,0);">=&quot;Label&quot;
 </span><span style="color: rgb(0,128,0);">    </span><span style="color: rgb(0,0,128);">&gt;&lt;/button&gt;
 </span><span style="color: rgb(0,0,128);">  &lt;/div&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;span </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOptionx&quot;</span><span style="color: rgb(0,0,128);">&gt;&lt;/span&gt;
+</span><span style="color: rgb(0,0,128);">  &lt;span </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOption&quot;</span><span style="color: rgb(0,0,128);">&gt;&lt;/span&gt;
 </span><span style="color: rgb(0,0,128);">  &lt;span </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;text-danger hide&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Please Select any option<span style="color: rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color: rgb(0,0,128);">&lt;/div&gt;
 </span></pre>
@@ -2026,7 +2141,7 @@
 </span><span style="color: rgb(0,128,0);">      </span><span style="color: rgb(0,0,255);">aria-label</span><span style="color: rgb(0,128,0);">=&quot;Label&quot;
 </span><span style="color: rgb(0,128,0);">    </span><span style="color: rgb(0,0,128);">&gt;&lt;/button&gt;
 </span><span style="color: rgb(0,0,128);">  &lt;/div&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;span </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOptionx&quot;</span><span style="color: rgb(0,0,128);">&gt;&lt;/span&gt;
+</span><span style="color: rgb(0,0,128);">  &lt;span </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOption&quot;</span><span style="color: rgb(0,0,128);">&gt;&lt;/span&gt;
 </span><span style="color: rgb(0,0,128);">  &lt;span </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;text-danger hide&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Please Select any option<span style="color: rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color: rgb(0,0,128);">&lt;/div&gt;
 </span></pre>
@@ -2063,7 +2178,7 @@
 </span><span style="color: rgb(0,128,0);">      </span><span style="color: rgb(0,0,255);">aria-label</span><span style="color: rgb(0,128,0);">=&quot;Label&quot;
 </span><span style="color: rgb(0,128,0);">    </span><span style="color: rgb(0,0,128);">&gt;&lt;/button&gt;
 </span><span style="color: rgb(0,0,128);">  &lt;/div&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;span </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOptionx&quot;</span><span style="color: rgb(0,0,128);">&gt;&lt;/span&gt;
+</span><span style="color: rgb(0,0,128);">  &lt;span </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;hide pl-tiny icon-info errorOption&quot;</span><span style="color: rgb(0,0,128);">&gt;&lt;/span&gt;
 </span><span style="color: rgb(0,0,128);">  &lt;span </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;fSELECT
                 hide text-danger&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>Please Select any option<span style="color: rgb(0,0,128);">&lt;/span&gt;
 </span><span style="color: rgb(0,0,128);">&lt;/div&gt;
@@ -3212,7 +3327,7 @@
                 aria-label="Label"
               ></button>
             </div>
-            <span class="hide pl-tiny icon-info errorOptionx"></span>
+            <span class="hide pl-tiny icon-info errorOption"></span>
             <span class="hide text-danger">Please Select any option</span>
           </div>
         </div>
@@ -3375,7 +3490,7 @@
         </span><span style="color: rgb(0, 0, 255); ">class=</span><span style="color: rgb(0, 128, 0); ">&quot;icon-clear clearCrossBtn&quot;
         </span><span style="color: rgb(0, 0, 255); ">aria-label=</span><span style="color: rgb(0, 128, 0); ">&quot;Label&quot;
      </span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">button</span>&gt;
-     &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class=</span><span style="color: rgb(0, 128, 0); ">&quot;icon-info errorOptionx&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
+     &lt;<span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class=</span><span style="color: rgb(0, 128, 0); ">&quot;icon-info errorOption&quot;</span>&gt;&lt;/<span style="color: rgb(0, 0, 128); ">span</span>&gt;
    &lt;/<span style="color: rgb(0, 0, 128); ">div</span>&gt;
   &lt;/<span style="color: rgb(0, 0, 128); ">div</span>&gt;
   <span style="color:#808080;font-style:italic;">&lt;!--/Simple Select--&gt;

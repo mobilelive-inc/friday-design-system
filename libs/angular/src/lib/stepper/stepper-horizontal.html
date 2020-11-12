@@ -1,0 +1,14 @@
+<ng-container
+    *ngTemplateOutlet="headerTemplate; context: {$implicit: {selectedIndex: selectedIndex, stepsCount: steps.length}}"></ng-container>
+
+<div class="fds-horizontal-content-container">
+  <div *ngFor="let step of steps; let i = index"
+       class="fds-horizontal-stepper-content"
+       [@stepTransition]="_getAnimationDirection(i)"
+       (@stepTransition.done)="_animationDone.next($event)"
+       [id]="_getStepContentId(i)"
+       [attr.aria-labelledby]="_getStepLabelId(i)"
+       [attr.aria-expanded]="selectedIndex === i">
+    <ng-container [ngTemplateOutlet]="step.content"></ng-container>
+  </div>
+</div>

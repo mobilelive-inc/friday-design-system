@@ -4,12 +4,15 @@
   --card-color: #282828;
   --divider-color: #121212;
   --white-color: #ffffff;
-  --theme-color: #f48245;
+  --theme-color: var(--primary);
+  --secondary-color: var(--secondary);
   --border-color: #bcbbba;
+  --bg-card: var(--white-color);
+  --primary-border-color: var(--primary);
+  --secondary-border-color: var(--secondary);
 
-  --card-border-color: var(--border-color);
 
-  --btn-color: var(--theme-color);
+  --card-btn-color: var(--theme-color);
 
   // Box Shadow
   --card-shadow-horizontalLength: 0;
@@ -19,13 +22,19 @@
   --card-shadow-color: rgba(0, 0, 0, 0.12);
 
   // Solid Box Shadow
-  /* --card-solidshadow-marginTop: 1rem;
+  --card-solidshadow-marginTop: 1rem;
   --card-solidshadow-marginRight: 1rem;
   --card-solidshadow-marginBottom: 1rem;
-  --card-solidshadow-marginLeft: 1rem; */
+  --card-solidshadow-marginLeft: 1rem;
+
   --card-solidShadow-horizontalLength: 1rem;
   --card-solidShadow-verticalLength: 1rem;
+  --card-sm-solidShadow-horizontalLength: 0.5rem;
+  --card-sm-solidShadow-verticalLength: 0.5rem;
   --card-solidShadow-blurRadius: 0;
   --card-solidShadow-spread: 0;
-  --card-solidShadow-color: var(--theme-color);
+  --card-solidShadow-primary: var(--theme-color);
+  --card-solidShadow-secondary: var(--secondary-color);
 }
+
+

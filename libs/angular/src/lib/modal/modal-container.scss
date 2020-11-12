@@ -1,0 +1,135 @@
+.cdk-global-overlay-wrapper, .cdk-overlay-container {
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.cdk-overlay-backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity .4s cubic-bezier(.25,.8,.25,1);
+  opacity: 0;
+}
+
+.cdk-overlay-container {
+  position: fixed;
+  z-index: 1000;
+}
+
+.cdk-overlay-dark-backdrop {
+  background: rgba(0,0,0,.32);
+}
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+  opacity: 1;
+}
+
+.cdk-global-overlay-wrapper, .cdk-overlay-pane {
+  display: flex;
+  position: absolute;
+  z-index: 1000;
+}
+
+.cdk-global-overlay-wrapper, .cdk-overlay-container {
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+// Scrollable for body
+.cdk-global-overlay-wrapper {
+  .modalContent > * {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: calc(100vh - 3.5rem);
+  }
+
+  .modalBody {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+//$mat-dialog-padding: 24px !default;
+//$mat-dialog-border-radius: 4px !default;
+//$mat-dialog-max-height: 65vh !default;
+//$mat-dialog-button-margin: 8px !default;
+//
+//.fds-modal-container {
+//  display: block;
+//  padding: $mat-dialog-padding;
+//  border-radius: $mat-dialog-border-radius;
+//  box-sizing: border-box;
+//  overflow: auto;
+//  outline: 0;
+//
+//  // The dialog container should completely fill its parent overlay element.
+//  width: 100%;
+//  height: 100%;
+//
+//  // Since the dialog won't stretch to fit the parent, if the height
+//  // isn't set, we have to inherit the min and max values explicitly.
+//  min-height: inherit;
+//  max-height: inherit;
+//
+//  @include cdk-high-contrast(active, off) {
+//    outline: solid 1px;
+//  }
+//}
+//
+//.mat-dialog-content {
+//  display: block;
+//  margin: 0 $mat-dialog-padding * -1;
+//  padding: 0 $mat-dialog-padding;
+//  max-height: $mat-dialog-max-height;
+//  overflow: auto;
+//  -webkit-overflow-scrolling: touch;
+//}
+//
+//.mat-dialog-title {
+//  margin: 0 0 20px;
+//  display: block;
+//}
+//
+//.mat-dialog-actions {
+//  padding: 8px 0;
+//  display: flex;
+//  flex-wrap: wrap;
+//  min-height: 52px;
+//  align-items: center;
+//
+//  // Pull the actions down to avoid their padding stacking with the dialog's padding.
+//  margin-bottom: -$mat-dialog-padding;
+//
+//  &[align='end'] {
+//    justify-content: flex-end;
+//  }
+//
+//  &[align='center'] {
+//    justify-content: center;
+//  }
+//
+//  .mat-button-base + .mat-button-base,
+//  .mat-mdc-button-base + .mat-mdc-button-base {
+//    margin-left: $mat-dialog-button-margin;
+//
+//    [dir='rtl'] & {
+//      margin-left: 0;
+//      margin-right: $mat-dialog-button-margin;
+//    }
+//  }
+//}
+
+

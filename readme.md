@@ -22,25 +22,35 @@ There are several sub-projects with implementations, you can find details by the
  Typography Colors |   ✅      |   ✅      |  ✅      |   ✅    
  Layout & Grid System |   ✅      |   ✅      |  ✅      |   ✅  
  Buttons |   ✅      |   ✅      |  ✅      |   ✅
- Input  |   ✅      |   ✅      |  ✅      |  🏗
- Textarea  |   ✅      |   ✅      |  ✅      |  
- Select  |   ✅      |   ✅      |  ✅      |  
- Checkbox |   ✅      |   ✅      |  ✅      | 
- Radio Buttons  |  ✅      |   ✅      |  ✅      |
- Toggle Buttons  |  ✅      |   ✅      |  ✅      |
+ Input  |   ✅      |   ✅      |  ✅      |  ✅ 
+ Textarea  |   ✅      |   ✅      |  ✅      |  ✅
+ Select  |   ✅      |   ✅      |  ✅      |   ✅
+ Autocomplete |   🎨     |         |             | ✅
+ Checkbox |   ✅      |   ✅      |  ✅      |  🏗
+ Radio Buttons  |  ✅      |   ✅      |  ✅      |  ✅
+ Toggle Buttons  |  ✅      |   ✅      |  ✅      |  - 
+ Slider       |   ✅     |         |             |  ✅
+ Progress     |  ✅      |           |           |   ✅
  Form        |  ✅      |   ✅      |  ✅      |   ✅  
- Tooltips |   ✅      |   ✅      |  ✅      |  
- Popovers |   ✅      |   ✅      |  ✅      |  
- Modal |   ✅      |   🏗     |  🏗     |  
- Date Picker |   🎨      |         |        |  
- Media|   ✅      |   ✅      |  ✅      |  
- Social Icons |   ✅      |         |        |  
- Card Box |   🎨     |         |        |  
+ Tooltips |   ✅      |   ✅      |  ✅      |   ✅
+ Popovers |   ✅      |   ✅      |  ✅      |   ✅
+ Modal |   ✅      |   ✅      |  🏗     |   ✅ 
+ Date Picker |   🎨      |         |        |  ❎
+ Media|   ✅      |   ✅      |  ✅      |  ❎
+ Social Icons |   ✅      |         |        |  ❎  
+ Card Box |   🎨     |         |        |  ❎
   
 Legend:
- ✅ - Done
+
+ ✅ - Implemented
+ 
+ ❎ - Code from HTML+CSS should be used
+ 
  🏗 - Development in progress
+ 
  🎨 - Specification in progress
+ 
+ 
 
 ## Requirements
 The MobileLIVE Friday Design System team aims to support browsers and screen reader combinations across all internal team segments. 

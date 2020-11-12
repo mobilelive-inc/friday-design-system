@@ -5,7 +5,9 @@
 //
 
 .border {
-  border: var(--border-width) solid var(--border-color);
+  border-width: var(--border-width);
+  border-style: solid;
+  border-color: var(--border-color);
 }
 .border-top {
   border-top: var(--border-width) solid var(--border-color);

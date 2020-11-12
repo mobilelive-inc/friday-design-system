@@ -52,6 +52,69 @@ h6,
   @include font-size(var(--h6-font-size));
 }
 
+@media screen and (max-width: 768px) {
+  h1,
+  .h1 {
+    @include font-size(var(--h1-font-size-screen-sm));
+  }
+
+  h2,
+  .h2 {
+    @include font-size(var(--h2-font-size-screen-sm));
+  }
+
+  h3,
+  .h3 {
+    @include font-size(var(--h3-font-size-screen-sm));
+  }
+
+  h4,
+  .h4 {
+    @include font-size(var(--h4-font-size-screen-sm));
+  }
+
+  h5,
+  .h5 {
+    @include font-size(var(--h5-font-size-screen-sm));
+  }
+
+  h6,
+  .h6 {
+    @include font-size(var(--h6-font-size-screen-sm));
+  }
+}
+@media screen and (max-width: 576px) {
+  h1,
+  .h1 {
+    @include font-size(var(--h1-font-size-screen-xs));
+  }
+
+  h2,
+  .h2 {
+    @include font-size(var(--h2-font-size-screen-xs));
+  }
+
+  h3,
+  .h3 {
+    @include font-size(var(--h3-font-size-screen-xs));
+  }
+
+  h4,
+  .h4 {
+    @include font-size(var(--h4-font-size-screen-xs));
+  }
+
+  h5,
+  .h5 {
+    @include font-size(var(--h5-font-size-screen-xs));
+  }
+
+  h6,
+  .h6 {
+    @include font-size(var(--h6-font-size-screen-xs));
+  }
+}
+
 // Type display classes
 .display-1 {
   @include font-size(var(--display1-size));

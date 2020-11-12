@@ -1,0 +1,14 @@
+//Notification styles
+@import '../../../theme/notification-list';
+
+.icon-bell {
+  color: var(--icon-color);
+  font-size: var(--icon-font-size);
+}
+.text {
+  span {
+    font-size: var(--time-font-size);
+    color: var(--gray);
+    display: block;
+  }
+}

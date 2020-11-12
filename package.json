@@ -114,6 +114,7 @@
     "style-loader": "^1.2.1",
     "styled-components": "^5.1.1",
     "styled-system": "^5.1.5",
+    "tippy.js": "^6.2.7",
     "tslib": "^1.10.0",
     "unicorn": "0.0.1",
     "url-loader": "^4.1.0",

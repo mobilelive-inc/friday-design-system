@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { SignUpComponent } from './sign-up.component';
 import { FdsAngularModule } from "@fds/angular";
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   declarations: [SignUpComponent],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     FdsAngularModule,
     RouterModule.forChild(routes)
   ]

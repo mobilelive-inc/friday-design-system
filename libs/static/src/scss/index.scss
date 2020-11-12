@@ -29,11 +29,14 @@
 @import 'components/media';
 @import 'components/modals';
 @import 'components/tooltip';
+@import 'components/progressbar';
+@import 'components/notification-list';
 
 //utilities
 @import 'utilitis/align';
 @import 'utilitis/borders';
 @import 'utilitis/flex';
+@import 'utilitis/display';
 @import 'utilitis/position';
 @import 'utilitis/sizing';
 @import 'utilitis/spacing';

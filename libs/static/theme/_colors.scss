@@ -8,21 +8,12 @@
   --gray-dark: #282828;
   --black: #191919;
   --backdrop: #000000;
-  --bg-light: var(--off-white);
-  --primary-text: var(--black);
-  --secondary-text: var(--white);
 
   --orange: #f48245;
   --orange-lighter: #fef3ec;
   --orange-light: #f9c0a2;
   --orange-dark: #c36837;
   --orange-darker: #311a0e;
-
-  //default
-  --primary-lighter: var(--orange-lighter);
-  --primary-light: var(--orange-light);
-  --primary-dark: var(--orange-dark);
-  --primary-darker: var(--orange-darker);
 
   --blue: #55a2d9;
   --blue-lighter: #eef6fb;
@@ -60,40 +51,45 @@
   --green-dark: #2f9745;
   --green-darker: #247636;
 
-  --headings-color: var(--primary-dark);
-
-  //ML Social Button Colors
+  //ML Social Button Colors and Hover Colors
   --google-red: #dc4b3e;
-  --google-blue: #4285f4;
-  --facebook: #3a5a99;
-  --twitter: #1da1f2;
-  --linkedin: #0076b2;
-  --instagram: #d50060;
-
-  //ML Social Button Hover Colors
   --google-red-hover: #ba3327;
+  --google-blue: #4285f4;
   --google-blue-hover: #2463cb;
+  --facebook: #3a5a99;
   --facebook-hover: #1d4084;
+  --twitter: #1da1f2;
   --twitter-hover: #1087d0;
+  --linkedin: #0076b2;
   --linkedin-hover: #004471;
+  --instagram: #d50060;
   --instagram-hover: #aa004d;
+
+  --bg-light: var(--off-white);
+  --primary-text: var(--black);
+  --secondary-text: var(--white);
+
+  //default
+  --primary-lighter: var(--orange-lighter);
+  --primary-light: var(--orange-light);
+  --primary-dark: var(--orange-dark);
+  --primary-darker: var(--orange-darker);
 
   //ML Standard Colors
   --primary: var(--orange);
-  --secondary: var(--gray);
-  --success: var(--green);
-  --info: var(--cyan);
-  --warning: var(--lemon);
-  --danger: var(--red);
-  --light: var(--gray-light);
-  --dark: var(--gray-dark);
-
   --primary-hover: var(--orange-dark);
+  --secondary: var(--gray);
   --secondary-hover: var(--gray-dark);
-  --info-hover: var(--cyan-dark);
+  --success: var(--green);
   --success-hover: var(--lime-dark);
-  --danger-hover: var(--red-dark);
+  --info: var(--cyan);
+  --info-hover: var(--cyan-dark);
+  --warning: var(--lemon);
   --warning-hover: var(--lemon-dark);
+  --danger: var(--red);
+  --danger-hover: var(--red-dark);
+  --light: var(--gray-light);
   --light-hover: var(--gray);
+  --dark: var(--gray-dark);
   --dark-hover: var(--gray-light);
 }

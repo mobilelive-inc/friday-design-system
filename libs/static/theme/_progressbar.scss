@@ -1,0 +1,14 @@
+//Card styles
+
+:root {
+  --progress-radius-rounded: 0;
+  --progressbar-height: 1rem;
+  --status-font-size: var(--base-font-size);
+  --bg-progressbar: var(--primary-lighter);
+}
+
+@each $color, $value in $theme-colors {
+  .progress-#{$color} {
+	background-color: $value;
+  }
+}

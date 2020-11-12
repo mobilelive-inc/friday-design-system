@@ -2,7 +2,13 @@
 
 .divider {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   height: var(--divider-height);
-  background: var(--divider-bg);
-  margin: var(--divider-margin) 0;
+  &.divider-sm {
+    height: var(--divider-sm-height);
+  }
+  &.divider-lg {
+    height: var(--divider-lg-height);
+  }
 }

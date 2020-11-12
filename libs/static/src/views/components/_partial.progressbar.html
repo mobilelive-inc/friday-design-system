@@ -1,0 +1,41 @@
+<div id="progressbar">
+  <div class="infoBlockPiece">
+    <h2>Progress</h2>
+    <p>
+      Documentation and examples for using ML custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+    </p>
+    <p>
+      Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don’t use <code>the HTML5 &lt;progress&gt; element,</code> ensuring you can stack progress bars, animate them, and place text labels over them.
+    </p>
+    <ul>
+      <li>We use the <code>.progress</code> as a wrapper to indicate the max value of the progress bar.</li>
+      <li>We use the inner <code>.progress-bar</code> to indicate the progress so far.</li>
+      <li>The <code>.progress-bar</code> requires an inline style, utility class, or custom CSS to set their width.</li>
+      <li>The <code>.progress-bar</code> also requires some <code>role</code> and <code>aria</code> attributes to make it accessible.</li>
+    </ul>
+    <p>Put that all together, and you have the following examples</p>
+    <div class="jumbotron">
+      <div class="pb-mid">
+        <div class="progress mb-mid">
+          <div id="progress-bar" class="progress-bar progress-primary" style="width: 50%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <span id="steper-text" class="steper-text pt-tiny">(2 of 6)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap-collabsible">
+        <input id="progressbarbarcollabsible" class="toggle" type="checkbox" />
+        <label for="progressbarbarcollabsible" class="lbl-toggle"></label>
+        <div class="collapsible-content">
+          <div class="content-inner">
+            <pre style="font-family: Montserrat; font-size: 12pt;">
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="progress-bar progress-primary"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="width: 50%"</span> <span style="color: rgb(0,0,255);">role</span><span style="color: rgb(0,128,0);">="progressbar"</span> <span style="color: rgb(0,0,255);">aria-valuenow</span><span style="color: rgb(0,128,0);">="0"</span> <span style="color: rgb(0,0,255);">aria-valuemin</span><span style="color: rgb(0,128,0);">="0"</span> <span style="color: rgb(0,0,255);">aria-valuemax</span><span style="color: rgb(0,128,0);">="100"</span>&gt;</span>
+  <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="pt-tiny"</span>>(2 of 6)&lt;/span&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

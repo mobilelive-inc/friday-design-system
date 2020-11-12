@@ -11,8 +11,7 @@
   --input-btn-focus-width: 0.2rem;
   //--input-btn-focus-color: rgba(--component-active-bg, 'primary');
   --input-btn-focus-color: map_get(--theme-colors, primary);
-  --input-btn-focus-box-shadow: 0 0 0 var(--input-btn-focus-width)
-    var(--input-btn-focus-color);
+  --input-btn-focus-box-shadow: 0 0 0 var(--input-btn-focus-width) var(--input-btn-focus-color);
   --input-btn-padding-y-sm: 0.25rem;
   --input-btn-padding-x-sm: 0.5rem;
   --input-btn-font-size-sm: var(--font-size-sm);
@@ -50,8 +49,7 @@
   --btn-line-height-lg: var(--input-btn-line-height-lg);
   --btn-border-width: var(--input-btn-border-width);
   --btn-font-weight: var(--font-weight-bold);
-  --btn-box-shadow: inset 0 1px 0 rgba(var(--white), 0.15),
-    0 1px 1px rgba(var(--dark), 0.075);
+  --btn-box-shadow: inset 0 1px 0 rgba(var(--white), 0.15), 0 1px 1px rgba(var(--dark), 0.075);
   --btn-focus-width: var(--input-btn-focus-width);
   --btn-focus-box-shadow: --input-btn-focus-box-shadow;
   --btn-disabled-opacity: 0.65;
@@ -66,22 +64,99 @@
   --btn-border-radius-lg: var(--border-radius-lg);
   --btn-border-radius-sm: var(--border-radius-sm);
 
-  --btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  //FDS Primary Button Colors
+  --btn-primary-color: var(--dark);
+  --btn-primary-bg-color: var(--primary);
+  --btn-primary-border-color: var(--primary);
+
+  --btn-primary-hover-color: var(--white);
+  --btn-primary-hover-bg-color: var(--primary-hover);
+  --btn-primary-hover-border-color: var(--primary-hover);
+
+  //FDS Secondary Button Colors
+  --btn-secondary-color: var(--secondary);
+  --btn-secondary-bg-color: var(--secondary);
+  --btn-secondary-border-color: var(--secondary);
+
+  --btn-secondary-hover-color: var(--white);
+  --btn-secondary-hover-bg-color: var(--secondary-hover);
+  --btn-secondary-hover-border-color: var(--secondary-hover);
+
+  //FDS Success Button Colors
+  --btn-success-color: var(--success);
+  --btn-success-bg-color: var(--success);
+  --btn-success-border-color: var(--success);
+
+  --btn-success-hover-color: var(--white);
+  --btn-success-hover-bg-color: var(--success-hover);
+  --btn-success-hover-border-color: var(--success-hover);
+
+  //FDS Danger Button Colors
+  --btn-danger-color: var(--danger);
+  --btn-danger-bg-color: var(--danger);
+  --btn-danger-border-color: var(--danger);
+
+  --btn-danger-hover-color: var(--white);
+  --btn-danger-hover-bg-color: var(--danger-hover);
+  --btn-danger-hover-border-color: var(--danger-hover);
+
+  //FDS Warning Button Colors
+  --btn-warning-color: var(--warning);
+  --btn-warning-text-color: var(--dark);
+  --btn-warning-bg-color: var(--warning);
+  --btn-warning-border-color: var(--warning);
+  
+  --btn-warning-hover-color: var(--white);
+  --btn-warning-hover-bg-color: var(--warning-hover);
+  --btn-warning-hover-border-color: var(--warning-hover);
+
+  //FDS Info Button Colors
+  --btn-info-color: var(--info);
+  --btn-info-text-dark: var(--dark);
+  --btn-info-text-white: var(--white);
+  --btn-info-bg-color: var(--info);
+  --btn-info-text-color: var(--info);
+  --btn-info-border-color: var(--info);
+
+  --btn-info-hover-color: var(--white);
+  --btn-info-hover-bg-color: var(--info-hover);
+  --btn-info-hover-border-color: var(--info-hover);
+
+  //FDS Light Button Colors
+  --btn-light-text-dark: var(--dark);
+  --btn-light-text-light: var(--white);
+  --btn-light-color: var(--light);
+  --btn-light-bg-color: var(--light);
+  --btn-light-border-color: var(--light);
+
+  --btn-light-hover-color: var(--white);
+  --btn-light-hover-bg-color: var(--light-hover);
+  --btn-light-hover-border-color: var(--light-hover);
+
+  //FDS Dark Button Colors
+  --btn-dark-text-light: var(--white);
+  --btn-dark-text-dark: var(--dark);
+  --btn-dark-bg-color: var(--dark);
+  --btn-dark-border-color: var(--dark);
+
+  --btn-dark-hover-color: var(--dark);
+  --btn-dark-hover-bg-color: var(--dark-hover);
+  --btn-dark-hover-border-color: var(--dark-hover);
 
   //ML Social Button Colors
   --googleColorRed: var(--google-red);
-  --googleColorBlue: var(--google-blue);
-  --facebookColor: var(--facebook);
-  --twitterColor: var(--twitter);
-  --linkedinColor: var(--linkedin);
-  --instagramColor: var(--instagram);
-
-  //ML Social Button Hover Colors
   --googleColorRedHover: var(--google-red-hover);
+  --googleColorBlue: var(--google-blue);
   --googleColorBlueHover: var(--google-blue-hover);
+  --facebookColor: var(--facebook);
   --facebookColorHover: var(--facebook-hover);
+  --twitterColor: var(--twitter);
   --twitterColorHover: var(--twitter-hover);
+  --linkedinColor: var(--linkedin);
   --linkedinColorHover: var(--linkedin-hover);
+  --instagramColor: var(--instagram);
   --instagramColorHover: var(--instagram-hover);
+  --social-button-width: 3.5rem;
 }

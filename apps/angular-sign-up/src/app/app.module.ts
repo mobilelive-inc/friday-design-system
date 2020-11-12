@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { RouterModule } from "@angular/router";
-import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
+import { ThemeSwitcherComponent } from "./theme-switcher/theme-switcher.component";
 
 @NgModule({
   declarations: [AppComponent, ThemeSwitcherComponent],
@@ -11,9 +11,12 @@ import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.componen
     BrowserModule,
     RouterModule.forRoot([
       { path: "sign-up", loadChildren: () => import("./sign-up/sign-up.module").then(m => m.SignUpModule) },
-      { path: 'success', loadChildren: () => import('./success-page/success-page.module').then(m => m.SuccessPageModule) },
-      { path: '**', redirectTo: '/sign-up', pathMatch: 'full' },
-    ], { initialNavigation: "enabled" })
+      {
+        path: "success",
+        loadChildren: () => import("./success-page/success-page.module").then(m => m.SuccessPageModule)
+      },
+      { path: "**", redirectTo: "/sign-up", pathMatch: "full" }
+    ], { initialNavigation: "enabled", useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]

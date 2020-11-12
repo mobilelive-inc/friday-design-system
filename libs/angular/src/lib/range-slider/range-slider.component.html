@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-between pb-small slider-labels" *ngIf="showMinMaxLabels">
+  <span class="slider-label-min">{{formatValue(min)}}</span>
+  <span class="slider-label-max">{{formatValue(max)}}</span>
+</div>
+<!--
+// On Safari starting to slide temporarily triggers text selection mode which
+// show the wrong cursor. We prevent it by stopping the `selectstart` event.
+ "(selectstart)": "$event.preventDefault()",
+-->
+<div class="slider-wrapper" #sliderWrapper
+	 (focus)="_onFocus()"
+	 (blur)="_onBlur()"
+	 (keydown)="_onKeydown($event)"
+	 (keyup)="_onKeyup()"
+	 (mouseenter)="_onMouseenter()"
+	 (selectstart)="$event.preventDefault()"
+	 role="slider"
+	 [tabIndex]="tabIndex"
+	 [attr.aria-disabled]='disabled'
+	 [attr.aria-valuemax]="max"
+	 [attr.aria-valuemin]="min"
+	 [attr.aria-valuenow]="value"
+	 [attr.aria-orientation]="'horizontal'"
+>
+  <div class="slider-track-wrapper">
+	<div class="slider-track-background"></div>
+	<div class="slider-track-fill" [ngStyle]="_getTrackFillStyles()"></div>
+  </div>
+  <div class="slider-ticks-container">
+	<div class="slider-ticks" [ngStyle]="_getTicksContainerStyles()"></div>
+  </div>
+  <div class="slider-thumb-container" [ngStyle]="_getThumbContainerStyles()">
+	<div class="slider-focus-ring"></div>
+	<div class="slider-thumb"></div>
+	<div class="slider-thumb-label">
+	  <span class="slider-thumb-label-text">{{formatValue(value)}}</span>
+	</div>
+  </div>
+</div>

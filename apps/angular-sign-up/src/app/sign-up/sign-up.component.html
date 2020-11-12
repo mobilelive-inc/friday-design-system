@@ -1,0 +1,92 @@
+<form class="col-9 p-mid mx-auto" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="row mb-small">
+	<div class="formGroup col-6">
+	  <fds-form-field>
+		<fds-label>First Name</fds-label>
+		<input type="text" fdsInput [required]="true" formControlName="firstName"/>
+		<fds-error *ngIf="getControl('firstName')?.hasError('required')">First Name is required</fds-error>
+	  </fds-form-field>
+	</div>
+	<div class="formGroup col-6">
+	  <fds-form-field>
+		<fds-label>Last Name</fds-label>
+		<input type="text" fdsInput [required]="true" formControlName="lastName"/>
+		<fds-error *ngIf="getControl('lastName')?.hasError('required')">Last Name is required</fds-error>
+	  </fds-form-field>
+	</div>
+  </div>
+
+  <div class="row mb-small">
+	<div class="formGroup col-12">
+	  <fds-form-field [clearBtn]="true">
+		<fds-label>Email</fds-label>
+		<input type="text" fdsInput [required]="true" formControlName="email"/>
+		<fds-error *ngIf="getControl('email')?.hasError('email') && !getControl('email')?.hasError('required')">Please
+		  enter a valid email address
+		</fds-error>
+		<fds-error *ngIf="getControl('email')?.hasError('required')">Email is required</fds-error>
+	  </fds-form-field>
+	</div>
+
+	<div class="formGroup col-12">
+	  <fds-form-field [clearBtn]="true">
+		<fds-label>Hobby</fds-label>
+		<select fdsInput formControlName="hobby">
+		  <option value=""></option>
+		  <option>Pottery</option>
+		  <option>Gardening</option>
+		  <option>Art</option>
+		  <option>Photography</option>
+		  <option>Entrepreneurship</option>
+		</select>
+	  </fds-form-field>
+	</div>
+  </div>
+
+  <div class="row mb-small">
+	<div class="formGroup col-12">
+	  <fds-form-field>
+		<fds-label>Password</fds-label>
+		<input type="password" fdsInput [required]="true" formControlName="password"/>
+		<fds-error *ngIf="getControl('password')?.hasError('required')">Password is required</fds-error>
+	  </fds-form-field>
+	</div>
+	<div class="formGroup col-12">
+	  <fds-form-field>
+		<fds-label>Confirm Password</fds-label>
+		<input type="password" fdsInput [required]="true" formControlName="passwordConfirm"/>
+		<fds-error *ngIf="getControl('passwordConfirm')?.hasError('required')">Confirm Password is required</fds-error>
+		<fds-error *ngIf="!passwordsAreEqual()">Confirm Password value doesn't match with Password</fds-error>
+	  </fds-form-field>
+	</div>
+  </div>
+
+  <!--	  <div class="row mb-small">-->
+  <!--simple select-->
+  <!--		<div class="formGroup col-12 mr-mid">-->
+  <!--		  <label for="gender">Gender</label>-->
+  <!--		  <div class="formControlWrap d-flex align-items-center flex-wrap">-->
+  <!--			<div class="formControlHolder formControlHolder__select">-->
+  <!--			  <select class="formControl" name="course" id="gender" required="">-->
+  <!--				<option value="">Your Gender</option>-->
+  <!--				<option>Male</option>-->
+  <!--				<option>Female</option>-->
+  <!--				<option>Other</option>-->
+  <!--			  </select>-->
+  <!--			  <button type="button" class="icon-clear clearCrossBtn" aria-label="Label"></button>-->
+  <!--			  <button type="button" class="icon-today eventBtn" aria-label="Label"></button>-->
+  <!--			</div>-->
+  <!--			<span class="hide pl-tiny icon-info errorOption"></span>-->
+  <!--			<span class="hide text-danger">Please Select any option</span>-->
+  <!--		  </div>-->
+  <!--		</div>-->
+  <!--/Simple Select-->
+  <!--	  </div>-->
+
+  <div class="row">
+	<div class="col-12 d-flex justify-content-center">
+	  <button type="submit" class="btn btn__primary expand-lg-up"
+			  [disabled]="!isSubmitEnable() || isLoading">{{submitButtonTitle}}</button>
+	</div>
+  </div>
+</form>
