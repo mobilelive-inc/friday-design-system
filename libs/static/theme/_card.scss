@@ -1,0 +1,31 @@
+//Card styles
+
+:root {
+  --card-color: #282828;
+  --divider-color: #121212;
+  --white-color: #ffffff;
+  --theme-color: #f48245;
+  --border-color: #bcbbba;
+
+  --card-border-color: var(--border-color);
+
+  --btn-color: var(--theme-color);
+
+  // Box Shadow
+  --card-shadow-horizontalLength: 0;
+  --card-shadow-verticalLength: 2px;
+  --card-shadow-blurRadius: 8px;
+  --card-shadow-spread: 0;
+  --card-shadow-color: rgba(0, 0, 0, 0.12);
+
+  // Solid Box Shadow
+  /* --card-solidshadow-marginTop: 1rem;
+  --card-solidshadow-marginRight: 1rem;
+  --card-solidshadow-marginBottom: 1rem;
+  --card-solidshadow-marginLeft: 1rem; */
+  --card-solidShadow-horizontalLength: 1rem;
+  --card-solidShadow-verticalLength: 1rem;
+  --card-solidShadow-blurRadius: 0;
+  --card-solidShadow-spread: 0;
+  --card-solidShadow-color: var(--theme-color);
+}

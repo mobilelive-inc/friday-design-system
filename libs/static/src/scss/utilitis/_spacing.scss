@@ -17,23 +17,23 @@
     @each $prop, $abbrev in (margin: m, padding: p) {
       @each $size, $length in $global-spacers {
         .#{$abbrev}#{$infix}-#{$size} {
-          #{$prop}: $length !important;
+          #{$prop}: $length;
         }
         .#{$abbrev}t#{$infix}-#{$size},
         .#{$abbrev}y#{$infix}-#{$size} {
-          #{$prop}-top: $length !important;
+          #{$prop}-top: $length;
         }
         .#{$abbrev}r#{$infix}-#{$size},
         .#{$abbrev}x#{$infix}-#{$size} {
-          #{$prop}-right: $length !important;
+          #{$prop}-right: $length;
         }
         .#{$abbrev}b#{$infix}-#{$size},
         .#{$abbrev}y#{$infix}-#{$size} {
-          #{$prop}-bottom: $length !important;
+          #{$prop}-bottom: $length;
         }
         .#{$abbrev}l#{$infix}-#{$size},
         .#{$abbrev}x#{$infix}-#{$size} {
-          #{$prop}-left: $length !important;
+          #{$prop}-left: $length;
         }
       }
     }
@@ -42,46 +42,46 @@
     @each $size, $length in $global-spacers {
       @if $size != 0 {
         .m#{$infix}-n#{$size} {
-          margin: -$length !important;
+          margin: -$length;
         }
         .mt#{$infix}-n#{$size},
         .my#{$infix}-n#{$size} {
-          margin-top: -$length !important;
+          margin-top: -$length;
         }
         .mr#{$infix}-n#{$size},
         .mx#{$infix}-n#{$size} {
-          margin-right: -$length !important;
+          margin-right: -$length;
         }
         .mb#{$infix}-n#{$size},
         .my#{$infix}-n#{$size} {
-          margin-bottom: -$length !important;
+          margin-bottom: -$length;
         }
         .ml#{$infix}-n#{$size},
         .mx#{$infix}-n#{$size} {
-          margin-left: -$length !important;
+          margin-left: -$length;
         }
       }
     }
 
     // Some special margin utils
     .m#{$infix}-auto {
-      margin: auto !important;
+      margin: auto;
     }
     .mt#{$infix}-auto,
     .my#{$infix}-auto {
-      margin-top: auto !important;
+      margin-top: auto;
     }
     .mr#{$infix}-auto,
     .mx#{$infix}-auto {
-      margin-right: auto !important;
+      margin-right: auto;
     }
     .mb#{$infix}-auto,
     .my#{$infix}-auto {
-      margin-bottom: auto !important;
+      margin-bottom: auto;
     }
     .ml#{$infix}-auto,
     .mx#{$infix}-auto {
-      margin-left: auto !important;
+      margin-left: auto;
     }
   }
 }
