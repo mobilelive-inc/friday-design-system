@@ -17,6 +17,11 @@ module.exports = {
       lines: 80
     }
   },
+  transform: {
+    '^.+\\.[tj]sx?$': [
+      'babel-jest'
+    ],
+  },
   roots: ['./src'],
   setupFilesAfterEnv: [here('./setupTests.js')],
 };
