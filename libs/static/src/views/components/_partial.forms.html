@@ -1200,11 +1200,101 @@
       </div>
       <!--/Input form Fields with backgrounds-->
 
+      <!--Input File Upload-->
+      <div class="jumbotron">
+        <h5 class="h5 mb-small">File Upload Input</h5>
+        <div class="mb-mid row">
+          <div class="col">
+            <div class="fds-fileUploade-holder position-relative">
+              <label for="uploader" class="fds-fileUploade-label mb-none w-100 d-flex flex-column justify-content-center align-items-center font-weight-normal">
+                <figure><span class="fds-uploadIcon icon-download"></span></figure>
+                <p class="mb-none">Drag and Drop your or <span class="text__primary font-weight-bold px-tiny">Browse</span> your files</p>
+              </label>
+              <input class="position-absolute invisible top-0" id="uploader" type="file" multiple/>
+            </div>
+          </div>
+          <div class="col">
+            <div class="fds-uploadList">
+              <div class="fds-uploadItem mb-sm">
+                <div class="pq-fileInfo d-flex align-items-center justify-content-between">
+                  <div class="pq-fileNameExt d-flex align-items-center fontSize-sm">
+                    <span class="pq-fileName">FileName</span>
+                    <span class="pq-fileExt">.pdf</span>
+                  </div>
+                  <div class="d-flex">
+                    <span class="fontSize-sm text__danger">Error</span>
+                    <a class="icon-delete text__primary fontSize-lg ml-tiny text--decoration-none" href="javascript:void(0)"></a>
+                  </div>
+                </div>
+
+                <div class="fds-file-progress mt-tiny">
+                  <div class="fds-file-progressBar bg__primary" role="progressbar" style="width: 0%"></div>
+                </div>
+              </div>
+              <div class="fds-uploadItem mb-sm">
+                <div class="pq-fileInfo d-flex align-items-center justify-content-between">
+                  <div class="pq-fileNameExt d-flex align-items-center fontSize-sm">
+                    <span class="pq-fileName">FileName</span>
+                    <span class="pq-fileExt">.pdf</span>
+                  </div>
+                  <div class="d-flex">
+                    <span class="fontSize-sm text__warning">Uploading in Progress</span>
+                    <a class="icon-delete text__primary fontSize-lg ml-tiny text--decoration-none" href="javascript:void(0)"></a>
+                  </div>
+                </div>
+
+                <div class="fds-file-progress mt-tiny">
+                  <div class="fds-file-progressBar bg__primary" role="progressbar" style="width: 88%"></div>
+                </div>
+              </div>
+              <div class="fds-uploadItem">
+                <div class="pq-fileInfo d-flex align-items-center justify-content-between">
+                  <div class="pq-fileNameExt d-flex align-items-center fontSize-sm">
+                    <span class="pq-fileName">FileName</span>
+                    <span class="pq-fileExt">.pdf</span>
+                  </div>
+                  <div class="d-flex">
+                    <span class="fontSize-sm text__success">uploaded</span>
+                    <a class="icon-add-curved text__primary fontSize-lg ml-tiny text--decoration-none" href="javascript:void(0)"></a>
+                  </div>
+                </div>
+
+                <div class="fds-file-progress mt-tiny">
+                  <div class="fds-file-progressBar bg__primary" role="progressbar" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap-collabsible">
+          <input id="collapsibleFileUpload" class="toggle" type="checkbox" />
+          <label for="collapsibleFileUpload" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+<pre style="font-family: Montserrat; font-size: 12.5pt;">
+<span style="color: rgb(0, 0, 128);">&lt;div <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="fds-fileUploade-holder position-relative"</span>&gt;</span>
+  <span style="color: rgb(0, 0, 128);">&lt;label <span style="color: rgb(0, 0, 255);">for</span><span style="color: rgb(0, 128, 0);">="uploaderd"</span> <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="fds-fileUploade-label mb-none w-100 d-flex flex-column justify-content-center align-items-center font-weight-normal"</span>&gt;</span>
+    <span style="color: rgb(0, 0, 128);">&lt;figure&gt;</span>
+      <span style="color: rgb(0, 0, 128);">&lt;span <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="fds-uploadIcon icon-download"</span>&gt;&lt;/span&gt;</span>
+    <span style="color: rgb(0, 0, 128);">&lt;/figure&gt;</span>
+    <span style="color: rgb(0, 0, 128);">&lt;p <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="mb-none"</span>&gt;
+    <span style="color: rgb(195, 104, 55)">Drag and Drop your or </span>&lt;span <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="text__primary font-weight-bold px-tiny"</span>&gt;<span style="color: rgb(195, 104, 55)">Browse</span>&lt;/span&gt; <span style="color: rgb(195, 104, 55)">your files</span>
+    &lt;/p&gt;</span>
+  <span style="color: rgb(0, 0, 128);">&lt;/label&gt;</span>
+  <span style="color: rgb(0, 0, 128);">&lt;input <span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">="position-absolute invisible top-0"</span> <span style="color: rgb(0, 0, 255);">id</span><span style="color: rgb(0, 128, 0);">="uploaderd"</span> <span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">="file"</span> multiple/&gt;</span>
+<span style="color: rgb(0, 0, 128);">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/Input File Upload-->
+
       <!--Input range slider-->
       <div class="jumbotron">
         <h5 class="h5 mb-tiny">Range Slider</h5>
         <div class="mb-mid">
-
           <div class="d-flex justify-content-between pb-tiny">
             <span>$0</span>
             <span>$2,000,000</span>
@@ -1225,9 +1315,41 @@
               </div>
             </div>
           </div>
-
-
         </div>
+
+        <div class="wrap-collabsible">
+          <input id="collapsibleRangeSlider" class="toggle" type="checkbox" />
+          <label for="collapsibleRangeSlider" class="lbl-toggle"></label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+<pre style="font-family: Montserrat; font-size: 12.5pt;">
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="mb-mid"</span>&gt;</span>
+  <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d-flex justify-content-between pb-tiny"</span>&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;span&gt;<span style="color: rgb(195, 104, 55)">$0</span>&lt;/span&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;span&gt;<span style="color: rgb(195, 104, 55)">$2,000,000</span>&lt;/span&gt;</span>
+  <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+  <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="slider-wrapper"</span>&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="slider-track-wrapper"</span>&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="slider-track-background"</span>&gt;&lt;/div&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="slider-track-fill"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="transform: translateX(0px) scale3d(0.52, 1, 1);"</span>&gt;&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="slider-ticks-container"</span>&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="slider-ticks"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="background-size: 0% 2px; transform: translateZ(0px) translateX(0%);"</span>&gt;&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="slider-thumb-container"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="transform: translateX(-48%);"</span>&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="slider-focus-ring"</span>&gt;&lt;/div&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="slider-thumb"</span> <span style="color: rgb(0, 0, 255);">role</span><span style="color: rgb(0,128,0);">="slider"</span> <span style="color: rgb(0,0,255);">tabindex</span><span style="color: rgb(0,128,0);">="0"</span>&gt;&lt;/div&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="slider-thumb-label"</span>&gt;</span>
+        <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="slider-thumb-label-text"</span>&gt;<span style="color: rgb(195, 104, 55)">52</span>&lt;/span&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+  <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+</pre>
+            </div>
+          </div>
+        </div>
+
       </div>
       <!--/Input range slider-->
 

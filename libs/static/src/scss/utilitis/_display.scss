@@ -9,5 +9,6 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
     .d#{$infix}-none   { display: none !important; }
     .d#{$infix}-block  { display: block !important; }
+    .d#{$infix}-flex   { display: flex !important; }
   }
 }

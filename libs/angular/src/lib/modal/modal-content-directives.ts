@@ -7,7 +7,7 @@ import {
   SimpleChanges,
   ElementRef
 } from "@angular/core";
-import { FdsModal } from "./modal";
+import { FdsModalService } from "./modal.service";
 import { _closeDialogVia, FdsModalRef } from "./modal-ref";
 
 /** Counter used to generate unique IDs for dialog elements. */
@@ -42,7 +42,7 @@ export class FdsModalClose implements OnInit, OnChanges {
     // tslint:disable-next-line: lightweight-tokens
     @Optional() public dialogRef: FdsModalRef<any>,
     private _elementRef: ElementRef<HTMLElement>,
-    private _dialog: FdsModal) {
+    private _dialog: FdsModalService) {
   }
 
   ngOnInit() {
@@ -93,7 +93,7 @@ export class FdsModalTitle implements OnInit {
     // tslint:disable-next-line: lightweight-tokens
     @Optional() private _dialogRef: FdsModalRef<any>,
     private _elementRef: ElementRef<HTMLElement>,
-    private _dialog: FdsModal) {
+    private _dialog: FdsModalService) {
   }
 
   ngOnInit() {

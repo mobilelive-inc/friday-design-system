@@ -1,0 +1,14 @@
+<div class="fds-card" [ngStyle]="style" [class]="cardClass">
+    <div class="fds-card-head"  [class]="headerClass" *ngIf="headerFacet || headerTemplate">
+        <ng-content select="fds-header"></ng-content>
+        <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
+    </div>
+    <div class="fds-card-body" [class]="bodyClass">
+        <ng-content></ng-content>
+        <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    </div>
+    <div class="fds-card-footer" [class]="footerClass" *ngIf="footerFacet || footerTemplate">
+        <ng-content select="fds-footer"></ng-content>
+        <ng-container *ngTemplateOutlet="footerTemplate"></ng-container>
+    </div>
+</div>

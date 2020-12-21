@@ -3,7 +3,7 @@ import { PortalModule } from "@angular/cdk/portal";
 import { OverlayModule } from "@angular/cdk/overlay";
 
 
-import { MAT_DIALOG_SCROLL_STRATEGY_PROVIDER, FdsModal } from "./modal";
+import { MAT_DIALOG_SCROLL_STRATEGY_PROVIDER, FdsModalService } from "./modal.service";
 import { FdsModalContainer } from "./modal-container";
 import {
   FdsModalActions,
@@ -35,7 +35,7 @@ import {
     FdsModalContent
   ],
   providers: [
-    FdsModal,
+    FdsModalService,
     MAT_DIALOG_SCROLL_STRATEGY_PROVIDER
   ],
   entryComponents: [

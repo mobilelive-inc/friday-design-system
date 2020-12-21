@@ -3,10 +3,10 @@
   #{$parent} {
     background-color: $color;
   }
-  a#{$parent},
-  button#{$parent} {
-    background-color: #ffffff;
-  }
+  //a#{$parent},
+  //button#{$parent} {
+    //background-color: #ffffff;
+  //}
 }
 
 @mixin bg-gradient-variant($parent, $color, $ignore-warning: false) {

@@ -73,10 +73,10 @@
     }
   }
   &.sample {
-    width: 16px;
     display: inline-block;
     vertical-align: middle;
-    height: 16px;
+    width: var(--sampleTooltipWidth);
+    height: var(--sampleTooltipHeight);
     &:before {
       position: absolute;
       left: 50%;

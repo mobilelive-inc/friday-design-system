@@ -30,6 +30,15 @@ import { StepperBasicComponent } from "./examples/stepper/stepper-basic/stepper-
 import { ModalBasicComponent } from "./examples/modal/modal-basic/modal-basic.component";
 import { ModalBasicExampleComponent } from "./examples/modal/modal-basic/modal-basic-example.component";
 import { PopoverBasicComponent } from "./examples/popover/popover-basic/popover-basic.component";
+import { ModalAdvancedComponent } from "./examples/modal/modal-advanced/modal-advanced.component";
+import { ModalAdvancedExampleComponent } from "./examples/modal/modal-advanced/modal-advanced-example.component";
+import { SimpleComponent } from './examples/card/simple/simple.component';
+import { BoxShadowComponent } from './examples/card/box-shadow/box-shadow.component';
+import { SolidShadowComponent } from './examples/card/solid-shadow/solid-shadow.component';
+import { IconFixedHeightComponent } from './examples/card/icon-fixed-height/icon-fixed-height.component';
+import { NoIconComponent } from './examples/card/no-icon/no-icon.component';
+import { WithImageComponent } from './examples/card/with-image/with-image.component';
+import { ImageWithSolidShadowComponent } from './examples/card/image-with-solid-shadow/image-with-solid-shadow.component';
 
 @NgModule({
   declarations: [AppComponent,
@@ -54,7 +63,16 @@ import { PopoverBasicComponent } from "./examples/popover/popover-basic/popover-
     StepperBasicComponent,
     ModalBasicComponent,
     ModalBasicExampleComponent,
-    PopoverBasicComponent
+    ModalAdvancedComponent,
+    ModalAdvancedExampleComponent,
+    PopoverBasicComponent,
+    SimpleComponent,
+    BoxShadowComponent,
+    SolidShadowComponent,
+    IconFixedHeightComponent,
+    NoIconComponent,
+    WithImageComponent,
+    ImageWithSolidShadowComponent
   ],
   imports: [
     BrowserModule,

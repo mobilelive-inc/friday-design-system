@@ -3,7 +3,7 @@ import {
   ConfigurableFocusTrapFactory,
   FocusMonitor,
   FocusOrigin,
-  FocusTrap,
+  FocusTrap
 } from "@angular/cdk/a11y";
 import {
   BasePortalOutlet,
@@ -78,12 +78,13 @@ export abstract class _FdsModalContainerBase extends BasePortalOutlet {
     protected _elementRef: ElementRef,
     protected _focusTrapFactory: ConfigurableFocusTrapFactory,
     protected _changeDetectorRef: ChangeDetectorRef,
-    @Optional() @Inject(DOCUMENT) _document: Document,
+    @Optional() @Inject(DOCUMENT) document: any,
     /** The dialog configuration. */
     public _config: FdsModalConfig,
     private _focusMonitor?: FocusMonitor) {
-
     super();
+    /* Fix issue with packagr */
+    this._document = document as Document;
     this._ariaLabelledBy = _config.ariaLabelledBy || null;
   }
 
@@ -233,7 +234,7 @@ export abstract class _FdsModalContainerBase extends BasePortalOutlet {
 @Component({
   selector: "fds-modal-container",
   templateUrl: "modal-container.html",
-  styleUrls: ['modal-container.scss'],
+  styleUrls: ["modal-container.scss"],
   encapsulation: ViewEncapsulation.None,
   // Using OnPush for dialogs caused some G3 sync issues. Disabled until we can track them down.
   // tslint:disable-next-line:validate-decorators

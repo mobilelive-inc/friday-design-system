@@ -4,6 +4,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: var(--divider-width);
   height: var(--divider-height);
   &.divider-sm {
     height: var(--divider-sm-height);

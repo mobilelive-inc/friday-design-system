@@ -1,1 +1,9 @@
+/**
+ It is import icons for CSS version of static lib during build process.
+ It doesn't work in stand alone npm package.
+ For import icons into your application install additional package:
+
+ 	npm add @mobilelivenpm/fds-icons --save-dev
+
+ */
 @import '../icons/icomons_styles';
