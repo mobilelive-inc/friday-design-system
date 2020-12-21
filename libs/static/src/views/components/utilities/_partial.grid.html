@@ -1,0 +1,150 @@
+<div id="grid-info" class="mb-mid">
+  <div class="highlighted-block">
+    <h4>Grid</h4>
+    <p>ML Design System uses mobile-first flexbox grid for all sizes. The grid contains twelve columns, five default responsive breakpoints, and couple of predefined utility classes. The flex grid is only supported in Chrome, Firefox, Safari 6+, IE10+, iOS 7+, and Android 4.4+.</p>
+    <p>Flex grid uses row class ( <code>.row</code> ), and column class (<code>.col</code> ). Basic percentage-based sizing can also be done using the classes: <code>.col-sm-6</code>, <code>.col-md-6</code>, and
+      so on.</p>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row mb-tiny">
+          <div
+            class="col-sm-6"
+            style="
+              text-align: center;
+              background: #eee;
+              border: 1px solid #aaa;
+              padding: 10px;
+            "
+          >
+            6 columns
+          </div>
+          <div
+            class="col-sm-6"
+            style="
+              text-align: center;
+              background: #eee;
+              border: 1px solid #aaa;
+              padding: 10px;
+            "
+          >
+            6 columns
+          </div>
+        </div>
+      </div>
+      <pre
+        style="font-family: 'Montserrat'; font-size: 12pt;"
+      ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;container&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;row&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col-sm-6&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>6 columns<span style="color:rgb(0,0,128);">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col-sm-6&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>6 columns<span style="color:rgb(0,0,128);">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;  </span></pre>
+    </div>
+    <h4>Auto-Width Columns</h4>
+    <p>
+      If we just use <code>.col</code> class, the child elements will
+      equally divide the total width:
+    </p>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row mb-tiny">
+          <div
+            class="col"
+            style="
+              text-align: center;
+              background: #eee;
+              border: 1px solid #aaa;
+              padding: 10px;
+            "
+          >
+            Equally divided column
+          </div>
+          <div
+            class="col"
+            style="
+              text-align: center;
+              background: #eee;
+              border: 1px solid #aaa;
+              padding: 10px;
+            "
+          >
+            Equally divided column
+          </div>
+          <div
+            class="col"
+            style="
+              text-align: center;
+              background: #eee;
+              border: 1px solid #aaa;
+              padding: 10px;
+            "
+          >
+            Equally divided column
+          </div>
+        </div>
+      </div>
+      <pre
+        style="font-family: 'Montserrat'; font-size: 12pt;"
+      ><span style="color:rgb(0,0,128)">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;container&quot;</span><span style="color:rgb(0,0,128)">&gt;
+</span><span style="color:rgb(0,0,128)">  &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;row&quot;</span><span style="color:rgb(0,0,128)">&gt;
+</span><span style="color:rgb(0,0,128)">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col&quot;</span><span style="color:rgb(0,0,128)">&gt;</span>Equally divided column<span style="color:rgb(0,0,128)">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128)">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col&quot;</span><span style="color:rgb(0,0,128)">&gt;</span>Equally divided column<span style="color:rgb(0,0,128)">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128)">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col&quot;</span><span style="color:rgb(0,0,128)">&gt;</span>Equally divided column<span style="color:rgb(0,0,128)">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128)">  &lt;/div&gt;
+</span><span style="color:rgb(0,0,128)">&lt;/div&gt;</span></pre>
+    </div>
+    <h4>Auto adjust around one column</h4>
+    <p>
+      We can also set width of one column and let the others auto adjust
+      around it:
+    </p>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row mb-tiny">
+          <div
+            class="col"
+            style="
+              text-align: center;
+              background: #eee;
+              border: 1px solid #aaa;
+              padding: 10px;
+            "
+          >
+            Equally divided column
+          </div>
+          <div
+            class="col-md-6"
+            style="
+              text-align: center;
+              background: #eee;
+              border: 1px solid #aaa;
+              padding: 10px;
+            "
+          >
+            50% wide column
+          </div>
+          <div
+            class="col"
+            style="
+              text-align: center;
+              background: #eee;
+              border: 1px solid #aaa;
+              padding: 10px;
+            "
+          >
+            Equally divided column
+          </div>
+        </div>
+      </div>
+      <pre
+        style="font-family: 'Montserrat'; font-size: 12pt;"
+      ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;container&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;row&quot;</span><span style="color:rgb(0,0,128);">&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Equally divided column<span style="color:rgb(0,0,128);">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col-md-6&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>50% wide column<span style="color:rgb(0,0,128);">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">    &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;col&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Equally divided column<span style="color:rgb(0,0,128);">&lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">  &lt;/div&gt;
+</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>

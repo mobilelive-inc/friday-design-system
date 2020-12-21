@@ -15,6 +15,8 @@
 	 (mouseenter)="_onMouseenter()"
 	 (selectstart)="$event.preventDefault()"
 	 role="slider"
+	 aria-live="polite"
+	 aria-atomic="true"
 	 [tabIndex]="tabIndex"
 	 [attr.aria-disabled]='disabled'
 	 [attr.aria-valuemax]="max"

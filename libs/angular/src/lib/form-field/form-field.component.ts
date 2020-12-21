@@ -30,6 +30,8 @@ export class FormFieldComponent implements OnInit {
 
   getClasses() {
     switch (this.controlType) {
+      case "fds-input-number":
+        return {};
       case "fds-autocomplete":
         // Show additional classes related to the autocomplete
         return this._control.getClasses();

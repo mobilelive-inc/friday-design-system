@@ -368,7 +368,7 @@ export abstract class _FdsModalBase<C extends _FdsModalContainerBase> implements
  * Service to open modal dialogs.
  */
 @Injectable()
-export class FdsModal extends _FdsModalBase<FdsModalContainer> {
+export class FdsModalService extends _FdsModalBase<FdsModalContainer> {
   constructor(
     overlay: Overlay,
     injector: Injector,
@@ -379,7 +379,7 @@ export class FdsModal extends _FdsModalBase<FdsModalContainer> {
     @Optional() location: Location,
     @Optional() @Inject(MAT_DIALOG_DEFAULT_OPTIONS) defaultOptions: FdsModalConfig,
     @Inject(MAT_DIALOG_SCROLL_STRATEGY) scrollStrategy: any,
-    @Optional() @SkipSelf() parentDialog: FdsModal,
+    @Optional() @SkipSelf() parentDialog: FdsModalService,
     overlayContainer: OverlayContainer) {
     super(overlay, injector, defaultOptions, parentDialog, overlayContainer, scrollStrategy,
       FdsModalRef, FdsModalContainer, MAT_DIALOG_DATA);

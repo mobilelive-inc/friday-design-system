@@ -194,11 +194,11 @@ export class AutocompleteComponent implements AfterViewChecked, AfterContentInit
   itemClicked: boolean;
 
   constructor(/** @docs-private */
-              private _injector: Injector,
-              public el: ElementRef,
-              public renderer: Renderer2,
-              public cd: ChangeDetectorRef,
-              public differs: IterableDiffers) {
+    private _injector: Injector,
+    public el: ElementRef,
+    public renderer: Renderer2,
+    public cd: ChangeDetectorRef,
+    public differs: IterableDiffers) {
     this.differ = differs.find([]).create(null);
     this.listId = ++nextUniqueId + "_list";
     this.ngControl = this._injector.get(NgControl);
@@ -620,6 +620,8 @@ export class AutocompleteComponent implements AfterViewChecked, AfterContentInit
             break;
           }
         }
+      } else if (inputValue && this.value) {
+        valid = true;
       }
 
       if (!valid) {

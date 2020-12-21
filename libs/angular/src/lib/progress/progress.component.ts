@@ -10,7 +10,7 @@ import { Component, Input, OnInit } from "@angular/core";
 		   [attr.aria-valuenow]="value"
 		   [attr.aria-valuemin]="min"
 		   [attr.aria-valuemax]="max">
-		<span class="pt-tiny px-tiny" *ngIf="showLabel" [ngStyle]="_getLabelStyle()">{{formatValue(value)}}</span>
+		<span class="pt-tiny px-tiny bg-white" *ngIf="showLabel" [ngStyle]="_getLabelStyle()">{{formatValue(value)}}</span>
 	  </div>
 	</div>
 

@@ -180,7 +180,7 @@ export class DomHandler {
 
   private static calculatedScrollbarHeight: number = null;
 
-  private static browser: any;
+  private static browser: any = undefined;
 
   public static scrollInView(container, item) {
     let borderTopValue: string = getComputedStyle(container).getPropertyValue("borderTopWidth");

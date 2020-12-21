@@ -36,7 +36,7 @@
   }
 }
 .modalDialog {
-  width: auto;
+  width: 100%;
   display: flex;
   position: relative;
   max-width: var(--modal-md);
@@ -87,7 +87,6 @@
   .icnInfo {
     flex-shrink: 0;
     flex-basis: 25px;
-    color: var(--black);
     font-size: var(--modal-icon-size);
   }
   .h1, .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 {

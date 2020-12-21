@@ -62,7 +62,7 @@
   &:focus,
   &.focus {
     outline: 0;
-    box-shadow: var(--btn-focus-box-shadow);
+    box-shadow: 0 0 0 0.2rem rgba(166, 166, 169, 0.5);
   }
 
   // Disabled comes first so active can properly restyle
@@ -677,10 +677,10 @@
 }
 
 //Button Utilities
-.rounded {
-  border-radius: var(--btn-border-radius-rounded) !important;
-}
 
+.btnRounded {
+  border-radius: var(--btn-border-radius-rounded);
+}
 .curved {
   border-radius: var(--btn-border-radius-curved);
 }

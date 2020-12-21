@@ -117,11 +117,31 @@
   }
 }
 
-
-
+.fds-fileUploade-label {
+  cursor: pointer;
+  height: var(--fileUpload-height);
+  border-width: var(--fileUpload-border-width);
+  border-style: var(--fileUpload-border-style);
+  border-color: var(--fileUpload-border-color);
+  background-color: var(--fileUpload-background-color);
+}
+.fds-uploadIcon {
+  color: var(--fileUpload-icon-color);
+  font-size: var(--fileUpload-icon-font-size);
+}
+input[type=file] {
+  top: 0;
+  left: 0;
+}
+.fds-file-progress {
+  background-color: var(--file-progress-bg-color);
+}
+.fds-file-progressBar {
+  height: var(--file-upload-progress-height);
+  background-color: var(--file-progress-filled-color);
+}
 
 .slider-wrapper {
-  outline: none;
   display: block;
   position: relative;
   height: var(--range-slider-height);
