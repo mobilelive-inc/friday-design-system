@@ -83,6 +83,7 @@ export abstract class _FdsModalContainerBase extends BasePortalOutlet {
     public _config: FdsModalConfig,
     private _focusMonitor?: FocusMonitor) {
     super();
+    /* Fix issue with packagr */
     this._document = document as Document;
     this._ariaLabelledBy = _config.ariaLabelledBy || null;
   }

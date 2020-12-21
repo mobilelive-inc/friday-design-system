@@ -1,8 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ButtonComponent } from "./button/button.component";
-import { ButtonDirective } from "./button.directive";
-import { DarkButtonComponent } from "./dark-button/dark-button.component";
 import { AutocompleteComponent } from "./autocomplete/autocomplete.component";
 import { InputDirective } from "./input/input.directive";
 import { FormFieldComponent } from "./form-field/form-field.component";
@@ -22,7 +20,7 @@ import { CardComponent } from './card/card.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [ButtonComponent, ButtonDirective, DarkButtonComponent,
+  declarations: [ButtonComponent,
     AutocompleteComponent, Template, Header, Footer,
     InputDirective, FormFieldComponent, LabelDirective, ErrorDirective,
     RangeSliderComponent, ProgressComponent, TooltipDirective, PopoverDirective,
@@ -31,7 +29,7 @@ import { CardComponent } from './card/card.component';
     FdsRadioButton, FdsRadioGroup,
     InputMaskComponent, InputNumberComponent, CardComponent
   ],
-  exports: [ButtonComponent, ButtonDirective, DarkButtonComponent,
+  exports: [ButtonComponent,
     AutocompleteComponent, Template, Header, Footer,
     InputDirective, FormFieldComponent, LabelDirective, ErrorDirective,
     RangeSliderComponent, ProgressComponent, TooltipDirective, PopoverDirective,

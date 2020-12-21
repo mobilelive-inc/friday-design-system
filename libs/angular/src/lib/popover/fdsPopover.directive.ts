@@ -148,14 +148,14 @@ export class PopoverDirective implements OnInit, OnChanges {
   getTemplate(theme = "dark", closeBtnText) {
     const classList = ["d-flex", "align-items-start", "p-small", "curved", theme];
     return `<div class="${classList.join(" ")}"
-         data-type="popover" tabindex="0" 
+         data-type="popover" tabindex="0"
          style="opacity: 1; visibility: visible; position:static;">
       <span></span>
       <span tabindex="0">
         ${this.getTitle() ? `<strong class="title">${this.getTitle()}</strong>` : ``}
         ${this.getBody()}
       </span>
-      <a href="javascript:void(0)" tabindex="0" type="button" 
+      <a href="javascript:void(0)" tabindex="0" type="button"
          class="btn--close ml-small" data-popover-id="${this.fdsPopoverUID}">
         <span class="icon icon-cross-circle" data-popover-id="${this.fdsPopoverUID}">
         <span class="sr-only">${closeBtnText}</span>
