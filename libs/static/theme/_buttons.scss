@@ -11,7 +11,8 @@
   --input-btn-focus-width: 0.2rem;
   //--input-btn-focus-color: rgba(--component-active-bg, 'primary');
   --input-btn-focus-color: map_get(--theme-colors, primary);
-  --input-btn-focus-box-shadow: 0 0 0 var(--input-btn-focus-width) var(--input-btn-focus-color);
+  --input-btn-focus-box-shadow: 0 0 0 var(--input-btn-focus-width)
+    var(--input-btn-focus-color);
   --input-btn-padding-y-sm: 0.25rem;
   --input-btn-padding-x-sm: 0.5rem;
   --input-btn-font-size-sm: var(--font-size-sm);
@@ -47,9 +48,10 @@
 
   --btn-font-size-lg: var(--input-btn-font-size-lg);
   --btn-line-height-lg: var(--input-btn-line-height-lg);
-  --btn-border-width: var(--input-btn-border-width);
+  --btn-border-width: 2px;
   --btn-font-weight: var(--font-weight-bold);
-  --btn-box-shadow: inset 0 1px 0 rgba(var(--white), 0.15), 0 1px 1px rgba(var(--dark), 0.075);
+  --btn-box-shadow: inset 0 1px 0 rgba(var(--white), 0.15),
+    0 1px 1px rgba(var(--dark), 0.075);
   --btn-focus-width: var(--input-btn-focus-width);
   --btn-focus-box-shadow: --input-btn-focus-box-shadow;
   --btn-disabled-opacity: 0.65;
@@ -64,7 +66,8 @@
   --btn-border-radius-lg: var(--border-radius-lg);
   --btn-border-radius-sm: var(--border-radius-sm);
 
-  --btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  --btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   //FDS Primary Button Colors
   --btn-primary-color: var(--dark);
@@ -107,7 +110,7 @@
   --btn-warning-text-color: var(--dark);
   --btn-warning-bg-color: var(--warning);
   --btn-warning-border-color: var(--warning);
-  
+
   --btn-warning-hover-color: var(--white);
   --btn-warning-hover-bg-color: var(--warning-hover);
   --btn-warning-hover-border-color: var(--warning-hover);
