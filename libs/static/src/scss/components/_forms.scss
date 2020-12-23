@@ -129,7 +129,7 @@
   color: var(--fileUpload-icon-color);
   font-size: var(--fileUpload-icon-font-size);
 }
-input[type=file] {
+input[type='file'] {
   top: 0;
   left: 0;
 }
@@ -210,7 +210,9 @@ input[type=file] {
     var(--card-shadow-color);
 }
 .slider:not(.slider-disabled):not(.slider-sliding) .slider-thumb-label,
-.slider:not(.slider-disabled):not(.slider-sliding) .slider-thumb { cursor: grab;}
+.slider:not(.slider-disabled):not(.slider-sliding) .slider-thumb {
+  cursor: grab;
+}
 .slider-thumb-label {
   top: -40px;
   right: -16px;
@@ -224,19 +226,19 @@ input[type=file] {
 }
 .accent .slider-thumb,
 .accent .slider-thumb-label,
-.accent .slider-track-fill { background-color: var(--range-fill-color); }
-.slider-horizontal .slider-thumb-label-text { transform: rotate(-45deg); }
-.accent .slider-thumb-label-text { color: #fff; }
+.accent .slider-track-fill {
+  background-color: var(--range-fill-color);
+}
+.slider-horizontal .slider-thumb-label-text {
+  transform: rotate(-45deg);
+}
+.accent .slider-thumb-label-text {
+  color: #ffffff;
+}
 .slider-thumb-label-text {
   z-index: 1;
   opacity: 0;
 }
-
-
-
-
-
-
 
 .searchInputBtn {
   padding: 0;

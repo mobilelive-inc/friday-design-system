@@ -9,6 +9,6 @@
 
 @each $color, $value in $theme-colors {
   .progress-#{$color} {
-	background-color: $value;
+    background-color: $value;
   }
 }

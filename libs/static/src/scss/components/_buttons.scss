@@ -691,7 +691,7 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-button[aria-disabled=true]{
+button[aria-disabled='true'] {
   opacity: var(--btn-disabled-opacity);
   @include box-shadow(none);
   pointer-events: none;
