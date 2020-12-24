@@ -8,11 +8,11 @@ import { Component, OnInit } from "@angular/core";
 		[max]="maxValue"
 		[value]="value"
 		[showLabel]="true"
-		[displayWith]="labelFormatFn"
+    [displayWith]="labelFormatFn"
 	></fds-progress>
-	<div class="text--center">
-	  <a href="javascript:void(0)" (click)="prev()">Prev</a>&nbsp;
-	  <a href="javascript:void(0)" (click)="next()">Next</a>
+	<div class="text--center pt-ml">
+	  <a class="btn btn__secondary mr-small" href="javascript:void(0)" (click)="prev()">Prev</a>
+	  <a class="btn btn__primary" href="javascript:void(0)" (click)="next()">Next</a>
 	</div>
   `,
   styles: []
