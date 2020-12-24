@@ -89,7 +89,16 @@
     flex-basis: 25px;
     font-size: var(--modal-icon-size);
   }
-  .h1, .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 {
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     flex-grow: 1;
     //font-weight: bold;
     //color: var(--black);

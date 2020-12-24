@@ -1,26 +1,30 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "demo-button-outline",
+  selector: 'demo-button-outline',
   template: `
-    <fds-button className="btn__outline btn__primary">Primary</fds-button>&nbsp;
-    <fds-button className="btn__outline btn__secondary">Secondary</fds-button>&nbsp;
-    <fds-button className="btn__outline btn__success">Success</fds-button>&nbsp;
-    <fds-button className="btn__outline btn__danger">Danger</fds-button>&nbsp;
-    <fds-button className="btn__outline btn__warning">Warning</fds-button>&nbsp;
-    <fds-button className="btn__outline btn__info">Info</fds-button>&nbsp;
-    <fds-button className="btn__outline btn__light">Light</fds-button>&nbsp;
-    <fds-button className="btn__outline btn__dark">Dark</fds-button>&nbsp;
-    <fds-button className="btn__outline btn__dark" [disabled]="true">Disabled</fds-button>
+    <fds-button className="btn__primary__outline mb-tiny">Primary</fds-button
+    >&nbsp;
+    <fds-button className="btn__secondary__outline mb-tiny"
+      >Secondary</fds-button
+    >&nbsp;
+    <fds-button className="btn__success__outline mb-tiny">Success</fds-button
+    >&nbsp;
+    <fds-button className="btn__danger__outline mb-tiny">Danger</fds-button
+    >&nbsp;
+    <fds-button className="btn__warning__outline mb-tiny">Warning</fds-button
+    >&nbsp;
+    <fds-button className="btn__info__outline mb-tiny">Info</fds-button>&nbsp;
+    <fds-button className="btn__light__outline mb-tiny">Light</fds-button>&nbsp;
+    <fds-button className="btn__dark__outline mb-tiny">Dark</fds-button>&nbsp;
+    <fds-button className="btn__dark__outline mb-tiny" [disabled]="true"
+      >Disabled</fds-button
+    >
   `,
   styles: []
 })
 export class ButtonOutlineComponent implements OnInit {
+  constructor() {}
 
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

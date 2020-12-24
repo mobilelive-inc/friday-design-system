@@ -11,7 +11,7 @@
 }
 .progress-bar {
   position: relative;
-  transition: width .6s ease;
+  transition: width 0.6s ease;
   border-radius: var(--progress-radius-rounded);
   span {
     top: 100%;

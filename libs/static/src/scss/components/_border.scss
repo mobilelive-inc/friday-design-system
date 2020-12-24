@@ -1,18 +1,20 @@
 @import '../../../theme/borders';
 
-.fds-exaple-boxes{ margin: -1rem; }
-.box{
-    width: 5rem;
-    height: 5rem;
-    display: block;
-    background-color: #f7f7f7;
+.fds-exaple-boxes {
+  margin: -1rem;
 }
-.border-box{
-    width: 5rem;
-    height: 5rem;
-    display: block;
-    background-color: #f7f7f7;
-    border-width: var(--border-width);
-    border-style: solid;
-    border-color: var(--border-color);
+.box {
+  width: 5rem;
+  height: 5rem;
+  display: block;
+  background-color: #f7f7f7;
+}
+.border-box {
+  width: 5rem;
+  height: 5rem;
+  display: block;
+  background-color: #f7f7f7;
+  border-width: var(--border-width);
+  border-style: solid;
+  border-color: var(--border-color);
 }

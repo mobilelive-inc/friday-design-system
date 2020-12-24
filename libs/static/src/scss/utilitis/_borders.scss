@@ -9,27 +9,52 @@
   border-style: solid;
   border-color: var(--border-color);
 }
-.border-top { border-top: var(--border-width) solid var(--border-color); }
-.border-right { border-right: var(--border-width) solid var(--border-color); }
-.border-bottom { border-bottom: var(--border-width) solid var(--border-color); }
-.border-left { border-left: var(--border-width) solid var(--border-color); }
+.border-top {
+  border-top: var(--border-width) solid var(--border-color);
+}
+.border-right {
+  border-right: var(--border-width) solid var(--border-color);
+}
+.border-bottom {
+  border-bottom: var(--border-width) solid var(--border-color);
+}
+.border-left {
+  border-left: var(--border-width) solid var(--border-color);
+}
 
-
-.border-0 { border: 0; }
-.border-top-0 { border-top: 0; }
-.border-right-0 { border-right: 0; }
-.border-bottom-0 { border-bottom: 0; }
-.border-left-0 { border-left: 0; }
-
+.border-0 {
+  border: 0;
+}
+.border-top-0 {
+  border-top: 0;
+}
+.border-right-0 {
+  border-right: 0;
+}
+.border-bottom-0 {
+  border-bottom: 0;
+}
+.border-left-0 {
+  border-left: 0;
+}
 
 // Border Width
 
-.border-width-1 { border-width: var(--border-width-1); }
-.border-width-2 { border-width: var(--border-width-2); }
-.border-width-3 { border-width: var(--border-width-3); }
-.border-width-4 { border-width: var(--border-width-4); }
-.border-width-5 { border-width: var(--border-width-5); }
-
+.border-width-1 {
+  border-width: var(--border-width-1);
+}
+.border-width-2 {
+  border-width: var(--border-width-2);
+}
+.border-width-3 {
+  border-width: var(--border-width-3);
+}
+.border-width-4 {
+  border-width: var(--border-width-4);
+}
+.border-width-5 {
+  border-width: var(--border-width-5);
+}
 
 // Border Color Clesses
 
@@ -39,11 +64,14 @@
   }
 }
 
-
 // Border-radius
 
-.rounded-sm { border-radius: var(--border-radius)-sm; }
-.rounded { border-radius: var(--border-radius); }
+.rounded-sm {
+  border-radius: var(--border-radius)-sm;
+}
+.rounded {
+  border-radius: var(--border-radius);
+}
 .rounded-top {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
@@ -60,7 +88,15 @@
   border-top-left-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
 }
-.rounded-lg { border-radius: var(--border-radius)-lg; }
-.rounded-circle { border-radius: 50%; }
-.rounded-pill { border-radius: var(--rounded-pill); }
-.rounded-0 { border-radius: 0; }
+.rounded-lg {
+  border-radius: var(--border-radius)-lg;
+}
+.rounded-circle {
+  border-radius: 50%;
+}
+.rounded-pill {
+  border-radius: var(--rounded-pill);
+}
+.rounded-0 {
+  border-radius: 0;
+}
