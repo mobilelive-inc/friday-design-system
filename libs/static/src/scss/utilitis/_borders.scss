@@ -38,60 +38,65 @@
   border-left: 0;
 }
 
+// Border Width
+
+.border-width-1 {
+  border-width: var(--border-width-1);
+}
+.border-width-2 {
+  border-width: var(--border-width-2);
+}
+.border-width-3 {
+  border-width: var(--border-width-3);
+}
+.border-width-4 {
+  border-width: var(--border-width-4);
+}
+.border-width-5 {
+  border-width: var(--border-width-5);
+}
+
+// Border Color Clesses
+
 @each $color, $value in $theme-colors {
   .border-#{$color} {
     border-color: $value;
   }
 }
 
-.border-white {
-  border-color: var(--white);
-}
-
-//
 // Border-radius
-//
 
 .rounded-sm {
   border-radius: var(--border-radius)-sm;
 }
-
 .rounded {
   border-radius: var(--border-radius);
 }
-
 .rounded-top {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
 }
-
 .rounded-right {
   border-top-right-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
 }
-
 .rounded-bottom {
   border-bottom-right-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
 }
-
 .rounded-left {
   border-top-left-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
 }
-
 .rounded-lg {
   border-radius: var(--border-radius)-lg;
 }
-
 .rounded-circle {
   border-radius: 50%;
 }
-
 .rounded-pill {
   border-radius: var(--rounded-pill);
 }
-
 .rounded-0 {
   border-radius: 0;
 }

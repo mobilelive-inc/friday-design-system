@@ -3,24 +3,40 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'demo-button-rounded-outline',
   template: `
-    <fds-button className="btn__outline btn--rounded btn__primary">Primary</fds-button>&nbsp;
-    <fds-button className="btn__outline btn--rounded btn__secondary">Secondary</fds-button>&nbsp;
-    <fds-button className="btn__outline btn--rounded btn__success">Success</fds-button>&nbsp;
-    <fds-button className="btn__outline btn--rounded btn__danger">Danger</fds-button>&nbsp;
-    <fds-button className="btn__outline btn--rounded btn__warning">Warning</fds-button>&nbsp;
-    <fds-button className="btn__outline btn--rounded btn__info">Info</fds-button>&nbsp;
-    <fds-button className="btn__outline btn--rounded btn__light">Light</fds-button>&nbsp;
-    <fds-button className="btn__outline btn--rounded btn__dark">Dark</fds-button>&nbsp;
-    <fds-button className="btn__outline btn--rounded btn__dark" [disabled]="true">Disabled</fds-button>
+    <fds-button className="btn__primary__outline btnRounded mb-tiny"
+      >Primary</fds-button
+    >&nbsp;
+    <fds-button className="btn__secondary__outline btnRounded mb-tiny"
+      >Secondary</fds-button
+    >&nbsp;
+    <fds-button className="btn__success__outline btnRounded mb-tiny"
+      >Success</fds-button
+    >&nbsp;
+    <fds-button className="btn__danger__outline btnRounded mb-tiny"
+      >Danger</fds-button
+    >&nbsp;
+    <fds-button className="btn__warning__outline btnRounded mb-tiny"
+      >Warning</fds-button
+    >&nbsp;
+    <fds-button className="btn__info__outline btnRounded mb-tiny"
+      >Info</fds-button
+    >&nbsp;
+    <fds-button className="btn__light__outline btnRounded mb-tiny"
+      >Light</fds-button
+    >&nbsp;
+    <fds-button className="btn__dark__outline btnRounded mb-tiny"
+      >Dark</fds-button
+    >&nbsp;
+    <fds-button
+      className="btn__dark__outline btnRounded mb-tiny"
+      [disabled]="true"
+      >Disabled</fds-button
+    >
   `,
-  styles: [
-  ],
+  styles: []
 })
 export class ButtonRoundedOutlineComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

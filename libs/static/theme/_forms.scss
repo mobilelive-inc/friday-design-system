@@ -109,4 +109,15 @@
   --radioColor: var(--gray-dark);
   --dropdown-hover-bg: var(--primary);
   --dropdown-hover-color: var(--white);
+
+  --fileUpload-height: 300px;
+  --fileUpload-border-width: 1px;
+  --fileUpload-border-style: dashed;
+  --file-upload-progress-height: 6px;
+  --fileUpload-icon-font-size: 2.5rem;
+  --fileUpload-icon-color: var(--primary);
+  --fileUpload-border-color: var(--secondary);
+  --file-progress-filled-color: var(--primary);
+  --file-progress-bg-color: var(--primary-lighter);
+  --fileUpload-background-color: var(--orange-lighter);
 }

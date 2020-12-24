@@ -159,8 +159,13 @@ th {
   border-width: 0;
 }
 
-tr,
 td,
 th {
   padding: 0.5rem;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
 }

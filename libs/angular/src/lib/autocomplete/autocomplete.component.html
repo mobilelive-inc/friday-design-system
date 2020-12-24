@@ -1,10 +1,12 @@
+<!--
+	TODO
+	Remove the following code [attr.aria-controls]="listId" [attr.aria-expanded]="overlayVisible" [attr.aria-activedescendant]="'p-highlighted-option'" as they are causing failure of Accessibility.
+-->
 <input *ngIf="!multiple" #in [attr.type]="type" [attr.id]="id" [ngStyle]="inputStyle"
 	   [class]="inputStyleClass" [autocomplete]="autocomplete" [attr.required]="required" [attr.name]="name"
 	   class="formControl"
 	   [ngClass]="{'p-autocomplete-dd-input':dropdown,'p-disabled': disabled}" [value]="inputFieldValue"
-	   aria-autocomplete="list" [attr.aria-controls]="listId" role="searchbox"
-	   [attr.aria-expanded]="overlayVisible" aria-haspopup="true"
-	   [attr.aria-activedescendant]="'p-highlighted-option'"
+	   aria-autocomplete="list" role="searchbox" aria-haspopup="true"
 	   (click)="onInputClick($event)" (input)="onInput($event)" (keydown)="onKeydown($event)"
 	   (keyup)="onKeyup($event)" [attr.autofocus]="autofocus" (focus)="onInputFocus($event)"
 	   (blur)="onInputBlur($event)" (change)="onInputChange($event)" (paste)="onInputPaste($event)"

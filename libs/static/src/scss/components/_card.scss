@@ -2,7 +2,6 @@
 
 @import '../../../theme/card';
 
-
 .has-shadow {
   box-shadow: var(--card-shadow-horizontalLength)
     var(--card-shadow-verticalLength) var(--card-shadow-blurRadius)
@@ -15,8 +14,8 @@
 }
 .has-sm-solidShadow-primary {
   box-shadow: var(--card-sm-solidShadow-horizontalLength)
-  var(--card-sm-solidShadow-verticalLength) var(--card-solidShadow-blurRadius)
-  var(--card-solidShadow-spread) var(--card-solidShadow-primary);
+    var(--card-sm-solidShadow-verticalLength) var(--card-solidShadow-blurRadius)
+    var(--card-solidShadow-spread) var(--card-solidShadow-primary);
 }
 .has-solidShadow-secondary {
   box-shadow: var(--card-solidShadow-horizontalLength)
@@ -25,10 +24,9 @@
 }
 .has-sm-solidShadow-secondary {
   box-shadow: var(--card-sm-solidShadow-horizontalLength)
-  var(--card-sm-solidShadow-verticalLength) var(--card-solidShadow-blurRadius)
-  var(--card-solidShadow-spread) var(--card-solidShadow-secondary);
+    var(--card-sm-solidShadow-verticalLength) var(--card-solidShadow-blurRadius)
+    var(--card-solidShadow-spread) var(--card-solidShadow-secondary);
 }
-
 
 .fds-card {
   display: flex;
@@ -52,7 +50,7 @@
   h3,
   h4,
   h5,
-  h6{
+  h6 {
     color: var(--card-color);
   }
 }

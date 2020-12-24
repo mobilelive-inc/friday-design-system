@@ -116,10 +116,16 @@
     },
     "angular": {
       "projectType": "library",
-      "root": "libs/angular",
-      "sourceRoot": "libs/angular/src",
+      "root": "libs/angular/src",
       "prefix": "fds",
       "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "project": "libs/angular/src/ng-package.json",
+            "tsConfig": "libs/angular/src/tsconfig.lib.json"
+          }
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {

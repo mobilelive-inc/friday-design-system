@@ -1,0 +1,8 @@
+<input #input class="formControl" [attr.id]="id" [attr.type]="type" [attr.name]="name" [ngStyle]="style"
+	   [ngClass]="styleClass" [attr.placeholder]="placeholder" [attr.title]="title"
+	   [attr.size]="size" [attr.autocomplete]="autocomplete" [attr.maxlength]="maxlength" [attr.tabindex]="tabindex"
+	   [attr.aria-label]="ariaLabel" [attr.aria-required]="ariaRequired" [disabled]="disabled" [readonly]="readonly"
+	   [attr.required]="required"
+	   (focus)="onInputFocus($event)" (blur)="onInputBlur($event)" (keydown)="onKeyDown($event)"
+	   (keypress)="onKeyPress($event)" [attr.autofocus]="autoFocus"
+	   (input)="onInputChange($event)" (paste)="handleInputChange($event)">

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DarkButtonComponent } from './dark-button.component';
+import { InputNumberComponent } from './input-number.component';
 
-describe('DarkButtonComponent', () => {
-  let component: DarkButtonComponent;
-  let fixture: ComponentFixture<DarkButtonComponent>;
+describe('InputNumberComponent', () => {
+  let component: InputNumberComponent;
+  let fixture: ComponentFixture<InputNumberComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DarkButtonComponent ]
+      declarations: [ InputNumberComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DarkButtonComponent);
+    fixture = TestBed.createComponent(InputNumberComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
