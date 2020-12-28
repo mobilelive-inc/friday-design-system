@@ -16,8 +16,8 @@ import { Component, OnInit } from "@angular/core";
   styles: []
 })
 export class ButtonRoundedComponent implements OnInit {
-
   constructor() {
+
   }
 
   ngOnInit(): void {
