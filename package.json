@@ -8,6 +8,7 @@
     "nx": "nx",
     "start": "ng serve",
     "rx:start": "nx serve rx-xis-app",
+    "ng:start": "nx serve angular-demos",
     "build": "ng build",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
