@@ -1,15 +1,7 @@
-.fds-horizontal-stepper {
-  display: block;
-}
-
-.fds-horizontal-content-container {
-  overflow: hidden;
-  padding: 0 24px 24px 24px;
-}
-
+.fds-horizontal-stepper { display: block; }
+.fds-horizontal-content-container { overflow: hidden; }
 .fds-horizontal-stepper-content {
   outline: 0;
-
   &[aria-expanded='false'] {
 	height: 0;
 	overflow: hidden;
