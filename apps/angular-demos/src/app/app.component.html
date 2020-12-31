@@ -1,13 +1,21 @@
 <theme-switcher [themes]="themesList"></theme-switcher>
 <h2>Button Variants</h2>
+
 <div class="jumbotron pb-mid">
-  <h3>Solid</h3>
+  <h3>Button-Style</h3>
   <fds-ml-button-solid></fds-ml-button-solid>
 </div>
 
 <div class="jumbotron pb-mid">
   <h3>Clear Style</h3>
-  <fds-ml-button-clear></fds-ml-button-clear>
+  <fds-ml-button-clear [btnTitle]="'Primary'" [btnType]="'clear'" [variant]="'primary'"></fds-ml-button-clear>
+  <fds-ml-button-clear [btnTitle]="'Secondary'" [btnType]="'clear'" [variant]="'secondary'"></fds-ml-button-clear>
+  <fds-ml-button-clear [btnTitle]="'Success'" [btnType]="'clear'" [variant]="'success'"></fds-ml-button-clear>
+  <fds-ml-button-clear [btnTitle]="'Warning'" [btnType]="'clear'" [variant]="'warning'"></fds-ml-button-clear>
+  <fds-ml-button-clear [btnTitle]="'Info'" [btnType]="'clear'" [variant]="'info'"></fds-ml-button-clear>
+  <fds-ml-button-clear [btnTitle]="'Light'" [btnType]="'clear'" [variant]="'light'"></fds-ml-button-clear>
+  <fds-ml-button-clear [btnTitle]="'Dark'" [btnType]="'clear'" [variant]="'dark'"></fds-ml-button-clear>
+  <fds-ml-button-clear [btnTitle]="'Disabled'" [btnType]="'clear'" [variant]="'dark'" [isDisable]="true"></fds-ml-button-clear>
 </div>
 
 <div class="jumbotron pb-mid">
