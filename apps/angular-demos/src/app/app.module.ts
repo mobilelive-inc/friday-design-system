@@ -1,3 +1,4 @@
+import { TabComponent } from './../../../../libs/angular/src/lib/tabs/tab.component';
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
@@ -72,7 +73,8 @@ import { ImageWithSolidShadowComponent } from './examples/card/image-with-solid-
     IconFixedHeightComponent,
     NoIconComponent,
     WithImageComponent,
-    ImageWithSolidShadowComponent
+    ImageWithSolidShadowComponent,
+    TabComponent
   ],
   imports: [
     BrowserModule,
