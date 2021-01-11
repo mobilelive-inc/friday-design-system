@@ -1,4 +1,5 @@
 // stylelint-disable declaration-no-important
+
 @mixin bg-variant($parent, $color, $ignore-warning: false) {
   #{$parent} {
     background-color: $color;
@@ -17,24 +18,16 @@
 }
 
 @each $color, $value in $theme-colors {
-  @include bg-variant('.bg__#{$color}', $value, true);
+  @include bg-variant('.bg--#{$color}', $value, true);
 }
 
 @if $enable-gradients {
   @each $color, $value in $theme-colors {
-    @include bg-gradient-variant('.bg-gradient__#{$color}', $value, true);
+    @include bg-gradient-variant('.bg--gradient--#{$color}', $value, true);
   }
 }
 
-.bg-white {
-  background-color: var(--white);
-}
-
-.bg-transparent {
-  background-color: transparent;
-}
-
-.bg__secondary {
+/* .bg--secondary {
   color: var(--primary);
   background-color: var(--secondary);
-}
+} */

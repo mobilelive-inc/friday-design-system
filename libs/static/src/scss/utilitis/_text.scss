@@ -1,6 +1,8 @@
+// stylelint-disable declaration-no-important
+//
 // Text truncate
+//
 // Requires inline-block or block for proper styling
-
 @mixin text--truncate() {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -8,21 +10,10 @@
 }
 
 // Typography
-
-@mixin text--emphasis-variant($parent, $color, $ignore-warning: false) {
+@mixin text-emphasis-variant($parent, $color, $ignore-warning: false) {
   #{$parent} {
     color: $color;
   }
-  //@if $emphasized-link-hover-darken-percentage != 0 {
-  //  a#{$parent} {
-  //    @include hover-focus() {
-  //      color: darken($color,
-  //        $emphasized-link-hover-darken-percentage
-  //      ) !important;
-  //    }
-  //  }
-  //}
-  //@include deprecate('`text--emphasis-variant()`', 'v4.4.0', 'v5', $ignore-warning);
 }
 
 @mixin text--hide($ignore-warning: false) {
@@ -46,7 +37,6 @@
 }
 
 // Alignment
-
 .text--justify {
   text-align: justify;
 }
@@ -61,7 +51,6 @@
 }
 
 // Responsive alignment
-
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
@@ -79,7 +68,6 @@
 }
 
 // Transformation
-
 .text--lowercase {
   text-transform: lowercase;
 }
@@ -91,34 +79,31 @@
 }
 
 // Weight and italics
-
-.font-weight-light {
+.font--weight--light {
   font-weight: var(--font-weight-light);
 }
-.font-weight-lighter {
+.font--weight--lighter {
   font-weight: var(--font-weight-lighter);
 }
-.font-weight-normal {
+.font--weight--normal {
   font-weight: var(--font-weight-normal);
 }
-.font-weight-bold {
+.font--weight--bold {
   font-weight: var(--font-weight-bold);
 }
-.font-weight-bolder {
+.font--weight--bolder {
   font-weight: var(--font-weight-bolder);
 }
-.font-italic {
+.font--italic {
   font-style: italic;
 }
 
 // Contextual colors
-
 .text--white {
-  color: var(--white);
+  color: (--white);
 }
-
 @each $color, $value in $theme-colors {
-  @include text--emphasis-variant('.text__#{$color}', $value, true);
+  @include text-emphasis-variant('.text--#{$color}', $value, true);
 }
 
 .text--body {
@@ -128,37 +113,32 @@
   color: var(--text-muted);
 }
 
-.text--black-50 {
+.text--black--50 {
   color: rgba(var(--dark), 0.5);
 }
-.text--white-50 {
+.text--white--50 {
   color: rgba(var(--white), 0.5);
 }
 
 // Misc
-
 .text--hide {
   @include text--hide($ignore-warning: true);
 }
 
-.text--decoration-none {
+.text--decoration--none {
   text-decoration: none;
 }
-
 .text--break {
-  word-wrap: break-word;
+  word-break: break-word; // IE & < Edge 18
+  overflow-wrap: break-word;
 }
 
 // Reset
-
 .text--reset {
   color: inherit;
 }
 
-//
 // Horizontal rules
-//
-
 hr {
   margin-top: var(--hr-margin-y);
   margin-bottom: var(--hr-margin-y);
@@ -169,57 +149,43 @@ hr {
 }
 
 // Emphasis
-
 small,
 .small {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-normal);
 }
-
 mark,
 .mark {
   padding: var(--mark-padding);
   background-color: var(--mark-bg);
 }
 
-//
-// Lists
-//
-
-.list-unstyled {
+// Lists Style
+.list--unstyled {
   padding-left: 0;
   list-style: none;
 }
-
-// Inline turns list items into inline-block
-.list-inline {
+.list--inline {
   padding-left: 0;
   list-style: none;
 }
-
-.list-inline-item {
+.list--inline--item {
   display: inline-block;
-
   &:not(:last-child) {
     margin-right: var(--list-inline-padding);
   }
 }
 
-//
 // Misc
-//
-
 // Blockquotes
 .blockquote {
   margin-bottom: var(--global-spacer);
   @include font-size(var(--blockquote-font-size));
 }
-
 .blockquote-footer {
   display: block;
   color: var(--blockquote-small-color);
-
   &:before {
-    content: '\2014\00A0'; // em dash, nbsp
+    content: '\2014\00A0';
   }
 }

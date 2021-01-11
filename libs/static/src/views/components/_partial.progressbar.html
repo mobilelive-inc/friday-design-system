@@ -2,23 +2,47 @@
   <div class="infoBlockPiece">
     <h2>Progress</h2>
     <p>
-      Documentation and examples for using ML custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+      Documentation and examples for using ML custom progress bars featuring
+      support for stacked bars, animated backgrounds, and text labels.
     </p>
     <p>
-      Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don’t use <code>the HTML5 &lt;progress&gt; element,</code> ensuring you can stack progress bars, animate them, and place text labels over them.
+      Progress components are built with two HTML elements, some CSS to set the
+      width, and a few attributes. We don’t use
+      <code>the HTML5 &lt;progress&gt; element,</code> ensuring you can stack
+      progress bars, animate them, and place text labels over them.
     </p>
     <ul>
-      <li>We use the <code>.progress</code> as a wrapper to indicate the max value of the progress bar.</li>
-      <li>We use the inner <code>.progress-bar</code> to indicate the progress so far.</li>
-      <li>The <code>.progress-bar</code> requires an inline style, utility class, or custom CSS to set their width.</li>
-      <li>The <code>.progress-bar</code> also requires some <code>role</code> and <code>aria</code> attributes to make it accessible.</li>
+      <li>
+        We use the <code>.progress</code> as a wrapper to indicate the max value
+        of the progress bar.
+      </li>
+      <li>
+        We use the inner <code>.progress-bar</code> to indicate the progress so
+        far.
+      </li>
+      <li>
+        The <code>.progress-bar</code> requires an inline style, utility class,
+        or custom CSS to set their width.
+      </li>
+      <li>
+        The <code>.progress-bar</code> also requires some <code>role</code> and
+        <code>aria</code> attributes to make it accessible.
+      </li>
     </ul>
     <p>Put that all together, and you have the following examples</p>
     <div class="jumbotron">
-      <div class="pb-mid">
-        <div class="progress mb-mid">
-          <div id="progress-bar" class="progress-bar progress-primary" style="width: 50%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-            <span id="steper-text" class="steper-text pt-tiny">(2 of 6)</span>
+      <div class="pb--5">
+        <div class="progress mb--5">
+          <div
+            id="progress-bar"
+            class="progress-bar progress-primary"
+            style="width: 50%;"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <span id="steper-text" class="steper-text pt--2">(2 of 6)</span>
           </div>
         </div>
       </div>
@@ -30,7 +54,128 @@
           <div class="content-inner">
             <pre style="font-family: Montserrat; font-size: 12pt;">
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="progress-bar progress-primary"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="width: 50%"</span> <span style="color: rgb(0,0,255);">role</span><span style="color: rgb(0,128,0);">="progressbar"</span> <span style="color: rgb(0,0,255);">aria-valuenow</span><span style="color: rgb(0,128,0);">="0"</span> <span style="color: rgb(0,0,255);">aria-valuemin</span><span style="color: rgb(0,128,0);">="0"</span> <span style="color: rgb(0,0,255);">aria-valuemax</span><span style="color: rgb(0,128,0);">="100"</span>&gt;</span>
-  <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="pt-tiny"</span>>(2 of 6)&lt;/span&gt;</span>
+  <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="pt--2"</span>>(2 of 6)&lt;/span&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron">
+      <div class="mb--5">
+        <div
+          id="fds--slider--stepper"
+          class="fds-advanced-stepper fds--slider--stepper"
+          role="progressbar"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div
+            class="fds--stepper--head position--relative d--flex align--items--center justify--content--between text--center overflow--hidden"
+          >
+            <div classs="fds--stepper--content fds--slide--active">
+              <span
+                class="fds-box-counter position--relative d--inline-block bg--white mb--2"
+              >
+                <span
+                  class="fds--stepper--counter btn btn--icon btn--primary rounded--circle mx--5"
+                  >1</span
+                >
+              </span>
+              <span class="fds--stepper--title d--block text--primary"
+                >Prequalification</span
+              >
+            </div>
+            <div classs="fds--stepper--content">
+              <span
+                class="fds-box-counter position--relative d--inline-block bg--white mb--2"
+              >
+                <span
+                  class="fds--stepper--counter btn btn--icon btn--primary--outline rounded--circle mx--5"
+                  >2</span
+                >
+              </span>
+              <span class="fds--stepper--title d--block"
+                >Product Recommendation</span
+              >
+            </div>
+            <div classs="fds--stepper--content">
+              <span
+                class="fds-box-counter position--relative d--inline-block bg--white mb--2"
+              >
+                <span
+                  class="fds--stepper--counter btn btn--icon btn--primary--outline rounded--circle mx--5"
+                  >3</span
+                >
+              </span>
+              <span class="fds--stepper--title d--block">Prescreening</span>
+            </div>
+            <div classs="fds--stepper--content">
+              <span
+                class="fds-box-counter position--relative d--inline-block bg--white mb--2"
+              >
+                <span
+                  class="fds--stepper--counter btn btn--icon btn--primary--outline rounded--circle mx--5"
+                  >4</span
+                >
+              </span>
+              <span class="fds--stepper--title d--block">Client Info</span>
+            </div>
+            <div classs="fds--stepper--content">
+              <span
+                class="fds-box-counter position--relative d--inline-block bg--white mb--2"
+              >
+                <span
+                  class="fds--stepper--counter btn btn--icon btn--primary--outline rounded--circle mx--5"
+                  >5</span
+                >
+              </span>
+              <span class="fds--stepper--title d--block">Decision</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap-collabsible">
+        <input id="steppercollabsible" class="toggle" type="checkbox" />
+        <label for="steppercollabsible" class="lbl-toggle"></label>
+        <div class="collapsible-content">
+          <div class="content-inner">
+            <pre style="font-family: Montserrat; font-size: 12pt;">
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">id</span><span style="color: rgb(0,128,0);">="fds--slider--stepper"</span> <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds-advanced-stepper fds--slider--stepper"</span> <span style="color: rgb(0,0,255);">role</span><span style="color: rgb(0,128,0);">="progressbar"</span> <span style="color: rgb(0,0,255);">aria-valuenow</span><span style="color: rgb(0,128,0);">="0"</span> <span style="color: rgb(0,0,255);">aria-valuemin</span><span style="color: rgb(0,128,0);">="0"</span> <span style="color: rgb(0,0,255);">aria-valuemax</span><span style="color: rgb(0,128,0);">="100"</span>&gt;</span>
+  <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds--stepper--head position--relative d--flex align--items--center justify--content--between text--center"</span>&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">classs</span><span style="color: rgb(0,128,0);">="fds--stepper--content"</span>&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds-box-counter position--relative d--inline-block bg--white mb--2"</span>&gt;</span>
+        <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds--stepper--counter btn btn--icon btn--dark--outline rounded--circle mx--5"</span>&gt;<span style="color: rgb(195,104,55);">1</span>&lt;/span&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;/span&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds--stepper--title d--block"</span>&gt;<span style="color: rgb(195,104,55);">Prequalification</span>&lt;/span&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">classs</span><span style="color: rgb(0,128,0);">="fds--stepper--content"</span>&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds-box-counter position--relative d--inline-block bg--white mb--2"</span>&gt;</span>
+        <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds--stepper--counter btn btn--icon btn--dark--outline rounded--circle mx--5"</span>&gt;<span style="color: rgb(195,104,55);">2</span>&lt;/span&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;/span&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds--stepper--title d--block"</span>&gt;<span style="color: rgb(195,104,55);">Product Recommendation</span>&lt;/span&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">classs</span><span style="color: rgb(0,128,0);">="fds--stepper--content"</span>&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds-box-counter position--relative d--inline-block bg--white mb--2"</span>&gt;</span>
+        <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds--stepper--counter btn btn--icon btn--dark--outline rounded--circle mx--5"</span>&gt;<span style="color: rgb(195,104,55);">3</span>&lt;/span&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;/span&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds--stepper--title d--block"</span>&gt;<span style="color: rgb(195,104,55);">Prescreening</span>&lt;/span&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">classs</span><span style="color: rgb(0,128,0);">="fds--stepper--content"</span>&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds-box-counter position--relative d--inline-block bg--white mb--2"</span>&gt;</span>
+        <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds--stepper--counter btn btn--icon btn--dark--outline rounded--circle mx--5"</span>&gt;<span style="color: rgb(195,104,55);">4</span>&lt;/span&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;/span&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds--stepper--title d--block"</span>&gt;<span style="color: rgb(195,104,55);">Client Info</span>&lt;/span&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">classs</span><span style="color: rgb(0,128,0);">="fds--stepper--content"</span>&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds-box-counter position--relative d--inline-block bg--white mb--2"</span>&gt;</span>
+        <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds--stepper--counter btn btn--icon btn--dark--outline rounded--circle mx--5"</span>&gt;<span style="color: rgb(195,104,55);">5</span>&lt;/span&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;/span&gt;</span>
+      <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds--stepper--title d--block"</span>&gt;<span style="color: rgb(195,104,55);">Decision</span>&lt;/span&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
+  <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
             </pre>
           </div>

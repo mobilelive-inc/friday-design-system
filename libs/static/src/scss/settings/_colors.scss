@@ -19,7 +19,9 @@ $theme-colors: (
   'danger': var(--danger),
   'light': var(--light),
   'dark': var(--dark),
-  'white': var(--white)
+  'white': var(--white),
+  'black': var(--black),
+  'no-color': var(--nocolor)
 );
 
 $colors: (
