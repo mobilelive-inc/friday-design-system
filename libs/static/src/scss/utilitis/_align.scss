@@ -1,18 +1,20 @@
-.align-baseline {
+// stylelint-disable declaration-no-important
+
+.align--baseline {
   vertical-align: baseline;
 } // Browser default
-.align-top {
+.align--top {
   vertical-align: top;
 }
-.align-middle {
+.align--middle {
   vertical-align: middle;
 }
-.align-bottom {
+.align--bottom {
   vertical-align: bottom;
 }
-.align-text-bottom {
+.align--text-bottom {
   vertical-align: text-bottom;
 }
-.align-text-top {
+.align--text-top {
   vertical-align: text-top;
 }

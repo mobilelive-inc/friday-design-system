@@ -23,3 +23,29 @@
     transition: transform 0.6s ease;
   }
 }
+.fds--stepper--head {
+  &:before {
+    height: 2px;
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100% - 10%);
+    top: var(--before-top-value);
+    left: var(--before-left-value);
+    background-color: var(--steper-border-color);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+.fds--stepper--content {
+  z-index: 2;
+  position: relative;
+}
+/* .fds--slide--active {
+  .fds--stepper--title {
+    color: var(--primary);
+  }
+} */

@@ -43,7 +43,6 @@
     //line-height: var(--input-line-height);
     color: var(--input-placeholder-color);
     line-height: normal;
-    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
     opacity: 1;
   }
 
@@ -53,7 +52,6 @@
   &[readonly] {
     pointer-events: none;
     background-color: var(--input-disabled-bg);
-    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 0.5;
   }
 
@@ -105,7 +103,7 @@
     }
   }
 
-  ~ .text-danger {
+  ~ .text--danger {
     display: none;
     line-height: 1;
     margin: 0;
@@ -252,7 +250,7 @@ input[type='file'] {
   height: var(--input-height);
 }
 
-.text-danger {
+.text--danger {
   @include font-size(var(--font-size-tiny));
   color: var(--danger);
   flex-basis: 100%;
@@ -360,7 +358,6 @@ input[type='search'] {
     pointer-events: none;
     border-color: red;
     background-color: var(--input-disabled-bg) !important;
-    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 0.5;
   } */
 

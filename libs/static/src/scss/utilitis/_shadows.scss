@@ -1,0 +1,30 @@
+// stylelint-disable declaration-no-important
+
+.has--shadow {
+  box-shadow: var(--card-shadow-horizontalLength)
+    var(--card-shadow-verticalLength) var(--card-shadow-blurRadius)
+    var(--card-shadow-color);
+}
+.has--solid--shadow--primary {
+  box-shadow: var(--card-solidShadow-horizontalLength)
+    var(--card-solidShadow-verticalLength) var(--card-solidShadow-blurRadius)
+    var(--card-solidShadow-spread) var(--card-solidShadow-primary);
+}
+.has--sm-solid--shadow--primary {
+  box-shadow: var(--card-sm-solidShadow-horizontalLength)
+    var(--card-sm-solidShadow-verticalLength) var(--card-solidShadow-blurRadius)
+    var(--card-solidShadow-spread) var(--card-solidShadow-primary);
+}
+.has--solid--shadow--secondary {
+  box-shadow: var(--card-solidShadow-horizontalLength)
+    var(--card-solidShadow-verticalLength) var(--card-solidShadow-blurRadius)
+    var(--card-solidShadow-spread) var(--card-solidShadow-secondary);
+}
+.has--sm-solid--shadow--secondary {
+  box-shadow: var(--card-sm-solidShadow-horizontalLength)
+    var(--card-sm-solidShadow-verticalLength) var(--card-solidShadow-blurRadius)
+    var(--card-solidShadow-spread) var(--card-solidShadow-secondary);
+}
+.shadow--none {
+  box-shadow: none;
+}

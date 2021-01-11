@@ -5,6 +5,9 @@
   --progressbar-height: 1rem;
   --status-font-size: var(--base-font-size);
   --bg-progressbar: var(--primary-lighter);
+  --steper-border-color: var(--primary);
+  --before-top-value: 20px;
+  --before-left-value: 50%;
 }
 
 @each $color, $value in $theme-colors {

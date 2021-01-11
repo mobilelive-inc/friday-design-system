@@ -2,37 +2,7 @@
 
 @import '../../../theme/card';
 
-.has-shadow {
-  box-shadow: var(--card-shadow-horizontalLength)
-    var(--card-shadow-verticalLength) var(--card-shadow-blurRadius)
-    var(--card-shadow-color);
-}
-.has-solidShadow-primary {
-  box-shadow: var(--card-solidShadow-horizontalLength)
-    var(--card-solidShadow-verticalLength) var(--card-solidShadow-blurRadius)
-    var(--card-solidShadow-spread) var(--card-solidShadow-primary);
-}
-.has-sm-solidShadow-primary {
-  box-shadow: var(--card-sm-solidShadow-horizontalLength)
-    var(--card-sm-solidShadow-verticalLength) var(--card-solidShadow-blurRadius)
-    var(--card-solidShadow-spread) var(--card-solidShadow-primary);
-}
-.has-solidShadow-secondary {
-  box-shadow: var(--card-solidShadow-horizontalLength)
-    var(--card-solidShadow-verticalLength) var(--card-solidShadow-blurRadius)
-    var(--card-solidShadow-spread) var(--card-solidShadow-secondary);
-}
-.has-sm-solidShadow-secondary {
-  box-shadow: var(--card-sm-solidShadow-horizontalLength)
-    var(--card-sm-solidShadow-verticalLength) var(--card-solidShadow-blurRadius)
-    var(--card-solidShadow-spread) var(--card-solidShadow-secondary);
-}
-
 .fds-card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  //background: var(--bg-card);
   figure {
     img {
       height: auto;
@@ -54,14 +24,10 @@
     color: var(--card-color);
   }
 }
-.content-height {
-  flex-grow: 1;
-}
-
 .fds-card-footer {
   justify-content: flex-end;
   margin-top: auto;
-  .btn__primary {
+  .btn--primary {
     color: var(--card-btn-color);
     &:hover {
       color: var(--white-color);

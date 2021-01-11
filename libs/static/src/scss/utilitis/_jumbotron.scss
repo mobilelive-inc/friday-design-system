@@ -18,7 +18,7 @@ $jumbotron-border-color: var(--gray-light);
   }
 }
 
-.jumbotron-fluid {
+.jumbotron--fluid {
   padding-right: 0;
   padding-left: 0;
   @include border-radius(0);

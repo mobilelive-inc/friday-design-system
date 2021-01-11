@@ -10,8 +10,8 @@
       Rules are directly applied to
       <code>&lt;iframe&gt;, &lt;embed&gt;, &lt;video&gt;,</code> and
       <code>&lt;p&gt;</code> elements; optionally use an explicit descendant
-      class .embed-responsive-item when you want to match the styling for other
-      attributes.
+      class .embed--responsive--item when you want to match the styling for
+      other attributes.
     </p>
 
     <p>
@@ -20,16 +20,16 @@
     </p>
     <p>
       Wrap any embed like an <code>&lt;iframe&gt;</code> in a parent element
-      with .embed-responsive and an aspect ratio. The .embed-responsive-item
+      with .embed--responsive and an aspect ratio. The .embed--responsive--item
       isn’t strictly required, but we encourage it.
     </p>
     <div class="jumbotron">
-      <div class="row mb-mid">
+      <div class="row mb--5">
         <div class="col">
           <h4>Example 21 : 9</h4>
-          <div class="embed-responsive embed-responsive-21by9">
+          <div class="embed--responsive embed--responsive--21by9">
             <iframe
-              class="embed-responsive-item"
+              class="embed--responsive--item"
               src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
               allowfullscreen
             ></iframe>
@@ -37,22 +37,22 @@
         </div>
         <div class="col">
           <h4>Example 16 : 9</h4>
-          <div class="embed-responsive embed-responsive-16by9">
+          <div class="embed--responsive embed--responsive--16by9">
             <iframe
-              class="embed-responsive-item"
+              class="embed--responsive--item"
               src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
               allowfullscreen
             ></iframe>
           </div>
         </div>
       </div>
-      <span class="divider mb-mid"></span>
-      <div class="row mb-mid">
+      <span class="divider mb--5"></span>
+      <div class="row mb--5">
         <div class="col">
           <h4>Example 4 : 3</h4>
-          <div class="embed-responsive embed-responsive-4by3">
+          <div class="embed--responsive embed--responsive--4by3">
             <iframe
-              class="embed-responsive-item"
+              class="embed--responsive--item"
               src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
               allowfullscreen
             ></iframe>
@@ -60,9 +60,9 @@
         </div>
         <div class="col">
           <h4>Example 3 : 2</h4>
-          <div class="embed-responsive embed-responsive-3by2">
+          <div class="embed--responsive embed--responsive--3by2">
             <iframe
-              class="embed-responsive-item"
+              class="embed--responsive--item"
               src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
               allowfullscreen
             ></iframe>
@@ -70,22 +70,22 @@
         </div>
         <div class="col">
           <h4>Example 1 : 1</h4>
-          <div class="embed-responsive embed-responsive-1by1">
+          <div class="embed--responsive embed--responsive--1by1">
             <iframe
-              class="embed-responsive-item"
+              class="embed--responsive--item"
               src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
               allowfullscreen
             ></iframe>
           </div>
         </div>
       </div>
-      <span class="divider mb-mid"></span>
-      <div class="row mb-mid">
+      <span class="divider mb--5"></span>
+      <div class="row mb--5">
         <div class="col">
           <h4>Example 21 : 9</h4>
-          <div class="embed-responsive embed-responsive-21by9">
+          <div class="embed--responsive embed--responsive--21by9">
             <figure
-              class="embed-responsive-item m-none"
+              class="embed--responsive--item m--0"
               style="
                 background-image: url(../../images/img-01.png);
                 background-size: cover;
@@ -97,9 +97,9 @@
         </div>
         <div class="col">
           <h4>Example 16 : 9</h4>
-          <div class="embed-responsive embed-responsive-16by9">
+          <div class="embed--responsive embed--responsive--16by9">
             <figure
-              class="embed-responsive-item m-none"
+              class="embed--responsive--item m--0"
               style="
                 background-image: url(../../images/img-01.png);
                 background-size: cover;
@@ -110,13 +110,13 @@
           </div>
         </div>
       </div>
-      <span class="divider mb-mid"></span>
-      <div class="row mb-mid">
+      <span class="divider mb--5"></span>
+      <div class="row mb--5">
         <div class="col">
           <h4>Example 4 : 3</h4>
-          <div class="embed-responsive embed-responsive-4by3">
+          <div class="embed--responsive embed--responsive--4by3">
             <figure
-              class="embed-responsive-item m-none"
+              class="embed--responsive--item m--0"
               style="
                 background-image: url(../../images/img-01.png);
                 background-size: cover;
@@ -128,9 +128,9 @@
         </div>
         <div class="col">
           <h4>Example 3 : 2</h4>
-          <div class="embed-responsive embed-responsive-3by2">
+          <div class="embed--responsive embed--responsive--3by2">
             <figure
-              class="embed-responsive-item m-none"
+              class="embed--responsive--item m--0"
               style="
                 background-image: url(../../images/img-01.png);
                 background-size: cover;
@@ -142,9 +142,9 @@
         </div>
         <div class="col">
           <h4>Example 1 : 1</h4>
-          <div class="embed-responsive embed-responsive-1by1">
+          <div class="embed--responsive embed--responsive--1by1">
             <figure
-              class="embed-responsive-item m-none"
+              class="embed--responsive--item m--0"
               style="
                 background-image: url(../../images/img-01.png);
                 background-size: cover;
@@ -162,37 +162,37 @@
         <div class="collapsible-content">
           <div class="content-inner">
             <pre style="font-family: Montserrat; font-size: 12pt;">
-<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-21by9&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive embed--responsive--21by9&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive--item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
-<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-16by9&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive embed--responsive--16by9&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive--item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
-<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-4by3&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive embed--responsive--4by3&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive--item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
-<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-3by2&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive embed--responsive--3by2&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive--item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
-<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-1by1&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive embed--responsive--1by1&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;iframe </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive--item&quot;</span> <span style="color: rgb(0,0,255);">src</span><span style="color: rgb(0,128,0);">=&quot;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/iframe&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 
 
-<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-21by9&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;figure </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">=&quot;background-image: url(../../images/img-01.png);&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/figure&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive embed--responsive--21by9&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;figure </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive--item&quot;</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">=&quot;background-image: url(../../images/img-01.png);&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/figure&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
-<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-16by9&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;figure </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">=&quot;background-image: url(../../images/img-01.png);&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/figure&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive embed--responsive--16by9&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;figure </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive--item&quot;</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">=&quot;background-image: url(../../images/img-01.png);&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/figure&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
-<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-4by3&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;figure </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">=&quot;background-image: url(../../images/img-01.png);&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/figure&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive embed--responsive--4by3&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;figure </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive--item&quot;</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">=&quot;background-image: url(../../images/img-01.png);&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/figure&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
-<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-3by2&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;figure </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">=&quot;background-image: url(../../images/img-01.png);&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/figure&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive embed--responsive--3by2&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;figure </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive--item&quot;</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">=&quot;background-image: url(../../images/img-01.png);&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/figure&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
-<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive embed-responsive-1by1&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;figure </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed-responsive-item&quot;</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">=&quot;background-image: url(../../images/img-01.png);&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/figure&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive embed--responsive--1by1&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;figure </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;embed--responsive--item&quot;</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">=&quot;background-image: url(../../images/img-01.png);&quot;</span><span style="color: rgb(0,0,128);">&gt;</span><span style="color: rgb(0,0,128);">&lt;/figure&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
               </pre>
           </div>

@@ -1,32 +1,31 @@
+// stylelint-disable declaration-no-important
+
 // Common values
 @each $position in $positions {
-  .position-#{$position} {
-    position: $position;
+  .position--#{$position} {
+    position: $position !important;
   }
 }
 
 // Shorthand
-
-.fixed-top {
-  position: fixed;
+.fixed--top {
   top: 0;
-  right: 0;
   left: 0;
+  right: 0;
+  position: fixed;
   z-index: var(--zindex-fixed);
 }
-
-.fixed-bottom {
-  position: fixed;
+.fixed--bottom {
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  position: fixed;
   z-index: var(--zindex-fixed);
 }
-
-.sticky-top {
+.sticky--top {
   @supports (position: sticky) {
-    position: sticky;
     top: 0;
+    position: sticky;
     z-index: var(--zindex-sticky);
   }
 }

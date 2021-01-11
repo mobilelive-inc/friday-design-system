@@ -75,12 +75,12 @@
   --light-hover: var(--gray);
   --dark-hover: var(--gray-light);
 
-  .bg__warning,
-  .bg__info {
+  .bg--warning,
+  .bg--info {
     color: var(--secondary-text) !important;
   }
-  .bg__secondary,
-  .bg__light {
+  .bg--secondary,
+  .bg--light {
     color: var(--primary-text) !important;
   }
 }
@@ -110,7 +110,7 @@
   --light-hover: var(--gray);
   --dark-hover: var(--gray-light);
 
-  .bg__warning {
+  .bg--warning {
     color: var(--btn-color) !important;
   }
 }
@@ -139,7 +139,7 @@
   --light-hover: var(--gray);
   --dark-hover: var(--gray-light);
 
-  .bg__warning {
+  .bg--warning {
     color: var(--btn-color) !important;
   }
 }
