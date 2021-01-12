@@ -129,6 +129,12 @@
     "webpack-merge": "^4.2.2",
     "zone.js": "^0.10.2"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run commit:lint && npm run format:write -- --uncommitted && git add ."
+    }
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.901.0",
     "@angular-devkit/build-ng-packagr": "~0.901.0",
