@@ -131,8 +131,8 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run commit:lint && npm run format:write -- --uncommitted && git add ."
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+     
     }
   },
   "devDependencies": {
