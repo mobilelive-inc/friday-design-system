@@ -1,0 +1,41 @@
+<div id="position" class="infoBlockPiece">
+  <h2>Position</h2>
+  <p class="h6">Use these shorthand utilities for quickly configuring the position of an element.</p>
+  <h3 class="h4">Common values</h3>
+  <p>Quick positioning classes are available, though they are not responsive.</p>
+
+  <div class="highlighted-block mb--5">
+<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt; margin:1rem;">
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="position-static"</span>&gt;<code style="color: #f48245 !important">...</code>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="position-relative"</span>&gt;<code style="color: #f48245 !important">...</code>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="position-absolute"</span>&gt;<code style="color: #f48245 !important">...</code>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="position-fixed"</span>&gt;<code style="color: #f48245 !important">...</code>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="position-sticky"</span>&gt;<code style="color: #f48245 !important">...</code>&lt;/div&gt;</span>
+</pre>
+  </div>
+
+  <h3 class="h4">Fixed Top</h3>
+  <p>Position an element at the top of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.</p>
+  <div class="highlighted-block mb--5">
+<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fixed--top"</span>&gt;<code style="color: #f48245 !important">...</code>&lt;/div&gt;</span>
+</pre>
+  </div>
+
+  <h3 class="h4">Fixed Bottom</h3>
+  <p>Position an element at the bottom of the viewport, from edge to edge. Be sure you understand the ramifications of fixed position in your project; you may need to add additional CSS.</p>
+  <div class="highlighted-block mb--5">
+<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fixed--bottom"</span>&gt;<code style="color: #f48245 !important">...</code>&lt;/div&gt;</span>
+</pre>
+  </div>
+
+  <h3 class="h4">Sticky Top</h3>
+  <p>Position an element at the top of the viewport, from edge to edge, but only after you scroll past it. The <code>.sticky-top</code> utility uses CSS’s <code>position: sticky</code>, which isn’t fully supported in all browsers.</p>
+  <p><strong>IE11 and IE10 will render</strong> <code>position: sticky</code> as <code>position: relative</code>. As such, we wrap the styles in a @supports query, limiting the stickiness to only browsers that can render it properly.</p>
+  <div class="highlighted-block">
+<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="sticky--top"</span>&gt;<code style="color: #f48245 !important">...</code>&lt;/div&gt;</span>
+</pre>
+  </div>
+</div>

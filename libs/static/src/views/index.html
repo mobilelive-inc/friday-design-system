@@ -104,11 +104,7 @@
         <div class="logo">
           <h4 class="ds-name">Friday</h4>
           <a href="javascript:void(0)" class="logo-mini">
-            <img
-              class="img-fluid"
-              src="https://images.ctfassets.net/6krz4kg7somr/4rbWt1PlMkYo4wM0AG404E/3f7fd80ac8a62bd48a235d98bc04127e/logo.png"
-              alt="mobileLive"
-            />
+            <img class="img-fluid" src="https://images.ctfassets.net/6krz4kg7somr/4rbWt1PlMkYo4wM0AG404E/3f7fd80ac8a62bd48a235d98bc04127e/logo.png" alt="mobileLive"/>
           </a>
         </div>
 
@@ -164,6 +160,7 @@
           <!--Notification List-->
           <module href="/components/_partial.notification-list.html"></module>
           <!--Notification List-->
+
 
           <!--Grids-->
           <div class="my--5" id="Grid_sections">
@@ -513,15 +510,14 @@
       }
 
       var progressBar = document.getElementById('progress-bar');
-      const progressBarWidth =
-        progressBar.style.width && progressBar.style.width.replace('%', '');
+      const progressBarWidth = progressBar.style.width && progressBar.style.width.replace('%', '');
       const widthPercentage = parseFloat(progressBarWidth);
-      if (widthPercentage <= 10) {
+      if(widthPercentage <= 10){
         var steperText = document.getElementById('steper-text');
-        steperText.setAttribute('style', 'left: 0;transform: translateX(0);');
-      } else if (widthPercentage >= 90) {
+        steperText.setAttribute("style", "left: 0;transform: translateX(0);");
+      }else if(widthPercentage >= 90) {
         var steperText = document.getElementById('steper-text');
-        steperText.setAttribute('style', 'transform: translateX(-100%);');
+        steperText.setAttribute("style", "transform: translateX(-100%);");
       }
     </script>
   </body>
