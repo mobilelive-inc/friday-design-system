@@ -1,9 +1,9 @@
-import { ViewContainerRef, ComponentFactoryResolver } from "@angular/core";
-import { Direction } from "@angular/cdk/bidi";
-import { ScrollStrategy } from "@angular/cdk/overlay";
+import { ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
+import { Direction } from '@angular/cdk/bidi';
+import { ScrollStrategy } from '@angular/cdk/overlay';
 
 /** Valid ARIA roles for a modal element. */
-export type ModalRole = "dialog" | "alertdialog";
+export type ModalRole = 'dialog' | 'alertdialog';
 
 /** Possible overrides for a dialog's position. */
 export interface ModalPosition {
@@ -24,7 +24,6 @@ export interface ModalPosition {
  * Configuration for opening a modal dialog with the MatDialog service.
  */
 export class FdsModalConfig<D = any> {
-
   /**
    * Where the attached component should live in Angular's *logical* component tree.
    * This affects what is available for injection and the change detection order for the
@@ -37,25 +36,25 @@ export class FdsModalConfig<D = any> {
   id?: string;
 
   /** The ARIA role of the dialog element. */
-  role?: ModalRole = "dialog";
+  role?: ModalRole = 'dialog';
 
   /** Custom class for the overlay pane. */
-  panelClass?: string | string[] = "";
+  panelClass?: string | string[] = '';
 
   /** Whether the dialog has a backdrop. */
   hasBackdrop?: boolean = true;
 
   /** Custom class for the backdrop. */
-  backdropClass?: string | string[] = "";
+  backdropClass?: string | string[] = '';
 
   /** Whether the user can use escape or clicking on the backdrop to close the modal. */
   disableClose?: boolean = false;
 
   /** Width of the dialog. */
-  width?: string = "";
+  width?: string = '';
 
   /** Height of the dialog. */
-  height?: string = "";
+  height?: string = '';
 
   /** Min-width of the dialog. If a number is provided, assumes pixel units. */
   minWidth?: number | string;

@@ -21,12 +21,12 @@
   --light-hover: var(--gray);
   --dark-hover: var(--gray-light);
 
-  .bg__warning,
-  .bg__info {
-	color: var(--secondary-text) !important;
+  .bg--warning,
+  .bg--info {
+    color: var(--secondary-text) !important;
   }
-  .bg__secondary,
-  .bg__light {
-	color: var(--primary-text) !important;
+  .bg--secondary,
+  .bg--light {
+    color: var(--primary-text) !important;
   }
 }

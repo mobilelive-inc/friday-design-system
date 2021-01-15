@@ -8,9 +8,8 @@ describe('MlSideEffectsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MlSideEffectsComponent ]
-    })
-    .compileComponents();
+      declarations: [MlSideEffectsComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

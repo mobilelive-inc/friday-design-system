@@ -3,20 +3,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'fds-simple-card',
   template: `
-    <fds-card cardClass="fds-card">
-      <figure class="m-none">
-        <img alt="Card" src="assets/images/img-01.png">
+    <fds-card>
+      <figure class="m--0">
+        <img alt="Card" src="assets/images/img-01.png" />
       </figure>
     </fds-card>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class SimpleComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

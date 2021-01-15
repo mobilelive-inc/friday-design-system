@@ -6,7 +6,7 @@ fds-autocomplete {
 .p-autocomplete-loader {
   position: absolute;
   top: 50%;
-  margin-top: -.5rem;
+  margin-top: -0.5rem;
 }
 
 .p-autocomplete-dd .p-autocomplete-input {
@@ -112,7 +112,8 @@ fds-autocomplete .p-autocomplete-panel {
   color: #495057;
   border: 0 none;
   border-radius: 3px;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .p-autocomplete-panel .p-autocomplete-items .p-autocomplete-item.p-highlight {

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "mobileLive Designs System Static",
   "author": "Mutahar Aslam",
-  "license": "Mobilelive",
+  "license": "Unlicensed",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/mobilelive-inc/friday-design-system"

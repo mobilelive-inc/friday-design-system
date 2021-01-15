@@ -1,12 +1,12 @@
-import { BooleanInput } from "@angular/cdk/coercion";
+import { BooleanInput } from '@angular/cdk/coercion';
 import {
   CdkStep,
   CdkStepper,
   StepContentPositionState,
   STEPPER_GLOBAL_OPTIONS,
   StepperOptions
-} from "@angular/cdk/stepper";
-import { AnimationEvent } from "@angular/animations";
+} from '@angular/cdk/stepper';
+import { AnimationEvent } from '@angular/animations';
 import {
   AfterContentInit,
   ChangeDetectionStrategy,
@@ -23,37 +23,54 @@ import {
   SkipSelf,
   TemplateRef,
   ViewChildren,
-  ViewEncapsulation
-} from "@angular/core";
-import { FormControl, FormGroupDirective, NgForm } from "@angular/forms";
-import { FdsErrorStateMatcher } from "../shared/error-options";
-import { Subject } from "rxjs";
-import { takeUntil, distinctUntilChanged } from "rxjs/operators";
-import { fdsStepperAnimations } from "./stepper-animations";
-import { Template } from "../shared/template.directive";
+  ViewEncapsulation,
+  ContentChild
+} from '@angular/core';
+import {
+  FormControl,
+  FormGroupDirective,
+  NgForm,
+  FormGroup
+} from '@angular/forms';
+import { FdsErrorStateMatcher } from '../shared/error-options';
+import { Subject } from 'rxjs';
+import { takeUntil, distinctUntilChanged } from 'rxjs/operators';
+import { fdsStepperAnimations } from './stepper-animations';
+import { Template } from '../shared/template.directive';
+import { FdsStepLabel } from './step-label';
 
 @Component({
-  selector: "fds-step",
-  templateUrl: "step.html",
+  selector: 'fds-step',
+  templateUrl: 'step.html',
   providers: [
     { provide: FdsErrorStateMatcher, useExisting: FdsStep },
     { provide: CdkStep, useExisting: FdsStep }
   ],
   encapsulation: ViewEncapsulation.None,
-  exportAs: "fdsStep",
+  exportAs: 'fdsStep',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FdsStep extends CdkStep implements FdsErrorStateMatcher {
+  /** Content for step label given by `<ng-template matStepLabel>`. */
+  @ContentChild(FdsStepLabel) stepLabel: FdsStepLabel;
 
-  constructor(@Inject(forwardRef(() => FdsStepper)) stepper: FdsStepper,
-              @SkipSelf() private _errorStateMatcher: FdsErrorStateMatcher,
-              @Optional() @Inject(STEPPER_GLOBAL_OPTIONS) stepperOptions: StepperOptions) {
+  constructor(
+    @Inject(forwardRef(() => FdsStepper)) stepper: FdsStepper,
+    @SkipSelf() private _errorStateMatcher: FdsErrorStateMatcher,
+    @Optional() @Inject(STEPPER_GLOBAL_OPTIONS) stepperOptions: StepperOptions
+  ) {
     super(stepper, stepperOptions);
   }
 
   /** Custom error state matcher that additionally checks for validity of interacted form. */
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const originalErrorState = this._errorStateMatcher.isErrorState(control, form);
+  isErrorState(
+    control: FormControl | null,
+    form: FormGroupDirective | NgForm | null
+  ): boolean {
+    const originalErrorState = this._errorStateMatcher.isErrorState(
+      control,
+      form
+    );
 
     // Custom error state checks for the validity of form that is not submitted or touched
     // since user can trigger a form change by calling for another step without directly
@@ -68,8 +85,10 @@ export class FdsStep extends CdkStep implements FdsErrorStateMatcher {
   }
 }
 
-
-@Directive({ selector: "[fdsStepper]", providers: [{ provide: CdkStepper, useExisting: FdsStepper }] })
+@Directive({
+  selector: '[fdsStepper]',
+  providers: [{ provide: CdkStepper, useExisting: FdsStepper }]
+})
 export class FdsStepper extends CdkStepper implements AfterContentInit {
   static ngAcceptInputType_editable: BooleanInput;
   static ngAcceptInputType_optional: BooleanInput;
@@ -80,7 +99,9 @@ export class FdsStepper extends CdkStepper implements AfterContentInit {
   /** Steps that belong to the current stepper, excluding ones from nested steppers. */
   readonly steps: QueryList<FdsStep> = new QueryList<FdsStep>();
   /** Event emitted when the current step is done transitioning in. */
-  @Output() readonly animationDone: EventEmitter<void> = new EventEmitter<void>();
+  @Output() readonly animationDone: EventEmitter<void> = new EventEmitter<
+    void
+  >();
   /** Stream of animation `done` events when the body expands/collapses. */
   _animationDone = new Subject<AnimationEvent>();
 
@@ -92,28 +113,38 @@ export class FdsStepper extends CdkStepper implements AfterContentInit {
       this._stateChanged();
     });
 
-    this._animationDone.pipe(
-      // This needs a `distinctUntilChanged` in order to avoid emitting the same event twice due
-      // to a bug in animations where the `.done` callback gets invoked twice on some browsers.
-      // See https://github.com/angular/angular/issues/24084
-      distinctUntilChanged((x, y) => x.fromState === y.fromState && x.toState === y.toState),
-      takeUntil(this._destroyed)
-    ).subscribe(event => {
-      if ((event.toState as StepContentPositionState) === "current") {
-        this.animationDone.emit();
-      }
-    });
+    this._animationDone
+      .pipe(
+        // This needs a `distinctUntilChanged` in order to avoid emitting the same event twice due
+        // to a bug in animations where the `.done` callback gets invoked twice on some browsers.
+        // See https://github.com/angular/angular/issues/24084
+        distinctUntilChanged(
+          (x, y) => x.fromState === y.fromState && x.toState === y.toState
+        ),
+        takeUntil(this._destroyed)
+      )
+      .subscribe(event => {
+        if ((event.toState as StepContentPositionState) === 'current') {
+          this.animationDone.emit();
+        }
+      });
   }
 }
 
 @Component({
-  selector: "fds-horizontal-stepper",
-  exportAs: "FdsHorizontalStepper",
-  templateUrl: "stepper-horizontal.html",
-  inputs: ["selectedIndex"],
-  styleUrls: ["./stepper.scss"],
+  selector: 'fds-horizontal-stepper',
+  exportAs: 'FdsHorizontalStepper',
+  templateUrl: 'stepper-horizontal.html',
+  inputs: ['selectedIndex'],
+  styleUrls: ['./stepper.scss'],
   host: {
-    "class": "fds-stepper-horizontal"
+    /* class: 'fds-stepper-horizontal', */
+    id: 'fds--slider--stepper',
+    class: 'fds-advanced-stepper fds--slider--stepper',
+    role: 'progressbar',
+    ariaValuenow: '0',
+    ariaValuemin: '0',
+    ariaValuemax: '100'
   },
   animations: [fdsStepperAnimations.horizontalStepTransition],
   providers: [
@@ -123,19 +154,20 @@ export class FdsStepper extends CdkStepper implements AfterContentInit {
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FdsHorizontalStepper extends FdsStepper implements AfterContentInit {
+export class FdsHorizontalStepper extends FdsStepper
+  implements AfterContentInit {
   /** Whether the label should display in bottom or end position. */
   @Input()
-  labelPosition: "bottom" | "end" = "end";
+  labelPosition: 'bottom' | 'end' = 'end';
 
   @ContentChildren(Template) templates: QueryList<any>;
 
   public headerTemplate: TemplateRef<any>;
 
   ngAfterContentInit() {
-    this.templates.forEach((item) => {
+    this.templates.forEach(item => {
       switch (item.getType()) {
-        case "header":
+        case 'header':
           this.headerTemplate = item.template;
           break;
       }

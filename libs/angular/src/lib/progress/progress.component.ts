@@ -1,23 +1,31 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: "fds-progress",
+  selector: 'fds-progress',
   template: `
-	<div class="progress mb-mid">
-	  <div class="progress-bar progress-primary"
-		   [style.width.%]="_getWidth()"
-		   role="progressbar"
-		   [attr.aria-valuenow]="value"
-		   [attr.aria-valuemin]="min"
-		   [attr.aria-valuemax]="max">
-		<span role="alert" aria-live="polite" aria-atomic="true" class="pt-tiny px-tiny bg-white" *ngIf="showLabel" [ngStyle]="_getLabelStyle()">{{formatValue(value)}}</span>
-	  </div>
-	</div>
-
+    <div class="progress mb--5">
+      <div
+        class="progress-bar progress-primary"
+        [style.width.%]="_getWidth()"
+        role="progressbar"
+        [attr.aria-valuenow]="value"
+        [attr.aria-valuemin]="min"
+        [attr.aria-valuemax]="max"
+      >
+        <span
+          role="alert"
+          aria-live="polite"
+          aria-atomic="true"
+          class="pt--2 px--2 bg--white"
+          *ngIf="showLabel"
+          [ngStyle]="_getLabelStyle()"
+          >{{ formatValue(value) }}</span
+        >
+      </div>
+    </div>
   `
 })
 export class ProgressComponent implements OnInit {
-
   @Input() min = 0;
 
   @Input() max = 100;
@@ -28,23 +36,23 @@ export class ProgressComponent implements OnInit {
 
   @Input() displayWith: (value: number) => string | number;
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   _getWidth() {
-    const widthPercent = Math.floor((this.value - this.min) / (this.max - this.min) * 100);
+    const widthPercent = Math.floor(
+      ((this.value - this.min) / (this.max - this.min)) * 100
+    );
     return Math.min(100, Math.max(0, widthPercent));
   }
 
   _getLabelStyle() {
     // Label should not go out of boundaries, add compensation for min/max values
     if (this.value == this.min) {
-      return { "transform": "none" };
+      return { transform: 'none' };
     } else if (this.value == this.max) {
-      return { "transform": "translateX(-100%)" };
+      return { transform: 'translateX(-100%)' };
     }
     return {};
   }

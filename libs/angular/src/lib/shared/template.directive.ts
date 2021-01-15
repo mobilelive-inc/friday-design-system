@@ -1,4 +1,4 @@
-import { Directive, Input, TemplateRef, Component } from "@angular/core";
+import { Directive, Input, TemplateRef, Component } from '@angular/core';
 
 @Component({
   selector: 'fds-header',
@@ -16,7 +16,6 @@ export class Footer {}
   selector: '[fdsTemplate]'
 })
 export class Template {
-
   @Input() type: string;
 
   @Input('fdsTemplate') name: string;

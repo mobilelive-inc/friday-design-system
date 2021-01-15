@@ -1,34 +1,50 @@
-<label [attr.for]="_control.id" [class.required]="!hideRequiredMarker && _control?.required && !_control?.disabled">
-	<!-- TODO @kashif @Dmitriy please make it dynamic for screen reader label -->
-	<!-- <span class="sr-only">form label</span> -->
+<label
+  [attr.for]="_control.id"
+  [class.required]="
+    !hideRequiredMarker && _control?.required && !_control?.disabled
+  "
+>
+  <!-- TODO @kashif @Dmitriy please make it dynamic for screen reader label -->
+  <!-- <span class="sr--only">form label</span> -->
   <ng-content select="fds-label"></ng-content>
 </label>
 <!--<i class="icon-info-outline"></i>-->
-<div class="formControlWrap d-flex align-items-center flex-wrap" [class.fds-noIcon]="!_control?.required">
-  <div class="formControlHolder formControlHolder__{{controlType}}"
-	   [class.error]="isInvalid()" [ngClass]="getClasses()">
-	<ng-content select="input"></ng-content>
-	<ng-content select="select"></ng-content>
-	<ng-content select="textarea"></ng-content>
-	<ng-content select="fds-autocomplete"></ng-content>
-	<ng-content select="fds-input-number"></ng-content>
-	<ng-content select="fds-input-mask"></ng-content>
-	<button *ngIf="isClearBtnShown()"
-			type="button" class="icon-clear clearCrossBtn"
-			[disabled]="_control.disabled"
-			aria-label="clear" (click)="clearCtrl()"></button>
+<div
+  class="formControlWrap d--flex align--items--center flex--wrap"
+  [class.fds-noIcon]="!_control?.required"
+>
+  <div
+    class="formControlHolder formControlHolder__{{ controlType }}"
+    [class.error]="isInvalid()"
+    [ngClass]="getClasses()"
+  >
+    <ng-content select="input"></ng-content>
+    <ng-content select="select"></ng-content>
+    <ng-content select="textarea"></ng-content>
+    <ng-content select="fds-autocomplete"></ng-content>
+    <ng-content select="fds-input-number"></ng-content>
+    <ng-content select="fds-input-mask"></ng-content>
+    <button
+      *ngIf="isClearBtnShown()"
+      type="button"
+      class="icon-clear clearCrossBtn"
+      [disabled]="_control.disabled"
+      aria-label="clear"
+      (click)="clearCtrl()"
+    ></button>
   </div>
-  <span class="pl-tiny icon-info errorOption" *ngIf="isInvalid()"></span>
-  <span class="pl-tiny icon-check successOption" *ngIf="isValid()"></span>
-  <span class="pt-micro text-danger" *ngIf="isInvalid()"><ng-content select="fds-error"></ng-content></span>
+  <span class="pl--2 icon-info errorOption" *ngIf="isInvalid()"></span>
+  <span class="pl--2 icon-check successOption" *ngIf="isValid()"></span>
+  <span class="pt--1 text--danger" *ngIf="isInvalid()"
+    ><ng-content select="fds-error"></ng-content
+  ></span>
 </div>
 
-
-<!--<div class="formControlWrap d-flex flex-wrap align-items-center">-->
-<!--  <div class="icnRight d-flex align-items-center formControlHolder curved error">-->
+<!--<div class="formControlWrap d--flex flex--wrap align--items--center">-->
+<!--  <div class="icnRight d--flex align--items--center formControlHolder curved error">-->
 <!--	<input type="search" class="formControl" id="FirstName22" name="FirstName" placeholder="Text" required="">-->
-<!--	<button type="button" class="p-tiny icon-search searchInputBtn" aria-label="Label"></button>-->
+<!--	<button type="button" class="p--2 icon-search searchInputBtn" aria-label="Label"></button>-->
 <!--  </div>-->
 
-<!--  <span class="pt-micro text-danger">Error Message</span>-->
+<!--  <span class="pt--1 text--danger">Error Message</span>-->
 <!--</div>-->

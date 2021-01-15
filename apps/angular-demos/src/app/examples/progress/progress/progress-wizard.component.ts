@@ -1,37 +1,41 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "demo-progress",
+  selector: 'demo-progress',
   template: `
-	<fds-progress
-		[min]="minValue"
-		[max]="maxValue"
-		[value]="value"
-		[showLabel]="true"
-    [displayWith]="labelFormatFn"
-	></fds-progress>
-	<div class="text--center pt-ml">
-	  <a class="btn btn__secondary mr-small" href="javascript:void(0)" (click)="prev()">Prev</a>
-	  <a class="btn btn__primary" href="javascript:void(0)" (click)="next()">Next</a>
-	</div>
+    <fds-progress
+      [min]="minValue"
+      [max]="maxValue"
+      [value]="value"
+      [showLabel]="true"
+      [displayWith]="labelFormatFn"
+    ></fds-progress>
+    <div class="text--center pt--6">
+      <a
+        class="btn btn--secondary mr--3"
+        href="javascript:void(0)"
+        (click)="prev()"
+        >Prev</a
+      >
+      <a class="btn btn--primary" href="javascript:void(0)" (click)="next()"
+        >Next</a
+      >
+    </div>
   `,
   styles: []
 })
 export class ProgressWizardComponent implements OnInit {
-
   value = 2;
 
   minValue = 0;
 
   maxValue = 6;
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  labelFormatFn = (value) => {
+  labelFormatFn = value => {
     return `(${value} of ${this.maxValue})`;
   };
 
