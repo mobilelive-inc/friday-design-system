@@ -1,99 +1,11 @@
 <div id="spacing" class="infoBlockPiece">
-  <h2>Spacing</h2>
-  <p class="h6">FDS includes a wide range of shorthand responsive margin and padding utility classes to modify an element’s appearance.</p>
-  <h3 class="h4">How it works</h3>
-  <p>Assign responsive-friendly <code>margin</code> or <code>padding</code> values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from <code>.25rem</code> to <code>8rem</code>.</p>
-  <h3 class="h4">Notation</h3>
-  <p>Spacing utilities that apply to all breakpoints, from xs to xl, have no breakpoint abbreviation in them. This is because those classes are applied from min-width: 0 and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.</p>
-  <p>The classes are named using the format {property}{sides}-{size} for xs and {property}{sides}-{breakpoint}-{size} for sm, md, lg, and xl.</p>
+    <h2>Spacing</h2>
+    <p class="h5">Quickly and easily clear floated content within a container by adding a clearfix utility.</p>
+    <p>Easily clear <code>floats</code> by adding <code>.clearfix</code> <strong>to the parent element.</strong> Can also be used as a mixin.</p>
 
-  <p>Where property is one of:</p>
-  <ul>
-    <li>m - for classes that set margin</li>
-    <li>p - for classes that set padding</li>
-  </ul>
-
-  <p>Where sides is one of:</p>
-  <ul>
-    <li>t - for classes that set margin-top or padding-top</li>
-    <li>b - for classes that set margin-bottom or padding-bottom</li>
-    <li>l - for classes that set margin-left or padding-left</li>
-    <li>r - for classes that set margin-right or padding-right</li>
-    <li>x - for classes that set both *-left and *-right</li>
-    <li>y - for classes that set both *-top and *-bottom</li>
-    <li>blank - for classes that set a margin or padding on all 4 sides of the element</li>
-  </ul>
-
-  <p>Where size is one of:</p>
-  <ul>
-    <li>0 - for classes that eliminate the margin or padding by setting it to 0</li>
-    <li>1 - (by default) for classes that set the margin or padding to $spacer * .25</li>
-    <li>2 - (by default) for classes that set the margin or padding to $spacer * .5</li>
-    <li>3 - (by default) for classes that set the margin or padding to $spacer</li>
-    <li>4 - (by default) for classes that set the margin or padding to $spacer * 1.5</li>
-    <li>5 - (by default) for classes that set the margin or padding to $spacer * 2</li>
-    <li>5 - (by default) for classes that set the margin or padding to $spacer * 4</li>
-    <li>5 - (by default) for classes that set the margin or padding to $spacer * 8</li>
-    <li>auto - for classes that set the margin to auto</li>
-  </ul>
-
-  <p>(You can add more sizes by adding entries to the $spacers Sass map variable.)</p>
-
-  <h3 class="h4">Examples</h3>
-  <p>Here are some representative examples of these classes:</p>
-
-  <div class="highlighted-block mb--3">
+    <div class="highlighted-block mb--3">
 <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
-.mt-0 {
-  margin-top: 0 !important;
-}
-
-.ml-1 {
-  margin-left: ($spacer * .25) !important;
-}
-
-.px-2 {
-  padding-left: ($spacer * .5) !important;
-  padding-right: ($spacer * .5) !important;
-}
-
-.p-3 {
-  padding: $spacer !important;
-}
-</pre>
-  </div>
-
-  <h3 class="h4">Horizontal centering</h3>
-  <p>Additionally, Bootstrap also includes an .mx-auto class for horizontally centering fixed-width block level content—that is, content that has display: block and a width set—by setting the horizontal margins to auto.</p>
-  <div class="highlighted-block mb--3">
-    <div class="mx--auto bg--primary text--center" style="width: 200px;">Centered element</div>
-<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
-<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="mx--auto"</span> <span style="color: rgb(0,0,128);">style</span><span style="color: rgb(0,128,0);">="width: 200px;"</span>&gt;<code style="color: #f48245 !important;">Centered element</code>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="clearfix"</span>&gt;<span>...</span>&lt;/div&gt;</span>
 </pre>
     </div>
-
-  <h3 class="h4">Negative margin</h3>
-  <p>In CSS, margin properties can utilize negative values (padding cannot). As of 4.2, we’ve added negative margin utilities for every non-zero integer size listed above (e.g., 1, 2, 3, 4, 5). These utilities are ideal for customizing grid column gutters across breakpoints.</p>
-  <p>The syntax is nearly the same as the default, positive margin utilities, but with the addition of n before the requested size. Here’s an example class that’s the opposite of .mt-1:</p>
-  <div class="highlighted-block mb--3">
-    <div class="mx--auto bg--primary text--center" style="width: 200px;">Centered element</div>
-<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
-.mt-n1 {
-  margin-top: -0.25rem !important;
-}
-</pre>
-  </div>
-  <p>Here’s an example of customizing the Bootstrap grid at the medium (md) breakpoint and above. We’ve increased the .col padding with .px-md-5 and then counteracted that with .mx-md-n5 on the parent .row.</p>
-  <div class="highlighted-block">
-    <div class="row mx--md--n5 mb--5">
-      <div class="col px--md--5"><div class="p--3 border bg--light">Custom column padding</div></div>
-      <div class="col px--md--5"><div class="p--3 border bg--light">Custom column padding</div></div>
-    </div>
-<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
-<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="row mx--md--n5"</span>&gt;</span>
-  <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="col px--md--5"</span>&gt;&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--3 border border--light bg--light"</span>&gt;<code style="color: #f48245 !important">Custom column padding</code>&lt;/div&gt;&lt;/div&gt;</span>
-  <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="col px--md--5"</span>&gt;&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--3 border border--light bg--light"</span>&gt;<code style="color: #f48245 !important">Custom column padding</code>&lt;/div&gt;&lt;/div&gt;</span>
-<span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
-</pre>
-  </div>
 </div>

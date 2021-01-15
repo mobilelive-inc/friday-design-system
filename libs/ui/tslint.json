@@ -2,7 +2,7 @@
   "extends": "../../tslint.json",
   "rules": {
     "directive-selector": [true, "attribute", "nxHybridDemo", "camelCase"],
-    "component-selector": [true, "element", "fds", "kebab-case"]
+    "component-selector": [true, "element", "nx-hybrid-demo", "kebab-case"]
   },
   "linterOptions": {
     "exclude": ["!**/*"]
