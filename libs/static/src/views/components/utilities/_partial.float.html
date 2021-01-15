@@ -1,46 +1,71 @@
-<div id="float-info">
-  <div class="highlighted-block">
-    <h5>Float</h5>
-    <ul style="list-style: none; margin: 0; padding: 0;" class="mb--3">
-      <li class="mb--3">
-        Use <code>.py-</code> class to add top and bottom padding. Add required
-        size along with this class: <br />
-        <code>.py--2</code>, <code>.py--3</code>, <code>.py--5</code>,
-        <code>.py--7</code>
-      </li>
-      <li class="mb--3">
-        Use <code>.px-</code> class to add left and right padding. Add required
-        size along with this class: <br />
-        <code>.px--2</code>, <code>.px--3</code>, <code>.px--5</code>,
-        <code>.px--7</code>
-      </li>
-      <li class="mb--3">
-        Use <code>.pt-</code> class to add top padding only. Add required size
-        along with this class: <br />
-        <code>.pt--2</code>, <code>.pt--3</code>, <code>.pt--5</code>,
-        <code>.pt--7</code>
-      </li>
-      <li class="mb--3">
-        Use <code>.pb-</code> class to add bottom padding only. Add required
-        size along with this class: <br />
-        <code>.pb--2</code>, <code>.pb--3</code>, <code>.pb--5</code>,
-        <code>.pb--7</code>
-      </li>
-    </ul>
-    <div class="highlighted-block">
-      <pre
-        style="font-family: 'Montserrat'; font-size: 12pt;"
-      ><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;row&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>
-<span style="color:rgb(0,0,128);">
-</span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;py--2&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Some Text<span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
-<span style="color:rgb(0,0,128);">
-</span><span style="color:rgb(0,0,128);">  &lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;px--3&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Some Text<span style="color:rgb(0,0,128);">&lt;/div&gt;</span>
+<div id="float-info" class="infoBlockPiece">
+  <h2>Float</h2>
+  <h3 class="h6">Toggle floats on any element, across any breakpoint, using our responsive float utilities.</h3>
+  <h3>Overview</h3>
+  <p>These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the CSS float property. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no effect on flex items.</p>
+  <h3>Classes</h3>
+  <p>Toggle a float with a class:</p>
 
-<span style="color:rgb(0,0,128);">  <span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;pt--5&quot;</span><span style="color:rgb(0,0,128);">&gt;</span></span>Some Text<span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></span>
-<span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);"> </span></span>
-<span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);">  <span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);">&lt;div </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;pb--7&quot;</span><span style="color:rgb(0,0,128);">&gt;</span></span></span></span>Some Text<span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);"><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></span>  </span></span>
-<span style="color:rgb(0,0,128);">
-</span><span style="color:rgb(0,0,128);">&lt;/div&gt;</span></pre>
+  <div class="highlighted-block mb--5">
+    <div class="clearfix w--100 pb--5">
+      <div class="float--left"><code>Float left on all viewport sizes</code></div><br>
+      <div class="float--right"><code>Float right on all viewport sizes</code></div><br>
+      <div class="float--none"><code>Don't float on all viewport sizes</code></div>
     </div>
+<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;"></pre>
+<span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--left"</span>&gt;<code>Float left on all viewport sizes</code>&lt;/div&gt;</span><br>
+<span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--right"</span>&gt;<code>Float right on all viewport sizes</code>&lt;/div&gt;</span><br>
+<span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--none"</span>&gt;<code>Don't float on all viewport sizes</code>&lt;/div&gt;</span>
+</pre>
   </div>
+
+  <h3>Mixins</h3>
+  <p>Or by Sass mixin:</p>
+  <div class="highlighted-block mb--5">
+<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
+  .element {
+    @include float-left;
+  }
+  .another-element {
+    @include float-right;
+  }
+  .one-more {
+    @include float-none;
+  }
+</pre>
+  </div>
+  <h3>Responsive</h3>
+  <p>Responsive variations also exist for each <code>float</code> value.</p>
+  <div class="highlighted-block mb--5">
+    <div class="clearfix w--100 pb--5">
+      <div class="float--sm--left w--100"><code>Float left on viewports sized SM (small) or wider</code></div>
+      <div class="float--md--left w--100"><code>Float left on viewports sized MD (medium) or wider</code></div>
+      <div class="float--lg--left w--100"><code>Float left on viewports sized LG (large) or wider</code></div>
+      <div class="float--xl--left w--100"><code>Float left on viewports sized XL (extra-large) or wider</code></div>
+    </div>
+<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
+<span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--sm--left"</span>&gt;<code class="text--primary">Float left on viewports sized SM (small) or wider</code>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--sm--left"</span>&gt;<code class="text--primary">Float left on viewports sized MD (medium) or wider</code>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--sm--left"</span>&gt;<code class="text--primary">Float left on viewports sized LG (large) or wider</code>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--sm--left"</span>&gt;<code class="text--primary">Float left on viewports sized XL (extra-large) or wider</code>&lt;/div&gt;</span>
+</pre>
+  </div>
+  <p>Here are all the support classes;</p>
+  <ul class="mb--0">
+    <li><code>.float-left</code></li>
+    <li><code>.float-right</code></li>
+    <li><code>.float-none</code></li>
+    <li><code>.float-sm-left</code></li>
+    <li><code>.float-sm-right</code></li>
+    <li><code>.float-sm-none</code></li>
+    <li><code>.float-md-left</code></li>
+    <li><code>.float-md-right</code></li>
+    <li><code>.float-md-none</code></li>
+    <li><code>.float-lg-left</code></li>
+    <li><code>.float-lg-right</code></li>
+    <li><code>.float-lg-none</code></li>
+    <li><code>.float-xl-left</code></li>
+    <li><code>.float-xl-right</code></li>
+    <li><code>.float-xl-none</code></li>
+  </ul>
 </div>

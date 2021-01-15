@@ -1,0 +1,138 @@
+<div id="display" class="infoBlockPiece">
+    <h2>Display Property</h2>
+    <p class="h6">Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.</p>
+    <p class="h5">How it works</p>
+    <p>Change the value of the display property with our responsive display utility classes. We purposely support only a subset of all possible values for <code>display</code>. Classes can be combined for various effects as you need.</p>
+    <p class="h5">Notation</p>
+    <p>Display utility classes that apply to all breakpoints, from xs to xl, have no breakpoint abbreviation in them. This is because those classes are applied from min-width: 0; and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.</p>
+    <p>As such, the classes are named using the format:</p>
+    <ul>
+        <li><code>.d--{value}</code> for <code>xs</code></li>
+        <li><code>.d--{breakpoint}--{value}</code> for <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>xl</code>.</li>
+    </ul>
+    <p>Where value is one of:</p>
+    <ul>
+        <li><code>none</code></li>
+        <li><code>inline</code></li>
+        <li><code>inline-block</code></li>
+        <li><code>block</code></li>
+        <li><code>table</code></li>
+        <li><code>table-cell</code></li>
+        <li><code>table-row</code></li>
+        <li><code>flex</code></li>
+        <li><code>inline-flex</code></li>
+    </ul>
+    <p>The display values can be altered by changing the $displays variable and recompiling the SCSS.</p>
+    <p>The media queries affect screen widths with the given breakpoint or larger. For example, .d-lg-none sets display: none; on both lg and xl screens.</p>
+    <h3>Examples</h3>
+    <div class="highlighted-block mb--5">
+        <div class="d--inline p--2 bg--primary text--dark">d--inline</div>
+        <div class="d--inline p--2 bg--dark text--white">d--inline</div>
+<pre style="font-family: 'Montserrat'; font-size: 12pt; margin-top:3rem; margin-bottom: 0;">
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--inline p--2 bg--primary text--dark"</span>&gt;d--inline&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--inline p--2 bg--dark text--white"</span>&gt;d--inline&lt;/div&gt;</span>
+</pre>
+    </div>
+    <div class="highlighted-block mb--5">
+        <div class="d--block p--2 bg--primary text--dark">d--block</div>
+        <div class="d--block p--2 bg--dark text--white">d--block</div>
+<pre style="font-family: 'Montserrat'; font-size: 12pt; margin-top:3rem; margin-bottom: 0;">
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--block p--2 bg--primary text--dark"</span>&gt;d--block&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--block p--2 bg--dark text--white"</span>&gt;d--block&lt;/div&gt;</span>
+</pre>
+    </div>
+
+    <h3>Hiding elements</h3>
+    <p>For faster mobile-friendly development, use responsive display classes for showing and hiding elements by device. Avoid creating entirely different versions of the same site, instead hide elements responsively for each screen size.</p>
+    <p>To hide elements simply use the .d-none class or one of the .d-{sm,md,lg,xl}-none classes for any responsive screen variation.</p>
+    <p>To show an element only on a given interval of screen sizes you can combine one .d-*-none class with a .d-*-* class, for example .d-none .d-md-block .d-xl-none will hide the element for all screen sizes except on medium and large devices.</p>
+    <table class="border border--secondary mb--5">
+        <thead class="border--bottom border--secondary">
+            <tr>
+                <th class="p--2">Screen Size</th>
+                <th class="p--2 border--left border--secondary">Class</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border--bottom border--secondary">
+                <td class="p--2">Hidden on all</td>
+                <td class="p--2 border--left border--secondary"><code>.d-none</code></td>
+            </tr>
+            <tr class="border--bottom border--secondary">
+                <td class="p--2">Hidden only on xs</td>
+                <td class="p--2 border--left border--secondary"><code>.d-none .d-sm-block</code></td>
+            </tr>
+            <tr class="border--bottom border--secondary">
+                <td class="p--2">Hidden only on sm</td>
+                <td class="p--2 border--left border--secondary"><code>.d-sm-none .d-md-block</code></td>
+            </tr>
+            <tr class="border--bottom border--secondary">
+                <td class="p--2">Hidden only on md</td>
+                <td class="p--2 border--left border--secondary"><code>.d-md-none .d-lg-block</code></td>
+            </tr>
+            <tr class="border--bottom border--secondary">
+                <td class="p--2">Hidden only on lg</td>
+                <td class="p--2 border--left border--secondary"><code>.d-lg-none .d-xl-block</code></td>
+            </tr>
+            <tr class="border--bottom border--secondary">
+                <td class="p--2">Hidden only on xl</td>
+                <td class="p--2 border--left border--secondary"><code>.d-xl-none</code></td>
+            </tr>
+            <tr class="border--bottom border--secondary">
+                <td class="p--2">Visible on all</td>
+                <td class="p--2 border--left border--secondary"><code>.d-block</code></td>
+            </tr>
+            <tr class="border--bottom border--secondary">
+                <td class="p--2">Visible only on xs</td>
+                <td class="p--2 border--left border--secondary"><code>.d-block .d-sm-none</code></td>
+            </tr>
+            <tr class="border--bottom border--secondary">
+                <td class="p--2">Visible only on sm</td>
+                <td class="p--2 border--left border--secondary"><code>.d-none .d-sm-block .d-md-none</code></td>
+            </tr>
+            <tr class="border--bottom border--secondary">
+                <td class="p--2">Visible only on md</td>
+                <td class="p--2 border--left border--secondary"><code>.d-none .d-md-block .d-lg-none</code></td>
+            </tr>
+            <tr class="border--bottom border--secondary">
+                <td class="p--2">Visible only on lg</td>
+                <td class="p--2 border--left border--secondary"><code>.d-none .d-lg-block .d-xl-none</code></td>
+            </tr>
+            <tr class="border--bottom border--secondary">
+                <td class="p--2">Visible only on xl</td>
+                <td class="p--2 border--left border--secondary"><code>.d-none .d-xl-block</code></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="highlighted-block mb--5">
+        <p>hide on screens smaller than lg</p>
+<pre style="font-family: 'Montserrat'; font-size: 12pt; margin-top:3rem; margin: 0;">
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--lg--none"</span>&gt;<span class="text--primary">hide on lg and wider screens</span>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--none d--lg--block"</span>&gt;<span class="text--primary">hide on screens smaller than lg</span>&lt;/div&gt;</span>
+</pre>
+    </div>
+
+    <h3>Display in print</h3>
+    <p>Change the display value of elements when printing with our print display utility classes. Includes support for the same display values as our responsive .d-* utilities.</p>
+    <ul>
+        <li><code>.d-print-none</code></li>
+        <li><code>.d-print-inline</code></li>
+        <li><code>.d-print-inline-block</code></li>
+        <li><code>.d-print-block</code></li>
+        <li><code>.d-print-table</code></li>
+        <li><code>.d-print-table-row</code></li>
+        <li><code>.d-print-table-cell</code></li>
+        <li><code>.d-print-flex</code></li>
+        <li><code>.d-print-inline-flex</code></li>
+    </ul>
+    <p>The print and display classes can be combined.</p>
+    <div class="highlighted-block mb--5">
+        <p>Screen Only (Hide on print only)</p>
+        <p>Hide up to large on screen, but always show on print</p>
+<pre style="font-family: 'Montserrat'; font-size: 12pt; margin-top:3rem; margin: 0;">
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--print--none"</span>&gt;<span class="text--primary">Screen Only (Hide on print only)</span>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--none d--print--block"</span>&gt;<span class="text--primary">Print Only (Hide on screen only)</span>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--none d--lg--block d--print--block"</span>&gt;<span class="text--primary">Hide up to large on screen, but always show on print</span>&lt;/div&gt;</span>
+</pre>
+    </div>
+</div>
