@@ -89,7 +89,7 @@
     }
   }
 
-  &__primary {
+  &--primary {
     background-color: var(--btn-primary-bg-color);
     border-color: var(--btn-primary-border-color);
     color: var(--btn-primary-color);
@@ -97,12 +97,12 @@
     &.clear {
       background-color: transparent;
       border-color: transparent;
-      color: var(--btn-primary-color);
+      color: var(--btn-primary-text-color);
     }
 
-    &__outline {
+    &--outline {
       background-color: transparent;
-      color: var(--btn-primary-color);
+      color: var(--btn-primary-text-color);
       border-color: var(--btn-primary-border-color);
       &:hover,
       &:focus,
@@ -122,7 +122,7 @@
     }
   }
 
-  &__secondary {
+  &--secondary {
     background-color: var(--btn-secondary-bg-color);
     border-color: var(--btn-secondary-border-color);
 
@@ -132,7 +132,7 @@
       color: var(--btn-secondary-color);
     }
 
-    &__outline {
+    &--outline {
       background-color: transparent;
       color: var(--btn-secondary-color);
       border-color: var(--btn-secondary-border-color);
@@ -154,7 +154,7 @@
     }
   }
 
-  &__success {
+  &--success {
     background-color: var(--btn-success-bg-color);
     border-color: var(--btn-success-border-color);
 
@@ -164,7 +164,7 @@
       color: var(--btn-success-color);
     }
 
-    &__outline {
+    &--outline {
       background-color: transparent;
       color: var(--btn-success-color);
       border-color: var(--btn-success-border-color);
@@ -186,7 +186,7 @@
     }
   }
 
-  &__danger {
+  &--danger {
     background-color: var(--btn-danger-bg-color);
     border-color: var(--btn-danger-border-color);
 
@@ -196,7 +196,7 @@
       color: var(--btn-danger-color);
     }
 
-    &__outline {
+    &--outline {
       background-color: transparent;
       color: var(--btn-danger-color);
       border-color: var(--btn-danger-border-color);
@@ -218,7 +218,7 @@
     }
   }
 
-  &__warning {
+  &--warning {
     color: var(--btn-warning-text-color);
     background-color: var(--btn-warning-bg-color);
     border-color: var(--btn-warning-border-color);
@@ -229,7 +229,7 @@
       color: var(--btn-warning-color);
     }
 
-    &__outline {
+    &--outline {
       background-color: transparent;
       color: var(--btn-warning-color);
       border-color: var(--btn-warning-border-color);
@@ -251,7 +251,7 @@
     }
   }
 
-  &__info {
+  &--info {
     background-color: var(--btn-info-bg-color);
     border-color: var(--btn-info-border-color);
 
@@ -261,7 +261,7 @@
       color: var(--btn-info-color);
     }
 
-    &__outline {
+    &--outline {
       background-color: transparent;
       color: var(--btn-info-color);
       border-color: var(--btn-info-border-color);
@@ -283,7 +283,7 @@
     }
   }
 
-  &__light {
+  &--light {
     color: var(--btn-light-text-dark);
     background-color: var(--btn-light-bg-color);
     border-color: var(--btn-light-border-color);
@@ -294,7 +294,7 @@
       color: var(--btn-light-text-dark);
     }
 
-    &__outline {
+    &--outline {
       background-color: transparent;
       color: var(--btn-light-color);
       border-color: var(--btn-light-border-color);
@@ -316,7 +316,7 @@
     }
   }
 
-  &__dark {
+  &--dark {
     color: var(--btn-dark-text-light);
     background-color: var(--btn-dark-bg-color);
     border-color: var(--btn-dark-border-color);
@@ -327,7 +327,7 @@
       color: var(--btn-dark-hover-color);
     }
 
-    &__outline {
+    &--outline {
       background-color: transparent;
       color: var(--btn-dark-color);
       border-color: var(--btn-dark-border-color);
@@ -350,7 +350,7 @@
   }
 
   //Social Button
-  &.btn-social {
+  &.btn--social {
     padding: 0.5rem 1.25rem;
     min-width: var(--social-button-width);
   }
@@ -572,7 +572,7 @@
     border-radius: var(--btn-border-radius-sm);
   }
 
-  &__tooltip {
+  &--tooltip {
     border-radius: 0;
     border: none;
     padding: 5px;
@@ -591,7 +591,7 @@
     }
   }
 
-  &__icon {
+  &--icon {
     width: 40px;
     height: 40px;
     min-height: auto;
@@ -601,8 +601,8 @@
     //border-radius: 0;
   }
 
-  &__text + i,
-  i + &__text {
+  &--text + i,
+  i + &--text {
     margin-left: 8px;
   }
 
@@ -610,7 +610,7 @@
     font-style: normal;
     font-size: 1rem;
   }
-  &.expand-sm-only {
+  &.expand--sm--only {
     @media screen and (max-width: 767px) {
       display: block;
       width: 100%;
@@ -618,7 +618,7 @@
       margin-right: 0;
     }
   }
-  &.expand-md-only {
+  &.expand--md--only {
     @media screen and (max-width: 1023px) and (min-width: 768px) {
       display: block;
       width: 100%;
@@ -626,7 +626,7 @@
       margin-right: 0;
     }
   }
-  &.expand-md-up {
+  &.expand--md--up {
     @media screen and (min-width: 768px) {
       display: block;
       width: 100%;
@@ -634,7 +634,7 @@
       margin-right: 0;
     }
   }
-  &.expand-lg-up {
+  &.expand--lg--up {
     @media screen and (min-width: 1024px) {
       display: block;
       width: 100%;
@@ -642,7 +642,7 @@
       margin-right: 0;
     }
   }
-  &.expand-md-down {
+  &.expand--md--down {
     @media screen and (max-width: 1023px) {
       display: block;
       width: 100%;
@@ -650,7 +650,7 @@
       margin-right: 0;
     }
   }
-  &.expand-lg-down {
+  &.expand--lg--down {
     @media screen and (max-width: 1199px) {
       display: block;
       width: 100%;
@@ -658,7 +658,7 @@
       margin-right: 0;
     }
   }
-  &.expand-lg-only {
+  &.expand--lg--only {
     @media screen and (max-width: 1199px) and (min-width: 1024px) {
       display: block;
       width: 100%;
@@ -666,7 +666,7 @@
       margin-right: 0;
     }
   }
-  &.expand-xl-only {
+  &.expand--xl--only {
     @media screen and (min-width: 1200px) {
       display: block;
       width: 100%;
@@ -715,10 +715,3 @@ input[type='button'] {
     width: 100%;
   }
 }
-
-//@each $color, $value in $theme-colors { //todo : if need to make iteration of classes
-//  .btn--#{$color} {
-//    background-color: $value;
-//    color: var(--light);
-//  }
-//}

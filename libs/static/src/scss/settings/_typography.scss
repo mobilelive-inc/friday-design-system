@@ -9,13 +9,6 @@
 //
 // Settings for the `<body>` element.
 
-$embed-responsive-aspect-ratios: ();
-// stylelint-disable-next-line scss/dollar-variable-default
-$embed-responsive-aspect-ratios: join(
-  ((21 9), (16 9), (4 3), (1 1)),
-  $embed-responsive-aspect-ratios
-);
-
 // Code
 // Characters which are escaped by the escape-svg function
 $escaped-characters: (

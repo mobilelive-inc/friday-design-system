@@ -6,10 +6,10 @@
   margin-right: auto;
   width: var(--divider-width);
   height: var(--divider-height);
-  &.divider-sm {
+  &.divider--sm {
     height: var(--divider-sm-height);
   }
-  &.divider-lg {
+  &.divider--lg {
     height: var(--divider-lg-height);
   }
 }

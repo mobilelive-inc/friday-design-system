@@ -1,43 +1,34 @@
+// stylelint-disable declaration-no-important
+//
 // Width and height
+//
+// This variable affects the `.h-*` and `.w-*` classes.
 
-// We will use * on the start of the spacing class as which will exhibit it as utility
-
-// It will output Following class
-// w-25, h-25,
-// w-50, h-50,
-// w-75, h-75,
-// w-75, h-75,
-// small,
-// mid,
-// large,
-// xlarge
 @each $prop, $abbrev in (width: w, height: h) {
   @each $size, $length in $sizes {
-    .#{$abbrev}-#{$size} {
+    .#{$abbrev}--#{$size} {
       #{$prop}: $length;
     }
   }
 }
 
-.mw-100 {
+.mw--100 {
   max-width: 100%;
 }
-.mh-100 {
+.mh--100 {
   max-height: 100%;
 }
 
 // Viewport additional helpers
-
-.min-vw-100 {
+.min--vw--100 {
   min-width: 100vw;
 }
-.min-vh-100 {
+.min--vh--100 {
   min-height: 100vh;
 }
-
-.vw-100 {
+.vw--100 {
   width: 100vw;
 }
-.vh-100 {
+.vh--100 {
   height: 100vh;
 }

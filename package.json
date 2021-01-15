@@ -40,10 +40,10 @@
     "angular:docs:json": "cd libs/angular/ && compodoc -p ./tsconfig.json -e json -d .",
     "remove-all": "rm -rf node_modules/ && rm -rf libs/static/node_modules/ &&  rm -rf apps/rx-xis-app/node_modules/",
     "install-all": "yarn install && cd libs/static/ && yarn install && cd ../../apps/rx-xis-app/ && yarn install",
-    "build:libs": "rm -rf dist && ng-packagr -p libs/angular/src/package.json && cp -r $(pwd)/libs/static/. $(pwd)/dist/@mobilelivenpm/fds-static-scss && cp -r $(pwd)/libs/icons/. $(pwd)/dist/@mobilelivenpm/fds-icons",
+    "build:libs": "rm -rf dist && ng-packagr -p libs/angular/src/ng-package.json && cp -r $(pwd)/libs/static/. $(pwd)/dist/@mobilelivenpm/fds-static-scss && cp -r $(pwd)/libs/icons/. $(pwd)/dist/@mobilelivenpm/fds-icons",
     "build:static-docs": "cd libs/static/ && npm run build && cp -r $(pwd)/dist/. $(pwd)/../../dist/static",
     "build:angular-examples-relative-path": "nx build --prod --base-href \"/apps/angular-demos/\" angular-demos && nx build --prod --base-href \"/apps/angular-sign-up/\" angular-sign-up",
-    "build-all": "rm -rf dist/ && npm run rx:build-storybook && nx run angular:build-storybook-with-docs && npm run build:static-docs && npm run build:angular-examples-relative-path"
+    "build-all-docs": "rm -rf dist/ && npm run rx:build-storybook && nx run angular:build-storybook-with-docs && npm run build:static-docs && npm run build:angular-examples-relative-path"
   },
   "private": false,
   "dependencies": {
@@ -129,6 +129,12 @@
     "webpack-merge": "^4.2.2",
     "zone.js": "^0.10.2"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run format:write -- --uncommitted && git add ."
+    }
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.901.0",
     "@angular-devkit/build-ng-packagr": "~0.901.0",
@@ -137,7 +143,6 @@
     "@angular/language-service": "^9.1.0",
     "@babel/core": "^7.10.1",
     "@babel/plugin-proposal-export-default-from": "^7.10.1",
-    "@babel/preset-env": "^7.10.1",
     "@babel/preset-react": "^7.10.1",
     "@babel/preset-typescript": "^7.10.1",
     "@commitlint/cli": "^9.0.1",
@@ -183,7 +188,6 @@
     "cypress": "^4.1.0",
     "dotenv": "6.2.0",
     "eslint": "^7.1.0",
-    "eslint-config-prettier": "6.0.0",
     "eslint-plugin-cypress": "^2.10.3",
     "husky": "^4.2.5",
     "jest": "^26.0.1",

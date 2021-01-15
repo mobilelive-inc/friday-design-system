@@ -3,7 +3,6 @@
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
-
 $enable-caret: true;
 $enable-rounded: true;
 $enable-shadows: false;
@@ -22,38 +21,36 @@ $enable-deprecation-messages: true;
 //
 // Control the default styling of most DesignSystem elements by modifying these
 // variables. Mostly focused on spacing.
-// You can add more entries to the $global-spacers map, should you need more variation.
-
-// stylelint-disable-next-line scss/dollar-variable-default
+// You can add more entries to the $spacers map, should you need more variation.
 $global-spacers: (
-  none: (
-    calc(var(--global-spacer) * 0)
-  ),
-  micro: (
+  0: 0,
+  1: (
     calc(var(--global-spacer) * 0.25)
   ),
-  tiny: (
+  2: (
     calc(var(--global-spacer) * 0.5)
   ),
-  small: var(--global-spacer),
-  sm: (
+  3: (
+    calc(var(--global-spacer) * 1)
+  ),
+  4: (
     calc(var(--global-spacer) * 1.5)
   ),
-  mid: (
+  5: (
     calc(var(--global-spacer) * 2)
   ),
-  ml: (
+  6: (
     calc(var(--global-spacer) * 3)
   ),
-  large: (
+  7: (
     calc(var(--global-spacer) * 4)
   ),
-  xlarge: (
+  8: (
     calc(var(--global-spacer) * 8)
   )
 );
 
-// stylelint-disable-next-line scss/dollar-variable-default
+// This variable affects the `.h-*` and `.w-*` classes.
 $sizes: (
   25: 25%,
   50: 50%,

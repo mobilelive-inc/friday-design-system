@@ -8,16 +8,15 @@
     'Liberation Mono', 'Courier New', monospace;
   --font-family-base: var(--font-family-sans-serif);
 
-  --font-size-base: 1rem;
-
-  --font-weight-lighter: lighter;
+  --font-weight-lighter: 100;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
-  --font-weight-bolder: bolder;
+  --font-weight-bolder: 800;
 
   --font-size-xl: calc(var(--font-size-base) * 1.5);
   --font-size-lg: calc(var(--font-size-base) * 1.25);
+  --font-size-base: 1rem;
   --font-size-sm: calc(var(--font-size-base) * 0.875);
   --font-size-tiny: calc(var(--font-size-base) * 0.75);
   --font-size-micro: calc(var(--font-size-base) * 0.625);
@@ -158,19 +157,22 @@
   --list-inline-padding: 0.5rem;
   --mark-bg: #fcf8e3;
 }
-.fontSize-lg {
+.font--xl {
+  font-size: var(--font-size-xl);
+}
+.font--lg {
   font-size: var(--font-size-lg);
 }
-.fontSize-base {
+.font--base {
   font-size: var(--font-size-base);
 }
-.fontSize-sm {
+.font--sm {
   font-size: var(--font-size-sm);
 }
-.fontSize-tiny {
+.font--tiny {
   font-size: var(--font-size-tiny);
 }
-.fontSize-micro {
+.font--micro {
   font-size: var(--font-size-micro);
 }
 
