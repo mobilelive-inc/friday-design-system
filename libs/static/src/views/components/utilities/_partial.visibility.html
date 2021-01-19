@@ -1,14 +1,34 @@
 <div id="visibility" class="infoBlockPiece">
-    <h2>Visibility</h2>
-    <p class="h5">Quickly and easily clear floated content within a container by adding a clearfix utility.</p>
-    <p>Easily clear <code>floats</code> by adding <code>.clearfix</code> <strong>to the parent element.</strong> Can also be used as a mixin.</p>
+  <h2>Visibility</h2>
+  <p class="h6">Control the visibility, without modifying the display, of elements with visibility utilities.</p>
+  <p>Set the <code>visibility</code> of elements with our visibility utilities. These utility classes do not modify the display value at all and do not affect layout – <code>.invisible</code> elements still take up space in the page. Content will be hidden both visually and for assistive technology/screen reader users.</p>
+  <p>Apply <code>.visible</code> or <code>.invisible</code> as needed.</p>
 
-    <div class="highlighted-block mb--5">
+  <div class="highlighted-block mb--5">
 <pre style="font-family: 'Montserrat'; font-size: 12pt; margin-bottom:1rem;">
-<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="clearfix"</span>&gt;<span>...</span>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="visible"</span>&gt;<code style="color">...</code>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="invisible"</span>&gt;<code style="color">...</code>&lt;/div&gt;</span>
 </pre>
-    </div>
-    <div class="highlighted-block">
+  </div>
+
+  <div class="highlighted-block">
 <pre style="font-family: 'Montserrat'; font-size: 12pt;">
+// Class
+.visible {
+  visibility: visible !important;
+}
+.invisible {
+  visibility: hidden !important;
+}
+
+// Usage as a mixin
+// Warning: The `invisible()` mixin has been deprecated as of v4.3.0. It will be removed entirely in v5.
+.element {
+  @include invisible(visible);
+}
+.element {
+  @include invisible(hidden);
+}
 </pre>
-    </div>
+  </div>
+</div>
