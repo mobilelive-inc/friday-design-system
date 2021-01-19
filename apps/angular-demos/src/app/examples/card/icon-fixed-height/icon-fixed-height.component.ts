@@ -3,27 +3,29 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'fds-icon-fixed-height',
   template: `
-    <fds-card class="d-flex"
-      cardClass="has-shadow p-mid text--center d-flex flex-grow-1" headerClass="text--center"
-      bodyClass="flex-grow-1">
+    <fds-card
+      class="d--flex"
+      cardClass="d--flex align--items--center flex--column has--shadow p--5 text--center"
+      headerClass="text--center"
+      bodyClass="flex--grow--1"
+    >
       <fds-header>
-          <span class="icon-DesignThinking mb-mid"></span>
-          <h3 class="mb-mid">Lorem Ipsum</h3>
+        <span class="icon-DesignThinking mb-5"></span>
+        <h4 class="mb--5">Lorem Ipsum</h4>
       </fds-header>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt.
+      </p>
       <ng-template fdsTemplate="footer">
-          <button class="btn btn__primary__outline"> Lorem Ipsum</button>
+        <button class="btn btn--primary--outline">Lorem Ipsum</button>
       </ng-template>
     </fds-card>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class IconFixedHeightComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

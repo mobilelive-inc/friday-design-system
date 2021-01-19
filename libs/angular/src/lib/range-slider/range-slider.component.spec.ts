@@ -8,9 +8,8 @@ describe('RangeSliderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RangeSliderComponent ]
-    })
-    .compileComponents();
+      declarations: [RangeSliderComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

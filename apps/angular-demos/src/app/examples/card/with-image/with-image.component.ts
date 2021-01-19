@@ -3,24 +3,24 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'fds-with-image',
   template: `
-    <fds-card cardClass="fds-card border border-secondary has-shadow text--center p-mid">
+    <fds-card
+      cardClass="d--flex align--items--center flex--column border border-secondary has--shadow text--center p--5"
+    >
       <figure>
-        <img alt="Card" src="assets/images/img-01.png">
+        <img alt="Card" src="assets/images/img-01.png" />
       </figure>
-      <p class="m-none">“Lorem ipsum dolor sit amet, consectetur adipiscing elit”</p>
+      <p class="m--0">
+        “Lorem ipsum dolor sit amet, consectetur adipiscing elit”
+      </p>
       <ng-template fdsTemplate="footer">
-        <h3 class="m-none">Lorem ipsum dolor</h3>
+        <h4 class="m--0">Lorem ipsum dolor</h4>
       </ng-template>
     </fds-card>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class WithImageComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

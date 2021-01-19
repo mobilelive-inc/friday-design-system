@@ -7,14 +7,10 @@ import { Component, OnInit } from '@angular/core';
       ml-button-directive works!
     </p>
   `,
-  styles: [
-  ],
+  styles: []
 })
 export class ButtonDirectiveComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

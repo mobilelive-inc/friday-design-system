@@ -1,24 +1,32 @@
 <div class="formRadio">
   <div class="radioBtn radioBtn--rounded">
-	<input type="radio" #input
-		   [id]="inputId"
-		   [checked]="checked"
-		   [disabled]="disabled"
-		   [tabIndex]="tabIndex"
-		   [attr.name]="name"
-		   [attr.value]="value"
-		   [required]="required"
-		   [attr.aria-label]="ariaLabel"
-		   [attr.aria-labelledby]="ariaLabelledby"
-		   [attr.aria-describedby]="ariaDescribedby"
-		   (change)="_onInputChange($event)"
-		   (click)="_onInputClick($event)" />
-	<span class="radioBtnFake"></span>
+    <input
+      type="radio"
+      #input
+      [id]="inputId"
+      [checked]="checked"
+      [disabled]="disabled"
+      [tabIndex]="tabIndex"
+      [attr.name]="name"
+      [attr.value]="value"
+      [required]="required"
+      [attr.aria-label]="ariaLabel"
+      [attr.aria-labelledby]="ariaLabelledby"
+      [attr.aria-describedby]="ariaDescribedby"
+      (change)="_onInputChange($event)"
+      (click)="_onInputClick($event)"
+    />
+    <span class="radioBtnFake"></span>
   </div>
   <!-- TODO: add support on the CSS level -->
-  <label class="radioLabel" [attr.for]="inputId" [class.radio-label-before]="labelPosition == 'before'" #label>
-	<!-- Add an invisible span so JAWS can read the label -->
-	<span style="display:none">&nbsp;</span>
-	<ng-content></ng-content>
+  <label
+    class="radioLabel"
+    [attr.for]="inputId"
+    [class.radio-label-before]="labelPosition == 'before'"
+    #label
+  >
+    <!-- Add an invisible span so JAWS can read the label -->
+    <span style="display: none;">&nbsp;</span>
+    <ng-content></ng-content>
   </label>
 </div>

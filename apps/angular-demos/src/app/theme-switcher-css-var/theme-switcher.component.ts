@@ -8,7 +8,7 @@
 //         <div class="theme-switcher">
 //             <p class="text--center">Choose <br>Theme:</p>
 //             <div class="btns-switcher-holder">
-//                 <button *ngFor="let theme of themes" class="mb-tiny btn btn__primary btn--sm navy default"
+//                 <button *ngFor="let theme of themes" class="mb--2 btn btn--primary btn--sm navy default"
 //                         (click)="switchTheme(theme)">
 //                     {{theme.name}}
 //                 </button>
