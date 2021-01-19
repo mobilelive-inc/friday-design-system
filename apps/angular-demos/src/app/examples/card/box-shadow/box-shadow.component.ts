@@ -3,20 +3,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'fds-box-shadow',
   template: `
-    <fds-card cardClass="fds-card">
-      <figure class="m-none has-shadow">
-        <img alt="Card" src="assets/images/img-01.png">
+    <fds-card>
+      <figure class="m--0 has--shadow">
+        <img alt="Card" src="assets/images/img-01.png" />
       </figure>
     </fds-card>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class BoxShadowComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

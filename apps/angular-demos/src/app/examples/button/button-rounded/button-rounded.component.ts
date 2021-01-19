@@ -3,22 +3,21 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'demo-button-rounded',
   template: `
-    <fds-button className="btn__primary btnRounded mb-tiny">Primary</fds-button
+    <fds-button className="btn--primary btnRounded mb--2">Primary</fds-button
     >&nbsp;
-    <fds-button className="btn__secondary btnRounded mb-tiny"
+    <fds-button className="btn--secondary btnRounded mb--2"
       >Secondary</fds-button
     >&nbsp;
-    <fds-button className="btn__success btnRounded mb-tiny">Success</fds-button
+    <fds-button className="btn--success btnRounded mb--2">Success</fds-button
     >&nbsp;
-    <fds-button className="btn__danger btnRounded mb-tiny">Danger</fds-button
+    <fds-button className="btn--danger btnRounded mb--2">Danger</fds-button
     >&nbsp;
-    <fds-button className="btn__warning btnRounded mb-tiny">Warning</fds-button
+    <fds-button className="btn--warning btnRounded mb--2">Warning</fds-button
     >&nbsp;
-    <fds-button className="btn__info btnRounded mb-tiny">Info</fds-button>&nbsp;
-    <fds-button className="btn__light btnRounded mb-tiny">Light</fds-button
-    >&nbsp;
-    <fds-button className="btn__dark btnRounded mb-tiny">Dark</fds-button>&nbsp;
-    <fds-button className="btn__dark btnRounded mb-tiny" [disabled]="true"
+    <fds-button className="btn--info btnRounded mb--2">Info</fds-button>&nbsp;
+    <fds-button className="btn--light btnRounded mb--2">Light</fds-button>&nbsp;
+    <fds-button className="btn--dark btnRounded mb--2">Dark</fds-button>&nbsp;
+    <fds-button className="btn--dark btnRounded mb--2" [disabled]="true"
       >Disabled</fds-button
     >
   `,

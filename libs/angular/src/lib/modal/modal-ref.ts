@@ -1,10 +1,10 @@
-import { FocusOrigin } from "@angular/cdk/a11y";
-import { ESCAPE, hasModifierKey } from "@angular/cdk/keycodes";
-import { GlobalPositionStrategy, OverlayRef } from "@angular/cdk/overlay";
-import { Observable, Subject } from "rxjs";
-import { filter, take } from "rxjs/operators";
-import { ModalPosition } from "./modal-config";
-import { _FdsModalContainerBase } from "./modal-container";
+import { FocusOrigin } from '@angular/cdk/a11y';
+import { ESCAPE, hasModifierKey } from '@angular/cdk/keycodes';
+import { GlobalPositionStrategy, OverlayRef } from '@angular/cdk/overlay';
+import { Observable, Subject } from 'rxjs';
+import { filter, take } from 'rxjs/operators';
+import { ModalPosition } from './modal-config';
+import { _FdsModalContainerBase } from './modal-container';
 
 // Counter for unique dialog ids.
 let uniqueId = 0;
@@ -24,7 +24,8 @@ export class FdsModalRef<T, R = any> {
   componentInstance: T;
 
   /** Whether the user is allowed to close the dialog. */
-  disableClose: boolean | undefined = this._containerInstance._config.disableClose;
+  disableClose: boolean | undefined = this._containerInstance._config
+    .disableClose;
 
   /** Subject for notifying the user that the dialog has finished opening. */
   private readonly _afterOpened = new Subject<void>();
@@ -47,29 +48,32 @@ export class FdsModalRef<T, R = any> {
   constructor(
     private _overlayRef: OverlayRef,
     public _containerInstance: _FdsModalContainerBase,
-    readonly id: string = `fds-modal-${uniqueId++}`) {
-
+    readonly id: string = `fds-modal-${uniqueId++}`
+  ) {
     // Pass the id along to the container.
     _containerInstance._id = id;
 
     // Emit when opening animation completes
-    _containerInstance._animationStateChanged.pipe(
-      filter(event => event.state === "opened"),
-      take(1)
-    )
+    _containerInstance._animationStateChanged
+      .pipe(
+        filter(event => event.state === 'opened'),
+        take(1)
+      )
       .subscribe(() => {
         this._afterOpened.next();
         this._afterOpened.complete();
       });
 
     // Dispose overlay when closing animation is complete
-    _containerInstance._animationStateChanged.pipe(
-      filter(event => event.state === "closed"),
-      take(1)
-    ).subscribe(() => {
-      clearTimeout(this._closeFallbackTimeout);
-      this._finishDialogClose();
-    });
+    _containerInstance._animationStateChanged
+      .pipe(
+        filter(event => event.state === 'closed'),
+        take(1)
+      )
+      .subscribe(() => {
+        clearTimeout(this._closeFallbackTimeout);
+        this._finishDialogClose();
+      });
 
     _overlayRef.detachments().subscribe(() => {
       this._beforeClosed.next(this._result);
@@ -80,20 +84,27 @@ export class FdsModalRef<T, R = any> {
       this._overlayRef.dispose();
     });
 
-    _overlayRef.keydownEvents()
-      .pipe(filter(event => {
-        return event.keyCode === ESCAPE && !this.disableClose && !hasModifierKey(event);
-      }))
+    _overlayRef
+      .keydownEvents()
+      .pipe(
+        filter(event => {
+          return (
+            event.keyCode === ESCAPE &&
+            !this.disableClose &&
+            !hasModifierKey(event)
+          );
+        })
+      )
       .subscribe(event => {
         event.preventDefault();
-        _closeDialogVia(this, "keyboard");
+        _closeDialogVia(this, 'keyboard');
       });
 
     _overlayRef.backdropClick().subscribe(() => {
       if (this.disableClose) {
         this._containerInstance._recaptureFocus();
       } else {
-        _closeDialogVia(this, "mouse");
+        _closeDialogVia(this, 'mouse');
       }
     });
   }
@@ -106,10 +117,11 @@ export class FdsModalRef<T, R = any> {
     this._result = dialogResult;
 
     // Transition the backdrop in parallel to the dialog.
-    this._containerInstance._animationStateChanged.pipe(
-      filter(event => event.state === "closing"),
-      take(1)
-    )
+    this._containerInstance._animationStateChanged
+      .pipe(
+        filter(event => event.state === 'closing'),
+        take(1)
+      )
       .subscribe(event => {
         this._beforeClosed.next(dialogResult);
         this._beforeClosed.complete();
@@ -120,8 +132,10 @@ export class FdsModalRef<T, R = any> {
         // timeout which will clean everything up if the animation hasn't fired within the specified
         // amount of time plus 100ms. We don't need to run this outside the NgZone, because for the
         // vast majority of cases the timeout will have been cleared before it has the chance to fire.
-        this._closeFallbackTimeout = setTimeout(() => this._finishDialogClose(),
-          event.totalTime + 100);
+        this._closeFallbackTimeout = setTimeout(
+          () => this._finishDialogClose(),
+          event.totalTime + 100
+        );
       });
 
     this._state = FdsModalState.CLOSING;
@@ -171,13 +185,17 @@ export class FdsModalRef<T, R = any> {
     let strategy = this._getPositionStrategy();
 
     if (position && (position.left || position.right)) {
-      position.left ? strategy.left(position.left) : strategy.right(position.right);
+      position.left
+        ? strategy.left(position.left)
+        : strategy.right(position.right);
     } else {
       strategy.centerHorizontally();
     }
 
     if (position && (position.top || position.bottom)) {
-      position.top ? strategy.top(position.top) : strategy.bottom(position.bottom);
+      position.top
+        ? strategy.top(position.top)
+        : strategy.bottom(position.bottom);
     } else {
       strategy.centerVertically();
     }
@@ -192,7 +210,7 @@ export class FdsModalRef<T, R = any> {
    * @param width New width of the dialog.
    * @param height New height of the dialog.
    */
-  updateSize(width: string = "", height: string = ""): this {
+  updateSize(width: string = '', height: string = ''): this {
     this._getPositionStrategy().width(width).height(height);
     this._overlayRef.updatePosition();
     return this;
@@ -226,7 +244,8 @@ export class FdsModalRef<T, R = any> {
 
   /** Fetches the position strategy object from the overlay ref. */
   private _getPositionStrategy(): GlobalPositionStrategy {
-    return this._overlayRef.getConfig().positionStrategy as GlobalPositionStrategy;
+    return this._overlayRef.getConfig()
+      .positionStrategy as GlobalPositionStrategy;
   }
 }
 
@@ -235,7 +254,11 @@ export class FdsModalRef<T, R = any> {
  * `FdsModalRef` as that would conflict with custom dialog ref mocks provided in tests.
  * More details. See: https://github.com/angular/components/pull/9257#issuecomment-651342226.
  */
-export function _closeDialogVia<R>(ref: FdsModalRef<R>, interactionType: FocusOrigin, result?: R) {
+export function _closeDialogVia<R>(
+  ref: FdsModalRef<R>,
+  interactionType: FocusOrigin,
+  result?: R
+) {
   // Some mock dialog ref instances in tests do not have the `_containerInstance` property.
   // For those, we keep the behavior as is and do not deal with the interaction type.
   if (ref._containerInstance !== undefined) {

@@ -1,4 +1,4 @@
-import {Directive, InjectionToken, Input} from '@angular/core';
+import { Directive, InjectionToken, Input } from '@angular/core';
 
 let nextUniqueId = 0;
 
@@ -13,11 +13,11 @@ export const FDS_ERROR = new InjectionToken<ErrorDirective>('FdsError');
 @Directive({
   selector: 'fds-error',
   host: {
-    'class': 'alert-danger',
-    'role': 'alert',
-    '[attr.id]': 'id',
+    class: 'alert-danger',
+    role: 'alert',
+    '[attr.id]': 'id'
   },
-  providers: [{provide: FDS_ERROR, useExisting: ErrorDirective}],
+  providers: [{ provide: FDS_ERROR, useExisting: ErrorDirective }]
 })
 export class ErrorDirective {
   @Input() id: string = `fds-error-${nextUniqueId++}`;

@@ -1,18 +1,25 @@
-import { Directive, ElementRef, HostBinding, Input, Optional, Self } from "@angular/core";
-import { NgControl } from "@angular/forms";
-import { FdsFormFieldControl } from "../form-field/form-field-control";
+import {
+  Directive,
+  ElementRef,
+  HostBinding,
+  Input,
+  Optional,
+  Self
+} from '@angular/core';
+import { NgControl } from '@angular/forms';
+import { FdsFormFieldControl } from '../form-field/form-field-control';
 
 let nextUniqueId = 0;
 
 @Directive({
-  selector: "[fdsInput]",
+  selector: '[fdsInput]',
   host: {
-    "[class.formControl]": "true",
-    "[disabled]": "disabled",
+    '[class.formControl]': 'true',
+    '[disabled]': 'disabled',
     '[attr.id]': 'id',
-    "[required]": "required"
+    '[required]': 'required'
   },
-  providers: [{provide: FdsFormFieldControl, useExisting: InputDirective}],
+  providers: [{ provide: FdsFormFieldControl, useExisting: InputDirective }]
 })
 export class InputDirective {
   protected _uid = `Fds-input-${nextUniqueId++}`;
@@ -59,8 +66,12 @@ export class InputDirective {
    * @docs-private
    */
   @Input()
-  get required(): boolean { return this._required; }
-  set required(value: boolean) { this._required = value; }
+  get required(): boolean {
+    return this._required;
+  }
+  set required(value: boolean) {
+    this._required = value;
+  }
   protected _required = false;
 
   protected _id: string;
