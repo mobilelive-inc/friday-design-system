@@ -1,0 +1,63 @@
+<div class="row" id="access_info">
+  <div class="col-12">
+    <div class="infoBlockPiece">
+      <h2 class="h2">Accessibility</h2>
+      <p>
+        The purpose of Web accessibility is to make websites accessible for
+        people with following disabilities:
+      </p>
+      <ul>
+        <li>auditory</li>
+        <li>cognitive</li>
+        <li>neurological</li>
+        <li>physical</li>
+        <li>speech</li>
+        <li>visual</li>
+      </ul>
+      <p>Web accessibility is also useful for people without disabilities:</p>
+      <ul>
+        <li>
+          Those using mobile phones, smart watches, smart TVs, and other devices
+          with small screens.
+        </li>
+        <li>Elder people with changing abilities due to ageing.</li>
+        <li>
+          People with “temporary disabilities” such as a broken arm or lost
+          glasses
+        </li>
+      </ul>
+      <h2 class="h2">Essential Web-Accessibility requirements:</h2>
+      <h5 class="text--primary">Skip Links:</h5>
+      <p>
+        The main objective of skip links is to bypass long navigations in header
+        section for example. Such links make our page more accessible for users
+        with keyboards. Also they are helpful for quickly moving to required
+        page sections without going through complete page.
+      </p>
+      <h6 class="text--primary">how to implement:</h6>
+      <p>
+        Such links can be created anywhere in the page preferably on page top,
+        usually they are invisible and made visible on focus:
+      </p>
+      <div class="highlighted-block mb--5">
+        <pre style="font-family: 'Montserrat'; font-size: 12pt;">
+<p style="color:rgb(0,0,128)";>// HTML snippet</p>
+<span style="color:rgb(0,0,128)";>&lt;a href=&quot;#mainContent&quot; class=&quot;skip-link&quot;&gt;Skip to main content&lt;/a&gt;</span>
+<span style="color:rgb(0,128,0)">&lt;nav&gt;&nbsp;</span>
+<span>&nbsp; &nbsp;...</span>
+<p style="color:rgb(0,128,0)">&lt;/nav&gt;</p>
+<span style="color:rgb(133, 2, 13)">&lt;main id=&quot;&nbsp;mainContent&nbsp;&quot;&gt;</span>
+<span>&nbsp; ...</span>
+<p style="color:rgb(133, 2, 13)">&lt;/main&gt;</p>
+</pre>
+        <pre
+          style="font-family: 'Montserrat'; font-size: 12pt;"
+        ><p style="color:rgb(0,0,128);">// CSS styles</p><p style="color:rgb(0,0,128);">.skip-link { </p><p style="color:rgb(0,0,128);">    position:absolute;</p><p style="color:rgb(0,0,128);">    top: - (some value);</p><p style="color:rgb(0,0,128);">    left: (some value);</p><p style="color:rgb(0,0,128);">   opacity: 0;</p><p style="color:rgb(0,0,128);">    z-index: 999;</p><p style="color:rgb(0,0,128);">}</p><p style="color:rgb(0,0,128);">.skip-link:focus, .skip-link:active { </p><p style="color:rgb(0,0,128);">    opacity: 1; </p><p style="color:rgb(0,0,128);">    top: + (some value);</p><p style="color:rgb(0,0,128);">}</p><p>
+</p>
+<p>
+</p>
+</pre>
+      </div>
+    </div>
+  </div>
+</div>
