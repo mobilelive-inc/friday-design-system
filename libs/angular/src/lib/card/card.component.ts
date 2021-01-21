@@ -12,16 +12,15 @@ import { Template, Header, Footer } from '../shared/template.directive';
 @Component({
   selector: 'fds-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss'],
+  styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-
   @Input() style: any;
 
   @Input() cardClass: string;
-  
+
   @Input() headerClass: string;
-  
+
   @Input() bodyClass: string;
 
   @Input() footerClass: string;
@@ -61,5 +60,4 @@ export class CardComponent {
       }
     });
   }
-
 }

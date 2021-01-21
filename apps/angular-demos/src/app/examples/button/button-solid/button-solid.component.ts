@@ -3,15 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'fds-ml-button-solid',
   template: `
-    <fds-button className="btn__primary mb-tiny">Primary</fds-button>&nbsp;
-    <fds-button className="btn__secondary mb-tiny">Secondary</fds-button>&nbsp;
-    <fds-button className="btn__success mb-tiny">Success</fds-button>&nbsp;
-    <fds-button className="btn__danger mb-tiny">Danger</fds-button>&nbsp;
-    <fds-button className="btn__warning mb-tiny">Warning</fds-button>&nbsp;
-    <fds-button className="btn__info mb-tiny">Info</fds-button>&nbsp;
-    <fds-button className="btn__light mb-tiny">Light</fds-button>&nbsp;
-    <fds-button className="btn__dark mb-tiny">Dark</fds-button>&nbsp;
-    <fds-button className="btn__dark mb-tiny" [disabled]="true"
+    <fds-button className="btn--primary mb--2">Primary</fds-button>&nbsp;
+    <fds-button className="btn--secondary mb--2">Secondary</fds-button>&nbsp;
+    <fds-button className="btn--success mb--2">Success</fds-button>&nbsp;
+    <fds-button className="btn--danger mb--2">Danger</fds-button>&nbsp;
+    <fds-button className="btn--warning mb--2">Warning</fds-button>&nbsp;
+    <fds-button className="btn--info mb--2">Info</fds-button>&nbsp;
+    <fds-button className="btn--light mb--2">Light</fds-button>&nbsp;
+    <fds-button className="btn--dark mb--2">Dark</fds-button>&nbsp;
+    <fds-button className="btn--dark mb--2" [disabled]="true"
       >Disabled</fds-button
     >
   `,

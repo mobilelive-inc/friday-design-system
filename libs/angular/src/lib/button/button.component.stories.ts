@@ -1,9 +1,9 @@
-import {ButtonComponent} from "./button.component";
+import { ButtonComponent } from './button.component';
 
 export default {
   title: 'ButtonComponent',
-  component: ButtonComponent,
-}
+  component: ButtonComponent
+};
 
 export const primary = () => ({
   moduleMetadata: {
@@ -13,4 +13,4 @@ export const primary = () => ({
   props: {
     label: 'Text'
   }
-})
+});

@@ -1,10 +1,10 @@
-import { FocusMonitor } from "@angular/cdk/a11y";
+import { FocusMonitor } from '@angular/cdk/a11y';
 import {
   BooleanInput,
   coerceBooleanProperty,
   coerceNumberProperty
-} from "@angular/cdk/coercion";
-import { UniqueSelectionDispatcher } from "@angular/cdk/collections";
+} from '@angular/cdk/coercion';
+import { UniqueSelectionDispatcher } from '@angular/cdk/collections';
 import {
   AfterContentInit,
   AfterViewInit,
@@ -26,8 +26,8 @@ import {
   QueryList,
   ViewChild,
   ViewEncapsulation
-} from "@angular/core";
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
+} from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 // Increasing integer for generating unique ids for radio components.
 let nextUniqueId = 0;
@@ -49,8 +49,8 @@ export class FdsRadioChange {
     /** The MatFdsRadioButton that emits the change event. */
     public source: _FdsFdsRadioButtonBase,
     /** The value of the MatFdsRadioButton. */
-    public value: any) {
-  }
+    public value: any
+  ) {}
 }
 
 /**
@@ -58,29 +58,31 @@ export class FdsRadioChange {
  * alternative token to the actual `FdsRadioGroup` class which could cause unnecessary
  * retention of the class and its component metadata.
  */
-export const FDS_RADIO_GROUP =
-  new InjectionToken<_FdsRadioGroupBase<_FdsFdsRadioButtonBase>>("FdsRadioGroup");
+export const FDS_RADIO_GROUP = new InjectionToken<
+  _FdsRadioGroupBase<_FdsFdsRadioButtonBase>
+>('FdsRadioGroup');
 
 /**
  * Base class with all of the `FdsRadioGroup` functionality.
  * @docs-private
  */
 @Directive()
-export abstract class _FdsRadioGroupBase<T extends _FdsFdsRadioButtonBase> implements AfterContentInit,
-  ControlValueAccessor {
+export abstract class _FdsRadioGroupBase<T extends _FdsFdsRadioButtonBase>
+  implements AfterContentInit, ControlValueAccessor {
   /**
    * Event emitted when the group value changes.
    * Change events are only emitted when the value changes due to user interaction with
    * a radio button (the same behavior as `<input type-"radio">`).
    */
-  @Output() readonly change: EventEmitter<FdsRadioChange> = new EventEmitter<FdsRadioChange>();
+  @Output() readonly change: EventEmitter<FdsRadioChange> = new EventEmitter<
+    FdsRadioChange
+  >();
   /** Child radio buttons. */
   abstract _radios: QueryList<T>;
   /** Whether the `value` has been set to its initial value. */
   private _isInitialized: boolean = false;
 
-  constructor(private _changeDetector: ChangeDetectorRef) {
-  }
+  constructor(private _changeDetector: ChangeDetectorRef) {}
 
   /** Selected value for the radio group. */
   private _value: any = null;
@@ -139,16 +141,16 @@ export abstract class _FdsRadioGroupBase<T extends _FdsFdsRadioButtonBase> imple
   }
 
   /** Whether the labels should appear after or before the radio-buttons. Defaults to 'after' */
-  private _labelPosition: "before" | "after" = "after";
+  private _labelPosition: 'before' | 'after' = 'after';
 
   /** Whether the labels should appear after or before the radio-buttons. Defaults to 'after' */
   @Input()
-  get labelPosition(): "before" | "after" {
+  get labelPosition(): 'before' | 'after' {
     return this._labelPosition;
   }
 
   set labelPosition(v) {
-    this._labelPosition = v === "before" ? "before" : "after";
+    this._labelPosition = v === 'before' ? 'before' : 'after';
     this._markRadiosForCheck();
   }
 
@@ -181,15 +183,13 @@ export abstract class _FdsRadioGroupBase<T extends _FdsFdsRadioButtonBase> imple
   }
 
   /** The method to be called in order to update ngModel */
-  _controlValueAccessorChangeFn: (value: any) => void = () => {
-  };
+  _controlValueAccessorChangeFn: (value: any) => void = () => {};
 
   /**
    * onTouch function registered via registerOnTouch (ControlValueAccessor).
    * @docs-private
    */
-  onTouched: () => any = () => {
-  };
+  onTouched: () => any = () => {};
 
   _checkSelectedFdsRadioButton() {
     if (this._selected && !this._selected.checked) {
@@ -279,7 +279,8 @@ export abstract class _FdsRadioGroupBase<T extends _FdsFdsRadioButtonBase> imple
   /** Updates the `selected` radio button from the internal _value state. */
   private _updateSelectedRadioFromValue(): void {
     // If the value already matches the selected radio, do nothing.
-    const isAlreadySelected = this._selected !== null && this._selected.value === this._value;
+    const isAlreadySelected =
+      this._selected !== null && this._selected.value === this._value;
 
     if (this._radios && !isAlreadySelected) {
       this._selected = null;
@@ -297,15 +298,15 @@ export abstract class _FdsRadioGroupBase<T extends _FdsFdsRadioButtonBase> imple
  * A group of radio buttons. May contain one or more `<mat-radio-button>` elements.
  */
 @Directive({
-  selector: "fds-radio-group",
-  exportAs: "FdsRadioGroup",
+  selector: 'fds-radio-group',
+  exportAs: 'FdsRadioGroup',
   providers: [
     FDS_RADIO_GROUP_CONTROL_VALUE_ACCESSOR,
     { provide: FDS_RADIO_GROUP, useExisting: FdsRadioGroup }
   ],
   host: {
-    "role": "radiogroup",
-    "class": "fds-radio-group"
+    role: 'radiogroup',
+    class: 'fds-radio-group'
   }
 })
 export class FdsRadioGroup extends _FdsRadioGroupBase<FdsRadioButton> {
@@ -318,44 +319,48 @@ export class FdsRadioGroup extends _FdsRadioGroupBase<FdsRadioButton> {
  * @docs-private
  */
 @Directive()
-export abstract class _FdsFdsRadioButtonBase implements OnInit,
-  AfterViewInit, OnDestroy {
-
+export abstract class _FdsFdsRadioButtonBase
+  implements OnInit, AfterViewInit, OnDestroy {
   /** Analog to HTML 'name' attribute used to group radios for unique selection. */
   @Input() name: string;
   /** Used to set the 'aria-label' attribute on the underlying input element. */
-  @Input("aria-label") ariaLabel: string;
+  @Input('aria-label') ariaLabel: string;
   /** The 'aria-labelledby' attribute takes precedence as the element's text alternative. */
-  @Input("aria-labelledby") ariaLabelledby: string;
+  @Input('aria-labelledby') ariaLabelledby: string;
   /** The 'aria-describedby' attribute is read after the element's label and field type. */
-  @Input("aria-describedby") ariaDescribedby: string;
+  @Input('aria-describedby') ariaDescribedby: string;
   /**
    * Event emitted when the checked state of this radio button changes.
    * Change events are only emitted when the value changes due to user interaction with
    * the radio button (the same behavior as `<input type-"radio">`).
    */
-  @Output() readonly change: EventEmitter<FdsRadioChange> = new EventEmitter<FdsRadioChange>();
+  @Output() readonly change: EventEmitter<FdsRadioChange> = new EventEmitter<
+    FdsRadioChange
+  >();
   /** The parent radio group. May or may not be present. */
   radioGroup: _FdsRadioGroupBase<_FdsFdsRadioButtonBase>;
   /** The native `<input type=radio>` element */
-  @ViewChild("input") _inputElement: ElementRef<HTMLInputElement>;
+  @ViewChild('input') _inputElement: ElementRef<HTMLInputElement>;
   private _uniqueId: string = `mat-radio-${++nextUniqueId}`;
   /** The unique ID for the radio button. */
   @Input() id: string = this._uniqueId;
 
-  constructor(radioGroup: _FdsRadioGroupBase<_FdsFdsRadioButtonBase>,
-              private elementRef: ElementRef,
-              protected _changeDetector: ChangeDetectorRef,
-              private _focusMonitor: FocusMonitor,
-              private _radioDispatcher: UniqueSelectionDispatcher) {
+  constructor(
+    radioGroup: _FdsRadioGroupBase<_FdsFdsRadioButtonBase>,
+    private elementRef: ElementRef,
+    protected _changeDetector: ChangeDetectorRef,
+    private _focusMonitor: FocusMonitor,
+    private _radioDispatcher: UniqueSelectionDispatcher
+  ) {
     this.radioGroup = radioGroup;
 
-    this._removeUniqueSelectionListener =
-      _radioDispatcher.listen((id: string, name: string) => {
+    this._removeUniqueSelectionListener = _radioDispatcher.listen(
+      (id: string, name: string) => {
         if (id !== this.id && name === this.name) {
           this.checked = false;
         }
-      });
+      }
+    );
   }
 
   private _tabIndex: number = 0;
@@ -369,12 +374,16 @@ export abstract class _FdsFdsRadioButtonBase implements OnInit,
     this._tabIndex = value != null ? coerceNumberProperty(value) : 0;
   }
 
-  private _labelPosition: "before" | "after";
+  private _labelPosition: 'before' | 'after';
 
   /** Whether the label should appear after or before the radio button. Defaults to 'after' */
   @Input()
-  get labelPosition(): "before" | "after" {
-    return this._labelPosition || (this.radioGroup && this.radioGroup.labelPosition) || "after";
+  get labelPosition(): 'before' | 'after' {
+    return (
+      this._labelPosition ||
+      (this.radioGroup && this.radioGroup.labelPosition) ||
+      'after'
+    );
   }
 
   set labelPosition(value) {
@@ -399,10 +408,17 @@ export abstract class _FdsFdsRadioButtonBase implements OnInit,
     const newCheckedState = coerceBooleanProperty(value);
     if (this._checked !== newCheckedState) {
       this._checked = newCheckedState;
-      if (newCheckedState && this.radioGroup && this.radioGroup.value !== this.value) {
+      if (
+        newCheckedState &&
+        this.radioGroup &&
+        this.radioGroup.value !== this.value
+      ) {
         this.radioGroup.selected = this;
-      } else if (!newCheckedState && this.radioGroup && this.radioGroup.value === this.value) {
-
+      } else if (
+        !newCheckedState &&
+        this.radioGroup &&
+        this.radioGroup.value === this.value
+      ) {
         // When unchecking the selected radio button, update the selected radio
         // property on the group.
         this.radioGroup.selected = null;
@@ -421,7 +437,9 @@ export abstract class _FdsFdsRadioButtonBase implements OnInit,
   /** Whether the radio button is disabled. */
   @Input()
   get disabled(): boolean {
-    return this._disabled || (this.radioGroup !== null && this.radioGroup.disabled);
+    return (
+      this._disabled || (this.radioGroup !== null && this.radioGroup.disabled)
+    );
   }
 
   set disabled(value: boolean) {
@@ -467,7 +485,7 @@ export abstract class _FdsFdsRadioButtonBase implements OnInit,
 
   /** Focuses the radio button. */
   focus(options?: FocusOptions): void {
-    this._focusMonitor.focusVia(this._inputElement, "keyboard", options);
+    this._focusMonitor.focusVia(this._inputElement, 'keyboard', options);
   }
 
   /**
@@ -491,13 +509,11 @@ export abstract class _FdsFdsRadioButtonBase implements OnInit,
   }
 
   ngAfterViewInit() {
-    this._focusMonitor
-      .monitor(this.elementRef, true)
-      .subscribe(focusOrigin => {
-        if (!focusOrigin && this.radioGroup) {
-          this.radioGroup._touch();
-        }
-      });
+    this._focusMonitor.monitor(this.elementRef, true).subscribe(focusOrigin => {
+      if (!focusOrigin && this.radioGroup) {
+        this.radioGroup._touch();
+      }
+    });
   }
 
   ngOnDestroy() {
@@ -526,7 +542,8 @@ export abstract class _FdsFdsRadioButtonBase implements OnInit,
     // emit its event object to the `change` output.
     event.stopPropagation();
 
-    const groupValueChanged = this.radioGroup && this.value !== this.radioGroup.value;
+    const groupValueChanged =
+      this.radioGroup && this.value !== this.radioGroup.value;
     this.checked = true;
     this._emitChangeEvent();
 
@@ -547,8 +564,7 @@ export abstract class _FdsFdsRadioButtonBase implements OnInit,
   }
 
   /** Unregister function for _radioDispatcher */
-  private _removeUniqueSelectionListener: () => void = () => {
-  };
+  private _removeUniqueSelectionListener: () => void = () => {};
 
   /** Dispatch change event with current value. */
   private _emitChangeEvent(): void {
@@ -556,38 +572,44 @@ export abstract class _FdsFdsRadioButtonBase implements OnInit,
   }
 }
 
-
 /**
  * A Material design radio-button. Typically placed inside of `<mat-radio-group>` elements.
  */
 @Component({
-  selector: "fds-radio",
-  templateUrl: "./radio.component.html",
+  selector: 'fds-radio',
+  templateUrl: './radio.component.html',
   encapsulation: ViewEncapsulation.None,
   host: {
-    "class": "mat-radio-button",
-    "[class.mat-radio-checked]": "checked",
-    "[class.mat-radio-disabled]": "disabled",
+    class: 'mat-radio-button',
+    '[class.mat-radio-checked]': 'checked',
+    '[class.mat-radio-disabled]': 'disabled',
     // Needs to be -1 so the `focus` event still fires.
-    "[attr.tabindex]": "-1",
-    "[attr.id]": "id",
-    "[attr.aria-label]": "null",
-    "[attr.aria-labelledby]": "null",
-    "[attr.aria-describedby]": "null",
+    '[attr.tabindex]': '-1',
+    '[attr.id]': 'id',
+    '[attr.aria-label]': 'null',
+    '[attr.aria-labelledby]': 'null',
+    '[attr.aria-describedby]': 'null',
     // Note: under normal conditions focus shouldn't land on this element, however it may be
     // programmatically set, for example inside of a focus trap, in this case we want to forward
     // the focus to the native element.
-    "(focus)": "_inputElement.nativeElement.focus()"
+    '(focus)': '_inputElement.nativeElement.focus()'
   },
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FdsRadioButton extends _FdsFdsRadioButtonBase {
-
-  constructor(@Optional() @Inject(FDS_RADIO_GROUP) radioGroup: FdsRadioGroup,
-              elementRef: ElementRef,
-              changeDetector: ChangeDetectorRef,
-              focusMonitor: FocusMonitor,
-              radioDispatcher: UniqueSelectionDispatcher) {
-    super(radioGroup, elementRef, changeDetector, focusMonitor, radioDispatcher);
+  constructor(
+    @Optional() @Inject(FDS_RADIO_GROUP) radioGroup: FdsRadioGroup,
+    elementRef: ElementRef,
+    changeDetector: ChangeDetectorRef,
+    focusMonitor: FocusMonitor,
+    radioDispatcher: UniqueSelectionDispatcher
+  ) {
+    super(
+      radioGroup,
+      elementRef,
+      changeDetector,
+      focusMonitor,
+      radioDispatcher
+    );
   }
 }

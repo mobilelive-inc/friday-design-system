@@ -1,18 +1,18 @@
-import { AnimationEvent } from "@angular/animations";
+import { AnimationEvent } from '@angular/animations';
 import {
   ConfigurableFocusTrapFactory,
   FocusMonitor,
   FocusOrigin,
   FocusTrap
-} from "@angular/cdk/a11y";
+} from '@angular/cdk/a11y';
 import {
   BasePortalOutlet,
   CdkPortalOutlet,
   ComponentPortal,
   DomPortal,
   TemplatePortal
-} from "@angular/cdk/portal";
-import { DOCUMENT } from "@angular/common";
+} from '@angular/cdk/portal';
+import { DOCUMENT } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -26,13 +26,13 @@ import {
   Optional,
   ViewChild,
   ViewEncapsulation
-} from "@angular/core";
-import { fdsModalAnimations } from "./modal-animations";
-import { FdsModalConfig } from "./modal-config";
+} from '@angular/core';
+import { fdsModalAnimations } from './modal-animations';
+import { FdsModalConfig } from './modal-config';
 
 /** Event that captures the state of dialog container animations. */
 interface ModalAnimationEvent {
-  state: "opened" | "opening" | "closing" | "closed";
+  state: 'opened' | 'opening' | 'closing' | 'closed';
   totalTime: number;
 }
 
@@ -45,7 +45,9 @@ const ngDevMode = false;
  * @docs-private
  */
 export function throwMatDialogContentAlreadyAttachedError() {
-  throw Error("Attempting to attach dialog content after content is already attached");
+  throw Error(
+    'Attempting to attach dialog content after content is already attached'
+  );
 }
 
 /**
@@ -81,7 +83,8 @@ export abstract class _FdsModalContainerBase extends BasePortalOutlet {
     @Optional() @Inject(DOCUMENT) document: any,
     /** The dialog configuration. */
     public _config: FdsModalConfig,
-    private _focusMonitor?: FocusMonitor) {
+    private _focusMonitor?: FocusMonitor
+  ) {
     super();
     /* Fix issue with packagr */
     this._document = document as Document;
@@ -107,7 +110,10 @@ export abstract class _FdsModalContainerBase extends BasePortalOutlet {
    * @param portal Portal to be attached as the dialog content.
    */
   attachComponentPortal<T>(portal: ComponentPortal<T>): ComponentRef<T> {
-    if (this._portalOutlet.hasAttached() && (typeof ngDevMode === "undefined" || ngDevMode)) {
+    if (
+      this._portalOutlet.hasAttached() &&
+      (typeof ngDevMode === 'undefined' || ngDevMode)
+    ) {
       throwMatDialogContentAlreadyAttachedError();
     }
 
@@ -119,7 +125,10 @@ export abstract class _FdsModalContainerBase extends BasePortalOutlet {
    * @param portal Portal to be attached as the dialog content.
    */
   attachTemplatePortal<C>(portal: TemplatePortal<C>): EmbeddedViewRef<C> {
-    if (this._portalOutlet.hasAttached() && (typeof ngDevMode === "undefined" || ngDevMode)) {
+    if (
+      this._portalOutlet.hasAttached() &&
+      (typeof ngDevMode === 'undefined' || ngDevMode)
+    ) {
       throwMatDialogContentAlreadyAttachedError();
     }
 
@@ -133,7 +142,10 @@ export abstract class _FdsModalContainerBase extends BasePortalOutlet {
    * @breaking-change 10.0.0
    */
   attachDomPortal = (portal: DomPortal) => {
-    if (this._portalOutlet.hasAttached() && (typeof ngDevMode === "undefined" || ngDevMode)) {
+    if (
+      this._portalOutlet.hasAttached() &&
+      (typeof ngDevMode === 'undefined' || ngDevMode)
+    ) {
       throwMatDialogContentAlreadyAttachedError();
     }
 
@@ -143,7 +155,8 @@ export abstract class _FdsModalContainerBase extends BasePortalOutlet {
   /** Moves focus back into the dialog if it was moved out. */
   _recaptureFocus() {
     if (!this._containsFocus()) {
-      const focusContainer = !this._config.autoFocus || !this._focusTrap.focusInitialElement();
+      const focusContainer =
+        !this._config.autoFocus || !this._focusTrap.focusInitialElement();
 
       if (focusContainer) {
         this._elementRef.nativeElement.focus();
@@ -173,8 +186,11 @@ export abstract class _FdsModalContainerBase extends BasePortalOutlet {
     const previousElement = this._elementFocusedBeforeDialogWasOpened;
 
     // We need the extra check, because IE can set the `activeElement` to null in some cases.
-    if (this._config.restoreFocus && previousElement &&
-      typeof previousElement.focus === "function") {
+    if (
+      this._config.restoreFocus &&
+      previousElement &&
+      typeof previousElement.focus === 'function'
+    ) {
       const activeElement = this._document.activeElement;
       const element = this._elementRef.nativeElement;
 
@@ -182,10 +198,17 @@ export abstract class _FdsModalContainerBase extends BasePortalOutlet {
       // non-focusable element like the backdrop was clicked) before moving it. It's possible that
       // the consumer moved it themselves before the animation was done, in which case we shouldn't
       // do anything.
-      if (!activeElement || activeElement === this._document.body || activeElement === element ||
-        element.contains(activeElement)) {
+      if (
+        !activeElement ||
+        activeElement === this._document.body ||
+        activeElement === element ||
+        element.contains(activeElement)
+      ) {
         if (this._focusMonitor) {
-          this._focusMonitor.focusVia(previousElement, this._closeInteractionType);
+          this._focusMonitor.focusVia(
+            previousElement,
+            this._closeInteractionType
+          );
           this._closeInteractionType = null;
         } else {
           previousElement.focus();
@@ -200,13 +223,16 @@ export abstract class _FdsModalContainerBase extends BasePortalOutlet {
 
   /** Sets up the focus trap. */
   private _setupFocusTrap() {
-    this._focusTrap = this._focusTrapFactory.create(this._elementRef.nativeElement);
+    this._focusTrap = this._focusTrapFactory.create(
+      this._elementRef.nativeElement
+    );
   }
 
   /** Captures the element that was focused before the dialog was opened. */
   private _capturePreviouslyFocusedElement() {
     if (this._document) {
-      this._elementFocusedBeforeDialogWasOpened = this._document.activeElement as HTMLElement;
+      this._elementFocusedBeforeDialogWasOpened = this._document
+        .activeElement as HTMLElement;
     }
   }
 
@@ -232,55 +258,55 @@ export abstract class _FdsModalContainerBase extends BasePortalOutlet {
  * @docs-private
  */
 @Component({
-  selector: "fds-modal-container",
-  templateUrl: "modal-container.html",
-  styleUrls: ["modal-container.scss"],
+  selector: 'fds-modal-container',
+  templateUrl: 'modal-container.html',
+  styleUrls: ['modal-container.scss'],
   encapsulation: ViewEncapsulation.None,
   // Using OnPush for dialogs caused some G3 sync issues. Disabled until we can track them down.
   // tslint:disable-next-line:validate-decorators
   changeDetection: ChangeDetectionStrategy.Default,
   animations: [fdsModalAnimations.dialogContainer],
   host: {
-    "class": "modalContent p-mid",
-    "tabindex": "-1",
-    "aria-modal": "true",
-    "[id]": "_id",
-    "[attr.role]": "_config.role",
-    "[attr.aria-labelledby]": "_config.ariaLabel ? null : _ariaLabelledBy",
-    "[attr.aria-label]": "_config.ariaLabel",
-    "[attr.aria-describedby]": "_config.ariaDescribedBy || null",
-    "[@dialogContainer]": "_state",
-    "(@dialogContainer.start)": "_onAnimationStart($event)",
-    "(@dialogContainer.done)": "_onAnimationDone($event)"
+    class: 'modalContent p--4',
+    tabindex: '-1',
+    'aria-modal': 'true',
+    '[id]': '_id',
+    '[attr.role]': '_config.role',
+    '[attr.aria-labelledby]': '_config.ariaLabel ? null : _ariaLabelledBy',
+    '[attr.aria-label]': '_config.ariaLabel',
+    '[attr.aria-describedby]': '_config.ariaDescribedBy || null',
+    '[@dialogContainer]': '_state',
+    '(@dialogContainer.start)': '_onAnimationStart($event)',
+    '(@dialogContainer.done)': '_onAnimationDone($event)'
   }
 })
 export class FdsModalContainer extends _FdsModalContainerBase {
   /** State of the dialog animation. */
-  _state: "void" | "enter" | "exit" = "enter";
+  _state: 'void' | 'enter' | 'exit' = 'enter';
 
   /** Callback, invoked whenever an animation on the host completes. */
   _onAnimationDone({ toState, totalTime }: AnimationEvent) {
-    if (toState === "enter") {
+    if (toState === 'enter') {
       this._trapFocus();
-      this._animationStateChanged.next({ state: "opened", totalTime });
-    } else if (toState === "exit") {
+      this._animationStateChanged.next({ state: 'opened', totalTime });
+    } else if (toState === 'exit') {
       this._restoreFocus();
-      this._animationStateChanged.next({ state: "closed", totalTime });
+      this._animationStateChanged.next({ state: 'closed', totalTime });
     }
   }
 
   /** Callback, invoked when an animation on the host starts. */
   _onAnimationStart({ toState, totalTime }: AnimationEvent) {
-    if (toState === "enter") {
-      this._animationStateChanged.next({ state: "opening", totalTime });
-    } else if (toState === "exit" || toState === "void") {
-      this._animationStateChanged.next({ state: "closing", totalTime });
+    if (toState === 'enter') {
+      this._animationStateChanged.next({ state: 'opening', totalTime });
+    } else if (toState === 'exit' || toState === 'void') {
+      this._animationStateChanged.next({ state: 'closing', totalTime });
     }
   }
 
   /** Starts the dialog exit animation. */
   _startExitAnimation(): void {
-    this._state = "exit";
+    this._state = 'exit';
 
     // Mark the container for check so it can react if the
     // view container is using OnPush change detection.

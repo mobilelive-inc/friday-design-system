@@ -3,27 +3,34 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'demo-ml-side-effects',
   template: `
-    <fds-button className="btn__primary" (onClick)="show()" *ngIf="!isDarkButtonShown">Insert Dark Button</fds-button>&nbsp;
-    <fds-button className="btn__success side-effects-demo" (onClick)="hide()" *ngIf="isDarkButtonShown">Remove Dark Button</fds-button>&nbsp;
+    <fds-button
+      className="btnprimary"
+      (onClick)="show()"
+      *ngIf="!isDarkButtonShown"
+      >Insert Dark Button</fds-button
+    >&nbsp;
+    <fds-button
+      className="btn--success side-effects-demo"
+      (onClick)="hide()"
+      *ngIf="isDarkButtonShown"
+      >Remove Dark Button</fds-button
+    >&nbsp;
     <fds-dark-button *ngIf="isDarkButtonShown"></fds-dark-button>
   `,
-  styles: [
-  ],
+  styles: []
 })
 export class MlSideEffectsComponent implements OnInit {
   isDarkButtonShown = false;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  show(){
+  show() {
     this.isDarkButtonShown = true;
   }
 
-  hide(){
+  hide() {
     this.isDarkButtonShown = false;
   }
-
 }

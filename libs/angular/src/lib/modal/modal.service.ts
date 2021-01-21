@@ -4,9 +4,13 @@ import {
   OverlayContainer,
   OverlayRef,
   ScrollStrategy
-} from "@angular/cdk/overlay";
-import { ComponentPortal, ComponentType, TemplatePortal } from "@angular/cdk/portal";
-import { Location } from "@angular/common";
+} from '@angular/cdk/overlay';
+import {
+  ComponentPortal,
+  ComponentType,
+  TemplatePortal
+} from '@angular/cdk/portal';
+import { Location } from '@angular/common';
 import {
   Directive,
   Inject,
@@ -19,36 +23,41 @@ import {
   StaticProvider,
   TemplateRef,
   Type
-} from "@angular/core";
-import { defer, Observable, of as observableOf, Subject } from "rxjs";
-import { startWith } from "rxjs/operators";
-import { FdsModalConfig } from "./modal-config";
-import { _FdsModalContainerBase, FdsModalContainer } from "./modal-container";
-import { FdsModalRef } from "./modal-ref";
-import { Directionality } from "@angular/cdk/bidi";
+} from '@angular/core';
+import { defer, Observable, of as observableOf, Subject } from 'rxjs';
+import { startWith } from 'rxjs/operators';
+import { FdsModalConfig } from './modal-config';
+import { _FdsModalContainerBase, FdsModalContainer } from './modal-container';
+import { FdsModalRef } from './modal-ref';
+import { Directionality } from '@angular/cdk/bidi';
 
 // TODO: @Dmitriy remove from here and check how to use devMode
 const ngDevMode = false;
 
 /** Injection token that can be used to access the data that was passed in to a dialog. */
-export const MAT_DIALOG_DATA = new InjectionToken<any>("FdsModalData");
+export const MAT_DIALOG_DATA = new InjectionToken<any>('FdsModalData');
 
 /** Injection token that can be used to specify default dialog options. */
-export const MAT_DIALOG_DEFAULT_OPTIONS =
-  new InjectionToken<FdsModalConfig>("fds-modal-default-options");
+export const MAT_DIALOG_DEFAULT_OPTIONS = new InjectionToken<FdsModalConfig>(
+  'fds-modal-default-options'
+);
 
 /** Injection token that determines the scroll handling while the dialog is open. */
-export const MAT_DIALOG_SCROLL_STRATEGY =
-  new InjectionToken<() => ScrollStrategy>("fds-modal-scroll-strategy");
+export const MAT_DIALOG_SCROLL_STRATEGY = new InjectionToken<
+  () => ScrollStrategy
+>('fds-modal-scroll-strategy');
 
 /** @docs-private */
-export function MAT_DIALOG_SCROLL_STRATEGY_FACTORY(overlay: Overlay): () => ScrollStrategy {
+export function MAT_DIALOG_SCROLL_STRATEGY_FACTORY(
+  overlay: Overlay
+): () => ScrollStrategy {
   return () => overlay.scrollStrategies.block();
 }
 
 /** @docs-private */
-export function MAT_DIALOG_SCROLL_STRATEGY_PROVIDER_FACTORY(overlay: Overlay):
-  () => ScrollStrategy {
+export function MAT_DIALOG_SCROLL_STRATEGY_PROVIDER_FACTORY(
+  overlay: Overlay
+): () => ScrollStrategy {
   return () => overlay.scrollStrategies.block();
 }
 
@@ -64,14 +73,17 @@ export const MAT_DIALOG_SCROLL_STRATEGY_PROVIDER = {
  * for arbitrary dialog refs and dialog container components.
  */
 @Directive()
-export abstract class _FdsModalBase<C extends _FdsModalContainerBase> implements OnDestroy {
+export abstract class _FdsModalBase<C extends _FdsModalContainerBase>
+  implements OnDestroy {
   /**
    * Stream that emits when all open dialog have finished closing.
    * Will emit on subscribe if there are no open dialogs to begin with.
    */
-  readonly afterAllClosed: Observable<void> = defer(() => this.openDialogs.length ?
-    this._getAfterAllClosed() :
-    this._getAfterAllClosed().pipe(startWith(undefined))) as Observable<any>;
+  readonly afterAllClosed: Observable<void> = defer(() =>
+    this.openDialogs.length
+      ? this._getAfterAllClosed()
+      : this._getAfterAllClosed().pipe(startWith(undefined))
+  ) as Observable<any>;
   private _openDialogsAtThisLevel: FdsModalRef<any>[] = [];
   private readonly _afterAllClosedAtThisLevel = new Subject<void>();
   private readonly _afterOpenedAtThisLevel = new Subject<FdsModalRef<any>>();
@@ -87,23 +99,30 @@ export abstract class _FdsModalBase<C extends _FdsModalContainerBase> implements
     scrollStrategy: any,
     private _dialogRefConstructor: Type<FdsModalRef<any>>,
     private _dialogContainerType: Type<C>,
-    private _dialogDataToken: InjectionToken<any>) {
+    private _dialogDataToken: InjectionToken<any>
+  ) {
     this._scrollStrategy = scrollStrategy;
   }
 
   /** Keeps track of the currently-open dialogs. */
   get openDialogs(): FdsModalRef<any>[] {
-    return this._parentDialog ? this._parentDialog.openDialogs : this._openDialogsAtThisLevel;
+    return this._parentDialog
+      ? this._parentDialog.openDialogs
+      : this._openDialogsAtThisLevel;
   }
 
   /** Stream that emits when a dialog has been opened. */
   get afterOpened(): Subject<FdsModalRef<any>> {
-    return this._parentDialog ? this._parentDialog.afterOpened : this._afterOpenedAtThisLevel;
+    return this._parentDialog
+      ? this._parentDialog.afterOpened
+      : this._afterOpenedAtThisLevel;
   }
 
   _getAfterAllClosed(): Subject<void> {
     const parent = this._parentDialog;
-    return parent ? parent._getAfterAllClosed() : this._afterAllClosedAtThisLevel;
+    return parent
+      ? parent._getAfterAllClosed()
+      : this._afterAllClosedAtThisLevel;
   }
 
   /**
@@ -113,22 +132,33 @@ export abstract class _FdsModalBase<C extends _FdsModalContainerBase> implements
    * @param config Extra configuration options.
    * @returns Reference to the newly-opened dialog.
    */
-  open<T, D = any, R = any>(componentOrTemplateRef: ComponentType<T> | TemplateRef<T>,
-                            config?: FdsModalConfig<D>): FdsModalRef<T, R> {
+  open<T, D = any, R = any>(
+    componentOrTemplateRef: ComponentType<T> | TemplateRef<T>,
+    config?: FdsModalConfig<D>
+  ): FdsModalRef<T, R> {
+    config = _applyConfigDefaults(
+      config,
+      this._defaultOptions || new FdsModalConfig()
+    );
 
-    config = _applyConfigDefaults(config, this._defaultOptions || new FdsModalConfig());
-
-    if (config.id && this.getDialogById(config.id) &&
-      (typeof ngDevMode === "undefined" || ngDevMode)) {
-      throw Error(`Dialog with id "${config.id}" exists already. The dialog id must be unique.`);
+    if (
+      config.id &&
+      this.getDialogById(config.id) &&
+      (typeof ngDevMode === 'undefined' || ngDevMode)
+    ) {
+      throw Error(
+        `Dialog with id "${config.id}" exists already. The dialog id must be unique.`
+      );
     }
 
     const overlayRef = this._createOverlay(config);
     const dialogContainer = this._attachDialogContainer(overlayRef, config);
-    const dialogRef = this._attachDialogContent<T, R>(componentOrTemplateRef,
+    const dialogRef = this._attachDialogContent<T, R>(
+      componentOrTemplateRef,
       dialogContainer,
       overlayRef,
-      config);
+      config
+    );
 
     // If this is the first dialog that we're opening, hide all the non-overlay content.
     if (!this.openDialogs.length) {
@@ -210,15 +240,23 @@ export abstract class _FdsModalBase<C extends _FdsModalContainerBase> implements
    * @param config The dialog configuration.
    * @returns A promise resolving to a ComponentRef for the attached container.
    */
-  private _attachDialogContainer(overlay: OverlayRef, config: FdsModalConfig): C {
-    const userInjector = config && config.viewContainerRef && config.viewContainerRef.injector;
+  private _attachDialogContainer(
+    overlay: OverlayRef,
+    config: FdsModalConfig
+  ): C {
+    const userInjector =
+      config && config.viewContainerRef && config.viewContainerRef.injector;
     const injector = Injector.create({
       parent: userInjector || this._injector,
       providers: [{ provide: FdsModalConfig, useValue: config }]
     });
 
-    const containerPortal = new ComponentPortal(this._dialogContainerType,
-      config.viewContainerRef, injector, config.componentFactoryResolver);
+    const containerPortal = new ComponentPortal(
+      this._dialogContainerType,
+      config.viewContainerRef,
+      injector,
+      config.componentFactoryResolver
+    );
     const containerRef = overlay.attach<C>(containerPortal);
 
     return containerRef.instance;
@@ -237,20 +275,36 @@ export abstract class _FdsModalBase<C extends _FdsModalContainerBase> implements
     componentOrTemplateRef: ComponentType<T> | TemplateRef<T>,
     dialogContainer: C,
     overlayRef: OverlayRef,
-    config: FdsModalConfig): FdsModalRef<T, R> {
-
+    config: FdsModalConfig
+  ): FdsModalRef<T, R> {
     // Create a reference to the dialog we're creating in order to give the user a handle
     // to modify and close it.
-    const dialogRef = new this._dialogRefConstructor(overlayRef, dialogContainer, config.id);
+    const dialogRef = new this._dialogRefConstructor(
+      overlayRef,
+      dialogContainer,
+      config.id
+    );
 
     if (componentOrTemplateRef instanceof TemplateRef) {
       dialogContainer.attachTemplatePortal(
-        new TemplatePortal<T>(componentOrTemplateRef, null!,
-          <any>{ $implicit: config.data, dialogRef }));
+        new TemplatePortal<T>(componentOrTemplateRef, null!, <any>{
+          $implicit: config.data,
+          dialogRef
+        })
+      );
     } else {
-      const injector = this._createInjector<T>(config, dialogRef, dialogContainer);
+      const injector = this._createInjector<T>(
+        config,
+        dialogRef,
+        dialogContainer
+      );
       const contentRef = dialogContainer.attachComponentPortal<T>(
-        new ComponentPortal(componentOrTemplateRef, config.viewContainerRef, injector));
+        new ComponentPortal(
+          componentOrTemplateRef,
+          config.viewContainerRef,
+          injector
+        )
+      );
       dialogRef.componentInstance = contentRef.instance;
     }
 
@@ -272,9 +326,10 @@ export abstract class _FdsModalBase<C extends _FdsModalContainerBase> implements
   private _createInjector<T>(
     config: FdsModalConfig,
     dialogRef: FdsModalRef<T>,
-    dialogContainer: C): Injector {
-
-    const userInjector = config && config.viewContainerRef && config.viewContainerRef.injector;
+    dialogContainer: C
+  ): Injector {
+    const userInjector =
+      config && config.viewContainerRef && config.viewContainerRef.injector;
 
     // The dialog container should be provided as the dialog container and the dialog's
     // content are created out of the same `ViewContainerRef` and as such, are siblings
@@ -286,15 +341,21 @@ export abstract class _FdsModalBase<C extends _FdsModalContainerBase> implements
       { provide: this._dialogRefConstructor, useValue: dialogRef }
     ];
 
-    if (config.direction &&
-      (!userInjector || !userInjector.get<Directionality | null>(Directionality, null))) {
+    if (
+      config.direction &&
+      (!userInjector ||
+        !userInjector.get<Directionality | null>(Directionality, null))
+    ) {
       providers.push({
         provide: Directionality,
         useValue: { value: config.direction, change: observableOf() }
       });
     }
 
-    return Injector.create({ parent: userInjector || this._injector, providers });
+    return Injector.create({
+      parent: userInjector || this._injector,
+      providers
+    });
   }
 
   /**
@@ -312,9 +373,9 @@ export abstract class _FdsModalBase<C extends _FdsModalContainerBase> implements
       if (!this.openDialogs.length) {
         this._ariaHiddenElements.forEach((previousValue, element) => {
           if (previousValue) {
-            element.setAttribute("aria-hidden", previousValue);
+            element.setAttribute('aria-hidden', previousValue);
           } else {
-            element.removeAttribute("aria-hidden");
+            element.removeAttribute('aria-hidden');
           }
         });
 
@@ -337,13 +398,17 @@ export abstract class _FdsModalBase<C extends _FdsModalContainerBase> implements
       for (let i = siblings.length - 1; i > -1; i--) {
         let sibling = siblings[i];
 
-        if (sibling !== overlayContainer &&
-          sibling.nodeName !== "SCRIPT" &&
-          sibling.nodeName !== "STYLE" &&
-          !sibling.hasAttribute("aria-live")) {
-
-          this._ariaHiddenElements.set(sibling, sibling.getAttribute("aria-hidden"));
-          sibling.setAttribute("aria-hidden", "true");
+        if (
+          sibling !== overlayContainer &&
+          sibling.nodeName !== 'SCRIPT' &&
+          sibling.nodeName !== 'STYLE' &&
+          !sibling.hasAttribute('aria-live')
+        ) {
+          this._ariaHiddenElements.set(
+            sibling,
+            sibling.getAttribute('aria-hidden')
+          );
+          sibling.setAttribute('aria-hidden', 'true');
         }
       }
     }
@@ -361,7 +426,6 @@ export abstract class _FdsModalBase<C extends _FdsModalContainerBase> implements
       dialogs[i].close();
     }
   }
-
 }
 
 /**
@@ -377,12 +441,24 @@ export class FdsModalService extends _FdsModalBase<FdsModalContainer> {
      * @breaking-change 10.0.0
      */
     @Optional() location: Location,
-    @Optional() @Inject(MAT_DIALOG_DEFAULT_OPTIONS) defaultOptions: FdsModalConfig,
+    @Optional()
+    @Inject(MAT_DIALOG_DEFAULT_OPTIONS)
+    defaultOptions: FdsModalConfig,
     @Inject(MAT_DIALOG_SCROLL_STRATEGY) scrollStrategy: any,
     @Optional() @SkipSelf() parentDialog: FdsModalService,
-    overlayContainer: OverlayContainer) {
-    super(overlay, injector, defaultOptions, parentDialog, overlayContainer, scrollStrategy,
-      FdsModalRef, FdsModalContainer, MAT_DIALOG_DATA);
+    overlayContainer: OverlayContainer
+  ) {
+    super(
+      overlay,
+      injector,
+      defaultOptions,
+      parentDialog,
+      overlayContainer,
+      scrollStrategy,
+      FdsModalRef,
+      FdsModalContainer,
+      MAT_DIALOG_DATA
+    );
   }
 }
 
@@ -393,6 +469,8 @@ export class FdsModalService extends _FdsModalBase<FdsModalContainer> {
  * @returns The new configuration object.
  */
 function _applyConfigDefaults(
-  config?: FdsModalConfig, defaultOptions?: FdsModalConfig): FdsModalConfig {
+  config?: FdsModalConfig,
+  defaultOptions?: FdsModalConfig
+): FdsModalConfig {
   return { ...defaultOptions, ...config };
 }

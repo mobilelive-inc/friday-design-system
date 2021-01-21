@@ -3,28 +3,27 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'demo-button-curved-outline',
   template: `
-    <fds-button className="btn__primary__outline curved mb-tiny"
+    <fds-button className="btn--primary--outline curved mb--2"
       >Primary</fds-button
     >&nbsp;
-    <fds-button className="btn__secondary__outline curved mb-tiny"
+    <fds-button className="btn--secondary--outline curved mb--2"
       >Secondary</fds-button
     >&nbsp;
-    <fds-button className="btn__success__outline curved mb-tiny"
+    <fds-button className="btn--success--outline curved mb--2"
       >Success</fds-button
     >&nbsp;
-    <fds-button className="btn__danger__outline curved mb-tiny"
-      >Danger</fds-button
+    <fds-button className="btn--danger--outline curved mb--2">Danger</fds-button
     >&nbsp;
-    <fds-button className="btn__warning__outline curved mb-tiny"
+    <fds-button className="btn--warning--outline curved mb--2"
       >Warning</fds-button
     >&nbsp;
-    <fds-button className="btn__info__outline curved mb-tiny">Info</fds-button
+    <fds-button className="btn--info--outline curved mb--2">Info</fds-button
     >&nbsp;
-    <fds-button className="btn__light__outline curved mb-tiny">Light</fds-button
+    <fds-button className="btn--light--outline curved mb--2">Light</fds-button
     >&nbsp;
-    <fds-button className="btn__dark__outline curved mb-tiny">Dark</fds-button
+    <fds-button className="btn--dark--outline curved mb--2">Dark</fds-button
     >&nbsp;
-    <fds-button className="btn__dark__outline curved mb-tiny" [disabled]="true"
+    <fds-button className="btn--dark--outline curved mb--2" [disabled]="true"
       >Disabled</fds-button
     >
   `,

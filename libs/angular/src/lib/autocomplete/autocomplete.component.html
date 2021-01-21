@@ -2,18 +2,41 @@
 	TODO
 	Remove the following code [attr.aria-controls]="listId" [attr.aria-expanded]="overlayVisible" [attr.aria-activedescendant]="'p-highlighted-option'" as they are causing failure of Accessibility.
 -->
-<input *ngIf="!multiple" #in [attr.type]="type" [attr.id]="id" [ngStyle]="inputStyle"
-	   [class]="inputStyleClass" [autocomplete]="autocomplete" [attr.required]="required" [attr.name]="name"
-	   class="formControl"
-	   [ngClass]="{'p-autocomplete-dd-input':dropdown,'p-disabled': disabled}" [value]="inputFieldValue"
-	   aria-autocomplete="list" role="searchbox" aria-haspopup="true"
-	   (click)="onInputClick($event)" (input)="onInput($event)" (keydown)="onKeydown($event)"
-	   (keyup)="onKeyup($event)" [attr.autofocus]="autofocus" (focus)="onInputFocus($event)"
-	   (blur)="onInputBlur($event)" (change)="onInputChange($event)" (paste)="onInputPaste($event)"
-	   [attr.placeholder]="placeholder" [attr.size]="size" [attr.maxlength]="maxlength"
-	   [attr.tabindex]="tabindex" [readonly]="readonly" [disabled]="disabled" [attr.aria-label]="ariaLabel"
-	   [attr.aria-labelledby]="ariaLabelledBy" [attr.aria-required]="required"
->
+<input
+  *ngIf="!multiple"
+  #in
+  [attr.type]="type"
+  [attr.id]="id"
+  [ngStyle]="inputStyle"
+  [class]="inputStyleClass"
+  [autocomplete]="autocomplete"
+  [attr.required]="required"
+  [attr.name]="name"
+  class="formControl"
+  [ngClass]="{ 'p-autocomplete-dd-input': dropdown, 'p-disabled': disabled }"
+  [value]="inputFieldValue"
+  aria-autocomplete="list"
+  role="searchbox"
+  aria-haspopup="true"
+  (click)="onInputClick($event)"
+  (input)="onInput($event)"
+  (keydown)="onKeydown($event)"
+  (keyup)="onKeyup($event)"
+  [attr.autofocus]="autofocus"
+  (focus)="onInputFocus($event)"
+  (blur)="onInputBlur($event)"
+  (change)="onInputChange($event)"
+  (paste)="onInputPaste($event)"
+  [attr.placeholder]="placeholder"
+  [attr.size]="size"
+  [attr.maxlength]="maxlength"
+  [attr.tabindex]="tabindex"
+  [readonly]="readonly"
+  [disabled]="disabled"
+  [attr.aria-label]="ariaLabel"
+  [attr.aria-labelledby]="ariaLabelledBy"
+  [attr.aria-required]="required"
+/>
 <!--  <ul *ngIf="multiple" #multiContainer class="p-autocomplete-multiple-container p-component p-inputtext"-->
 <!--	  [ngClass]="{'p-disabled':disabled,'p-focus':focus}" (click)="multiIn.focus()">-->
 <!--			  <li #token *ngFor="let val of value" class="p-autocomplete-token">-->
@@ -38,28 +61,56 @@
 <!--			  </li>-->
 <!--  		</ul>-->
 <i *ngIf="loading" class="p-autocomplete-loader pi pi-spinner pi-spin"></i>
-<button #ddBtn type="button"
-		[disabled]="disabled"
-		pRipple
-		(click)="handleDropdownClick($event)"
-		*ngIf="dropdown"
-		[attr.tabindex]="tabindex">
-</button>
+<button
+  #ddBtn
+  type="button"
+  [disabled]="disabled"
+  pRipple
+  (click)="handleDropdownClick($event)"
+  *ngIf="dropdown"
+  [attr.tabindex]="tabindex"
+></button>
 
-<div #panel *ngIf="overlayVisible" [ngClass]="['p-autocomplete-panel p-component']"
-	 [style.max-height]="scrollHeight" [ngStyle]="panelStyle" [class]="panelStyleClass"
-	 [@overlayAnimation]="{value: 'visible', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}"
-	 (@overlayAnimation.start)="onOverlayAnimationStart($event)"
-	 (@overlayAnimation.done)="onOverlayAnimationDone($event)">
+<div
+  #panel
+  *ngIf="overlayVisible"
+  [ngClass]="['p-autocomplete-panel p-component']"
+  [style.max-height]="scrollHeight"
+  [ngStyle]="panelStyle"
+  [class]="panelStyleClass"
+  [@overlayAnimation]="{
+    value: 'visible',
+    params: {
+      showTransitionParams: showTransitionOptions,
+      hideTransitionParams: hideTransitionOptions
+    }
+  }"
+  (@overlayAnimation.start)="onOverlayAnimationStart($event)"
+  (@overlayAnimation.done)="onOverlayAnimationDone($event)"
+>
   <ul role="listbox" [attr.id]="listId" class="p-autocomplete-items">
-	<li role="option" *ngFor="let option of suggestions; let idx = index" class="p-autocomplete-item"
-		pRipple [ngClass]="{'p-highlight': (option === highlightOption)}"
-		[id]="highlightOption == option ? 'p-highlighted-option':''" (click)="selectItem(option)">
-	  <span *ngIf="!itemTemplate">{{resolveFieldData(option)}}</span>
-	  <ng-container
-		  *ngTemplateOutlet="itemTemplate; context: {$implicit: option, index: idx}"></ng-container>
-	</li>
-	<li *ngIf="noResults && emptyMessage"
-		class="p-autocomplete-emptymessage p-autocomplete-item">{{emptyMessage}}</li>
+    <li
+      role="option"
+      *ngFor="let option of suggestions; let idx = index"
+      class="p-autocomplete-item"
+      pRipple
+      [ngClass]="{ 'p-highlight': option === highlightOption }"
+      [id]="highlightOption == option ? 'p-highlighted-option' : ''"
+      (click)="selectItem(option)"
+    >
+      <span *ngIf="!itemTemplate">{{ resolveFieldData(option) }}</span>
+      <ng-container
+        *ngTemplateOutlet="
+          itemTemplate;
+          context: { $implicit: option, index: idx }
+        "
+      ></ng-container>
+    </li>
+    <li
+      *ngIf="noResults && emptyMessage"
+      class="p-autocomplete-emptymessage p-autocomplete-item"
+    >
+      {{ emptyMessage }}
+    </li>
   </ul>
 </div>

@@ -2,30 +2,12 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'demo-stepper-basic',
+  selector: 'demo-advance-stepper',
   template: `
-    <fds-horizontal-stepper [linear]="true" #stepper>
-      <ng-template let-stepperHeader fdsTemplate="header">
-        <fds-progress
-          [min]="0"
-          [max]="stepperHeader.stepsCount"
-          [displayWith]="labelFormatFn(stepperHeader.stepsCount)"
-          [value]="stepperHeader.selectedIndex + 1"
-          [showLabel]="true"
-        ></fds-progress>
-        <div
-          class="text--center mb--4"
-          role="alert"
-          aria-live="polite"
-          aria-atomic="true"
-        >
-          Question {{ stepperHeader.selectedIndex + 1 }} of
-          {{ stepperHeader.stepsCount }}
-        </div>
-      </ng-template>
-
+    <fds-horizontal-stepper labelPosition="bottom" [linear]="true" #stepper>
       <fds-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup" class="w--25 m--auto">
+          <ng-template fdsStepLabel>Fill out your name</ng-template>
           <div class="formGroup">
             <fds-form-field [clearBtn]="true">
               <fds-label>Name</fds-label>
@@ -50,6 +32,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
       <fds-step [stepControl]="secondFormGroup">
         <form [formGroup]="secondFormGroup" class="w--25 m--auto">
+          <ng-template fdsStepLabel>Fill out your address</ng-template>
           <div class="formGroup">
             <fds-form-field [clearBtn]="true">
               <fds-label>Address</fds-label>
@@ -77,6 +60,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
       </fds-step>
 
       <fds-step>
+        <ng-template fdsStepLabel>Done </ng-template>
         <div class="w--50 m--auto">
           <p class="text--center my--3 h3">You are now done.</p>
           <div class="text--center pt--3">
@@ -90,10 +74,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
         </div>
       </fds-step>
     </fds-horizontal-stepper>
-  `,
-  styles: []
+  `
 })
-export class StepperBasicComponent implements OnInit {
+export class AdvanceStepperComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   isEditable = false;
