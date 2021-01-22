@@ -56,6 +56,16 @@ function App() {
             color="white"
           />
         </Flex>
+        <Flex mt={5}>
+          <Button
+            variant="outlineInstagram"
+            width="20%"
+            display="flex"
+            m="10px"
+            withIcon>
+            Primary
+          </Button>
+        </Flex>
         <Toggle
           shortDescription="Test toggle"
           id="bt1"
