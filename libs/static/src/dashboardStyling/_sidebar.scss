@@ -70,6 +70,7 @@
     z-index: 4;
     position: relative;
     overflow: auto;
+    transform: rotate(180deg);
 
     p {
       margin: 0;
@@ -79,6 +80,7 @@
       margin-top: 20px;
       display: block;
       padding-left: 0;
+      transform: rotate(-180deg);
 
       li {
         list-style: none;
