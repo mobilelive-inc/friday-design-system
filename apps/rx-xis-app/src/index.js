@@ -8,9 +8,10 @@ import Button from './components/Button';
 // import Button from '../../../build';
 import { Text } from './components/typography';
 import Span from './components/span/span';
+import Icon from './components/icon/Icon';
 import Input from './components/Input';
 import theme from './components/theme/defaultTheme';
-import './components/icomons_styles.scss';
+import './../../../libs/icons/icomons_styles.scss';
 import Checkbox from './components/checkbox';
 import Radio from './components/radio';
 import Select from './components/select';
@@ -56,14 +57,14 @@ function App() {
             color="white"
           />
         </Flex>
-        <Flex mt={5}>
+        <Flex mt={5} mb={100}>
           <Button
-            variant="outlineInstagram"
-            width="20%"
+            variant="outlineGoogleBlue"
+            width="15%"
             display="flex"
-            m="10px"
             withIcon>
-            Primary
+            <Icon className="icon-facebook" />
+            facebook
           </Button>
         </Flex>
         <Toggle
