@@ -5,14 +5,25 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Flex, Box } from 'rebass/styled-components';
 import Button from './components/Button';
-import { PrimaryButton } from './../stories/1-Button.stories';
+import {
+  PrimaryButton,
+  OutlineButtons,
+  ClearButton,
+  RoundedButtons,
+  RoundedOutlineButtons,
+  CurvedButtons,
+  CurvedOutlineButtons,
+  FilledSocialButtons,
+  OutlineSocialButtons
+} from './../stories/1-Button.stories';
 import { OtherSpecs } from './../stories/typography.stories';
 // import Button from '../../../build';
 import { Text } from './components/typography';
 import Span from './components/span/span';
+import Icon from './components/icon/Icon';
 import Input from './components/Input';
 import theme from './components/theme/defaultTheme';
-import './components/icomons_styles.scss';
+import './../../../libs/icons/icomons_styles.scss';
 import Checkbox from './components/checkbox';
 import Radio from './components/radio';
 import Select from './components/select';
@@ -46,6 +57,14 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <PrimaryButton />
+      <OutlineButtons />
+      <ClearButton />
+      <RoundedButtons />
+      <RoundedOutlineButtons />
+      <CurvedButtons />
+      <CurvedOutlineButtons />
+      <FilledSocialButtons />
+      <OutlineSocialButtons />
       <OtherSpecs />
       <div style={{ height: '100px', background: 'blue' }}></div>
       <div>
@@ -63,6 +82,16 @@ function App() {
         <Text mb={30} underline italic>
           Testing
         </Text>
+        <Flex mt={5} mb={100}>
+          <Button
+            variant="outlineGoogleBlue"
+            width="15%"
+            display="flex"
+            withIcon>
+            <Icon className="icon-facebook" />
+            facebook
+          </Button>
+        </Flex>
         <Toggle
           shortDescription="Test toggle"
           id="bt1"

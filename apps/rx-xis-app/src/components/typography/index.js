@@ -27,8 +27,6 @@ const BaseText = styled(RebassText)(
 const getDerivedProps = props => {
   const { underline, deleted, mark, italic, bold } = props;
 
-  console.log('Props: ', props);
-
   const styles = {};
 
   if (underline) {
@@ -46,7 +44,6 @@ const getDerivedProps = props => {
   if (bold) {
     styles[`font-weight`] = `bold`;
   }
-  console.log('Styles: ', styles);
   return styles;
 };
 
@@ -67,6 +64,16 @@ Text.propTypes = {
   ]),
   /** Typography variant consumes typography object in the theme file */
   variant: PropTypes.string,
+  /** Option to underline the text */
+  underline: PropTypes.bool,
+  /** Option to delete the text by putting a line on it */
+  deleted: PropTypes.bool,
+  /** Option to highlighted the text */
+  mark: PropTypes.bool,
+  /** Option to view text in italic mode */
+  italic: PropTypes.bool,
+  /** Option to bold the text */
+  bold: PropTypes.bool,
   /** Defines color of text. Property maps to colors object in theme */
   color: PropTypes.string,
   /** Defines font size of child elements. Accepts responsive value from theme */

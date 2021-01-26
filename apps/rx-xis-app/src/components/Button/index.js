@@ -15,7 +15,7 @@ import { capitalizeFirstLetter } from '../utils/utils';
 const padding = '1rem 2rem';
 
 const getDerivedStyles = props => {
-  const { theme, borderType, withIcon, disabled } = props;
+  const { theme, borderType, withIcon, clear, variant, disabled } = props;
   // default styles for button
   const styles = {
     boxSizing: 'border-box',
@@ -31,16 +31,7 @@ const getDerivedStyles = props => {
   if (withIcon) {
     styles.alignItems = 'center';
     styles.justifyContent = 'space-evenly';
-  }
-  if (disabled) {
-    (styles.cursor = 'default'),
-      (styles.color = colors.white),
-      (styles.backgroundColor = colors.grayDarkest),
-      (styles.padding = padding);
-    styles[`&:hover`] = {
-      color: colors.white,
-      backgroundColor: colors.grayDarkest
-    };
+    styles.display = 'inline-flex';
   }
   return styles;
 };

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 import Button from '../src/components/Button';
 import Span from '../src/components/span/span';
+import Icon from '../src/components/icon/Icon';
 import theme from '../src/components/theme/defaultTheme';
 import '../src/components/icomoon_icons.css';
 import { Flex } from './getStarted';
@@ -38,40 +39,72 @@ export const PrimaryButton = () => (
     <Button variant="dark" width="15%" m={10}>
       Dark
     </Button>
-    <Button disabled width="15%" m={10}>
+    <Button variant="disabled" disabled width="15%" m={10}>
       Disabled
     </Button>
   </ThemeProvider>
 );
 
-export const clearButton = () => (
+export const ClearButton = () => (
   <ThemeProvider theme={theme}>
-    <Button variant="primary" width="15%" m={10}>
+    <Button variant="clearPrimary" width="15%" m={10}>
       Primary
     </Button>
-    <Button variant="secondary" width="15%" m={10}>
+    <Button variant="clearSecondary" width="15%" m={10}>
       Secondary
     </Button>
-    <Button variant="success" width="15%" m={10}>
+    <Button variant="clearSuccess" width="15%" m={10}>
       Success
     </Button>
-    <Button variant="danger" width="15%" m={10}>
+    <Button variant="clearDanger" width="15%" m={10}>
       Danger
     </Button>
-    <Button variant="warning" width="15%" m={10}>
+    <Button variant="clearWarning" width="15%" m={10}>
       Warning
     </Button>
-    <Button variant="info" width="15%" m={10}>
+    <Button variant="clearInfo" width="15%" m={10}>
       Info
     </Button>
-    <Button variant="light" width="15%" m={10}>
+    <Button variant="clearLight" width="15%" m={10}>
       Light
     </Button>
-    <Button variant="dark" width="15%" m={10}>
+    <Button variant="clearDark" width="15%" m={10}>
       Dark
     </Button>
-    <Button disabled width="15%" m={10}>
+    <Button variant="clearDisabled" disabled width="15%" m={10}>
+      Disabled
+    </Button>
+  </ThemeProvider>
+);
+
+export const RoundedButtons = () => (
+  <ThemeProvider theme={theme}>
+    <Button variant="primary" borderType="rounded" width="15%" m={10}>
+      Primary
+    </Button>
+    <Button variant="secondary" borderType="rounded" width="15%" m={10}>
+      Secondary
+    </Button>
+    <Button variant="success" borderType="rounded" width="15%" m={10}>
+      Success
+    </Button>
+    <Button variant="danger" borderType="rounded" width="15%" m={10}>
+      Danger
+    </Button>
+    <Button variant="warning" borderType="rounded" width="15%" m={10}>
+      Warning
+    </Button>
+    <Button variant="info" borderType="rounded" width="15%" m={10}>
+      Info
+    </Button>
+    <Button variant="light" borderType="rounded" width="15%" m={10}>
+      Light
+    </Button>
+    <Button variant="dark" borderType="rounded" width="15%" m={10}>
       Dark
+    </Button>
+    <Button variant="disabled" borderType="rounded" disabled width="15%" m={10}>
+      Disabled
     </Button>
   </ThemeProvider>
 );
@@ -100,11 +133,17 @@ export const OutlineButtons = () => (
     <Button variant="outlineLight" width="15%" m={10}>
       Light
     </Button>
+    <Button variant="outlineDark" width="15%" m={10}>
+      Dark
+    </Button>
+    <Button variant="outlineDisabled" disabled width="15%" m={10}>
+      Disabled
+    </Button>
   </ThemeProvider>
 );
 
 // eslint-disable-next-line react/no-multi-comp
-export const CurvedButtons = () => (
+export const CurvedOutlineButtons = () => (
   <ThemeProvider theme={theme}>
     <Button variant="outlinePrimary" borderType="curved" width="15%" m={10}>
       Primary
@@ -127,11 +166,54 @@ export const CurvedButtons = () => (
     <Button variant="outlineLight" borderType="curved" width="15%" m={10}>
       Light
     </Button>
+    <Button variant="outlineDark" borderType="curved" width="15%" m={10}>
+      Dark
+    </Button>
+    <Button
+      variant="outlineDisabled"
+      borderType="curved"
+      disabled
+      width="15%"
+      m={10}>
+      Disabled
+    </Button>
+  </ThemeProvider>
+);
+
+export const CurvedButtons = () => (
+  <ThemeProvider theme={theme}>
+    <Button variant="primary" borderType="curved" width="15%" m={10}>
+      Primary
+    </Button>
+    <Button variant="secondary" borderType="curved" width="15%" m={10}>
+      Secondary
+    </Button>
+    <Button variant="success" borderType="curved" width="15%" m={10}>
+      Success
+    </Button>
+    <Button variant="danger" borderType="curved" width="15%" m={10}>
+      Danger
+    </Button>
+    <Button variant="warning" borderType="curved" width="15%" m={10}>
+      Warning
+    </Button>
+    <Button variant="info" borderType="curved" width="15%" m={10}>
+      Info
+    </Button>
+    <Button variant="light" borderType="curved" width="15%" m={10}>
+      Light
+    </Button>
+    <Button variant="dark" borderType="curved" width="15%" m={10}>
+      Dark
+    </Button>
+    <Button variant="disabled" borderType="curved" disabled width="15%" m={10}>
+      Disabled
+    </Button>
   </ThemeProvider>
 );
 
 // eslint-disable-next-line react/no-multi-comp
-export const RoundedButtons = () => (
+export const RoundedOutlineButtons = () => (
   <ThemeProvider theme={theme}>
     <Button variant="outlinePrimary" borderType="rounded" width="15%" m={10}>
       Primary
@@ -153,6 +235,107 @@ export const RoundedButtons = () => (
     </Button>
     <Button variant="outlineLight" borderType="rounded" width="15%" m={10}>
       Light
+    </Button>
+    <Button variant="outlineDark" borderType="rounded" width="15%" m={10}>
+      Dark
+    </Button>
+    <Button
+      variant="outlineDisabled"
+      borderType="rounded"
+      disabled
+      width="15%"
+      m={10}>
+      Disabled
+    </Button>
+  </ThemeProvider>
+);
+
+export const FilledSocialButtons = () => (
+  <ThemeProvider theme={theme}>
+    <Button variant="filledGoogleRed" withIcon width="15%" m={10}>
+      <Icon className="icon-google" />
+      Google
+    </Button>
+    <Button variant="filledFacebook" withIcon width="15%" m={10}>
+      <Icon className="icon-facebook" />
+      Facebook
+    </Button>
+    <Button variant="filledTwitter" withIcon width="15%" m={10}>
+      <Icon className="icon-twitter" />
+      Twitter
+    </Button>
+    <Button variant="filledLinkedIn" withIcon width="15%" m={10}>
+      <Icon className="icon-linkedin" />
+      LinkedIn
+    </Button>
+    <Button variant="filledInstagram" withIcon width="15%" m={10}>
+      <Icon className="icon-instagram" />
+      Instagram
+    </Button>
+    <Button variant="filledGoogleBlue" withIcon width="15%" m={10}>
+      <Icon className="icon-google" />
+      Sign-up with Google
+    </Button>
+    <Button variant="filledFacebook" withIcon width="15%" m={10}>
+      <Icon className="icon-facebook" />
+      Sign-up with Facebook
+    </Button>
+    <Button variant="filledTwitter" withIcon width="15%" m={10}>
+      <Icon className="icon-twitter" />
+      Sign-up with Twitter
+    </Button>
+    <Button variant="filledLinkedIn" withIcon width="15%" m={10}>
+      <Icon className="icon-linkedin" />
+      Sign-up with LinkedIn
+    </Button>
+    <Button variant="filledInstagram" withIcon width="15%" m={10}>
+      <Icon className="icon-instagram" />
+      Sign-up with Instagram
+    </Button>
+  </ThemeProvider>
+);
+
+export const OutlineSocialButtons = () => (
+  <ThemeProvider theme={theme}>
+    <Button variant="outlineGoogleRed" withIcon width="15%" m={10}>
+      <Icon className="icon-google" />
+      Google
+    </Button>
+    <Button variant="outlineFacebook" withIcon width="15%" m={10}>
+      <Icon className="icon-facebook" />
+      Facebook
+    </Button>
+    <Button variant="outlineTwitter" withIcon width="15%" m={10}>
+      <Icon className="icon-twitter" />
+      Twitter
+    </Button>
+    <Button variant="outlineLinkedIn" withIcon width="15%" m={10}>
+      <Icon className="icon-linkedin" />
+      LinkedIn
+    </Button>
+    <Button variant="outlineInstagram" withIcon width="15%" m={10}>
+      <Icon className="icon-instagram" />
+      Instagram
+    </Button>
+    <Button variant="outlineGoogleBlue" withIcon width="15%" m={10}>
+      <Icon className="icon-google" />
+      Sign-up with Google
+    </Button>
+    <Button variant="outlineFacebook" withIcon width="15%" m={10}>
+      <Icon className="icon-facebook" />
+      Sign-up with Facebook
+    </Button>
+    <Button variant="outlineTwitter" withIcon width="15%" m={10}>
+      <Icon className="icon-twitter" />
+      Sign-up with Twitter
+    </Button>
+    <Button variant="outlineLinkedIn" withIcon width="15%" m={10}>
+      <Icon className="icon-linkedin" />
+      Sign-up with LinkedIn
+    </Button>
+    <Button variant="outlineInstagram" withIcon width="15%" m={10}>
+      <Icon className="icon-instagram" />
+      Sign-up with Instagram
     </Button>
   </ThemeProvider>
 );
