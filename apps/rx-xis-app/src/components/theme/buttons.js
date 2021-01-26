@@ -93,6 +93,34 @@ export const buttons = {
       backgroundColor: lighten(colors.light, -20)
     }
   },
+  dark: {
+    color: colors.white,
+    backgroundColor: colors.black,
+    padding,
+    border: buttonBorder,
+    '&:hover': {
+      color: colors.black,
+      backgroundColor: colors.light
+    },
+    '&:focus': {
+      color: colors.black,
+      backgroundColor: colors.light
+    }
+  },
+  disabled: {
+    cursor: 'default',
+    color: colors.white,
+    backgroundColor: colors.grayDark,
+    padding: padding,
+    '&:hover': {
+      color: colors.white,
+      backgroundColor: colors.grayDark
+    },
+    '&:focus': {
+      color: colors.white,
+      backgroundColor: colors.grayDark
+    }
+  },
   outlinePrimary: {
     color: colors.primary,
     backgroundColor: colors.white,
@@ -205,6 +233,13 @@ export const buttons = {
       color: colors.white
     }
   },
+  outlineDisabled: {
+    color: colors.grayHover,
+    backgroundColor: colors.white,
+    padding,
+    cursor: 'default',
+    border: getBorder(colors.grayHover)
+  },
   clearPrimary: {
     color: colors.primary,
     backgroundColor: colors.transparent,
@@ -290,7 +325,7 @@ export const buttons = {
     }
   },
   clearLight: {
-    color: colors.light,
+    color: colors.grayHover,
     backgroundColor: colors.transparent,
     padding,
     border: 'none',
@@ -314,6 +349,13 @@ export const buttons = {
     '&:focus': {
       backgroundColor: colors.grayLighter
     }
+  },
+  clearDisabled: {
+    color: colors.grayHover,
+    backgroundColor: colors.transparent,
+    padding,
+    border: 'none',
+    cursor: 'default'
   },
   iconBtn: {
     color: colors.black,
