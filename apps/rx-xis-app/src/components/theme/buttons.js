@@ -1,13 +1,13 @@
 import { lighten } from '../utils/lighten';
-import { colors } from './colors'
+import { colors } from './colors';
 
 const buttonBorder = '2px solid transparent';
-export const borderCurved = "10px";
-export const borderRounded = "50px"
-const padding = "1rem 2rem";
-const getBorder = (color) => {
-  return `2px solid ${color}`
-}
+export const borderCurved = '10px';
+export const borderRounded = '50px';
+const padding = '1rem 2rem';
+const getBorder = color => {
+  return `2px solid ${color}`;
+};
 export const buttons = {
   primary: {
     color: colors.black,
@@ -70,6 +70,16 @@ export const buttons = {
     border: buttonBorder,
     '&:hover': {
       backgroundColor: lighten(colors.light, -20)
+    }
+  },
+  dark: {
+    color: colors.white,
+    backgroundColor: colors.black,
+    padding,
+    border: buttonBorder,
+    '&:hover': {
+      color: colors.black,
+      backgroundColor: colors.light
     }
   },
   outlinePrimary: {
@@ -155,12 +165,12 @@ export const buttons = {
   iconBtn: {
     color: colors.black,
     backgroundColor: colors.white,
-    padding: "0.5rem 0.5rem",
-    border: buttonBorder,
+    padding: '0.5rem 0.5rem',
+    border: buttonBorder
   },
   link: {
     color: colors.black,
     backgroundColor: colors.white,
-    border: buttonBorder,
+    border: buttonBorder
   }
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { colors } from '../theme/colors';
 import {
   compose,
   border,
@@ -8,30 +9,41 @@ import {
   variant,
   space,
   typography,
-  color,
+  color
 } from 'styled-system';
 import { capitalizeFirstLetter } from '../utils/utils';
+const padding = '1rem 2rem';
 
-const getDerivedStyles = (props) => {
-  const {
-    theme, borderType, withIcon
-  } = props;
+const getDerivedStyles = props => {
+  const { theme, borderType, withIcon, disabled } = props;
   // default styles for button
   const styles = {
     boxSizing: 'border-box',
     cursor: 'pointer',
-    borderRadius: `${theme[`border${capitalizeFirstLetter(borderType)}`]} !important`,
+    borderRadius: `${
+      theme[`border${capitalizeFirstLetter(borderType)}`]
+    } !important`,
     '&:disabled': {
-      opacity: theme.opacity,
+      opacity: theme.opacity
     }
-  }
+  };
   // styles conditionally applied w.r.t props
-  if(withIcon){
-    styles.alignItems = "center";
-    styles.justifyContent = "space-evenly"
+  if (withIcon) {
+    styles.alignItems = 'center';
+    styles.justifyContent = 'space-evenly';
+  }
+  if (disabled) {
+    (styles.cursor = 'default'),
+      (styles.color = colors.white),
+      (styles.backgroundColor = colors.grayDarkest),
+      (styles.padding = padding);
+    styles[`&:hover`] = {
+      color: colors.white,
+      backgroundColor: colors.grayDarkest
+    };
   }
   return styles;
-}
+};
 
 const BaseButton = styled('button')(
   props => getDerivedStyles(props),
@@ -41,17 +53,16 @@ const BaseButton = styled('button')(
     space,
     typography,
     color,
-    variant({ scale: 'buttons' }),
-  ),
+    variant({ scale: 'buttons' })
+  )
 );
 
-
-const Button = (props) => {
+const Button = props => {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <BaseButton {...props}/>
-  )
-}
+    <BaseButton {...props} />
+  );
+};
 
 Button.defaultProps = {
   disabled: false,
@@ -64,14 +75,14 @@ Button.defaultProps = {
   textAlign: ['center'],
   borderRadius: [0],
   onClick: () => {},
-  withIcon: false,
+  withIcon: false
 };
 
 Button.propTypes = {
   /** Text for Button could be string or node. */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.arrayOf(PropTypes.node)
   ]).isRequired,
   /** Click handler for Button */
   onClick: PropTypes.func,
@@ -88,42 +99,42 @@ Button.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Defines line height of child elements. Accepts responsive value from theme */
   lineHeight: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Defines font weight of child elements. Accepts responsive value from theme */
   fontWeight: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** The display property specifies the display behavior (the type of rendering box) of an element. */
   display: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Defines width of button. Accepts responsive value from theme */
   width: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Defines height of button. Accepts responsive value from theme */
   height: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** textAlign property specifies the horizontal
    * alignment of text in an element. Accepts responsive value from theme */
@@ -131,14 +142,14 @@ Button.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Defines border radius on the button. Accepts responsive value from theme. */
   borderRadius: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Defines button's border. It's a shorthand for border-width, border-style, and border-color.  */
   border: PropTypes.string,
@@ -153,7 +164,7 @@ Button.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Shorthand to add padding to button. pl, pr, pt, pb, py and px are also supported to
    * to add paddings on left, right, top, bottom, y-axis and x-axis respectively.
@@ -163,8 +174,8 @@ Button.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
-  ]),
+    PropTypes.arrayOf(PropTypes.number)
+  ])
 };
 
 export default Button;
