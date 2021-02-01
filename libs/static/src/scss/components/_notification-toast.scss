@@ -17,7 +17,7 @@
   justify-content: flex-start;
   color: var(--white);
   max-width: var(--toastMaxWidth);
-
+  margin-bottom: var(--spacer-mid);
   strong,
   p {
     font-size: var(--font-size-base);
@@ -31,13 +31,17 @@
     left: 0;
   }
 
-  .icon-check-circle,
-  .icon-cross {
+  span[class*='icon'] {
     font-size: var(--icon-font-size);
-    &.icon-cross {
-      color: var(--white);
-    }
+    color: var(--white);
   }
+  //.icon-check-circle,
+  //.icon-cross {
+  //  font-size: var(--icon-font-size);
+  //  &.icon-cross {
+  //    color: var(--white);
+  //  }
+  //}
 
   &.success {
     background-color: var(--success);
@@ -62,7 +66,7 @@
   &.warning {
     background-color: var(--warning);
     color: var(--black);
-    .icon-cross {
+    span[class*='icon'] {
       color: var(--dark);
     }
     .progress--bar {
