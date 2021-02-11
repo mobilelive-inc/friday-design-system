@@ -40,6 +40,9 @@ import { NoIconComponent } from './examples/card/no-icon/no-icon.component';
 import { WithImageComponent } from './examples/card/with-image/with-image.component';
 import { ImageWithSolidShadowComponent } from './examples/card/image-with-solid-shadow/image-with-solid-shadow.component';
 import { AdvanceStepperComponent } from './examples/stepper/advance-stepper/advance-stepper.component';
+import { ToastNotificationsComponent } from './examples/toast-notifications/toast-notifications.component';
+import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -76,15 +79,18 @@ import { AdvanceStepperComponent } from './examples/stepper/advance-stepper/adva
     WithImageComponent,
     ImageWithSolidShadowComponent,
     AdvanceStepperComponent,
+    ToastNotificationsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    CommonModule,
     FdsLibAngularModule,
     FormsModule,
     ReactiveFormsModule,
     FdsModalModule,
+    ToastrModule.forRoot(),
     RouterModule.forRoot([], { initialNavigation: 'enabled', useHash: true })
   ],
   entryComponents: [ModalBasicExampleComponent],
