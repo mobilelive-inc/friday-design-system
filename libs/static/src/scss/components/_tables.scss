@@ -1,6 +1,6 @@
 :root {
-  --striped-light: rgba(255, 255, 255, 0.05);
-  --striped-dark: rgba(0, 0, 0, 0.05);
+  --striped-light: #e5e5e5;
+  --striped-dark: #333333;
 }
 
 .table {
@@ -54,7 +54,7 @@
     }
   }
 
-  &--striped {
+  &--striped-odd {
     tbody {
       tr:nth-of-type(odd) {
         background-color: var(--gray-light);
@@ -64,7 +64,22 @@
     &.table--dark {
       tbody {
         tr:nth-of-type(odd) {
-          background-color: var(--striped-light);
+          background-color: var(--striped-dark);
+        }
+      }
+    }
+  }
+  &--striped-even {
+    tbody {
+      tr:nth-of-type(even) {
+        background-color: var(--gray-light);
+      }
+    }
+
+    &.table--dark {
+      tbody {
+        tr:nth-of-type(even) {
+          background-color: var(--striped-dark);
         }
       }
     }
@@ -73,7 +88,7 @@
     tbody {
       tr {
         &:hover {
-          background-color: var(--striped-dark);
+          background-color: var(--striped-light);
         }
       }
     }
@@ -81,7 +96,7 @@
       tbody {
         tr {
           &:hover {
-            background-color: var(--striped-light);
+            background-color: var(--striped-dark);
           }
         }
       }
@@ -90,7 +105,7 @@
 }
 
 /* responsive .table */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
   .table thead {
     display: none;
   }
