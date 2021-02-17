@@ -6,7 +6,6 @@
 .table {
   border-collapse: collapse;
   padding: 0;
-  margin: 0 0 11px 0;
   width: 100%;
 
   th,
@@ -14,17 +13,12 @@
     border-bottom: 1px solid var(--light);
     text-align: left;
     padding: 10px;
-    vertical-align: bottom;
     color: var(--dark);
-
-    &td {
-      vertical-align: top;
-    }
   }
 
   thead {
     th {
-      font-weight: bold;
+      font-weight: var(--font-weight-bold);
     }
 
     &.thead--dark {
@@ -50,7 +44,7 @@
     th,
     td {
       color: var(--light);
-      border-bottom: 1px solid var(--light);
+      border-bottom: var(--border-width) solid var(--light);
     }
   }
 
@@ -69,6 +63,7 @@
       }
     }
   }
+
   &--striped-even {
     tbody {
       tr:nth-of-type(even) {
@@ -84,6 +79,7 @@
       }
     }
   }
+
   &--hover {
     tbody {
       tr {
@@ -92,6 +88,7 @@
         }
       }
     }
+
     &.table--dark {
       tbody {
         tr {
@@ -104,8 +101,8 @@
   }
 }
 
-/* responsive .table */
-@media screen and (max-width: 992px) {
+//change at 992px
+@include media-breakpoint-down(md) {
   .table thead {
     display: none;
   }
@@ -139,3 +136,8 @@
     font-weight: bold;
   }
 }
+
+///* responsive .table */
+//@media screen and (max-width: 992px) {
+//
+//}
