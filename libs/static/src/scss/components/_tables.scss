@@ -10,10 +10,12 @@
 
   th,
   td {
-    border-bottom: 1px solid var(--light);
     text-align: left;
-    padding: 10px;
+    padding: var(--spacer-tiny);
     color: var(--dark);
+    border-bottom-color: var(--light);
+    border-bottom-width: var(--border-width);
+    border-bottom-style: solid;
   }
 
   thead {
@@ -44,7 +46,7 @@
     th,
     td {
       color: var(--light);
-      border-bottom: var(--border-width) solid var(--light);
+      border-bottom-color: var(--light);
     }
   }
 
@@ -103,18 +105,17 @@
 
 //change at 992px
 @include media-breakpoint-down(md) {
-  .table thead {
-    display: none;
-  }
-  .table td:empty {
-    display: none;
-  }
-  .table,
-  tbody {
-    display: block;
-    width: 100%;
-  }
   .table {
+    thead {
+      display: none;
+    }
+    tbody {
+      display: block;
+      width: 100%;
+    }
+    td:empty {
+      display: none;
+    }
     tr,
     th,
     td {
@@ -124,20 +125,16 @@
       white-space: normal;
       border-bottom: 0;
     }
-  }
-  .table tr {
-    border-bottom: 1px solid var(--light);
-    //margin-bottom: 11px;
-    padding: 11px 7px;
-  }
-  .table th[data-title]:before,
-  .table td[data-title]:before {
-    content: attr(data-title) ':\00A0';
-    font-weight: bold;
+    tr {
+      border-bottom-color: var(--light);
+      border-bottom-width: var(--border-width);
+      border-bottom-style: solid;
+      padding: var(--spacer-small) var(--spacer-tiny);
+    }
+    th[data-title]:before,
+    td[data-title]:before {
+      content: attr(data-title) ':\00A0';
+      font-weight: bold;
+    }
   }
 }
-
-///* responsive .table */
-//@media screen and (max-width: 992px) {
-//
-//}
