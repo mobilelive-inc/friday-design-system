@@ -125,6 +125,16 @@ $grid-breakpoints: (
   }
 }
 
+// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
+//.custom-class {
+//  display: none;
+//}
+//@include media-breakpoint-up(sm) {
+//  .custom-class {
+//    display: block;
+//  }
+//}
+
 // Media of at most the maximum breakpoint width. No query for the largest breakpoint.
 // Makes the @content apply to the given breakpoint and narrower.
 @mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
@@ -137,6 +147,13 @@ $grid-breakpoints: (
     @content;
   }
 }
+
+// Example: Style from medium breakpoint and down
+//@include media-breakpoint-down(md) {
+//  .custom-class {
+//    display: block;
+//  }
+//}
 
 // Media that spans multiple breakpoint widths.
 // Makes the @content apply between the min and max breakpoints

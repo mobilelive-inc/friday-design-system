@@ -1,0 +1,140 @@
+:root {
+  --striped-light: #e5e5e5;
+  --striped-dark: #333333;
+}
+
+.table {
+  border-collapse: collapse;
+  padding: 0;
+  width: 100%;
+
+  th,
+  td {
+    text-align: left;
+    padding: var(--spacer-tiny);
+    color: var(--dark);
+    border-bottom-color: var(--light);
+    border-bottom-width: var(--border-width);
+    border-bottom-style: solid;
+  }
+
+  thead {
+    th {
+      font-weight: var(--font-weight-bold);
+    }
+
+    &.thead--dark {
+      background-color: var(--dark);
+
+      th {
+        color: var(--light);
+      }
+    }
+
+    &.thead--light {
+      background-color: var(--gray-light);
+
+      th {
+        color: var(--dark);
+      }
+    }
+  }
+
+  &--dark {
+    background-color: var(--dark);
+
+    th,
+    td {
+      color: var(--light);
+      border-bottom-color: var(--light);
+    }
+  }
+
+  &--striped-odd {
+    tbody {
+      tr:nth-of-type(odd) {
+        background-color: var(--gray-light);
+      }
+    }
+
+    &.table--dark {
+      tbody {
+        tr:nth-of-type(odd) {
+          background-color: var(--striped-dark);
+        }
+      }
+    }
+  }
+
+  &--striped-even {
+    tbody {
+      tr:nth-of-type(even) {
+        background-color: var(--gray-light);
+      }
+    }
+
+    &.table--dark {
+      tbody {
+        tr:nth-of-type(even) {
+          background-color: var(--striped-dark);
+        }
+      }
+    }
+  }
+
+  &--hover {
+    tbody {
+      tr {
+        &:hover {
+          background-color: var(--striped-light);
+        }
+      }
+    }
+
+    &.table--dark {
+      tbody {
+        tr {
+          &:hover {
+            background-color: var(--striped-dark);
+          }
+        }
+      }
+    }
+  }
+}
+
+//change at 992px
+@include media-breakpoint-down(md) {
+  .table {
+    thead {
+      display: none;
+    }
+    tbody {
+      display: block;
+      width: 100%;
+    }
+    td:empty {
+      display: none;
+    }
+    tr,
+    th,
+    td {
+      display: block;
+      padding: 0;
+      text-align: left;
+      white-space: normal;
+      border-bottom: 0;
+    }
+    tr {
+      border-bottom-color: var(--light);
+      border-bottom-width: var(--border-width);
+      border-bottom-style: solid;
+      padding: var(--spacer-small) var(--spacer-tiny);
+    }
+    th[data-title]:before,
+    td[data-title]:before {
+      content: attr(data-title) ':\00A0';
+      font-weight: bold;
+    }
+  }
+}
