@@ -39,8 +39,6 @@ import { IconFixedHeightComponent } from './examples/card/icon-fixed-height/icon
 import { NoIconComponent } from './examples/card/no-icon/no-icon.component';
 import { WithImageComponent } from './examples/card/with-image/with-image.component';
 import { ImageWithSolidShadowComponent } from './examples/card/image-with-solid-shadow/image-with-solid-shadow.component';
-import { AdvanceStepperComponent } from './examples/stepper/advance-stepper/advance-stepper.component';
-import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -75,14 +73,12 @@ import { CommonModule } from '@angular/common';
     IconFixedHeightComponent,
     NoIconComponent,
     WithImageComponent,
-    ImageWithSolidShadowComponent,
-    AdvanceStepperComponent
+    ImageWithSolidShadowComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    CommonModule,
     FdsLibAngularModule,
     FormsModule,
     ReactiveFormsModule,
