@@ -1,15 +1,20 @@
-import { colors } from './colors'
+import { colors } from './colors';
+import { buttons, borderCurved, borderRounded } from './buttons';
 import {
-  buttons, borderCurved, borderRounded
-} from './buttons';
-import { iconMarginLeft, iconMarginRight,
-  micro, tiny, small, mid, large, xLarge
+  iconMarginLeft,
+  iconMarginRight,
+  micro,
+  tiny,
+  small,
+  mid,
+  large,
+  xLarge
 } from './spacing';
 
 // Typography
 const fonts = {
   Gotham:
-    "Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+    "Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif"
 };
 
 export const font = fonts.Gotham;
@@ -41,7 +46,7 @@ export const fontSizes = [
   '5.25rem', // 22
   '5.5rem', // 23
   '5.75rem', // 24
-  '6rem', // 25
+  '6rem' // 25
 ];
 
 export const fontWeights = [
@@ -64,7 +69,7 @@ export const lineHeights = [
   '3.5rem', // 9
   '4.5rem', // 10
   '3rem', // 11
-  '2rem', // 12
+  '2rem' // 12
 ];
 
 export const letterSpacings = [
@@ -78,7 +83,7 @@ export const letterSpacings = [
 export const borderWidths = {
   read: '0', // 0
   hover: '1px', // 1
-  unread: '4px', // 2
+  unread: '4px' // 2
 };
 
 export const breakpoints = [
@@ -93,7 +98,7 @@ export const mediaqueryBreakpoints = {
   sm: breakpoints[1],
   md: breakpoints[2],
   lg: breakpoints[3],
-  xl: breakpoints[4],
+  xl: breakpoints[4]
 };
 export const space = [
   '0', // 0
@@ -133,7 +138,7 @@ export const space = [
   '-0.5rem', // 34
   '-0.75rem', // 35
   '-1rem', // 36
-  '6.25rem', // 37
+  '6.25rem' // 37
 ];
 
 export const radius = 4;
@@ -157,14 +162,13 @@ export const zIndices = [
   zindexPopover, // 5
   zindexTooltip, // 6
   zindexPlanHeader, // 7
-  zindexPlanContent, // 8
+  zindexPlanContent // 8
 ];
-
 
 // variants definitions
 
 export const typography = {
-  H1 : {
+  H1: {
     fontSize: fontSizes[11],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
@@ -193,16 +197,15 @@ export const typography = {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[2],
     lineHeight: lineHeights[3]
-  },
-}
-
-
+  }
+};
 
 const opacity = 0.6;
 
 export default {
   breakpoints,
   buttons,
+  typography,
   borderCurved,
   colors,
   font,
@@ -219,8 +222,10 @@ export default {
   opacity,
   zIndices,
   typography,
-  micro, tiny,
-  small, mid,
+  micro,
+  tiny,
+  small,
+  mid,
   large,
   xLarge
 };

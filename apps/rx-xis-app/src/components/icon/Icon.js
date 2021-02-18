@@ -10,9 +10,6 @@ const getDerivedStyles = spanProps => {
   if (spanProps.iconMarginRight) {
     styles.marginRight = spanProps.theme.iconMarginRight;
   }
-  if (spanProps.mark) {
-    styles[`backgroundColor`] = `#FFFCE1`;
-  }
   return styles;
 };
 
