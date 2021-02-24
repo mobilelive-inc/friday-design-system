@@ -533,7 +533,7 @@
 
   &--link {
     font-weight: var(--font-weight-normal);
-    color: var(--link-color);
+    color: var(--text-link-color);
     text-decoration: var(--link-decoration);
 
     @include hover() {
@@ -692,9 +692,12 @@ fieldset:disabled a.btn {
 }
 
 button[aria-disabled='true'] {
-  opacity: var(--btn-disabled-opacity);
   @include box-shadow(none);
   pointer-events: none;
+  color: var(--btn-disabled-color);
+  opacity: var(--btn-disabled-opacity);
+  border-color: var(--btn-disabled-bg-color);
+  background-color: var(--btn-disabled-bg-color);
 }
 
 // Block button

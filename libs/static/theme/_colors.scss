@@ -8,6 +8,8 @@
   --gray-dark: #282828;
   --black: #191919;
   --backdrop: #000000;
+  --text-color: #333333;
+  --link-color: #336699;
   --nocolor: transparent;
 
   --orange: #f48245;
@@ -75,6 +77,18 @@
   --primary-light: var(--orange-light);
   --primary-dark: var(--orange-dark);
   --primary-darker: var(--orange-darker);
+
+  //Primary Tertiary Colors
+  --primary-tertiary: #db0025;
+  --primary-tertiary-light: #e23351;
+
+  //Secondary Tertiary Colors
+  --secondary-tertiary: #83bfba;
+  --secondary-tertiary-light: #9cccc8;
+
+  //Secondary Quaternary Colors
+  --secondary-quaternary: #232a42;
+  --secondary-quaternary-light: #4f5568;
 
   //ML Standard Colors
   --primary: var(--orange);

@@ -21,6 +21,7 @@
     transform: translateX(-50%);
     font-size: var(--status-font-size);
     transition: transform 0.6s ease;
+    background-color: var(--bg-color-progress-status-text);
   }
 }
 .fds--stepper--head {
