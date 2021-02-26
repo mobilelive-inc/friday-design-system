@@ -7,6 +7,7 @@
   --label-margin-bottom-sm: 0.6875rem;
   --label-margin-bottom-md: 0.875rem;
   --label-margin-bottom-lg: 1rem;
+  --label-font-weight: bold;
 
   --input-padding-y: 0.5rem;
   --input-padding-x: 1rem;
@@ -86,8 +87,30 @@
   --form-check-input-margin-y: 0.3rem;
   --form-check-input-margin-x: 0.25rem;
 
+  --form-radio-rounded: 50%;
+  --form-radio-curved: 4px;
+  --form-radio-border-width: 1px;
+  --form-radio-border-style: solid;
+  --form-radio-border-color: var(--gray);
   --form-radio-width: 30px;
   --form-radio-height: 30px;
+  --form-radio-checked-width: 14px;
+  --form-radio-checked-height: 14px;
+
+  --form-check-box-tick-top: 2px;
+  --form-check-box-tick-left: 9px;
+  --form-check-box-tick-width: 9px;
+  --form-check-box-tick-height: 17px;
+  --form-check-box-tick-border-width: 3px;
+  --form-check-box-rounded: 50%;
+  --form-check-box-curved: 4px;
+  --form-check-box-border-width: 2px;
+  --form-check-box-hover-border-width: 2px;
+  --form-check-box-checked-border-width: 2px;
+  --form-check-box-border-style: solid;
+  --form-check-box-border-color: var(--gray-dark);
+  --form-check-box-width: 30px;
+  --form-check-box-height: 30px;
 
   --form-check-inline-margin-x: 0.75rem;
   --form-check-inline-input-margin-x: 0.3125rem;

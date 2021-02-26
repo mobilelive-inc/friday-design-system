@@ -165,22 +165,13 @@
           <module href="/components/_partial.notification-list.html"></module>
           <!--Notification List-->
 
-          <!--Notification List-->
-          <module href="/components/_partial.notification-toast.html"></module>
-          <!--Notification List-->
-
-          <!--Tables List-->
-          <module href="/components/_partial.tables.html"></module>
-          <!--Tables List-->
+          <!--Accordion and Collaps-->
+          <module href="/components/_partial.accordion.html"></module>
+          <!--Accordion and Collaps-->
 
           <!--Grids-->
           <div class="my--5" id="Grid_sections">
             <!--<h3 class="h3">Grid</h3>-->
-          </div>
-
-          <!--Accessibility-->
-          <div class="my--5" id="access_info">
-            <module href="/components/_partial.access.html"></module>
           </div>
         </div>
       </main>
@@ -535,6 +526,51 @@
       } else if (widthPercentage >= 90) {
         var steperText = document.getElementById('steper-text');
         steperText.setAttribute('style', 'transform: translateX(-100%);');
+      }
+
+      // Handler that uses various data-* attributes to trigger
+      // specific actions, mimicing bootstraps attributes
+      const triggers = Array.from(
+        document.querySelectorAll('[data-toggle="fds-collapse"]')
+      );
+
+      window.addEventListener(
+        'click',
+        ev => {
+          const elm = ev.target;
+          if (triggers.includes(elm)) {
+            const selector = elm.getAttribute('data-target');
+            collapse(selector, 'toggle');
+          }
+        },
+        false
+      );
+
+      const fnmap = {
+        show: 'add',
+        toggle: 'toggle',
+        hide: 'remove'
+      };
+      const collapse = (selector, cmd) => {
+        const targets = Array.from(document.querySelectorAll(selector));
+        targets.forEach(target => {
+          target.classList[fnmap[cmd]]('fds-show');
+        });
+      };
+
+      var accItem = document.getElementsByClassName('fds-accordion-item');
+      var accHD = document.getElementsByClassName('fds-btnaccordion');
+      for (i = 0; i < accHD.length; i++) {
+        accHD[i].addEventListener('click', toggleItem, false);
+      }
+      function toggleItem() {
+        var itemClass = this.parentNode.className;
+        for (i = 0; i < accItem.length; i++) {
+          accItem[i].className = 'fds-accordion-item fds-close';
+        }
+        if (itemClass == 'fds-accordion-item fds-close') {
+          this.parentNode.className = 'fds-accordion-item fds-open';
+        }
       }
     </script>
   </body>
