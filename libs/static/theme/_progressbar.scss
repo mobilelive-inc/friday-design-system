@@ -10,6 +10,11 @@
   --before-left-value: 50%;
   --bg-color-progress-status-text: var(--white);
   --bg-color-counter: var(--gray-light);
+  --step-done-color: var(--btn-primary-color);
+  --step-done-bg-color: var(--btn-primary-bg-color);
+  --step-done-border-color: var(--btn-primary-border-color);
+  --step-done-hover-bg-color: var(--btn-primary-bg-color);
+  --step-done-hover-border-color: var(--btn-primary-border-color);
 }
 
 @each $color, $value in $theme-colors {

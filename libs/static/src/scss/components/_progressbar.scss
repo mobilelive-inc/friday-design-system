@@ -50,3 +50,12 @@
     color: var(--primary);
   }
 } */
+.fds-done-step {
+  color: var(--step-done-color);
+  border-color: var(--step-done-border-color);
+  background-color: var(--step-done-bg-color);
+  &:hover {
+    border-color: var(--step-done-hover-bg-color);
+    background-color: var(--step-done-hover-border-color);
+  }
+}
