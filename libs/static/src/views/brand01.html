@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" />
+    <title>Friday Design System - Static Components brand 01</title>
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Milonga&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="friday-design-sytem.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="friday-design-sytem-icons.css"
+    />
+    <link rel="stylesheet" type="text/css" href="guide-styles.css" />
+    <script>
+      (function (global) {
+        var s = document.createElement('script');
+
+        function loaderCallback() {
+          // Do actions before ASLint starts
+        }
+
+        function resultsCallback(results) {
+          console.log(results);
+        }
+
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src =
+          (document.location.protocol === 'https:' ? 'https:' : 'http:') +
+          '//www.aslint.org/api/aslint/loader/loader.js';
+
+        global.aslint = {
+          config: {
+            asyncRunner: true,
+            context: '',
+            contextDescription: '',
+            reportFormat: { JSON: true },
+            resultsCallback: resultsCallback,
+            visibleUI: true
+          }
+        };
+
+        if (typeof s.addEventListener === 'function') {
+          s.addEventListener('load', loaderCallback);
+        }
+
+        document.body.appendChild(s);
+      })(this);
+    </script>
+  </head>
+
+  <body class="dashboard-styling">
+    <!--theme switcher-->
+    <div class="theme-switcher">
+      <p class="text--center">Choose <br />Brand:</p>
+      <div class="btns-switcher-holder">
+        <button
+          class="mb--2 btn btn--primary btn--sm navy default"
+          onclick="switchTheme(1)"
+        >
+          Navy
+        </button>
+        <button
+          class="mb--2 btn btn--primary btn--sm default"
+          onclick="switchTheme(4)"
+        >
+          Default
+        </button>
+      </div>
+    </div>
+    <!--theme switcher-->
+
+    <div class="container pb--5">
+      <div class="row">
+        <div class="col-12">
+          <div class="bg--holder d--flex flex--column align--items--center">
+            <form class="row w--50 mx--auto justify--content--center mb--5">
+              <div class="formGroup col-6 mb--0">
+                <label for="FirstName42" class="sr--only">Label</label>
+                <div
+                  class="formControlWrap flex--wrap d--flex align--items--center"
+                >
+                  <div
+                    class="formControlHolder d--flex align--items--center bg--white rounded"
+                  >
+                    <input
+                      type="text"
+                      class="formControl"
+                      id="FirstName42"
+                      placeholder="Search here"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="btn btn--dark btnRounded"
+                style="min-height: auto !important"
+              >
+                Search
+              </button>
+            </form>
+            <h2>Get SmartStream for 2 months on us!</h2>
+            <h6 class="text--center">
+              When you get Ignite Internet. Search and discover shows, <br />
+              movies and music from your favourite streaming services, all in
+              one place.
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py--5">
+      <div class="row align--items--center">
+        <div class="col-6">
+          <h2 class="position--static text--primary">
+            Our new monthly price. Lower than ever.
+          </h2>
+          <p>
+            With the latest phones like the iPhone 12 family. Plus, save an
+            extra $100 when you buy online!
+          </p>
+          <p class="">
+            With <strong>Upfront Edge</strong><sub>TM</sub> and financing on a
+            <strong>Rogers Infinite</strong><sub>TM</sub> plan.
+          </p>
+          <a href="#" class="btn btn--primary">Get iPhone</a>
+        </div>
+        <div class="col-6">
+          <!--        <img src="../../images/brand01/iphone12.webp" alt="">-->
+          <div class="embed--responsive embed--responsive--3by2">
+            <figure
+              class="embed--responsive--item m--0"
+              style="
+                background-image: url(../../images/brand01/iphone12.webp);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+              "
+            ></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py--5">
+      <div class="row">
+        <div class="col-4">
+          <div
+            class="fds-card d--flex align--items--center flex--column border border-secondary has--shadow text--center p--3"
+          >
+            <figure>
+              <img
+                src="../../images/brand01/16-9-flash-sale.webp"
+                alt="image description"
+              />
+            </figure>
+            <div class="fds-card-body pb--4 text--left">
+              <h4>iPhone 12</h4>
+              <p class="m--0">
+                Enjoy our new monthly pricing, lower than ever! Save up to $636
+                over 24 months with the iPhone 12 and 12 Pro family with
+                financing
+              </p>
+            </div>
+            <div class="fds-card-footer pb--2">
+              <a href="#" class="btn btn--primary--outline">View More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div
+            class="fds-card d--flex align--items--center flex--column border border-secondary has--shadow text--center p--3"
+          >
+            <figure>
+              <img
+                src="../../images/brand01/16-9-galaxy-a51.webp"
+                alt="image description"
+              />
+            </figure>
+            <div class="fds-card-body pb--4 text--left">
+              <h4>Samsung Galaxy A51</h4>
+              <p class="m--0">
+                Enjoy our new monthly pricing, lower than ever! Save up to $636
+                over 24 months with the iPhone 12 and 12 Pro family with
+                financing
+              </p>
+            </div>
+            <div class="fds-card-footer pb--2">
+              <a href="#" class="btn btn--primary--outline">View More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div
+            class="fds-card d--flex align--items--center flex--column border border-secondary has--shadow text--center p--3"
+          >
+            <figure>
+              <img
+                src="../../images/brand01/16-9-lg-velvet.webp"
+                alt="image description"
+              />
+            </figure>
+            <div class="fds-card-body pb--4 text--left">
+              <h4>LG 5G</h4>
+              <p class="m--0">
+                Enjoy our new monthly pricing, lower than ever! Save up to $636
+                over 24 months with the iPhone 12 and 12 Pro family with
+                financing
+              </p>
+            </div>
+            <div class="fds-card-footer pb--2">
+              <a href="#" class="btn btn--primary--outline">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py--5">
+      <form
+        class="mx--auto w--75 row fds-card border border-primary has--solid--shadow--primary p--5"
+      >
+        <div class="formGroup col-6">
+          <label for="formDefault02" class="">First Name</label>
+          <div class="formControlWrap flex--wrap d--flex align--items--center">
+            <div class="formControlHolder d--flex align--items--center">
+              <input
+                type="text"
+                class="formControl"
+                id="formDefault02"
+                placeholder="Default Input"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="formGroup col-6">
+          <label for="formDefault03" class="">Last Name</label>
+          <div class="formControlWrap flex--wrap d--flex align--items--center">
+            <div class="formControlHolder d--flex align--items--center">
+              <input
+                type="text"
+                class="formControl"
+                id="formDefault03"
+                placeholder="Default Input"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="formGroup col-12">
+          <label for="formDefault" class="">Email</label>
+          <div class="formControlWrap flex--wrap d--flex align--items--center">
+            <div class="formControlHolder d--flex align--items--center">
+              <input
+                type="email"
+                class="formControl"
+                id="formDefault"
+                placeholder="Default Input"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="formGroup col-12">
+          <label for="formDefault01" class="">Password</label>
+          <div class="formControlWrap flex--wrap d--flex align--items--center">
+            <div class="formControlHolder d--flex align--items--center">
+              <input
+                type="password"
+                class="formControl"
+                id="formDefault01"
+                placeholder="Default Input"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="formGroup col-6">
+          <label for="formDefault06" class="">Pick an Course</label>
+          <div class="formControlHolder formControlHolder__select">
+            <select
+              class="formControl"
+              name="course"
+              id="formDefault06"
+              required
+            >
+              <option value="">Pick an option</option>
+              <option>Pottery</option>
+              <option>Gardening</option>
+              <option>Art</option>
+              <option>Photography</option>
+              <option>Entrepreneurship</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="formGroup col-6">
+          <label for="formDefault06" class="">Pick an Course</label>
+          <div class="row">
+            <div class="col-4">
+              <div class="formRadio mb-medium">
+                <div class="radioBtn">
+                  <input type="radio" name="fruit" id="radioBtnp62" checked />
+                  <span class="radioBtnFake"></span>
+                </div>
+                <label class="radioLabel" for="radioBtnp62">Option 1</label>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="formRadio mb-medium">
+                <div class="radioBtn">
+                  <input type="radio" name="fruit" id="radioBtnp42" />
+                  <span class="radioBtnFake"></span>
+                </div>
+                <label class="radioLabel" for="radioBtnp42">Option 2</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="formCheck">
+            <div class="checkBox">
+              <input type="checkbox" id="checkboxs" />
+              <span class="checkboxFake"></span>
+            </div>
+            <label class="checkLabel font--weight--light" for="checkboxs"
+              >I have read and agree to our Privacy Policy</label
+            >
+          </div>
+        </div>
+        <div class="col-12 d--flex justify--content--end">
+          <button type="submit" class="btn btn--primary">Submit Form</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="container py--5">
+      <div class="row"></div>
+    </div>
+
+    <script src="/bundle.js"></script>
+
+    <script>
+      function switchTheme(n) {
+        var i = n;
+        var root = document.getElementsByTagName('html')[0];
+        if (i === 1) {
+          root.classList.add('navy');
+          root.classList.remove('lemon');
+          root.classList.remove('lime');
+        } else if (i === 2) {
+          root.classList.add('lemon');
+          root.classList.remove('navy');
+          root.classList.remove('lime');
+        } else if (i === 3) {
+          root.classList.add('lime');
+          root.classList.remove('navy');
+          root.classList.remove('lemon');
+        } else if (i === 4) {
+          root.classList.remove('navy');
+          root.classList.remove('lemon');
+          root.classList.remove('lime');
+        }
+      }
+
+      var el;
+      var counter = 0;
+      var maxVal = 144;
+      var countVal = document.getElementById('textChar');
+      countVal.textContent = counter + ' / ' + maxVal;
+
+      function countCharacters(e) {
+        var textEntered, countRemaining, counter;
+        textEntered = document.getElementById('textarea').value;
+        counter = maxVal - textEntered.length;
+        countVal.textContent = counter + ' / ' + maxVal;
+      }
+      el = document.getElementById('textarea');
+      el.addEventListener('keyup', countCharacters, false);
+
+      function showModal(n) {
+        var root = document.getElementsByTagName('body')[0];
+        var modal1 = document.getElementById('modal1');
+        var modal2 = document.getElementById('modal2');
+        var modal3 = document.getElementById('modal3');
+        var modal4 = document.getElementById('modal4');
+        var modal5 = document.getElementById('modal5');
+        var modal6 = document.getElementById('modal6');
+        var modal7 = document.getElementById('modal7');
+        var modal8 = document.getElementById('modal8');
+        var modal9 = document.getElementById('modal9');
+        var modal10 = document.getElementById('modal10');
+        var modal11 = document.getElementById('modal11');
+        var modal12 = document.getElementById('modal12');
+        var modal13 = document.getElementById('modal13');
+        var modal14 = document.getElementById('modal14');
+        var modal15 = document.getElementById('modal15');
+        var modal16 = document.getElementById('modal16');
+        var modal17 = document.getElementById('modal17');
+        var modal18 = document.getElementById('modal18');
+        var modal19 = document.getElementById('modal19');
+        var modal20 = document.getElementById('modal20');
+        var modal21 = document.getElementById('modal21');
+        var modal22 = document.getElementById('modal22');
+        var modal23 = document.getElementById('modal23');
+        var modal24 = document.getElementById('modal24');
+        var modal25 = document.getElementById('modal25');
+        var modal26 = document.getElementById('modal26');
+        var modal27 = document.getElementById('modal27');
+        var modal28 = document.getElementById('modal28');
+        var modal29 = document.getElementById('modal29');
+        var modal_backdrop = document.getElementById('modalBackdrop');
+        if (n == 1) {
+          root.classList.add('modalOpen');
+          modal1.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 2) {
+          root.classList.add('modalOpen');
+          modal2.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 3) {
+          root.classList.add('modalOpen');
+          modal3.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 4) {
+          root.classList.add('modalOpen');
+          modal4.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 5) {
+          root.classList.add('modalOpen');
+          modal5.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 6) {
+          root.classList.add('modalOpen');
+          modal6.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 7) {
+          root.classList.add('modalOpen');
+          modal7.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 8) {
+          root.classList.add('modalOpen');
+          modal8.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 9) {
+          root.classList.add('modalOpen');
+          modal9.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 10) {
+          root.classList.add('modalOpen');
+          modal10.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 11) {
+          root.classList.add('modalOpen');
+          modal11.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 12) {
+          root.classList.add('modalOpen');
+          modal12.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 13) {
+          root.classList.add('modalOpen');
+          modal13.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 14) {
+          root.classList.add('modalOpen');
+          modal14.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 15) {
+          root.classList.add('modalOpen');
+          modal15.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 16) {
+          root.classList.add('modalOpen');
+          modal16.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+        if (n == 17) {
+          root.classList.add('modalOpen');
+          modal17.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        if (n == 18) {
+          root.classList.add('modalOpen');
+          modal18.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        if (n == 19) {
+          root.classList.add('modalOpen');
+          modal19.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        if (n == 20) {
+          root.classList.add('modalOpen');
+          modal20.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        if (n == 21) {
+          root.classList.add('modalOpen');
+          modal21.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        if (n == 22) {
+          root.classList.add('modalOpen');
+          modal22.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        if (n == 23) {
+          root.classList.add('modalOpen');
+          modal23.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        if (n == 24) {
+          root.classList.add('modalOpen');
+          modal24.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        if (n == 25) {
+          root.classList.add('modalOpen');
+          modal25.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        if (n == 26) {
+          root.classList.add('modalOpen');
+          modal26.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        if (n == 27) {
+          root.classList.add('modalOpen');
+          modal27.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        if (n == 28) {
+          root.classList.add('modalOpen');
+          modal28.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        if (n == 29) {
+          root.classList.add('modalOpen');
+          modal29.classList.add('showModal');
+          modal_backdrop.classList.add('showModal');
+        }
+
+        // add all the elements inside modal which you want to make focusable
+        const focusableElements =
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        const modal = document.querySelector('#modal1'); // select the modal by it's id
+
+        const firstFocusableElement = modal.querySelectorAll(
+          focusableElements
+        )[0]; // get first element to be focused inside modal
+        const focusableContent = modal.querySelectorAll(focusableElements);
+        const lastFocusableElement =
+          focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+
+        document.addEventListener('keydown', function (e) {
+          let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+          if (!isTabPressed) {
+            return;
+          }
+
+          if (e.shiftKey) {
+            // if shift key pressed for shift + tab combination
+            if (document.activeElement === firstFocusableElement) {
+              lastFocusableElement.focus(); // add focus for the last focusable element
+              e.preventDefault();
+            }
+          } else {
+            // if tab key is pressed
+            if (document.activeElement === lastFocusableElement) {
+              // if focused has reached to last focusable element then focus first focusable element after pressing tab
+              firstFocusableElement.focus(); // add focus for the first focusable element
+              e.preventDefault();
+            }
+          }
+        });
+
+        firstFocusableElement.focus();
+      }
+      function hideModal() {
+        var root = document.getElementsByTagName('body')[0];
+        var modal1 = document.getElementById('modal1');
+        var modal2 = document.getElementById('modal2');
+        var modal3 = document.getElementById('modal3');
+        var modal4 = document.getElementById('modal4');
+        var modal5 = document.getElementById('modal5');
+        var modal6 = document.getElementById('modal6');
+        var modal7 = document.getElementById('modal7');
+        var modal8 = document.getElementById('modal8');
+        var modal9 = document.getElementById('modal9');
+        var modal10 = document.getElementById('modal10');
+        var modal11 = document.getElementById('modal11');
+        var modal12 = document.getElementById('modal12');
+        var modal13 = document.getElementById('modal13');
+        var modal14 = document.getElementById('modal14');
+        var modal15 = document.getElementById('modal15');
+        var modal16 = document.getElementById('modal16');
+        var modal17 = document.getElementById('modal17');
+        var modal18 = document.getElementById('modal18');
+        var modal19 = document.getElementById('modal19');
+        var modal20 = document.getElementById('modal20');
+        var modal21 = document.getElementById('modal21');
+        var modal22 = document.getElementById('modal22');
+        var modal23 = document.getElementById('modal23');
+        var modal24 = document.getElementById('modal24');
+        var modal25 = document.getElementById('modal25');
+        var modal26 = document.getElementById('modal26');
+        var modal27 = document.getElementById('modal27');
+        var modal28 = document.getElementById('modal28');
+        var modal29 = document.getElementById('modal29');
+        var modal_backdrop = document.getElementById('modalBackdrop');
+        root.classList.remove('modalOpen');
+        modal1.classList.remove('showModal');
+        modal2.classList.remove('showModal');
+        modal3.classList.remove('showModal');
+        modal4.classList.remove('showModal');
+        modal5.classList.remove('showModal');
+        modal6.classList.remove('showModal');
+        modal7.classList.remove('showModal');
+        modal8.classList.remove('showModal');
+        modal9.classList.remove('showModal');
+        modal10.classList.remove('showModal');
+        modal11.classList.remove('showModal');
+        modal12.classList.remove('showModal');
+        modal13.classList.remove('showModal');
+        modal14.classList.remove('showModal');
+        modal15.classList.remove('showModal');
+        modal16.classList.remove('showModal');
+        modal17.classList.remove('showModal');
+        modal18.classList.remove('showModal');
+        modal19.classList.remove('showModal');
+        modal20.classList.remove('showModal');
+        modal21.classList.remove('showModal');
+        modal22.classList.remove('showModal');
+        modal23.classList.remove('showModal');
+        modal24.classList.remove('showModal');
+        modal25.classList.remove('showModal');
+        modal26.classList.remove('showModal');
+        modal27.classList.remove('showModal');
+        modal28.classList.remove('showModal');
+        modal29.classList.remove('showModal');
+        modal_backdrop.classList.remove('showModal');
+      }
+
+      var progressBar = document.getElementById('progress-bar');
+      const progressBarWidth =
+        progressBar.style.width && progressBar.style.width.replace('%', '');
+      const widthPercentage = parseFloat(progressBarWidth);
+      if (widthPercentage <= 10) {
+        var steperText = document.getElementById('steper-text');
+        steperText.setAttribute('style', 'left: 0;transform: translateX(0);');
+      } else if (widthPercentage >= 90) {
+        var steperText = document.getElementById('steper-text');
+        steperText.setAttribute('style', 'transform: translateX(-100%);');
+      }
+    </script>
+  </body>
+</html>

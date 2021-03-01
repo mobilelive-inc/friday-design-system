@@ -350,6 +350,7 @@ input[type='search'] {
   flex: 1;
   border: solid var(--input-border-color);
   border-width: var(--input-border-width);
+  border-radius: var(--input-border-radius);
 
   /* &:has(.formControl:disabled),
   &:has(.formControl:readonly),
@@ -915,15 +916,12 @@ label {
         transform: rotate(0deg) scale(1);
         opacity: 1;
         border: 2px solid var(--radioColor);
-        border-radius: var(--border-radius-none);
 
         &:after {
           -webkit-transform: scale(1);
           -ms-transform: scale(1);
           transform: scale(1);
           opacity: 1;
-          width: 20px;
-          height: 20px;
         }
       }
     }
@@ -942,15 +940,13 @@ label {
       -moz-transition: all 0.2s ease-out;
       -o-transition: all 0.2s ease-out;
       border: 2px solid var(--gray-dark);
-      border-radius: var(--border-radius-none);
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: var(--form-radio-rounded);
 
       &:after {
         content: '';
-        width: 0;
-        height: 0;
         opacity: 0;
         display: flex;
         align-items: center;
@@ -963,24 +959,23 @@ label {
         -webkit-transition: all 0.3s ease-out;
         -moz-transition: all 0.3s ease-out;
         -o-transition: all 0.3s ease-out;
+        width: var(--form-radio-checked-width);
+        height: var(--form-radio-checked-height);
+        border-radius: var(--form-radio-rounded);
       }
     }
 
-    &--rounded {
+    &--square {
       input {
         &:checked ~ .radioBtnFake {
-          border-radius: var(--form-radio-rounded);
-          &:after {
-            width: var(--form-radio-checked-width);
-            height: var(--form-radio-checked-height);
-          }
+          border-radius: var(--border-radius-none);
         }
       }
 
       .radioBtnFake {
-        border-radius: var(--form-radio-rounded);
+        border-radius: var(--border-radius-none);
         &:after {
-          border-radius: var(--form-radio-rounded);
+          border-radius: var(--border-radius-none);
         }
       }
     }
