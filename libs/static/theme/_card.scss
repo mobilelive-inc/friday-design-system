@@ -1,6 +1,7 @@
 //Card styles
 
 :root {
+  //TODO: need to MOVE this style to generic elements.
   --card-color: #282828;
   --divider-color: #121212;
   --white-color: #ffffff;
@@ -10,8 +11,10 @@
   --bg-card: var(--white-color);
   --primary-border-color: var(--primary);
   --secondary-border-color: var(--secondary);
-
+  --card-border-radius: 0;
   --card-btn-color: var(--theme-color);
+  --card-border-color: #bcbbba;
+  --card-border-width: 1px;
 
   // Box Shadow
   --card-shadow-horizontalLength: 0;

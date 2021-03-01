@@ -43,6 +43,7 @@
   --gray-dark: #fbf6ff;
   --gray: #66636a;
 }
+
 //--primary: var(--orange);
 //--secondary: var(--gray);
 //--success: var(--green);
@@ -74,6 +75,15 @@
   --warning-hover: var(--blue-dark);
   --light-hover: var(--gray);
   --dark-hover: var(--gray-light);
+
+  --global-spacer: 2rem;
+  --btn-border-radius: 10px;
+
+  --input-border-radius: 5px;
+  --input-height: 3rem;
+
+  --card-border-radius: 8px;
+  --card-solidShadow-primary: var(--theme-color);
 
   .bg--warning,
   .bg--info {
@@ -173,5 +183,39 @@
   &:hover {
     opacity: 1;
     right: 0;
+  }
+}
+
+.black--friday {
+  --body-color: #000;
+  --primary: #da291c;
+  --primary-hover: #450000;
+  --secondary: var(--primary-light);
+  --text-color: #fff;
+  --theme-color: var(--primary);
+
+  //FDS Primary Button Colors
+  --btn-primary-color: var(--text-color);
+  --btn-primary-text-color: var(--primary);
+  --btn-primary-bg-color: var(--primary);
+  --btn-primary-border-color: var(--primary);
+
+  --btn-primary-hover-color: var(--primary);
+  --btn-primary-hover-bg-color: var(--text-color);
+  --btn-primary-hover-border-color: var(--primary);
+
+  --card-solidShadow-primary: var(--theme-color);
+  --card-border-color: var(--body-color);
+}
+
+.black--friday {
+  background: var(--body-color);
+  color: var(--text-color);
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff;
   }
 }

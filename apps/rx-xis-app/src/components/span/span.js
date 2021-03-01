@@ -1,31 +1,24 @@
 import styled from 'styled-components';
-import {
-  compose,
-  layout,
-  space,
-  typography,
-} from 'styled-system';
+import { compose, layout, space, typography } from 'styled-system';
 
-const getDerivedStyles = (spanProps) => {
+const getDerivedStyles = spanProps => {
   const styles = {};
-  if(!spanProps) return styles;
-  if(spanProps.iconMarginLeft){
+  if (!spanProps) return styles;
+  if (spanProps.iconMarginLeft) {
     styles.marginLeft = spanProps.theme.iconMarginLeft;
   }
-  if(spanProps.iconMarginRight){
+  if (spanProps.iconMarginRight) {
     styles.marginRight = spanProps.theme.iconMarginRight;
   }
+  if (spanProps.mark) {
+    styles[`backgroundColor`] = `#FFFCE1`;
+  }
   return styles;
-}
-
+};
 
 const Span = styled('div')(
   props => getDerivedStyles(props),
-  compose(
-    typography,
-    space,
-    layout,
-  )
-)
+  compose(typography, space, layout)
+);
 
 export default Span;

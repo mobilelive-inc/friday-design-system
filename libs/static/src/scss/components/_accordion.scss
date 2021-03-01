@@ -1,0 +1,45 @@
+// Accordion and Collapse Style
+
+@import '../../../theme/accordion';
+
+.fds-btncollapse,
+.fds-btnaccordion {
+  span {
+    font-size: var(--collapse-heading-text-font-size);
+  }
+  i {
+    font-size: var(--collapse-heading-icon-font-size);
+  }
+}
+.fds-collapse {
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  &-content {
+    height: 100%;
+    padding: var(--collapse-content-padding);
+  }
+  &.fds-show {
+    max-height: 99em;
+    transition: max-height 0.5s ease-in-out;
+  }
+}
+.fds-accordion-content-holder {
+  padding: var(--collapse-content-padding);
+}
+.fds-accordion-item {
+  &.fds-open {
+    .fds-accordion-content {
+      max-height: 99em;
+      transition: max-height 0.5s ease-in-out;
+    }
+  }
+  &.fds-close {
+    .fds-accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    }
+  }
+}

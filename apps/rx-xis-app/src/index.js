@@ -5,6 +5,18 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Flex, Box } from 'rebass/styled-components';
 import Button from './components/Button';
+import {
+  PrimaryButton,
+  OutlineButtons,
+  ClearButton,
+  RoundedButtons,
+  RoundedOutlineButtons,
+  CurvedButtons,
+  CurvedOutlineButtons,
+  FilledSocialButtons,
+  OutlineSocialButtons
+} from './../stories/1-Button.stories';
+import { OtherSpecs } from './../stories/typography.stories';
 // import Button from '../../../build';
 import { Text } from './components/typography';
 import Span from './components/span/span';
@@ -44,6 +56,16 @@ function App() {
   const [isOn, setIsOn] = React.useState(false);
   return (
     <ThemeProvider theme={theme}>
+      <PrimaryButton />
+      <OutlineButtons />
+      <ClearButton />
+      <RoundedButtons />
+      <RoundedOutlineButtons />
+      <CurvedButtons />
+      <CurvedOutlineButtons />
+      <FilledSocialButtons />
+      <OutlineSocialButtons />
+      <OtherSpecs />
       <div style={{ height: '100px', background: 'blue' }}></div>
       <div>
         <Flex mt={5}>
@@ -57,6 +79,9 @@ function App() {
             color="white"
           />
         </Flex>
+        <Text mb={30} underline italic>
+          Testing
+        </Text>
         <Flex mt={5} mb={100}>
           <Button
             variant="outlineGoogleBlue"
@@ -499,10 +524,10 @@ function App() {
             type="text"
             // width="auto"
             // height=""
-            value={gender}
+            value={''}
             ml={10}
             placeholder="Text Area"
-            label="Search"
+            label=""
             onChange={e => {
               setGender(e.target.value);
             }}

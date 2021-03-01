@@ -192,13 +192,13 @@ input[type='file'] {
   width: 30px;
   height: 30px;
   position: absolute;
-  border-radius: 50%;
+  border-radius: var(--form-radio-rounded);
 }
 .slider-thumb {
   top: 50%;
   left: 100%;
   position: absolute;
-  border-radius: 50%;
+  border-radius: var(--form-radio-rounded);
   width: var(--thumb-width);
   height: var(--thumb-height);
   transform: translate(-50%, -50%);
@@ -217,7 +217,7 @@ input[type='file'] {
   width: 32px;
   height: 32px;
   display: none;
-  border-radius: 50%;
+  border-radius: var(--form-radio-rounded);
   position: absolute;
   align-items: center;
   justify-content: center;
@@ -350,6 +350,7 @@ input[type='search'] {
   flex: 1;
   border: solid var(--input-border-color);
   border-width: var(--input-border-width);
+  border-radius: var(--input-border-radius);
 
   /* &:has(.formControl:disabled),
   &:has(.formControl:readonly),
@@ -534,7 +535,7 @@ input[type='month'] {
 label {
   display: inline-block;
   margin-bottom: var(--label-margin-bottom);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--label-font-weight);
   font-size: var(--font-size-base);
   line-height: var(--input-line-height);
   color: var(--gray-dark);
@@ -624,20 +625,20 @@ label {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
     width: auto;
-    min-height: 30px;
+    min-height: var(--form-check-box-height);
 
     input {
-      position: relative;
-      z-index: 10;
-      opacity: 0;
       margin: 0;
+      opacity: 0;
+      z-index: 10;
       cursor: pointer;
-      width: 30px;
-      height: 30px;
+      position: relative;
+      width: var(--form-check-box-width);
+      height: var(--form-check-box-height);
 
       &:hover {
         ~ .checkboxFake {
-          border: 2px solid var(--gray);
+          border-width: var(--form-check-box-hover-border-width);
         }
       }
 
@@ -654,20 +655,21 @@ label {
         -ms-transform: rotate(0deg) scale(1);
         transform: rotate(0deg) scale(1);
         opacity: 1;
-        border: 2px solid var(--gray-dark);
+        border-width: var(--form-check-box-checked-border-width);
         border-radius: var(--border-radius-none);
 
         &:after {
+          opacity: 1;
+          top: var(--form-check-box-tick-top);
+          left: var(--form-check-box-tick-left);
           -webkit-transform: rotate(45deg) scale(1);
           -ms-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
-          opacity: 1;
-          left: 9px;
-          top: 2px;
-          width: 9px;
-          height: 17px;
+          width: var(--form-check-box-tick-width);
+          height: var(--form-check-box-tick-height);
           border: solid var(--gray-dark);
-          border-width: 0 3px 3px 0;
+          border-width: 0 var(--form-check-box-tick-border-width)
+            var(--form-check-box-tick-border-width) 0;
           background-color: transparent;
           border-radius: 0;
         }
@@ -675,19 +677,22 @@ label {
     }
 
     .checkboxFake {
-      color: var(--gray-dark);
-      position: absolute;
       top: 0;
       left: 0;
       z-index: 5;
-      height: 30px;
-      width: 30px;
+      position: absolute;
+      color: var(--gray-dark);
+      width: var(--form-check-box-width);
+      height: var(--form-check-box-height);
       background-color: transparent;
       transition: all 0.3s ease-out;
       -webkit-transition: all 0.2s ease-out;
       -moz-transition: all 0.2s ease-out;
       -o-transition: all 0.2s ease-out;
-      border: 2px solid var(--gray-dark);
+      //border: 2px solid var(--gray-dark);
+      border-width: var(--form-check-box-border-width);
+      border-style: var(--form-check-box-border-style);
+      border-color: var(--form-check-box-border-color);
       border-radius: var(--border-radius-none);
 
       &:after {
@@ -714,24 +719,24 @@ label {
     &--curved {
       input {
         &:checked ~ .checkboxFake {
-          border-radius: var(--border-radius-lg);
+          border-radius: var(--form-check-box-curved);
         }
       }
 
       .checkboxFake {
-        border-radius: var(--border-radius-lg);
+        border-radius: var(--form-check-box-curved);
       }
     }
 
     &--rounded {
       input {
         &:checked ~ .checkboxFake {
-          border-radius: 50%;
+          border-radius: var(--form-radio-rounded);
         }
       }
 
       .checkboxFake {
-        border-radius: 50%;
+        border-radius: var(--form-radio-rounded);
       }
     }
 
@@ -911,15 +916,12 @@ label {
         transform: rotate(0deg) scale(1);
         opacity: 1;
         border: 2px solid var(--radioColor);
-        border-radius: var(--border-radius-none);
 
         &:after {
           -webkit-transform: scale(1);
           -ms-transform: scale(1);
           transform: scale(1);
           opacity: 1;
-          width: 20px;
-          height: 20px;
         }
       }
     }
@@ -930,23 +932,21 @@ label {
       top: 0;
       left: 0;
       z-index: 5;
-      height: 30px;
-      width: 30px;
+      height: var(--form-radio-width);
+      width: var(--form-radio-height);
       background-color: transparent;
       transition: all 0.3s ease-out;
       -webkit-transition: all 0.2s ease-out;
       -moz-transition: all 0.2s ease-out;
       -o-transition: all 0.2s ease-out;
       border: 2px solid var(--gray-dark);
-      border-radius: var(--border-radius-none);
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: var(--form-radio-rounded);
 
       &:after {
         content: '';
-        width: 0;
-        height: 0;
         opacity: 0;
         display: flex;
         align-items: center;
@@ -959,24 +959,23 @@ label {
         -webkit-transition: all 0.3s ease-out;
         -moz-transition: all 0.3s ease-out;
         -o-transition: all 0.3s ease-out;
+        width: var(--form-radio-checked-width);
+        height: var(--form-radio-checked-height);
+        border-radius: var(--form-radio-rounded);
       }
     }
 
-    &--rounded {
+    &--square {
       input {
         &:checked ~ .radioBtnFake {
-          border-radius: 50%;
-          &:after {
-            width: 14px;
-            height: 14px;
-          }
+          border-radius: var(--border-radius-none);
         }
       }
 
       .radioBtnFake {
-        border-radius: 50%;
+        border-radius: var(--border-radius-none);
         &:after {
-          border-radius: 50%;
+          border-radius: var(--border-radius-none);
         }
       }
     }
