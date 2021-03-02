@@ -29,10 +29,10 @@
   }
 
   // Remove select outline from select box in FF
-  &:-moz-focusring {
-    //color: transparent;
-    //text-shadow: 0 0 0 var(--input-color);
-  }
+  // &:-moz-focusring {
+  //   //color: transparent;
+  //   //text-shadow: 0 0 0 var(--input-color);
+  // }
 
   // Customize the `:focus` state to imitate native WebKit styles.
   //@include formControl-focus;
@@ -251,7 +251,7 @@ input[type='file'] {
 }
 
 .text--danger {
-  @include font-size(var(--font-size-tiny));
+  //@include font-size(var(--font-size-tiny));
   color: var(--danger);
   flex-basis: 100%;
   padding-right: 1.75rem;
@@ -430,9 +430,9 @@ input[type='search'] {
     display: none;
   }
 
-  .clearCrossBtn {
-    //display: none;
-  }
+  // .clearCrossBtn {
+  //   //display: none;
+  // }
   //select styling
   &__select {
     select {
@@ -1058,6 +1058,7 @@ label {
   display: inline-block;
   vertical-align: top;
   position: relative;
+  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
