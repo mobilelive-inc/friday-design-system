@@ -1,0 +1,41 @@
+.black--friday {
+  --body-color: #000;
+  --primary: #da291c;
+  --primary-hover: #450000;
+  --secondary: var(--primary-light);
+  --text-color: #fff;
+  --theme-color: var(--primary);
+
+  //FDS Primary Button Colors
+  --btn-primary-color: var(--text-color);
+  --btn-primary-text-color: var(--primary);
+  --btn-primary-bg-color: var(--primary);
+  --btn-primary-border-color: var(--primary);
+
+  --btn-primary-hover-color: var(--primary);
+  --btn-primary-hover-bg-color: var(--text-color);
+  --btn-primary-hover-border-color: var(--primary);
+
+  //FDS Secondary Button Colors
+  --btn-secondary-color: var(--text-color);
+  --btn-secondary-text-color: var(--primary);
+  --btn-secondary-bg-color: var(--primary);
+  --btn-secondary-border-color: var(--primary);
+
+  --btn-secondary-hover-color: var(--primary);
+  --btn-secondary-hover-bg-color: var(--text-color);
+  --btn-secondary-hover-border-color: var(--primary);
+
+  //--card-solidShadow-primary: var(--theme-color);
+  --card-border-color: var(--body-color);
+
+  background: var(--body-color);
+  color: var(--text-color);
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff;
+  }
+}
