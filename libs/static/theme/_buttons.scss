@@ -32,13 +32,13 @@
   --btn-padding-y: var(--global-spacer);
   --btn-padding-x: var(--spacer-mid);
   --btn-padding-y-sm: var(--spacer-tiny);
-  --btn-padding-x-sm: var(--spacer-tiny);
+  --btn-padding-x-sm: var(--spacer-small);
   --btn-padding-y-lg: var(--spacer-mid);
   --btn-padding-x-lg: var(--spacer-mid);
 
   --btn-min-width: auto;
   --btn-standard-width: 30px;
-  --btn-standard-hight: 56px;
+  --btn-standard-hight: 50px;
   --btn-font-family: var(--input-btn-font-family);
   --btn-font-size: var(--input-btn-font-size);
   --btn-line-height: var(--input-btn-line-height);
@@ -69,7 +69,7 @@
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   //FDS Primary Button Colors
-  --btn-primary-color: var(--dark);
+  --btn-primary-color: var(--white);
   --btn-primary-text-color: var(--primary);
   --btn-primary-bg-color: var(--primary);
   --btn-primary-border-color: var(--primary);

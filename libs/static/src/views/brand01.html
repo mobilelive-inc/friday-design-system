@@ -65,16 +65,10 @@
     <div class="theme-switcher">
       <p class="text--center">Choose <br />Brand:</p>
       <div class="btns-switcher-holder">
-        <button
-          class="mb--2 btn btn--primary btn--sm navy default"
-          onclick="switchTheme(1)"
-        >
+        <button class="mb--2 btn btn--sm navy" onclick="switchTheme(1)">
           Navy
         </button>
-        <button
-          class="mb--2 btn btn--primary btn--sm default"
-          onclick="switchTheme(4)"
-        >
+        <button class="mb--2 btn btn--sm default" onclick="switchTheme(4)">
           Default
         </button>
       </div>
@@ -232,12 +226,14 @@
 
     <div class="container py--5">
       <form
-        class="mx--auto w--75 row fds-card border border-primary has--solid--shadow--primary p--5"
+        class="mx--auto row border border--primary has--solid--shadow--primary p--5"
       >
         <div class="formGroup col-6">
           <label for="formDefault02" class="">First Name</label>
           <div class="formControlWrap flex--wrap d--flex align--items--center">
-            <div class="formControlHolder d--flex align--items--center">
+            <div
+              class="formControlHolder textOnly d--flex align--items--center"
+            >
               <input
                 type="text"
                 class="formControl"
@@ -251,7 +247,9 @@
         <div class="formGroup col-6">
           <label for="formDefault03" class="">Last Name</label>
           <div class="formControlWrap flex--wrap d--flex align--items--center">
-            <div class="formControlHolder d--flex align--items--center">
+            <div
+              class="formControlHolder textOnly d--flex align--items--center"
+            >
               <input
                 type="text"
                 class="formControl"
@@ -265,7 +263,9 @@
         <div class="formGroup col-12">
           <label for="formDefault" class="">Email</label>
           <div class="formControlWrap flex--wrap d--flex align--items--center">
-            <div class="formControlHolder d--flex align--items--center">
+            <div
+              class="formControlHolder textOnly d--flex align--items--center"
+            >
               <input
                 type="email"
                 class="formControl"
@@ -279,7 +279,9 @@
         <div class="formGroup col-12">
           <label for="formDefault01" class="">Password</label>
           <div class="formControlWrap flex--wrap d--flex align--items--center">
-            <div class="formControlHolder d--flex align--items--center">
+            <div
+              class="formControlHolder textOnly d--flex align--items--center"
+            >
               <input
                 type="password"
                 class="formControl"
@@ -291,7 +293,7 @@
         </div>
         <div class="formGroup col-6">
           <label for="formDefault06" class="">Pick an Course</label>
-          <div class="formControlHolder formControlHolder__select">
+          <div class="formControlHolder textOnly formControlHolder__select">
             <select
               class="formControl"
               name="course"
@@ -308,7 +310,7 @@
           </div>
         </div>
 
-        <div class="formGroup col-6">
+        <div class="formGroup col-6 same--height">
           <label for="formDefault06" class="">Pick an Course</label>
           <div class="row">
             <div class="col-4">
@@ -331,7 +333,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12">
+        <div class="formGroup col-12">
           <div class="formCheck">
             <div class="checkBox">
               <input type="checkbox" id="checkboxs" />
