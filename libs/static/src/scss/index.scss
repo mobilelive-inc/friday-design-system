@@ -8,17 +8,12 @@
 @import 'settings/spacing';
 @import 'settings/forms';
 @import 'settings/gridLayout';
+@import 'settings/breakpoint';
 @import 'settings/utilities';
 @import 'settings/images';
 
 @import 'generic/root';
 @import 'generic/base';
-
-//Tools
-@import 'tools/tool.grid';
-@import 'tools/tool.shadows';
-@import 'tools/tool.clearfix';
-@import 'tools/tool.vendor-prefixes';
 
 @import 'elements/element.headings';
 
@@ -29,6 +24,7 @@
 @import 'components/media';
 @import 'components/modals';
 @import 'components/tooltip';
+@import 'components/accordion';
 @import 'components/progressbar';
 @import 'components/notification-list';
 @import 'components/border';
@@ -54,3 +50,9 @@
 @import 'utilitis/stretched-link';
 @import 'utilitis/text';
 @import 'utilitis/visibility';
+
+//Tools
+@import 'tools/tool.grid';
+@import 'tools/tool.shadows';
+@import 'tools/tool.clearfix';
+@import 'tools/tool.vendor-prefixes';
