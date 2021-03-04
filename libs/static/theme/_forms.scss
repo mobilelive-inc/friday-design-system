@@ -91,7 +91,11 @@
   --form-radio-curved: 4px;
   --form-radio-border-width: 1px;
   --form-radio-border-style: solid;
-  --form-radio-border-color: var(--gray);
+  --form-radio-border-color: var(--dark);
+  --form-radio-active-border-color: var(--primary);
+  --form-radio-bg: var(--primary);
+  //Todo need to update this
+  --radioColor: var(--primary);
   --form-radio-width: 30px;
   --form-radio-height: 30px;
   --form-radio-checked-width: 20px;
@@ -129,7 +133,6 @@
   --thumb-width: var(--thumb-dimensions);
   --thumb-height: var(--thumb-dimensions);
 
-  --radioColor: var(--gray-dark);
   --dropdown-hover-bg: var(--primary);
   --dropdown-hover-color: var(--white);
 
