@@ -3,6 +3,10 @@
 @import '../../../theme/card';
 
 .fds-card {
+  border-radius: var(--card-border-radius);
+  border-width: var(--card-border-width);
+  border-style: solid;
+  border-color: var(--card-border-color);
   figure {
     img {
       height: auto;
@@ -11,6 +15,7 @@
     }
   }
 }
+
 .fds-card-head {
   width: 100%;
   span {
@@ -27,10 +32,11 @@
 .fds-card-footer {
   justify-content: flex-end;
   margin-top: auto;
-  .btn--primary {
-    color: var(--card-btn-color);
-    &:hover {
-      color: var(--white-color);
-    }
-  }
+  //TODO: need to remove this style.
+  //.btn--primary {
+  //  color: var(--card-btn-color);
+  //  &:hover {
+  //    color: var(--white-color);
+  //  }
+  //}
 }

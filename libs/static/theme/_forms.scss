@@ -66,7 +66,7 @@
     var(--input-padding-y) / 2
   );
 
-  --input-height: 2.25rem;
+  --input-height: 2.5rem;
   --input-width: 200px;
   --input-height-sm: add(
     var(--input-line-height) -sm * 1em,
@@ -95,8 +95,8 @@
   --form-radio-border-color: var(--gray);
   --form-radio-width: 30px;
   --form-radio-height: 30px;
-  --form-radio-checked-width: 14px;
-  --form-radio-checked-height: 14px;
+  --form-radio-checked-width: 20px;
+  --form-radio-checked-height: 20px;
 
   --form-check-box-tick-top: 2px;
   --form-check-box-tick-left: 9px;

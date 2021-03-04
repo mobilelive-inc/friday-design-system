@@ -29,10 +29,10 @@
   }
 
   // Remove select outline from select box in FF
-  &:-moz-focusring {
-    //color: transparent;
-    //text-shadow: 0 0 0 var(--input-color);
-  }
+  // &:-moz-focusring {
+  //   //color: transparent;
+  //   //text-shadow: 0 0 0 var(--input-color);
+  // }
 
   // Customize the `:focus` state to imitate native WebKit styles.
   //@include formControl-focus;
@@ -350,6 +350,7 @@ input[type='search'] {
   flex: 1;
   border: solid var(--input-border-color);
   border-width: var(--input-border-width);
+  border-radius: var(--input-border-radius);
 
   /* &:has(.formControl:disabled),
   &:has(.formControl:readonly),
@@ -369,8 +370,8 @@ input[type='search'] {
   }
 
   &.hasBg {
-    border-color: transparent;
-    background-color: var(--gray-light);
+    //border-color: transparent;
+    background-color: var(--gray-lighter);
   }
 
   &.curved {
@@ -429,9 +430,9 @@ input[type='search'] {
     display: none;
   }
 
-  .clearCrossBtn {
-    //display: none;
-  }
+  // .clearCrossBtn {
+  //   //display: none;
+  // }
   //select styling
   &__select {
     select {
@@ -577,6 +578,11 @@ label {
 
 .formGroup {
   margin-bottom: var(--formGroup-margin-bottom);
+  &.same--height {
+    .formRadio {
+      min-height: var(--input-height);
+    }
+  }
 }
 
 // Form grid
@@ -917,15 +923,12 @@ label {
         transform: rotate(0deg) scale(1);
         opacity: 1;
         border: 2px solid var(--radioColor);
-        border-radius: var(--border-radius-none);
 
         &:after {
           -webkit-transform: scale(1);
           -ms-transform: scale(1);
           transform: scale(1);
           opacity: 1;
-          width: 20px;
-          height: 20px;
         }
       }
     }
@@ -944,15 +947,13 @@ label {
       -moz-transition: all 0.2s ease-out;
       -o-transition: all 0.2s ease-out;
       border: 2px solid var(--gray-dark);
-      border-radius: var(--border-radius-none);
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: var(--form-radio-rounded);
 
       &:after {
         content: '';
-        width: 0;
-        height: 0;
         opacity: 0;
         display: flex;
         align-items: center;
@@ -965,24 +966,23 @@ label {
         -webkit-transition: all 0.3s ease-out;
         -moz-transition: all 0.3s ease-out;
         -o-transition: all 0.3s ease-out;
+        width: var(--form-radio-checked-width);
+        height: var(--form-radio-checked-height);
+        border-radius: var(--form-radio-rounded);
       }
     }
 
-    &--rounded {
+    &--square {
       input {
         &:checked ~ .radioBtnFake {
-          border-radius: var(--form-radio-rounded);
-          &:after {
-            width: var(--form-radio-checked-width);
-            height: var(--form-radio-checked-height);
-          }
+          border-radius: var(--border-radius-none);
         }
       }
 
       .radioBtnFake {
-        border-radius: var(--form-radio-rounded);
+        border-radius: var(--border-radius-none);
         &:after {
-          border-radius: var(--form-radio-rounded);
+          border-radius: var(--border-radius-none);
         }
       }
     }
@@ -1065,9 +1065,6 @@ label {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
 
   &.disabled {
     input[type='checkbox']:checked + label {

@@ -571,6 +571,7 @@
     font-size: var(--btn-font-size-sm);
     line-height: var(--btn-line-height);
     border-radius: var(--btn-border-radius-sm);
+    min-height: auto;
   }
 
   &--tooltip {

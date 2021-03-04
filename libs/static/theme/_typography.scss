@@ -8,6 +8,9 @@
     'Liberation Mono', 'Courier New', monospace;
   --font-family-base: var(--font-family-sans-serif);
 
+  --body-bg: var(--light);
+  --body-color: var(--dark);
+
   --font-weight-lighter: 100;
   --font-weight-light: 300;
   --font-weight-normal: 400;
@@ -22,7 +25,7 @@
   --font-size-micro: calc(var(--font-size-base) * 0.625);
 
   --font-weight-base: --font-weight-normal;
-  --line-height-base: 1.2;
+  --line-height-base: 1.4;
 
   --h1-font-size: calc(var(--font-size-base) * 2.5);
   --h2-font-size: calc(var(--font-size-base) * 2);
@@ -61,9 +64,6 @@
   --display3-weight: 300;
   --display4-weight: 300;
   --display-line-height: var(--headings-line-height);
-
-  --body-bg: var(--light);
-  --body-color: var(--dark);
 
   // Links
 
