@@ -30,7 +30,7 @@
   --btn-color: var(--white);
   --btn-color-alt: var(--black);
   --btn-padding-y: var(--global-spacer);
-  --btn-padding-x: var(--spacer-mid);
+  --btn-padding-x: var(--spacer-sm);
   --btn-padding-y-sm: var(--spacer-tiny);
   --btn-padding-x-sm: var(--spacer-small);
   --btn-padding-y-lg: var(--spacer-mid);
@@ -83,7 +83,7 @@
   --btn-secondary-bg-color: var(--secondary);
   --btn-secondary-border-color: var(--secondary);
 
-  --btn-secondary-hover-color: var(--white);
+  --btn-secondary-hover-color: var(--primary);
   --btn-secondary-hover-bg-color: var(--secondary-hover);
   --btn-secondary-hover-border-color: var(--secondary-hover);
 

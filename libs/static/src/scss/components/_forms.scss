@@ -750,7 +750,8 @@ label {
     &__bg {
       input {
         &:checked ~ .checkboxFake {
-          background-color: currentColor;
+          background-color: var(--primary);
+          border-color: var(--primary);
 
           &:after {
             border: solid var(--gray-lighter);
@@ -946,7 +947,7 @@ label {
       -webkit-transition: all 0.2s ease-out;
       -moz-transition: all 0.2s ease-out;
       -o-transition: all 0.2s ease-out;
-      border: 2px solid var(--gray-dark);
+      border: 2px solid var(--form-radio-border-color);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -958,7 +959,7 @@ label {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--radioColor);
+        background-color: var(--form-radio-bg);
         -webkit-transform: rotate(0deg) scale(0);
         -ms-transform: rotate(0deg) scale(0);
         transform: rotate(0deg) scale(0);
