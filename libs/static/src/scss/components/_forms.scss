@@ -437,6 +437,9 @@ input[type='search'] {
     select {
       -moz-appearance: none;
       -webkit-appearance: none;
+      &.formControl {
+        padding-right: var(--input-select-right-padding);
+      }
     }
 
     &:after {
@@ -516,7 +519,6 @@ fieldset {
 
   .formCheck {
     padding: 0;
-    margin-bottom: 0.5rem;
   }
 }
 
@@ -607,11 +609,11 @@ label {
   align-items: center;
   justify-content: flex-start;
   background-color: transparent;
-
+  margin-bottom: var(--form-checkbox-bottom-margin);
   /* Styling Checkbox Starts */
   .checkLabel {
     color: var(--gray-dark);
-    margin: 0 0 0 0.5rem;
+    margin: 0 0 0 var(--radio-label-left-margin);
     cursor: pointer;
   }
 
@@ -864,11 +866,11 @@ label {
   justify-content: flex-start;
   background-color: transparent;
   padding: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--form-radio-bottom-margin);
   /* Styling Checkbox Starts */
   .radioLabel {
     color: var(--gray-dark);
-    margin: 0 0 0 0.5rem;
+    margin: 0 0 0 var(--radio-label-left-margin);
     cursor: pointer;
   }
 
