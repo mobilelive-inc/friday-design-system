@@ -1,9 +1,9 @@
 .black--friday {
-  --body-color: #000;
+  --body-color: #000000;
   --primary: #da291c;
   --primary-hover: #450000;
   --secondary: var(--primary-light);
-  --text-color: #fff;
+  --text-color: #ffffff;
   --theme-color: var(--primary);
 
   //FDS Primary Button Colors
@@ -36,6 +36,6 @@
   h4,
   h5,
   h6 {
-    color: #fff;
+    color: #ffffff;
   }
 }
