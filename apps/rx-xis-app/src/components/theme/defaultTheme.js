@@ -1,5 +1,6 @@
 import { colors } from './colors';
 import { buttons, borderCurved, borderRounded } from './buttons';
+import { stepper, stepperWrapper } from './stepper';
 import {
   iconMarginLeft,
   iconMarginRight,
@@ -207,6 +208,8 @@ export default {
   buttons,
   typography,
   borderCurved,
+  stepper,
+  stepperWrapper,
   colors,
   font,
   fontFamilies,

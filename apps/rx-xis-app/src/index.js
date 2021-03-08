@@ -19,6 +19,7 @@ import {
 import { OtherSpecs } from './../stories/typography.stories';
 // import Button from '../../../build';
 import { Text } from './components/typography';
+import Stepper from './components/stepper';
 import Span from './components/span/span';
 import Icon from './components/icon/Icon';
 import Input from './components/Input';
@@ -56,16 +57,6 @@ function App() {
   const [isOn, setIsOn] = React.useState(false);
   return (
     <ThemeProvider theme={theme}>
-      <PrimaryButton />
-      <OutlineButtons />
-      <ClearButton />
-      <RoundedButtons />
-      <RoundedOutlineButtons />
-      <CurvedButtons />
-      <CurvedOutlineButtons />
-      <FilledSocialButtons />
-      <OutlineSocialButtons />
-      <OtherSpecs />
       <div style={{ height: '100px', background: 'blue' }}></div>
       <div>
         <Flex mt={5}>
@@ -82,6 +73,9 @@ function App() {
         <Text mb={30} underline italic>
           Testing
         </Text>
+        <Flex mt={5} mb={100}>
+          <Stepper variant="primary" value={2} total={6} />
+        </Flex>
         <Flex mt={5} mb={100}>
           <Button
             variant="outlineGoogleBlue"
