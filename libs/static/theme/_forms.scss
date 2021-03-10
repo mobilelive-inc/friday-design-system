@@ -25,6 +25,7 @@
   --input-padding-x-lg: var(--input-btn-padding-x-lg);
   --input-font-size-lg: var(--input-btn-font-size-lg);
   --input-line-height-lg: var(--input-btn-line-height-lg);
+  --input-select-right-padding: 1.75rem;
 
   --input-bg: var(--white);
   --input-disabled-bg: var(--gray);
@@ -91,7 +92,11 @@
   --form-radio-curved: 4px;
   --form-radio-border-width: 1px;
   --form-radio-border-style: solid;
-  --form-radio-border-color: var(--gray);
+  --form-radio-border-color: var(--dark);
+  --form-radio-active-border-color: var(--primary);
+  --form-radio-bg: var(--primary);
+  //Todo need to update this
+  --radioColor: var(--primary);
   --form-radio-width: 30px;
   --form-radio-height: 30px;
   --form-radio-checked-width: 20px;
@@ -121,6 +126,11 @@
   --input-group-addon-color: var(--input-height-border);
   --input-group-addon-bg: var(--gray-light);
 
+  --form-radio-bottom-margin: 0.5rem;
+  --radio-label-left-margin: 0.5rem;
+  --form-checkbox-bottom-margin: 0.5rem;
+  --checkbox-label-left-margin: 0.5rem;
+
   --thumb-dimensions: 2rem;
   --range-slider-height: 0.75rem;
   --range-border-radius: 2.5rem;
@@ -129,7 +139,6 @@
   --thumb-width: var(--thumb-dimensions);
   --thumb-height: var(--thumb-dimensions);
 
-  --radioColor: var(--gray-dark);
   --dropdown-hover-bg: var(--primary);
   --dropdown-hover-color: var(--white);
 
