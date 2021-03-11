@@ -74,7 +74,7 @@ function App() {
           Testing
         </Text>
         <Flex mt={5} mb={100}>
-          <Stepper variant="primary" value={2} total={6} />
+          <Stepper variant="dark" value={2} total={6} />
         </Flex>
         <Flex mt={5} mb={100}>
           <Button
