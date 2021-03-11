@@ -1,886 +1,990 @@
 <div id="flex" class="infoBlockPiece">
-    <h2>Flex</h2>
-    <p class="h6">Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.</p>
-    <h3>Enable flex behaviors</h3>
-    <p>Apply <code>display</code> utilities to create a flexbox container and transform <code>direct children elements</code> into flex items. Flex containers and items are able to be modified further with additional flex properties.</p>
+  <h2>Flex</h2>
+  <p class="h6">
+    Quickly manage the layout, alignment, and sizing of grid columns,
+    navigation, components, and more with a full suite of responsive flexbox
+    utilities. For more complex implementations, custom CSS may be necessary.
+  </p>
+  <h3>Enable flex behaviors</h3>
+  <p>
+    Apply <code>display</code> utilities to create a flexbox container and
+    transform <code>direct children elements</code> into flex items. Flex
+    containers and items are able to be modified further with additional flex
+    properties.
+  </p>
 
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
     <div class="d--flex p--2 border border--secondary bg--light">I'm a flexbox container!</div>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex p--2 border border--secondary bg--light"</span>&gt;<span class="text--primary">I'm a flexbox container!</span>&lt;/div&gt;</span>
 </pre>
-    </div>
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  </div>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
     <div class="float--left d--inline-flex p--2 border border--secondary bg--light">I'm an inline flexbox container!</div>
     <span class="clearfix"></span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--inline-flex p--2 border border--secondary bg--light"</span>&gt;<span class="text--primary">I'm an inline flexbox container!</span>&lt;/div&gt;</span>
 </pre>
-    </div>
-    <p>Responsive variations also exist for <code>.d--flex</code> and <code>.d--inline--flex.</code></p>
-    <ul>
-        <li><code>.d-flex</code></li>
-        <li><code>.d-inline-flex</code></li>
-        <li><code>.d-sm-flex</code></li>
-        <li><code>.d-sm-inline-flex</code></li>
-        <li><code>.d-md-flex</code></li>
-        <li><code>.d-md-inline-flex</code></li>
-        <li><code>.d-lg-flex</code></li>
-        <li><code>.d-lg-inline-flex</code></li>
-        <li><code>.d-xl-flex</code></li>
-        <li><code>.d-xl-inline-flex</code></li>
-    </ul>
-    <h3>Direction</h3>
-    <p>Set the direction of flex items in a flex container with direction utilities. In most cases you can omit the horizontal class here as the browser default is <code>row.</code> However, you may encounter situations where you needed to explicitly set this value (like responsive layouts).</p>
-    <p>Use <code>.flex-row</code> to set a horizontal direction (the browser default), or <code>.flex-row-reverse</code> to start the horizontal direction from the opposite side.</p>
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  </div>
+  <p>
+    Responsive variations also exist for <code>.d--flex</code> and
+    <code>.d--inline--flex.</code>
+  </p>
+  <ul>
+    <li><code>.d--flex</code></li>
+    <li><code>.d--inline--flex</code></li>
+    <li><code>.d--sm--flex</code></li>
+    <li><code>.d--sm--inline--flex</code></li>
+    <li><code>.d--md--flex</code></li>
+    <li><code>.d--md--inline--flex</code></li>
+    <li><code>.d--lg--flex</code></li>
+    <li><code>.d--lg--inline--flex</code></li>
+    <li><code>.d--xl--flex</code></li>
+    <li><code>.d--xl--inline--flex</code></li>
+  </ul>
+  <h3>Direction</h3>
+  <p>
+    Set the direction of flex items in a flex container with direction
+    utilities. In most cases you can omit the horizontal class here as the
+    browser default is <code>row.</code> However, you may encounter situations
+    where you need to explicitly set this value (like responsive layouts).
+  </p>
+  <p>
+    Use <code>.flex--row</code> to set a horizontal direction (the browser
+    default), or <code>.flex--row--reverse</code> to start the horizontal
+    direction from the opposite side.
+  </p>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
     <div class="d--flex flex--row p--1 border border--secondary bg--light">
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
     </div>
     <div class="d--flex flex--row p--1 border border--secondary bg--light">
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
     </div>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex flex--row p--1 border border--secondary bg--light"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex flex--row p--1 border border--secondary bg--light"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
-    <p>Use <code>.flex-column</code> to set a vertical direction, or <code>.flex-column-reverse</code> to start the vertical direction from the opposite side.</p>
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  </div>
+  <p>
+    Use <code>.flex--column</code> to set a vertical direction, or
+    <code>.flex--column--reverse</code> to start the vertical direction from the
+    opposite side.
+  </p>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
     <div class="d--flex flex--column p--1 border border--secondary bg--light">
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
     </div>
     <div class="d--flex flex--column--reverse p--1 border border--secondary bg--light">
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
     </div>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex flex--column p--1 border border--secondary bg--light"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex flex--column--reverse p--1 border border--secondary bg--light"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
-    <p>Responsive variations also exist for <code>flex-direction.</code></p>
-    <ul>
-        <li><code>.flex-row</code></li>
-        <li><code>.flex-row-reverse</code></li>
-        <li><code>.flex-column</code></li>
-        <li><code>.flex-column-reverse</code></li>
-        <li><code>.flex-sm-row</code></li>
-        <li><code>.flex-sm-row-reverse</code></li>
-        <li><code>.flex-sm-column</code></li>
-        <li><code>.flex-sm-column-reverse</code></li>
-        <li><code>.flex-md-row</code></li>
-        <li><code>.flex-md-row-reverse</code></li>
-        <li><code>.flex-md-column</code></li>
-        <li><code>.flex-md-column-reverse</code></li>
-        <li><code>.flex-lg-row</code></li>
-        <li><code>.flex-lg-row-reverse</code></li>
-        <li><code>.flex-lg-column</code></li>
-        <li><code>.flex-lg-column-reverse</code></li>
-        <li><code>.flex-xl-row</code></li>
-        <li><code>.flex-xl-row-reverse</code></li>
-        <li><code>.flex-xl-column</code></li>
-        <li><code>.flex-xl-column-reverse</code></li>
-    </ul>
-    <h3>Justify content</h3>
-    <p>Use <code>justify-content</code> utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if <code>flex-direction: column</code>). Choose from <code>start<code> (browser default), <code>end</code>, <code>center</code>, <code>between</code>, or <code>around</code>.</p>
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  </div>
+  <p>Responsive variations also exist for <code>flex--direction.</code></p>
+  <ul>
+    <li><code>.flex--row</code></li>
+    <li><code>.flex--row--reverse</code></li>
+    <li><code>.flex--column</code></li>
+    <li><code>.flex--column--reverse</code></li>
+    <li><code>.flex--sm--row</code></li>
+    <li><code>.flex--sm--row--reverse</code></li>
+    <li><code>.flex--sm--column</code></li>
+    <li><code>.flex--sm--column--reverse</code></li>
+    <li><code>.flex--md--row</code></li>
+    <li><code>.flex--md--row--reverse</code></li>
+    <li><code>.flex--md--column</code></li>
+    <li><code>.flex--md--column--reverse</code></li>
+    <li><code>.flex--lg--row</code></li>
+    <li><code>.flex--lg--row--reverse</code></li>
+    <li><code>.flex--lg--column</code></li>
+    <li><code>.flex--lg--column--reverse</code></li>
+    <li><code>.flex--xl--row</code></li>
+    <li><code>.flex--xl--row--reverse</code></li>
+    <li><code>.flex--xl--column</code></li>
+    <li><code>.flex--xl--column--reverse</code></li>
+  </ul>
+  <h3>Justify content</h3>
+  <p>
+    Use <code>justify-content</code> utilities on flexbox containers to change
+    the alignment of flex items on the main axis (the x-axis to start, for
+    y-axis use flex-direction: column). Choose from "start" (browser default),
+    "end", "center", "between", or "around".
+  </p>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
     <div class="d--flex justify--content--start p--1 border border--secondary bg--light">
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
     </div>
     <div class="d--flex justify--content--end p--1 border border--secondary bg--light">
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
     </div>
     <div class="d--flex justify--content--center p--1 border border--secondary bg--light">
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
     </div>
     <div class="d--flex justify--content--between p--1 border border--secondary bg--light">
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
     </div>
     <div class="d--flex justify--content--around p--1 border border--secondary bg--light">
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-        <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+        <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
     </div>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex justify--content--start p--1 border border--secondary bg--light"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex justify--content--end p--1 border border--secondary bg--light"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex justify--content--center p--1 border border--secondary bg--light"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex justify--content--between p--1 border border--secondary bg--light"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex justify--content--around p--1 border border--secondary bg--light"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
-    <p>Responsive variations also exist for <code>justify-content.</code></p>
-    <ul>
-        <li><code>.justify-content-start</code></li>
-        <li><code>.justify-content-end</code></li>
-        <li><code>.justify-content-center</code></li>
-        <li><code>.justify-content-between</code></li>
-        <li><code>.justify-content-around</code></li>
-        <li><code>.justify-content-sm-start</code></li>
-        <li><code>.justify-content-sm-end</code></li>
-        <li><code>.justify-content-sm-center</code></li>
-        <li><code>.justify-content-sm-between</code></li>
-        <li><code>.justify-content-sm-around</code></li>
-        <li><code>.justify-content-md-start</code></li>
-        <li><code>.justify-content-md-end</code></li>
-        <li><code>.justify-content-md-center</code></li>
-        <li><code>.justify-content-md-between</code></li>
-        <li><code>.justify-content-md-around</code></li>
-        <li><code>.justify-content-lg-start</code></li>
-        <li><code>.justify-content-lg-end</code></li>
-        <li><code>.justify-content-lg-center</code></li>
-        <li><code>.justify-content-lg-between</code></li>
-        <li><code>.justify-content-lg-around</code></li>
-        <li><code>.justify-content-xl-start</code></li>
-        <li><code>.justify-content-xl-end</code></li>
-        <li><code>.justify-content-xl-center</code></li>
-        <li><code>.justify-content-xl-between</code></li>
-        <li><code>.justify-content-xl-around</code></li>
-    </ul>
+  </div>
+  <p>Responsive variations also exist for <code>justify--content.</code></p>
+  <ul>
+    <li><code>.justify--content--start</code></li>
+    <li><code>.justify--content--end</code></li>
+    <li><code>.justify--content--center</code></li>
+    <li><code>.justify--content--between</code></li>
+    <li><code>.justify--content--around</code></li>
+    <li><code>.justify--content--sm--start</code></li>
+    <li><code>.justify--content--sm--end</code></li>
+    <li><code>.justify--content--sm--center</code></li>
+    <li><code>.justify--content--sm--between</code></li>
+    <li><code>.justify--content--sm--around</code></li>
+    <li><code>.justify--content--md--start</code></li>
+    <li><code>.justify--content--md--end</code></li>
+    <li><code>.justify--content--md--center</code></li>
+    <li><code>.justify--content--md--between</code></li>
+    <li><code>.justify--content--md--around</code></li>
+    <li><code>.justify--content--lg--start</code></li>
+    <li><code>.justify--content--lg--end</code></li>
+    <li><code>.justify--content--lg--center</code></li>
+    <li><code>.justify--content--lg--between</code></li>
+    <li><code>.justify--content--lg--around</code></li>
+    <li><code>.justify--content--xl--start</code></li>
+    <li><code>.justify--content--xl--end</code></li>
+    <li><code>.justify--content--xl--center</code></li>
+    <li><code>.justify--content--xl--between</code></li>
+    <li><code>.justify--content--xl--around</code></li>
+  </ul>
 
-    <h3>Align items</h3>
-    <p>Use <code>align-items</code> utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if <code>flex-direction: column</code>). Choose from <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code>, or <code>stretch</code> (browser default).</p>
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <h3>Align items</h3>
+  <p>
+    Use <code>align-items</code> utilities on flexbox containers to change the
+    alignment of flex items on the cross axis (the y-axis to start, x-axis if
+    <code>flex-direction: column</code>). Choose from <code>start</code>,
+    <code>end</code>, <code>center</code>, <code>baseline</code>, or
+    <code>stretch</code> (browser default).
+  </p>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex align--items--start p--1 border border--secondary bg--light" style="height: 100px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
 </div>
 <div class="d--flex align--items--end p--1 border border--secondary bg--light" style="height: 100px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
 </div>
 <div class="d--flex align--items--center p--1 border border--secondary bg--light" style="height: 100px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
 </div>
 <div class="d--flex align--items--baseline p--1 border border--secondary bg--light" style="height: 100px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
 </div>
 <div class="d--flex align--items--stretch p--1 border border--secondary bg--light" style="height: 100px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 2</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 2</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
 </div>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--items--start p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--items--end p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--items--center p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--items--baseline p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--items--stretch p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 2</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
-    <p>Responsive variations also exist for <code>align-items</code>.</p>
-    <ul>
-        <li><code>.align--items--start</code></li>
-        <li><code>.align--items--end</code></li>
-        <li><code>.align--items--center</code></li>
-        <li><code>.align--items--baseline</code></li>
-        <li><code>.align--items--stretch</code></li>
-        <li><code>.align--items--sm--start</code></li>
-        <li><code>.align--items--sm--end</code></li>
-        <li><code>.align--items--sm--center</code></li>
-        <li><code>.align--items--sm--baseline</code></li>
-        <li><code>.align--items--sm--stretch</code></li>
-        <li><code>.align--items--md--start</code></li>
-        <li><code>.align--items--md--end</code></li>
-        <li><code>.align--items--md--center</code></li>
-        <li><code>.align--items--md--baseline</code></li>
-        <li><code>.align--items--md--stretch</code></li>
-        <li><code>.align--items--lg--start</code></li>
-        <li><code>.align--items--lg--end</code></li>
-        <li><code>.align--items--lg--center</code></li>
-        <li><code>.align--items--lg--baseline</code></li>
-        <li><code>.align--items--lg--stretch</code></li>
-        <li><code>.align--items--xl--start</code></li>
-        <li><code>.align--items--xl--end</code></li>
-        <li><code>.align--items--xl--center</code></li>
-        <li><code>.align--items--xl--baseline</code></li>
-        <li><code>.align--items--xl--stretch</code></li>
-    </ul>
+  </div>
+  <p>Responsive variations also exist for <code>align--items</code>.</p>
+  <ul>
+    <li><code>.align--items--start</code></li>
+    <li><code>.align--items--end</code></li>
+    <li><code>.align--items--center</code></li>
+    <li><code>.align--items--baseline</code></li>
+    <li><code>.align--items--stretch</code></li>
+    <li><code>.align--items--sm--start</code></li>
+    <li><code>.align--items--sm--end</code></li>
+    <li><code>.align--items--sm--center</code></li>
+    <li><code>.align--items--sm--baseline</code></li>
+    <li><code>.align--items--sm--stretch</code></li>
+    <li><code>.align--items--md--start</code></li>
+    <li><code>.align--items--md--end</code></li>
+    <li><code>.align--items--md--center</code></li>
+    <li><code>.align--items--md--baseline</code></li>
+    <li><code>.align--items--md--stretch</code></li>
+    <li><code>.align--items--lg--start</code></li>
+    <li><code>.align--items--lg--end</code></li>
+    <li><code>.align--items--lg--center</code></li>
+    <li><code>.align--items--lg--baseline</code></li>
+    <li><code>.align--items--lg--stretch</code></li>
+    <li><code>.align--items--xl--start</code></li>
+    <li><code>.align--items--xl--end</code></li>
+    <li><code>.align--items--xl--center</code></li>
+    <li><code>.align--items--xl--baseline</code></li>
+    <li><code>.align--items--xl--stretch</code></li>
+  </ul>
 
-
-    <h3>Align Self</h3>
-    <p>Use <code>align-self</code> utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if <code>flex-direction: column</code>). Choose from the same options as <code>align-items: start</code>, <code>end</code>, <code>center</code>, <code>baseline</code>, or <code>stretch</code> (browser default).</p>
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <h3>Align Self</h3>
+  <p>
+    Use <code>align-self</code> utilities on flexbox items to individually
+    change their alignment on the cross axis (the y-axis to start, x-axis if
+    <code>flex-direction: column</code>). Choose from the same options as
+    <code>align-items: start</code>, <code>end</code>, <code>center</code>,
+    <code>baseline</code>, or <code>stretch</code> (browser default).
+  </p>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex p--1 border border--secondary bg--light" style="height: 100px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-    <div class="align--self--start p--2 bg--primary border border--primary-darker text--white">Aligned flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+    <div class="align--self--start p--2 bg--primary border border--primary--darker text--white">Aligned flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
 </div>
 <div class="d--flex p--1 border border--secondary bg--light" style="height: 100px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-    <div class="align--self--end p--2 bg--primary border border--primary-darker text--white">Aligned flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+    <div class="align--self--end p--2 bg--primary border border--primary--darker text--white">Aligned flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
 </div>
 <div class="d--flex p--1 border border--secondary bg--light" style="height: 100px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-    <div class="align--self--center p--2 bg--primary border border--primary-darker text--white">Aligned flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+    <div class="align--self--center p--2 bg--primary border border--primary--darker text--white">Aligned flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
 </div>
 <div class="d--flex p--1 border border--secondary bg--light" style="height: 100px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-    <div class="align--self--baseline p--2 bg--primary border border--primary-darker text--white">Aligned flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+    <div class="align--self--baseline p--2 bg--primary border border--primary--darker text--white">Aligned flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
 </div>
 <div class="d--flex p--1 border border--secondary bg--light" style="height: 100px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 1</div>
-    <div class="align--self--stretch p--2 bg--primary border border--primary-darker text--white">Aligned flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item 3</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 1</div>
+    <div class="align--self--stretch p--2 bg--primary border border--primary--darker text--white">Aligned flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item 3</div>
 </div>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="align--self--start  p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Aligned flex item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="align--self--start  p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Aligned flex item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex -1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="align--self--end p- p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Aligned flex item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="align--self--end p- p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Aligned flex item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex  p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="align--self--center p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Aligned flex item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="align--self--center p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Aligned flex item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex n p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="align--self--betwee p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Aligned flex item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="align--self--betwee p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Aligned flex item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex  p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="align--self--around p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Aligned flex item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 1</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="align--self--around p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Aligned flex item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item 3</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
-    <p>Responsive variations also exist for <code>align-self</code>.</p>
-    <ul>
-        <li><code>.align--self--start</code></li>
-        <li><code>.align--self--end</code></li>
-        <li><code>.align--self--center</code></li>
-        <li><code>.align--self--baseline</code></li>
-        <li><code>.align--self--stretch</code></li>
-        <li><code>.align--self--sm--start</code></li>
-        <li><code>.align--self--sm--end</code></li>
-        <li><code>.align--self--sm--center</code></li>
-        <li><code>.align--self--sm--baseline</code></li>
-        <li><code>.align--self--sm--stretch</code></li>
-        <li><code>.align--self--md--start</code></li>
-        <li><code>.align--self--md--end</code></li>
-        <li><code>.align--self--md--center</code></li>
-        <li><code>.align--self--md--baseline</code></li>
-        <li><code>.align--self--md--stretch</code></li>
-        <li><code>.align--self--lg--start</code></li>
-        <li><code>.align--self--lg--end</code></li>
-        <li><code>.align--self--lg--center</code></li>
-        <li><code>.align--self--lg--baseline</code></li>
-        <li><code>.align--self--lg--stretch</code></li>
-        <li><code>.align--self--xl--start</code></li>
-        <li><code>.align--self--xl--end</code></li>
-        <li><code>.align--self--xl--center</code></li>
-        <li><code>.align--self--xl--baseline</code></li>
-        <li><code>.align--self--xl--stretch</code></li>
-    </ul>
+  </div>
+  <p>Responsive variations also exist for <code>align--self</code>.</p>
+  <ul>
+    <li><code>.align--self--start</code></li>
+    <li><code>.align--self--end</code></li>
+    <li><code>.align--self--center</code></li>
+    <li><code>.align--self--baseline</code></li>
+    <li><code>.align--self--stretch</code></li>
+    <li><code>.align--self--sm--start</code></li>
+    <li><code>.align--self--sm--end</code></li>
+    <li><code>.align--self--sm--center</code></li>
+    <li><code>.align--self--sm--baseline</code></li>
+    <li><code>.align--self--sm--stretch</code></li>
+    <li><code>.align--self--md--start</code></li>
+    <li><code>.align--self--md--end</code></li>
+    <li><code>.align--self--md--center</code></li>
+    <li><code>.align--self--md--baseline</code></li>
+    <li><code>.align--self--md--stretch</code></li>
+    <li><code>.align--self--lg--start</code></li>
+    <li><code>.align--self--lg--end</code></li>
+    <li><code>.align--self--lg--center</code></li>
+    <li><code>.align--self--lg--baseline</code></li>
+    <li><code>.align--self--lg--stretch</code></li>
+    <li><code>.align--self--xl--start</code></li>
+    <li><code>.align--self--xl--end</code></li>
+    <li><code>.align--self--xl--center</code></li>
+    <li><code>.align--self--xl--baseline</code></li>
+    <li><code>.align--self--xl--stretch</code></li>
+  </ul>
 
-    <h3>Fill</h3>
-    <p>Use the <code>.flex-fill</code> class on a series of sibling elements to force them into widths equal to their content (or equal widths if their content does not surpass their border-boxes) while taking up all available horizontal space.</p>
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <h3>Fill</h3>
+  <p>
+    Use the <code>.flex--fill</code> class on a series of sibling elements to
+    force them into widths equal to their content (or equal widths if their
+    content does not surpass their border-boxes) while taking up all available
+    horizontal space.
+  </p>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex p--1 border border--secondary bg--light">
-    <div class="flex--fill p--2 bg--primary border border--primary-darker text--white">Flex item with a lot of content</div>
-    <div class="flex--fill p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="flex--fill p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="flex--fill p--2 bg--primary border border--primary--darker text--white">Flex item with a lot of content</div>
+    <div class="flex--fill p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="flex--fill p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="flex--fill p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item with a lot of content</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="flex--fill p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="flex--fill p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex item </span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="flex--fill p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item with a lot of content</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="flex--fill p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="flex--fill p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex item </span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
-    <p>Responsive variations also exist for <code>align-fill</code>.</p>
-    <ul>
-        <li><code>.flex--fill</code></li>
-        <li><code>.flex--sm--fill</code></li>
-        <li><code>.flex--md--fill</code></li>
-        <li><code>.flex--lg--fill</code></li>
-        <li><code>.flex--xl--fill</code></li>
-    </ul>
+  </div>
+  <p>Responsive variations also exist for <code>align--fill</code>.</p>
+  <ul>
+    <li><code>.flex--fill</code></li>
+    <li><code>.flex--sm--fill</code></li>
+    <li><code>.flex--md--fill</code></li>
+    <li><code>.flex--lg--fill</code></li>
+    <li><code>.flex--xl--fill</code></li>
+  </ul>
 
-    <h3>Grow and Shrink</h3>
-    <p>Use <code>.flex-grow-*</code> utilities to toggle a flex item’s ability to grow to fill available space. In the example below, the <code>.flex-grow-1</code> elements uses all available space it can, while allowing the remaining two flex items their necessary space.</p>
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <h3>Grow and Shrink</h3>
+  <p>
+    Use <code>.flex--grow--*</code> utilities to toggle a flex item’s ability to
+    grow to fill available space. In the example below, the
+    <code>.flex--grow--1</code> elements uses all available space it can, while
+    allowing the remaining two flex items their necessary space.
+  </p>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex p--1 border border--secondary bg--light">
-    <div class="flex-grow-1 p--2 bg--primary border border--primary-darker text--white">Flex Item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Third Flex Item</div>
+    <div class="flex-grow-1 p--2 bg--primary border border--primary--darker text--white">Flex Item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Third Flex Item</div>
 </div>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="flex-grow-1 p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Third Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="flex--grow--1 p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Third Flex Item</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
-    <p>Use <code>.flex-shrink-*</code> utilities to toggle a flex item’s ability to shrink if necessary. In the example below, the second flex item with <code>.flex-shrink-1</code> is forced to wrap its contents to a new line, “shrinking” to allow more space for the previous flex item with <code>.w-100</code>.</p>
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  </div>
+  <p>
+    Use <code>.flex--shrink--*</code> utilities to toggle a flex item’s ability to
+    shrink if necessary. In the example below, the second flex item with
+    <code>.flex--shrink--1</code> is forced to wrap its contents to a new line,
+    “shrinking” to allow more space for the previous flex item with
+    <code>.w--100</code>.
+  </p>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex p--1 border border--secondary bg--light">
-    <div class="w--100 p--2 bg--primary border border--primary-darker text--white">Flex Item</div>
-    <div class="flex-shrink-1 p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="w--100 p--2 bg--primary border border--primary--darker text--white">Flex Item</div>
+    <div class="flex--shrink--1 p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="w--100 p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="flex-shrink-1 p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="w--100 p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="flex--shrink--1 p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
-    <p>Responsive variations also exist for <code>flex-grow</code> and <code>flex-shrink.</code></p>
-    <ul>
-        <li><code>.flex-{grow|shrink}-0</code></li>
-        <li><code>.flex-{grow|shrink}-1</code></li>
-        <li><code>.flex-sm-{grow|shrink}-0</code></li>
-        <li><code>.flex-sm-{grow|shrink}-1</code></li>
-        <li><code>.flex-md-{grow|shrink}-0</code></li>
-        <li><code>.flex-md-{grow|shrink}-1</code></li>
-        <li><code>.flex-lg-{grow|shrink}-0</code></li>
-        <li><code>.flex-lg-{grow|shrink}-1</code></li>
-        <li><code>.flex-xl-{grow|shrink}-0</code></li>
-        <li><code>.flex-xl-{grow|shrink}-1</code></li>
-    </ul>
+  </div>
+  <p>
+    Responsive variations also exist for <code>flex--grow</code> and
+    <code>flex--shrink.</code>
+  </p>
+  <ul>
+    <li><code>.flex--{grow|shrink}--0</code></li>
+    <li><code>.flex--{grow|shrink}--1</code></li>
+    <li><code>.flex--sm--{grow|shrink}--0</code></li>
+    <li><code>.flex--sm--{grow|shrink}--1</code></li>
+    <li><code>.flex--md--{grow|shrink}--0</code></li>
+    <li><code>.flex--md--{grow|shrink}--1</code></li>
+    <li><code>.flex--lg--{grow|shrink}--0</code></li>
+    <li><code>.flex--lg--{grow|shrink}--1</code></li>
+    <li><code>.flex--xl--{grow|shrink}--0</code></li>
+    <li><code>.flex--xl--{grow|shrink}--1</code></li>
+  </ul>
 
-    <h3>Auto margins</h3>
-    <p>Flexbox can do some pretty awesome things when you mix flex alignments with auto margins. Shown below are three examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the right (<code>.mr-auto</code>), and pushing two items to the left (<code>.ml-auto</code>).</p>
-    <p><strong>Unfortunately, IE10 and IE11 do not properly support auto margins on flex items whose parent has a non-default</strong> <span class="text--danger p--0 " style="font-size: 1rem;">justify-content</span> value. <a href="https://stackoverflow.com/a/37535548">See this StackOverflow answer</a> for more details.</p>
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <h3>Auto margins</h3>
+  <p>
+    Flexbox can do some pretty awesome things when you mix flex alignments with
+    auto margins. Shown below are three examples of controlling flex items via
+    auto margins: default (no auto margin), pushing two items to the right
+    (<code>.mr--auto</code>), and pushing two items to the left
+    (<code>.ml--auto</code>).
+  </p>
+  <p>
+    <strong
+      >Unfortunately, IE10 and IE11 do not properly support auto margins on flex
+      items whose parent has a non-default</strong
+    >
+    <span class="text--danger p--0" style="font-size: 1rem"
+      >justify--content</span
+    >
+    value.
+    <a href="https://stackoverflow.com/a/37535548"
+      >See this StackOverflow answer</a
+    >
+    for more details.
+  </p>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex p--1 border border--secondary bg--light">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 <div class="d--flex p--1 border border--secondary bg--light">
-    <div class="mr--auto p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="mr--auto p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 <div class="d--flex p--1 border border--secondary bg--light">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="ml--auto p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="ml--auto p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="mr--auto p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="mr--auto p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 100px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="ml--auto p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="ml--auto p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
+  </div>
 
-    <h3>With align-items</h3>
-    <p>Vertically move one flex item to the top or bottom of a container by mixing <code>align-items</code>, <code>flex-direction: column</code>, and <code>margin-top: auto</code> or <ode>margin-bottom: auto</ode>.</p>
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <h3>With align--items</h3>
+  <p>
+    Vertically move one flex item to the top or bottom of a container by mixing
+    <code>align--items</code>, <code>flex--direction: column</code>, and
+    <code>margin-top: auto</code> or <ode>margin-bottom: auto</ode>.
+  </p>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex align--items--start flex--column p--1 border border--secondary bg--light" style="height: 200px;">
-    <div class="mb--auto p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="mb--auto p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 <div class="d--flex align--items--end flex--column p--1 border border--secondary bg--light" style="height: 200px;">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="mt--auto p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="mt--auto p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--items--start flex--column p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 200px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="mb--auto p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="mb--auto p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--items--start flex--column p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 200px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="mr--auto p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="mt--auto p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="mr--auto p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="mt--auto p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
+  </div>
 
-    <h3>Wrap</h3>
-    <p>Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with <code>.flex-nowrap</code>, wrapping with <code>.flex-wrap</code>, or reverse wrapping with <code>.flex-wrap-reverse</code>.</p>
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <h3>Wrap</h3>
+  <p>
+    Change how flex items wrap in a flex container. Choose from no wrapping at
+    all (the browser default) with <code>.flex--nowrap</code>, wrapping with
+    <code>.flex--wrap</code>, or reverse wrapping with
+    <code>.flex--wrap--reverse</code>.
+  </p>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex flex--nowrap p--1 border border--secondary bg--light" style="width: 10rem;">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex flex--nowrap p--1 border border--secondary bg--light"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="height: 200px"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
+  </div>
 
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex flex--wrap p--1 border border--secondary bg--light">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex flex--wrap p--1 border border--secondary bg--light"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
+  </div>
 
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex flex--nowrap p--1 border border--secondary bg--light">
-    <div class="order--3 p--2 bg--primary border border--primary-darker text--white">First flex item</div>
-    <div class="order--2 p--2 bg--primary border border--primary-darker text--white">Second flex item</div>
-    <div class="order--1 p--2 bg--primary border border--primary-darker text--white">Third flex item</div>
+    <div class="order--3 p--2 bg--primary border border--primary--darker text--white">First flex item</div>
+    <div class="order--2 p--2 bg--primary border border--primary--darker text--white">Second flex item</div>
+    <div class="order--1 p--2 bg--primary border border--primary--darker text--white">Third flex item</div>
 </div>
 
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex flex--wrap--reverse p--1 border border--secondary bg--light"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="order--3 p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="order--2 p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="order--1 p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="order--3 p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="order--2 p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="order--1 p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
-    <p>Responsive variations also exist for <code>order</code>.</p>
-    <ul>
-        <li><code>.flex-nowrap</code></li>
-        <li><code>.flex-wrap</code></li>
-        <li><code>.flex-wrap-reverse</code></li>
-        <li><code>.flex-sm-nowrap</code></li>
-        <li><code>.flex-sm-wrap</code></li>
-        <li><code>.flex-sm-wrap-reverse</code></li>
-        <li><code>.flex-md-nowrap</code></li>
-        <li><code>.flex-md-wrap</code></li>
-        <li><code>.flex-md-wrap-reverse</code></li>
-        <li><code>.flex-lg-nowrap</code></li>
-        <li><code>.flex-lg-wrap</code></li>
-        <li><code>.flex-lg-wrap-reverse</code></li>
-        <li><code>.flex-xl-nowrap</code></li>
-        <li><code>.flex-xl-wrap</code></li>
-        <li><code>.flex-xl-wrap-reverse</code></li>
-    </ul>
+  </div>
+  <p>Responsive variations also exist for <code>order</code>.</p>
+  <ul>
+    <li><code>.flex--nowrap</code></li>
+    <li><code>.flex--wrap</code></li>
+    <li><code>.flex--wrap--reverse</code></li>
+    <li><code>.flex--sm--nowrap</code></li>
+    <li><code>.flex--sm--wrap</code></li>
+    <li><code>.flex--sm--wrap--reverse</code></li>
+    <li><code>.flex--md--nowrap</code></li>
+    <li><code>.flex--md--wrap</code></li>
+    <li><code>.flex--md--wrap--reverse</code></li>
+    <li><code>.flex--lg--nowrap</code></li>
+    <li><code>.flex--lg--wrap</code></li>
+    <li><code>.flex--lg--wrap--reverse</code></li>
+    <li><code>.flex--xl--nowrap</code></li>
+    <li><code>.flex--xl--wrap</code></li>
+    <li><code>.flex--xl--wrap--reverse</code></li>
+  </ul>
 
-    <h3>Order</h3>
-    <p>Change the visual order of specific flex items with a handful of <code>order</code> utilities. We only provide options for making an item first or last, as well as a reset to use the DOM order. As <code>order</code> takes any integer value (e.g., <code>5</code>), add custom CSS for any additional values needed.</p>
-<div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <h3>Order</h3>
+  <p>
+    Change the visual order of specific flex items with a handful of
+    <code>order</code> utilities. We only provide options for making an item
+    first or last, as well as a reset to use the DOM order. As
+    <code>order</code> takes any integer value (e.g., <code>5</code>), add
+    custom CSS for any additional values needed.
+  </p>
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex flex--nowrap p--1 border border--secondary bg--light">
-    <div class="order--3 p--2 bg--primary border border--primary-darker text--white">First flex item</div>
-    <div class="order--2 p--2 bg--primary border border--primary-darker text--white">Second flex item</div>
-    <div class="order--1 p--2 bg--primary border border--primary-darker text--white">Third flex item</div>
+    <div class="order--3 p--2 bg--primary border border--primary--darker text--white">First flex item</div>
+    <div class="order--2 p--2 bg--primary border border--primary--darker text--white">Second flex item</div>
+    <div class="order--1 p--2 bg--primary border border--primary--darker text--white">Third flex item</div>
 </div>
 
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex flex--wrap--reverse p--1 border border--secondary bg--light"</span>&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="order--3 p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="order--2 p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
-    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="order--1 p--2 bg--primary border border--primary-darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="order--3 p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="order--2 p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
+    <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="order--1 p--2 bg--primary border border--primary--darker text--white"</span>&gt;<span class="text--primary">Flex Item</span>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
-    <ul>
-        <li><code>.order--0</code></li>
-        <li><code>.order--1</code></li>
-        <li><code>.order--2</code></li>
-        <li><code>.order--3</code></li>
-        <li><code>.order--4</code></li>
-        <li><code>.order--5</code></li>
-        <li><code>.order--6</code></li>
-        <li><code>.order--7</code></li>
-        <li><code>.order--8</code></li>
-        <li><code>.order--9</code></li>
-        <li><code>.order--10</code></li>
-        <li><code>.order--11</code></li>
-        <li><code>.order--12</code></li>
-        <li><code>.order--sm--0</code></li>
-        <li><code>.order--sm--1</code></li>
-        <li><code>.order--sm--2</code></li>
-        <li><code>.order--sm--3</code></li>
-        <li><code>.order--sm--4</code></li>
-        <li><code>.order--sm--5</code></li>
-        <li><code>.order--sm--6</code></li>
-        <li><code>.order--sm--7</code></li>
-        <li><code>.order--sm--8</code></li>
-        <li><code>.order--sm--9</code></li>
-        <li><code>.order--sm--10</code></li>
-        <li><code>.order--sm--11</code></li>
-        <li><code>.order--sm--12</code></li>
-        <li><code>.order--md--0</code></li>
-        <li><code>.order--md--1</code></li>
-        <li><code>.order--md--2</code></li>
-        <li><code>.order--md--3</code></li>
-        <li><code>.order--md--4</code></li>
-        <li><code>.order--md--5</code></li>
-        <li><code>.order--md--6</code></li>
-        <li><code>.order--md--7</code></li>
-        <li><code>.order--md--8</code></li>
-        <li><code>.order--md--9</code></li>
-        <li><code>.order--md--10</code></li>
-        <li><code>.order--md--11</code></li>
-        <li><code>.order--md--12</code></li>
-        <li><code>.order--lg--0</code></li>
-        <li><code>.order--lg--1</code></li>
-        <li><code>.order--lg--2</code></li>
-        <li><code>.order--lg--3</code></li>
-        <li><code>.order--lg--4</code></li>
-        <li><code>.order--lg--5</code></li>
-        <li><code>.order--lg--6</code></li>
-        <li><code>.order--lg--7</code></li>
-        <li><code>.order--lg--8</code></li>
-        <li><code>.order--lg--9</code></li>
-        <li><code>.order--lg--10</code></li>
-        <li><code>.order--lg--11</code></li>
-        <li><code>.order--lg--12</code></li>
-        <li><code>.order--xl--0</code></li>
-        <li><code>.order--xl--1</code></li>
-        <li><code>.order--xl--2</code></li>
-        <li><code>.order--xl--3</code></li>
-        <li><code>.order--xl--4</code></li>
-        <li><code>.order--xl--5</code></li>
-        <li><code>.order--xl--6</code></li>
-        <li><code>.order--xl--7</code></li>
-        <li><code>.order--xl--8</code></li>
-        <li><code>.order--xl--9</code></li>
-        <li><code>.order--xl--10</code></li>
-        <li><code>.order--xl--11</code></li>
-        <li><code>.order--xl--12</code></li>
-    </ul>
+  </div>
+  <ul>
+    <li><code>.order--0</code></li>
+    <li><code>.order--1</code></li>
+    <li><code>.order--2</code></li>
+    <li><code>.order--3</code></li>
+    <li><code>.order--4</code></li>
+    <li><code>.order--5</code></li>
+    <li><code>.order--6</code></li>
+    <li><code>.order--7</code></li>
+    <li><code>.order--8</code></li>
+    <li><code>.order--9</code></li>
+    <li><code>.order--10</code></li>
+    <li><code>.order--11</code></li>
+    <li><code>.order--12</code></li>
+    <li><code>.order--sm--0</code></li>
+    <li><code>.order--sm--1</code></li>
+    <li><code>.order--sm--2</code></li>
+    <li><code>.order--sm--3</code></li>
+    <li><code>.order--sm--4</code></li>
+    <li><code>.order--sm--5</code></li>
+    <li><code>.order--sm--6</code></li>
+    <li><code>.order--sm--7</code></li>
+    <li><code>.order--sm--8</code></li>
+    <li><code>.order--sm--9</code></li>
+    <li><code>.order--sm--10</code></li>
+    <li><code>.order--sm--11</code></li>
+    <li><code>.order--sm--12</code></li>
+    <li><code>.order--md--0</code></li>
+    <li><code>.order--md--1</code></li>
+    <li><code>.order--md--2</code></li>
+    <li><code>.order--md--3</code></li>
+    <li><code>.order--md--4</code></li>
+    <li><code>.order--md--5</code></li>
+    <li><code>.order--md--6</code></li>
+    <li><code>.order--md--7</code></li>
+    <li><code>.order--md--8</code></li>
+    <li><code>.order--md--9</code></li>
+    <li><code>.order--md--10</code></li>
+    <li><code>.order--md--11</code></li>
+    <li><code>.order--md--12</code></li>
+    <li><code>.order--lg--0</code></li>
+    <li><code>.order--lg--1</code></li>
+    <li><code>.order--lg--2</code></li>
+    <li><code>.order--lg--3</code></li>
+    <li><code>.order--lg--4</code></li>
+    <li><code>.order--lg--5</code></li>
+    <li><code>.order--lg--6</code></li>
+    <li><code>.order--lg--7</code></li>
+    <li><code>.order--lg--8</code></li>
+    <li><code>.order--lg--9</code></li>
+    <li><code>.order--lg--10</code></li>
+    <li><code>.order--lg--11</code></li>
+    <li><code>.order--lg--12</code></li>
+    <li><code>.order--xl--0</code></li>
+    <li><code>.order--xl--1</code></li>
+    <li><code>.order--xl--2</code></li>
+    <li><code>.order--xl--3</code></li>
+    <li><code>.order--xl--4</code></li>
+    <li><code>.order--xl--5</code></li>
+    <li><code>.order--xl--6</code></li>
+    <li><code>.order--xl--7</code></li>
+    <li><code>.order--xl--8</code></li>
+    <li><code>.order--xl--9</code></li>
+    <li><code>.order--xl--10</code></li>
+    <li><code>.order--xl--11</code></li>
+    <li><code>.order--xl--12</code></li>
+  </ul>
 
-    <h3>Align Content</h3>
-    <p>Use <code>align-content</code> utilities on flexbox containers to align flex items together on the cross axis. Choose from <code>start</code> (browser default), <code>end</code>, <code>center</code>, <code>between</code>, <code>around</code>, or <code>stretch</code>. To demonstrate these utilities, we’ve enforced <code>flex-wrap: wrap</code> and increased the number of flex items.</p>
-    <p><strong>Heads up!</strong> This property has no effect on single rows of flex items.</p>
+  <h3>Align Content</h3>
+  <p>
+    Use <code>align-content</code> utilities on flexbox containers to align flex
+    items together on the cross axis. Choose from <code>start</code> (browser
+    default), <code>end</code>, <code>center</code>, <code>between</code>,
+    <code>around</code>, or <code>stretch</code>. To demonstrate these
+    utilities, we’ve enforced <code>flex-wrap: wrap</code> and increased the
+    number of flex items.
+  </p>
+  <p>
+    <strong>Heads up!</strong> This property has no effect on single rows of
+    flex items.
+  </p>
 
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex align--content--start flex--wrap p--1 border border--secondary bg--light" style="height: 200px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--content--start flex--wrap"</span>&gt;</span>
 
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
+  </div>
 
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex align--content--end flex--wrap p--1 border border--secondary bg--light" style="height: 200px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--content--end flex--wrap"</span>&gt;</span>
 
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
+  </div>
 
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex align--content--center flex--wrap p--1 border border--secondary bg--light" style="height: 200px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--content--center flex--wrap"</span>&gt;</span>
 
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
+  </div>
 
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex align--content--between flex--wrap p--1 border border--secondary bg--light" style="height: 200px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--content--between flex--wrap"</span>&gt;</span>
 
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
+  </div>
 
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex align--content--around flex--wrap p--1 border border--secondary bg--light" style="height: 200px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--content--around flex--wrap"</span>&gt;</span>
 
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
+  </div>
 
-    <div class="highlighted-block mb--5">
-<pre style="font-family: 'Montserrat'; font-size: 12pt; margin:0;">
+  <div class="highlighted-block mb--5">
+    <pre style="font-family: 'Montserrat'; font-size: 12pt; margin: 0">
 <div class="d--flex align--content--stretch flex--wrap p--1 border border--secondary bg--light" style="height: 200px">
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
-    <div class="p--2 bg--primary border border--primary-darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
+    <div class="p--2 bg--primary border border--primary--darker text--white">Flex item</div>
 </div>
 
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--flex align--content--stretch flex--wrap"</span>&gt;</span>
 
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 </pre>
-    </div>
-    <p>Responsive variations also exist for <code>align-content</code>.</p>
-    <ul class="mb--0">
-        <li><code>.align-content-start</code></li>
-        <li><code>.align-content-end</code></li>
-        <li><code>.align-content-center</code></li>
-        <li><code>.align-content-around</code></li>
-        <li><code>.align-content-stretch</code></li>
-        <li><code>.align-content-sm-start</code></li>
-        <li><code>.align-content-sm-end</code></li>
-        <li><code>.align-content-sm-center</code></li>
-        <li><code>.align-content-sm-around</code></li>
-        <li><code>.align-content-sm-stretch</code></li>
-        <li><code>.align-content-md-start</code></li>
-        <li><code>.align-content-md-end</code></li>
-        <li><code>.align-content-md-center</code></li>
-        <li><code>.align-content-md-around</code></li>
-        <li><code>.align-content-md-stretch</code></li>
-        <li><code>.align-content-lg-start</code></li>
-        <li><code>.align-content-lg-end</code></li>
-        <li><code>.align-content-lg-center</code></li>
-        <li><code>.align-content-lg-around</code></li>
-        <li><code>.align-content-lg-stretch</code></li>
-        <li><code>.align-content-xl-start</code></li>
-        <li><code>.align-content-xl-end</code></li>
-        <li><code>.align-content-xl-center</code></li>
-        <li><code>.align-content-xl-around</code></li>
-        <li><code>.align-content-xl-stretch</code></li>
-    </ul>
+  </div>
+  <p>Responsive variations also exist for <code>align--content</code>.</p>
+  <ul class="mb--0">
+    <li><code>.align--content--start</code></li>
+    <li><code>.align--content--end</code></li>
+    <li><code>.align--content--center</code></li>
+    <li><code>.align--content--around</code></li>
+    <li><code>.align--content--stretch</code></li>
+    <li><code>.align--content--sm--start</code></li>
+    <li><code>.align--content--sm--end</code></li>
+    <li><code>.align--content--sm--center</code></li>
+    <li><code>.align--content--sm--around</code></li>
+    <li><code>.align--content--sm--stretch</code></li>
+    <li><code>.align--content--md--start</code></li>
+    <li><code>.align--content--md--end</code></li>
+    <li><code>.align--content--md--center</code></li>
+    <li><code>.align--content--md--around</code></li>
+    <li><code>.align--content--md--stretch</code></li>
+    <li><code>.align--content--lg--start</code></li>
+    <li><code>.align--content--lg--end</code></li>
+    <li><code>.align--content--lg--center</code></li>
+    <li><code>.align--content--lg--around</code></li>
+    <li><code>.align--content--lg--stretch</code></li>
+    <li><code>.align--content--xl--start</code></li>
+    <li><code>.align--content--xl--end</code></li>
+    <li><code>.align--content--xl--center</code></li>
+    <li><code>.align--content--xl--around</code></li>
+    <li><code>.align--content--xl--stretch</code></li>
+  </ul>
 </div>

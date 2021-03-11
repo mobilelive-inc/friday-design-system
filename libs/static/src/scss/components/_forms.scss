@@ -251,7 +251,7 @@ input[type='file'] {
 }
 
 .text--danger {
-  @include font-size(var(--font-size-tiny));
+  //@include font-size(var(--font-size-tiny));
   color: var(--danger);
   flex-basis: 100%;
   padding-right: 1.75rem;
