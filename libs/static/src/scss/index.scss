@@ -1,13 +1,15 @@
 @import 'vendors/rfs_autofontSizing';
 
 @import 'generic/general.functions';
+@import '../scss/generic/general.functions';
+
+@import '../styles/css-variables';
 
 @import 'settings/colors';
 @import 'settings/borders';
 @import 'settings/typography';
 @import 'settings/spacing';
 @import 'settings/forms';
-@import 'settings/gridLayout';
 @import 'settings/breakpoint';
 @import 'settings/utilities';
 @import 'settings/images';
@@ -37,8 +39,6 @@
 @import 'utilitis/code';
 @import 'utilitis/display';
 @import 'utilitis/divider';
-@import 'utilitis/flex';
-@import 'utilitis/float';
 @import 'utilitis/interactions';
 @import 'utilitis/jumbotron';
 @import 'utilitis/overflow';
@@ -49,10 +49,12 @@
 @import 'utilitis/spacing';
 @import 'utilitis/stretched-link';
 @import 'utilitis/text';
+@import 'utilitis/float';
+@import 'utilitis/flex';
 @import 'utilitis/visibility';
 
 //Tools
-@import 'tools/tool.grid';
-@import 'tools/tool.shadows';
-@import 'tools/tool.clearfix';
-@import 'tools/tool.vendor-prefixes';
+@import '../scss/tools/tool.grid';
+@import '../scss/tools/tool.shadows';
+@import '../scss/tools/tool.clearfix';
+@import '../scss/tools/tool.vendor-prefixes';
