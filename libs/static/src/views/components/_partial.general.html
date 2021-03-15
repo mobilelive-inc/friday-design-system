@@ -2,5 +2,458 @@
   <div class="infoBlockPiece">
     <h3>General</h3>
     <p>This section describes the Components and Layouts, Containers, a Grid system and Responsive Utility Classes.</p>
+    <div id="container-info" class="mb--5 highlighted-block">
+      <h4>Container</h4>
+      <p>Containers are the most basic layout element and are required while using grid system. The main objective of
+        using Container is to contain and/or center the content. Containers can also be nested as per requirement.</p>
+      <p>There are Three types of Containers in our Design System:</p>
+      <ul style="list-style: none; padding:0;">
+        <li class="mb--5">
+          <code>.container</code> sets a max-width at each responsive
+          breakpoint:
+          <div class="p--3">
+            <table style="table-layout: fixed; width: 100%;">
+              <tr>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint &lt;576px
+                </th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint ≥576px
+                </th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint ≥768px
+                </th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint ≥992px
+                </th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint ≥1200px
+                </th>
+              </tr>
+              <tr>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width: 540px;
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width: 720px
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width: 960px
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width: 1140px
+                </td>
+              </tr>
+            </table>
+          </div>
+          <p>
+            <strong>How to use:</strong>
+            <code>&lt;div class="container"&gt; Content here &lt;/div&gt;
+            </code>
+          </p>
+        </li>
+        <li class="mb--5">
+          <code>.container--fluid</code>, which always has
+          <code>width:100%</code> irrespective of breakpoints:
+          <div class="p--3">
+            <table style="table-layout: fixed; width: 100%;">
+              <tr>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint &lt;576px
+                </th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint ≥576px
+                </th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint ≥768px
+                </th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint ≥992px
+                </th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint ≥1200px
+                </th>
+              </tr>
+              <tr>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+              </tr>
+            </table>
+          </div>
+        </li>
+        <li>
+          <code>.container--{breakpoint}</code>, has
+          <code>width:100%</code> until the set breakpoint:
+          <div class="p--3">
+            <table style="table-layout: fixed; width: 100%;">
+              <tr>
+                <th style="padding: 10px; border: 1px solid #aaa;"></th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint &lt;576px
+                </th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint ≥576px
+                </th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint ≥768px
+                </th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint ≥992px
+                </th>
+                <th style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  breakpoint ≥1200px
+                </th>
+              </tr>
+              <tr>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  <code>.container--sm</code>
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width:540px
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width:720px
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width:960px
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width:1140px
+                </td>
+              </tr>
+              <tr>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  <code>.container--md</code>
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width:720px
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width:960px
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width:1140px
+                </td>
+              </tr>
+              <tr>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  <code>.container--lg</code>
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width:960px
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width:1140px
+                </td>
+              </tr>
+              <tr>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  <code>.container--xl</code>
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  width:100%
+                </td>
+                <td style="
+                  padding: 10px;
+                  text-align: center;
+                  border: 1px solid #aaa;
+                ">
+                  max-width:1140px
+                </td>
+              </tr>
+            </table>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="mb--3 highlighted-block">
+      <h4>Grid system</h4>
+      <p>FDS provides mobile first flex based grid system to build layouts of various sizes. Grid system contains 12 columns, 5 breakpoints and many utility classes.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col bg--primary--light">
+            <span>One of three columns</span>
+          </div>
+          <div class="col bg--danger">
+            <span>One of three columns</span>
+          </div>
+          <div class="col bg--success">
+            <span>One of three columns</span>
+          </div>
+        </div>
+      </div>
+      <p>
+        <meta charset="utf-8">
+      </p>
+      <pre class="chroma"
+        style='box-sizing: border-box; font-family: Montserrat; font-size: 14px; margin-top: 0.65rem; margin-bottom: 0.65rem; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;'><code class="language-html" data-lang="html" style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;container&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+  <span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;row&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+    <span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;col--sm&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+      One of three columns
+    <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+    <span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;col--sm&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+      One of three columns
+    <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+    <span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;col--sm&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+      One of three columns
+    <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+  <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+<span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span></code></pre>
+<p>Above code creates 3 columns of equal width centered in the page with <span class="text--primary">'.container'</span> class.</p>
+<h5>Auto Layout</h5>
+<p>Using <span>col</span> only without specifying sm or md generates equal size columns:</p>
+<p>
+  <meta charset="utf-8">
+</p>
+<pre class="chroma"
+  style="box-sizing: border-box; font-family: Montserrat; font-size: 14px; margin-top: 0.65rem; margin-bottom: 0.65rem; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><code class="language-html" data-lang="html" style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;container&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+  <span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;row&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+    <span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;col&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+      One of three columns
+    <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+    <span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;col&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+      One of three columns
+    <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+    <span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;col&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+      One of three columns
+    <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+  <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+<span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span></code></pre>
+    </div>
   </div>
 </div>

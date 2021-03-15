@@ -42,21 +42,21 @@
 
   <div class="highlighted-block mb--3">
 <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
-.mt-0 {
-  margin-top: 0 !important;
+.mt--0 {
+  margin-top: 0;
 }
 
-.ml-1 {
-  margin-left: ($spacer * .25) !important;
+.ml--1 {
+  margin-left: ($spacer * .25);
 }
 
-.px-2 {
-  padding-left: ($spacer * .5) !important;
-  padding-right: ($spacer * .5) !important;
+.px--2 {
+  padding-left: ($spacer * .5);
+  padding-right: ($spacer * .5);
 }
 
-.p-3 {
-  padding: $spacer !important;
+.p--3 {
+  padding: $spacer;
 }
 </pre>
   </div>
@@ -64,7 +64,8 @@
   <h3 class="h4">Horizontal centering</h3>
   <p>Additionally, FDS also includes an <code>.mx-auto</code> class for horizontally centering fixed-width block level content—that is, content that has <code>display: block</code> and a <code>width</code> set—by setting the horizontal margins to <code>auto</code>.</p>
   <div class="highlighted-block mb--3">
-    <div class="mx--auto bg--primary text--center" style="width: 200px;">Centered element</div>
+    <div class="mx--auto text--center" style="width: 200px;"><span class="p--2 bg--primary d--inline-block mb--3">Centered
+        element</span></div>
 <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="mx--auto"</span> <span style="color: rgb(0,0,128);">style</span><span style="color: rgb(0,128,0);">="width: 200px;"</span>&gt;<code style="color: #f48245 !important;">Centered element</code>&lt;/div&gt;</span>
 </pre>
@@ -72,16 +73,15 @@
 
   <h3 class="h4">Negative margin</h3>
   <p>In CSS, <code>margin</code> properties can utilize negative values (<code>padding</code> cannot). As of 4.2, we’ve added negative margin utilities for every non-zero integer size listed above (e.g., <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>, <code>5</code>, <code>6</code>, <code>7</code>, <code>8</code>). These utilities are ideal for customizing grid column gutters across breakpoints.</p>
-  <p>The syntax is nearly the same as the default, positive margin utilities, but with the addition of n before the requested size. Here’s an example class that’s the opposite of <code>.mt-1</code>:</p>
+  <p>The syntax is nearly the same as the default, positive margin utilities, but with the addition of n before the requested size. Here’s an example class that’s the opposite of <code>.mt--1</code>:</p>
   <div class="highlighted-block mb--3">
-    <div class="mx--auto bg--primary text--center" style="width: 200px;">Centered element</div>
 <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
-.mt-n1 {
+.mt--n1 {
   margin-top: -0.25rem !important;
 }
 </pre>
   </div>
-  <p>Here’s an example of customizing the FDS grid at the medium (<code>md</code>) breakpoint and above. We’ve increased the <code>.col</code> padding with <code>.px-md-5</code> and then counteracted that with <code>.mx-md-n5</code> on the parent <code>.row</code>.</p>
+  <p>Here’s an example of customizing the FDS grid at the medium (<code>md</code>) breakpoint and above. We’ve increased the <code>.col</code> padding with <code>.px--md--5</code> and then counteracted that with <code>.mx-md-n5</code> on the parent <code>.row</code>.</p>
   <div class="highlighted-block">
     <div class="row mx--md--n5 mb--5">
       <div class="col px--md--5"><div class="p--3 border bg--light">Custom column padding</div></div>
