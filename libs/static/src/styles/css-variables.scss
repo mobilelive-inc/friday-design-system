@@ -390,6 +390,10 @@ $global-spacers: (
         .col#{$infix}--#{$i} {
           @extend %grid-column;
         }
+        .col--#{$i} {
+          @extend %grid-column;
+          @include make-col($i, $columns);
+        }
       }
     }
 
@@ -428,16 +432,16 @@ $global-spacers: (
         }
       }
 
-      .order#{$infix}-first {
+      .order#{$infix}--first {
         order: -1;
       }
 
-      .order#{$infix}-last {
+      .order#{$infix}--last {
         order: $columns + 1;
       }
 
       @for $i from 0 through $columns {
-        .order#{$infix}-#{$i} {
+        .order#{$infix}--#{$i} {
           order: $i;
         }
       }
@@ -447,7 +451,7 @@ $global-spacers: (
         @for $i from 0 through ($columns - 1) {
           @if not($infix == '' and $i == 0) {
             // Avoid emitting useless .offset-0
-            .offset#{$infix}-#{$i} {
+            .offset#{$infix}--#{$i} {
               @include make-col-offset($i, $columns);
             }
           }
