@@ -27,7 +27,7 @@ $gutter-half: calc(var(--gutter-width) / 2);
 
 @mixin make-col-auto() {
   flex: 0 0 auto;
-  width: auto;
+  width: auto !important;
   max-width: 100%; // Reset earlier grid tiers
 }
 
