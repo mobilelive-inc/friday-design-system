@@ -4,6 +4,7 @@
 
 $enable-grid-classes: true;
 $gutter: var(--gutter-width);
+$gutter-half: calc(var(--gutter-width) / 2);
 
 @mixin row-cols($count) {
   & > * {
@@ -370,15 +371,14 @@ $global-spacers: (
 
 @mixin make-grid-columns(
   $columns: $grid-columns,
-  $breakpoints: $grid-breakpoints,
-  $gutter : calc(#{$gutter} / 2)
+  $breakpoints: $grid-breakpoints
 ) {
   // Common properties for all breakpoints
   %grid-column {
     position: relative;
     width: 100%;
-    padding-right: $gutter;
-    padding-left: $gutter;
+    padding-right: $gutter-half;;
+    padding-left: $gutter-half;;
   }
 
   @each $breakpoint in map-keys($breakpoints) {
@@ -457,6 +457,22 @@ $global-spacers: (
   }
 }
 
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+  max-width: 100%;
+  @extend %grid-column;
+}
+.col--auto {
+  position: relative;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+  padding-right: $gutter-half;
+  padding-left: $gutter-half;
+}
+
 // Columns
 //
 // Common styles for small and large grid columns
@@ -474,14 +490,14 @@ $global-spacers: (
   }
 
   // 100% wide container at all breakpoints
-  .container-fluid {
+  .container--fluid {
     @include make-container();
   }
 
   // Responsive containers that are 100% wide until a breakpoint
   @each $breakpoint, $container-max-width in $container-max-widths {
     .container--#{$breakpoint} {
-      @extend .container-fluid;
+      @extend .container--fluid;
     }
 
     @media(min-width: var(--breakpoint-#{$breakpoint})){
