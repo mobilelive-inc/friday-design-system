@@ -98,14 +98,14 @@
     @if $columns > 0 {
       // Allow columns to stretch full width below their breakpoints
       @for $i from 1 through $columns {
-        .col#{$infix}-#{$i} {
+        .col#{$infix}--#{$i} {
           @extend %grid-column;
         }
       }
     }
 
     .col#{$infix},
-    .col#{$infix}-auto {
+    .col#{$infix}--auto {
       @extend %grid-column;
     }
 
@@ -120,7 +120,7 @@
 
       @if $grid-row-columns > 0 {
         @for $i from 1 through $grid-row-columns {
-          .row-cols#{$infix}-#{$i} {
+          .row-cols#{$infix}--#{$i} {
             @include row-cols($i);
           }
         }
@@ -132,7 +132,7 @@
 
       @if $columns > 0 {
         @for $i from 1 through $columns {
-          .col#{$infix}-#{$i} {
+          .col#{$infix}--#{$i} {
             @include make-col($i, $columns);
           }
         }
