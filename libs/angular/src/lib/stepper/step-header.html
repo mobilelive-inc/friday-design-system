@@ -28,9 +28,7 @@
       </ng-container>
       <ng-container *ngIf="!editable">
         <!-- [class]="_getDefaultTextForState(state) === 'done' ? 'icon-check font--size--lg': 'icon-create'" -->
-        <span aria-hidden="true" *ngSwitchDefault>
-          {{ index + 1 }}
-        </span>
+        <span aria-hidden="true" *ngSwitchDefault> {{ index + 1 }} </span>
       </ng-container>
     </ng-container>
   </span>

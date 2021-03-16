@@ -276,9 +276,8 @@ export class Accordion implements BlockableUI, AfterContentInit, OnDestroy {
 
   @Output() activeIndexChange: EventEmitter<any> = new EventEmitter();
 
-  @ContentChildren(AccordionTabComponent) tabList: QueryList<
-    AccordionTabComponent
-  >;
+  @ContentChildren(AccordionTabComponent)
+  tabList: QueryList<AccordionTabComponent>;
 
   tabListSubscription: Subscription;
 

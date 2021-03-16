@@ -12,8 +12,4 @@
   //@each $color, $value in $theme-colors {
   //  --#{$color}: #{$value};
   //}
-
-  @each $bp, $value in $grid-breakpoints {
-    --breakpoint-#{$bp}: #{$value};
-  }
 }

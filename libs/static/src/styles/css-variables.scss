@@ -1,0 +1,536 @@
+@import '../scss/generic/general.functions';
+@import '../../theme/css-variables';
+@import '../../theme/breakpoint';
+
+$enable-grid-classes: true;
+$gutter: var(--gutter-width);
+$gutter-half: calc(var(--gutter-width) / 2);
+
+@mixin row-cols($count) {
+  & > * {
+    flex: 0 0 100% / $count;
+    max-width: 100% / $count;
+  }
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0 percentage($size / $columns);
+  // Add a `max-width` to ensure content within each column does not blow out
+  // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+  // do not appear to require this.
+  max-width: percentage($size / $columns);
+}
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  $num: $size / $columns;
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+@mixin make-col-auto() {
+  flex: 0 0 auto;
+  width: auto !important;
+  max-width: 100%; // Reset earlier grid tiers
+}
+
+// Grid containers
+// maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1370px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+@include _assert-ascending($container-max-widths, '$container-max-widths');
+
+$displays: inline, block, contents, block, flex, grid, inline-block, inline-flex,
+  inline-grid, inline-table, list-item, run-in, table, table-caption,
+  table-column-group, table-header-group, table-footer-group, table-row-group,
+  table-cell, table-column, table-row, none, initial, inherit;
+
+$global-spacers: (
+  0: 0,
+  1: (
+    calc(var(--global-spacer) * 0.25)
+  ),
+  2: (
+    calc(var(--global-spacer) * 0.5)
+  ),
+  3: (
+    calc(var(--global-spacer) * 1)
+  ),
+  4: (
+    calc(var(--global-spacer) * 1.5)
+  ),
+  5: (
+    calc(var(--global-spacer) * 2)
+  ),
+  6: (
+    calc(var(--global-spacer) * 3)
+  ),
+  7: (
+    calc(var(--global-spacer) * 4)
+  ),
+  8: (
+    calc(var(--global-spacer) * 8)
+  )
+);
+
+//>> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    ""  (Returns a blank string)
+//    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    "-sm"
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, '', '--#{$name}');
+}
+
+// display classes
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @media (min-width: var(--breakpoint-#{$breakpoint})) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @each $val in $displays {
+      .d#{$infix}--#{$val} {
+        display: $val !important;
+      }
+    }
+  }
+}
+
+// flex classes
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @media (min-width: var(--breakpoint-#{$breakpoint})) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .flex#{$infix}--row {
+      flex-direction: row !important;
+    }
+    .flex#{$infix}--column {
+      flex-direction: column !important;
+    }
+    .flex#{$infix}--row--reverse {
+      flex-direction: row-reverse !important;
+    }
+    .flex#{$infix}--column--reverse {
+      flex-direction: column-reverse !important;
+    }
+
+    .flex#{$infix}--wrap {
+      flex-wrap: wrap !important;
+    }
+    .flex#{$infix}--nowrap {
+      flex-wrap: nowrap !important;
+    }
+    .flex#{$infix}--wrap--reverse {
+      flex-wrap: wrap-reverse !important;
+    }
+    .flex#{$infix}--fill {
+      flex: 1 1 auto !important;
+    }
+    .flex#{$infix}--grow--0 {
+      flex-grow: 0 !important;
+    }
+    .flex#{$infix}--grow--1 {
+      flex-grow: 1 !important;
+    }
+    .flex#{$infix}--shrink--0 {
+      flex-shrink: 0 !important;
+    }
+    .flex#{$infix}--shrink--1 {
+      flex-shrink: 1 !important;
+    }
+
+    .justify--content#{$infix}--start {
+      justify-content: flex-start !important;
+    }
+    .justify--content#{$infix}--end {
+      justify-content: flex-end !important;
+    }
+    .justify--content#{$infix}--center {
+      justify-content: center !important;
+    }
+    .justify--content#{$infix}--between {
+      justify-content: space-between !important;
+    }
+    .justify--content#{$infix}--around {
+      justify-content: space-around !important;
+    }
+
+    .align--items#{$infix}--start {
+      align-items: flex-start !important;
+    }
+    .align--items#{$infix}--end {
+      align-items: flex-end !important;
+    }
+    .align--items#{$infix}--center {
+      align-items: center !important;
+    }
+    .align--items#{$infix}--baseline {
+      align-items: baseline !important;
+    }
+    .align--items#{$infix}--stretch {
+      align-items: stretch !important;
+    }
+
+    .align--content#{$infix}--start {
+      align-content: flex-start !important;
+    }
+    .align--content#{$infix}--end {
+      align-content: flex-end !important;
+    }
+    .align--content#{$infix}--center {
+      align-content: center !important;
+    }
+    .align--content#{$infix}--between {
+      align-content: space-between !important;
+    }
+    .align--content#{$infix}--around {
+      align-content: space-around !important;
+    }
+    .align--content#{$infix}--stretch {
+      align-content: stretch !important;
+    }
+
+    .align--self#{$infix}--auto {
+      align-self: auto !important;
+    }
+    .align--self#{$infix}--start {
+      align-self: flex-start !important;
+    }
+    .align--self#{$infix}--end {
+      align-self: flex-end !important;
+    }
+    .align--self#{$infix}--center {
+      align-self: center !important;
+    }
+    .align--self#{$infix}--baseline {
+      align-self: baseline !important;
+    }
+    .align--self#{$infix}--stretch {
+      align-self: stretch !important;
+    }
+  }
+}
+
+// float classes
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @media (min-width: var(--breakpoint-#{$breakpoint})) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .float#{$infix}--left {
+      float: left !important;
+    }
+    .float#{$infix}--right {
+      float: right !important;
+    }
+    .float#{$infix}--none {
+      float: none !important;
+    }
+  }
+}
+
+//Utility classes
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @media (min-width: var(--breakpoint-#{$breakpoint})) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $global-spacers {
+        .#{$abbrev}#{$infix}--#{$size} {
+          #{$prop}: $length !important;
+        }
+        .#{$abbrev}t#{$infix}--#{$size},
+        .#{$abbrev}y#{$infix}--#{$size} {
+          #{$prop}-top: $length !important;
+        }
+        .#{$abbrev}r#{$infix}--#{$size},
+        .#{$abbrev}x#{$infix}--#{$size} {
+          #{$prop}-right: $length !important;
+        }
+        .#{$abbrev}b#{$infix}--#{$size},
+        .#{$abbrev}y#{$infix}--#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+        .#{$abbrev}l#{$infix}--#{$size},
+        .#{$abbrev}x#{$infix}--#{$size} {
+          #{$prop}-left: $length !important;
+        }
+      }
+    }
+
+    // Negative margins (e.g., where `.mb-*` is negative version of `.mb-1`)
+    @each $size, $length in $global-spacers {
+      @if $size != 0 {
+        .m#{$infix}--n#{$size} {
+          margin: -$length !important;
+        }
+        .mt#{$infix}--n#{$size},
+        .my#{$infix}--n#{$size} {
+          margin-top: -$length !important;
+        }
+        .mr#{$infix}--n#{$size},
+        .mx#{$infix}--n#{$size} {
+          margin-right: -$length !important;
+        }
+        .mb#{$infix}--n#{$size},
+        .my#{$infix}--n#{$size} {
+          margin-bottom: -$length !important;
+        }
+        .ml#{$infix}--n#{$size},
+        .mx#{$infix}--n#{$size} {
+          margin-left: -$length !important;
+        }
+      }
+    }
+
+    // Some special margin utils
+    .m#{$infix}--auto {
+      margin: auto !important;
+    }
+    .mt#{$infix}--auto,
+    .my#{$infix}--auto {
+      margin-top: auto !important;
+    }
+    .mr#{$infix}--auto,
+    .mx#{$infix}--auto {
+      margin-right: auto !important;
+    }
+    .mb#{$infix}--auto,
+    .my#{$infix}--auto {
+      margin-bottom: auto !important;
+    }
+    .ml#{$infix}--auto,
+    .mx#{$infix}--auto {
+      margin-left: auto !important;
+    }
+  }
+}
+// Responsive alignment
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @media (min-width: var(--breakpoint-#{$breakpoint})) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}--left {
+      text-align: left !important;
+    }
+    .text#{$infix}--right {
+      text-align: right !important;
+    }
+    .text#{$infix}--center {
+      text-align: center !important;
+    }
+  }
+}
+/// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+@mixin make-container($gutter: $gutter) {
+  $gutter: calc(#{$gutter} / 2);
+  width: 100%;
+  padding-right: $gutter;
+  padding-left: $gutter;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-container-max-widths(
+  $max-widths: $container-max-widths,
+  $breakpoints: $grid-breakpoints
+) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @media (min-width: var(--breakpoint-#{$breakpoint})) {
+      max-width: var(--container-#{$breakpoint});
+    }
+  }
+}
+
+@mixin make-row($gutter: $gutter) {
+  $gutter: calc(#{$gutter} / -2);
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: $gutter;
+  margin-left: $gutter;
+}
+
+@mixin make-col-ready($gutter: $gutter) {
+  $gutter: calc(#{$gutter} / 2);
+  position: relative;
+  // Prevent columns from becoming too narrow when at smaller grid tiers by
+  // always setting `width: 100%;`. This works because we use `flex` values
+  // later on to override this initial width.
+  width: 100%;
+  padding-right: $gutter;
+  padding-left: $gutter;
+}
+
+// Framework grid generation
+//
+// Used only by DesignSystem to generate the correct number of grid classes given
+// any value of `$grid-columns`.
+
+@mixin make-grid-columns(
+  $columns: $grid-columns,
+  $breakpoints: $grid-breakpoints
+) {
+  // Common properties for all breakpoints
+  %grid-column {
+    position: relative;
+    width: 100%;
+    padding-right: $gutter-half;
+    padding-left: $gutter-half;
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @if $columns > 0 {
+      // Allow columns to stretch full width below their breakpoints
+      @for $i from 1 through $columns {
+        .col#{$infix}--#{$i} {
+          @extend %grid-column;
+        }
+      }
+    }
+
+    .col#{$infix},
+    .col#{$infix}--auto {
+      @extend %grid-column;
+    }
+
+    @media (min-width: var(--breakpoint-#{$breakpoint})) {
+      // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+      .col#{$infix} {
+        flex-basis: 0;
+        flex-grow: 1;
+        min-width: 0;
+        max-width: 100%;
+      }
+
+      @if $grid-row-columns > 0 {
+        @for $i from 1 through $grid-row-columns {
+          .row-cols#{$infix}--#{$i} {
+            @include row-cols($i);
+          }
+        }
+      }
+
+      .col#{$infix}--auto {
+        @include make-col-auto();
+      }
+
+      @if $columns > 0 {
+        @for $i from 1 through $columns {
+          .col#{$infix}--#{$i} {
+            @include make-col($i, $columns);
+          }
+        }
+      }
+
+      .order#{$infix}--first {
+        order: -1;
+      }
+
+      .order#{$infix}--last {
+        order: $columns + 1;
+      }
+
+      @for $i from 0 through $columns {
+        .order#{$infix}--#{$i} {
+          order: $i;
+        }
+      }
+
+      @if $columns > 0 {
+        // `$columns - 1` because offsetting by the width of an entire row isn't possible
+        @for $i from 0 through ($columns - 1) {
+          @if not($infix == '' and $i == 0) {
+            // Avoid emitting useless .offset-0
+            .offset#{$infix}--#{$i} {
+              @include make-col-offset($i, $columns);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 0;
+  max-width: 100%;
+  @extend %grid-column;
+}
+.col--auto {
+  position: relative;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+  padding-right: $gutter-half;
+  padding-left: $gutter-half;
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@if $enable-grid-classes {
+  @include make-grid-columns();
+}
+
+@if $enable-grid-classes {
+  // Single container class with breakpoint max-widths
+  .container {
+    @include make-container();
+    @include make-container-max-widths();
+  }
+
+  // 100% wide container at all breakpoints
+  .container--fluid {
+    @include make-container();
+  }
+
+  // Responsive containers that are 100% wide until a breakpoint
+  @each $breakpoint, $container-max-width in $container-max-widths {
+    .container--#{$breakpoint} {
+      @extend .container--fluid;
+    }
+
+    @media (min-width: var(--breakpoint-#{$breakpoint})) {
+      %responsive-container-#{$breakpoint} {
+        max-width: $container-max-width;
+      }
+
+      // Extend each breakpoint which is smaller or equal to the current breakpoint
+      $extend-breakpoint: true;
+
+      @each $name, $width in $grid-breakpoints {
+        @if ($extend-breakpoint) {
+          .container#{breakpoint-infix($name, $grid-breakpoints)} {
+            @extend %responsive-container-#{$breakpoint};
+          }
+
+          // Once the current breakpoint is reached, stop extending
+          @if ($breakpoint == $name) {
+            $extend-breakpoint: false;
+          }
+        }
+      }
+    }
+  }
+}
