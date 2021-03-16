@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { SuccessPageComponent } from './success-page.component';
-import { FdsAngularModule } from "@fds/angular";
+import { FdsLibAngularModule } from "@fds/angular";
 
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
   declarations: [SuccessPageComponent],
   imports: [
     CommonModule,
-    FdsAngularModule,
+    FdsLibAngularModule,
     RouterModule.forChild(routes)
   ]
 })

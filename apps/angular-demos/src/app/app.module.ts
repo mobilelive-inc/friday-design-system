@@ -38,6 +38,8 @@ import { SolidShadowComponent } from './examples/card/solid-shadow/solid-shadow.
 import { IconFixedHeightComponent } from './examples/card/icon-fixed-height/icon-fixed-height.component';
 import { NoIconComponent } from './examples/card/no-icon/no-icon.component';
 import { WithImageComponent } from './examples/card/with-image/with-image.component';
+import { AdvanceStepperComponent } from './examples/stepper/advance-stepper/advance-stepper.component';
+import { ImageWithSolidShadowComponent } from './examples/card/image-with-solid-shadow/image-with-solid-shadow.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { WithImageComponent } from './examples/card/with-image/with-image.compon
     SolidShadowComponent,
     IconFixedHeightComponent,
     NoIconComponent,
-    WithImageComponent
+    WithImageComponent,
+    AdvanceStepperComponent,
+    ImageWithSolidShadowComponent
   ],
   imports: [
     BrowserModule,
