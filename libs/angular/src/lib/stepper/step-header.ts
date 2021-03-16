@@ -5,7 +5,8 @@ import {
   Input,
   TemplateRef,
   ElementRef,
-  ChangeDetectorRef
+  ChangeDetectorRef,
+  HostBinding
 } from '@angular/core';
 import { FdsStepLabel } from './step-label';
 import { StepState, CdkStepHeader } from '@angular/cdk/stepper';
@@ -36,6 +37,18 @@ export class FdsStepHeader extends CdkStepHeader {
 
   /** Whether the given step is selected. */
   @Input() selected: boolean;
+
+  @HostBinding('attr.aria-label')
+  public get stepAriaLabel(): string {
+    return `Step ${this.index + 1} ${this._stringLabel()} ${
+      this._getDefaultTextForState(this.state) === 'create' ? 'Done' : ''
+    }`;
+  }
+
+  @HostBinding('attr.tabindex')
+  public get isSelected(): string | number {
+    return this.selected ? 0 : '';
+  }
 
   /** Whether the given step label is active. */
   @Input() active: boolean;
@@ -90,6 +103,9 @@ export class FdsStepHeader extends CdkStepHeader {
     if (state == 'edit') {
       return 'create';
     }
+    // if (state == 'done') {
+    //   return 'done';
+    // }
     if (state == 'error') {
       return 'warning';
     }

@@ -1,3 +1,10 @@
+.fds-box-counter {
+  background-color: var(--bg-color-counter);
+  span {
+    min-width: auto;
+    cursor: default !important;
+  }
+}
 .fds-stepper-label-position-bottom .fds-horizontal-stepper-header-container {
   align-items: flex-start;
   position: relative;
