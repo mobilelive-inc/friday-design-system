@@ -27,7 +27,11 @@ export class FdsStepperNext extends CdkStepperNext {
   _handleClick() {
     const steps = this._stepper.steps.toArray();
     const index = this._stepper.selectedIndex;
-    if (steps[index] && steps[index].stepControl.invalid) {
+    if (
+      steps[index] &&
+      steps[index].stepControl &&
+      steps[index].stepControl.invalid
+    ) {
       markFormGroupTouched(steps[index].stepControl as FormGroup);
     }
     // window.scrollTo(0, 0);

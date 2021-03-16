@@ -138,10 +138,8 @@ export class FdsStepper extends CdkStepper implements AfterContentInit {
   inputs: ['selectedIndex'],
   styleUrls: ['./stepper.scss'],
   host: {
-    /* class: 'fds-stepper-horizontal', */
     id: 'fds--slider--stepper',
     class: 'fds-advanced-stepper fds--slider--stepper',
-    role: 'progressbar',
     ariaValuenow: '0',
     ariaValuemin: '0',
     ariaValuemax: '100'
