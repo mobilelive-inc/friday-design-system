@@ -36,40 +36,10 @@
   font-family: var(--font-family-monospace);
 }
 
-.text--left {
-  text-align: left !important;
-}
-.text--right {
-  text-align: right !important;
-}
-.text--center {
-  text-align: center !important;
-}
-
-// Alignment
-.text--justify {
-  text-align: justify !important;
-}
-.text--wrap {
-  white-space: normal !important;
-}
-.text--nowrap {
-  white-space: nowrap !important;
-}
 .text--truncate {
   @include text--truncate();
 }
 
-// Transformation
-.text--lowercase {
-  text-transform: lowercase;
-}
-.text--uppercase {
-  text-transform: uppercase;
-}
-.text--capitalize {
-  text-transform: capitalize;
-}
 
 // Weight and italics
 .font--weight--light {
@@ -118,21 +88,11 @@
   @include text--hide($ignore-warning: true);
 }
 
-.text--decoration--none {
-  text-decoration: none;
-}
-.text--decoration--underline {
-  text-decoration: underline !important;
-}
 .text--break {
   word-break: break-word; // IE & < Edge 18
   overflow-wrap: break-word;
 }
 
-// Reset
-.text--reset {
-  color: inherit;
-}
 
 // Horizontal rules
 hr {
