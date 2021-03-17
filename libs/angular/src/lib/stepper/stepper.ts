@@ -99,9 +99,8 @@ export class FdsStepper extends CdkStepper implements AfterContentInit {
   /** Steps that belong to the current stepper, excluding ones from nested steppers. */
   readonly steps: QueryList<FdsStep> = new QueryList<FdsStep>();
   /** Event emitted when the current step is done transitioning in. */
-  @Output() readonly animationDone: EventEmitter<void> = new EventEmitter<
-    void
-  >();
+  @Output()
+  readonly animationDone: EventEmitter<void> = new EventEmitter<void>();
   /** Stream of animation `done` events when the body expands/collapses. */
   _animationDone = new Subject<AnimationEvent>();
 
@@ -138,10 +137,8 @@ export class FdsStepper extends CdkStepper implements AfterContentInit {
   inputs: ['selectedIndex'],
   styleUrls: ['./stepper.scss'],
   host: {
-    /* class: 'fds-stepper-horizontal', */
     id: 'fds--slider--stepper',
     class: 'fds-advanced-stepper fds--slider--stepper',
-    role: 'progressbar',
     ariaValuenow: '0',
     ariaValuemin: '0',
     ariaValuemax: '100'
@@ -154,7 +151,8 @@ export class FdsStepper extends CdkStepper implements AfterContentInit {
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FdsHorizontalStepper extends FdsStepper
+export class FdsHorizontalStepper
+  extends FdsStepper
   implements AfterContentInit {
   /** Whether the label should display in bottom or end position. */
   @Input()

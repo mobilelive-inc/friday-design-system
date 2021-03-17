@@ -13,7 +13,7 @@ export const FDS_ERROR = new InjectionToken<ErrorDirective>('FdsError');
 @Directive({
   selector: 'fds-error',
   host: {
-    class: 'alert-danger',
+    class: 'alert-danger text--danger d--flex align--items--center p--0',
     role: 'alert',
     '[attr.id]': 'id'
   },

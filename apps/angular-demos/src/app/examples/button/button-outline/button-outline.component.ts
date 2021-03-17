@@ -15,7 +15,7 @@ import { Component, OnInit } from '@angular/core';
     <fds-button className="btn--info--outline mb--2">Info</fds-button>&nbsp;
     <fds-button className="btn--light--outline mb--2">Light</fds-button>&nbsp;
     <fds-button className="btn--dark--outline mb--2">Dark</fds-button>&nbsp;
-    <fds-button className="btn--dark--outline mb--2" [disabled]="true"
+    <fds-button className="btn--dark--outline mb--2" [ariaDisabled]="true"
       >Disabled</fds-button
     >
   `,
