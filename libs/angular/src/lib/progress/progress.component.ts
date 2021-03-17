@@ -16,7 +16,7 @@ import { Component, Input, OnInit } from '@angular/core';
           role="alert"
           aria-live="polite"
           aria-atomic="true"
-          class="pt--2 px--2 bg--white"
+          class="pt--2 px--2"
           *ngIf="showLabel"
           [ngStyle]="_getLabelStyle()"
           >{{ formatValue(value) }}</span

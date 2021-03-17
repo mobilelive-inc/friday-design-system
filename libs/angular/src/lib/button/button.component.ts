@@ -15,7 +15,7 @@ import {
       [attr.type]="type"
       [class]="className"
       [ngStyle]="style"
-      [disabled]="disabled"
+      [attr.aria-disabled]="ariaDisabled"
       [ngClass]="{
         btn: true,
         'p-button-icon-only': icon && !label,
@@ -60,7 +60,7 @@ export class ButtonComponent implements AfterContentInit {
 
   @Input() label: string;
 
-  @Input() disabled: boolean;
+  @Input() ariaDisabled: boolean;
 
   @Input() style: any;
 
