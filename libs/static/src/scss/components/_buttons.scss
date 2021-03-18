@@ -36,7 +36,7 @@
   background-color: transparent;
   border: var(--btn-border-width) solid transparent;
   min-height: var(--btn-standard-hight);
-  padding: var(--btn-padding-y-sm) var(--btn-padding-x);
+  padding: var(--btn-padding-y) var(--btn-padding-x);
   font-size: var(--btn-font-size);
   line-height: var(--btn-line-height);
   border-radius: var(--btn-border-radius);
@@ -567,11 +567,11 @@
   }
 
   &--sm {
+    min-width: var(--btn-sm-min-width);
     padding: var(--btn-padding-y-sm) var(--btn-padding-x-sm);
     font-size: var(--btn-font-size-sm);
     line-height: var(--btn-line-height);
     border-radius: var(--btn-border-radius-sm);
-    min-height: auto;
   }
 
   &--tooltip {

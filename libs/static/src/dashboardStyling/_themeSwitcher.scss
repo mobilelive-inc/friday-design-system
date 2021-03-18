@@ -125,12 +125,23 @@
     width: 68px;
     height: 68px;
     color: #2a2a2a;
-    &.navy {
-      background: var(--navy);
-      color: #ffffff;
-    }
+    min-width: auto;
     &.default {
       background: var(--orange);
+      border-color: var(--orange);
+    }
+    &.navy {
+      color: var(--white);
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+    &.lemon {
+      background: var(--lemon);
+      border-color: var(--lemon);
+    }
+    &.lime {
+      background: var(--lime);
+      border-color: var(--lime);
     }
   }
 }

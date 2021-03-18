@@ -4,6 +4,7 @@
 
 .fds-btncollapse,
 .fds-btnaccordion {
+  padding: var(--collapse-heading-padding);
   span {
     font-size: var(--collapse-heading-text-font-size);
   }
