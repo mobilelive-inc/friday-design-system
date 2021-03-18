@@ -1,26 +1,26 @@
-
-.wrap-collabsible{
-  .lbl-toggle.html-label::after{
-    content:'Show HTML Code';
+.wrap-collabsible {
+  .lbl-toggle.html-label::after {
+    content: 'Show HTML Code';
   }
-  .toggle:checked+.lbl-toggle.html-label::after{
-    content:'Hide HTML Code'
+  .toggle:checked + .lbl-toggle.html-label::after {
+    content: 'Hide HTML Code';
   }
-  .lbl-toggle.scss-label::after{
-    content:'Show SCSS Code';
+  .lbl-toggle.scss-label::after {
+    content: 'Show SCSS Code';
   }
-  .toggle:checked+.lbl-toggle.scss-label::after{
-    content:'Hide SCSS Code'
+  .toggle:checked + .lbl-toggle.scss-label::after {
+    content: 'Hide SCSS Code';
   }
-  .lbl-toggle.js-label::after{
-    content:'Show Javascript Code';
+  .lbl-toggle.js-label::after {
+    content: 'Show Javascript Code';
   }
-  .toggle:checked+.lbl-toggle.js-label::after{
-    content:'Hide Javascript Code'
+  .toggle:checked + .lbl-toggle.js-label::after {
+    content: 'Hide Javascript Code';
   }
 }
+
 .navbar-holder {
-  background-color:var(--white);
+  background-color: var(--white);
 }
 .navbar {
   display: flex;
@@ -51,7 +51,7 @@
       display: block;
     }
   }
-  &.open{
+  &.open {
     .nav-opener {
       border: none;
       &::before {
@@ -84,7 +84,7 @@
     }
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       background: var(--primary);
       height: 1px;
       left: 0;
@@ -93,7 +93,7 @@
     }
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       background: var(--primary);
       height: 1px;
       left: 0;
@@ -103,8 +103,8 @@
     }
   }
   .nav {
-    margin:5px 0;
-    width:100%;
+    margin: 5px 0;
+    width: 100%;
     max-height: 0;
     visibility: hidden;
     transition: all 0.4s ease;
@@ -120,7 +120,7 @@
     background-color: var(--white);
     padding: 5px;
     position: relative;
-    >a {
+    > a {
       display: block;
       text-decoration: none;
       color: var(--black);
@@ -129,14 +129,14 @@
       &:hover {
         color: var(--primary);
       }
-      i{
+      i {
         display: none;
       }
     }
   }
   .main-nav-item.active {
     background-color: #f4f4f4;
-    >a {
+    > a {
       color: var(--primary);
     }
     .droplet {
@@ -172,14 +172,14 @@
   }
 }
 @media (max-width: 991px) {
-  .navbar{
+  .navbar {
     .main-nav-item {
       position: relative;
       transition: background-color 0.4s ease;
       &:hover {
         background-color: #f4f4f4;
       }
-      &.active{
+      &.active {
         .down-arrow {
           transform: rotate(180deg);
           transition: all 0.3s;
@@ -211,9 +211,9 @@
     flex-wrap: nowrap;
     padding: 0 30px;
     justify-content: flex-start;
-    .navbar-brand{
+    .navbar-brand {
       padding: 0 20px 0 0;
-      .brand-link{
+      .brand-link {
         width: 134px;
       }
     }
@@ -242,11 +242,11 @@
     .main-nav-item {
       margin: 20px 13px 0;
       padding: 0 0 20px;
-      >a {
+      > a {
         padding: 0;
         display: flex;
         align-items: center;
-        i{
+        i {
           display: block;
           margin-left: 5px;
         }
@@ -272,7 +272,7 @@
           padding: 0 20px;
           width: 33.33%;
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             right: 0;
             top: 50%;
