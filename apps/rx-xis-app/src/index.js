@@ -64,7 +64,7 @@ function App() {
             href="#"
             focusableID="newId"
             title="Skip"
-            top="150"
+            top={150}
             border="none"
             backgroundColor="blue"
             color="white"
