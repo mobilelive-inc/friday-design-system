@@ -121,15 +121,14 @@
 .btns-switcher-holder {
   max-width: 75px;
   .btn--sm {
-    border-radius: 50%;
     width: 68px;
     height: 68px;
     color: #2a2a2a;
     min-width: auto;
-    &.default {
-      background: var(--orange);
-      border-color: var(--orange);
-    }
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    background: var(--orange);
+    border-color: var(--orange);
     &.navy {
       color: var(--white);
       background: var(--navy);
@@ -142,6 +141,9 @@
     &.lime {
       background: var(--lime);
       border-color: var(--lime);
+    }
+    &:last-child {
+      margin: 0;
     }
   }
 }
