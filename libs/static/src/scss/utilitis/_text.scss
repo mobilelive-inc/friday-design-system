@@ -40,7 +40,6 @@
   @include text--truncate();
 }
 
-
 // Weight and italics
 .font--weight--light {
   font-weight: var(--font-weight-light);
@@ -92,7 +91,6 @@
   word-break: break-word; // IE & < Edge 18
   overflow-wrap: break-word;
 }
-
 
 // Horizontal rules
 hr {

@@ -69,26 +69,17 @@
     <div class="theme-switcher">
       <p class="text--center">Choose <br />Theme:</p>
       <div class="btns-switcher-holder">
-        <button
-          class="mb--2 btn btn--primary btn--sm navy default"
-          onclick="switchTheme(1)"
-        >
+        <button class="btn btn--primary btn--sm navy" onclick="switchTheme(1)">
           Navy
         </button>
-        <button
-          class="mb--2 btn btn--primary btn--sm lemon default"
-          onclick="switchTheme(2)"
-        >
+        <button class="btn btn--primary btn--sm lemon" onclick="switchTheme(2)">
           Lemon
         </button>
-        <button
-          class="mb--2 btn btn--primary btn--sm lime default"
-          onclick="switchTheme(3)"
-        >
+        <button class="btn btn--primary btn--sm lime" onclick="switchTheme(3)">
           Lime
         </button>
         <button
-          class="mb--2 btn btn--primary btn--sm default"
+          class="btn btn--primary btn--sm default"
           onclick="switchTheme(4)"
         >
           Default
@@ -561,7 +552,7 @@
       };
 
       var accItem = document.getElementsByClassName('fds-accordion-item');
-      var accHD = document.getElementsByClassName('fds-btnaccordion');
+      var accHD = document.getElementsByClassName('fds--btnaccordion');
       for (i = 0; i < accHD.length; i++) {
         accHD[i].addEventListener('click', toggleItem, false);
       }

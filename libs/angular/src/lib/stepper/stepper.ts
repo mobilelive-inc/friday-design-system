@@ -151,8 +151,7 @@ export class FdsStepper extends CdkStepper implements AfterContentInit {
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FdsHorizontalStepper
-  extends FdsStepper
+export class FdsHorizontalStepper extends FdsStepper
   implements AfterContentInit {
   /** Whether the label should display in bottom or end position. */
   @Input()
