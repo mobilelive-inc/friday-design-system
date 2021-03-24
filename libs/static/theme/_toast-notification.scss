@@ -8,9 +8,4 @@
   --iconFontSize: 1.5rem;
   --sampletoastWidth: 1rem;
   --sampletoastHeight: 1rem;
-  @media screen and (min-width: 480px) {
-    :root {
-      --toastMaxWidth: 28rem;
-    }
-  }
 }
