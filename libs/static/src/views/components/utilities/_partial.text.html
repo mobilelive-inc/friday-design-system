@@ -5,7 +5,7 @@
   <p>Easily realign text to components with text alignment classes.</p>
 
   <div class="highlighted-block mb--4">
-    <p>Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+    <p class="text--justify">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
 <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
 <span style="color: rgb(0,0,128);">&lt;p <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="text--justify"</span>&gt;<code style="color: #f48245 !important;">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum.</code>&lt;/p&gt;</span>
 </pre>
@@ -42,7 +42,7 @@
 </pre>
   </div>
 
-  <p>Prevent text from wrapping with a <code>.text-nowrap</code> class.</p>
+  <p>Prevent text from wrapping with a <code>.text--nowrap</code> class.</p>
   <div class="highlighted-block mb--4">
     <div class="text--nowrap bg--light p--2 rounded mb--3" style="width: 13rem;">This text should overflow the parent.</div>
 <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
@@ -50,12 +50,12 @@
 </pre>
   </div>
 
-  <p>For longer content, you can add a .text-truncate class to truncate the text with an ellipsis. Requires display: inline-block or display: block.</p>
+  <p>For longer content, you can add a .text--truncate class to truncate the text with an ellipsis. Requires display: inline-block or display: block.</p>
   <div class="highlighted-block mb--4">
     <div class="clearfix mb--4">
       <!-- Block level -->
       <div class="row">
-        <div class="col-2 text--truncate">Praeterea iter est quasdam res quas ex communi.</div>
+        <div class="col--2 text--truncate">Praeterea iter est quasdam res quas ex communi.</div>
       </div>
       <!-- Inline level -->
       <span class="d--inline-block text--truncate" style="max-width: 150px;">Praeterea iter est quasdam res quas ex communi.</span>
@@ -63,7 +63,7 @@
 
 <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="row"</span>&gt;</span>
-  <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="col-2 text--truncate"</span>&gt;<code style="color: #f48245 !important;">Praeterea iter est quasdam res quas ex communi.</code>&lt;/div&gt;</span>
+  <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="col--2 text--truncate"</span>&gt;<code style="color: #f48245 !important;">Praeterea iter est quasdam res quas ex communi.</code>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="d--inline--block text--truncate"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="max-width: 150px;"</span>&gt;<code style="color: #f48245 !important;">Praeterea iter est quasdam res quas ex communi.</code>&lt;/span&gt;</span>
 </pre>
@@ -114,7 +114,7 @@
 <span style="color: rgb(0,0,128);">&lt;p <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="font--weight--normal"</span>&gt;<code style="color: #f48245 !important;">Normal weight text.</code>&lt;/p&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;p <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="font--weight--light"</span>&gt;<code style="color: #f48245 !important;">Light weight text.</code>&lt;/p&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;p <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="font--weight--lighter"</span>&gt;<code style="color: #f48245 !important;">Lighter weight text (relative to the parent element).</code>&lt;/p&gt;</span>
-<span style="color: rgb(0,0,128);">&lt;p <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="font--weight--italic"</span>&gt;<code style="color: #f48245 !important;">Italic text.</code>&lt;/p&gt;</span>
+<span style="color: rgb(0,0,128);">&lt;p <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="font--italic"</span>&gt;<code style="color: #f48245 !important;">Italic text.</code>&lt;/p&gt;</span>
 </pre>
   </div>
 
@@ -131,7 +131,7 @@
   <h3 class="h4">Reset Color</h3>
   <p>Reset a text or link’s color with <code>.text--reset</code>, so that it inherits the color from its parent.</p>
   <div class="highlighted-block mb--4">
-    <p class="text--muted">Muted text with a <a href="#" class="text-reset">reset link</a>.</p>
+    <p class="text--muted">Muted text with a <a href="#" class="text--reset">reset link</a>.</p>
 
 <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
 <span style="color: rgb(0,0,128);">&lt;p <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="text--muted"</span>&gt;<code style="color: #f48245 !important;">Muted text with a</code> &lt;a <span style="color: rgb(0,0,255);">href</span><span style="color: rgb(0,128,0);">="#"</span> <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="text--reset"</span>&gt;reset link&lt;/a&gt;<code>.</code>&lt;/p&gt;</span>
@@ -141,7 +141,7 @@
   <h3 class="h4">Text decoration</h3>
   <p>Remove a text decoration with a <code>.text--decoration--none</code> class.</p>
   <div class="highlighted-block">
-    <a href="#" class="text--decoration--none d--inline-block mb--4">Non-underlined link</a>
+    <a href="#" class="text--decoration--none d--inline-block mb--3">Non-underlined link</a>
 
 <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
 <span style="color: rgb(0,0,128);">&lt;a <span style="color: rgb(0,0,255);">href</span><span style="color: rgb(0,128,0);">="#"</span> <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="text--decoration--none"</span>&gt;Non-underlined link&lt;/a&gt;</span>
