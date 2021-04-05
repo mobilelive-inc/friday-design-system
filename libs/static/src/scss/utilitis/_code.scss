@@ -30,6 +30,7 @@ kbd {
 // Blocks of code
 pre {
   display: block;
+  overflow: auto;
   @include font-size(var(--code-font-size));
   color: var(--pre-color);
 

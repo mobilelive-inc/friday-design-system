@@ -27,7 +27,7 @@
       </ul>
       <h2 class="h2">Essential Web-Accessibility requirements:</h2>
     <div class="row" id="access_info">
-      <div class="col-12">
+      <div class="col--12">
         <h3 class="text--primary">Skip Links:</h3>
           <p>
             The main objective of skip links is to bypass long navigations in header
@@ -62,13 +62,14 @@
     <div id="accessible-navbar">
       <h3 class="text--primary">Navbar</h3>
         <p>A navigation bar is a navigation header that is placed at the top of the page:</p>
+        <p>Navbars require a wrapping <span class="text--primary">.fds--navbar</span> with <span class="text--primary">.fds--navbar--expand--{ sm | md | lg | xl | xxl }</span> for responsiveness.</p>
         <p>Since the menubar presents a site navigation system, it is wrapped in a navigation region implemented with a <span class="text--primary">nav</span> element that has an <span class="text--primary">aria-label</span> that matches the label on the menubar.</p>
         
         <h4>Navigation Menubar Example</h4>
-        <p>The following implementation of the design pattern for menubar demonstrates a menubar that provides site navigation menus. The items in the menubar represents a section of a web site and opens a submenu containing menu items that link to pages within that section.</p>
+        <p>The following implementation of the menubar demonstrates a menubar that provides site navigation menus that automatically collapses at the <span class="text--primary">lg</span> (large) breakpoint. The items in the menubar represents a section of a web site and opens a submenu containing menu items that link to pages within that section.</p>
       <div class="highlighted-block mb--5">
         <header>
-          <div id="mainNavigation" class="fds--navbar">
+          <div id="mainNavigation" class="fds--navbar fds--navbar--expand--lg">
             <div class="fds--navbar--brand">
               <a href="#" class="fds--brand--link">
                 <img src="./../../images/Logo.png" alt="MobileLIVE Site Logo">
@@ -288,7 +289,7 @@
               }
             </style>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>&lt;header&gt;</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>&lt;div id=&quot;mainNavigation&quot; class=&quot;fds--navbar&quot;&gt;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>&lt;div id=&quot;mainNavigation&quot; class=&quot;fds--navbar  fds--navbar--expand--lg&quot;&gt;</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>&lt;div class=&quot;fds--navbar--brand&quot;&gt;</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>&lt;a href=&quot;#&quot; class=&quot;fds--brand--link&quot;&gt;</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>&lt;img src=&quot;./../../images/Logo.png&quot; alt=&quot;MobileLIVE Site Logo&quot;&gt;</p>
@@ -444,312 +445,358 @@
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;</span>&lt;script&gt;</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>var isNavOpen = false;</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>var windowSize = $(window).width();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>window.addEventListener(&quot;resize&quot;, getWindowSize);</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function getWindowSize(){</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>windowSize = $(window).width();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>var mainNavClass = document.getElementById(&apos;mainNavigation&apos;).className.split(&apos; &apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>window.addEventListener(&apos;resize&apos;, getWindowSize);</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function getWindowSize() {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>windowSize = $(window).width();</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>document.getElementById(&quot;lastNavItem&quot;).addEventListener(&quot;keydown&quot;, focusTrap);</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function focusTrap(e){</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if ($(window).width() &lt; 992 &amp;&amp; isNavOpen === true &amp;&amp; e.which === 9){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function getBreakpointValue(name){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>let value = getComputedStyle(document.documentElement).getPropertyValue(name);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return parseInt(value,10);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>document</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>.getElementById(&apos;lastNavItem&apos;)</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>.addEventListener(&apos;keydown&apos;, focusTrap);</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function focusTrap(e) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if(isNavOpen === true &amp;&amp; e.which === 9){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if($(window).width() &lt; getBreakpointValue(&apos;--breakpoint-sm&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--sm&apos;) &gt; 0){</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>e.preventDefault();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&quot;.fds--brand--link&quot;).focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;.fds--brand--link&apos;).focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if ($(window).width() &lt; getBreakpointValue(&apos;--breakpoint-md&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--md&apos;) &gt; 0){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>e.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;.fds--brand--link&apos;).focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if ($(window).width() &lt; getBreakpointValue(&apos;--breakpoint-lg&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--lg&apos;) &gt; 0){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>e.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;.fds--brand--link&apos;).focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if ($(window).width() &lt; getBreakpointValue(&apos;--breakpoint-xl&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--xl&apos;) &gt; 0){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>e.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;.fds--brand--link&apos;).focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if ($(window).width() &lt; getBreakpointValue(&apos;--breakpoint-xxl&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--xxl&apos;) &gt; 0){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>e.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;.fds--brand--link&apos;).focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function mouseEnter(menuitem,dropdown){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(menuitem).addClass(&apos;active&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(menuitem).children(&apos;a&apos;).attr(&apos;aria-expanded&apos;, &apos;true&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;.fds--droplet&apos;, megaMenu).each(function (index, drop) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (drop !== dropdown) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(drop).hide();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>});</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(dropdown).slideDown(0);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function mouseLeave(menuitem,dropdown){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(menuitem).removeClass(&apos;active&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(menuitem).children(&apos;a&apos;).attr(&apos;aria-expanded&apos;, &apos;false&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(dropdown).slideUp(0);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}<span class="Apple-converted-space">&nbsp;</span></p>
+            <p class="p2"><br></p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function initMegaMenu() {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>var megaMenu = document.getElementById(&apos;megaMenu&apos;);</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// keyboard stuff</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(megaMenu).delegate(&apos;li a&apos;, &apos;keydown&apos;, keyboardHandler);</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// mouse stuff</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos; &gt; li.fds--has--drop&apos;, megaMenu).each(function () {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var dropdown = $(&apos;.fds--droplet&apos;, $(this)[0]);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(this).hover(</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>function () {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (windowSize &gt;= 992) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(this).addClass(&apos;active&apos;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(this).children(&apos;a&apos;).attr(&quot;aria-expanded&quot;, &quot;true&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;.fds--droplet&apos;, megaMenu).each(function (index, drop) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (drop !== dropdown) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(drop).hide();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>});</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(dropdown).slideDown(0);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}, function () {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (windowSize &gt;= 992) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(this).removeClass(&apos;active&apos;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(this).children(&apos;a&apos;).attr(&quot;aria-expanded&quot;, &quot;false&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(dropdown).slideUp(0);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>});</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var megaMenu = document.getElementById(&apos;megaMenu&apos;);</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// keyboard stuff</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(megaMenu).delegate(&apos;li a&apos;, &apos;keydown&apos;, keyboardHandler);</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// mouse stuff</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos; &gt; li.fds--has--drop&apos;, megaMenu).each(function () {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var dropdown = $(&apos;.fds--droplet&apos;, $(this)[0]);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(this).hover(</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>function () {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (windowSize &gt;= getBreakpointValue(&apos;--breakpoint-sm&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--sm&apos;) &gt; 0){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>mouseEnter(this,dropdown);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (windowSize &gt;= getBreakpointValue(&apos;--breakpoint-md&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--md&apos;) &gt; 0) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>mouseEnter(this,dropdown);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (windowSize &gt;= getBreakpointValue(&apos;--breakpoint-lg&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--lg&apos;) &gt; 0){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>mouseEnter(this,dropdown);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (windowSize &gt;= getBreakpointValue(&apos;--breakpoint-xl&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--xl&apos;) &gt; 0){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>mouseEnter(this,dropdown);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (windowSize &gt;= getBreakpointValue(&apos;--breakpoint-xxl&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--xxl&apos;) &gt; 0){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>mouseEnter(this,dropdown);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>},</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>function () {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (windowSize &gt;= getBreakpointValue(&apos;--breakpoint-sm&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--sm&apos;) &gt; 0){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>mouseLeave(this,dropdown);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (windowSize &gt;= getBreakpointValue(&apos;--breakpoint-md&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--md&apos;) &gt; 0) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>mouseLeave(this,dropdown);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (windowSize &gt;= getBreakpointValue(&apos;--breakpoint-lg&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--lg&apos;) &gt; 0){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>mouseLeave(this,dropdown);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (windowSize &gt;= getBreakpointValue(&apos;--breakpoint-xl&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--xl&apos;) &gt; 0){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>mouseLeave(this,dropdown);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (windowSize &gt;= getBreakpointValue(&apos;--breakpoint-xxl&apos;) &amp;&amp; mainNavClass.indexOf(&apos;fds--navbar--expand--xxl&apos;) &gt; 0){</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>mouseLeave(this,dropdown);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>});</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+            <p class="p2"><br></p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function openNav() {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var x = document.getElementById(&quot;mainNavigation&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var y = document.getElementById(&quot;navOpenerBtn&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var classes = x.className.split(&quot; &quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var i = classes.indexOf(&quot;open&quot;);</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (i &gt;= 0) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>x.classList.remove(&quot;open&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>y.setAttribute(&quot;aria-label&quot;, &quot;Open Navigation Menu&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>y.setAttribute(&quot;aria-expanded&quot;, &quot;false&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>isNavOpen = false;</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>document.getElementById(&apos;skipNavBTN&apos;).setAttribute(&quot;aria-hidden&quot;, false);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>document.getElementById(&apos;main&apos;).setAttribute(&quot;aria-hidden&quot;, false);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>document.getElementById(&apos;footer&apos;).setAttribute(&quot;aria-hidden&quot;, false);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>else<span class="Apple-converted-space">&nbsp;&nbsp;</span>{</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>x.classList.add(&quot;open&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>y.setAttribute(&quot;aria-label&quot;, &quot;Close Navigation Menu&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>y.setAttribute(&quot;aria-expanded&quot;, &quot;true&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>isNavOpen = true;</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>document.getElementById(&apos;skipNavBTN&apos;).setAttribute(&quot;aria-hidden&quot;, true);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>document.getElementById(&apos;main&apos;).setAttribute(&quot;aria-hidden&quot;, true);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>document.getElementById(&apos;footer&apos;).setAttribute(&quot;aria-hidden&quot;, true);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var x = document.getElementById(&apos;mainNavigation&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var y = document.getElementById(&apos;navOpenerBtn&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var classes = x.className.split(&apos; &apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var i = classes.indexOf(&apos;open&apos;);</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (i &gt;= 0) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>x.classList.remove(&apos;open&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>y.setAttribute(&apos;aria-label&apos;, &apos;Open Navigation Menu&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>y.setAttribute(&apos;aria-expanded&apos;, &apos;false&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>isNavOpen = false;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>document</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>.getElementById(&apos;skipNavBTN&apos;)</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>.setAttribute(&apos;aria-hidden&apos;, false);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>document.getElementById(&apos;main&apos;).setAttribute(&apos;aria-hidden&apos;, false);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>document.getElementById(&apos;footer&apos;).setAttribute(&apos;aria-hidden&apos;, false);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>x.classList.add(&apos;open&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>y.setAttribute(&apos;aria-label&apos;, &apos;Close Navigation Menu&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>y.setAttribute(&apos;aria-expanded&apos;, &apos;true&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>isNavOpen = true;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>document</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>.getElementById(&apos;skipNavBTN&apos;)</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>.setAttribute(&apos;aria-hidden&apos;, true);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>document.getElementById(&apos;main&apos;).setAttribute(&apos;aria-hidden&apos;, true);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>document.getElementById(&apos;footer&apos;).setAttribute(&apos;aria-hidden&apos;, true);</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;.down-arrow&apos;).on(&apos;click&apos;, function () {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (windowSize &lt; 992) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;.down-arrow&apos;).on(&apos;click&apos;, function () {</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var parent_id = $(this).parent().attr(&apos;id&apos;);</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var x = document.getElementById(parent_id);</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var y = $(this);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var li_has_class = x.classList.contains(&quot;active&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>const childrens = document.querySelectorAll(&quot;.fds--has--drop&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>childrens.forEach(function(elem) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>elem.classList.remove(&quot;active&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>let caretBtn = elem.querySelector(&quot;.down-arrow&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>let label = caretBtn.getAttribute(&quot;aria-label&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>let updateLabel = label.replace(&quot;close&quot;, &quot;open&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>caretBtn.setAttribute(&quot;aria-label&quot;, updateLabel);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>caretBtn.setAttribute(&quot;aria-expanded&quot;, false);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>});</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (!li_has_class) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>x.classList.add(&quot;active&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>let caretBtn = x.querySelector(&quot;.down-arrow&quot;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var li_has_class = x.classList.contains(&apos;active&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>const childrens = document.querySelectorAll(&apos;.fds--has--drop&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>childrens.forEach(function (elem) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>elem.classList.remove(&apos;active&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>let caretBtn = elem.querySelector(&apos;.down-arrow&apos;);</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>let label = caretBtn.getAttribute(&apos;aria-label&apos;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>let updateLabel = label.replace(&quot;open&quot;, &quot;close&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>caretBtn.setAttribute(&quot;aria-label&quot;, updateLabel);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>caretBtn.setAttribute(&quot;aria-expanded&quot;, true);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}<span class="Apple-converted-space">&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>let updateLabel = label.replace(&apos;close&apos;, &apos;open&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>caretBtn.setAttribute(&apos;aria-label&apos;, updateLabel);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>caretBtn.setAttribute(&apos;aria-expanded&apos;, false);</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>});</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>function setAttributes(el, attrs) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>for(var key in attrs) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>el.querySelector(&quot;.down-arrow&quot;).setAttribute(key, attrs[key]);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (!li_has_class) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>x.classList.add(&apos;active&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>let caretBtn = x.querySelector(&apos;.down-arrow&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>let label = caretBtn.getAttribute(&apos;aria-label&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>let updateLabel = label.replace(&apos;open&apos;, &apos;close&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>caretBtn.setAttribute(&apos;aria-label&apos;, updateLabel);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>caretBtn.setAttribute(&apos;aria-expanded&apos;, true);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>});</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function setAttributes(el, attrs) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>for (var key in attrs) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>el.querySelector(&apos;.down-arrow&apos;).setAttribute(key, attrs[key]);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function keyboardHandler(keyVent) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var target = keyVent.target;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var which = keyVent.which;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (which === 39) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// RIGHT</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (isTopLevel(target)) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// top level item</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var nextTopItem = adjacentTopLevelItem(target, &apos;next&apos;);</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (nextTopItem) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>nextTopItem.focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// dropdown item</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var nextDropletItem = adjacentDropdownItem(target, &apos;next&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (nextDropletItem) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>nextDropletItem.focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 37) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// LEFT</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (isTopLevel(target)) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// top level item</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var prevTopItem = adjacentTopLevelItem(target, &apos;prev&apos;);</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (prevTopItem) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>prevTopItem.focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// dropdown item</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var prevDropItem = adjacentDropdownItem(target, &apos;prev&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (prevDropItem) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>prevDropItem.focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 40) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// DOWN</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (isTopLevel(target) &amp;&amp; hasDropdown(target)) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// top level item w/ dropdown -- open dropdown</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>openDropdown(target);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// dropdown item</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var nextDropItem = adjacentDropdownItem(target, &apos;next&apos;);</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (nextDropItem) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>nextDropItem.focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 38) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// UP</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (!isTopLevel(target)) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (isFirstDropItem(target)) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var top = closeDropdown(target);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>setTimeout(function () {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>top.focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}, 0);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var prevDropAnchor = adjacentDropdownItem(target, &apos;prev&apos;);</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (prevDropAnchor) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>prevDropAnchor.focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 27) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// ESCAPE</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (!isTopLevel(target)) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var topper = closeDropdown(target);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>setTimeout(function () {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>topper.focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}, 0);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 9 &amp;&amp; keyVent.shiftKey) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// SHIFT + TAB</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (!isTopLevel(target) &amp;&amp; isFirstDropItem(target)) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var topA = closeDropdown(target);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>setTimeout(function () {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>topA.focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}, 0);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 9) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// TAB</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (!isTopLevel(target) &amp;&amp; isLastDropItem(target)) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var topItem = closeDropdown(target);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var nextLi = $(topItem.parentNode).next()[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var nextAnchor = $(&apos;a&apos;, nextLi)[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>nextAnchor.focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 32) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>isTopLevel(target) &amp;&amp;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(target.parentNode).hasClass(&apos;fds--has--drop&apos;)</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>openDropdown(target);</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function keyboardHandler(keyVent) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var target = keyVent.target;</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var which = keyVent.which;</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (which === 39) { // RIGHT</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (isTopLevel(target)) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// top level item</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var nextTopItem = adjacentTopLevelItem(target, &apos;next&apos;);</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (nextTopItem) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>nextTopItem.focus();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// dropdown item</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var nextDropletItem = adjacentDropdownItem(target, &apos;next&apos;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (nextDropletItem) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>nextDropletItem.focus();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 37) { // LEFT</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (isTopLevel(target)) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// top level item</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var prevTopItem = adjacentTopLevelItem(target, &apos;prev&apos;);</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (prevTopItem) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>prevTopItem.focus();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// dropdown item</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var prevDropItem = adjacentDropdownItem(target, &apos;prev&apos;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (prevDropItem) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>prevDropItem.focus();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 40) { // DOWN</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (isTopLevel(target) &amp;&amp; hasDropdown(target)) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// top level item w/ dropdown -- open dropdown</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>openDropdown(target);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// dropdown item</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var nextDropItem = adjacentDropdownItem(target, &apos;next&apos;);</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (nextDropItem) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>nextDropItem.focus();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 38) { // UP</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (!isTopLevel(target)) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (isFirstDropItem(target)) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var top = closeDropdown(target);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>setTimeout(function () {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>top.focus();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}, 0);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var prevDropAnchor = adjacentDropdownItem(target, &apos;prev&apos;);</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (prevDropAnchor) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>prevDropAnchor.focus();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 27) { // ESCAPE</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (!isTopLevel(target)) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var topper = closeDropdown(target);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>setTimeout(function () {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>topper.focus();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}, 0);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 9 &amp;&amp; keyVent.shiftKey) { // SHIFT + TAB</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (!isTopLevel(target) &amp;&amp; isFirstDropItem(target)) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var topA = closeDropdown(target);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>setTimeout(function () {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>topA.focus();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}, 0);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 9) { // TAB</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (!isTopLevel(target) &amp;&amp; isLastDropItem(target)) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>keyVent.preventDefault();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var topItem = closeDropdown(target);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var nextLi = $(topItem.parentNode).next()[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var nextAnchor = $(&apos;a&apos;, nextLi)[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>nextAnchor.focus();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else if (which === 32) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (isTopLevel(target) &amp;&amp; $(target.parentNode).hasClass(&apos;fds--has--drop&apos;)) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>openDropdown(target);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+            <p class="p2"><br></p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>// determines if the item is a top-level one</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function isTopLevel(item) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return $(item).is(&apos;#megaMenu &gt; li &gt; a&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return $(item).is(&apos;#megaMenu &gt; li &gt; a&apos;);</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
+            <p class="p2"><br></p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>// determines if the item has a dropdown</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function hasDropdown(item) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return $(item.parentNode).hasClass(&apos;fds--has--drop&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return $(item.parentNode).hasClass(&apos;fds--has--drop&apos;);</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
+            <p class="p2"><br></p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>// determines if the item is the first in the dropdown</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function isFirstDropItem(item) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var drop = $(item).closest(&apos;.fds--droplet&apos;)[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var firstInDrop = $(&apos;li a&apos;, drop)[0];</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return firstInDrop === item;</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var drop = $(item).closest(&apos;.fds--droplet&apos;)[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var firstInDrop = $(&apos;li a&apos;, drop)[0];</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return firstInDrop === item;</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
+            <p class="p2"><br></p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>// determines if the item is the last in the dropdown</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function isLastDropItem(item) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var drop = $(item).closest(&apos;.fds--droplet&apos;)[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var lastInDrop = $(&apos;li a&apos;, drop).last()[0];</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return lastInDrop === item;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var drop = $(item).closest(&apos;.fds--droplet&apos;)[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var lastInDrop = $(&apos;li a&apos;, drop).last()[0];</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return lastInDrop === item;</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
+            <p class="p2"><br></p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>// finds the adjacent top level item</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function adjacentTopLevelItem(item, dir) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var li = item.parentNode; // &lt;li /&gt;</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var adjacentLi = (dir === &apos;next&apos;) ?</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(li).next()[0] :</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(li).prev()[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var adjacentItem = adjacentLi &amp;&amp; $(&apos;a&apos;, adjacentLi)[0];</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return adjacentItem;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var li = item.parentNode; // &lt;li /&gt;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var adjacentLi = dir === &apos;next&apos; ? $(li).next()[0] : $(li).prev()[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var adjacentItem = adjacentLi &amp;&amp; $(&apos;a&apos;, adjacentLi)[0];</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return adjacentItem;</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
+            <p class="p2"><br></p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>// finds the next or prev dropdown item</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function adjacentDropdownItem(item, dir) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var adjacentDropItem;</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var li = item.parentNode;</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var adjacentSameCol = (dir === &apos;next&apos;) ?</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(li).next()[0] :</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(li).prev()[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (adjacentSameCol) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// there is one in the same col</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>adjacentDropItem = $(&apos;a&apos;, adjacentSameCol)[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// lets look for one in the adjacent column</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var col = $(li).closest(&apos;.fds--droplet--col&apos;)[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var adjacentCol = (dir === &apos;next&apos;) ?</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(col).next()[0] :</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(col).prev()[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (adjacentCol) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// we&apos;ve found the adjacent column</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var adjacentItem = (dir === &apos;next&apos;) ?</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;li a&apos;, adjacentCol)[0] :</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;li a&apos;, adjacentCol).last()[0];</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (adjacentItem) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>adjacentDropItem = adjacentItem;</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var adjacentDropItem;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var li = item.parentNode;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var adjacentSameCol =</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>dir === &apos;next&apos; ? $(li).next()[0] : $(li).prev()[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (adjacentSameCol) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// there is one in the same col</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>adjacentDropItem = $(&apos;a&apos;, adjacentSameCol)[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>} else {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// lets look for one in the adjacent column</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var col = $(li).closest(&apos;.fds--droplet--col&apos;)[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var adjacentCol =</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>dir === &apos;next&apos; ? $(col).next()[0] : $(col).prev()[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (adjacentCol) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// we&apos;ve found the adjacent column</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var adjacentItem =</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>dir === &apos;next&apos;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>? $(&apos;li a&apos;, adjacentCol)[0]</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>: $(&apos;li a&apos;, adjacentCol).last()[0];</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>if (adjacentItem) {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>adjacentDropItem = adjacentItem;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return adjacentDropItem;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return adjacentDropItem;</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
+            <p class="p2"><br></p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function openDropdown(item) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(item.parentNode).addClass(&apos;active&apos;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(item).attr(&quot;aria-expanded&quot;, &quot;true&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var caret = $(item).next()[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var droplet = $(caret).next()[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(droplet).attr(&quot;aria-hidden&quot;, &quot;false&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// open the dropdown...</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(droplet).slideDown(100);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// ...and focus the first item</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>setTimeout(function () {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;a&apos;, droplet)[0].focus();</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}, 100);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(item.parentNode).addClass(&apos;active&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(item).attr(&apos;aria-expanded&apos;, &apos;true&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var caret = $(item).next()[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var droplet = $(caret).next()[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(droplet).attr(&apos;aria-hidden&apos;, &apos;false&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// open the dropdown...</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(droplet).slideDown(100);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>// ...and focus the first item</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>setTimeout(function () {</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(&apos;a&apos;, droplet)[0].focus();</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>}, 100);</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
+            <p class="p2"><br></p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>function closeDropdown(item) {</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var droplet = $(item).closest(&apos;.fds--droplet&apos;)[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(droplet).attr(&quot;aria-hidden&quot;, &quot;true&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var caret = $(droplet).prev()[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var topLevelItem = $(caret).prev()[0];</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(topLevelItem).attr(&quot;aria-expanded&quot;, &quot;false&quot;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(topLevelItem.parentNode).removeClass(&apos;active&apos;);</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(droplet).slideUp(100);</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return topLevelItem;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var droplet = $(item).closest(&apos;.fds--droplet&apos;)[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(droplet).attr(&apos;aria-hidden&apos;, &apos;true&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var caret = $(droplet).prev()[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>var topLevelItem = $(caret).prev()[0];</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(topLevelItem).attr(&apos;aria-expanded&apos;, &apos;false&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(topLevelItem.parentNode).removeClass(&apos;active&apos;);</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>$(droplet).slideUp(100);</p>
+            <p class="p2"><br></p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span>return topLevelItem;</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>}</p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
+            <p class="p2"><br></p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>////////////////////////////////////</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>$(document).ready(initMegaMenu);</p>
             <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>////////////////////////////////////</p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>// <span class="Apple-converted-space">&nbsp;</span></p>
-            <p class="p2"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span></p>
-            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>&lt;/script&gt;</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;&nbsp;</span>//</p>
+            <p class="p1"><span class="Apple-converted-space">&nbsp; &nbsp;&nbsp;</span>&lt;/script&gt;</p>
           </div>
         </div>
       </div>

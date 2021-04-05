@@ -164,10 +164,6 @@
           <module href="/components/_partial.accordion.html"></module>
           <!--Accordion and Collaps-->
 
-          <!-- NavBar -->
-          <module href="/components/_partial.navbar.html"></module>
-          <!-- NavBar -->
-
           <!--Tables List-->
           <module href="/components/_partial.tables.html"></module>
           <!--Tables List-->
@@ -175,6 +171,11 @@
           <!--Notification List-->
           <module href="/components/_partial.notification-toast.html"></module>
           <!--Notification List-->
+
+
+          <!-- NavBar -->
+          <module href="/components/_partial.navbar.html"></module>
+          <!-- NavBar -->
 
           <!--Grids-->
           <div class="my--5" id="Grid_sections">
@@ -597,21 +598,56 @@
       // Navigation Accessibility Code
       var isNavOpen = false;
       var windowSize = $(window).width();
+      var mainNavClass = document.getElementById('mainNavigation').className.split(' ');
       window.addEventListener('resize', getWindowSize);
 
       function getWindowSize() {
         windowSize = $(window).width();
+      }
+      function getBreakpointValue(name){
+        let value = getComputedStyle(document.documentElement).getPropertyValue(name);
+        return parseInt(value,10);
       }
       document
         .getElementById('lastNavItem')
         .addEventListener('keydown', focusTrap);
 
       function focusTrap(e) {
-        if ($(window).width() < 992 && isNavOpen === true && e.which === 9) {
-          e.preventDefault();
-          $('.fds--brand--link').focus();
+        if(isNavOpen === true && e.which === 9){
+          if($(window).width() < getBreakpointValue('--breakpoint-sm') && mainNavClass.indexOf('fds--navbar--expand--sm') > 0){
+            e.preventDefault();
+            $('.fds--brand--link').focus();
+          } else if ($(window).width() < getBreakpointValue('--breakpoint-md') && mainNavClass.indexOf('fds--navbar--expand--md') > 0){
+            e.preventDefault();
+            $('.fds--brand--link').focus();
+          } else if ($(window).width() < getBreakpointValue('--breakpoint-lg') && mainNavClass.indexOf('fds--navbar--expand--lg') > 0){
+            e.preventDefault();
+            $('.fds--brand--link').focus();
+          } else if ($(window).width() < getBreakpointValue('--breakpoint-xl') && mainNavClass.indexOf('fds--navbar--expand--xl') > 0){
+            e.preventDefault();
+            $('.fds--brand--link').focus();
+          } else if ($(window).width() < getBreakpointValue('--breakpoint-xxl') && mainNavClass.indexOf('fds--navbar--expand--xxl') > 0){
+            e.preventDefault();
+            $('.fds--brand--link').focus();
+          }
         }
       }
+      function mouseEnter(menuitem,dropdown){
+        $(menuitem).addClass('active');
+        $(menuitem).children('a').attr('aria-expanded', 'true');
+        $('.fds--droplet', megaMenu).each(function (index, drop) {
+          if (drop !== dropdown) {
+            $(drop).hide();
+          }
+        });
+        $(dropdown).slideDown(0);
+      }
+      function mouseLeave(menuitem,dropdown){
+        $(menuitem).removeClass('active');
+        $(menuitem).children('a').attr('aria-expanded', 'false');
+        $(dropdown).slideUp(0);
+      } 
+
       function initMegaMenu() {
         var megaMenu = document.getElementById('megaMenu');
 
@@ -623,23 +659,29 @@
           var dropdown = $('.fds--droplet', $(this)[0]);
           $(this).hover(
             function () {
-              if (windowSize >= 992) {
-                $(this).addClass('active');
-                $(this).children('a').attr('aria-expanded', 'true');
-                $('.fds--droplet', megaMenu).each(function (index, drop) {
-                  if (drop !== dropdown) {
-                    $(drop).hide();
-                  }
-                });
-
-                $(dropdown).slideDown(0);
+              if (windowSize >= getBreakpointValue('--breakpoint-sm') && mainNavClass.indexOf('fds--navbar--expand--sm') > 0){
+                mouseEnter(this,dropdown);
+              } else if (windowSize >= getBreakpointValue('--breakpoint-md') && mainNavClass.indexOf('fds--navbar--expand--md') > 0) {
+                mouseEnter(this,dropdown);
+              } else if (windowSize >= getBreakpointValue('--breakpoint-lg') && mainNavClass.indexOf('fds--navbar--expand--lg') > 0){
+                mouseEnter(this,dropdown);
+              } else if (windowSize >= getBreakpointValue('--breakpoint-xl') && mainNavClass.indexOf('fds--navbar--expand--xl') > 0){
+                mouseEnter(this,dropdown);
+              } else if (windowSize >= getBreakpointValue('--breakpoint-xxl') && mainNavClass.indexOf('fds--navbar--expand--xxl') > 0){
+                mouseEnter(this,dropdown);
               }
             },
             function () {
-              if (windowSize >= 992) {
-                $(this).removeClass('active');
-                $(this).children('a').attr('aria-expanded', 'false');
-                $(dropdown).slideUp(0);
+              if (windowSize >= getBreakpointValue('--breakpoint-sm') && mainNavClass.indexOf('fds--navbar--expand--sm') > 0){
+                mouseLeave(this,dropdown);
+              } else if (windowSize >= getBreakpointValue('--breakpoint-md') && mainNavClass.indexOf('fds--navbar--expand--md') > 0) {
+                mouseLeave(this,dropdown);
+              } else if (windowSize >= getBreakpointValue('--breakpoint-lg') && mainNavClass.indexOf('fds--navbar--expand--lg') > 0){
+                mouseLeave(this,dropdown);
+              } else if (windowSize >= getBreakpointValue('--breakpoint-xl') && mainNavClass.indexOf('fds--navbar--expand--xl') > 0){
+                mouseLeave(this,dropdown);
+              } else if (windowSize >= getBreakpointValue('--breakpoint-xxl') && mainNavClass.indexOf('fds--navbar--expand--xxl') > 0){
+                mouseLeave(this,dropdown);
               }
             }
           );
@@ -676,7 +718,6 @@
       }
 
       $('.down-arrow').on('click', function () {
-        if (windowSize < 992) {
           var parent_id = $(this).parent().attr('id');
           var x = document.getElementById(parent_id);
           var y = $(this);
@@ -698,7 +739,6 @@
             caretBtn.setAttribute('aria-label', updateLabel);
             caretBtn.setAttribute('aria-expanded', true);
           }
-        }
       });
 
       function setAttributes(el, attrs) {
