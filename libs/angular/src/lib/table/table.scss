@@ -1,0 +1,163 @@
+/* .fds--table {
+    position: relative;
+} */
+/* .fds-datatable-scrollable-header-table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.fds-datatable .fds-sortable-column {
+    cursor: pointer;
+    user-select: none;
+}
+
+.fds-datatable .fds-sortable-column .fds-column-title,
+.fds-datatable .fds-sortable-column .fds-sortable-column-icon,
+.fds-datatable .fds-sortable-column .fds-sortable-column-badge {
+    vertical-align: middle;
+}
+
+.fds-datatable .fds-sortable-column .fds-sortable-column-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fds-datatable-auto-layout > .fds-datatable-wrapper {
+    overflow-x: auto;
+} */
+
+/* .fds-datatable-auto-layout > .fds-datatable-wrapper > table {
+    table-layout: auto;
+} */
+
+/* .fds-datatable-hoverable-rows .fds-selectable-row {
+    cursor: pointer;
+} */
+
+/* Scrollable */
+/* .fds-datatable-scrollable-wrapper {
+    position: relative;
+}
+
+.fds-datatable-scrollable-header,
+.fds-datatable-scrollable-footer {
+    overflow: hidden;
+}
+
+.fds-datatable-scrollable-body {
+    overflow: auto;
+    position: relative;
+}
+
+.fds-datatable-scrollable-body > table > .fds-datatable-tbody > tr:first-child > td {
+    border-top: 0 none;
+}
+
+.fds-datatable-virtual-table {
+    position: absolute;
+} */
+
+/* Frozen Columns */
+/* .fds-datatable-frozen-view .fds-datatable-scrollable-body {
+    overflow: hidden;
+}
+
+.fds-datatable-frozen-view > .fds-datatable-scrollable-body > table > .fds-datatable-tbody > tr > td:last-child {
+    border-right: 0 none;
+}
+
+.fds-datatable-unfrozen-view {
+    position: absolute;
+    top: 0;
+} */
+
+/* Flex Scrollable */
+/* .fds-datatable-flex-scrollable {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.fds-datatable-flex-scrollable .fds-datatable-scrollable-wrapper,
+.fds-datatable-flex-scrollable .fds-datatable-scrollable-view {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.fds-datatable-flex-scrollable .fds-datatable-scrollable-body,
+.fds-datatable-flex-scrollable .fds-datatable-virtual-scrollable-body {
+    flex: 1;
+} */
+
+/* Loader */
+/* .fds-datatable .fds-datatable-loading-overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+} */
+
+/* .fds-datatable.fds-datatable-striped .fds-datatable-tbody > tr:nth-child(even) {
+    background:#dddddd;
+} */
+/* .fds-datatable.fds-datatable-gridlines .fds-datatable-tbody > tr > td {
+    border-width: 1px;
+} */
+/* .fds-datatable.fds-datatable-gridlines .fds-datatable-thead > tr > th {
+    border-width: 1px 1px 1px 1px;
+}
+.fds-datatable .fds-datatable-thead > tr > th {
+    text-align: left;
+    padding: 1rem 1rem;
+    border: 1px solid #e9ecef;
+    font-weight: 600;
+    color: #495057;
+    background: #f8f9fa;
+    transition: box-shadow 0.2s;
+} */
+/* .fds-datatable .fds-datatable-tbody > tr > td {
+    text-align: left;
+    border: 1px solid #dddddd;
+    padding: 1rem 1rem;
+} */
+
+/* Responsive */
+/* .fds-datatable.fds-datatable-responsive .fds-datatable-tbody > tr > td .fds-column-title {
+    display: none;
+} */
+
+/* Virtual Scroll*/
+
+/* cdk-virtual-scroll-viewport {
+    outline: 0 none;
+} */
+
+/* @media screen and (max-width: 40em) {
+    .fds-datatable.fds-datatable-responsive .fds-datatable-thead > tr > th,
+    .fds-datatable.fds-datatable-responsive .fds-datatable-tfoot > tr > td {
+        display: none !important;
+    }
+
+    .fds-datatable.fds-datatable-responsive .fds-datatable-tbody > tr > td {
+        text-align: left;
+        display: block;
+        width: 100%;
+        float: left;
+        clear: left;
+        border: 0 none;
+    }
+
+    .fds-datatable.fds-datatable-responsive .fds-datatable-tbody > tr > td .fds-column-title {
+        padding: .4rem;
+        min-width: 30%;
+        display: inline-block;
+        margin: -.4em 1em -.4em -.4rem;
+        font-weight: bold;
+    }
+} */
