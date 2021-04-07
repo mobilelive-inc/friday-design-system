@@ -172,7 +172,6 @@
           <module href="/components/_partial.notification-toast.html"></module>
           <!--Notification List-->
 
-
           <!-- NavBar -->
           <module href="/components/_partial.navbar.html"></module>
           <!-- NavBar -->
@@ -598,55 +597,29 @@
       // Navigation Accessibility Code
       var isNavOpen = false;
       var windowSize = $(window).width();
-      var mainNavClass = document.getElementById('mainNavigation').className.split(' ');
       window.addEventListener('resize', getWindowSize);
 
       function getWindowSize() {
         windowSize = $(window).width();
       }
-      function getBreakpointValue(name){
-        let value = getComputedStyle(document.documentElement).getPropertyValue(name);
-        return parseInt(value,10);
+      function getBreakpointValue(name) {
+        let value = getComputedStyle(document.documentElement).getPropertyValue(
+          name
+        );
+        return parseInt(value, 10);
       }
       document
         .getElementById('lastNavItem')
         .addEventListener('keydown', focusTrap);
 
       function focusTrap(e) {
-        if(isNavOpen === true && e.which === 9){
-          if($(window).width() < getBreakpointValue('--breakpoint-sm') && mainNavClass.indexOf('fds--navbar--expand--sm') > 0){
-            e.preventDefault();
-            $('.fds--brand--link').focus();
-          } else if ($(window).width() < getBreakpointValue('--breakpoint-md') && mainNavClass.indexOf('fds--navbar--expand--md') > 0){
-            e.preventDefault();
-            $('.fds--brand--link').focus();
-          } else if ($(window).width() < getBreakpointValue('--breakpoint-lg') && mainNavClass.indexOf('fds--navbar--expand--lg') > 0){
-            e.preventDefault();
-            $('.fds--brand--link').focus();
-          } else if ($(window).width() < getBreakpointValue('--breakpoint-xl') && mainNavClass.indexOf('fds--navbar--expand--xl') > 0){
-            e.preventDefault();
-            $('.fds--brand--link').focus();
-          } else if ($(window).width() < getBreakpointValue('--breakpoint-xxl') && mainNavClass.indexOf('fds--navbar--expand--xxl') > 0){
+        if (isNavOpen === true && e.which === 9) {
+          if ($(window).width() < getBreakpointValue('--breakpoint-lg')) {
             e.preventDefault();
             $('.fds--brand--link').focus();
           }
         }
       }
-      function mouseEnter(menuitem,dropdown){
-        $(menuitem).addClass('active');
-        $(menuitem).children('a').attr('aria-expanded', 'true');
-        $('.fds--droplet', megaMenu).each(function (index, drop) {
-          if (drop !== dropdown) {
-            $(drop).hide();
-          }
-        });
-        $(dropdown).slideDown(0);
-      }
-      function mouseLeave(menuitem,dropdown){
-        $(menuitem).removeClass('active');
-        $(menuitem).children('a').attr('aria-expanded', 'false');
-        $(dropdown).slideUp(0);
-      } 
 
       function initMegaMenu() {
         var megaMenu = document.getElementById('megaMenu');
@@ -659,29 +632,23 @@
           var dropdown = $('.fds--droplet', $(this)[0]);
           $(this).hover(
             function () {
-              if (windowSize >= getBreakpointValue('--breakpoint-sm') && mainNavClass.indexOf('fds--navbar--expand--sm') > 0){
-                mouseEnter(this,dropdown);
-              } else if (windowSize >= getBreakpointValue('--breakpoint-md') && mainNavClass.indexOf('fds--navbar--expand--md') > 0) {
-                mouseEnter(this,dropdown);
-              } else if (windowSize >= getBreakpointValue('--breakpoint-lg') && mainNavClass.indexOf('fds--navbar--expand--lg') > 0){
-                mouseEnter(this,dropdown);
-              } else if (windowSize >= getBreakpointValue('--breakpoint-xl') && mainNavClass.indexOf('fds--navbar--expand--xl') > 0){
-                mouseEnter(this,dropdown);
-              } else if (windowSize >= getBreakpointValue('--breakpoint-xxl') && mainNavClass.indexOf('fds--navbar--expand--xxl') > 0){
-                mouseEnter(this,dropdown);
+              if (windowSize >= getBreakpointValue('--breakpoint-lg')) {
+                $(this).addClass('active');
+                $(this).children('a').attr('aria-expanded', 'true');
+                $('.fds--droplet', megaMenu).each(function (index, drop) {
+                  if (drop !== dropdown) {
+                    $(drop).hide();
+                  }
+                });
+                $(dropdown).attr('aria-hidden', 'false');
+                $(dropdown).slideDown(0);
               }
             },
             function () {
-              if (windowSize >= getBreakpointValue('--breakpoint-sm') && mainNavClass.indexOf('fds--navbar--expand--sm') > 0){
-                mouseLeave(this,dropdown);
-              } else if (windowSize >= getBreakpointValue('--breakpoint-md') && mainNavClass.indexOf('fds--navbar--expand--md') > 0) {
-                mouseLeave(this,dropdown);
-              } else if (windowSize >= getBreakpointValue('--breakpoint-lg') && mainNavClass.indexOf('fds--navbar--expand--lg') > 0){
-                mouseLeave(this,dropdown);
-              } else if (windowSize >= getBreakpointValue('--breakpoint-xl') && mainNavClass.indexOf('fds--navbar--expand--xl') > 0){
-                mouseLeave(this,dropdown);
-              } else if (windowSize >= getBreakpointValue('--breakpoint-xxl') && mainNavClass.indexOf('fds--navbar--expand--xxl') > 0){
-                mouseLeave(this,dropdown);
+              if (windowSize >= getBreakpointValue('--breakpoint-lg')) {
+                $(this).removeClass('active');
+                $(this).children('a').attr('aria-expanded', 'false');
+                $(dropdown).slideUp(0);
               }
             }
           );
@@ -718,27 +685,27 @@
       }
 
       $('.down-arrow').on('click', function () {
-          var parent_id = $(this).parent().attr('id');
-          var x = document.getElementById(parent_id);
-          var y = $(this);
-          var li_has_class = x.classList.contains('active');
-          const childrens = document.querySelectorAll('.fds--has--drop');
-          childrens.forEach(function (elem) {
-            elem.classList.remove('active');
-            let caretBtn = elem.querySelector('.down-arrow');
-            let label = caretBtn.getAttribute('aria-label');
-            let updateLabel = label.replace('close', 'open');
-            caretBtn.setAttribute('aria-label', updateLabel);
-            caretBtn.setAttribute('aria-expanded', false);
-          });
-          if (!li_has_class) {
-            x.classList.add('active');
-            let caretBtn = x.querySelector('.down-arrow');
-            let label = caretBtn.getAttribute('aria-label');
-            let updateLabel = label.replace('open', 'close');
-            caretBtn.setAttribute('aria-label', updateLabel);
-            caretBtn.setAttribute('aria-expanded', true);
-          }
+        var parent_id = $(this).parent().attr('id');
+        var x = document.getElementById(parent_id);
+        var y = $(this);
+        var li_has_class = x.classList.contains('active');
+        const childrens = document.querySelectorAll('.fds--has--drop');
+        childrens.forEach(function (elem) {
+          elem.classList.remove('active');
+          let caretBtn = elem.querySelector('.down-arrow');
+          let label = caretBtn.getAttribute('aria-label');
+          let updateLabel = label.replace('close', 'open');
+          caretBtn.setAttribute('aria-label', updateLabel);
+          caretBtn.setAttribute('aria-expanded', false);
+        });
+        if (!li_has_class) {
+          x.classList.add('active');
+          let caretBtn = x.querySelector('.down-arrow');
+          let label = caretBtn.getAttribute('aria-label');
+          let updateLabel = label.replace('open', 'close');
+          caretBtn.setAttribute('aria-label', updateLabel);
+          caretBtn.setAttribute('aria-expanded', true);
+        }
       });
 
       function setAttributes(el, attrs) {
