@@ -1,0 +1,42 @@
+// Tables Generic Styles
+
+:root {
+  --table-bg-color: var(--white);
+  --table-color: var(--dark);
+  --table-head-text-color: (--dark);
+  --table-border-color: var(--gray-light);
+  --table-colums-padding: 0.5rem 1rem;
+  --table-text-alignment: left;
+  --table-border-width: 0;
+  --table-columns-border-width: 0;
+  --table-th-border-width: 0 0 2px;
+  --table-td-border-width: 0 0 1px;
+  --table-thead-font-weight: bold;
+
+  --table-row-padding-sm: 0;
+  --table-row-border-width: 0 0 2px;
+  --table-row-border-color: var(--gray-light);
+
+  --table-dark-bg-color: var(--dark);
+  --table-dark-text-color: var(--gray-light);
+  --table-dark-border-color: var(--gray-light);
+
+  --table-head-dark-bg-color: var(--dark);
+  --table-head-dark-text-color: var(--gray-light);
+
+  --table-light-head-text-color: var(--dark);
+  --table-light-head-bg-color: var(--gray-light);
+
+  --striped-table-light-odd-bg-color: var(--gray-light);
+  --striped-table-light-even-bg-color: var(--gray-light);
+
+  --table-bordered-width: 1px 1px 1px 1px;
+  --table-bordered-th-border-width: 1px 1px 1px 1px;
+  --table-bordered-td-border-width: 1px 1px 1px 1px;
+
+  --table-hover-text-color: var(--dark);
+  --table-hover-bg-color: var(--gray-light);
+
+  --table-dark-hover-text-color: var(--dark);
+  --table-dark-hover-bg-color: var(--gray-light);
+}
