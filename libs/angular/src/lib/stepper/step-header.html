@@ -10,11 +10,6 @@
     [ngClass]="selected ? 'btn--primary' : 'btn--primary--outline'"
     [ngSwitch]="!!(iconOverrides && iconOverrides[state])"
   >
-    <ng-container
-      *ngSwitchCase="true"
-      [ngTemplateOutlet]="iconOverrides[state]"
-      [ngTemplateOutletContext]="_getIconContext()"
-    ></ng-container>
     <ng-container *ngSwitchDefault [ngSwitch]="state">
       <span *ngSwitchCase="'number'">{{_getDefaultTextForState(state)}}</span>
       <ng-container *ngIf="editable">
@@ -47,8 +42,5 @@
   </div>
   <!-- If there is no label template, fall back to the text label. -->
   <div class="fds-step-text-label" *ngIf="_stringLabel()">{{label}}</div>
-  <div class="fds-step-sub-label-error" *ngIf="state == 'error'">
-    {{errorMessage}}
-  </div>
 </span>
 <!-- </button> -->
