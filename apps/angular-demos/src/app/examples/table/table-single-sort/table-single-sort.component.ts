@@ -20,13 +20,16 @@ export interface Task {
     <div>
     <fds-table [columns]="cols" [value]="tasks"
       [scrollable]="true" scrollHeight="400px"
-      selectionMode="single" [(selection)]="selectedTask" (onRowSelect)="onRowSelect($event)" dataKey="code"
-      tableStyleClass="fds--table">
+      (onRowSelect)="onRowSelect($event)" dataKey="code"
+      tableStyleClass="fds--table" (onHeaderCheckboxToggle)="onHeaderCheckboxToggle($event)">
         <ng-template fdsTemplate="caption">
           <caption class="d--block text--left h4">Dynamic Table with Single Sort, Scrolling, Row Select and Table Styles</caption>
         </ng-template>
         <ng-template fdsTemplate="header" let-columns>
-          <tr>
+        <tr>
+            <th style="width: 3rem">
+              <fds-tableHeaderCheckbox></fds-tableHeaderCheckbox>
+            </th>
             <th *ngFor="let col of columns" [fdsSortableColumn]="col.field">
               {{col.header}} <fds-sortIcon [field]="col.field"></fds-sortIcon>
             </th>
@@ -34,7 +37,10 @@ export interface Task {
           </tr>
         </ng-template>
         <ng-template fdsTemplate="body" let-rowData let-columns="columns">
-          <tr [fdsSelectableRow]="rowData">
+          <tr>
+            <td>
+              <fds-tableCheckbox [value]="rowData"></fds-tableCheckbox>
+            </td>
             <td *ngFor="let col of columns">
               {{ col.field ===  'weight'
                 ? (rowData[col.field] | percent)
@@ -75,11 +81,15 @@ export class TableSingleSortComponent implements OnInit {
   }
 
   selectTask(task: Task) {
-    console.log(task);
+    console.log('Edit Clicked: ', task);
   }
 
   onRowSelect(event) {
-    console.log(event);
+    console.log('Single Checkbox Checked: ', event);
+  }
+  
+  onHeaderCheckboxToggle(event) {
+    console.log('On Header Checkbox Checked: ', event);
   }
 
 }
