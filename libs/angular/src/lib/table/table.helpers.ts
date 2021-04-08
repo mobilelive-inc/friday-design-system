@@ -127,6 +127,7 @@ export class ObjectUtils {
   }
 }
 
+// @dynamic
 export class DomHandler {
   public static zindex: number = 1000;
 
