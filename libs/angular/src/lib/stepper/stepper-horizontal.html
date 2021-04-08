@@ -8,7 +8,7 @@
   <ng-container *ngFor="let step of steps; let i = index; let isLast = last">
     <fds-step-header
       *ngIf="!headerTemplate"
-      class="fds--stepper--content fds--slide{{state}}"
+      class="fds--stepper--content fds--slide{{step.state}}"
       [class.fds--slide--active]="selected"
       (click)="step.select()"
       (keydown)="_onKeydown($event)"
@@ -25,7 +25,6 @@
       [selected]="selectedIndex === i"
       [attr.aria-labelledby]="(!step.ariaLabel && step.ariaLabelledby) ? step.ariaLabelledby : null"
       [active]="step.completed || selectedIndex === i || !linear"
-      [errorMessage]="step.errorMessage"
     ></fds-step-header>
     <!-- <div *ngIf="!isLast" class="fds-stepper-horizontal-line"></div> -->
   </ng-container>
