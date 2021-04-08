@@ -99,6 +99,8 @@ export class Table implements OnInit, AfterViewInit, AfterContentInit, Blockable
 
     @Input() stateStorage: string = 'session';
 
+    @Output() onHeaderCheckboxToggle: EventEmitter<any> = new EventEmitter();
+
     @Output() onRowSelect: EventEmitter<any> = new EventEmitter();
 
     @Output() onRowUnselect: EventEmitter<any> = new EventEmitter();
@@ -716,6 +718,50 @@ export class Table implements OnInit, AfterViewInit, AfterContentInit, Blockable
         return index;
     }
 
+    toggleRowWithCheckbox(event, rowData: any) {
+        this.selection = this.selection||[];
+        let selected = this.isSelected(rowData);
+        let dataKeyValue = this.dataKey ? String(ObjectUtils.resolveFieldData(rowData, this.dataKey)) : null;
+        this.preventSelectionSetterPropagation = true;
+
+        if (selected) {
+            let selectionIndex = this.findIndexInSelection(rowData);
+            this._selection = this.selection.filter((val, i) => i != selectionIndex);
+            this.selectionChange.emit(this.selection);
+            this.onRowUnselect.emit({ originalEvent: event.originalEvent, index: event.rowIndex, data: rowData, type: 'checkbox' });
+            if (dataKeyValue) {
+                delete this.selectionKeys[dataKeyValue];
+            }
+        }
+        else {
+            this._selection = this.selection ? [...this.selection, rowData] : [rowData];
+            this.selectionChange.emit(this.selection);
+            this.onRowSelect.emit({ originalEvent: event.originalEvent, index: event.rowIndex, data: rowData, type: 'checkbox' });
+            if (dataKeyValue) {
+                this.selectionKeys[dataKeyValue] = 1;
+            }
+        }
+
+        this.tableService.onSelectionChange();
+
+        if (this.isStateful()) {
+            this.saveState();
+        }
+    }
+
+    toggleRowsWithCheckbox(event: Event, check: boolean) {
+        this._selection = check ? this.value.slice() : [];
+        this.preventSelectionSetterPropagation = true;
+        this.updateSelectionKeys();
+        this.selectionChange.emit(this._selection);
+        this.tableService.onSelectionChange();
+        this.onHeaderCheckboxToggle.emit({originalEvent: event, checked: check, data: this._selection});
+
+        if (this.isStateful()) {
+            this.saveState();
+        }
+    }
+
     equals(data1, data2) {
         return this.compareSelectionBy === 'equals' ? (data1 === data2) : ObjectUtils.equals(data1, data2, this.dataKey);
     }
@@ -1231,147 +1277,165 @@ export class SortIcon implements OnInit, OnDestroy {
     }
 }
 
-@Directive({
-    selector: '[fdsSelectableRow]',
-    host: {
-        '[class.fds-selectable-row]': 'isEnabled()',
-        '[class.fds-highlight]': 'selected',
-        '[attr.tabindex]': 'isEnabled() ? 0 : undefined'
-    }
+@Component({
+    selector: 'fds-tableCheckbox',
+    template: `
+        <div class="fds-checkbox fds-component" (click)="onClick($event)">
+            <div class="fds-hidden-accessible">
+                <input type="checkbox" [attr.id]="inputId" [attr.name]="name" [checked]="checked" (focus)="onFocus()" (blur)="onBlur()" [disabled]="disabled"
+                [attr.required]="required" [attr.aria-label]="ariaLabel">
+            </div>
+            <div #box [ngClass]="{'fds-checkbox-box fds-component':true,
+                'fds-highlight':checked, 'fds-disabled':disabled}" role="checkbox" [attr.aria-checked]="checked">
+            </div>
+        </div>
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None
 })
-export class SelectableRow implements OnInit, OnDestroy {
+export class TableCheckbox  {
 
-    @Input("fdsSelectableRow") data: any;
+    @Input() disabled: boolean;
 
-    @Input("fdsSelectableRowIndex") index: number;
+    @Input() value: any;
 
-    @Input() fdsSelectableRowDisabled: boolean;
+    @Input() index: number;
 
-    selected: boolean;
+    @Input() inputId: string;
+
+    @Input() name: string;
+
+    @Input() required: boolean;
+
+    @Input() ariaLabel: string;
+
+    @ViewChild('box') boxViewChild: ElementRef;
+
+    checked: boolean;
 
     subscription: Subscription;
 
-    constructor(public dt: Table, public tableService: TableService) {
-        if (this.isEnabled()) {
-            this.subscription = this.dt.tableService.selectionSource$.subscribe(() => {
-                this.selected = this.dt.isSelected(this.data);
-            });
-        }
-    }
-
-    ngOnInit() {
-        if (this.isEnabled()) {
-            this.selected = this.dt.isSelected(this.data);
-        }
-    }
-
-    @HostListener('click', ['$event'])
-    onClick(event: Event) {
-        if (this.isEnabled()) {
-            this.dt.handleRowClick({
-                originalEvent: event,
-                rowData: this.data,
-                rowIndex: this.index
-            });
-        }
-    }
-
-    @HostListener('touchend', ['$event'])
-    onTouchEnd(event: Event) {
-        if (this.isEnabled()) {
-            this.dt.handleRowTouchEnd(event);
-        }
-    }
-
-    @HostListener('keydown.arrowdown', ['$event'])
-    onArrowDownKeyDown(event: KeyboardEvent) {
-        if (!this.isEnabled()) {
-            return;
-        }
-
-        const row = <HTMLTableRowElement>event.currentTarget;
-        const nextRow = this.findNextSelectableRow(row);
-
-        if (nextRow) {
-            nextRow.focus();
-        }
-
-        event.preventDefault();
-    }
-
-    @HostListener('keydown.arrowup', ['$event'])
-    onArrowUpKeyDown(event: KeyboardEvent) {
-        if (!this.isEnabled()) {
-            return;
-        }
-
-        const row = <HTMLTableRowElement>event.currentTarget;
-        const prevRow = this.findPrevSelectableRow(row);
-
-        if (prevRow) {
-            prevRow.focus();
-        }
-
-        event.preventDefault();
-    }
-
-    @HostListener('keydown.enter', ['$event'])
-    @HostListener('keydown.shift.enter', ['$event'])
-    @HostListener('keydown.meta.enter', ['$event'])
-    onEnterKeyDown(event: KeyboardEvent) {
-        if (!this.isEnabled()) {
-            return;
-        }
-
-        this.dt.handleRowClick({
-            originalEvent: event,
-            rowData: this.data,
-            rowIndex: this.index
+    constructor(public dt: Table, public tableService: TableService, public cd: ChangeDetectorRef) {
+        this.subscription = this.dt.tableService.selectionSource$.subscribe(() => {
+            this.checked = this.dt.isSelected(this.value);
+            this.cd.markForCheck();
         });
     }
 
-    @HostListener('keydown.pagedown', ['$event'])
-    @HostListener('keydown.pageup', ['$event'])
-    @HostListener('keydown.home', ['$event'])
-    @HostListener('keydown.end', ['$event'])
-    @HostListener('keydown.space', ['$event'])
-    onPageDownKeyDown() {
+    ngOnInit() {
+        this.checked = this.dt.isSelected(this.value);
     }
 
-    findNextSelectableRow(row: HTMLTableRowElement): HTMLTableRowElement {
-        let nextRow = <HTMLTableRowElement> row.nextElementSibling;
-        if (nextRow) {
-            if (DomHandler.hasClass(nextRow, 'fds-selectable-row'))
-                return nextRow;
-            else
-                return this.findNextSelectableRow(nextRow);
+    onClick(event: Event) {
+        if (!this.disabled) {
+            this.dt.toggleRowWithCheckbox({
+                originalEvent: event,
+                rowIndex: this.index
+            }, this.value);
         }
-        else {
-            return null;
-        }
+        DomHandler.clearSelection();
     }
 
-    findPrevSelectableRow(row: HTMLTableRowElement): HTMLTableRowElement {
-        let prevRow = <HTMLTableRowElement> row.previousElementSibling;
-        if (prevRow) {
-            if (DomHandler.hasClass(prevRow, 'fds-selectable-row'))
-                return prevRow;
-            else
-                return this.findPrevSelectableRow(prevRow);
-        }
-        else {
-            return null;
-        }
+    onFocus() {
+        DomHandler.addClass(this.boxViewChild.nativeElement, 'fds-focus');
     }
 
-    isEnabled() {
-        return this.fdsSelectableRowDisabled !== true;
+    onBlur() {
+        DomHandler.removeClass(this.boxViewChild.nativeElement, 'fds-focus');
     }
 
     ngOnDestroy() {
         if (this.subscription) {
             this.subscription.unsubscribe();
         }
+    }
+
+}
+
+@Component({
+    selector: 'fds-tableHeaderCheckbox',
+    template: `
+        <div class="fds-checkbox fds-component" (click)="onClick($event)">
+            <div class="fds-hidden-accessible">
+                <input #cb type="checkbox" [attr.id]="inputId" [attr.name]="name" [checked]="checked" (focus)="onFocus()" (blur)="onBlur()"
+                [disabled]="isDisabled()" [attr.aria-label]="ariaLabel">
+            </div>
+            <div #box [ngClass]="{'fds-checkbox-box':true,
+                'fds-highlight':checked, 'fds-disabled': isDisabled()}" role="checkbox" [attr.aria-checked]="checked">
+            </div>
+        </div>
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None
+})
+export class TableHeaderCheckbox  {
+
+    @ViewChild('box') boxViewChild: ElementRef;
+
+    @Input() disabled: boolean;
+
+    @Input() inputId: string;
+
+    @Input() name: string;
+
+    @Input() ariaLabel: string;
+
+    checked: boolean;
+
+    selectionChangeSubscription: Subscription;
+
+    valueChangeSubscription: Subscription;
+
+    constructor(public dt: Table, public tableService: TableService, public cd: ChangeDetectorRef) {
+        this.valueChangeSubscription = this.dt.tableService.valueSource$.subscribe(() => {
+            this.checked = this.updateCheckedState();
+        });
+
+        this.selectionChangeSubscription = this.dt.tableService.selectionSource$.subscribe(() => {
+            this.checked = this.updateCheckedState();
+        });
+    }
+
+    ngOnInit() {
+        this.checked = this.updateCheckedState();
+    }
+
+    onClick(event: Event) {
+        if (!this.disabled) {
+            if (this.dt.value && this.dt.value.length > 0) {
+                this.dt.toggleRowsWithCheckbox(event, !this.checked);
+            }
+        }
+
+        DomHandler.clearSelection();
+    }
+
+    onFocus() {
+        DomHandler.addClass(this.boxViewChild.nativeElement, 'fds-focus');
+    }
+
+    onBlur() {
+        DomHandler.removeClass(this.boxViewChild.nativeElement, 'fds-focus');
+    }
+
+    isDisabled() {
+        return this.disabled || !this.dt.value || !this.dt.value.length;
+    }
+
+    ngOnDestroy() {
+        if (this.selectionChangeSubscription) {
+            this.selectionChangeSubscription.unsubscribe();
+        }
+
+        if (this.valueChangeSubscription) {
+            this.valueChangeSubscription.unsubscribe();
+        }
+    }
+
+    updateCheckedState() {
+        this.cd.markForCheck();
+        const val = this.dt.value;
+        return (val && val.length > 0 && this.dt.selection && this.dt.selection.length > 0 && this.dt.selection.length === val.length);
     }
 
 }
