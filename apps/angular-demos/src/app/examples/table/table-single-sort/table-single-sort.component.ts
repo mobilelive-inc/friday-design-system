@@ -21,6 +21,7 @@ export interface Task {
     <fds-table [columns]="cols" [value]="tasks"
       [scrollable]="true" scrollHeight="400px"
       (onRowSelect)="onRowSelect($event)" dataKey="code"
+      (selectionChange)="onSelectionChange($event)"
       tableStyleClass="fds--table" (onHeaderCheckboxToggle)="onHeaderCheckboxToggle($event)">
         <ng-template fdsTemplate="caption">
           <caption class="d--block text--left h4">Dynamic Table with Single Sort, Scrolling, Row Select and Table Styles</caption>
@@ -90,6 +91,10 @@ export class TableSingleSortComponent implements OnInit {
   
   onHeaderCheckboxToggle(event) {
     console.log('On Header Checkbox Checked: ', event);
+  }
+
+  onSelectionChange(event) {
+    console.log('On selection: ', event);
   }
 
 }
