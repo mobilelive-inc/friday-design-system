@@ -54,6 +54,7 @@ import { StripedRowEvenTableComponent } from './examples/table/striped-row-even-
 import { BorderedTableComponent } from './examples/table/bordered-table/bordered-table.component';
 import { HoverableTableComponent } from './examples/table/hoverable-table/hoverable-table.component';
 import { HoverableDarkTableComponent } from './examples/table/hoverable-dark-table/hoverable-dark-table.component';
+import { FullFeaturedComponent } from './examples/tabs/full-featured/full-featured.component';
 
 @NgModule({
   declarations: [
@@ -103,7 +104,8 @@ import { HoverableDarkTableComponent } from './examples/table/hoverable-dark-tab
     StripedRowEvenTableComponent,
     BorderedTableComponent,
     HoverableTableComponent,
-    HoverableDarkTableComponent
+    HoverableDarkTableComponent,
+    FullFeaturedComponent
   ],
   imports: [
     BrowserModule,
