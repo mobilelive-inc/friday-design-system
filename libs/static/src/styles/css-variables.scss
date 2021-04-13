@@ -1,12 +1,6 @@
 @import '../../theme/css-variables';
 @import '../../theme/breakpoint';
 
-$container-sm: var(--container-sm);
-$container-md: var(--container-md);
-$container-lg: var(--container-lg);
-$container-xl: var(--container-xl);
-$container-xxl: var(--container-xxl);
-
 $enable-grid-classes: true;
 $gutter: var(--gutter-width);
 $gutter-half: calc(var(--gutter-width) / 2);
