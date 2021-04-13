@@ -24,6 +24,7 @@ import {
   Accordion,
   AccordionTabComponent
 } from './accordion/accordion.component';
+import { Table, TableBody, ScrollableView, SortableColumn, SortIcon, TableCheckbox, TableHeaderCheckbox } from './table/table';
 
 @NgModule({
   imports: [CommonModule],
@@ -55,7 +56,14 @@ import {
     CardComponent,
     CheckboxComponent,
     AccordionTabComponent,
-    Accordion
+    Accordion,
+    Table,
+    TableBody,
+    ScrollableView,
+    SortableColumn,
+    SortIcon,
+    TableCheckbox,
+    TableHeaderCheckbox,
   ],
   exports: [
     ButtonComponent,
@@ -85,7 +93,14 @@ import {
     CardComponent,
     CheckboxComponent,
     AccordionTabComponent,
-    Accordion
+    Accordion,
+    Table,
+    TableBody,
+    ScrollableView,
+    SortableColumn,
+    SortIcon,
+    TableCheckbox,
+    TableHeaderCheckbox,
   ]
 })
 export class FdsLibAngularModule {}
