@@ -1,4 +1,3 @@
-@import '../scss/generic/general.functions';
 @import '../../theme/css-variables';
 @import '../../theme/breakpoint';
 
@@ -6,13 +5,29 @@ $enable-grid-classes: true;
 $gutter: var(--gutter-width);
 $gutter-half: calc(var(--gutter-width) / 2);
 
+// Ascending
+// Used to evaluate Sass maps like our grid breakpoints.
+@mixin _assert-ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+  @each $key, $num in $map {
+    @if $prev-num == null or unit($num) == '%' or unit($prev-num) == '%' {
+      // Do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    } @else if $prev-num >= $num {
+      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
 @mixin row-cols($count) {
   & > * {
     flex: 0 0 100% / $count;
     max-width: 100% / $count;
   }
 }
-
 @mixin make-col($size, $columns: $grid-columns) {
   flex: 0 0 percentage($size / $columns);
   // Add a `max-width` to ensure content within each column does not blow out
@@ -24,7 +39,6 @@ $gutter-half: calc(var(--gutter-width) / 2);
   $num: $size / $columns;
   margin-left: if($num == 0, 0, percentage($num));
 }
-
 @mixin make-col-auto() {
   flex: 0 0 auto;
   width: auto !important;
@@ -32,24 +46,11 @@ $gutter-half: calc(var(--gutter-width) / 2);
 }
 
 // Grid containers
-// maximum width of `.container` for different screen sizes.
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1370px
-);
+// From this map we will use names only, values are fake.
+$container-max-widths: ( sm: 1, md: 2, lg: 3, xl: 4, xxl: 5 );
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
-@include _assert-ascending($container-max-widths, '$container-max-widths');
+// From this map we will use names only, values are fake.
+$grid-breakpoints: ( xs: 0, sm: 1, md: 2, lg: 3, xl: 4, xxl: 5 );
 
 $displays: inline, block, contents, block, flex, grid, inline-block, inline-flex,
   inline-grid, inline-table, list-item, run-in, table, table-caption,
@@ -282,16 +283,16 @@ $global-spacers: (
 }
 
 // For each breakpoint, define the maximum width of the container in a media query
-@mixin make-container-max-widths(
-  $max-widths: $container-max-widths,
-  $breakpoints: $grid-breakpoints
-) {
-  @each $breakpoint, $container-max-width in $max-widths {
-    @media (min-width: var(--breakpoint-#{$breakpoint})) {
-      max-width: var(--container-#{$breakpoint});
-    }
-  }
-}
+// @mixin make-container-max-widths(
+//   $max-widths: $container-max-widths,
+//   $breakpoints: $grid-breakpoints
+// ) {
+//   @each $breakpoint, $container-max-width in $max-widths {
+//     @media (min-width: var(--breakpoint-#{$breakpoint})) {
+//       max-width: var(--container-#{$breakpoint});
+//     }
+//   }
+// }
 
 @mixin make-row($gutter: $gutter) {
   $gutter: calc(#{$gutter} / -2);
@@ -452,17 +453,10 @@ $global-spacers: (
 }
 
 @if $enable-grid-classes {
-  // Single container class with breakpoint max-widths
-  .container {
-    @include make-container();
-    @include make-container-max-widths();
-  }
-
   // 100% wide container at all breakpoints
   .container--fluid {
     @include make-container();
   }
-
   // Responsive containers that are 100% wide until a breakpoint
   @each $breakpoint, $container-max-width in $container-max-widths {
     .container--#{$breakpoint} {
@@ -471,7 +465,7 @@ $global-spacers: (
 
     @media (min-width: var(--breakpoint-#{$breakpoint})) {
       %responsive-container-#{$breakpoint} {
-        max-width: $container-max-width;
+        max-width: var(--container-#{$breakpoint});
       }
 
       // Extend each breakpoint which is smaller or equal to the current breakpoint
