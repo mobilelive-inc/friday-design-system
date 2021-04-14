@@ -1,5 +1,6 @@
 import { colors } from './colors';
 import { buttons, borderCurved, borderRounded } from './buttons';
+import { accordions } from './accordions';
 import {
   iconMarginLeft,
   iconMarginRight,
@@ -227,5 +228,6 @@ export default {
   small,
   mid,
   large,
-  xLarge
+  xLarge,
+  accordions
 };
