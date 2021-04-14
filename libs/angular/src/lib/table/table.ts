@@ -2,7 +2,8 @@ import { Component, OnInit, ChangeDetectionStrategy, ViewEncapsulation, AfterVie
 import { Subscription } from 'rxjs';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import { Template } from '../shared/template.directive';
-import { SortMeta, TableState, ObjectUtils, DomHandler, BlockableUI } from './table.helpers';
+import { ObjectUtils, DomHandler, BlockableUI } from '../shared/helpers';
+import { SortMeta, TableState } from './table.helpers';
 import { TableService } from './table.service';
 
 @Component({
