@@ -42,10 +42,14 @@ const AccordionHeader = ({ isVisible, title, isOpen, setIsOpen }) => {
           setIsOpen(true);
         }
       }}>
-      <Text bold color="white">
+      <Text bold color="white" aria-lable={title}>
         {title}
       </Text>
-      <Icon role="button" className="icon-arrowdropdown" />
+      <Icon
+        role="button"
+        aria-lable={`toggle Accordion`}
+        className="icon-arrowdropdown"
+      />
     </Header>
   );
 };
