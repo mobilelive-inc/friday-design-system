@@ -187,8 +187,8 @@ export class TabPanel implements AfterContentInit, OnDestroy {
               #tabLink
               role="tab"
               class="fds--tabview--nav--link"
-              [attr.aria-disabled]="tab.disabled"
-              [disabled]="tab.disabled"
+              [attr.aria-disabled]="tab.disabled ? true : null"
+              [attr.disabled]="tab.disabled ? true : null"
               [attr.id]="tab.id + '-label'"
               [attr.aria-selected]="tab.selected"
               [attr.aria-controls]="tab.id"
@@ -283,7 +283,7 @@ export class TabView
   ngAfterViewInit() {
     this.keyManager = new ListKeyManager(this.tabLinks);
     this.keyManager.withHorizontalOrientation('ltr'); // Arrow navigation options 
-    this.keyManager.withWrap().skipPredicate(item => item.nativeElement.disabled); // Skip Disabled
+    this.keyManager.withWrap().skipPredicate(item => item.nativeElement.ariaDisabled); // Skip Disabled
   }
 
   ngAfterViewChecked() {
