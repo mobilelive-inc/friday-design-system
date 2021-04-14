@@ -42,12 +42,12 @@ export const Value = styled.span`
 export const ButtonContainer = styled.div`
   padding-top: 48px;
 `;
-export const Button = styled.button`
+export const Button = styled.a`
   background-color: ${props => (props.next ? '#f48245' : '#707070')};
   color: white;
   border-radius: 3px;
   border: 1.5px solid #ffa500;
-  padding: 32px 64px;
+  padding: 16px 32px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;

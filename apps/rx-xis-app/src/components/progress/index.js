@@ -32,7 +32,7 @@ const Progress = () => {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
-      <Text variant="H1" mb={10} ml={8}>
+      <Text variant="H1" mb={10} ml={8} aria-label="progressbar">
         Progress
       </Text>
       <Wrapper>
@@ -41,15 +41,17 @@ const Progress = () => {
           aria-valuenow="3"
           aria-valuemin="0"
           aria-valuemax="10">
-          <Value style={style}></Value>
+          <Value style={style} aria-label={style}></Value>
         </Progresbar>
-        <Text variant="h3" mt={5} ml={25}>
+        <Text variant="h3" mt={5} ml={25} aria-label={`${progress} of 10`}>
           ({`${progress}`} of 10)
         </Text>
         <br />
         <ButtonContainer>
-          <Button onClick={handleDecrement}>Prev</Button>
-          <Button onClick={handleIncrement} next>
+          <Button role="button" onClick={handleDecrement}>
+            Prev
+          </Button>
+          <Button role="button" onClick={handleIncrement} next>
             Next
           </Button>
         </ButtonContainer>
