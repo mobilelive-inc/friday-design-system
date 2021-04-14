@@ -8,9 +8,9 @@ that you want reviewers to take into account while reviewing this PR?
 Does anything need to be done before merging or deploying?
 -->
 
-# Testing
+# Testing/Usage 
 <!--
-Put instructions for how to test this change, including stubbed data.
+Put instructions for how to test/use this change, including stubbed data.
 -->
 
 # Regression Risks
@@ -22,7 +22,7 @@ Use this field to notify the QA team of any potential risks.
 # Design/Product Sign-Off
 <!--
 If there are UI changes, did you get sign off from design?
-Did you get sign-off from the Product team (e.g. UAT)?
+Did you get sign-off from the Product owner?
 -->
 
 # Demo
