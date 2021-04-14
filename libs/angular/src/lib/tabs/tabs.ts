@@ -74,7 +74,7 @@ export class TabPanel implements AfterContentInit, OnDestroy {
 
   loaded: boolean;
 
-  id: string = `fds-tabpanel-${idx++}`;
+  id: string = `fds--tabpanel--${idx++}`;
 
   contentTemplate: TemplateRef<any>;
 
@@ -435,7 +435,7 @@ export class TabView
   updateInkBar() {
     let tabHeader = DomHandler.findSingle(
       this.navbar.nativeElement,
-      'li.fds-highlight'
+      'li.fds--active'
     );
     this.inkbar.nativeElement.style.width =
       DomHandler.getWidth(tabHeader) + 'px';
