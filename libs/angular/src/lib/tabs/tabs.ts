@@ -307,7 +307,7 @@ export class TabView
     this.cd.markForCheck();
   }
 
-  @HostListener('window:keyup', ['$event']) 
+  @HostListener('keyup', ['$event']) 
   keyFunc(event) {
     if (event.code !== 'Tab') {
       this.keyManager.onKeydown(event)
