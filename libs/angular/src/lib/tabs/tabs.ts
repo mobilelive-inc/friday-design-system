@@ -33,7 +33,7 @@ let idx: number = 0;
   template: `
     <div
       [attr.id]="id"
-      class="fds-tabview-panel"
+      class="fds--tabview--panel"
       [hidden]="!selected"
       role="tabpanel"
       [attr.aria-hidden]="!selected"
@@ -167,16 +167,16 @@ export class TabPanel implements AfterContentInit, OnDestroy {
   selector: 'fds-tabView',
   template: `
     <div
-      [ngClass]="'fds-tabview fds-component'"
+      [ngClass]="'fds--tabview fds--component'"
       [ngStyle]="style"
       [class]="styleClass"
     >
-      <ul #navbar class="fds-tabview-nav" role="tablist">
+      <ul #navbar class="fds--tabview--nav" role="tablist">
         <ng-template ngFor let-tab [ngForOf]="tabs">
           <li
             role="presentation"
             [ngClass]="{
-              'fds-highlight': tab.selected,
+              'fds--active': tab.selected,
               'fds-disabled': tab.disabled
             }"
             [ngStyle]="tab.headerStyle"
@@ -186,7 +186,7 @@ export class TabPanel implements AfterContentInit, OnDestroy {
             <a
               #tabLink
               role="tab"
-              class="fds-tabview-nav-link"
+              class="fds--tabview--nav--link"
               [attr.aria-disabled]="tab.disabled"
               [disabled]="tab.disabled"
               [attr.id]="tab.id + '-label'"
@@ -199,13 +199,13 @@ export class TabPanel implements AfterContentInit, OnDestroy {
             >
               <ng-container *ngIf="!tab.headerTemplate">
                 <span
-                  class="fds-tabview-left-icon"
+                  class="fds--tabview--left--icon"
                   [ngClass]="tab.leftIcon"
                   *ngIf="tab.leftIcon"
                 ></span>
-                <span class="fds-tabview-title">{{ tab.header }}</span>
+                <span class="fds--tabview--title">{{ tab.header }}</span>
                 <span
-                  class="fds-tabview-right-icon"
+                  class="fds--tabview--right--icon"
                   [ngClass]="tab.rightIcon"
                   *ngIf="tab.rightIcon"
                 ></span>
@@ -215,13 +215,13 @@ export class TabPanel implements AfterContentInit, OnDestroy {
               ></ng-container>
               <span
                 *ngIf="tab.closable"
-                class="fds-tabview-close icon-cross"
+                class="fds--tabview--close icon-cross"
                 (click)="close($event, tab)"
               ></span>
             </a>
           </li>
         </ng-template>
-        <li #inkbar class="fds-tabview-ink-bar"></li>
+        <li #inkbar class="fds--tabview--ink--bar"></li>
       </ul>
       <div class="fds-tabview-panels">
         <ng-content></ng-content>
