@@ -10,8 +10,6 @@ export const Wrapper = styled.div`
     border:4px solid #fef3ec;
     padding:50px 0;
     margin:2rem 1rem;
-
-
 `;
 export const Progresbar = styled.div`
   color: colors.primary;

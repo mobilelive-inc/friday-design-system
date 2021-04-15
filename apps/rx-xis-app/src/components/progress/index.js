@@ -12,18 +12,16 @@ const Progress = () => {
   const handleIncrement = () => {
     if (progress !== 10) {
       setProgress(
-        progress => progress + 1,
-        () => console.log(progress)
-      );
+        progress => progress + 1
+      ), () => console.log(progress);
     } else alert('oops, you hit the max value!');
   };
 
   const handleDecrement = () => {
     if (progress !== 0) {
       setProgress(
-        progress => progress - 1,
-        () => console.log(progress)
-      );
+        progress => progress - 1
+      ),() => console.log(progress);
     } else alert('oops, you hit the min value!');
   };
   const test = progress + `0%`;
@@ -48,9 +46,7 @@ const Progress = () => {
         </Text>
         <br />
         <ButtonContainer>
-          <Button role="button" onClick={handleDecrement}>
-            Prev
-          </Button>
+          <Button role="button" onClick={handleDecrement}>Prev</Button>
           <Button role="button" onClick={handleIncrement} next>
             Next
           </Button>
