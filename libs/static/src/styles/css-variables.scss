@@ -47,10 +47,23 @@ $gutter-half: calc(var(--gutter-width) / 2);
 
 // Grid containers
 // From this map we will use names only, values are fake.
-$container-max-widths: ( sm: 1, md: 2, lg: 3, xl: 4, xxl: 5 );
+$container-max-widths: (
+  sm: 1,
+  md: 2,
+  lg: 3,
+  xl: 4,
+  xxl: 5
+);
 
 // From this map we will use names only, values are fake.
-$grid-breakpoints: ( xs: 0, sm: 1, md: 2, lg: 3, xl: 4, xxl: 5 );
+$grid-breakpoints: (
+  xs: 0,
+  sm: 1,
+  md: 2,
+  lg: 3,
+  xl: 4,
+  xxl: 5
+);
 
 $displays: inline, block, contents, block, flex, grid, inline-block, inline-flex,
   inline-grid, inline-table, list-item, run-in, table, table-caption,
@@ -450,6 +463,10 @@ $global-spacers: (
 
 @if $enable-grid-classes {
   @include make-grid-columns();
+}
+
+.container {
+  @include make-container();
 }
 
 @if $enable-grid-classes {
