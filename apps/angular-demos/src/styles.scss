@@ -1,9 +1,6 @@
 // Static css for Friday Design System
 @import 'libs/static/src/scss/index';
+@import 'libs/static/src/styles/css-variables';
 @import 'libs/angular/src/lib/shared/tippy/fds-tippy';
 @import 'node_modules/tippy.js/animations/shift-away';
-
-// themes
-@import 'styles/themes/navy-theme';
-@import 'styles/themes/lime-theme';
-@import 'styles/themes/lemon-theme';
+@import'styles/themes/theme.scss'
