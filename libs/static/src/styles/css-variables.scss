@@ -417,14 +417,6 @@ $global-spacers: (
     }
   }
 }
-
-.col {
-  flex-basis: 0;
-  flex-grow: 1;
-  min-width: 0;
-  max-width: 100%;
-  @extend %grid-column;
-}
 .col--auto {
   position: relative;
   flex: 0 0 auto;
@@ -465,11 +457,12 @@ $global-spacers: (
   @include make-grid-columns();
 }
 
-.container {
-  @include make-container();
-}
 
 @if $enable-grid-classes {
+
+  .container {
+    @include make-container();
+  }
   // 100% wide container at all breakpoints
   .container--fluid {
     @include make-container();
