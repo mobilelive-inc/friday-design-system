@@ -53,7 +53,8 @@ export const fontWeights = [
   300, // 0
   400, // 1
   500, // 2
-  600 // 3
+  600, // 3
+  700//4
 ];
 
 export const lineHeights = [
@@ -140,6 +141,63 @@ export const space = [
   '-1rem', // 36
   '6.25rem' // 37
 ];
+//for hight width
+export const sizes = [
+  '0', // 0
+  '0.25rem', // 1
+  '0.375rem', // 2
+  '0.5rem', // 3
+  '0.625rem', // 4
+  '0.75rem', // 5
+  '0.875rem', // 6
+  '1rem', // 7
+  '1.125rem', // 8
+  '1.25rem', // 9
+  '1.375rem', // 10
+  '1.5rem', // 11
+  '1.75rem', // 12
+  '2rem', // 13
+  '2.25rem', // 14
+  '2.5rem', // 15
+  '2.75rem', // 16
+  '3rem', // 17
+  '3.25rem', // 18
+  '3.5rem', // 19
+  '3.75rem', // 20
+  '4rem', // 21
+  '4.25rem', // 22
+  '4.5rem', // 23
+  '4.75rem', // 24
+  '5rem', // 25
+  '5.25rem', // 26
+  '5.5rem', // 27
+  '5.75rem', // 28
+  '6rem', // 29
+  'auto', // 30
+  '-0.125rem', // 31
+  '-0.25rem', // 32
+  '-0.375rem', // 33
+  '-0.5rem', // 34
+  '-0.75rem', // 35
+  '-1rem', // 36
+  '6.25rem', // 37
+  '5.375',//38
+  '3.125',// 39
+];
+// for border-radius
+export const radii = [
+  '0', // 0
+  '0.063rem', // 1
+  '0.125rem', // 2
+  '0.188rem', // 3
+  '0.25rem', // 4
+  '0.313rem', // 5
+  '0.375rem', // 6
+  '0.438rem', // 7
+  '0.5rem', // 8
+  '0.563rem', // 9
+  '0.625rem', // 10
+]
 
 export const radius = 4;
 
@@ -219,6 +277,8 @@ export default {
   radius,
   borderRounded,
   space,
+  sizes,
+  radii,
   opacity,
   zIndices,
   typography,

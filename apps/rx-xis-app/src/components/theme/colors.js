@@ -40,5 +40,6 @@ export const colors = {
   linkedin: '#0076b2',
   linkedinHover: '#004471',
   instagram: '#d50060',
-  instagramHover: '#aa004d'
+  instagramHover: '#aa004d',
+  lightprimary:'#fef3ec'
 };

@@ -1,69 +1,73 @@
-import styled from 'styled-components';
-import colors from './../theme/colors';
+import styled from "styled-components";
+import css from "@styled-system/css";
 
-export const Wrapper = styled.div`
-    console.log(colors)
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom:1rem;
-    border:4px solid #fef3ec;
-    padding:50px 0;
-    margin:2rem 1rem;
-`;
-export const Progresbar = styled.div`
-  color: colors.primary;
-  height: 2em;
-  width: 30%;
-  background-color: #fef3ec;
-  position: relative;
-  border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
-  &:before {
-    content: attr(data-label);
-    font-size: 0.8em;
-    position: absolute;
-    text-align: left;
-    padding-left: 5vh;
-    padding-top: 5px;
-    color: white;
-  }
-`;
-export const Value = styled.span`
-  background-color: #f48245;
-  display: inline-block;
-  height: 100%;
-  border-radius: 3px;
-  position: relative;
-  transition: width 0.6s ease;
-`;
-export const ButtonContainer = styled.div`
-  padding-top: 48px;
-`;
-export const Button = styled.a`
-  background-color: ${props => (props.next ? '#f48245' : '#707070')};
-  color: white;
-  border-radius: 3px;
-  border: 1.5px solid #ffa500;
-  padding: 16px 32px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  font-size: 22px;
-  font-weight: 700;
-  height: 50px;
-  justify-content: center;
-  line-height: 16px;
-  margin-right: 16px;
-  min-height: 50px;
-  min-width: 0px;
-  text-align: center;
-  text-decoration-color: rgb(255, 255, 255);
-  text-decoration-line: none;
-  text-decoration-style: solid;
-  text-decoration-thickness: auto;
-  user-select: none;
-  vertical-align: middle;
-  white-space: normal;
-  width: 86.7031px;
-`;
+export const Wrapper = styled.div(
+  css({
+    display: `flex`,
+    justifyContent: `center`,
+    flexDirection: `column`,
+    border: `4px solid`,
+    borderColor: "lightprimary",
+    paddingY: [20],
+    margin: [10],
+  })
+);
+
+export const Progresbar = styled.div(
+  css({
+    backgroundColor: "lightprimary",
+    height: [9],
+    width: "20%",
+    position: "relative",
+    borderRadius: [3],
+    boxShadow: "0 2px 3px rgba(0, 0, 0, 0.5) inset",
+  })
+);
+export const Value = styled.span(
+  css({
+    display: "inline-block",
+    height: "100%",
+    position: "relative",
+    transition: "width 0.6s ease",
+    backgroundColor: "primary",
+  })
+);
+
+export const ButtonContainer = styled.div(
+  css({
+    paddingTop: [17],
+  })
+);
+
+export const Button = styled.a(
+  css({
+    backgroundColor: "primary",
+    color: "white",
+    paddingY: [2],
+    paddingX: [9],
+    cursor: "pointer",
+    display: "inline-flex",
+    alignItems: "center",
+    fontSize: [6],
+    fontWeight: [2],
+    height: [39],
+    justifyContent: "center",
+    lineHeight: [7],
+    marginRight: [7],
+    minHeight: [15],
+    minWidth: [0],
+    width: [38],
+    textAlign: "center",
+    textDecorationColor: "rgb(255, 255, 255)",
+    textDecorationLine: "none",
+    textDecorationStyle: "solid",
+    textDecorationThickness: "auto",
+    userSelect: "none",
+    verticalAlign: "middle",
+    whiteSpace: "normal",
+    "&:hover": {
+      color: "black",
+      backgroundColor: "lightprimary",
+    },
+  })
+);
