@@ -104,7 +104,7 @@ Accordion.propTypes = {
   my: PropTypes.number,
   /** For giving width to main component */
   width: PropTypes.number,
-  /** For add top & bottom margin to main component */
+  /** For giving height to main component */
   height: PropTypes.number
 };
 
