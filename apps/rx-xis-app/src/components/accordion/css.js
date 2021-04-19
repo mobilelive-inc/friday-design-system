@@ -13,26 +13,29 @@ export const AccordionWrapper = styled(`div`)(
     borderStyle: 'solid',
     borderRadius: 3
   },
-  compose(border, layout, space, color, variant({ scale: 'accordions' }))
+  compose(border, layout, space, color)
 );
 
-export const Collapse = styled.div`
-  transition: all 0.4s ease-in-out;
-  overflow: hidden;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-`;
+export const Collapse = styled(`div`)(
+  {
+    transition: 'all 0.4s ease-in-out',
+    overflow: 'hidden',
+    justifyContent: 'center',
+    padding: '10px',
+    boxSizing: 'border-box'
+  },
+  compose(space, color)
+);
 
 export const Header = styled(`div`)(
   {
     paddingLeft: '15px',
     paddingRight: '20px',
     paddingTop: '12px',
+    height: '50px',
     paddingBottom: '12px',
     marginBottom: '0px',
     justifyContent: 'space-between',
-    flex: 1,
     display: 'flex',
     flexDirection: 'row',
     borderColor: '#dfdfdf',
@@ -45,7 +48,7 @@ export const Header = styled(`div`)(
       backgroundColor: '#e0773f'
     }
   },
-  compose(border, space, color, variant({ scale: 'accordions' }))
+  compose(border, layout, space, color)
 );
 
 export default AccordionWrapper;
