@@ -1,78 +1,25 @@
-# Friday - The Design System
+# Initial page
 
-Friday is MobileLIVE's open-source design system for products and digital experiences. With the MobileLIVE Design System as its foundation, the system consists of a working code for multiple frameworks and examples with it.
+## Getting Super Powers
 
-To combine the code for multiple implementations in the one project we use the monorepos technology [NX](https://github.com/nrwl/nx).
+Becoming a super hero is a fairly straight forward process:
 
-There are several sub-projects with implementations, you can find details by the links below:
+```
+$ give me super-powers
+```
 
-* [HTML+CSS](libs/static/README.md)
-* [React](README_REACT.md)
-* [Angular](README_ANGULAR.md)
+{% hint style="info" %}
+ Super-powers are granted randomly so please submit an issue if you're not happy with yours.
+{% endhint %}
+
+Once you're strong enough, save the world:
+
+{% code title="hello.sh" %}
+```bash
+# Ain't no code for that yet, sorry
+echo 'You got to trust me on this, I saved the world'
+```
+{% endcode %}
 
 
-## Components
 
-   &nbsp;     | UX/UI     | HTML+CSS |   React   |  Angular  
-:-------------| :-------: | :-----:  | :-------: | :-------:
- Spacing units|   ✅      |   ✅      |  ✅      |   ✅  
- Iconography|   ✅      |   ✅      |  ✅      |  ✅  
- Theming|   ✅      |   ✅      |  ✅      |   ✅  
- Heading|   ✅      |   ✅      |  ✅      |    ✅   
- Typography Colors |   ✅      |   ✅      |  ✅      |   ✅    
- Layout & Grid System |   ✅      |   ✅      |  ✅      |   ✅  
- Buttons |   ✅      |   ✅      |  ✅      |   ✅
- Input  |   ✅      |   ✅      |  ✅      |  ✅ 
- Textarea  |   ✅      |   ✅      |  ✅      |  ✅
- Select  |   ✅      |   ✅      |  ✅      |   ✅
- Autocomplete |   🎨     |         |             | ✅
- Checkbox |   ✅      |   ✅      |  ✅      |  🏗
- Radio Buttons  |  ✅      |   ✅      |  ✅      |  ✅
- Toggle Buttons  |  ✅      |   ✅      |  ✅      |  - 
- Slider       |   ✅     |         |             |  ✅
- Progress     |  ✅      |           |           |   ✅
- Form        |  ✅      |   ✅      |  ✅      |   ✅  
- Tooltips |   ✅      |   ✅      |  ✅      |   ✅
- Popovers |   ✅      |   ✅      |  ✅      |   ✅
- Modal |   ✅      |   ✅      |  🏗     |   ✅ 
- Date Picker |   🎨      |         |        |  ❎
- Media|   ✅      |   ✅      |  ✅      |  ❎
- Social Icons |   ✅      |         |        |  ❎  
- Card Box |   🎨     |         |        |  ❎
-  
-Legend:
-
- ✅ - Implemented
- 
- ❎ - Code from HTML+CSS should be used
- 
- 🏗 - Development in progress
- 
- 🎨 - Specification in progress
- 
- 
-
-## Requirements
-The MobileLIVE Friday Design System team aims to support browsers and screen reader combinations across all internal team segments. 
-This support list gets updated on an occasional basis.
-
-### Browsers support 
-**Desktop browsers (Windows, macOS)**
-* Chrome latest
-* Firefox latest and extended support release (ESR)
-* Safari 2 most recent major versions
-* Microsoft Edge 2 most recent major versions
-* Internet Explorer 11
-
-**Mobile (Android, iOS)**
-* Chrome (Android)  X (10.0), Pie (9.0), Oreo (8.0), Nougat (7.0)
-* Safari (iOS) 2 most recent major versions
-
-### Accessibility support
-
-**Screen readers combinations**
-* Windows + IE11 + JAWS
-* Windows + Firefox + NVDA
-* macOS + Safari + VoiceOver
-* Android + Chrome + Talkback
-* iOS + Safari + VoiceOver
