@@ -38,36 +38,3 @@ export const ButtonContainer = styled.div(
     paddingTop: [17],
   })
 );
-
-export const Button = styled.a(
-  css({
-    backgroundColor: "primary",
-    color: "white",
-    paddingY: [2],
-    paddingX: [9],
-    cursor: "pointer",
-    display: "inline-flex",
-    alignItems: "center",
-    fontSize: [6],
-    fontWeight: [2],
-    height: [39],
-    justifyContent: "center",
-    lineHeight: [7],
-    marginRight: [7],
-    minHeight: [15],
-    minWidth: [0],
-    width: [38],
-    textAlign: "center",
-    textDecorationColor: "rgb(255, 255, 255)",
-    textDecorationLine: "none",
-    textDecorationStyle: "solid",
-    textDecorationThickness: "auto",
-    userSelect: "none",
-    verticalAlign: "middle",
-    whiteSpace: "normal",
-    "&:hover": {
-      color: "black",
-      backgroundColor: "lightprimary",
-    },
-  })
-);

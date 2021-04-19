@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
-import Theme, { space } from "../theme/defaultTheme";
-import { Wrapper, Progresbar, Value, ButtonContainer, Button } from "./css";
+import Theme from "../theme/defaultTheme";
+import { Wrapper, Progresbar, Value, ButtonContainer, } from "./css";
 import Text from "../typography";
 import GlobalStyle from "../theme/globalStyles";
+import Button from '../Button';
+
 
 const Progress = () => {
   const [progress, setProgress] = useState(3);
@@ -43,17 +45,8 @@ const Progress = () => {
         </Text>
         <br />
         <ButtonContainer>
-          <Button
-            className="btn btn-primary"
-            role="button"
-            onClick={handleDecrement}
-            style={{ background: "#707070" }}
-          >
-            Prev
-          </Button>
-          <Button role="button" onClick={handleIncrement} next>
-            Next
-          </Button>
+          <Button variant="secondary" width="10%" m={0} onClick={handleDecrement}> Prev </Button>
+          <Button variant="primary" width="10%" m={7} onClick={handleIncrement}> Next </Button>
         </ButtonContainer>
       </Wrapper>
     </ThemeProvider>
