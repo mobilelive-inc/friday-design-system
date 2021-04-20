@@ -1,9 +1,15 @@
-// Static css for Friday Design System
+// Basic Styles form Static Friday Design System
 @import 'libs/static/src/scss/index';
-@import 'libs/static/src/styles/css-variables.scss';
+
 @import 'apps/angular-demos/src/styles/themes/temp-var-vals';
 @import 'libs/angular/src/lib/shared/tippy/fds-tippy';
 @import 'node_modules/tippy.js/animations/shift-away';
 
-// Add theme based custom styles
-@import'styles/themes/theme.scss';
+// Basic Theme form Static Friday Design System
+//@import 'libs/static/theme/theme-settings';
+
+// Add theme based custom styles from local project
+@import 'styles/themes/theme.scss';
+
+//
+//@import 'styles/css-variables.scss';

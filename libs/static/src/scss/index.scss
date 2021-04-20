@@ -1,5 +1,5 @@
 @import 'vendors/rfs_autofontSizing';
-@import '../scss/generic/general.functions';
+@import 'generic/general.functions';
 @import 'settings/colors';
 @import 'settings/borders';
 @import 'settings/typography';
@@ -44,6 +44,6 @@
 @import 'utilitis/visibility';
 
 //Tools
-@import '../scss/tools/tool.shadows';
-@import '../scss/tools/tool.clearfix';
-@import '../scss/tools/tool.vendor-prefixes';
+@import 'tools/tool.shadows';
+@import 'tools/tool.clearfix';
+@import 'tools/tool.vendor-prefixes';
