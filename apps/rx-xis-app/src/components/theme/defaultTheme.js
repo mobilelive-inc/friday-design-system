@@ -181,8 +181,8 @@ export const sizes = [
   '-0.75rem', // 35
   '-1rem', // 36
   '6.25rem', // 37
-  '5.375',//38
-  '3.125',// 39
+  '5.375rem',//38
+  '3.125rem',// 39
 ];
 // for border-radius
 export const radii = [

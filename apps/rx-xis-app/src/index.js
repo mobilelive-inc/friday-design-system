@@ -34,6 +34,7 @@ import Tooltip from './components/tooltip';
 import Toggle from './components/toggle';
 import SkipLink from './components/skipLink';
 import Progress from './components/progress';
+import Cards from './components/cards';
 
 function App() {
   const options = [
@@ -546,6 +547,7 @@ function App() {
           />
         </Flex>
         <Progress />
+       <Cards />
       </div>
     </ThemeProvider>
   );
