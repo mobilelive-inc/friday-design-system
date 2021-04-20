@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { AccordionWrapper, Collapse, Header } from './css';
+import { AccordionWrapper, Collapse, Header, ToggleButton } from './css';
 import { Text } from '../typography';
 import Icon from './../icon/Icon';
 import PropTypes from 'prop-types';
+import GlobalStyle from './../theme/globalStyles';
+import Theme from './../theme/defaultTheme';
+import { ThemeProvider } from 'styled-components';
 
-const Accordion = ({ isVisible, children, onExpand, onCollapse, ...props }) => {
+const Accordion = ({ isVisible, children, onExpand, onCollapse, variant, ...props }) => {
   const [isOpen, setIsOpen] = useState(isVisible || false);
   const [childrenWithProps, setChildrenWithProps] = useState(children);
 
@@ -21,15 +24,24 @@ const Accordion = ({ isVisible, children, onExpand, onCollapse, ...props }) => {
           return React.cloneElement(child, {
             isVisible: isVisible,
             isOpen: isOpen,
-            setIsOpen: setIsOpen
+            setIsOpen: setIsOpen,
+            variant: variant
           });
         }
         return child;
       })
     );
+
   }, [isOpen]);
 
-  return <AccordionWrapper {...props}>{childrenWithProps}</AccordionWrapper>;
+  return (
+    <ThemeProvider theme={Theme}>
+      <GlobalStyle />
+      <AccordionWrapper {...props}>
+        {childrenWithProps}
+      </AccordionWrapper>
+    </ThemeProvider>
+  )
 };
 
 const AccordionHeader = ({ isVisible, title, isOpen, setIsOpen, ...props }) => {
@@ -46,7 +58,7 @@ const AccordionHeader = ({ isVisible, title, isOpen, setIsOpen, ...props }) => {
       <Text bold color="white" aria-label={title}>
         {title}
       </Text>
-      <Icon
+      <ToggleButton
         role="button"
         aria-label={`toggle Accordion`}
         className="icon-arrowdropdown"

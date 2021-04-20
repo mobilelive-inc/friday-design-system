@@ -1,54 +1,62 @@
 import styled from 'styled-components';
+import css from '@styled-system/css'
 import { compose, border, layout, variant, space, color } from 'styled-system';
 
+export const ToggleButton = styled(`i`)(
+  css({
+    paddingX: [1],
+    paddingY: [2],
+    fontSize: [5]
+  })
+)
+
 export const AccordionWrapper = styled(`div`)(
-  {
+  css({
     display: 'flex',
     flexDirection: 'column',
     backgroundColor: 'white',
     height: 'auto',
     boxSizing: 'border-box',
-    borderColor: '#dfdfdf',
-    borderWidth: '0.5px',
+    borderColor: 'borderGreyishColor',
+    borderWidth: [1],
     borderStyle: 'solid',
     borderRadius: 3
-  },
+  }),
   compose(border, layout, space, color)
 );
 
 export const Collapse = styled(`div`)(
-  {
+  css({
     transition: 'all 0.4s ease-in-out',
     overflow: 'hidden',
     justifyContent: 'center',
-    padding: '10px',
+    paddingX: [13],
+    paddingY: [7],
+    height: '100%',
     boxSizing: 'border-box'
-  },
+  }),
   compose(space, color)
 );
 
 export const Header = styled(`div`)(
-  {
-    paddingLeft: '15px',
-    paddingRight: '20px',
-    paddingTop: '12px',
+  css({
+    width: '100%',
+    paddingX: [7],
+    paddingY: [10],
+    fontWeight: [1],
     height: '50px',
-    paddingBottom: '12px',
-    marginBottom: '0px',
+    marginBottom: [0],
     justifyContent: 'space-between',
     display: 'flex',
     flexDirection: 'row',
-    borderColor: '#dfdfdf',
-    borderWidth: '0.5px',
-    borderStyle: 'solid',
     alignItems: 'center',
-    backgroundColor: '#F48245',
+    backgroundColor: 'primary',
     boxSizing: 'border-box',
     '&:hover': {
-      backgroundColor: '#e0773f'
+      backgroundColor: 'primaryHover'
     }
-  },
-  compose(border, layout, space, color)
+  }),
+  compose(border, layout, space, color, variant({ scale: 'accordions' }))
 );
 
 export default AccordionWrapper;

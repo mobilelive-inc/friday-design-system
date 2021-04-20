@@ -61,7 +61,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Accordion
-        isVisible={true}
         onExpand={() => console.log('Opened')}
         onCollapse={() => console.log('Closed')}>
         <AccordionHeader title={'Heading'}></AccordionHeader>
