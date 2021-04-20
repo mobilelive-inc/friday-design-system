@@ -1,7 +1,15 @@
-@import '../../theme/css-variables';
-@import '../../theme/breakpoint';
+@import '../../theme/cssVariable-values';
 
 $enable-grid-classes: true;
+
+// Set the number of columns
+$grid-columns :12;
+
+// Set the inner columns inside row
+$grid-row-columns: 6;
+
+
+// Specify the width of the gutters.
 $gutter: var(--gutter-width);
 $gutter-half: calc(var(--gutter-width) / 2);
 
@@ -319,8 +327,7 @@ $global-spacers: (
   $gutter: calc(#{$gutter} / 2);
   position: relative;
   // Prevent columns from becoming too narrow when at smaller grid tiers by
-  // always setting `width: 100%;`. This works because we use `flex` values
-  // later on to override this initial width.
+  // always setting `width: 100%;`.
   width: 100%;
   padding-right: $gutter;
   padding-left: $gutter;
@@ -332,6 +339,7 @@ $global-spacers: (
 // any value of `$grid-columns`.
 
 @mixin make-grid-columns(
+
   $columns: $grid-columns,
   $breakpoints: $grid-breakpoints
 ) {

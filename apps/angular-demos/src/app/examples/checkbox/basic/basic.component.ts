@@ -5,7 +5,7 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
   selector: 'demo-checkbox-basic',
   template: `
     <div class="row">
-      <div class="col-4">
+      <div class="col--4">
         <fds-checkbox
           [formControl]="paidOvertime"
           label="Paid Overtime"
