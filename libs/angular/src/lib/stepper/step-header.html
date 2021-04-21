@@ -1,35 +1,35 @@
+<!-- <button class="bg--no--color border--0 p--0" attr.aria-label="step {{_getDefaultTextForState(state)}} {{ _templateLabel() }}"> -->
 <span
-  class="fds-box-counter position--relative d--inline-block bg--white mb--2"
+  aria-hidden="true"
+  class="fds-box-counter position--relative d--inline-block mb--2"
 >
   <span
+    aria-hidden="true"
     class="fds--stepper--counter btn btn--icon rounded--circle mx--5"
+    [class.fds-done-step]="_getDefaultTextForState(state) === 'create'"
     [ngClass]="selected ? 'btn--primary' : 'btn--primary--outline'"
     [ngSwitch]="!!(iconOverrides && iconOverrides[state])"
   >
-    <ng-container
-      *ngSwitchCase="true"
-      [ngTemplateOutlet]="iconOverrides[state]"
-      [ngTemplateOutletContext]="_getIconContext()"
-    ></ng-container>
     <ng-container *ngSwitchDefault [ngSwitch]="state">
       <span *ngSwitchCase="'number'">{{_getDefaultTextForState(state)}}</span>
       <ng-container *ngIf="editable">
         <span
-          [class]="_getDefaultTextForState(state) === 'create' ? 'icon-create': 'icon-check'"
+          aria-hidden="true"
+          [class]="_getDefaultTextForState(state) === 'create' ? 'icon-check font--size--lg': 'icon-create'"
           *ngSwitchDefault
         >
           <!-- {{_getDefaultTextForState(state)}} -->
         </span>
       </ng-container>
       <ng-container *ngIf="!editable">
-        <span *ngSwitchDefault>
-          {{ index + 1 }}
-        </span>
+        <!-- [class]="_getDefaultTextForState(state) === 'done' ? 'icon-check font--size--lg': 'icon-create'" -->
+        <span aria-hidden="true" *ngSwitchDefault> {{ index + 1 }} </span>
       </ng-container>
     </ng-container>
   </span>
 </span>
 <span
+  aria-hidden="true"
   class="fds--stepper--title d--block"
   [class.fds-step-label-active]="active"
   [class.fds-step-label-selected]="selected"
@@ -42,7 +42,5 @@
   </div>
   <!-- If there is no label template, fall back to the text label. -->
   <div class="fds-step-text-label" *ngIf="_stringLabel()">{{label}}</div>
-  <div class="fds-step-sub-label-error" *ngIf="state == 'error'">
-    {{errorMessage}}
-  </div>
 </span>
+<!-- </button> -->

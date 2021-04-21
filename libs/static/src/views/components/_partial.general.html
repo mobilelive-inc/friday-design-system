@@ -2,6 +2,13 @@
   <div class="infoBlockPiece">
     <h3>General</h3>
     <p>This section describes the Components and Layouts, Containers, a Grid system and Responsive Utility Classes.</p>
+    <div class="mb--5 highlighted-block">
+      <h4>File Structure</h4>
+      <p class="mb--3">
+        The following file structure is for FDS-Static repo:<br> 
+        
+      </p>
+    </div>
     <div id="container-info" class="mb--5 highlighted-block">
       <h4>Container</h4>
       <p>Containers are the most basic layout element and are required while using grid system. The main objective of
@@ -403,7 +410,8 @@
     </div>
     <div class="mb--3 highlighted-block">
       <h4>Grid system</h4>
-      <p>FDS provides mobile first flex based grid system to build layouts of various sizes. Grid system contains 12 columns, 5 breakpoints and many utility classes.</p>
+      <p>FDS provides mobile first flex based grid system to build layouts of various sizes. Grid system contains 12
+        columns, 5 breakpoints and many utility classes.</p>
       <div class="container">
         <div class="row">
           <div class="col">
@@ -434,29 +442,31 @@
     <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
   <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
 <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span></code></pre>
-<p>Above code creates 3 columns of equal width centered in the page with <span class="text--primary">'.container'</span> class.</p>
-<div class='highlighted-block mb--3'>
-<h5 class="text--decoration--underline">Auto Layout</h5>
-<p>Using <span>col</span> only without specifying sm or md generates equal size columns:</p>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <span class="bg--primary--darker d--inline-block text--white text--center w--100">One of three columns</span>
-    </div>
-    <div class="col">
-      <span class="bg--warning d--inline-block text--center w--100">One of three columns</span>
-    </div>
-    <div class="col">
-      <span class="bg--secondary--quaternary d--inline-block text--white text--center w--100">One of three
-        columns</span>
-    </div>
-  </div>
-</div>
-<p>
-  <meta charset="utf-8">
-</p>
-<pre class="chroma"
-  style="box-sizing: border-box; font-family: Montserrat; font-size: 14px; margin-top: 0.65rem; margin-bottom: 0.65rem; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><code class="language-html" data-lang="html" style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;container&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+      <p>Above code creates 3 columns of equal width centered in the page with <span
+          class="text--primary">'.container'</span> class.</p>
+      <div class='highlighted-block mb--3'>
+        <h5 class="text--decoration--underline">Auto Layout</h5>
+        <p>Using <span>col</span> only without specifying sm or md generates equal size columns:</p>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <span class="bg--primary--darker d--inline-block text--white text--center w--100">One of three
+                columns</span>
+            </div>
+            <div class="col">
+              <span class="bg--warning d--inline-block text--center w--100">One of three columns</span>
+            </div>
+            <div class="col">
+              <span class="bg--secondary--quaternary d--inline-block text--white text--center w--100">One of three
+                columns</span>
+            </div>
+          </div>
+        </div>
+        <p>
+          <meta charset="utf-8">
+        </p>
+        <pre class="chroma"
+          style="box-sizing: border-box; font-family: Montserrat; font-size: 14px; margin-top: 0.65rem; margin-bottom: 0.65rem; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><code class="language-html" data-lang="html" style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;container&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
   <span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;row&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
     <span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;col&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
       One of three columns
@@ -469,29 +479,30 @@
     <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
   <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
 <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span></code></pre>
-</div>  
-<div class="highlighted-block">
-  <h5 class="text--decoration--underline">Variable Content Size</h5>
-  <p>Using <span>col--{breakpoint}--auto</span> generates column based on content size:</p>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <span class="bg--primary--darker d--inline-block text--white text--center w--100">One of three columns</span>
       </div>
-      <div class="col--auto">
-        <span class="bg--warning d--inline-block text--center w--100 px--1">Variable Content Size</span>
-      </div>
-      <div class="col">
-        <span class="bg--secondary--quaternary d--inline-block text--white text--center w--100">One of three
-          columns</span>
-      </div>
-    </div>
-  </div>
-  <p>
-    <meta charset="utf-8">
-  </p>
-  <pre class="chroma"
-    style="box-sizing: border-box; font-family: Montserrat; font-size: 14px; margin-top: 0.65rem; margin-bottom: 0.65rem; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><code class="language-html" data-lang="html" style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;container&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
+      <div class="highlighted-block">
+        <h5 class="text--decoration--underline">Variable Content Size</h5>
+        <p>Using <span>col--{breakpoint}--auto</span> generates column based on content size:</p>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <span class="bg--primary--darker d--inline-block text--white text--center w--100">One of three
+                columns</span>
+            </div>
+            <div class="col--auto">
+              <span class="bg--warning d--inline-block text--center w--100 px--1">Variable Content Size</span>
+            </div>
+            <div class="col">
+              <span class="bg--secondary--quaternary d--inline-block text--white text--center w--100">One of three
+                columns</span>
+            </div>
+          </div>
+        </div>
+        <p>
+          <meta charset="utf-8">
+        </p>
+        <pre class="chroma"
+          style="box-sizing: border-box; font-family: Montserrat; font-size: 14px; margin-top: 0.65rem; margin-bottom: 0.65rem; overflow: auto; display: block; color: rgb(33, 37, 41); padding: 0px; background-color: transparent; border: 0px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"><code class="language-html" data-lang="html" style='box-sizing: border-box; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: inherit; color: rgb(33, 37, 41); overflow-wrap: break-word; word-break: normal;'><span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;container&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
     <span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;row&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
       <span class="p" style="box-sizing: border-box;">&lt;</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span> <span class="na" style="box-sizing: border-box; color: rgb(0, 110, 224);">class</span><span class="o" style="box-sizing: border-box; color: rgb(85, 85, 85);">=</span><span class="s" style="box-sizing: border-box; color: rgb(215, 48, 56);">&quot;col&quot;</span><span class="p" style="box-sizing: border-box;">&gt;</span>
         One of three columns
@@ -504,11 +515,11 @@
       <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
     <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span>
   <span class="p" style="box-sizing: border-box;">&lt;/</span><span class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">div</span><span class="p" style="box-sizing: border-box;">&gt;</span></code></pre>
-  </div>
+      </div>
+    </div>
   </div>
 </div>
-    </div>
-    
-  </div>
+
+</div>
 
 </div>

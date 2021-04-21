@@ -19,6 +19,21 @@ import { PopoverDirective } from './popover/fdsPopover.directive';
 import { InputMaskComponent } from './input-mask/input-mask.component';
 import { InputNumberComponent } from './input-number/input-number.component';
 import { CardComponent } from './card/card.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import {
+  Accordion,
+  AccordionTabComponent
+} from './accordion/accordion.component';
+import {
+  Table,
+  TableBody,
+  ScrollableView,
+  SortableColumn,
+  SortIcon,
+  TableCheckbox,
+  TableHeaderCheckbox
+} from './table/table';
+import { TabView, TabPanel } from './tabs/tabs';
 
 @NgModule({
   imports: [CommonModule],
@@ -47,7 +62,19 @@ import { CardComponent } from './card/card.component';
     FdsRadioGroup,
     InputMaskComponent,
     InputNumberComponent,
-    CardComponent
+    CardComponent,
+    CheckboxComponent,
+    AccordionTabComponent,
+    Accordion,
+    Table,
+    TableBody,
+    ScrollableView,
+    SortableColumn,
+    SortIcon,
+    TableCheckbox,
+    TableHeaderCheckbox,
+    TabView,
+    TabPanel
   ],
   exports: [
     ButtonComponent,
@@ -74,7 +101,19 @@ import { CardComponent } from './card/card.component';
     FdsRadioGroup,
     InputMaskComponent,
     InputNumberComponent,
-    CardComponent
+    CardComponent,
+    CheckboxComponent,
+    AccordionTabComponent,
+    Accordion,
+    Table,
+    TableBody,
+    ScrollableView,
+    SortableColumn,
+    SortIcon,
+    TableCheckbox,
+    TableHeaderCheckbox,
+    TabView,
+    TabPanel
   ]
 })
 export class FdsLibAngularModule {}

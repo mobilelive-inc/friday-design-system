@@ -1,12 +1,27 @@
 // stylelint-disable declaration-no-important
 
-
-.float--left {
+@mixin float--left {
   float: left !important;
 }
-.float--right {
+@mixin float--right {
   float: right !important;
 }
-.float--none {
+@mixin float--none {
   float: none !important;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .float#{$infix}--left {
+      float: left;
+    }
+    .float#{$infix}--right {
+      float: right;
+    }
+    .float#{$infix}--none {
+      float: none;
+    }
+  }
 }
