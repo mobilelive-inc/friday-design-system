@@ -6,7 +6,7 @@ export const Wrapper = styled.div(
     display: `flex`,
     justifyContent: `center`,
     flexDirection: `column`,
-    border: `4px solid`,
+    border: [14],
     borderColor: "lightprimary",
     paddingY: [10],
     margin: [10],
@@ -14,7 +14,7 @@ export const Wrapper = styled.div(
 );
 export const Pwrapper = styled.div(
   css({
-    border: "2px solid",
+    border: [12],
     borderColor: "primary",
     padding: [13],
   })
@@ -23,7 +23,7 @@ export const Figuare = styled.figure(
   css({
     display: "block",
     margin: [0],
-    border: "2px solid",
+    border: [12],
     borderColor: "grayDark",
   })
 );
@@ -32,7 +32,7 @@ export const Image = styled.img(
   css({
     height: "auto",
     display: "block",
-    maxWidth: "100%",
+    maxWidth: [19],
     verticalAlign: "middle",
     borderStyle: "none",
   })
@@ -44,7 +44,7 @@ export const BoxShadow = styled.div(
 );
 export const SolidShadow = styled.div(
   css({
-    boxShadow: "5px 10px",
+    boxShadow: [1],
     color: `primary`,
   })
 );
@@ -58,19 +58,19 @@ export const CardWrapper = styled.div(
   css({
     textAlign: "center",
     padding: [7],
-    border: "1px solid",
+    border: [11],
     borderColor: "grayDark",
-    width: "732px",
+    width:[40],
   })
 );
 export const ShadowWrapper = styled.div(
   css({
     textAlign: "center",
     padding: [7],
-    border: "1px solid",
+    border: [11],
     borderColor: "grayDark",
-    width: "732px",
-    boxShadow: "5px 10px",
+    width: [40],
+    boxShadow: [1],
     color: "primary",
   })
 );

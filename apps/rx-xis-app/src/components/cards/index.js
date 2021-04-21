@@ -146,6 +146,7 @@ const Cards = () => {
           subheading='"Lorem ipsum dolor sit amet, consectetur adipiscing elit"'
         />
         <FixCard
+          width={40}
           title="Icon with Fixed Height"
           imagetitle="Lorem Ipsum"
           subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt."
