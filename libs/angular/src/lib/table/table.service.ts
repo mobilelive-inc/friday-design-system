@@ -4,35 +4,36 @@ import { SortMeta } from './table.helpers';
 
 @Injectable()
 export class TableService {
-  private sortSource = new Subject<SortMeta | SortMeta[]>();
-  private selectionSource = new Subject();
-  private valueSource = new Subject<any>();
-  private columnsSource = new Subject();
-  private resetSource = new Subject();
 
-  sortSource$ = this.sortSource.asObservable();
-  selectionSource$ = this.selectionSource.asObservable();
-  valueSource$ = this.valueSource.asObservable();
-  columnsSource$ = this.columnsSource.asObservable();
-  resetSource$ = this.resetSource.asObservable();
+    private sortSource = new Subject<SortMeta|SortMeta[]>();
+    private selectionSource = new Subject();
+    private valueSource = new Subject<any>();
+    private columnsSource = new Subject();
+    private resetSource = new Subject();
 
-  onSort(sortMeta: SortMeta | SortMeta[]) {
-    this.sortSource.next(sortMeta);
-  }
+    sortSource$ = this.sortSource.asObservable();
+    selectionSource$ = this.selectionSource.asObservable();
+    valueSource$ = this.valueSource.asObservable();
+    columnsSource$ = this.columnsSource.asObservable();
+    resetSource$ = this.resetSource.asObservable();
 
-  onSelectionChange() {
-    this.selectionSource.next();
-  }
+    onSort(sortMeta: SortMeta|SortMeta[]) {
+        this.sortSource.next(sortMeta);
+    }
 
-  onResetChange() {
-    this.resetSource.next();
-  }
+    onSelectionChange() {
+        this.selectionSource.next();
+    }
 
-  onValueChange(value: any) {
-    this.valueSource.next(value);
-  }
+    onResetChange() {
+        this.resetSource.next();
+    }
 
-  onColumnsChange(columns: any[]) {
-    this.columnsSource.next(columns);
-  }
+    onValueChange(value: any) {
+        this.valueSource.next(value);
+    }
+
+    onColumnsChange(columns: any[]) {
+        this.columnsSource.next(columns);
+    }
 }
