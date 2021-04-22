@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { colors } from '../theme/colors';
+import { colors } from '../theme/properties/colors';
 import {
   compose,
   border,

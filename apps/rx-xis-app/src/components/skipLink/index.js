@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledLink } from './css';
-import { colors } from './../theme/colors';
+import { colors } from '../theme/properties/colors';
 import PropTypes from 'prop-types';
 import { fontSizes, space } from '../theme/defaultTheme';
 
