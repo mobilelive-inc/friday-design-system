@@ -56,7 +56,8 @@ function App() {
   const [isOn, setIsOn] = React.useState(false);
   return (
     <ThemeProvider theme={theme}>
-      <PrimaryButton />
+      <Button />
+      {/* <PrimaryButton />
       <OutlineButtons />
       <ClearButton />
       <RoundedButtons />
@@ -544,7 +545,7 @@ function App() {
             isValid={true}
           />
         </Flex>
-      </div>
+      </div> */}
     </ThemeProvider>
   );
 }

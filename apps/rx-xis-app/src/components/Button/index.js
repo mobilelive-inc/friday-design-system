@@ -12,11 +12,13 @@ import {
   color
 } from 'styled-system';
 import { capitalizeFirstLetter } from '../utils/utils';
+import { fontSizes, fontWeights, lineHeights, radii } from '../theme/defaultTheme';
 const padding = '1rem 2rem';
 
 const getDerivedStyles = props => {
   const { theme, borderType, withIcon, clear, variant, disabled } = props;
   // default styles for button
+  console.log('Props: ',props);
   const styles = {
     boxSizing: 'border-box',
     cursor: 'pointer',
@@ -57,14 +59,14 @@ const Button = props => {
 
 Button.defaultProps = {
   disabled: false,
-  fontSize: [2, 3],
-  lineHeight: [4],
+  fontSize: [fontSizes.fontsize_3x_tiny, fontSizes.fontsize_2x_tiny],
+  lineHeight: [lineHeights.lineheight_1x_tiny],
   m: [0],
-  fontWeight: [3],
+  fontWeight: [fontWeights.fontweight_medium],
   // display: ['inline-block'],
   width: [1],
   textAlign: ['center'],
-  borderRadius: [0],
+  borderRadius: [radii.radius_0],
   onClick: () => {},
   withIcon: false
 };
