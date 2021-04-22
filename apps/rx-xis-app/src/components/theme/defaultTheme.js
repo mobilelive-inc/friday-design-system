@@ -87,20 +87,20 @@ export const borderWidths = {
     unread: '4px'
 };
 
-export const breakpoints = {
-    breakpoint_tiny: '0',
-    breakpoint_small: '576px',
-    breakpoint_normal: '768px',
-    breakpoint_medium: '992px',
-    breakpoint_large: '1200px'
-};
+export const breakpoints = [
+    '0',
+    '576px',
+    '768px',
+    '992px',
+    '1200px'
+];
 
 export const mediaqueryBreakpoints = {
-    xs: breakpoints.breakpoint_tiny,
-    sm: breakpoints.breakpoint_small,
-    md: breakpoints.breakpoint_small,
-    lg: breakpoints.breakpoint_small,
-    xl: breakpoints.breakpoint_small
+    xs: breakpoints[0],
+    sm: breakpoints[1],
+    md: breakpoints[2],
+    lg: breakpoints[3],
+    xl: breakpoints[4]
 };
 
 //for hight width

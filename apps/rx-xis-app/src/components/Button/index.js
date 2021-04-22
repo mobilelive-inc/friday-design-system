@@ -18,7 +18,6 @@ const padding = '1rem 2rem';
 const getDerivedStyles = props => {
   const { theme, borderType, withIcon, clear, variant, disabled } = props;
   // default styles for button
-  console.log('Props: ',props);
   const styles = {
     boxSizing: 'border-box',
     cursor: 'pointer',
