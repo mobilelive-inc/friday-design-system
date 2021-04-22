@@ -33,6 +33,7 @@ import TextArea from './components/textArea';
 import Tooltip from './components/tooltip';
 import Toggle from './components/toggle';
 import SkipLink from './components/skipLink';
+import RadioBtn from './components/radiobtn';
 
 function App() {
   const options = [
@@ -544,6 +545,7 @@ function App() {
             isValid={true}
           />
         </Flex>
+        <RadioBtn  />
       </div>
     </ThemeProvider>
   );
