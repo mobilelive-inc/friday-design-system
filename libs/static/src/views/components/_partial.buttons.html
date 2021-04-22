@@ -14,7 +14,7 @@
 
       <div class="highlighted-block mb--4">
         <pre
-          style="font-family: 'Montserrat'; font-size: 12pt; margin-top: 0;"
+          style="font-family: 'Montserrat'; font-size: 12pt; margin-top: 0"
         ><span style="color:#808080;">&lt;!--/ Anchor Links--&gt;</span></pre>
 
         <a href="#" class="btn btn--primary">Link</a>
@@ -36,7 +36,7 @@
         <button type="button" class="btn btn--success">Delete</button>
 
         <pre
-          style="font-family: 'Montserrat'; font-size: 12pt; margin-bottom: 0;"
+          style="font-family: 'Montserrat'; font-size: 12pt; margin-bottom: 0"
         ><span style="color:rgb(0,0,128);">&lt;button </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;button&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn btn--primary&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Save<span style="color:rgb(0,0,128);">&lt;/button&gt;
 </span><span style="color:rgb(0,0,128);">
 </span><span style="color:rgb(0,0,128);">&lt;button </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;button&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn btn--success&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Delete<span style="color:rgb(0,0,128);">&lt;/button&gt;</span></pre>
@@ -92,7 +92,26 @@
                 class="nt" style="box-sizing: border-box; color: rgb(47, 111, 159);">&gt;</span>Link<span class="nt"
                                                                                                           style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/a&gt;</span></code></pre>
       </div>
-
+      <div class="highlighted-block mb--3">
+        <h5 class="text--primary">How to import button styles:</h5>
+        <p>
+          In order to use buttons in your project, import following path in your
+          main styles:
+        </p>
+        <h6>
+          @import 'node_modules/@mobilelivenpm/fds-static-scss/src/scss/buttons
+        </h6>
+      </div>
+      <div class="highlighted-block mb--3">
+        <h5 class="text--primary">How to customize button styles:</h5>
+        <p>
+          In order to customize buttons in your theme as per requirements,
+          import following path in your theme-settings file:
+        </p>
+        <h6>
+          @import 'node_modules/@mobilelivenpm/fds-static-scss/theme/buttons
+        </h6>
+      </div>
       <h3 class="h3">Button Variants</h3>
       <p>Add classes for different button variants:</p>
       <div class="highlighted-block mb--4">
@@ -1340,11 +1359,11 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
 
               <pre
                 style="font-family: Montserrat; font-size: 12pt"
-              ><span style="">&lt;</span><span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn--info&quot;</span><span style="">&gt;</span>
-    <span style="">&lt;</span><span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-cloud-architecture&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128); ">i</span><span style="">&gt;</span>
-    <span style="">&lt;</span><span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn--text&quot;</span><span style="">&gt;</span>Info<span style="">&lt;/</span><span style="color: rgb(0, 0, 128); ">span</span><span style="">&gt;</span>
-    <span style="">&lt;</span><span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-favorite&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128); ">i</span><span style="">&gt;</span>
-  <span style="">&lt;/</span><span style="color: rgb(0, 0, 128); ">button</span><span style="">&gt;</span></pre>
+              ><span>&lt;</span><span style="color: rgb(0, 0, 128); ">button </span><span style="color: rgb(0, 0, 255); ">type</span><span style="color: rgb(0, 128, 0); ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn btn--info&quot;</span><span>&gt;</span>
+    <span>&lt;</span><span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-cloud-architecture&quot;</span><span>&gt;&lt;/</span><span style="color: rgb(0, 0, 128); ">i</span><span>&gt;</span>
+    <span>&lt;</span><span style="color: rgb(0, 0, 128); ">span </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;btn--text&quot;</span><span>&gt;</span>Info<span>&lt;/</span><span style="color: rgb(0, 0, 128); ">span</span><span>&gt;</span>
+    <span>&lt;</span><span style="color: rgb(0, 0, 128); ">i </span><span style="color: rgb(0, 0, 255); ">class</span><span style="color: rgb(0, 128, 0); ">=&quot;icon-favorite&quot;</span><span>&gt;&lt;/</span><span style="color: rgb(0, 0, 128); ">i</span><span>&gt;</span>
+  <span>&lt;/</span><span style="color: rgb(0, 0, 128); ">button</span><span>&gt;</span></pre>
 
               <pre
                 style="font-family: Montserrat; font-size: 12pt"
@@ -1444,27 +1463,27 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
 
               <pre
                 style="font-family: Montserrat; font-size: 12pt"
-              ><span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">button </span><span style="color: rgb(0, 0, 255);  ">type</span><span style="color: rgb(0, 128, 0);  ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn btn--tooltip btn--light text--light&quot;</span><span style="">&gt;</span>
-    <span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">i </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;icon-info&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128);  ">i</span><span style="">&gt;</span> <span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">span </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn--text&quot;</span><span style="">&gt;</span>Light<span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">span</span><span style="">&gt;</span>
-  <span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">button</span><span style="">&gt;</span></pre>
+              ><span>&lt;</span><span style="color: rgb(0, 0, 128);  ">button </span><span style="color: rgb(0, 0, 255);  ">type</span><span style="color: rgb(0, 128, 0);  ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn btn--tooltip btn--light text--light&quot;</span><span>&gt;</span>
+    <span>&lt;</span><span style="color: rgb(0, 0, 128);  ">i </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;icon-info&quot;</span><span>&gt;&lt;/</span><span style="color: rgb(0, 0, 128);  ">i</span><span>&gt;</span> <span>&lt;</span><span style="color: rgb(0, 0, 128);  ">span </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn--text&quot;</span><span>&gt;</span>Light<span>&lt;/</span><span style="color: rgb(0, 0, 128);  ">span</span><span>&gt;</span>
+  <span>&lt;/</span><span style="color: rgb(0, 0, 128);  ">button</span><span>&gt;</span></pre>
 
               <pre
                 style="font-family: Montserrat; font-size: 12pt"
-              ><span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">button </span><span style="color: rgb(0, 0, 255);  ">type</span><span style="color: rgb(0, 128, 0);  ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn btn--tooltip text--primary&quot;</span><span style="">&gt;</span>
-    <span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">i </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;icon-info&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128);  ">i</span><span style="">&gt;&lt;</span><span style="color: rgb(0, 0, 128);  ">span </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn--text&quot;</span><span style="">&gt;</span>Primary tooltip<span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">span</span><span style="">&gt;</span>
-  <span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">button</span><span style="">&gt;</span></pre>
+              ><span>&lt;</span><span style="color: rgb(0, 0, 128);  ">button </span><span style="color: rgb(0, 0, 255);  ">type</span><span style="color: rgb(0, 128, 0);  ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn btn--tooltip text--primary&quot;</span><span>&gt;</span>
+    <span>&lt;</span><span style="color: rgb(0, 0, 128);  ">i </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;icon-info&quot;</span><span>&gt;&lt;/</span><span style="color: rgb(0, 0, 128);  ">i</span><span>&gt;&lt;</span><span style="color: rgb(0, 0, 128);  ">span </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn--text&quot;</span><span>&gt;</span>Primary tooltip<span>&lt;/</span><span style="color: rgb(0, 0, 128);  ">span</span><span>&gt;</span>
+  <span>&lt;/</span><span style="color: rgb(0, 0, 128);  ">button</span><span>&gt;</span></pre>
 
               <pre
                 style="font-family: Montserrat; font-size: 12pt"
-              ><span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">button </span><span style="color: rgb(0, 0, 255);  ">type</span><span style="color: rgb(0, 128, 0);  ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn btn--tooltip text--success&quot;</span><span style="">&gt;</span>
-    <span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">i </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;icon-info&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128);  ">i</span><span style="">&gt;&lt;</span><span style="color: rgb(0, 0, 128);  ">span </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn--text&quot;</span><span style="">&gt;</span>Success<span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">span</span><span style="">&gt;</span>
-  <span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">button</span><span style="">&gt;</span></pre>
+              ><span>&lt;</span><span style="color: rgb(0, 0, 128);  ">button </span><span style="color: rgb(0, 0, 255);  ">type</span><span style="color: rgb(0, 128, 0);  ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn btn--tooltip text--success&quot;</span><span>&gt;</span>
+    <span>&lt;</span><span style="color: rgb(0, 0, 128);  ">i </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;icon-info&quot;</span><span>&gt;&lt;/</span><span style="color: rgb(0, 0, 128);  ">i</span><span>&gt;&lt;</span><span style="color: rgb(0, 0, 128);  ">span </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn--text&quot;</span><span>&gt;</span>Success<span>&lt;/</span><span style="color: rgb(0, 0, 128);  ">span</span><span>&gt;</span>
+  <span>&lt;/</span><span style="color: rgb(0, 0, 128);  ">button</span><span>&gt;</span></pre>
 
               <pre
                 style="font-family: Montserrat; font-size: 12pt"
-              ><span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">button </span><span style="color: rgb(0, 0, 255);  ">type</span><span style="color: rgb(0, 128, 0);  ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn btn--tooltip&quot; </span><span style="color: rgb(0, 0, 255);  ">disabled</span><span style="">&gt;</span>
-    <span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">i </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;icon-info&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128);  ">i</span><span style="">&gt;</span> <span style="">&lt;</span><span style="color: rgb(0, 0, 128);  ">span </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn--text&quot;</span><span style="">&gt;</span>Disabled<span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">span</span><span style="">&gt;</span>
-  <span style="">&lt;/</span><span style="color: rgb(0, 0, 128);  ">button</span><span style="">&gt;</span></pre>
+              ><span>&lt;</span><span style="color: rgb(0, 0, 128);  ">button </span><span style="color: rgb(0, 0, 255);  ">type</span><span style="color: rgb(0, 128, 0);  ">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn btn--tooltip&quot; </span><span style="color: rgb(0, 0, 255);  ">disabled</span><span>&gt;</span>
+    <span>&lt;</span><span style="color: rgb(0, 0, 128);  ">i </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;icon-info&quot;</span><span>&gt;&lt;/</span><span style="color: rgb(0, 0, 128);  ">i</span><span>&gt;</span> <span>&lt;</span><span style="color: rgb(0, 0, 128);  ">span </span><span style="color: rgb(0, 0, 255);  ">class</span><span style="color: rgb(0, 128, 0);  ">=&quot;btn--text&quot;</span><span>&gt;</span>Disabled<span>&lt;/</span><span style="color: rgb(0, 0, 128);  ">span</span><span>&gt;</span>
+  <span>&lt;/</span><span style="color: rgb(0, 0, 128);  ">button</span><span>&gt;</span></pre>
             </div>
           </div>
         </div>
@@ -1485,7 +1504,10 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
             <span class="sr--only">Button</span>
             <i class="icon-info"></i>
           </button>
-          <button type="button" class="mr--5 mb--1 btn btn--icon btn--dark--outline">
+          <button
+            type="button"
+            class="mr--5 mb--1 btn btn--icon btn--dark--outline"
+          >
             <span class="sr--only">Button</span>
             <i class="icon-delete"></i>
           </button>
@@ -1496,7 +1518,10 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
             <span class="sr--only">Button</span>
             <i class="icon-delete"></i>
           </button>
-          <button type="button" class="mr--5 mb--1 btn btn--icon btn--dark curved">
+          <button
+            type="button"
+            class="mr--5 mb--1 btn btn--icon btn--dark curved"
+          >
             <span class="sr--only">Button</span>
             <i class="icon-delete"></i>
           </button>
@@ -1507,7 +1532,10 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
             <span class="sr--only">Button</span>
             <i class="icon-delete"></i>
           </button>
-          <button type="button" class="mr--5 mb--1 btn btn--icon btn--info--outline">
+          <button
+            type="button"
+            class="mr--5 mb--1 btn btn--icon btn--info--outline"
+          >
             <span class="sr--only">Button</span>
             <i class="icon-delete"></i>
           </button>
@@ -1651,9 +1679,9 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
 
               <pre
                 style="font-family: Montserrat; font-size: 12pt"
-              ><span style="">&lt;</span><span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn--icon btn--success--outline btnRounded&quot;</span><span style="">&gt;</span>
-    <span style="">&lt;</span><span style="color: rgb(0, 0, 128);">i </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;icon-delete&quot;</span><span style="">&gt;&lt;/</span><span style="color: rgb(0, 0, 128);">i</span><span style="">&gt;</span>
-  <span style="">&lt;/</span><span style="color: rgb(0, 0, 128);">button</span><span style="">&gt;</span></pre>
+              ><span>&lt;</span><span style="color: rgb(0, 0, 128);">button </span><span style="color: rgb(0, 0, 255);">type</span><span style="color: rgb(0, 128, 0);">=&quot;button&quot; </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;btn btn--icon btn--success--outline btnRounded&quot;</span><span>&gt;</span>
+    <span>&lt;</span><span style="color: rgb(0, 0, 128);">i </span><span style="color: rgb(0, 0, 255);">class</span><span style="color: rgb(0, 128, 0);">=&quot;icon-delete&quot;</span><span>&gt;&lt;/</span><span style="color: rgb(0, 0, 128);">i</span><span>&gt;</span>
+  <span>&lt;/</span><span style="color: rgb(0, 0, 128);">button</span><span>&gt;</span></pre>
 
               <pre
                 style="font-family: Montserrat; font-size: 12pt"
@@ -1836,7 +1864,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           </p>
           <span>
             <pre
-              style="font-family: Montserrat; font-size: 11.5pt;"
+              style="font-family: Montserrat; font-size: 11.5pt"
             ><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand--sm--only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand in Mobile Only
 <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand--md--only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand in Tablet Only
 <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand--lg--only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand in Desktop Only
@@ -2081,7 +2109,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           <label for="collapsiblebtns102" class="lbl-toggle"></label>
           <div class="collapsible-content">
             <div class="content-inner">
-              <pre style="font-family: Montserrat; font-size: 12pt;">
+              <pre style="font-family: Montserrat; font-size: 12pt">
 <span style="color: rgb(0,0,128);"></span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--googleRed&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-google"</span>&gt;&lt;/i&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;span&gt;Google&lt;/span&gt;</span>
@@ -2252,7 +2280,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           <label for="collapsiblebtns103" class="lbl-toggle"></label>
           <div class="collapsible-content">
             <div class="content-inner">
-              <pre style="font-family: Montserrat; font-size: 12pt;">
+              <pre style="font-family: Montserrat; font-size: 12pt">
 <span style="color: rgb(0,0,128);"></span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-googleRed&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
         <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-google"</span>&gt;&lt;/i&gt;</span>
         <span style="color: rgb(0,0,128);">  &lt;span&gt;Google&lt;/span&gt;</span>
@@ -2376,7 +2404,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           <label for="collapsiblebtns104" class="lbl-toggle"></label>
           <div class="collapsible-content">
             <div class="content-inner">
-              <pre style="font-family: Montserrat; font-size: 12pt;">
+              <pre style="font-family: Montserrat; font-size: 12pt">
 <span style="color: rgb(0,0,128);"></span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--googleRed&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-google"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
@@ -2494,7 +2522,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           <label for="collapsiblebtns105" class="lbl-toggle"></label>
           <div class="collapsible-content">
             <div class="content-inner">
-              <pre style="font-family: Montserrat; font-size: 12pt;">
+              <pre style="font-family: Montserrat; font-size: 12pt">
 <span style="color: rgb(0,0,128);"></span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-googleRed&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-google"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
