@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import css from '@styled-system/css'
+import css from '@styled-system/css';
 import { compose, border, layout, variant, space, color } from 'styled-system';
 
 export const ToggleButton = styled(`i`)(
   css({
-    paddingX: [1],
-    paddingY: [2],
-    fontSize: [5]
+    paddingX: 'space_5x_tiny',
+    paddingY: 'space_4x_tiny',
+    fontSize: 'fontsize_1x_tiny'
   })
-)
+);
 
 export const AccordionWrapper = styled(`div`)(
   css({
@@ -18,9 +18,9 @@ export const AccordionWrapper = styled(`div`)(
     height: 'auto',
     boxSizing: 'border-box',
     borderColor: 'borderGreyishColor',
-    borderWidth: [1],
+    borderWidth: 'hover',
     borderStyle: 'solid',
-    borderRadius: 3
+    borderRadius: 'radius_0_063rem'
   }),
   compose(border, layout, space, color)
 );
@@ -30,8 +30,8 @@ export const Collapse = styled(`div`)(
     transition: 'all 0.4s ease-in-out',
     overflow: 'hidden',
     justifyContent: 'center',
-    paddingX: [13],
-    paddingY: [7],
+    paddingX: 'space_6x_small',
+    paddingY: 'space_6x_small',
     height: '100%',
     boxSizing: 'border-box'
   }),
@@ -41,11 +41,11 @@ export const Collapse = styled(`div`)(
 export const Header = styled(`div`)(
   css({
     width: '100%',
-    paddingX: [7],
-    paddingY: [10],
-    fontWeight: [1],
+    paddingX: 'space_6x_small',
+    paddingY: 'space_3x_small',
+    fontWeight: 'fontweight_small',
     height: '50px',
-    marginBottom: [0],
+    marginBottom: 'space_6x_tiny',
     justifyContent: 'space-between',
     display: 'flex',
     flexDirection: 'row',

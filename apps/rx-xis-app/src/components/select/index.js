@@ -2,14 +2,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  BaseSelect, SelectWrapper, RightIconButton, LeftIconButton, ChevronDownIcon, ValidationIcon
+  BaseSelect,
+  SelectWrapper,
+  RightIconButton,
+  LeftIconButton,
+  ChevronDownIcon,
+  ValidationIcon
 } from './css';
 import Text from '../typography';
 import Option from '../option';
+import { fontSizes, lineHeights, fontWeights } from '../theme/defaultTheme';
 
-
-
-const Select = (props) => {
+const Select = props => {
   const {
     children,
     width,
@@ -32,77 +36,69 @@ const Select = (props) => {
   } = props;
   return (
     <>
-    <SelectWrapper width={width} leftIcon={leftIcon}>
-      {
-        leftIcon && (
+      <SelectWrapper width={width} leftIcon={leftIcon}>
+        {leftIcon && (
           <LeftIconButton onClick={onLeftIconClick}>
-            <span className={leftIcon}/>
+            <span className={leftIcon} />
           </LeftIconButton>
-        )
-      }
-      <BaseSelect
-        {...restProps}
-        id={id}
-        name={name}
-        value={value}
-        error={errorMessage}
-        borderType={borderType}
-        withBorderBottomOnly={withBorderBottomOnly}
-        onChange={onChange}>
-        {placeholder && <Option>{placeholder}</Option>}
-        {children}
-      </BaseSelect>
-      {
-        chevron && <ChevronDownIcon className={chevron}/>
-      }
-      {
-        rightIcon && (
+        )}
+        <BaseSelect
+          {...restProps}
+          id={id}
+          name={name}
+          value={value}
+          error={errorMessage}
+          borderType={borderType}
+          withBorderBottomOnly={withBorderBottomOnly}
+          onChange={onChange}>
+          {placeholder && <Option>{placeholder}</Option>}
+          {children}
+        </BaseSelect>
+        {chevron && <ChevronDownIcon className={chevron} />}
+        {rightIcon && (
           <RightIconButton onClick={onRightIconButtonClick}>
-            <span className={rightIcon}/>
+            <span className={rightIcon} />
           </RightIconButton>
-        )
-      }
-      {
-        validationIcon && (
-          <ValidationIcon className={validationIcon} isValid={isValid}/>
-        )
-      }
-    </SelectWrapper>
-    {
-        errorMessage && (
-          <Text
-            position="absolute"
-            as="p"
-            color={errorMessage ? "error":"black"}
-            fontSize="10px"
-            lineHeight="1px"
-            pl={3}
-            mt={17}
-            pt={0}>{errorMessage}</Text>
-        )
-      }
+        )}
+        {validationIcon && (
+          <ValidationIcon className={validationIcon} isValid={isValid} />
+        )}
+      </SelectWrapper>
+      {errorMessage && (
+        <Text
+          position="absolute"
+          as="p"
+          color={errorMessage ? 'error' : 'black'}
+          fontSize="10px"
+          lineHeight="1px"
+          pl={3}
+          mt={17}
+          pt={0}>
+          {errorMessage}
+        </Text>
+      )}
     </>
-  )
-}
+  );
+};
 
 Select.defaultProps = {
   disabled: false,
-  fontSize: [2, 3],
-  lineHeight: [4],
+  fontSize: [fontSizes.fontsize_2x_tiny, fontSizes.fontsize_3x_tiny],
+  lineHeight: [lineHeights.lineheight_3x_small],
   m: [0],
-  fontWeight: [3],
+  fontWeight: [fontWeights.fontweight_medium],
   width: [1],
   textAlign: ['center'],
   borderRadius: [0],
   onClick: () => {},
-  withIcon: false,
+  withIcon: false
 };
 
 Select.propTypes = {
   /** Need to be instances of Option component */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.arrayOf(PropTypes.node)
   ]).isRequired,
   /** Option to disable select */
   disabled: PropTypes.bool,
@@ -113,35 +109,35 @@ Select.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Defines line height of child elements. Accepts responsive value from theme */
   lineHeight: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Defines font weight of child elements. Accepts responsive value from theme */
   fontWeight: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Defines width of button. Accepts responsive value from theme */
   width: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Defines height of button. Accepts responsive value from theme */
   height: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** textAlign property specifies the horizontal
    * alignment of text in an element. Accepts responsive value from theme */
@@ -149,14 +145,14 @@ Select.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Defines border radius on the button. Accepts responsive value from theme. */
   borderRadius: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Defines button's border. It's a shorthand for border-width, border-style, and border-color.  */
   border: PropTypes.string,
@@ -171,7 +167,7 @@ Select.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
+    PropTypes.arrayOf(PropTypes.number)
   ]),
   /** Shorthand to add padding to button. pl, pr, pt, pb, py and px are also supported to
    * to add paddings on left, right, top, bottom, y-axis and x-axis respectively.
@@ -181,9 +177,8 @@ Select.propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
-    PropTypes.arrayOf(PropTypes.number),
-  ]),
+    PropTypes.arrayOf(PropTypes.number)
+  ])
 };
-
 
 export default Select;

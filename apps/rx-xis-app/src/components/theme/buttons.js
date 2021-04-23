@@ -1,5 +1,5 @@
 import { lighten } from '../utils/lighten';
-import { colors } from './colors';
+import { colors } from './properties/colors';
 
 const buttonBorder = '2px solid transparent';
 export const borderCurved = '10px';
