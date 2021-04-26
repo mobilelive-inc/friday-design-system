@@ -10,8 +10,8 @@ import { sizes } from './properties/sizes';
 import { radii, radius } from './properties/radius';
 import { zIndices } from './properties/zIndices';
 import { typography } from './properties/typography';
-import { buttons, borderCurved, borderRounded } from './buttons';
-import { accordions } from './accordions';
+import { buttons, borderCurved, borderRounded } from './variants/buttons';
+import { accordions } from './variants/accordions';
 import {
   iconMarginLeft,
   iconMarginRight,
