@@ -1,18 +1,43 @@
-import { fontSizes } from '../properties/fontSizes'
-import { colors } from '../properties/colors'
-import { space } from '../properties/space'
+import { _fontSizes } from '../properties/fontSizes'
+import { _colors } from '../properties/colors'
+import { _space } from '../properties/space'
+import { _radii } from '../properties/radius'
+import { _borderWidths } from '../properties/borderWidths'
 
 export const fontSizes = {
-    collapseHeadingTextFontSize: fontSizes.fontsize_2x_tiny,
-    collapseHeadingIconFontSize: fontSizes.fontsize_tiny,
+    collapseHeadingTextFontSize: _fontSizes.fontsize_2x_tiny,
+    collapseHeadingIconFontSize: _fontSizes.fontsize_tiny,
 }
 
 export const colors = {
-    collapseHeadingTextColor: colors.black,
-    collapseHeadingIconColor: colors.black,
+    collapseHeadingTextColor: _colors.black,
+    collapseHeadingIconColor: _colors.black,
+    collapseBorderColor: _colors.grayLight,
+    collapseHeaderBackground: _colors.primary,
+    collapseHeaderBackgroundHover: _colors.primaryHover
 }
 
 export const space = {
-    collapseHeadingPadding: space.space_6x_small + ' ' + space.space_small,
-    collapseContentPadding: space.space_small + ' ' + space.space_6x_small,
+    collapseHeadingPaddingX: _space.space_6x_small,
+    collapseHeadingPaddingY: _space.space_small,
+    collapseContentPaddingX: _space.space_small,
+    collapseContentPaddingY: _space.space_6x_small,
+    collapseHeadingIconPaddingX: _space.space_5x_tiny,
+    collapseHeadingIconPaddingY: _space.space_5x_tiny,
+}
+
+export const radii = {
+    collapseBordeRadius: _radii.radius_0_063rem
+}
+
+export const borderWidths = {
+    collapseBorderWidth: _borderWidths.borderWidth
+}
+
+export default {
+    fontSizes,
+    colors,
+    space,
+    radii,
+    borderWidths
 }

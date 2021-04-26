@@ -4,9 +4,9 @@ import { compose, border, layout, variant, space, color } from 'styled-system';
 
 export const ToggleButton = styled(`i`)(
   css({
-    paddingX: 'space_5x_tiny',
-    paddingY: 'space_4x_tiny',
-    fontSize: 'fontsize_1x_tiny'
+    paddingX: 'collapseHeadingIconPaddingX',
+    paddingY: 'collapseHeadingIconPaddingY',
+    fontSize: 'collapseHeadingIconFontSize'
   })
 );
 
@@ -17,10 +17,10 @@ export const AccordionWrapper = styled(`div`)(
     backgroundColor: 'white',
     height: 'auto',
     boxSizing: 'border-box',
-    borderColor: 'borderGreyishColor',
-    borderWidth: 'hover',
+    borderColor: 'collapseBorderColor',
+    borderWidth: 'collapseBorderWidth',
     borderStyle: 'solid',
-    borderRadius: 'radius_0_063rem'
+    borderRadius: 'collapseBordeRadius'
   }),
   compose(border, layout, space, color)
 );
@@ -30,8 +30,8 @@ export const Collapse = styled(`div`)(
     transition: 'all 0.4s ease-in-out',
     overflow: 'hidden',
     justifyContent: 'center',
-    paddingX: 'space_6x_small',
-    paddingY: 'space_6x_small',
+    paddingX: 'collapseContentPaddingX',
+    paddingY: 'collapseContentPaddingY',
     height: '100%',
     boxSizing: 'border-box'
   }),
@@ -41,8 +41,8 @@ export const Collapse = styled(`div`)(
 export const Header = styled(`div`)(
   css({
     width: '100%',
-    paddingX: 'space_6x_small',
-    paddingY: 'space_3x_small',
+    paddingX: 'collapseHeadingPaddingX',
+    paddingY: 'collapseHeadingPaddingY',
     fontWeight: 'fontweight_small',
     height: '50px',
     marginBottom: 'space_6x_tiny',
@@ -50,10 +50,10 @@ export const Header = styled(`div`)(
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'primary',
+    backgroundColor: 'collapseHeaderBackground',
     boxSizing: 'border-box',
     '&:hover': {
-      backgroundColor: 'primaryHover'
+      backgroundColor: 'collapseHeaderBackgroundHover'
     }
   }),
   compose(border, layout, space, color, variant({ scale: 'accordions' }))

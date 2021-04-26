@@ -38,3 +38,5 @@ export const space = {
   space_6x_large: '6rem',
   space_huge: '6.25rem'
 };
+
+export const _space = space;

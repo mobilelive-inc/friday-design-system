@@ -14,3 +14,5 @@ export const radii = {
 };
 
 export const radius = 4;
+
+export const _radii = radii

@@ -4,7 +4,7 @@ import { Text } from '../typography';
 import Icon from './../icon/Icon';
 import PropTypes from 'prop-types';
 import GlobalStyle from './../theme/globalStyles';
-import Theme from './../theme/defaultTheme';
+import accordionTheme from './../theme/styles/accordion';
 import { ThemeProvider } from 'styled-components';
 
 const Accordion = ({ isVisible, children, onExpand, onCollapse, variant, ...props }) => {
@@ -35,7 +35,7 @@ const Accordion = ({ isVisible, children, onExpand, onCollapse, variant, ...prop
   }, [isOpen]);
 
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={accordionTheme}>
       <GlobalStyle />
       <AccordionWrapper {...props}>
         {childrenWithProps}

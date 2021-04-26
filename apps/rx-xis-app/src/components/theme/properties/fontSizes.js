@@ -26,3 +26,5 @@ export const fontSizes = {
   fontsize_h6: '5.75rem',
   fontsize_h7: '6rem'
 };
+
+export const _fontSizes = fontSizes;
