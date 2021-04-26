@@ -7,7 +7,7 @@
   --input-btn-padding-x: var(--spacer-mid);
   --input-btn-font-family: var(--font-family-base);
   --input-btn-font-size: var(--font-size-base);
-  --input-btn-line-height: 1;
+  --input-btn-line-height: 1.4;
   --input-btn-focus-width: 0.2rem;
   //--input-btn-focus-color: rgba(--component-active-bg, 'primary');
   --input-btn-focus-color: map_get(--theme-colors, primary);
@@ -29,16 +29,17 @@
 
   --btn-color: var(--white);
   --btn-color-alt: var(--black);
-  --btn-padding-y: var(--global-spacer);
-  --btn-padding-x: var(--spacer-sm);
+  --btn-padding-y: var(--spacer-tiny);
+  --btn-padding-x: var(--spacer-mid);
   --btn-padding-y-sm: var(--spacer-tiny);
-  --btn-padding-x-sm: var(--spacer-small);
+  --btn-padding-x-sm: var(--spacer-tiny);
   --btn-padding-y-lg: var(--spacer-mid);
   --btn-padding-x-lg: var(--spacer-mid);
 
   --btn-min-width: auto;
+  --btn-sm-min-width: 120px;
   --btn-standard-width: 30px;
-  --btn-standard-hight: 50px;
+  --btn-standard-hight: 56px;
   --btn-font-family: var(--input-btn-font-family);
   --btn-font-size: var(--input-btn-font-size);
   --btn-line-height: var(--input-btn-line-height);
@@ -69,7 +70,7 @@
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   //FDS Primary Button Colors
-  --btn-primary-color: var(--white);
+  --btn-primary-color: var(--dark);
   --btn-primary-text-color: var(--primary);
   --btn-primary-bg-color: var(--primary);
   --btn-primary-border-color: var(--primary);
@@ -83,7 +84,7 @@
   --btn-secondary-bg-color: var(--secondary);
   --btn-secondary-border-color: var(--secondary);
 
-  --btn-secondary-hover-color: var(--primary);
+  --btn-secondary-hover-color: var(--white);
   --btn-secondary-hover-bg-color: var(--secondary-hover);
   --btn-secondary-hover-border-color: var(--secondary-hover);
 
@@ -163,7 +164,7 @@
   --instagramColorHover: var(--instagram-hover);
   --social-button-width: 3.5rem;
 
-  //ML Disabled Button Colors
+  //FDS Disabled Button Colors
   --btn-disabled-opacity: 0.65;
   --btn-disabled-color: var(--dark);
   --btn-disabled-bg-color: var(--primary);

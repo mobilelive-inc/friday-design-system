@@ -45,7 +45,7 @@ let idx: number = 0;
         <a
           role="tab"
           [class]="accordionTabClass"
-          class="fds-btnaccordion fds-accordion-header-link mb--3"
+          class="fds--btnaccordion fds-accordion-header-link mb--3"
           (click)="toggle($event)"
           (keydown)="onKeydown($event)"
           [attr.tabindex]="disabled ? null : 0"

@@ -8,25 +8,24 @@ export const Wrapper = styled.div(
     flexDirection: `column`,
     border: `4px solid`,
     borderColor: "lightprimary",
-    paddingY: [20],
-    margin: [10],
+    padding: 'space_6x_small',
+    marginBottom: "space_6x_small",
   })
 );
 
 export const Progresbar = styled.div(
   css({
     backgroundColor: "lightprimary",
-    height: [9],
-    width: "20%",
+    height:"size_1rem",
+    width: "size_20pc",
     position: "relative",
-    borderRadius: [3],
     boxShadow: "0 2px 3px rgba(0, 0, 0, 0.5) inset",
   })
 );
 export const Value = styled.span(
   css({
     display: "inline-block",
-    height: "100%",
+    height: "size_100pc",
     position: "relative",
     transition: "width 0.6s ease",
     backgroundColor: "primary",
@@ -35,6 +34,6 @@ export const Value = styled.span(
 
 export const ButtonContainer = styled.div(
   css({
-    paddingTop: [17],
+    paddingTop:"space_1x_big",
   })
 );

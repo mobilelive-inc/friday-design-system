@@ -1,10 +1,5 @@
 @import 'vendors/rfs_autofontSizing';
-
-@import 'generic/general.functions';
 @import '../scss/generic/general.functions';
-
-@import '../styles/css-variables';
-
 @import 'settings/colors';
 @import 'settings/borders';
 @import 'settings/typography';
@@ -13,12 +8,9 @@
 @import 'settings/breakpoint';
 @import 'settings/utilities';
 @import 'settings/images';
-
 @import 'generic/root';
 @import 'generic/base';
-
 @import 'elements/element.headings';
-
 @import 'components/buttons';
 @import 'components/card';
 @import 'components/forms';
@@ -30,6 +22,8 @@
 @import 'components/notification-list';
 @import 'components/border';
 @import 'components/tables';
+@import 'components/navbar';
+@import 'components/notification-toast';
 
 //utilities
 @import 'utilitis/align';
@@ -50,7 +44,6 @@
 @import 'utilitis/visibility';
 
 //Tools
-@import '../scss/tools/tool.grid';
 @import '../scss/tools/tool.shadows';
 @import '../scss/tools/tool.clearfix';
 @import '../scss/tools/tool.vendor-prefixes';
