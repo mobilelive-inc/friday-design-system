@@ -6,7 +6,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
   template: `
     <form class="form" role="form" [formGroup]="form">
       <div class="row">
-        <div class="col-4">
+        <div class="col--4">
           <fds-form-field>
             <fds-label>Select</fds-label>
             <select fdsInput formControlName="field1">
@@ -24,7 +24,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
           <pre>Value: {{ form.get('field1')?.value }}</pre>
         </div>
 
-        <div class="col-4">
+        <div class="col--4">
           <fds-form-field [clearBtn]="true">
             <fds-label>Select with Clear Button</fds-label>
             <select fdsInput formControlName="field2" [required]="true">
@@ -42,7 +42,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
           <pre>Value: {{ form.get('field2')?.value }}</pre>
         </div>
 
-        <div class="col-4">
+        <div class="col--4">
           <fds-form-field [clearBtn]="true">
             <fds-label>Select Disabled</fds-label>
             <select fdsInput [required]="true" formControlName="field3">
