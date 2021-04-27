@@ -15,14 +15,14 @@
 
 .bash {
   border: 0;
-  background: #333;
+  background: var(--primary);
   color: white;
   border-radius: 4px;
   position: relative;
   padding: 2rem 2rem 0.5rem;
   &:before {
     content: '$ ';
-    color: #ccc;
+    color: var(--white);
   }
   &:after {
     content: '';
