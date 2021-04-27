@@ -5,6 +5,10 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Flex, Box } from 'rebass/styled-components';
 import Button from './components/Button';
+import Accordion, {
+  AccordionCollapse,
+  AccordionHeader
+} from './components/accordion';
 import {
   PrimaryButton,
   OutlineButtons,
@@ -58,6 +62,14 @@ function App() {
   const [isOn, setIsOn] = React.useState(false);
   return (
     <ThemeProvider theme={theme}>
+      <Accordion
+        onExpand={() => console.log('Opened')}
+        onCollapse={() => console.log('Closed')}>
+        <AccordionHeader title={'Heading'}></AccordionHeader>
+        <AccordionCollapse>
+          <div>This is the for testing purpose</div>
+        </AccordionCollapse>
+      </Accordion>
       <PrimaryButton />
       <OutlineButtons />
       <ClearButton />
@@ -75,7 +87,7 @@ function App() {
             href="#"
             focusableID="newId"
             title="Skip"
-            top="150"
+            top={150}
             border="none"
             backgroundColor="blue"
             color="white"
@@ -547,7 +559,7 @@ function App() {
           />
         </Flex>
         <Progress />
-       <Cards />
+        <Cards />
       </div>
     </ThemeProvider>
   );

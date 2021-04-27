@@ -457,9 +457,7 @@ $global-spacers: (
   @include make-grid-columns();
 }
 
-
 @if $enable-grid-classes {
-
   .container {
     @include make-container();
   }

@@ -12,7 +12,12 @@ import {
   color
 } from 'styled-system';
 import { capitalizeFirstLetter } from '../utils/utils';
-import { fontSizes, fontWeights, lineHeights, radii } from '../theme/defaultTheme';
+import {
+  fontSizes,
+  fontWeights,
+  lineHeights,
+  radii
+} from '../theme/defaultTheme';
 const padding = '1rem 2rem';
 
 const getDerivedStyles = props => {
