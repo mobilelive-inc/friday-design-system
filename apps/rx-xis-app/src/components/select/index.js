@@ -83,7 +83,7 @@ const Select = props => {
 
 Select.defaultProps = {
   disabled: false,
-  fontSize: [fontSizes.fontsize_2x_tiny, fontSizes.fontsize_3x_tiny],
+  fontSize: [fontSizes.fontSizeBase, fontSizes.fontSizeSM],
   lineHeight: [lineHeights.lineheight_3x_small],
   m: [0],
   fontWeight: [fontWeights.fontweight_medium],
