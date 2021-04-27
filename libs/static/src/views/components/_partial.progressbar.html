@@ -2,7 +2,7 @@
   <div class="infoBlockPiece">
     <h2>Progress</h2>
     <p>
-      Documentation and examples for using ML custom progress bars featuring
+      Documentation and examples for using FDS custom progress bars featuring
       support for stacked bars, animated backgrounds, and text labels.
     </p>
     <p>
@@ -30,7 +30,7 @@
       </li>
     </ul>
     <p>Put that all together, and you have the following examples</p>
-    <div class="jumbotron">
+    <div class="highlighted-block mb--4">
       <div class="pb--5">
         <div class="progress mb--5">
           <div
@@ -55,18 +55,16 @@
             <pre style="font-family: Montserrat; font-size: 12pt;">
 <span style="color: rgb(0,0,128);">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="progress-bar progress-primary"</span> <span style="color: rgb(0,0,255);">style</span><span style="color: rgb(0,128,0);">="width: 50%"</span> <span style="color: rgb(0,0,255);">role</span><span style="color: rgb(0,128,0);">="progressbar"</span> <span style="color: rgb(0,0,255);">aria-valuenow</span><span style="color: rgb(0,128,0);">="0"</span> <span style="color: rgb(0,0,255);">aria-valuemin</span><span style="color: rgb(0,128,0);">="0"</span> <span style="color: rgb(0,0,255);">aria-valuemax</span><span style="color: rgb(0,128,0);">="100"</span>&gt;</span>
   <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="pt--2"</span>>(2 of 6)&lt;/span&gt;</span>
-<span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
-            </pre>
+<span style="color: rgb(0,0,128);">&lt;/div&gt;</span></pre>
           </div>
         </div>
       </div>
     </div>
-    <div class="jumbotron">
+    <div class="highlighted-block">
       <div class="mb--5">
         <div
           id="fds--slider--stepper"
           class="fds-advanced-stepper fds--slider--stepper"
-          role="progressbar"
           aria-valuenow="0"
           aria-valuemin="0"
           aria-valuemax="100"
@@ -74,65 +72,98 @@
           <div
             class="fds--stepper--head position--relative d--flex align--items--center justify--content--between text--center overflow--hidden"
           >
-            <div classs="fds--stepper--content fds--slide--active">
+            <span
+              classs="fds--stepper--content bg--no--color border--0 p--0 fds--slide--active"
+              aria-label="step 1 Pre qualification"
+            >
               <span
+                aria-hidden="true"
                 class="fds-box-counter position--relative d--inline-block bg--white mb--2"
               >
                 <span
+                  aria-hidden="true"
                   class="fds--stepper--counter btn btn--icon btn--primary rounded--circle mx--5"
                   >1</span
                 >
               </span>
-              <span class="fds--stepper--title d--block text--primary"
+              <span
+                aria-hidden="true"
+                class="fds--stepper--title d--block text--primary"
                 >Prequalification</span
               >
-            </div>
-            <div classs="fds--stepper--content">
+            </span>
+            <span
+              classs="fds--stepper--content bg--no--color border--0 p--0"
+              aria-label="step 2 Product Recommendation"
+            >
               <span
+                aria-hidden="true"
                 class="fds-box-counter position--relative d--inline-block bg--white mb--2"
               >
                 <span
+                  aria-hidden="true"
                   class="fds--stepper--counter btn btn--icon btn--primary--outline rounded--circle mx--5"
                   >2</span
                 >
               </span>
-              <span class="fds--stepper--title d--block"
+              <span aria-hidden="true" class="fds--stepper--title d--block"
                 >Product Recommendation</span
               >
-            </div>
-            <div classs="fds--stepper--content">
+            </span>
+            <span
+              classs="fds--stepper--content bg--no--color border--0 p--0"
+              aria-label="step 3 Pre screening"
+            >
               <span
+                aria-hidden="true"
                 class="fds-box-counter position--relative d--inline-block bg--white mb--2"
               >
                 <span
+                  aria-hidden="true"
                   class="fds--stepper--counter btn btn--icon btn--primary--outline rounded--circle mx--5"
                   >3</span
                 >
               </span>
-              <span class="fds--stepper--title d--block">Prescreening</span>
-            </div>
-            <div classs="fds--stepper--content">
+              <span aria-hidden="true" class="fds--stepper--title d--block"
+                >Prescreening</span
+              >
+            </span>
+            <span
+              classs="fds--stepper--content bg--no--color border--0 p--0"
+              aria-label="step 4 Client Info"
+            >
               <span
+                aria-hidden="true"
                 class="fds-box-counter position--relative d--inline-block bg--white mb--2"
               >
                 <span
+                  aria-hidden="true"
                   class="fds--stepper--counter btn btn--icon btn--primary--outline rounded--circle mx--5"
                   >4</span
                 >
               </span>
-              <span class="fds--stepper--title d--block">Client Info</span>
-            </div>
-            <div classs="fds--stepper--content">
+              <span aria-hidden="true" class="fds--stepper--title d--block"
+                >Client Info</span
+              >
+            </span>
+            <span
+              classs="fds--stepper--content bg--no--color border--0 p--0"
+              aria-label="step 5 decision"
+            >
               <span
+                aria-hidden="true"
                 class="fds-box-counter position--relative d--inline-block bg--white mb--2"
               >
                 <span
+                  aria-hidden="true"
                   class="fds--stepper--counter btn btn--icon btn--primary--outline rounded--circle mx--5"
                   >5</span
                 >
               </span>
-              <span class="fds--stepper--title d--block">Decision</span>
-            </div>
+              <span aria-hidden="true" class="fds--stepper--title d--block"
+                >Decision</span
+              >
+            </span>
           </div>
         </div>
       </div>
@@ -176,8 +207,7 @@
       <span style="color: rgb(0,0,128);">&lt;span <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="fds--stepper--title d--block"</span>&gt;<span style="color: rgb(195,104,55);">Decision</span>&lt;/span&gt;</span>
     <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
   <span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
-<span style="color: rgb(0,0,128);">&lt;/div&gt;</span>
-            </pre>
+<span style="color: rgb(0,0,128);">&lt;/div&gt;</span></pre>
           </div>
         </div>
       </div>

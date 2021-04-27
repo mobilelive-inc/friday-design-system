@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { FdsModalModule, FdsLibAngularModule } from '@fds/angular';
+import { FdsLibAngularModule, FdsModalModule } from '@fds/angular';
 import { ThemeSwitcherComponent } from './theme-switcher-scss/theme-switcher.component';
 import { MlSideEffectsComponent } from './examples/ml-side-effects/ml-side-effects.component';
 import { ButtonSolidComponent } from './examples/button/button-solid/button-solid.component';
@@ -40,6 +40,21 @@ import { NoIconComponent } from './examples/card/no-icon/no-icon.component';
 import { WithImageComponent } from './examples/card/with-image/with-image.component';
 import { ImageWithSolidShadowComponent } from './examples/card/image-with-solid-shadow/image-with-solid-shadow.component';
 import { AdvanceStepperComponent } from './examples/stepper/advance-stepper/advance-stepper.component';
+import { BasicCheckboxComponent } from './examples/checkbox/basic/basic.component';
+import { MultiCheckboxComponent } from './examples/checkbox/multi/multi.component';
+import { InlineCheckboxComponent } from './examples/checkbox/inline/inline.component';
+import { BasicComponent } from './examples/accordion/basic/basic.component';
+import { MultipleComponent } from './examples/accordion/multiple/multiple.component';
+import { TableSingleSortComponent } from './examples/table/table-single-sort/table-single-sort.component';
+import { TableDarkComponent } from './examples/table/table-dark/table-dark.component';
+import { LightTableHeadComponent } from './examples/table/light-table-head/light-table-head.component';
+import { DarkTableHeadComponent } from './examples/table/dark-table-head/dark-table-head.component';
+import { StripedRowTableComponent } from './examples/table/striped-row-table/striped-row-table.component';
+import { StripedRowEvenTableComponent } from './examples/table/striped-row-even-table/striped-row-even-table.component';
+import { BorderedTableComponent } from './examples/table/bordered-table/bordered-table.component';
+import { HoverableTableComponent } from './examples/table/hoverable-table/hoverable-table.component';
+import { HoverableDarkTableComponent } from './examples/table/hoverable-dark-table/hoverable-dark-table.component';
+import { FullFeaturedComponent } from './examples/tabs/full-featured/full-featured.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +91,21 @@ import { AdvanceStepperComponent } from './examples/stepper/advance-stepper/adva
     WithImageComponent,
     ImageWithSolidShadowComponent,
     AdvanceStepperComponent,
+    BasicCheckboxComponent,
+    MultiCheckboxComponent,
+    InlineCheckboxComponent,
+    BasicComponent,
+    MultipleComponent,
+    TableSingleSortComponent,
+    TableDarkComponent,
+    LightTableHeadComponent,
+    DarkTableHeadComponent,
+    StripedRowTableComponent,
+    StripedRowEvenTableComponent,
+    BorderedTableComponent,
+    HoverableTableComponent,
+    HoverableDarkTableComponent,
+    FullFeaturedComponent
   ],
   imports: [
     BrowserModule,

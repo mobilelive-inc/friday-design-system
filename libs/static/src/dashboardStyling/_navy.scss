@@ -1,0 +1,42 @@
+.navy {
+  --primary: var(--blue);
+  --primary-light: var(--blue-light);
+  --primary-lighter: var(--blue-lighter);
+  --primary-dark: var(--blue-dark);
+  --primary-darker: var(--blue-darker);
+
+  --secondary: var(--blue-darker);
+  --success: var(--gray);
+  --info: var(--primary-dark);
+  --warning: var(--primary-darker);
+  --danger: var(--red);
+  --light: var(--gray-light);
+  --dark: var(--gray-dark);
+  --primary-hover: var(--blue-dark);
+  --secondary-hover: var(--gray-light);
+  --info-hover: var(--cyan-dark);
+  --success-hover: var(--lime-dark);
+  --danger-hover: var(--red);
+  --warning-hover: var(--blue-dark);
+  --light-hover: var(--gray);
+  --dark-hover: var(--gray-light);
+
+  --global-spacer: 2rem;
+  --btn-border-radius: 10px;
+
+  --input-border-radius: 5px;
+  --input-height: 3rem;
+  --formGroup-margin-bottom: 1.5rem;
+
+  --card-border-radius: 8px;
+  --card-solidShadow-primary: var(--theme-color);
+
+  .bg--warning,
+  .bg--info {
+    color: var(--secondary-text) !important;
+  }
+  .bg--secondary,
+  .bg--light {
+    color: var(--primary-text) !important;
+  }
+}

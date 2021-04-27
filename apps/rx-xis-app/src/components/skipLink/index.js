@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyledLink } from './css';
-import { colors } from './../theme/colors';
+import { colors } from '../theme/properties/colors';
 import PropTypes from 'prop-types';
+import { fontSizes, space } from '../theme/defaultTheme';
 
 const SkipLink = ({ focusableID, title, ...props }) => {
   // Need Id where we want to move the focus
@@ -31,13 +32,13 @@ const SkipLink = ({ focusableID, title, ...props }) => {
 SkipLink.defaultProps = {
   background: colors.primary,
   color: colors.white,
-  pt: [1],
-  pb: [1],
-  pl: [3],
-  pr: [3],
+  pt: [space.space_5x_tiny],
+  pb: [space.space_5x_tiny],
+  pl: [space.space_3x_tiny],
+  pr: [space.space_3x_tiny],
   position: 'absolute',
   border: 'none',
-  fontSize: [3],
+  fontSize: [fontSizes.fontsize_2x_tiny],
   top: 90
 };
 

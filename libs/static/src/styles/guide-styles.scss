@@ -1,1 +1,14 @@
 @import '../dashboardStyling/custom-theme';
+
+:root {
+  --banner-bg-img: url('../../images/brand01/image23-1000x469--02.jpg');
+}
+.navy {
+  --banner-bg-img: url('../../images/brand01/image23-1000x469.jpg');
+}
+
+.bg--holder {
+  background: var(--banner-bg-img) no-repeat 0 75%;
+  background-size: cover;
+  padding: 100px 0;
+}

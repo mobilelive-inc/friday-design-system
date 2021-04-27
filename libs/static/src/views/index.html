@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Krona+One&family=Milonga&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="css-variables.css" />
     <link rel="stylesheet" type="text/css" href="friday-design-sytem.css" />
     <link
       rel="stylesheet"
@@ -61,30 +62,24 @@
   </head>
 
   <body class="dashboard-styling">
+    <a href="javascript:void(0)" id="btnSkipNav" class="btn-skip-nav"
+      >Skip Navigation</a
+    >
     <!--theme switcher-->
     <div class="theme-switcher">
       <p class="text--center">Choose <br />Theme:</p>
       <div class="btns-switcher-holder">
-        <button
-          class="mb--2 btn btn--primary btn--sm navy default"
-          onclick="switchTheme(1)"
-        >
+        <button class="btn btn--primary btn--sm navy" onclick="switchTheme(1)">
           Navy
         </button>
-        <button
-          class="mb--2 btn btn--primary btn--sm lemon default"
-          onclick="switchTheme(2)"
-        >
+        <button class="btn btn--primary btn--sm lemon" onclick="switchTheme(2)">
           Lemon
         </button>
-        <button
-          class="mb--2 btn btn--primary btn--sm lime default"
-          onclick="switchTheme(3)"
-        >
+        <button class="btn btn--primary btn--sm lime" onclick="switchTheme(3)">
           Lime
         </button>
         <button
-          class="mb--2 btn btn--primary btn--sm default"
+          class="btn btn--primary btn--sm default"
           onclick="switchTheme(4)"
         >
           Default
@@ -165,14 +160,25 @@
           <module href="/components/_partial.notification-list.html"></module>
           <!--Notification List-->
 
+          <!--Accordion and Collaps-->
+          <module href="/components/_partial.accordion.html"></module>
+          <!--Accordion and Collaps-->
+
+          <!--Tables List-->
+          <module href="/components/_partial.tables.html"></module>
+          <!--Tables List-->
+
+          <!--Notification List-->
+          <module href="/components/_partial.notification-toast.html"></module>
+          <!--Notification List-->
+
+          <!-- NavBar -->
+          <module href="/components/_partial.navbar.html"></module>
+          <!-- NavBar -->
+
           <!--Grids-->
           <div class="my--5" id="Grid_sections">
             <!--<h3 class="h3">Grid</h3>-->
-          </div>
-
-          <!--Accessibility-->
-          <div class="my--5" id="access_info">
-            <module href="/components/_partial.access.html"></module>
           </div>
         </div>
       </main>
@@ -184,9 +190,8 @@
       </footer>
       <!--Footer-->
     </div>
-
     <script src="/bundle.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
       function switchTheme(n) {
         var i = n;
@@ -528,6 +533,389 @@
         var steperText = document.getElementById('steper-text');
         steperText.setAttribute('style', 'transform: translateX(-100%);');
       }
+
+      // Handler that uses various data-* attributes to trigger
+      // specific actions, mimicing bootstraps attributes
+      const triggers = Array.from(
+        document.querySelectorAll('[data-toggle="fds-collapse"]')
+      );
+
+      window.addEventListener(
+        'click',
+        ev => {
+          const elm = ev.target;
+          if (triggers.includes(elm)) {
+            const selector = elm.getAttribute('data-target');
+            collapse(selector, 'toggle');
+          }
+        },
+        false
+      );
+
+      const fnmap = {
+        show: 'add',
+        toggle: 'toggle',
+        hide: 'remove'
+      };
+      const collapse = (selector, cmd) => {
+        const targets = Array.from(document.querySelectorAll(selector));
+        targets.forEach(target => {
+          target.classList[fnmap[cmd]]('fds-show');
+        });
+      };
+
+      var accItem = document.getElementsByClassName('fds-accordion-item');
+      var accHD = document.getElementsByClassName('fds--btnaccordion');
+      for (i = 0; i < accHD.length; i++) {
+        accHD[i].addEventListener('click', toggleItem, false);
+      }
+      function toggleItem() {
+        var itemClass = this.parentNode.className;
+        for (i = 0; i < accItem.length; i++) {
+          accItem[i].className = 'fds-accordion-item fds-close';
+        }
+        if (itemClass == 'fds-accordion-item fds-close') {
+          this.parentNode.className = 'fds-accordion-item fds-open';
+        }
+      }
+
+      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+      var dropdown = document.getElementsByClassName('dropdown-btn');
+      var i;
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener('click', function () {
+          this.classList.toggle('active');
+          var dropdownContent = this.nextElementSibling;
+
+          if (dropdownContent.style.display === 'block') {
+            dropdownContent.style.display = 'none';
+          } else {
+            dropdownContent.style.display = 'block';
+          }
+        });
+      }
+      // Navigation Accessibility Code
+      var isNavOpen = false;
+      var windowSize = $(window).width();
+      window.addEventListener('resize', getWindowSize);
+
+      function getWindowSize() {
+        windowSize = $(window).width();
+      }
+      function getBreakpointValue(name) {
+        let value = getComputedStyle(document.documentElement).getPropertyValue(
+          name
+        );
+        return parseInt(value, 10);
+      }
+      document
+        .getElementById('lastNavItem')
+        .addEventListener('keydown', focusTrap);
+
+      function focusTrap(e) {
+        if (isNavOpen === true && e.which === 9) {
+          if ($(window).width() < getBreakpointValue('--breakpoint-lg')) {
+            e.preventDefault();
+            $('.fds--brand--link').focus();
+          }
+        }
+      }
+
+      function initMegaMenu() {
+        var megaMenu = document.getElementById('megaMenu');
+
+        // keyboard stuff
+        $(megaMenu).delegate('li a', 'keydown', keyboardHandler);
+
+        // mouse stuff
+        $(' > li.fds--has--drop', megaMenu).each(function () {
+          var dropdown = $('.fds--droplet', $(this)[0]);
+          $(this).hover(
+            function () {
+              if (windowSize >= getBreakpointValue('--breakpoint-lg')) {
+                $(this).addClass('active');
+                $(this).children('a').attr('aria-expanded', 'true');
+                $('.fds--droplet', megaMenu).each(function (index, drop) {
+                  if (drop !== dropdown) {
+                    $(drop).hide();
+                  }
+                });
+                $(dropdown).attr('aria-hidden', 'false');
+                $(dropdown).slideDown(0);
+              }
+            },
+            function () {
+              if (windowSize >= getBreakpointValue('--breakpoint-lg')) {
+                $(this).removeClass('active');
+                $(this).children('a').attr('aria-expanded', 'false');
+                $(dropdown).slideUp(0);
+              }
+            }
+          );
+        });
+      }
+
+      function openNav() {
+        var x = document.getElementById('mainNavigation');
+        var y = document.getElementById('navOpenerBtn');
+        var classes = x.className.split(' ');
+        var i = classes.indexOf('open');
+
+        if (i >= 0) {
+          x.classList.remove('open');
+          y.setAttribute('aria-label', 'Open Navigation Menu');
+          y.setAttribute('aria-expanded', 'false');
+          isNavOpen = false;
+          document
+            .getElementById('skipNavBTN')
+            .setAttribute('aria-hidden', false);
+          document.getElementById('main').setAttribute('aria-hidden', false);
+          document.getElementById('footer').setAttribute('aria-hidden', false);
+        } else {
+          x.classList.add('open');
+          y.setAttribute('aria-label', 'Close Navigation Menu');
+          y.setAttribute('aria-expanded', 'true');
+          isNavOpen = true;
+          document
+            .getElementById('skipNavBTN')
+            .setAttribute('aria-hidden', true);
+          document.getElementById('main').setAttribute('aria-hidden', true);
+          document.getElementById('footer').setAttribute('aria-hidden', true);
+        }
+      }
+
+      $('.down-arrow').on('click', function () {
+        var parent_id = $(this).parent().attr('id');
+        var x = document.getElementById(parent_id);
+        var y = $(this);
+        var li_has_class = x.classList.contains('active');
+        const childrens = document.querySelectorAll('.fds--has--drop');
+        childrens.forEach(function (elem) {
+          elem.classList.remove('active');
+          let caretBtn = elem.querySelector('.down-arrow');
+          let label = caretBtn.getAttribute('aria-label');
+          let updateLabel = label.replace('close', 'open');
+          caretBtn.setAttribute('aria-label', updateLabel);
+          caretBtn.setAttribute('aria-expanded', false);
+        });
+        if (!li_has_class) {
+          x.classList.add('active');
+          let caretBtn = x.querySelector('.down-arrow');
+          let label = caretBtn.getAttribute('aria-label');
+          let updateLabel = label.replace('open', 'close');
+          caretBtn.setAttribute('aria-label', updateLabel);
+          caretBtn.setAttribute('aria-expanded', true);
+        }
+      });
+
+      function setAttributes(el, attrs) {
+        for (var key in attrs) {
+          el.querySelector('.down-arrow').setAttribute(key, attrs[key]);
+        }
+      }
+
+      function keyboardHandler(keyVent) {
+        var target = keyVent.target;
+        var which = keyVent.which;
+        if (which === 39) {
+          // RIGHT
+          if (isTopLevel(target)) {
+            // top level item
+            var nextTopItem = adjacentTopLevelItem(target, 'next');
+
+            if (nextTopItem) {
+              keyVent.preventDefault();
+              nextTopItem.focus();
+            }
+          } else {
+            // dropdown item
+            var nextDropletItem = adjacentDropdownItem(target, 'next');
+            if (nextDropletItem) {
+              keyVent.preventDefault();
+              nextDropletItem.focus();
+            }
+          }
+        } else if (which === 37) {
+          // LEFT
+          if (isTopLevel(target)) {
+            // top level item
+            var prevTopItem = adjacentTopLevelItem(target, 'prev');
+
+            if (prevTopItem) {
+              keyVent.preventDefault();
+              prevTopItem.focus();
+            }
+          } else {
+            // dropdown item
+            var prevDropItem = adjacentDropdownItem(target, 'prev');
+            if (prevDropItem) {
+              keyVent.preventDefault();
+              prevDropItem.focus();
+            }
+          }
+        } else if (which === 40) {
+          // DOWN
+          if (isTopLevel(target) && hasDropdown(target)) {
+            // top level item w/ dropdown -- open dropdown
+            openDropdown(target);
+          } else {
+            // dropdown item
+            var nextDropItem = adjacentDropdownItem(target, 'next');
+
+            if (nextDropItem) {
+              keyVent.preventDefault();
+              nextDropItem.focus();
+            }
+          }
+        } else if (which === 38) {
+          // UP
+          if (!isTopLevel(target)) {
+            if (isFirstDropItem(target)) {
+              keyVent.preventDefault();
+              var top = closeDropdown(target);
+              setTimeout(function () {
+                top.focus();
+              }, 0);
+            } else {
+              var prevDropAnchor = adjacentDropdownItem(target, 'prev');
+
+              if (prevDropAnchor) {
+                keyVent.preventDefault();
+                prevDropAnchor.focus();
+              }
+            }
+          }
+        } else if (which === 27) {
+          // ESCAPE
+          if (!isTopLevel(target)) {
+            var topper = closeDropdown(target);
+            setTimeout(function () {
+              topper.focus();
+            }, 0);
+          }
+        } else if (which === 9 && keyVent.shiftKey) {
+          // SHIFT + TAB
+          if (!isTopLevel(target) && isFirstDropItem(target)) {
+            keyVent.preventDefault();
+            var topA = closeDropdown(target);
+            setTimeout(function () {
+              topA.focus();
+            }, 0);
+          }
+        } else if (which === 9) {
+          // TAB
+          if (!isTopLevel(target) && isLastDropItem(target)) {
+            keyVent.preventDefault();
+            var topItem = closeDropdown(target);
+            var nextLi = $(topItem.parentNode).next()[0];
+            var nextAnchor = $('a', nextLi)[0];
+            nextAnchor.focus();
+          }
+        } else if (which === 32) {
+          if (
+            isTopLevel(target) &&
+            $(target.parentNode).hasClass('fds--has--drop')
+          ) {
+            openDropdown(target);
+          }
+        }
+      }
+
+      // determines if the item is a top-level one
+      function isTopLevel(item) {
+        return $(item).is('#megaMenu > li > a');
+      }
+
+      // determines if the item has a dropdown
+      function hasDropdown(item) {
+        return $(item.parentNode).hasClass('fds--has--drop');
+      }
+
+      // determines if the item is the first in the dropdown
+      function isFirstDropItem(item) {
+        var drop = $(item).closest('.fds--droplet')[0];
+        var firstInDrop = $('li a', drop)[0];
+
+        return firstInDrop === item;
+      }
+
+      // determines if the item is the last in the dropdown
+      function isLastDropItem(item) {
+        var drop = $(item).closest('.fds--droplet')[0];
+        var lastInDrop = $('li a', drop).last()[0];
+
+        return lastInDrop === item;
+      }
+
+      // finds the adjacent top level item
+      function adjacentTopLevelItem(item, dir) {
+        var li = item.parentNode; // <li />
+        var adjacentLi = dir === 'next' ? $(li).next()[0] : $(li).prev()[0];
+        var adjacentItem = adjacentLi && $('a', adjacentLi)[0];
+
+        return adjacentItem;
+      }
+
+      // finds the next or prev dropdown item
+      function adjacentDropdownItem(item, dir) {
+        var adjacentDropItem;
+        var li = item.parentNode;
+        var adjacentSameCol =
+          dir === 'next' ? $(li).next()[0] : $(li).prev()[0];
+        if (adjacentSameCol) {
+          // there is one in the same col
+          adjacentDropItem = $('a', adjacentSameCol)[0];
+        } else {
+          // lets look for one in the adjacent column
+          var col = $(li).closest('.fds--droplet--col')[0];
+          var adjacentCol =
+            dir === 'next' ? $(col).next()[0] : $(col).prev()[0];
+          if (adjacentCol) {
+            // we've found the adjacent column
+            var adjacentItem =
+              dir === 'next'
+                ? $('li a', adjacentCol)[0]
+                : $('li a', adjacentCol).last()[0];
+
+            if (adjacentItem) {
+              adjacentDropItem = adjacentItem;
+            }
+          }
+        }
+
+        return adjacentDropItem;
+      }
+
+      function openDropdown(item) {
+        $(item.parentNode).addClass('active');
+        $(item).attr('aria-expanded', 'true');
+        var caret = $(item).next()[0];
+        var droplet = $(caret).next()[0];
+        $(droplet).attr('aria-hidden', 'false');
+        // open the dropdown...
+        $(droplet).slideDown(100);
+        // ...and focus the first item
+        setTimeout(function () {
+          $('a', droplet)[0].focus();
+        }, 100);
+      }
+
+      function closeDropdown(item) {
+        var droplet = $(item).closest('.fds--droplet')[0];
+        $(droplet).attr('aria-hidden', 'true');
+        var caret = $(droplet).prev()[0];
+        var topLevelItem = $(caret).prev()[0];
+        $(topLevelItem).attr('aria-expanded', 'false');
+        $(topLevelItem.parentNode).removeClass('active');
+        $(droplet).slideUp(100);
+
+        return topLevelItem;
+      }
+
+      ////////////////////////////////////
+      $(document).ready(initMegaMenu);
+      ////////////////////////////////////
+      //
     </script>
   </body>
 </html>

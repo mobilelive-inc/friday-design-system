@@ -1,5 +1,5 @@
 import { lighten } from '../utils/lighten';
-import { colors } from './colors';
+import { colors } from './properties/colors';
 
 const buttonBorder = '2px solid transparent';
 export const borderCurved = '10px';
@@ -23,14 +23,14 @@ export const buttons = {
   },
   secondary: {
     color: colors.white,
-    backgroundColor: colors.grayDark,
+    backgroundColor: colors.secondary,
     padding,
     border: buttonBorder,
     '&:hover': {
-      backgroundColor: lighten(colors.grayDark, -20)
+      backgroundColor: colors.secondaryHover
     },
     '&:focus': {
-      backgroundColor: lighten(colors.grayDark, -20)
+      backgroundColor: colors.secondaryHover
     }
   },
   success: {
@@ -39,10 +39,10 @@ export const buttons = {
     padding,
     border: buttonBorder,
     '&:hover': {
-      backgroundColor: lighten(colors.success, -20)
+      backgroundColor: colors.successHover
     },
     '&:focus': {
-      backgroundColor: lighten(colors.success, -20)
+      backgroundColor: colors.successHover
     }
   },
   danger: {

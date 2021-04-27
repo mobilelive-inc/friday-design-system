@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { colors } from '../theme/colors';
+import { colors } from '../theme/properties/colors';
 import {
   compose,
   border,
@@ -12,6 +12,7 @@ import {
   color
 } from 'styled-system';
 import { capitalizeFirstLetter } from '../utils/utils';
+import { fontSizes, fontWeights, lineHeights, radii } from '../theme/defaultTheme';
 const padding = '1rem 2rem';
 
 const getDerivedStyles = props => {
@@ -57,14 +58,14 @@ const Button = props => {
 
 Button.defaultProps = {
   disabled: false,
-  fontSize: [2, 3],
-  lineHeight: [4],
+  fontSize: [fontSizes.fontsize_3x_tiny, fontSizes.fontsize_2x_tiny],
+  lineHeight: [lineHeights.lineheight_1x_tiny],
   m: [0],
-  fontWeight: [3],
+  fontWeight: [fontWeights.fontweight_medium],
   // display: ['inline-block'],
   width: [1],
   textAlign: ['center'],
-  borderRadius: [0],
+  borderRadius: [radii.radius_0],
   onClick: () => {},
   withIcon: false
 };

@@ -1,9 +1,9 @@
 <div class="row" id="buttons_info">
-  <div class="col-12">
+  <div class="col--12">
     <div class="infoBlockPiece">
       <h2 class="h2">Buttons</h2>
       <p>
-        ML Design System includes several predefined button styles. As the
+        FDS Design System includes several predefined button styles. As the
         buttons serve multi purposes, it's implicit to use the relevant tag. For
         example, use the <code>&lt;a&gt;</code> tag if the button contains a
         link. ( <code>&lt;a&gt;</code> works without JavaScript). The
@@ -12,9 +12,9 @@
         <code>&lt;button&gt;</code> always require JavaScript to function).
       </p>
 
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <pre
-          style="font-family: 'Montserrat'; font-size: 12pt;"
+          style="font-family: 'Montserrat'; font-size: 12pt; margin-top: 0;"
         ><span style="color:#808080;">&lt;!--/ Anchor Links--&gt;</span></pre>
 
         <a href="#" class="btn btn--primary">Link</a>
@@ -36,7 +36,7 @@
         <button type="button" class="btn btn--success">Delete</button>
 
         <pre
-          style="font-family: 'Montserrat'; font-size: 12pt;"
+          style="font-family: 'Montserrat'; font-size: 12pt; margin-bottom: 0;"
         ><span style="color:rgb(0,0,128);">&lt;button </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;button&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn btn--primary&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Save<span style="color:rgb(0,0,128);">&lt;/button&gt;
 </span><span style="color:rgb(0,0,128);">
 </span><span style="color:rgb(0,0,128);">&lt;button </span><span style="color:rgb(0,0,255);">type</span><span style="color:rgb(0,128,0);">=&quot;button&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;btn btn--success&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>Delete<span style="color:rgb(0,0,128);">&lt;/button&gt;</span></pre>
@@ -49,7 +49,7 @@
         convey their purpose to assistive technologies such as screen readers.
       </p>
 
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <pre
           style="
             box-sizing: border-box;
@@ -93,12 +93,11 @@
                                                                                                           style="box-sizing: border-box; color: rgb(47, 111, 159);">&lt;/a&gt;</span></code></pre>
       </div>
 
-      <br />
       <h3 class="h3">Button Variants</h3>
       <p>Add classes for different button variants:</p>
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <h4>Solid</h4>
-        <div class="">
+        <div class="buttons-examples">
           <button type="button" class="btn btn--primary">Primary</button>
           <button type="button" class="btn btn--secondary">Secondary</button>
           <button type="button" class="btn btn--success">Success</button>
@@ -109,7 +108,7 @@
           <button type="button" class="btn btn--dark">Dark</button>
           <button type="button" class="btn btn--dark disabled">Disabled</button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -211,9 +210,9 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           </div>
         </div>
       </div>
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <h4>Clear Style</h4>
-        <div class="">
+        <div class="buttons-examples">
           <button type="button" class="clear btn btn--primary">Primary</button>
           <button type="button" class="clear btn btn--secondary">
             Secondary
@@ -228,7 +227,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
             Disabled
           </button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -289,9 +288,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           </p>
           <div class="jumbotron">
             <p class="mb--0">
-              <button type="button" class="btn btn--primary">
-                Primary
-              </button>
+              <button type="button" class="btn btn--primary">Primary</button>
               <button type="button" class="clear btn btn--primary">
                 Primary
               </button>
@@ -342,9 +339,9 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           </div>
         </div>
       </div>
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <h4>Outline</h4>
-        <div class="">
+        <div class="buttons-examples">
           <button type="button" class="btn btn--primary--outline">
             Primary
           </button>
@@ -354,23 +351,15 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           <button type="button" class="btn btn--success--outline">
             Success
           </button>
-          <button type="button" class="btn btn--danger--outline">
-            Danger
-          </button>
+          <button type="button" class="btn btn--danger--outline">Danger</button>
           <button type="button" class="btn btn--warning--outline">
             Warning
           </button>
-          <button type="button" class="btn btn--info--outline">
-            Info
-          </button>
-          <button type="button" class="btn btn--light--outline">
-            Light
-          </button>
-          <button type="button" class="btn btn--dark--outline">
-            Dark
-          </button>
+          <button type="button" class="btn btn--info--outline">Info</button>
+          <button type="button" class="btn btn--light--outline">Light</button>
+          <button type="button" class="btn btn--dark--outline">Dark</button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -469,10 +458,10 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
         </div>
       </div>
       <!--/ Block Border-->
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <!--Round Border-->
         <h4>Rounded</h4>
-        <div class="">
+        <div class="buttons-examples">
           <button type="button" class="btn btn--primary btnRounded">
             Primary
           </button>
@@ -488,20 +477,14 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           <button type="button" class="btn btn--warning btnRounded">
             Warning
           </button>
-          <button type="button" class="btn btn--info btnRounded">
-            Info
-          </button>
-          <button type="button" class="btn btn--light btnRounded">
-            Light
-          </button>
-          <button type="button" class="btn btn--dark btnRounded">
-            Dark
-          </button>
+          <button type="button" class="btn btn--info btnRounded">Info</button>
+          <button type="button" class="btn btn--light btnRounded">Light</button>
+          <button type="button" class="btn btn--dark btnRounded">Dark</button>
           <button type="button" class="btn btn--dark btnRounded disabled">
             Disabled
           </button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -594,9 +577,9 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           </div>
         </div>
       </div>
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <h4>Rounded Outline</h4>
-        <div class="">
+        <div class="buttons-examples">
           <button type="button" class="btn btn--primary--outline btnRounded">
             Primary
           </button>
@@ -628,7 +611,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
             Disabled
           </button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -723,39 +706,25 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
         </div>
       </div>
       <!--/ Round Border-->
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <!--Curved Border-->
         <h4>Curved</h4>
-        <div class="">
-          <button type="button" class="btn btn--primary curved">
-            Primary
-          </button>
+        <div class="buttons-examples">
+          <button type="button" class="btn btn--primary curved">Primary</button>
           <button type="button" class="btn btn--secondary curved">
             Secondary
           </button>
-          <button type="button" class="btn btn--success curved">
-            Success
-          </button>
-          <button type="button" class="btn btn--danger curved">
-            Danger
-          </button>
-          <button type="button" class="btn btn--warning curved">
-            Warning
-          </button>
-          <button type="button" class="btn btn--info curved">
-            Info
-          </button>
-          <button type="button" class="btn btn--light curved">
-            Light
-          </button>
-          <button type="button" class="btn btn--dark curved">
-            Dark
-          </button>
+          <button type="button" class="btn btn--success curved">Success</button>
+          <button type="button" class="btn btn--danger curved">Danger</button>
+          <button type="button" class="btn btn--warning curved">Warning</button>
+          <button type="button" class="btn btn--info curved">Info</button>
+          <button type="button" class="btn btn--light curved">Light</button>
+          <button type="button" class="btn btn--dark curved">Dark</button>
           <button type="button" class="btn btn--dark curved disabled">
             Disabled
           </button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -849,9 +818,9 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           </div>
         </div>
       </div>
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <h4>Curved Outline</h4>
-        <div class="">
+        <div class="buttons-examples">
           <button type="button" class="btn btn--primary--outline curved">
             Primary
           </button>
@@ -880,7 +849,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
             Disabled
           </button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -973,15 +942,15 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           </div>
         </div>
       </div>
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <h4>Disabled Button</h4>
-        <div class="">
+        <div class="buttons-examples">
           <button type="button" class="btn btn--dark disabled">Disabled</button>
           <button type="button" aria-disabled="true" class="btn btn--dark">
             Disabled
           </button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -1060,10 +1029,10 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
         </div>
       </div>
       <!--/ Curved Border-->
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <!--Buttons with Icons on one or both sides-->
         <h4 class="h4">Buttons with icons</h4>
-        <div class="">
+        <div class="buttons-examples">
           <button type="button" class="btn btn--primary" role="button">
             <i class="icon-accuracy"></i> <span class="btn--text">Primary</span>
           </button>
@@ -1093,7 +1062,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
             ><span class="btn--text"> Dark</span>
           </button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -1238,10 +1207,10 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
         </div>
       </div>
 
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <!--/Buttons with Icons on one or both sides-->
         <h4 class="h4">Buttons with icons on both sides</h4>
-        <div class="">
+        <div class="buttons-examples">
           <button type="button" class="mb--1 btn btn--primary" role="button">
             <i class="icon-accuracy"></i>
             <span class="btn--text">Primary</span>
@@ -1283,7 +1252,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
             <i class="icon-favorite"></i>
           </button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -1398,9 +1367,9 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
       </div>
 
       <!--Tooltips-->
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <h4 class="h4">Buttons with Tooltip</h4>
-        <div class="">
+        <div class="buttons-examples">
           <button type="button" class="btn btn--tooltip text--secondary">
             <i class="icon-info"></i>
             <span class="btn--text">Dark</span>
@@ -1422,7 +1391,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
             <span class="btn--text">Disabled</span>
           </button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -1501,49 +1470,49 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
         </div>
       </div>
       <!--/Tooltips-->
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <!-- Only Button  Icons-->
         <h4>Icon Only Buttons</h4>
-        <div class="mb--5 row">
-          <button type="button" class="mr--5 ml--5 btn btn--icon btn--dark">
+        <div class="mb--4">
+          <button type="button" class="mr--5 mb--1 btn btn--icon btn--dark">
             <span class="sr--only">Button</span>
             <i class="icon-info"></i>
           </button>
           <button
             type="button"
-            class="mr--5 btn btn--secondary--outline btnRounded btn--icon"
+            class="mr--5 mb--1 btn btn--secondary--outline btnRounded btn--icon"
           >
             <span class="sr--only">Button</span>
             <i class="icon-info"></i>
           </button>
-          <button type="button" class="mr--5 btn btn--icon btn--dark--outline">
+          <button type="button" class="mr--5 mb--1 btn btn--icon btn--dark--outline">
             <span class="sr--only">Button</span>
             <i class="icon-delete"></i>
           </button>
           <button
             type="button"
-            class="mr--5 btn btn--icon btn--success--outline btnRounded"
+            class="mr--5 mb--1 btn btn--icon btn--success--outline btnRounded"
           >
             <span class="sr--only">Button</span>
             <i class="icon-delete"></i>
           </button>
-          <button type="button" class="mr--5 btn btn--icon btn--dark curved">
+          <button type="button" class="mr--5 mb--1 btn btn--icon btn--dark curved">
             <span class="sr--only">Button</span>
             <i class="icon-delete"></i>
           </button>
           <button
             type="button"
-            class="mr--5 btn btn--icon btn--dark--outline curved"
+            class="mr--5 mb--1 btn btn--icon btn--dark--outline curved"
           >
             <span class="sr--only">Button</span>
             <i class="icon-delete"></i>
           </button>
-          <button type="button" class="mr--5 btn btn--icon btn--info--outline">
+          <button type="button" class="mr--5 mb--1 btn btn--icon btn--info--outline">
             <span class="sr--only">Button</span>
             <i class="icon-delete"></i>
           </button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -1711,10 +1680,10 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
         </div>
       </div>
       <!-- /Only Button  Icons-->
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <!--Buttons Sizing -->
         <h4>Button Sizes</h4>
-        <div class="">
+        <div class="buttons-examples">
           <button type="button" class="btn btn--primary btn--lg">
             Primary Large
           </button>
@@ -1728,7 +1697,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
             Secondary Small
           </button>
         </div>
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -1808,9 +1777,9 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
         </div>
       </div>
       <!--/Buttons Sizing -->
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <h4>Responsive Buttons</h4>
-        <div class="mb--1">
+        <div class="mb--3">
           <button
             class="btn--sm mb--1 expand--sm--only btn btn--primary"
             type="button"
@@ -1868,10 +1837,8 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           <span>
             <pre
               style="font-family: Montserrat; font-size: 11.5pt;"
-            ><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand--sm--only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand in Mobile Only</pre>
-            <pre
-              style="font-family: Montserrat; font-size: 11.5pt;"
-            ><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand--md--only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand in Tablet Only
+            ><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand--sm--only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand in Mobile Only
+<span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand--md--only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand in Tablet Only
 <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand--lg--only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand in Desktop Only
 <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand--xl--only</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand on Large screen Only
 <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;expand--md--up</span><span style="color: rgb(0,128,0);">&quot; - </span>Expand on Tablet and Larger
@@ -1921,13 +1888,13 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           </div>
         </div>
       </div>
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <h4>Button Group</h4>
         <p>
           Button Group is a container of buttons of related actions. They're
           helpful when we need to display a group of actions in a bar.
         </p>
-        <div class="mb--1">
+        <div class="mb--3">
           <div class="btnGroup">
             <a class="btn btn--primary btn--sm">One</a>
             <a class="btn btn--secondary btn--sm">Two</a>
@@ -1964,7 +1931,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
       <div>
         <h2 class="h2">Social Button</h2>
         <p>
-          ML Design System includes several predefined social button styles. As
+          FDS Design System includes several predefined social button styles. As
           the social buttons serve multi purposes, it's implicit to use the
           relevant tag. For example, use the <code>&lt;a&gt;</code> tag if the
           button contains a link. ( <code>&lt;a&gt;</code> works without
@@ -1974,7 +1941,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
         </p>
       </div>
 
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <h4>Filled</h4>
         <div class="row mb--5">
           <div class="col">
@@ -2068,7 +2035,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           </div>
         </div>
 
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -2115,27 +2082,27 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           <div class="collapsible-content">
             <div class="content-inner">
               <pre style="font-family: Montserrat; font-size: 12pt;">
-<span style="color: rgb(0,0,128);"></span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--googleRed&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+<span style="color: rgb(0,0,128);"></span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--googleRed&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-google"</span>&gt;&lt;/i&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;span&gt;Google&lt;/span&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--googleBlue&quot; type=&quot;button</span><span style="color: rgb(0,128,0);">&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--googleBlue&quot; type=&quot;button</span><span style="color: rgb(0,128,0);">&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-google"</span>&gt;&lt;/i&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;span&gt;Google Blue&lt;/span&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/</span><span style="color: rgb(0,0,128);">button</span><span style="color: rgb(0,0,128);">&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;</span><span style="color: rgb(0,0,128);">button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--facebook&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;</span><span style="color: rgb(0,0,128);">button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--facebook&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-facebook"</span>&gt;&lt;/i&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;span&gt;Facebook&lt;/span&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--twitter&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--twitter&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-twitter"</span>&gt;&lt;/i&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;span&gt;Twitter&lt;/span&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--linkedin&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--linkedin&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-linkedin"</span>&gt;&lt;/i&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;span&gt;Linked&lt;/span&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--instagram&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--instagram&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-instagram"</span>&gt;&lt;/i&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;span&gt;Instagram&lt;/span&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
@@ -2145,7 +2112,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
         </div>
       </div>
 
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <h4>Outline</h4>
         <div class="row mb--5">
           <div class="col">
@@ -2239,7 +2206,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           </div>
         </div>
 
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -2286,27 +2253,27 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           <div class="collapsible-content">
             <div class="content-inner">
               <pre style="font-family: Montserrat; font-size: 12pt;">
-<span style="color: rgb(0,0,128);"></span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-googleRed&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+<span style="color: rgb(0,0,128);"></span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-googleRed&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
         <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-google"</span>&gt;&lt;/i&gt;</span>
         <span style="color: rgb(0,0,128);">  &lt;span&gt;Google&lt;/span&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-googleBlue&quot; type=&quot;button</span><span style="color: rgb(0,128,0);">&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-googleBlue&quot; type=&quot;button</span><span style="color: rgb(0,128,0);">&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-google"</span>&gt;&lt;/i&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;span&gt;Google Blue&lt;/span&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/</span><span style="color: rgb(0,0,128);">button</span><span style="color: rgb(0,0,128);">&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;</span><span style="color: rgb(0,0,128);">button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-facebook&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;</span><span style="color: rgb(0,0,128);">button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-facebook&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-facebook"</span>&gt;&lt;/i&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;span&gt;Facebook&lt;/span&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-twitter&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-twitter&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-twitter"</span>&gt;&lt;/i&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;span&gt;Twitter&lt;/span&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-linkedin&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-linkedin&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-linkedin"</span>&gt;&lt;/i&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;span&gt;Linked&lt;/span&gt;</span>
 <span style="color: rgb(84, 84, 104);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-instagram&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-instagram&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-instagram"</span>&gt;&lt;/i&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;span&gt;Instagram&lt;/span&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
@@ -2316,7 +2283,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
         </div>
       </div>
 
-      <div class="jumbotron">
+      <div class="highlighted-block mb--4">
         <h4>Icon Filled</h4>
         <div class="mb--5">
           <button
@@ -2363,7 +2330,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           </button>
         </div>
 
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -2410,22 +2377,22 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           <div class="collapsible-content">
             <div class="content-inner">
               <pre style="font-family: Montserrat; font-size: 12pt;">
-<span style="color: rgb(0,0,128);"></span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--googleRed&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+<span style="color: rgb(0,0,128);"></span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--googleRed&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-google"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--googleBlue&quot; type=&quot;button</span><span style="color: rgb(0,128,0);">&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--googleBlue&quot; type=&quot;button</span><span style="color: rgb(0,128,0);">&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-google"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/</span><span style="color: rgb(0,0,128);">button</span><span style="color: rgb(0,0,128);">&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;</span><span style="color: rgb(0,0,128);">button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-facebook&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;</span><span style="color: rgb(0,0,128);">button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--outline-facebook&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-facebook"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--twitter&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--twitter&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-twitter"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--linkedin&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--linkedin&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-linkedin"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--instagram&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--instagram&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-instagram"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
 </span><span style="color: rgb(0,0,128);"></span></pre>
@@ -2434,7 +2401,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
         </div>
       </div>
 
-      <div class="jumbotron">
+      <div class="highlighted-block">
         <h4>Icon Outline Rounded</h4>
         <div class="mb--5">
           <button
@@ -2481,7 +2448,7 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           </button>
         </div>
 
-        <div class="mb--5">
+        <div class="mb--4">
           <pre
             style="
               box-sizing: border-box;
@@ -2528,22 +2495,22 @@ Add following classes in either <span>&lt;</span>Button<span>&gt;</span> or <spa
           <div class="collapsible-content">
             <div class="content-inner">
               <pre style="font-family: Montserrat; font-size: 12pt;">
-<span style="color: rgb(0,0,128);"></span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-googleRed&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+<span style="color: rgb(0,0,128);"></span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-googleRed&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-google"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-googleBlue&quot; type=&quot;button</span><span style="color: rgb(0,128,0);">&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-googleBlue&quot; type=&quot;button</span><span style="color: rgb(0,128,0);">&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-google"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/</span><span style="color: rgb(0,0,128);">button</span><span style="color: rgb(0,0,128);">&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;</span><span style="color: rgb(0,0,128);">button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-facebook&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;</span><span style="color: rgb(0,0,128);">button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-facebook&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-facebook"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-twitter&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-twitter&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-twitter"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-linkedin&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-linkedin&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-linkedin"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
-</span><span style="color: rgb(0,0,128);">  &lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-instagram&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
+</span><span style="color: rgb(0,0,128);">&lt;button </span><span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">=&quot;btn btn--social btn--roundedOutline-instagram&quot; type=&quot;button&quot;</span><span style="color: rgb(0,0,128);">&gt;</span>
       <span style="color: rgb(0,0,128);">  &lt;i <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="icon-instagram"</span>&gt;&lt;/i&gt;</span>
 <span style="color: rgb(0,0,128);">&lt;/button&gt;
 </span><span style="color: rgb(0,0,128);"></span></pre>

@@ -30,6 +30,9 @@ export * from "./lib/stepper/stepper-button";
 export * from "./lib/theme/theme.service";
 export * from "./lib/tooltip/fdsTooltip.directive";
 
+export * from './lib/accordion/accordion.component';
+export * from './lib/table/table';
+
 export * from "./lib/modal/modal.service";
 export * from "./lib/modal/modal-content-directives";
 export * from "./lib/modal/modal-ref";

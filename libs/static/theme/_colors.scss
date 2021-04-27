@@ -8,6 +8,8 @@
   --gray-dark: #282828;
   --black: #191919;
   --backdrop: #000000;
+  --text-color: #333333;
+  --link-color: #336699;
   --nocolor: transparent;
 
   --orange: #f48245;
@@ -52,7 +54,7 @@
   --green-dark: #2f9745;
   --green-darker: #247636;
 
-  //ML Social Button Colors and Hover Colors
+  //FDS Social Button Colors and Hover Colors
   --google-red: #dc4b3e;
   --google-red-hover: #ba3327;
   --google-blue: #4285f4;
@@ -76,7 +78,19 @@
   --primary-dark: var(--orange-dark);
   --primary-darker: var(--orange-darker);
 
-  //ML Standard Colors
+  //Primary Tertiary Colors
+  --primary-tertiary: #db0025;
+  --primary-tertiary-light: #e23351;
+
+  //Secondary Tertiary Colors
+  --secondary-tertiary: #83bfba;
+  --secondary-tertiary-light: #9cccc8;
+
+  //Secondary Quaternary Colors
+  --secondary-quaternary: #232a42;
+  --secondary-quaternary-light: #4f5568;
+
+  //FDS Standard Colors
   --primary: var(--orange);
   --primary-hover: var(--orange-dark);
   --secondary: var(--gray);

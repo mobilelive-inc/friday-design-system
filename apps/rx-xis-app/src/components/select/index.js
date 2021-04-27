@@ -6,6 +6,7 @@ import {
 } from './css';
 import Text from '../typography';
 import Option from '../option';
+import { fontSizes, lineHeights, fontWeights } from '../theme/defaultTheme';
 
 
 
@@ -87,10 +88,10 @@ const Select = (props) => {
 
 Select.defaultProps = {
   disabled: false,
-  fontSize: [2, 3],
-  lineHeight: [4],
+  fontSize: [fontSizes.fontsize_2x_tiny, fontSizes.fontsize_3x_tiny],
+  lineHeight: [lineHeights.lineheight_3x_small],
   m: [0],
-  fontWeight: [3],
+  fontWeight: [fontWeights.fontweight_medium],
   width: [1],
   textAlign: ['center'],
   borderRadius: [0],

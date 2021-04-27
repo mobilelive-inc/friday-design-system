@@ -6,37 +6,37 @@
   <h3>Classes</h3>
   <p>Toggle a float with a class:</p>
 
-  <div class="highlighted-block mb--5">
+  <div class="highlighted-block mb--4">
     <div class="clearfix w--100 pb--5">
       <div class="float--left"><code>Float left on all viewport sizes</code></div><br>
       <div class="float--right"><code>Float right on all viewport sizes</code></div><br>
       <div class="float--none"><code>Don't float on all viewport sizes</code></div>
     </div>
-<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;"></pre>
-<span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--left"</span>&gt;<code>Float left on all viewport sizes</code>&lt;/div&gt;</span><br>
-<span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--right"</span>&gt;<code>Float right on all viewport sizes</code>&lt;/div&gt;</span><br>
+<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
+<span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--left"</span>&gt;<code>Float left on all viewport sizes</code>&lt;/div&gt;</span>
+<span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--right"</span>&gt;<code>Float right on all viewport sizes</code>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--none"</span>&gt;<code>Don't float on all viewport sizes</code>&lt;/div&gt;</span>
 </pre>
   </div>
 
   <h3>Mixins</h3>
   <p>Or by Sass mixin:</p>
-  <div class="highlighted-block mb--5">
+  <div class="highlighted-block mb--4">
 <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
   .element {
-    @include float-left;
+    @include float--left;
   }
   .another-element {
-    @include float-right;
+    @include float--right;
   }
   .one-more {
-    @include float-none;
+    @include float--none;
   }
 </pre>
   </div>
   <h3>Responsive</h3>
   <p>Responsive variations also exist for each <code>float</code> value.</p>
-  <div class="highlighted-block mb--5">
+  <div class="highlighted-block mb--4">
     <div class="clearfix w--100 pb--5">
       <div class="float--sm--left w--100"><code>Float left on viewports sized SM (small) or wider</code></div>
       <div class="float--md--left w--100"><code>Float left on viewports sized MD (medium) or wider</code></div>
@@ -52,20 +52,20 @@
   </div>
   <p>Here are all the support classes;</p>
   <ul class="mb--0">
-    <li><code>.float-left</code></li>
-    <li><code>.float-right</code></li>
-    <li><code>.float-none</code></li>
-    <li><code>.float-sm-left</code></li>
-    <li><code>.float-sm-right</code></li>
-    <li><code>.float-sm-none</code></li>
-    <li><code>.float-md-left</code></li>
-    <li><code>.float-md-right</code></li>
-    <li><code>.float-md-none</code></li>
-    <li><code>.float-lg-left</code></li>
-    <li><code>.float-lg-right</code></li>
-    <li><code>.float-lg-none</code></li>
-    <li><code>.float-xl-left</code></li>
-    <li><code>.float-xl-right</code></li>
-    <li><code>.float-xl-none</code></li>
+    <li><code>.float--left</code></li>
+    <li><code>.float--right</code></li>
+    <li><code>.float--none</code></li>
+    <li><code>.float--sm--left</code></li>
+    <li><code>.float--sm--right</code></li>
+    <li><code>.float--sm--none</code></li>
+    <li><code>.float--md--left</code></li>
+    <li><code>.float--md--right</code></li>
+    <li><code>.float--md--none</code></li>
+    <li><code>.float--lg--left</code></li>
+    <li><code>.float--lg--right</code></li>
+    <li><code>.float--lg--none</code></li>
+    <li><code>.float--xl--left</code></li>
+    <li><code>.float--xl--right</code></li>
+    <li><code>.float--xl--none</code></li>
   </ul>
 </div>

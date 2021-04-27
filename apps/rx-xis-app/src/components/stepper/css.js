@@ -14,7 +14,6 @@ export const ProgressWrapper = styled.div(
 );
 export const ProgressStepper = styled.div(
   props => props,
-  props => props,
   {
     width: '20%'
   },

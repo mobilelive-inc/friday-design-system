@@ -3,30 +3,28 @@
 ></ng-container>
 
 <div
-  class="fds--stepper--head position--relative d--flex align--items--center justify--content--between text--center overflow--hidden mb--5"
+  class="fds--stepper--head position--relative d--flex align--items--center justify--content--between text--center mb--4"
 >
   <ng-container *ngFor="let step of steps; let i = index; let isLast = last">
     <fds-step-header
       *ngIf="!headerTemplate"
-      class="fds--stepper--content fds--slide{{state}}"
+      class="fds--stepper--content fds--slide{{step.state}}"
       [class.fds--slide--active]="selected"
       (click)="step.select()"
       (keydown)="_onKeydown($event)"
       [editable]="step.editable"
-      [tabIndex]="_getFocusIndex() === i ? 0 : -1"
       [attr.aria-posinset]="i + 1"
       [attr.aria-setsize]="steps.length"
       [attr.aria-controls]="_getStepContentId(i)"
       [attr.aria-selected]="selectedIndex == i"
       [attr.aria-label]="step.ariaLabel || null"
-      [attr.aria-labelledby]="(!step.ariaLabel && step.ariaLabelledby) ? step.ariaLabelledby : null"
       [index]="i"
       [state]="_getIndicatorType(i, step.state)"
       [id]="_getStepLabelId(i)"
       [label]="step.stepLabel || step.label"
       [selected]="selectedIndex === i"
+      [attr.aria-labelledby]="(!step.ariaLabel && step.ariaLabelledby) ? step.ariaLabelledby : null"
       [active]="step.completed || selectedIndex === i || !linear"
-      [errorMessage]="step.errorMessage"
     ></fds-step-header>
     <!-- <div *ngIf="!isLast" class="fds-stepper-horizontal-line"></div> -->
   </ng-container>
