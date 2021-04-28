@@ -5,6 +5,10 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Flex, Box } from 'rebass/styled-components';
 import Button from './components/Button';
+import Accordion, {
+  AccordionCollapse,
+  AccordionHeader
+} from './components/accordion';
 import {
   PrimaryButton,
   OutlineButtons,
@@ -57,6 +61,24 @@ function App() {
   const [isOn, setIsOn] = React.useState(false);
   return (
     <ThemeProvider theme={theme}>
+      <Accordion
+        onExpand={() => console.log('Opened')}
+        onCollapse={() => console.log('Closed')}>
+        <AccordionHeader title={'Heading'}></AccordionHeader>
+        <AccordionCollapse>
+          <div>This is the for testing purpose</div>
+        </AccordionCollapse>
+      </Accordion>
+      <PrimaryButton />
+      <OutlineButtons />
+      <ClearButton />
+      <RoundedButtons />
+      <RoundedOutlineButtons />
+      <CurvedButtons />
+      <CurvedOutlineButtons />
+      <FilledSocialButtons />
+      <OutlineSocialButtons />
+      <OtherSpecs />
       <div style={{ height: '100px', background: 'blue' }}></div>
       <div>
         <Flex mt={5}>
@@ -74,7 +96,7 @@ function App() {
           Testing
         </Text>
         <Flex mt={5} mb={100}>
-          <Stepper variant="primary" value={3} total={6} />
+          <Stepper variant="primary" value={5} total={10} />
         </Flex>
         <Flex mt={5} mb={100}>
           <Button

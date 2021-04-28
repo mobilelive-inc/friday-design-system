@@ -4,7 +4,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   selector: 'demo-popover-basic',
   template: `
     <div class="row">
-      <div class="col-2 text--center">
+      <div class="col--2 text--center">
         <div>
           <span
             class="icon-warning-circle"
@@ -17,7 +17,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
         <span>Text Only</span>
       </div>
 
-      <div class="col-2 text--center">
+      <div class="col--2 text--center">
         <div>
           <span
             class="icon-warning-circle"
@@ -31,7 +31,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
         <span>Title+Text</span>
       </div>
 
-      <div class="col-2 text--center">
+      <div class="col--2 text--center">
         <div>
           <span
             class="icon-warning-circle"
@@ -43,7 +43,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
         <span>Multiple lines</span>
       </div>
 
-      <div class="col-2 text--center">
+      <div class="col--2 text--center">
         <div>
           <span
             class="icon-warning-circle"
@@ -55,7 +55,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
         <span>Placement - Bottom</span>
       </div>
 
-      <div class="col-2 text--center">
+      <div class="col--2 text--center">
         <div>
           <span
             class="icon-warning-circle"
@@ -69,7 +69,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
         <span>Right</span>
       </div>
 
-      <div class="col-2 text--center">
+      <div class="col--2 text--center">
         <div>
           <span
             class="icon-warning-circle"

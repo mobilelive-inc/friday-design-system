@@ -1,22 +1,23 @@
 import styled from 'styled-components';
 import { compose, color, layout, space, border, variant } from 'styled-system';
-import { Flex } from '../checkbox/css';
+import css from '@styled-system/css';
 
-export const ProgressWrapper = styled.div(
-  props => props,
-  {
+export const ProgressWrapper = styled('div')(
+  css({
     display: 'flex',
-    width: '100%',
-    height: '20px'
-  },
+    width: 'stepperOverallWidth',
+    height: 'stepperOverallHeight'
+  }),
+  props => props,
   compose(color, layout, space, border),
   variant({ scale: 'stepperWrapper' })
 );
-export const ProgressStepper = styled.div(
+export const ProgressStepper = styled('div')(
+  css({
+    width: '0%',
+    transition: 'width 0.6s ease'
+  }),
   props => props,
-  {
-    width: '20%'
-  },
   compose(color, layout, space, border),
   variant({ scale: 'stepper' })
 );

@@ -10,23 +10,24 @@ import { sizes } from './properties/sizes';
 import { radii, radius } from './properties/radius';
 import { zIndices } from './properties/zIndices';
 import { typography } from './properties/typography';
-import { buttons, borderCurved, borderRounded } from './buttons';
-import { stepper, stepperWrapper } from './stepper';
+import { stepper, stepperWrapper } from './variants/stepper';
+import { buttons, borderCurved, borderRounded } from './variants/buttons';
+import { accordions } from './variants/accordions';
 import {
-    iconMarginLeft,
-    iconMarginRight,
-    micro,
-    tiny,
-    small,
-    mid,
-    large,
-    xLarge
+  iconMarginLeft,
+  iconMarginRight,
+  micro,
+  tiny,
+  small,
+  mid,
+  large,
+  xLarge
 } from './spacing';
 
 // Typography
 const fonts = {
-    Gotham:
-        "Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  Gotham:
+    "Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif"
 };
 
 export const font = fonts.Gotham;
@@ -35,64 +36,65 @@ export const fontFamilies = fonts;
 const opacity = 0.6;
 
 export {
-    breakpoints,
-    buttons,
-    typography,
-    borderCurved,
-    colors,
-    fontSizes,
-    mediaqueryBreakpoints,
-    borderWidths,
-    sizes,
-    radii,
-    fontWeights,
-    iconMarginLeft,
-    iconMarginRight,
-    lineHeights,
-    letterSpacings,
-    radius,
-    borderRounded,
-    space,
-    opacity,
-    zIndices,
-    micro,
-    tiny,
-    small,
-    mid,
-    large,
-    xLarge
+  breakpoints,
+  buttons,
+  typography,
+  borderCurved,
+  colors,
+  fontSizes,
+  mediaqueryBreakpoints,
+  borderWidths,
+  sizes,
+  radii,
+  fontWeights,
+  iconMarginLeft,
+  iconMarginRight,
+  lineHeights,
+  letterSpacings,
+  radius,
+  borderRounded,
+  space,
+  opacity,
+  zIndices,
+  micro,
+  tiny,
+  small,
+  mid,
+  large,
+  xLarge
 };
 
 export default {
-    breakpoints,
-    buttons,
-    typography,
-    borderCurved,
-    colors,
-    font,
-    fontFamilies,
-    fontSizes,
-    mediaqueryBreakpoints,
-    borderWidths,
-    sizes,
-    radii,
-    fontWeights,
-    iconMarginLeft,
-    iconMarginRight,
-    lineHeights,
-    letterSpacings,
-    radius,
-    borderRounded,
-    space,
-    opacity,
-    zIndices,
-    typography,
-    micro,
-    tiny,
-    small,
-    mid,
-    large,
-    xLarge,
-    stepper,
-    stepperWrapper
+  breakpoints,
+  buttons,
+  typography,
+  borderCurved,
+  colors,
+  font,
+  fontFamilies,
+  fontSizes,
+  mediaqueryBreakpoints,
+  borderWidths,
+  sizes,
+  radii,
+  fontWeights,
+  iconMarginLeft,
+  iconMarginRight,
+  lineHeights,
+  letterSpacings,
+  radius,
+  borderRounded,
+  space,
+  opacity,
+  zIndices,
+  typography,
+  micro,
+  tiny,
+  small,
+  mid,
+  large,
+  xLarge,
+  stepper,
+  stepperWrapper,
+  accordions
 };

@@ -5,7 +5,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
   selector: 'demo-radio-basics',
   template: `
     <div class="row">
-      <div class="col-4">
+      <div class="col--4">
         <label id="example-radio-group-label-1"
           >Pick your favorite fruit (value)</label
         >
@@ -23,7 +23,7 @@ favoriteFruitValue: {{ favoriteFruitValue }}
     </pre>
       </div>
 
-      <div class="col-4">
+      <div class="col--4">
         <label id="example-radio-group-label-2"
           >Pick your favorite fruit (ngModel)</label
         >
@@ -40,7 +40,7 @@ favoriteFruitNgModel: {{ favoriteFruitNgModel }}
     </pre>
       </div>
 
-      <div class="col-4">
+      <div class="col--4">
         <form class="form" role="form" [formGroup]="form">
           <label id="example-radio-group-label-3"
             >Pick your favorite fruit (ReactiveForms)</label

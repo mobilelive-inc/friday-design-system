@@ -32,10 +32,10 @@ const SkipLink = ({ focusableID, title, ...props }) => {
 SkipLink.defaultProps = {
   background: colors.primary,
   color: colors.white,
-  pt: [space.space_5x_tiny],
-  pb: [space.space_5x_tiny],
-  pl: [space.space_3x_tiny],
-  pr: [space.space_3x_tiny],
+  pt: [space.spacerMicro],
+  pb: [space.spacerMicro],
+  pl: [space.spacerTiny],
+  pr: [space.spacerTiny],
   position: 'absolute',
   border: 'none',
   fontSize: [fontSizes.fontsize_2x_tiny],
@@ -43,30 +43,40 @@ SkipLink.defaultProps = {
 };
 
 SkipLink.propTypes = {
+  /** If you want to open any link by clicking on that otherwise pass # in it */
   href: PropTypes.string.isRequired,
+  /** Change the background */
   background: PropTypes.string,
+  /** Change text color */
   color: PropTypes.string,
+  /** That Id where to want focus after skiping*/
   focusableID: PropTypes.string,
+  /** title of that button */
   title: PropTypes.string,
+  /** use for margin */
   m: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
     PropTypes.arrayOf(PropTypes.number)
   ]),
+  /** use for padding */
   p: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
     PropTypes.arrayOf(PropTypes.number)
   ]),
+  /** use for fontside */
   fontSize: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.number,
     PropTypes.arrayOf(PropTypes.number)
   ]),
+  /** set position from top */
   top: PropTypes.number,
+  /** border styling */
   border: PropTypes.string
 };
 

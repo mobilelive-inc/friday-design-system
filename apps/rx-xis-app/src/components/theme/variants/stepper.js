@@ -1,5 +1,5 @@
-import { lighten } from '../utils/lighten';
-import { colors } from './properties/colors';
+import { lighten } from '../../utils/lighten';
+import { colors } from '../properties/colors';
 
 export const stepper = {
   primary: {
