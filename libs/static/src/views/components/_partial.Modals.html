@@ -17,6 +17,24 @@
       By default whole Modal is scrollable, if scroll is required on Content
       only, use this class <code>modalDialogScrollable</code>.
     </p>
+    <div class="highlighted-block mb--3">
+      <h5 class="text--primary">How to import modal styles:</h5>
+      <p>
+        In order to use modals in your project, import following path in your
+        main styles:
+      </p>
+      <h6>
+        @import 'node_modules/@mobilelivenpm/fds-static-scss/src/scss/modal
+      </h6>
+    </div>
+    <div class="highlighted-block mb--3">
+      <h5 class="text--primary">How to customize modal styles:</h5>
+      <p>
+        In order to customize modals in your theme as per requirements, import
+        following path in your theme-settings file:
+      </p>
+      <h6>@import 'node_modules/@mobilelivenpm/fds-static-scss/theme/modal</h6>
+    </div>
     <div class="highlighted-block">
       <div class="row">
         <div class="col">
@@ -355,10 +373,10 @@
         <label for="collapsiblemodals" class="lbl-toggle"></label>
         <div class="collapsible-content">
           <div class="content-inner">
-            <pre style="font-family: 'Montserrat'; font-size: 12pt;">
+            <pre style="font-family: 'Montserrat'; font-size: 12pt">
   <span style="color:#808080;">&lt;!--Modal Popup--&gt;</span>
 </pre>
-            <pre style="font-family: 'Montserrat'; font-size: 12pt;">
+            <pre style="font-family: 'Montserrat'; font-size: 12pt">
   <span style="color:rgb(0,0,128);">
   &lt;div <span style="color: rgb(0,0,255)">id</span><span style="color:rgb(0,128,0);">="modalBackdrop"</span> <span style="color: rgb(0,0,255)">class</span><span style="color: rgb(0,128,0)">="modalBackdrop"</span>&gt;&lt;/div&gt;
   &lt;div <span style="color: rgb(0,0,255)">id</span><span style="color:rgb(0,128,0);">="modal1"</span> <span style="color: rgb(0,0,255)">class</span><span style="color: rgb(0,128,0)">="modal"</span> <span style="color: rgb(0,0,255)">tabindex</span><span style="color: rgb(0,128,0)">="-1"</span>&gt;
@@ -375,37 +393,37 @@
   </span>
 </pre>
 
-            <pre style="font-family: 'Montserrat'; font-size: 12pt;">
+            <pre style="font-family: 'Montserrat'; font-size: 12pt">
   <span style="color:#808080;">&lt;!--Modal Popup Small--&gt;</span>
 </pre>
-            <pre style="font-family: 'Montserrat'; font-size: 12pt;">
+            <pre style="font-family: 'Montserrat'; font-size: 12pt">
   <span style="color:rgb(0,0,128);">
   &lt;div <span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0)">modalDialog modalSmall"</span>&gt;&lt;/div&gt;
   </span>
 </pre>
 
-            <pre style="font-family: 'Montserrat'; font-size: 12pt;">
+            <pre style="font-family: 'Montserrat'; font-size: 12pt">
   <span style="color:#808080;">&lt;!--Modal Popup Large--&gt;</span>
 </pre>
-            <pre style="font-family: 'Montserrat'; font-size: 12pt;">
+            <pre style="font-family: 'Montserrat'; font-size: 12pt">
   <span style="color:rgb(0,0,128);">
   &lt;div <span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0)">modalDialog modalLarge"</span>&gt;&lt;/div&gt;
   </span>
 </pre>
 
-            <pre style="font-family: 'Montserrat'; font-size: 12pt;">
+            <pre style="font-family: 'Montserrat'; font-size: 12pt">
   <span style="color:#808080;">&lt;!--Modal Popup Extra Large--&gt;</span>
 </pre>
-            <pre style="font-family: 'Montserrat'; font-size: 12pt;">
+            <pre style="font-family: 'Montserrat'; font-size: 12pt">
   <span style="color:rgb(0,0,128);">
   &lt;div <span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0)">modalDialog modalExtraLarge"</span>&gt;&lt;/div&gt;
   </span>
 </pre>
 
-            <pre style="font-family: 'Montserrat'; font-size: 12pt;">
+            <pre style="font-family: 'Montserrat'; font-size: 12pt">
   <span style="color:#808080;">&lt;!--Modal Popup Content Scrollable--&gt;</span>
 </pre>
-            <pre style="font-family: 'Montserrat'; font-size: 12pt;">
+            <pre style="font-family: 'Montserrat'; font-size: 12pt">
   <span style="color:rgb(0,0,128);">
   &lt;div <span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0)">modalDialog modalDialogScrollable"</span>&gt;&lt;/div&gt;
   </span>
@@ -534,9 +552,7 @@
         <div class="modalDialog modalLarge">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0">
-                What is cupcake? This is a title.
-              </h5>
+              <h5 class="h5 m--0">What is cupcake? This is a title.</h5>
               <button
                 tabindex="1"
                 type="button"
@@ -626,9 +642,7 @@
         <div class="modalDialog modalLarge">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0">
-                What is cupcake? This is a title.
-              </h5>
+              <h5 class="h5 m--0">What is cupcake? This is a title.</h5>
             </div>
             <div class="modalBody">
               <div class="modalDescription">
@@ -689,9 +703,7 @@
         <div class="modalDialog">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0">
-                What is cupcake? This is a title.
-              </h5>
+              <h5 class="h5 m--0">What is cupcake? This is a title.</h5>
             </div>
             <div class="modalBody">
               <div class="modalDescription">
@@ -851,9 +863,7 @@
         <div class="modalDialog">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0">
-                What is cupcake? This is a title.
-              </h5>
+              <h5 class="h5 m--0">What is cupcake? This is a title.</h5>
               <button
                 tabindex="1"
                 type="button"
@@ -941,9 +951,7 @@
         <div class="modalDialog">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0">
-                Select your option(s).
-              </h5>
+              <h5 class="h5 m--0">Select your option(s).</h5>
               <button
                 tabindex="1"
                 type="button"
@@ -1096,9 +1104,7 @@
         <div class="modalDialog">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0">
-                What is cupcake? This is a title.
-              </h5>
+              <h5 class="h5 m--0">What is cupcake? This is a title.</h5>
               <button
                 tabindex="1"
                 type="button"
@@ -1223,9 +1229,7 @@
         <div class="modalDialog">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0">
-                What is cupcake? This is a title.
-              </h5>
+              <h5 class="h5 m--0">What is cupcake? This is a title.</h5>
               <button
                 tabindex="1"
                 type="button"
@@ -1409,9 +1413,7 @@
         <div class="modalDialog modalBodyContentScrollable">
           <div class="modalContent">
             <div class="modalHeader d--flex pt--5 px--5 pb--3">
-              <h5 class="h5 m--0">
-                What is cupcake? This is a title.
-              </h5>
+              <h5 class="h5 m--0">What is cupcake? This is a title.</h5>
               <button
                 tabindex="1"
                 type="button"
@@ -1539,9 +1541,7 @@
         <div class="modalDialog">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0 text--center">
-                Notification Message
-              </h5>
+              <h5 class="h5 m--0 text--center">Notification Message</h5>
               <button
                 tabindex="1"
                 type="button"
@@ -1593,9 +1593,7 @@
         <div class="modalDialog">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0 text--center">
-                Success Message
-              </h5>
+              <h5 class="h5 m--0 text--center">Success Message</h5>
               <button
                 tabindex="1"
                 type="button"
@@ -1664,9 +1662,7 @@
                     height="191"
                   />
                 </figure>
-                <h5 class="h5 mb--3 text--center">
-                  Welcome Teams!
-                </h5>
+                <h5 class="h5 mb--3 text--center">Welcome Teams!</h5>
                 <div class="text--center">
                   <p>
                     Let’s get started. You and your tean can now use the
@@ -1754,9 +1750,7 @@
         <div class="modalDialog modalSmall">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0">
-                This is a title.
-              </h5>
+              <h5 class="h5 m--0">This is a title.</h5>
               <button
                 tabindex="1"
                 type="button"
@@ -1784,9 +1778,7 @@
         <div class="modalDialog modalDialogScrollable">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0">
-                What is cupcake? This is a title.
-              </h5>
+              <h5 class="h5 m--0">What is cupcake? This is a title.</h5>
               <button
                 tabindex="1"
                 type="button"
@@ -1836,9 +1828,7 @@
         <div class="modalDialog modalLarge">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0">
-                What is cupcake? This is a title.
-              </h5>
+              <h5 class="h5 m--0">What is cupcake? This is a title.</h5>
               <button
                 tabindex="1"
                 type="button"
@@ -1873,9 +1863,7 @@
         <div class="modalDialog modalExtraLarge">
           <div class="modalContent p--5">
             <div class="modalHeader d--flex mb--3">
-              <h5 class="h5 m--0">
-                What is cupcake? This is a title.
-              </h5>
+              <h5 class="h5 m--0">What is cupcake? This is a title.</h5>
               <button
                 tabindex="1"
                 type="button"

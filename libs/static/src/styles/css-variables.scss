@@ -8,7 +8,6 @@ $grid-columns :12;
 // Set the inner columns inside row
 $grid-row-columns: 6;
 
-
 // Specify the width of the gutters.
 $gutter: var(--gutter-width);
 $gutter-half: calc(var(--gutter-width) / 2);
@@ -465,9 +464,7 @@ $global-spacers: (
   @include make-grid-columns();
 }
 
-
 @if $enable-grid-classes {
-
   .container {
     @include make-container();
   }
