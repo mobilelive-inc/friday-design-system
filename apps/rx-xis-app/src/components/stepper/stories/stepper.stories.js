@@ -29,7 +29,14 @@ export const BasicStepper = () => {
       <Stepper variant="light" value={step} total={3} />
       <Text>Dark Theme</Text>
       <Stepper variant="dark" value={step} total={3} />
-      <>
+      <Text>Hidden Counter</Text>
+      <Stepper
+        variant="primary"
+        value={step}
+        total={3}
+        isCountVisible={false}
+      />
+      <Flex mt={3}>
         {step === 1 && (
           <Flex>
             <Text> Step One</Text>
@@ -45,7 +52,7 @@ export const BasicStepper = () => {
             <Text> Step Three</Text>
           </Flex>
         )}
-      </>
+      </Flex>
       <ThemeProvider theme={defaultTheme}>
         <Flex>
           <Button

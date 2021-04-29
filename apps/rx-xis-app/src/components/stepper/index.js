@@ -8,7 +8,7 @@ import GlobalStyle from './../theme/globalStyles';
 import PropTypes from 'prop-types';
 
 const Stepper = props => {
-  const { total, value } = props;
+  const { total, value, isCountVisible } = props;
   const [progressWidth, setProgressWidth] = useState(0);
 
   useEffect(() => {
@@ -22,7 +22,9 @@ const Stepper = props => {
         <ProgressWrapper {...props}>
           <ProgressStepper {...props} width={`${progressWidth}%`} />
         </ProgressWrapper>
-        <Span textAlign="center" mt={1}>{`${value} of ${total}`}</Span>
+        {isCountVisible && (
+          <Span textAlign="center" mt={1}>{`${value} of ${total}`}</Span>
+        )}
       </Box>
     </ThemeProvider>
   );
@@ -31,7 +33,8 @@ const Stepper = props => {
 Stepper.defaultProps = {
   total: 10,
   value: 3,
-  variant: 'primary'
+  variant: 'primary',
+  isCountVisible: true
 };
 
 Stepper.propTypes = {
@@ -40,7 +43,9 @@ Stepper.propTypes = {
   /** Step no where user stands */
   value: PropTypes.number.isRequired,
   /** To manage theme*/
-  variant: PropTypes.string
+  variant: PropTypes.string,
+  /** This is to show/hide the below count, by-default it's value is true*/
+  isCountVisible: PropTypes.bool
 };
 
 export default Stepper;
