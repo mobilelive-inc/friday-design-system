@@ -1,5 +1,6 @@
 import { _fontSizes } from '../properties/fontSizes';
 import { _sizes } from '../properties/sizes';
+import { stepper, stepperWrapper } from '../variants/stepper';
 
 const fontSizes = {
   stepperStatusFontSize: _fontSizes.fontSizeBase
@@ -12,5 +13,7 @@ const sizes = {
 
 export default {
   fontSizes,
-  sizes
+  sizes,
+  stepper,
+  stepperWrapper
 };

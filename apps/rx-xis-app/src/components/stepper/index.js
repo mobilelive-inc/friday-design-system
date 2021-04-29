@@ -22,7 +22,7 @@ const Stepper = props => {
         <ProgressWrapper {...props}>
           <ProgressStepper {...props} width={`${progressWidth}%`} />
         </ProgressWrapper>
-        <Span textAlign="center" mt={5}>{`${value} of ${total}`}</Span>
+        <Span textAlign="center" mt={1}>{`${value} of ${total}`}</Span>
       </Box>
     </ThemeProvider>
   );
