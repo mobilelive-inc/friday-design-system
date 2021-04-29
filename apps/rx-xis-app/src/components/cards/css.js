@@ -6,14 +6,18 @@ export const Wrapper = styled.div(
     display: `flex`,
     justifyContent: `center`,
     flexDirection: `column`,
-    border: "4px solid",
+    borderWidth: 'borderWidth4',
+    borderStyle: 'solid',
+    borderRadius:'borderRadiusNo',
     borderColor: "MianWrapperBorder",
     paddingBottom: "PaddingWrapper",
   })
 );
 export const Pwrapper = styled.div(
   css({
-    border: "1px solid",
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    borderRadius:'borderRadiusNone',
     borderColor: "ThemeColor",
     padding: "PaddingWrapper",
   })
@@ -57,7 +61,9 @@ export const CardWrapper = styled.div(
   css({
     textAlign: "center",
     padding: "CardBasicPadding",
-    border: "1px solid",
+    borderWidth:'1px',
+    borderStyle: "solid",
+    borderRadius:'borderRadiusNo',
     borderColor: "CardBorderColor",
     width: "CardIconewidth",
   })
@@ -66,7 +72,8 @@ export const IconeWrapper = styled.div(
   css({
     textAlign: "center",
     padding: "CardBasicPadding",
-    border: "1px solid",
+    borderWidth:'borderWidth',
+    borderStyle: "solid",
     borderColor: "CardBorderColor",
     width: "40%",
   })
@@ -76,7 +83,8 @@ export const ShadowWrapper = styled.div(
   css({
     textAlign: "center",
     padding: "globalSpace",
-    border: "1px solid",
+    borderWidth: '1px',
+    borderStyle: 'solid',
     borderColor: "grayDark",
     width: "CardShadowWidth",
     boxShadow: "5px 10px",
