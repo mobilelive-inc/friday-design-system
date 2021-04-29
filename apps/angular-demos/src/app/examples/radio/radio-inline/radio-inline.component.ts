@@ -5,7 +5,7 @@ import { FormBuilder, FormControl } from '@angular/forms';
   selector: 'demo-radio-inline',
   template: `
     <div class="row">
-      <div class="col-12">
+      <div class="col--12">
         <form class="form" role="form" [formGroup]="form">
           <label id="example-radio-group-label-4"
             >Pick your favorite fruit</label

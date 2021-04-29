@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
+import CardTheme from "./../theme/styles/card";
 import Theme from "../theme/defaultTheme";
 import {
   Wrapper,
@@ -11,6 +12,7 @@ import {
   TextWrapper,
   CardWrapper,
   ShadowWrapper,
+  IconeWrapper,
 } from "./css";
 import Text from "../../components/typography";
 import GlobalStyle from "../theme/globalStyles";
@@ -21,8 +23,8 @@ import Span from "../span/span";
 
 const Cart = ({ title, cardimage }) => {
   return (
-    <ThemeProvider theme={Theme}>
-      <Text variant="H5" mb={5} fontSize={7} mt={7}>
+    <ThemeProvider theme={CardTheme}>
+      <Text variant="H5" my={16}>
         {title}
       </Text>
       <Figuare>
@@ -33,8 +35,8 @@ const Cart = ({ title, cardimage }) => {
 };
 const WithImageCard = ({ title, cardimage, subheading, heading }) => {
   return (
-    <ThemeProvider theme={Theme}>
-      <Text variant="H5" m={7}>
+    <ThemeProvider theme={CardTheme}>
+      <Text variant="H5" my={16}>
         {title}
       </Text>
       <Pwrapper>
@@ -42,7 +44,9 @@ const WithImageCard = ({ title, cardimage, subheading, heading }) => {
           <Image src={cardimage} alt={title} />
         </Figuare>
         <TextWrapper>
-          <Text variant="h4" m={7} >{heading}</Text>
+          <Text variant="h4" m="spacerMid">
+            {heading}
+          </Text>
           <Text variant="H6">{subheading}</Text>
         </TextWrapper>
       </Pwrapper>
@@ -55,10 +59,10 @@ const FixCard = ({ title, subheading, imagetitle }) => {
       <Text variant="H5" m={7}>
         {title}
       </Text>
-      <CardWrapper>
+      <IconeWrapper>
         <Icon
           className="icon-DesignThinking"
-          style={{ fontWeight: 400, fontSize: "4rem" }}
+          style={{ fontWeight: 400, fontSize: "4rem", paddingTop: "1rem" }}
         />
         <Text>{imagetitle}</Text>
         <Text variant="H6">{subheading}</Text>
@@ -66,34 +70,38 @@ const FixCard = ({ title, subheading, imagetitle }) => {
           {" "}
           Lorem Ipsum{" "}
         </Button>
-      </CardWrapper>
+      </IconeWrapper>
     </ThemeProvider>
   );
 };
 const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
   return (
     <>
-      <ThemeProvider theme={Theme}>
+      <ThemeProvider theme={CardTheme}>
         <Text variant="H5" m={7}>
           {title}
         </Text>
         <CardWrapper>
-          <Text variant="H3">{imagetitle}</Text>
+          <Text variant="H3" mt={7}>
+            {imagetitle}
+          </Text>
           <Span
             style={{
               color: "#000",
-              width: "100%",
+              width: "95%",
               height: "2px",
               backgroundColor: "#666",
               textAlign: "center",
-              marginTop: "2rem",
-              marginBottom: "1rem",
+              margin: "2rem",
+              // marginBottom: "1rem",
             }}
           />
-          <Text variant="H4" mb={7}>
+          <Text variant="H4" m={7}>
             {heading}
           </Text>
-          <Text variant="H6">{subheading}</Text>
+          <Text variant="H6" mb={7}>
+            {subheading}
+          </Text>
         </CardWrapper>
       </ThemeProvider>
     </>
@@ -101,7 +109,7 @@ const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
 };
 const WithImageSlideShadow = ({ title, cardimage }) => {
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={CardTheme}>
       <Text variant="H5" m={7}>
         {title}
       </Text>
@@ -126,9 +134,9 @@ const WithImageSlideShadow = ({ title, cardimage }) => {
 };
 const Cards = () => {
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
-      <Text variant="H1" mb={10} ml={8}>
+      <Text variant="H1" mb={32} ml={8}>
         Cards
       </Text>
       <Wrapper>

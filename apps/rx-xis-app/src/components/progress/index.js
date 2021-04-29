@@ -4,6 +4,7 @@ import Theme from '../theme/defaultTheme';
 import { Wrapper, Progresbar, Value, ButtonContainer } from './css';
 import Text from '../typography';
 import GlobalStyle from '../theme/globalStyles';
+import progressbarTheme from './../theme/styles/progressbar';
 import Button from '../Button';
 
 const Progress = () => {
@@ -24,34 +25,35 @@ const Progress = () => {
   let style = { width: test };
 
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={progressbarTheme}>
       <GlobalStyle />
-      <Text variant="H1" ml="space_6x_small" mb="space_5x_small">
+      <Text variant="H2" mb="PbMargin">
         Progress
       </Text>
       <Wrapper>
         <Progresbar
           role="progressbar"
-          aria-valuenow="3"
+          aria-valuenow={progress}
           aria-valuemin="0"
           aria-valuemax="10"
           aria-label={style}>
           <Value style={style}></Value>
         </Progresbar>
-        <Text variant="h3" mt="space_6x_small" ml="space_2x_large">
+        
+        <Text variant="h3" mt={7} ml={64}>
           ({`${progress}`} of 10)
         </Text>
         <br />
         <ButtonContainer>
           <Button
             variant="secondary"
-            width="10%"
+            width="7%"
             m={0}
             onClick={handleDecrement}>
             {' '}
             Prev{' '}
           </Button>
-          <Button variant="primary" width="10%" m={7} onClick={handleIncrement}>
+          <Button variant="primary" width="7%" m={7} onClick={handleIncrement}>
             {' '}
             Next{' '}
           </Button>

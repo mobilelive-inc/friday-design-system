@@ -15,7 +15,6 @@ import { Component, OnInit } from '@angular/core';
       *ngIf="isDarkButtonShown"
       >Remove Dark Button</fds-button
     >&nbsp;
-    <fds-dark-button *ngIf="isDarkButtonShown"></fds-dark-button>
   `,
   styles: []
 })

@@ -18,13 +18,13 @@ export const colors = {
 };
 
 export const space = {
-  collapseHeadingPaddingX: _space.space_6x_small,
-  collapseHeadingPaddingY: _space.space_small,
-  collapseContentPaddingX: _space.space_small,
-  collapseContentPaddingY: _space.space_6x_small,
-  collapseHeadingIconPaddingX: _space.space_5x_tiny,
-  collapseHeadingIconPaddingY: _space.space_5x_tiny
-};
+    collapseHeadingPaddingX: _space.globalSpacer,
+    collapseHeadingPaddingY: _space.spacerMid,
+    collapseContentPaddingX: _space.spacerMid,
+    collapseContentPaddingY: _space.globalSpacer,
+    collapseHeadingIconPaddingX: _space.space_5x_tiny,
+    collapseHeadingIconPaddingY: _space.space_5x_tiny,
+}
 
 export const radii = {
   collapseBordeRadius: _radii.radius_0_063rem
