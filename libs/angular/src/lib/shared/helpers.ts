@@ -149,12 +149,11 @@ export class DomHandler {
   }
 
   public static siblings(element: any): any {
-    return Array.prototype.filter.call(
-      element.parentNode.children,
-      function (child) {
-        return child !== element;
-      }
-    );
+    return Array.prototype.filter.call(element.parentNode.children, function (
+      child
+    ) {
+      return child !== element;
+    });
   }
 
   public static find(element: any, selector: string): any[] {
