@@ -63,4 +63,28 @@ const Progress = () => {
   );
 };
 
+Progress.defaultProps = {
+  // disabled: false,
+  // fontSize: [fontSizes.fontSizeSM, fontSizes.fontSizeBase],
+  // lineHeight: [lineHeights.lineheight_1x_tiny],
+  // m: [0],
+  // fontWeight: [fontWeights.fontweight_medium],
+  // // display: ['inline-block'],
+  // width: [1],
+  // textAlign: ['center'],
+  // borderRadius: [radii.borderRadiusNone],
+  onClick: () => {},
+  // withIcon: false
+};
+Progress.propTypes = {
+
+   /** Text for Button could be string or node. */
+   children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]).isRequired,
+  /** Click handler for Button */
+  onClick: PropTypes.func,
+}
+
 export default Progress;
