@@ -38,3 +38,26 @@ export const BasicAccordion = () => (
     </Accordion>
   </ThemeProvider>
 );
+
+export const OpenedAccordion = () => (
+  <ThemeProvider theme={Theme}>
+    <GlobalStyle />
+    <Text variant="H5" mb={5} ml={2}>
+      Opened Accordion
+    </Text>
+
+    <Accordion
+      onExpand={() => {
+        console.log('Open');
+      }}
+      onCollapse={() => {
+        console.log('Closed');
+      }}
+      isVisible={true}>
+      <AccordionHeader title="Expanded" />
+      <AccordionCollapse>
+        <div>This is story</div>
+      </AccordionCollapse>
+    </Accordion>
+  </ThemeProvider>
+);
