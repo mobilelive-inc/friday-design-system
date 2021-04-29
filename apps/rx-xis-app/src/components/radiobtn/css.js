@@ -10,8 +10,10 @@ export const Wrapper = styled.div(
 );
 export const MainWrapper = styled.div(
   css({
-    border: `4px solid`,
+    borderWidth:'borderWidth4',
+    borderStyle:'solid',
     borderColor: "primaryLighter",
+    borderRadius:'borderRadiusNone',
     paddingY: "spacerMid",
     marginBottom: "spacerMid",
   })
@@ -28,6 +30,6 @@ export const InlineWrapper = styled.div(
   css({
     display: `flex`,
     flexDirection: `row`,
-    marginRight: `50px`,
+    marginRight: `spacerML`,
   })
 );
