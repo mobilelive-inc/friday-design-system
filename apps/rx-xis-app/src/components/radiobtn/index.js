@@ -4,6 +4,7 @@ import { Theme } from "..";
 import Radio from "../radio";
 import "./style.css";
 import GlobalStyle from "../theme/globalStyles";
+import PropTypes from 'prop-types';
 import Text from "../typography";
 import { Wrapper, ButtonWrapper, InlineWrapper, MainWrapper } from "./css.js";
 
@@ -13,7 +14,7 @@ const Basicbtn = ({ value }) => {
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
       <ButtonWrapper 
-        role="radiogrooup" 
+        role="radiogroup" 
         aria-labelledby="example-radio-group-label-1"
         >
         <Text mb={10} mr={32}>
@@ -136,6 +137,51 @@ const RadioBtn = () => {
       </MainWrapper>
     </ThemeProvider>
   );
+};
+RadioBtn.propTypes = {
+   /** Text for Button could be string or node. */
+   children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]).isRequired,
+  /**
+   * The label.
+   */
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  /**
+   * The ID. Need to be defined for labels.
+   */
+  id: PropTypes.string.isRequired,
+  /**
+   * Associate this checkbox with a group. Set as the HTML name attribute.
+   */
+  name: PropTypes.string.isRequired,
+  /**
+   * The variant state
+   */
+  variant: PropTypes.oneOf(['unchecked', 'checked', 'disabled']),
+  /**
+   * A callback function to be invoked when the checkbox is checked or unchecked.
+   */
+  onChange: PropTypes.func,
+  /**
+   * color controld the color for border and fill color.
+   */
+  color: PropTypes.string,
+  /** It is a validation's error message */
+  error: PropTypes.bool,
+  borderType: PropTypes.oneOf(['curved', 'rounded']),
+  className: PropTypes.string,
+  borderType: PropTypes.oneOf(['curved', 'rounded']),
+
+};
+
+RadioBtn.defaultProps = {
+  variant: 'unchecked',
+  onChange: () => {},
+  error: false,
+  disabled: false,
+
 };
 
 export default RadioBtn;
