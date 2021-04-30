@@ -10,22 +10,30 @@ import { ThemeProvider } from 'styled-components';
 
 const AccordionContainer = ({ children, hasMultiple }) => {
   const [openedIndex, setOpenedIndex] = useState(0);
+  const [childrenWithProps, setChildrenWithProps] = useState(children);
+
+  const updateIndex = index => {
+    setOpenedIndex(index);
+  };
+
   useEffect(() => {
-    console.log(
-      React.Children.map(children, child => {
-        // checking isValidElement is the safe way and avoids a typescript error too
-        if (React.isValidElement(child)) {
-          return React.cloneElement(child, {
-            openedIndex: openedIndex,
-            index: children.indexOf(child),
-            setOpenedIndex: setOpenedIndex
-          });
-        }
-        return child;
-      })
-    );
-  }, []);
-  return <Box>{children}</Box>;
+    if (hasMultiple === false) {
+      setChildrenWithProps(
+        React.Children.map(children, child => {
+          // checking isValidElement is the safe way and avoids a typescript error too
+          if (React.isValidElement(child)) {
+            return React.cloneElement(child, {
+              openedIndex: openedIndex,
+              index: children.indexOf(child),
+              updateIndex: updateIndex
+            });
+          }
+          return child;
+        })
+      );
+    }
+  }, [openedIndex]);
+  return <Box>{childrenWithProps}</Box>;
 };
 
 const Accordion = ({
@@ -36,7 +44,7 @@ const Accordion = ({
   variant,
   openedIndex,
   index,
-  setOpenedIndex,
+  updateIndex,
   ...props
 }) => {
   const [isOpen, setIsOpen] = useState(isVisible || false);
@@ -45,7 +53,9 @@ const Accordion = ({
   useEffect(() => {
     if (isOpen === true) {
       onExpand();
-      setOpenedIndex && setOpenedIndex(index);
+      {
+        updateIndex && updateIndex(index);
+      }
     } else {
       onCollapse();
     }
