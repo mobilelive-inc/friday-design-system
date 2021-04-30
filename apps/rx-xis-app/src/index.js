@@ -61,7 +61,7 @@ function App() {
   const [isOn, setIsOn] = React.useState(false);
   return (
     <ThemeProvider theme={theme}>
-      <Accordion
+      {/* <Accordion
         onExpand={() => console.log('Opened')}
         onCollapse={() => console.log('Closed')}>
         <AccordionHeader title={'Heading'}></AccordionHeader>
@@ -94,11 +94,11 @@ function App() {
         </Flex>
         <Text mb={30} underline italic>
           Testing
-        </Text>
-        <Flex mt={5} mb={100}>
-          <Stepper variant="primary" value={5} total={10} />
-        </Flex>
-        <Flex mt={5} mb={100}>
+        </Text> */}
+      <Flex mt={5} mb={100}>
+        <Stepper variant="primary" value={5} total={10} />
+      </Flex>
+      {/* <Flex mt={5} mb={100}>
           <Button
             variant="outlineGoogleBlue"
             width="15%"
@@ -560,7 +560,7 @@ function App() {
             isValid={true}
           />
         </Flex>
-      </div>
+      </div> */}
     </ThemeProvider>
   );
 }

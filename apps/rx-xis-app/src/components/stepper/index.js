@@ -23,7 +23,11 @@ const Stepper = props => {
           <ProgressStepper {...props} width={`${progressWidth}%`} />
         </ProgressWrapper>
         {isCountVisible && (
-          <Span textAlign="center" mt={1}>{`${value} of ${total}`}</Span>
+          <Span
+            textAlign="center"
+            aria-live="assertive"
+            aria-label={`Step ${value} of ${total}`}
+            mt={1}>{`${value} of ${total}`}</Span>
         )}
       </Box>
     </ThemeProvider>
