@@ -62,7 +62,7 @@ function App() {
   const [isOn, setIsOn] = React.useState(false);
   return (
     <ThemeProvider theme={theme}>
-      <AccordionContainer hasMultiple={true}>
+      <AccordionContainer hasMultiple={false}>
         <Accordion
           onExpand={() => console.log('Opened')}
           onCollapse={() => console.log('Closed')}>
