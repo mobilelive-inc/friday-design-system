@@ -1,19 +1,51 @@
 import React, { useState, useEffect } from 'react';
 import { AccordionWrapper, Collapse, Header, ToggleButton } from './css';
 import { Text } from '../typography';
+import Box from '../box';
 import Icon from './../icon/Icon';
 import PropTypes from 'prop-types';
 import GlobalStyle from './../theme/globalStyles';
 import accordionTheme from './../theme/styles/accordion';
 import { ThemeProvider } from 'styled-components';
 
-const Accordion = ({ isVisible, children, onExpand, onCollapse, variant, ...props }) => {
+const AccordionContainer = ({ children, hasMultiple }) => {
+  const [openedIndex, setOpenedIndex] = useState(0);
+  useEffect(() => {
+    console.log(
+      React.Children.map(children, child => {
+        // checking isValidElement is the safe way and avoids a typescript error too
+        if (React.isValidElement(child)) {
+          return React.cloneElement(child, {
+            openedIndex: openedIndex,
+            index: children.indexOf(child),
+            setOpenedIndex: setOpenedIndex
+          });
+        }
+        return child;
+      })
+    );
+  }, []);
+  return <Box>{children}</Box>;
+};
+
+const Accordion = ({
+  isVisible,
+  children,
+  onExpand,
+  onCollapse,
+  variant,
+  openedIndex,
+  index,
+  setOpenedIndex,
+  ...props
+}) => {
   const [isOpen, setIsOpen] = useState(isVisible || false);
   const [childrenWithProps, setChildrenWithProps] = useState(children);
 
   useEffect(() => {
     if (isOpen === true) {
       onExpand();
+      setOpenedIndex && setOpenedIndex(index);
     } else {
       onCollapse();
     }
@@ -31,17 +63,22 @@ const Accordion = ({ isVisible, children, onExpand, onCollapse, variant, ...prop
         return child;
       })
     );
-
   }, [isOpen]);
+
+  useEffect(() => {
+    if (openedIndex === index) {
+      setIsOpen(true);
+    } else {
+      setIsOpen(false);
+    }
+  }, [openedIndex]);
 
   return (
     <ThemeProvider theme={accordionTheme}>
       <GlobalStyle />
-      <AccordionWrapper {...props}>
-        {childrenWithProps}
-      </AccordionWrapper>
+      <AccordionWrapper {...props}>{childrenWithProps}</AccordionWrapper>
     </ThemeProvider>
-  )
+  );
 };
 
 const AccordionHeader = ({ isVisible, title, isOpen, setIsOpen, ...props }) => {
@@ -124,5 +161,4 @@ AccordionHeader.propTypes = {
   title: PropTypes.string.isRequired
 };
 
-export default Accordion;
-export { AccordionCollapse, AccordionHeader };
+export { AccordionCollapse, AccordionHeader, AccordionContainer, Accordion };
