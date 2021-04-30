@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ThemeProvider } from "styled-components";
 import CardTheme from "./../theme/styles/card";
 import Theme from "../theme/defaultTheme";
@@ -18,6 +18,7 @@ import Text from "../../components/typography";
 import GlobalStyle from "../theme/globalStyles";
 import CardImg from "../../assets/images/img-01.png";
 import Icon from "../icon/Icon";
+import PropTypes from "prop-types";
 import Button from "../Button";
 import Span from "../span/span";
 
@@ -169,6 +170,23 @@ const Cards = () => {
       </Wrapper>
     </ThemeProvider>
   );
+};
+
+Cards.propTypes = {
+  /** Allows to nest any components inside <Cards> component. This is the place where to < WithImageCard >, < FixCard>, < WithoutIcone>, < WithImageSlideShadow>.*/
+  children: PropTypes.func,
+  /** Allows to change the default font color by passing a new value. */
+  fontColor: PropTypes.string,
+  /** Allows to pass extra styles to the component */
+  CardTheme: PropTypes.string,
+  /** to title pass any text for card title */
+  title: PropTypes.string,
+  /** Allows to pass the image URL which will be rendered inside the component. */
+  cardimg: PropTypes.string,
+  /** Allows to render child elements inside the <Cards> component. Perfect section to place h1, h2, h3, etc tags. */
+  heading: PropTypes.string,
+  /** Global style to set the golbal color fontSize height width etc*/
+  GlobalStyle: PropTypes.string,
 };
 
 export default Cards;
