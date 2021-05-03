@@ -1,11 +1,3 @@
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
 @import '../../../theme/breakpoint';
 // DesignSystem functions
 //
@@ -98,6 +90,11 @@ $grid-breakpoints: (
 
 // Returns a blank string if smallest breakpoint, otherwise returns the name with a dash in front.
 // Useful for making responsive utilities.
+//
+//    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    ""  (Returns a blank string)
+//    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    "-sm"
 
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
 // Makes the @content apply to the given breakpoint and wider.

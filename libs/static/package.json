@@ -10,7 +10,7 @@
   },
   "scripts": {
     "clean": "rimraf dist/*",
-    "css:autoprefixer": "node postCss.js && postcss -u autoprefixer -r dist/*.css",
+    "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
     "css:scss": "node-sass --output-style compressed -o dist src/styles",
     "build:css": "npm run css:scss && npm run css:autoprefixer",
     "build:js": "webpack --mode=production",

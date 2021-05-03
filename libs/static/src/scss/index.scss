@@ -6,6 +6,7 @@
 @import 'settings/spacing';
 @import 'settings/forms';
 @import 'settings/breakpoint';
+@import 'settings/gridLayout';
 @import 'settings/utilities';
 @import 'settings/images';
 @import 'generic/root';
@@ -26,11 +27,13 @@
 @import 'components/notification-toast';
 
 //utilities
+
+@import 'utilitis/display';
 @import 'utilitis/align';
+@import 'utilitis/spacing';
 @import 'utilitis/background';
 @import 'utilitis/borders';
 @import 'utilitis/code';
-@import 'utilitis/display';
 @import 'utilitis/divider';
 @import 'utilitis/interactions';
 @import 'utilitis/jumbotron';
