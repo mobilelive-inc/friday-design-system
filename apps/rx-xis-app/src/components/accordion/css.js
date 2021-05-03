@@ -2,11 +2,14 @@ import styled from 'styled-components';
 import css from '@styled-system/css';
 import { compose, border, layout, variant, space, color } from 'styled-system';
 
-export const ToggleButton = styled(`i`)(
+export const ToggleButton = styled(`span`)(
   css({
     paddingX: 'collapseHeadingIconPaddingX',
     paddingY: 'collapseHeadingIconPaddingY',
-    fontSize: 'collapseHeadingIconFontSize'
+    fontSize: 'collapseHeadingIconFontSize',
+    cursor: 'pointer',
+    outlineColor: '#53c9fc',
+    outlineWidth: '2px'
   })
 );
 

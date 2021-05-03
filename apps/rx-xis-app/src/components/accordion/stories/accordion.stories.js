@@ -9,7 +9,7 @@ import {
 } from '..';
 import Option from '../../option';
 import Text from '../../typography';
-import Theme from '../../theme/defaultTheme';
+import accordionTheme from '../../theme/styles/accordion';
 import GlobalStyle from '../../theme/globalStyles';
 import '../../icomoon_icons.css';
 import { Flex, Box } from 'rebass/styled-components';
@@ -23,7 +23,7 @@ export default {
 };
 
 export const SwitchableAccordion = () => (
-  <ThemeProvider theme={Theme}>
+  <ThemeProvider theme={accordionTheme}>
     <GlobalStyle />
     <Text variant="H5" mb={5} ml={2}>
       Switchable Accordion
@@ -45,7 +45,7 @@ export const SwitchableAccordion = () => (
 );
 
 export const OpenedAccordion = () => (
-  <ThemeProvider theme={Theme}>
+  <ThemeProvider theme={accordionTheme}>
     <GlobalStyle />
     <Text variant="H5" mb={5} ml={2}>
       Opened Accordion
@@ -68,7 +68,7 @@ export const OpenedAccordion = () => (
 );
 
 export const BasicAccordion = () => (
-  <ThemeProvider theme={Theme}>
+  <ThemeProvider theme={accordionTheme}>
     <GlobalStyle />
     <Text variant="H5" mb={5} ml={2}>
       Opened Accordion
@@ -104,7 +104,7 @@ export const BasicAccordion = () => (
 );
 
 export const MultipleAccordion = () => (
-  <ThemeProvider theme={Theme}>
+  <ThemeProvider theme={accordionTheme}>
     <GlobalStyle />
     <Text variant="H5" mb={5} ml={2}>
       Opened Accordion
