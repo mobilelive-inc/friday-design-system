@@ -24,13 +24,7 @@ export const BasicAccordion = () => (
       Accordion
     </Text>
 
-    <Accordion
-      onExpand={() => {
-        console.log('Open');
-      }}
-      onCollapse={() => {
-        console.log('Closed');
-      }}>
+    <Accordion onExpand={() => {}} onCollapse={() => {}}>
       <AccordionHeader title="Expanable" />
       <AccordionCollapse>
         <div>This is story</div>
