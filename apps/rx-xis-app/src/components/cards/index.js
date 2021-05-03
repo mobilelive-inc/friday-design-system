@@ -68,7 +68,7 @@ const WithImageCard = ({ title, cardimage, subheading, heading }) => {
     </ThemeProvider>
   );
 };
-const FixCard = ({ title, subheading, imagetitle,color }) => {
+const FixCard = ({ title, subheading, imagetitle, color }) => {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
@@ -81,7 +81,9 @@ const FixCard = ({ title, subheading, imagetitle,color }) => {
           style={{ fontWeight: 400, fontSize: "4rem", paddingTop: "1.5rem" }}
         />
         <Text py={16}>{imagetitle}</Text>
-        <Text variant="H6" pb={16} px={10}>{subheading}</Text>
+        <Text variant="H6" pb={16} px={10}>
+          {subheading}
+        </Text>
         <Button variant={color} width="auto" m={16}>
           {" "}
           Lorem Ipsum{" "}
@@ -123,7 +125,7 @@ const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
     </>
   );
 };
-const WithImageSlideShadow = ({ title, cardimage,color }) => {
+const WithImageSlideShadow = ({ title, cardimage, color }) => {
   return (
     <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
@@ -135,7 +137,9 @@ const WithImageSlideShadow = ({ title, cardimage,color }) => {
           className="icon-home"
           style={{ fontWeight: 400, fontSize: "8rem", color: "#46BC9C" }}
         />
-        <p style={{ color: "black", paddingLeft:'16px', paddingRight:'16px' }}>
+        <p
+          style={{ color: "black", paddingLeft: "16px", paddingRight: "16px" }}
+        >
           {" "}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt, consectetur adipiscing elit, sed do eiusmod
@@ -154,70 +158,70 @@ const Cards = () => {
     <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
       <Section>
-      <Text variant="H1" mb={32} ml={8}>
-        Cards
-      </Text>
-      <Wrapper>
-        <Col>
-         <Cart title="Default" cardimage={CardImg} />
-        </Col>
-        <Col>
-          <BoxShadow>
-            <Cart title="Box Shadow" cardimage={CardImg} box />
-          </BoxShadow>
-        </Col>
-        <Col>
-        <ShadowCart title="Solid Shadow" cardimage={CardImg} />
-        </Col>
-        <Col>
-        <WithImageCard
-          title="With Image"
-          cardimage={CardImg}
-          heading="Lorem ipsum dolor"
-          subheading='"Lorem ipsum dolor sit amet, consectetur adipiscing elit"'
-        />
-        </Col>
-        <Col>
-        <FixCard
-          title="Icon with Fixed Height"
-          imagetitle="Lorem Ipsum"
-          subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt., conssectetur adisping dlit, sed do eiusmid tempor indidunt , conssectetur adisping dlit, sed do eiusmid tempor indidunt"
-          color='outlinePrimary'
-        />
-        </Col>
-        <Col>
-        <FixCard
-          title="Icon with Fixed Height"
-          imagetitle="Lorem Ipsum"
-          subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt., conssectetur adisping dlit, sed do eiusmid tempor indidunt , conssectetur adisping dlit, sed do eiusmid tempor indidunt"
-          color='outlineSecondary'
-       />
-        </Col>
-        <Col>
-        <WithImageSlideShadow 
-        title="With Image and Solid Shadow"
-        color='outlinePrimary'
-        />
-        </Col>
-        <Col>
-        <WithoutIcone
-          title="Without Icon"
-          imagetitle="Lorem Ipsum"
-          heading="dolor sit amet"
-          subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt."
-        />
-        </Col>
-        <Col>
-        <WithImageSlideShadow
-         title="With Image and Solid Shadow"
-         color='outlineSecondary'
-         />
-        </Col>
-      </Wrapper>
+        <Text variant="H1" mb={32} ml={8}>
+          Cards
+        </Text>
+        <Wrapper>
+          <Col>
+            <Cart title="Default" cardimage={CardImg} />
+          </Col>
+          <Col>
+            <BoxShadow>
+              <Cart title="Box Shadow" cardimage={CardImg} box />
+            </BoxShadow>
+          </Col>
+          <Col>
+            <ShadowCart title="Solid Shadow" cardimage={CardImg} />
+          </Col>
+          <Col>
+            <WithImageCard
+              title="With Image"
+              cardimage={CardImg}
+              heading="Lorem ipsum dolor"
+              subheading='"Lorem ipsum dolor sit amet, consectetur adipiscing elit"'
+            />
+          </Col>
+          <Col>
+            <FixCard
+              title="Icon with Fixed Height"
+              imagetitle="Lorem Ipsum"
+              subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt., conssectetur adisping dlit, sed do eiusmid tempor indidunt , conssectetur adisping dlit, sed do eiusmid tempor indidunt"
+              color="outlinePrimary"
+            />
+          </Col>
+          <Col>
+            <FixCard
+              title="Icon with Fixed Height"
+              imagetitle="Lorem Ipsum"
+              subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt., conssectetur adisping dlit, sed do eiusmid tempor indidunt , conssectetur adisping dlit, sed do eiusmid tempor indidunt"
+              color="outlineSecondary"
+            />
+          </Col>
+          <Col>
+            <WithImageSlideShadow
+              title="With Image and Solid Shadow"
+              color="outlinePrimary"
+            />
+          </Col>
+          <Col>
+            <WithoutIcone
+              title="Without Icon"
+              imagetitle="Lorem Ipsum"
+              heading="dolor sit amet"
+              subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt."
+            />
+          </Col>
+          <Col>
+            <WithImageSlideShadow
+              title="With Image and Solid Shadow"
+              color="outlineSecondary"
+            />
+          </Col>
+        </Wrapper>
       </Section>
     </ThemeProvider>
   );
-}; 
+};
 
 Cards.propTypes = {
   /** Allows to nest any components inside <Cards> component. This is the place where to < WithImageCard >, < FixCard>, < WithoutIcone>, < WithImageSlideShadow>.*/
@@ -265,7 +269,7 @@ Cards.propTypes = {
   /** For giving width to main component */
   width: PropTypes.number,
   /** For giving height to main component */
-  height: PropTypes.number
+  height: PropTypes.number,
 };
 
 export default Cards;

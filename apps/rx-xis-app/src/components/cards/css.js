@@ -3,38 +3,38 @@ import css from "@styled-system/css";
 
 export const Section = styled.section(
   css({
-    maxWidth:`container_max_width`,
-    minWidth:`container_min_width`,
-    margin:'0 auto',
+    maxWidth: `container_max_width`,
+    minWidth: `container_min_width`,
+    margin: "0 auto",
   })
 );
 
 export const Col = styled.div(
   css({
-    flex:'0 0 30%',
-    margin:'5px',
+    flex: "0 0 30%",
+    margin: "5px",
   })
-)
+);
 export const Wrapper = styled.div(
   css({
     display: `flex`,
     justifyContent: `center`,
     flexDirection: `column`,
-    display:'flex',
-    flexFlow:'row wrap',
-    alignContent:'flex-start',
-    borderWidth: 'borderWidth4',
-    borderStyle: 'solid',
-    borderRadius:'borderRadiusNo',
+    display: "flex",
+    flexFlow: "row wrap",
+    alignContent: "flex-start",
+    borderWidth: "borderWidth4",
+    borderStyle: "solid",
+    borderRadius: "borderRadiusNo",
     borderColor: "MianWrapperBorder",
     paddingBottom: "PaddingWrapper",
   })
 );
 export const Pwrapper = styled.div(
   css({
-    borderWidth: '1px',
-    borderStyle: 'solid',
-    borderRadius:'borderRadiusNone',
+    borderWidth: "1px",
+    borderStyle: "solid",
+    borderRadius: "borderRadiusNone",
     borderColor: "ThemeColor",
     padding: "PaddingWrapper",
   })
@@ -88,9 +88,9 @@ export const CardWrapper = styled.div(
   css({
     textAlign: "center",
     padding: "CardBasicPadding",
-    borderWidth:'1px',
+    borderWidth: "1px",
     borderStyle: "solid",
-    borderRadius:'borderRadiusNo',
+    borderRadius: "borderRadiusNo",
     borderColor: "CardBorderColor",
   })
 );
@@ -98,7 +98,7 @@ export const IconeWrapper = styled.div(
   css({
     textAlign: "center",
     padding: "CardBasicPadding",
-    borderWidth:'borderWidth',
+    borderWidth: "borderWidth",
     borderStyle: "solid",
     borderColor: "CardBorderColor",
   })
@@ -108,8 +108,8 @@ export const ShadowWrapper = styled.div(
   css({
     textAlign: "center",
     padding: "globalSpace",
-    borderWidth: '1px',
-    borderStyle: 'solid',
+    borderWidth: "1px",
+    borderStyle: "solid",
     borderColor: "grayDark",
     boxShadow: "5px 10px",
     color: "ThemeColor",

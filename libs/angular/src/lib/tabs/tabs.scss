@@ -59,9 +59,5 @@
   pointer-events: none;
 }
 .fds-disabled,
-.fds-component:disabled {
-  opacity: 0.5;
-}
-.fds--tabview--panel {
-  padding: 10px;
-}
+.fds-component:disabled { opacity: 0.5; }
+.fds--tabview--panel { padding: 10px; }
