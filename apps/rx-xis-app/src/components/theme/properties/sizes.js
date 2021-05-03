@@ -40,5 +40,7 @@ export const sizes = {
   size_6_25rem: '6.25rem', // 37
   size_5_375rem: '5.375rem', //38
   size_3_125rem: '3.125rem', // 39
-  size_45_75rem: '45.75rem' //40
+  size_45_75rem: '45.75rem', //40
+  container_max_width: '1140px',//
+  container_min_width: '960px'//
 };

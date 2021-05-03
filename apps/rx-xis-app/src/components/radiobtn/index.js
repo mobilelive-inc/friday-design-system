@@ -6,7 +6,7 @@ import "./style.css";
 import GlobalStyle from "../theme/globalStyles";
 import PropTypes from 'prop-types';
 import Text from "../typography";
-import { Wrapper, ButtonWrapper, InlineWrapper, MainWrapper } from "./css.js";
+import { Section,Wrapper, ButtonWrapper, InlineWrapper, MainWrapper } from "./css.js";
 
 const Basicbtn = ({ value }) => {
   const [fruit, setfruit] = useState(fruit);
@@ -118,6 +118,7 @@ const RadioBtn = () => {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
+      <Section>
       <Text variant="H1" mb={32}>
         Radio Button
       </Text>
@@ -135,6 +136,7 @@ const RadioBtn = () => {
         </Text>
         <InlineButton />
       </MainWrapper>
+      </Section>
     </ThemeProvider>
   );
 };
