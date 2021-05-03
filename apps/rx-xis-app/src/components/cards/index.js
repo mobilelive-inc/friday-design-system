@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import CardTheme from "./../theme/styles/card";
 import Theme from "../theme/defaultTheme";
 import {
+  Section,
   Wrapper,
   Figure,
   Image,
@@ -13,6 +14,7 @@ import {
   CardWrapper,
   ShadowWrapper,
   IconeWrapper,
+  Col,
 } from "./css";
 import Text from "../../components/typography";
 import GlobalStyle from "../theme/globalStyles";
@@ -66,21 +68,21 @@ const WithImageCard = ({ title, cardimage, subheading, heading }) => {
     </ThemeProvider>
   );
 };
-const FixCard = ({ title, subheading, imagetitle }) => {
+const FixCard = ({ title, subheading, imagetitle,color }) => {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
-      <Text variant="H5" m={7}>
+      <Text variant="H5" p={16}>
         {title}
       </Text>
       <IconeWrapper>
         <Icon
           className="icon-DesignThinking"
-          style={{ fontWeight: 400, fontSize: "4rem", paddingTop: "1rem" }}
+          style={{ fontWeight: 400, fontSize: "4rem", paddingTop: "1.5rem" }}
         />
         <Text py={16}>{imagetitle}</Text>
         <Text variant="H6" pb={16} px={10}>{subheading}</Text>
-        <Button variant="outlinePrimary" width="auto" m={10}>
+        <Button variant={color} width="auto" m={16}>
           {" "}
           Lorem Ipsum{" "}
         </Button>
@@ -92,11 +94,12 @@ const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
   return (
     <>
       <ThemeProvider theme={CardTheme}>
-        <Text variant="H5" m={7}>
+        <GlobalStyle />
+        <Text variant="H5" p={16}>
           {title}
         </Text>
         <CardWrapper>
-          <Text variant="H3" mt={7}>
+          <Text variant="H3" mt={16}>
             {imagetitle}
           </Text>
           <Span
@@ -109,7 +112,7 @@ const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
               margin: "2rem",
             }}
           />
-          <Text variant="H4" mb={14}>
+          <Text variant="H4" mb={16}>
             {heading}
           </Text>
           <Text variant="H6" mb={16}>
@@ -120,11 +123,11 @@ const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
     </>
   );
 };
-const WithImageSlideShadow = ({ title, cardimage }) => {
+const WithImageSlideShadow = ({ title, cardimage,color }) => {
   return (
     <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
-      <Text variant="H5" m={7}>
+      <Text variant="H5" p={16}>
         {title}
       </Text>
       <ShadowWrapper>
@@ -138,7 +141,7 @@ const WithImageSlideShadow = ({ title, cardimage }) => {
           eiusmod tempor incididunt, consectetur adipiscing elit, sed do eiusmod
           tempor, sed do eiusmod tempor.{" "}
         </p>
-        <Button variant="outlinePrimary" width="auto" m={10}>
+        <Button variant={color} width="auto" m={10}>
           {" "}
           Lorem Ipsum{" "}
         </Button>
@@ -150,35 +153,68 @@ const Cards = () => {
   return (
     <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
+      <Section>
       <Text variant="H1" mb={32} ml={8}>
         Cards
       </Text>
       <Wrapper>
-        <Cart title="Default" cardimage={CardImg} />
-        <BoxShadow>
-          <Cart title="Box Shadow" cardimage={CardImg} box />
-        </BoxShadow>
+        <Col>
+         <Cart title="Default" cardimage={CardImg} />
+        </Col>
+        <Col>
+          <BoxShadow>
+            <Cart title="Box Shadow" cardimage={CardImg} box />
+          </BoxShadow>
+        </Col>
+        <Col>
         <ShadowCart title="Solid Shadow" cardimage={CardImg} />
+        </Col>
+        <Col>
         <WithImageCard
           title="With Image"
           cardimage={CardImg}
           heading="Lorem ipsum dolor"
           subheading='"Lorem ipsum dolor sit amet, consectetur adipiscing elit"'
         />
+        </Col>
+        <Col>
         <FixCard
-          width={40}
           title="Icon with Fixed Height"
           imagetitle="Lorem Ipsum"
-          subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt."
+          subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt., conssectetur adisping dlit, sed do eiusmid tempor indidunt , conssectetur adisping dlit, sed do eiusmid tempor indidunt"
+          color='outlinePrimary'
         />
+        </Col>
+        <Col>
+        <FixCard
+          title="Icon with Fixed Height"
+          imagetitle="Lorem Ipsum"
+          subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt., conssectetur adisping dlit, sed do eiusmid tempor indidunt , conssectetur adisping dlit, sed do eiusmid tempor indidunt"
+          color='outlineSecondary'
+       />
+        </Col>
+        <Col>
+        <WithImageSlideShadow 
+        title="With Image and Solid Shadow"
+        color='outlinePrimary'
+        />
+        </Col>
+        <Col>
         <WithoutIcone
           title="Without Icon"
           imagetitle="Lorem Ipsum"
           heading="dolor sit amet"
-          subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt."
+          subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt."
         />
-        <WithImageSlideShadow title="With Image and Solid Shadow"></WithImageSlideShadow>
+        </Col>
+        <Col>
+        <WithImageSlideShadow
+         title="With Image and Solid Shadow"
+         color='outlineSecondary'
+         />
+        </Col>
       </Wrapper>
+      </Section>
     </ThemeProvider>
   );
 }; 

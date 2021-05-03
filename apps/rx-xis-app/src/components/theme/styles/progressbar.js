@@ -4,6 +4,8 @@ import { _space } from "../properties/space";
 import { _radii } from "../properties/radius";
 import { _borderWidths } from "../properties/borderWidths";
 import { _sizes } from "../properties/sizes";
+import { buttons, borderCurved, borderRounded } from '../variants/buttons';
+
 //progressbar styles
 export const radii = {
   ProgressRadiusRounded: 0,
@@ -13,6 +15,8 @@ export const sizes = {
   ProgressbarHeight:'24px',
   ProgressbarWidth: _sizes.size_15pc,
   ProgressbarValue: _sizes.size_100pc,
+  container_max_width: '1140px',
+  container_min_width: '960px',
 };
 export const space = {
   BeforeTopValue: "20px",
@@ -41,4 +45,7 @@ export default {
   space,
   radii,
   sizes,
+  buttons,
+  borderCurved,
+  borderRounded
 };

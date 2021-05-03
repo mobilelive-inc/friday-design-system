@@ -1,11 +1,28 @@
 import styled from "styled-components";
 import css from "@styled-system/css";
 
+export const Section = styled.section(
+  css({
+    maxWidth:`container_max_width`,
+    minWidth:`container_min_width`,
+    margin:'0 auto',
+  })
+);
+
+export const Col = styled.div(
+  css({
+    flex:'0 0 30%',
+    margin:'5px',
+  })
+)
 export const Wrapper = styled.div(
   css({
     display: `flex`,
     justifyContent: `center`,
     flexDirection: `column`,
+    display:'flex',
+    flexFlow:'row wrap',
+    alignContent:'flex-start',
     borderWidth: 'borderWidth4',
     borderStyle: 'solid',
     borderRadius:'borderRadiusNo',
@@ -75,7 +92,6 @@ export const CardWrapper = styled.div(
     borderStyle: "solid",
     borderRadius:'borderRadiusNo',
     borderColor: "CardBorderColor",
-    width: "CardIconewidth",
   })
 );
 export const IconeWrapper = styled.div(
@@ -85,7 +101,6 @@ export const IconeWrapper = styled.div(
     borderWidth:'borderWidth',
     borderStyle: "solid",
     borderColor: "CardBorderColor",
-    width: "40%",
   })
 );
 
@@ -96,7 +111,6 @@ export const ShadowWrapper = styled.div(
     borderWidth: '1px',
     borderStyle: 'solid',
     borderColor: "grayDark",
-    width: "CardShadowWidth",
     boxShadow: "5px 10px",
     color: "ThemeColor",
   })

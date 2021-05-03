@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import Theme from "../theme/defaultTheme";
-import { Wrapper, Progresbar, Value, ButtonContainer } from "./css";
+import { Wrapper, Progresbar, Value, ButtonContainer,Section } from "./css";
 import Text from "../typography";
 import GlobalStyle from "../theme/globalStyles";
 import progressbarTheme from "./../theme/styles/progressbar";
@@ -28,6 +28,7 @@ const Progress = () => {
   return (
     <ThemeProvider theme={progressbarTheme}>
       <GlobalStyle />
+      <Section>
       <Text variant="H2" mb="PbMargin">
         Progress
       </Text>
@@ -49,19 +50,20 @@ const Progress = () => {
         <ButtonContainer>
           <Button
             variant="secondary"
-            width="7%"
+            width="7"
             m={0}
             onClick={handleDecrement}
           >
             {" "}
             Prev{" "}
           </Button>
-          <Button variant="primary" width="7%" m={7} onClick={handleIncrement}>
+          <Button variant="primary" width="7" m={7} onClick={handleIncrement}>
             {" "}
             Next{" "}
           </Button>
         </ButtonContainer>
       </Wrapper>
+      </Section>
     </ThemeProvider>
   );
 };

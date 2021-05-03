@@ -4,7 +4,8 @@ import { _space } from "../properties/space";
 import { _radii } from "../properties/radius";
 import { _borderWidths } from "../properties/borderWidths";
 import { _sizes } from "../properties/sizes";
-import Button from '../../Button'
+import { buttons, borderCurved, borderRounded } from '../variants/buttons';
+
 export const colors = {
   CardColor: "#282828",
   DividerColor: "#121212",
@@ -51,6 +52,8 @@ export const sizes = {
   CardIconewidth: _sizes.size_45_75rem,
   CardShadowWidth: _sizes.size_65pc,
   IconeCardWidth: _sizes.size_40pc,
+  container_max_width: '1140px',
+  container_min_width: '960px',
 };
 
 export const borderWidths = {
@@ -63,5 +66,7 @@ export default {
   radii,
   borderWidths,
   sizes,
-  Button
+  buttons,
+  borderCurved,
+  borderRounded
 };
