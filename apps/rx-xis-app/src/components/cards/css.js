@@ -22,12 +22,22 @@ export const Pwrapper = styled.div(
     padding: "PaddingWrapper",
   })
 );
-export const Figuare = styled.figure(
+export const Figure = styled.figure(
   css({
     display: "block",
     margin: 0,
     border: "CardFiguareBorder",
     borderColor: "CardBorderColor",
+  })
+);
+export const ShadowFigure = styled.figure(
+  css({
+    display: "block",
+    margin: 0,
+    border: "CardFiguareBorder",
+    borderColor: "CardBorderColor",
+    boxShadow: "5px 10px",
+    color: "ThemeColor",
   })
 );
 

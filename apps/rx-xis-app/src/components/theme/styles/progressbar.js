@@ -9,7 +9,8 @@ export const radii = {
   ProgressRadiusRounded: 0,
 };
 export const sizes = {
-  ProgressbarHeight: _sizes.sizes_1rem,
+  // ProgressbarHeight: _sizes.sizes_1rem,
+  ProgressbarHeight:'24px',
   ProgressbarWidth: _sizes.size_15pc,
   ProgressbarValue: _sizes.size_100pc,
 };

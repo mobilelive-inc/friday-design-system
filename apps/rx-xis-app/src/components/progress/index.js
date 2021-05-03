@@ -31,7 +31,7 @@ const Progress = () => {
       <Text variant="H2" mb="PbMargin">
         Progress
       </Text>
-      <Wrapper>
+      <Wrapper px={15}>
         <Progresbar
           role="progressbar"
           aria-valuenow={progress}
@@ -98,6 +98,38 @@ Progress.propTypes = {
   handleDecrement: PropTypes.func,
   /** onclick handleIncrement incress 1 value from current value */
   handleIncrement: PropTypes.func,
+  /** For add padding to main component */
+  p: PropTypes.number,
+  /** For add top padding to main component */
+  pt: PropTypes.number,
+  /** For add bottom padding to main component */
+  pb: PropTypes.number,
+  /** For add left padding to main component */
+  pl: PropTypes.number,
+  /** For add right padding to main component */
+  pr: PropTypes.number,
+  /** For add left & right padding to main component */
+  px: PropTypes.number,
+  /** For add top & bottom padding to main component */
+  py: PropTypes.number,
+  /** For add margin to main component */
+  m: PropTypes.number,
+  /** For add top margin to main component */
+  mt: PropTypes.number,
+  /** For add bottom margin to main component */
+  mb: PropTypes.number,
+  /** For add left margin to main component */
+  ml: PropTypes.number,
+  /** For add right margin to main component */
+  mr: PropTypes.number,
+  /** For add left & right margin to main component */
+  mx: PropTypes.number,
+  /** For add top & bottom margin to main component */
+  my: PropTypes.number,
+  /** For giving width to main component */
+  width: PropTypes.number,
+  /** For giving height to main component */
+  height: PropTypes.number
 };
 
 export default Progress;

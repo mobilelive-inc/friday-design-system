@@ -4,10 +4,10 @@ import CardTheme from "./../theme/styles/card";
 import Theme from "../theme/defaultTheme";
 import {
   Wrapper,
-  Figuare,
+  Figure,
   Image,
   BoxShadow,
-  SolidShadow,
+  ShadowFigure,
   Pwrapper,
   TextWrapper,
   CardWrapper,
@@ -28,9 +28,21 @@ const Cart = ({ title, cardimage }) => {
       <Text variant="H5" my={16}>
         {title}
       </Text>
-      <Figuare>
+      <Figure>
         <Image src={cardimage} alt={title} />
-      </Figuare>
+      </Figure>
+    </ThemeProvider>
+  );
+};
+const ShadowCart = ({ title, cardimage }) => {
+  return (
+    <ThemeProvider theme={CardTheme}>
+      <Text variant="H5" my={16}>
+        {title}
+      </Text>
+      <ShadowFigure>
+        <Image src={cardimage} alt={title} />
+      </ShadowFigure>
     </ThemeProvider>
   );
 };
@@ -41,11 +53,11 @@ const WithImageCard = ({ title, cardimage, subheading, heading }) => {
         {title}
       </Text>
       <Pwrapper>
-        <Figuare>
+        <Figure>
           <Image src={cardimage} alt={title} />
-        </Figuare>
+        </Figure>
         <TextWrapper>
-          <Text variant="h4" m="spacerMid">
+          <Text variant="h4" p={16}>
             {heading}
           </Text>
           <Text variant="H6">{subheading}</Text>
@@ -57,6 +69,7 @@ const WithImageCard = ({ title, cardimage, subheading, heading }) => {
 const FixCard = ({ title, subheading, imagetitle }) => {
   return (
     <ThemeProvider theme={Theme}>
+      <GlobalStyle />
       <Text variant="H5" m={7}>
         {title}
       </Text>
@@ -65,8 +78,8 @@ const FixCard = ({ title, subheading, imagetitle }) => {
           className="icon-DesignThinking"
           style={{ fontWeight: 400, fontSize: "4rem", paddingTop: "1rem" }}
         />
-        <Text>{imagetitle}</Text>
-        <Text variant="H6">{subheading}</Text>
+        <Text py={16}>{imagetitle}</Text>
+        <Text variant="H6" pb={16} px={10}>{subheading}</Text>
         <Button variant="outlinePrimary" width="auto" m={10}>
           {" "}
           Lorem Ipsum{" "}
@@ -89,18 +102,17 @@ const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
           <Span
             style={{
               color: "#000",
-              width: "95%",
+              width: "90%",
               height: "2px",
               backgroundColor: "#666",
               textAlign: "center",
               margin: "2rem",
-              // marginBottom: "1rem",
             }}
           />
-          <Text variant="H4" m={7}>
+          <Text variant="H4" mb={14}>
             {heading}
           </Text>
-          <Text variant="H6" mb={7}>
+          <Text variant="H6" mb={16}>
             {subheading}
           </Text>
         </CardWrapper>
@@ -111,6 +123,7 @@ const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
 const WithImageSlideShadow = ({ title, cardimage }) => {
   return (
     <ThemeProvider theme={CardTheme}>
+      <GlobalStyle />
       <Text variant="H5" m={7}>
         {title}
       </Text>
@@ -119,7 +132,7 @@ const WithImageSlideShadow = ({ title, cardimage }) => {
           className="icon-home"
           style={{ fontWeight: 400, fontSize: "8rem", color: "#46BC9C" }}
         />
-        <p style={{ color: "black" }}>
+        <p style={{ color: "black", paddingLeft:'16px', paddingRight:'16px' }}>
           {" "}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt, consectetur adipiscing elit, sed do eiusmod
@@ -145,9 +158,7 @@ const Cards = () => {
         <BoxShadow>
           <Cart title="Box Shadow" cardimage={CardImg} box />
         </BoxShadow>
-        <SolidShadow>
-          <Cart title="Solid Shadow" cardimage={CardImg} />
-        </SolidShadow>
+        <ShadowCart title="Solid Shadow" cardimage={CardImg} />
         <WithImageCard
           title="With Image"
           cardimage={CardImg}
@@ -170,7 +181,7 @@ const Cards = () => {
       </Wrapper>
     </ThemeProvider>
   );
-};
+}; 
 
 Cards.propTypes = {
   /** Allows to nest any components inside <Cards> component. This is the place where to < WithImageCard >, < FixCard>, < WithoutIcone>, < WithImageSlideShadow>.*/
@@ -187,6 +198,38 @@ Cards.propTypes = {
   heading: PropTypes.string,
   /** Global style to set the golbal color fontSize height width etc*/
   GlobalStyle: PropTypes.string,
+  /** For add padding to main component */
+  p: PropTypes.number,
+  /** For add top padding to main component */
+  pt: PropTypes.number,
+  /** For add bottom padding to main component */
+  pb: PropTypes.number,
+  /** For add left padding to main component */
+  pl: PropTypes.number,
+  /** For add right padding to main component */
+  pr: PropTypes.number,
+  /** For add left & right padding to main component */
+  px: PropTypes.number,
+  /** For add top & bottom padding to main component */
+  py: PropTypes.number,
+  /** For add margin to main component */
+  m: PropTypes.number,
+  /** For add top margin to main component */
+  mt: PropTypes.number,
+  /** For add bottom margin to main component */
+  mb: PropTypes.number,
+  /** For add left margin to main component */
+  ml: PropTypes.number,
+  /** For add right margin to main component */
+  mr: PropTypes.number,
+  /** For add left & right margin to main component */
+  mx: PropTypes.number,
+  /** For add top & bottom margin to main component */
+  my: PropTypes.number,
+  /** For giving width to main component */
+  width: PropTypes.number,
+  /** For giving height to main component */
+  height: PropTypes.number
 };
 
 export default Cards;

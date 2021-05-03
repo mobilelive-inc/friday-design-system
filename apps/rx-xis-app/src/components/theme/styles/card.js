@@ -4,7 +4,7 @@ import { _space } from "../properties/space";
 import { _radii } from "../properties/radius";
 import { _borderWidths } from "../properties/borderWidths";
 import { _sizes } from "../properties/sizes";
-import { BoxShadow } from "../../cards/css";
+import Button from '../../Button'
 export const colors = {
   CardColor: "#282828",
   DividerColor: "#121212",
@@ -63,4 +63,5 @@ export default {
   radii,
   borderWidths,
   sizes,
+  Button
 };

@@ -18,7 +18,7 @@ export const Progresbar = styled("div")(
   css({
     backgroundColor: "BgProgressbar",
     height: "ProgressbarHeight",
-    width: "ProgressbarWidth",
+    width: "100%",
     position: "relative",
     boxShadow: "0 2px 3px rgba(0, 0, 0, 0.5) inset",
   })
@@ -35,6 +35,6 @@ export const Value = styled.span(
 
 export const ButtonContainer = styled("div")(
   css({
-    // paddingTop: 'space_1x_big'
+    textAlign:'center'
   })
 );
