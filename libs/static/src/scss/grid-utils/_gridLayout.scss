@@ -1,4 +1,4 @@
-@import '../../../theme/breakpoint';
+@import 'grid-utils-settings/breakpoint';
 
 @include _assert-ascending($container-max-widths, '$container-max-widths');
 
@@ -98,14 +98,14 @@
     @if $columns > 0 {
       // Allow columns to stretch full width below their breakpoints
       @for $i from 1 through $columns {
-        .col#{$infix}-#{$i} {
+        .col#{$infix}--#{$i} {
           @extend %grid-column;
         }
       }
     }
 
     .col#{$infix},
-    .col#{$infix}-auto {
+    .col#{$infix}--auto {
       @extend %grid-column;
     }
 
@@ -120,34 +120,34 @@
 
       @if $grid-row-columns > 0 {
         @for $i from 1 through $grid-row-columns {
-          .row-cols#{$infix}-#{$i} {
+          .row-cols#{$infix}--#{$i} {
             @include row-cols($i);
           }
         }
       }
 
-      .col#{$infix}-auto {
+      .col#{$infix}--auto {
         @include make-col-auto();
       }
 
       @if $columns > 0 {
         @for $i from 1 through $columns {
-          .col#{$infix}-#{$i} {
+          .col#{$infix}--#{$i} {
             @include make-col($i, $columns);
           }
         }
       }
 
-      .order#{$infix}-first {
+      .order#{$infix}--first {
         order: -1;
       }
 
-      .order#{$infix}-last {
+      .order#{$infix}--last {
         order: $columns + 1;
       }
 
       @for $i from 0 through $columns {
-        .order#{$infix}-#{$i} {
+        .order#{$infix}--#{$i} {
           order: $i;
         }
       }
@@ -157,7 +157,7 @@
         @for $i from 0 through ($columns - 1) {
           @if not($infix == '' and $i == 0) {
             // Avoid emitting useless .offset-0
-            .offset#{$infix}-#{$i} {
+            .offset#{$infix}--#{$i} {
               @include make-col-offset($i, $columns);
             }
           }

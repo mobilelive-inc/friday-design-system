@@ -5,9 +5,9 @@
 @import 'settings/typography';
 @import 'settings/spacing';
 @import 'settings/forms';
-@import 'settings/breakpoint';
-@import 'settings/gridLayout';
-@import 'settings/utilities';
+@import 'grid-utils/breakpoint';
+@import 'grid-utils/gridLayout';
+@import 'grid-utils/utilities';
 @import 'settings/images';
 @import 'generic/root';
 @import 'generic/base';
@@ -28,9 +28,9 @@
 
 //utilities
 
-@import 'utilitis/display';
+@import 'grid-utils/display';
 @import 'utilitis/align';
-@import 'utilitis/spacing';
+@import 'grid-utils/spacing';
 @import 'utilitis/background';
 @import 'utilitis/borders';
 @import 'utilitis/code';
@@ -45,8 +45,11 @@
 @import 'utilitis/stretched-link';
 @import 'utilitis/text';
 @import 'utilitis/visibility';
+@import 'grid-utils/flex';
+@import 'grid-utils/float';
 
 //Tools
 @import 'tools/tool.shadows';
 @import 'tools/tool.clearfix';
 @import 'tools/tool.vendor-prefixes';
+@import 'grid-utils/tool.grid';

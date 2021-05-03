@@ -15,13 +15,13 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     .float#{$infix}--left {
-      float: left;
+      float: left !important;
     }
     .float#{$infix}--right {
-      float: right;
+      float: right !important;
     }
     .float#{$infix}--none {
-      float: none;
+      float: none !important;
     }
   }
 }

@@ -1,8 +1,7 @@
 // Container widths
 //
 // Set the container width, and override it for fixed navbars in media queries.
-
-@import '../../../theme/breakpoint';
+@import 'grid-utils-settings/breakpoint';
 
 @if $enable-grid-classes {
   // Single container class with breakpoint max-widths
@@ -12,14 +11,14 @@
   }
 
   // 100% wide container at all breakpoints
-  .container-fluid {
+  .container--fluid {
     @include make-container();
   }
 
   // Responsive containers that are 100% wide until a breakpoint
   @each $breakpoint, $container-max-width in $container-max-widths {
-    .container-#{$breakpoint} {
-      @extend .container-fluid;
+    .container--#{$breakpoint} {
+      @extend .container--fluid;
     }
 
     @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
@@ -57,7 +56,7 @@
 
   // Remove the negative margin from default .row, then the horizontal padding
   // from all immediate children columns (to prevent runaway style inheritance).
-  .no-gutters {
+  .no--gutters {
     margin-right: 0;
     margin-left: 0;
 

@@ -1,10 +1,6 @@
-// stylelint-disable declaration-no-important
-
-//
 // Utilities for common `display` values
 //
-
-@import '../../../theme/breakpoint';
+@import 'grid-utils-settings/breakpoint';
 
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
   @return if(breakpoint-min($name, $breakpoints) == null, '', '--#{$name}');
