@@ -4,24 +4,30 @@ import { Theme } from "..";
 import Radio from "../radio";
 import "./style.css";
 import GlobalStyle from "../theme/globalStyles";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import Text from "../typography";
-import { Section,Wrapper, ButtonWrapper, InlineWrapper, MainWrapper } from "./css.js";
+import {
+  Section,
+  Wrapper,
+  ButtonWrapper,
+  InlineWrapper,
+  MainWrapper,
+} from "./css.js";
 
 const Basicbtn = ({ value }) => {
   const [fruit, setfruit] = useState(fruit);
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
-      <ButtonWrapper 
-        role="radiogroup" 
+      <ButtonWrapper
+        role="radiogroup"
         aria-labelledby="example-radio-group-label-1"
-        >
+      >
         <Text mb={10} mr={32}>
           pic your favorite fruit : {value}
         </Text>
         <Radio
-          tabIndex='0'
+          tabIndex="0"
           name="apple"
           value="apple"
           label="Apple"
@@ -34,7 +40,7 @@ const Basicbtn = ({ value }) => {
           }}
         />
         <Radio
-          tabIndex='0'
+          tabIndex="0"
           name="mango"
           value="mango"
           label="Mango"
@@ -47,7 +53,7 @@ const Basicbtn = ({ value }) => {
           }}
         />
         <Radio
-          tabIndex='0'
+          tabIndex="0"
           name="orange"
           value="orange"
           label="Orange"
@@ -59,7 +65,9 @@ const Basicbtn = ({ value }) => {
             setfruit("orange");
           }}
         />
-        <Text color="primary" mb={32}>your favriote : {fruit}</Text>
+        <Text color="primary" mb={32}>
+          your favriote : {fruit}
+        </Text>
       </ButtonWrapper>
     </ThemeProvider>
   );
@@ -119,32 +127,32 @@ const RadioBtn = () => {
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
       <Section>
-      <Text variant="H1" mb={32}>
-        Radio Button
-      </Text>
-      <MainWrapper>
-        <Text variant="H3" mb={10}>
-          Basic
+        <Text variant="H1" mb={32}>
+          Radio Button
         </Text>
-        <Wrapper>
-          <Basicbtn value="value" />
-          <Basicbtn value="ng Modal" />
-          <Basicbtn value="Reactive Froms" />
-        </Wrapper>
-        <Text variant="H3" my={10}>
-          Inline
-        </Text>
-        <InlineButton />
-      </MainWrapper>
+        <MainWrapper>
+          <Text variant="H3" mb={10}>
+            Basic
+          </Text>
+          <Wrapper>
+            <Basicbtn value="value" />
+            <Basicbtn value="ng Modal" />
+            <Basicbtn value="Reactive Froms" />
+          </Wrapper>
+          <Text variant="H3" my={10}>
+            Inline
+          </Text>
+          <InlineButton />
+        </MainWrapper>
       </Section>
     </ThemeProvider>
   );
 };
 RadioBtn.propTypes = {
-   /** Text for Button could be string or node. */
-   children: PropTypes.oneOfType([
+  /** Text for Button could be string or node. */
+  children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
+    PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
   /**
    * The label.
@@ -161,7 +169,7 @@ RadioBtn.propTypes = {
   /**
    * The variant state
    */
-  variant: PropTypes.oneOf(['unchecked', 'checked', 'disabled']),
+  variant: PropTypes.oneOf(["unchecked", "checked", "disabled"]),
   /**
    * A callback function to be invoked when the checkbox is checked or unchecked.
    */
@@ -172,18 +180,16 @@ RadioBtn.propTypes = {
   color: PropTypes.string,
   /** It is a validation's error message */
   error: PropTypes.bool,
-  borderType: PropTypes.oneOf(['curved', 'rounded']),
+  borderType: PropTypes.oneOf(["curved", "rounded"]),
   className: PropTypes.string,
-  borderType: PropTypes.oneOf(['curved', 'rounded']),
-
+  borderType: PropTypes.oneOf(["curved", "rounded"]),
 };
 
 RadioBtn.defaultProps = {
-  variant: 'unchecked',
+  variant: "unchecked",
   onChange: () => {},
   error: false,
   disabled: false,
-
 };
 
 export default RadioBtn;

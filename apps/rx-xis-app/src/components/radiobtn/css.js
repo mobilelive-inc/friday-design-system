@@ -2,9 +2,9 @@ import styled from "styled-components";
 import css from "@styled-system/css";
 export const Section = styled.section(
   css({
-    maxWidth:`container_max_width`,
-    minWidth:`container_min_width`,
-    margin:'0 auto',
+    maxWidth: `container_max_width`,
+    minWidth: `container_min_width`,
+    margin: "0 auto",
   })
 );
 
@@ -13,18 +13,18 @@ export const Wrapper = styled.div(
     display: `flex`,
     flexFlow: `row`,
     flexDirection: `row`,
-    justifyContent:'space-between',
+    justifyContent: "space-between",
   })
 );
 export const MainWrapper = styled.div(
   css({
-    borderWidth:'borderWidth4',
-    borderStyle:'solid',
+    borderWidth: "borderWidth4",
+    borderStyle: "solid",
     borderColor: "primaryLighter",
-    borderRadius:'borderRadiusNone',
+    borderRadius: "borderRadiusNone",
     paddingY: "spacerMid",
     marginBottom: "spacerMid",
-    paddingX:'spacerMid'
+    paddingX: "spacerMid",
   })
 );
 export const ButtonWrapper = styled.div(
