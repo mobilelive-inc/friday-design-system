@@ -1,6 +1,6 @@
 // Utilities for common `display` values
 //
-@import 'grid-utils-settings/breakpoint';
+@import 'grid-utils-settings/breakpoint-vals';
 
 @function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
   @return if(breakpoint-min($name, $breakpoints) == null, '', '--#{$name}');

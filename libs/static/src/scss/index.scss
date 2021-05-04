@@ -3,9 +3,10 @@
 @import 'settings/colors';
 @import 'settings/borders';
 @import 'settings/typography';
-@import 'settings/spacing';
-@import 'settings/forms';
+@import 'grid-utils/grid-utils-settings/breakpoint-vals'; 
+@import 'grid-utils/grid-utils-settings/spacing-vals';
 @import 'grid-utils/breakpoint';
+@import 'settings/forms';
 @import 'grid-utils/gridLayout';
 @import 'grid-utils/utilities';
 @import 'settings/images';

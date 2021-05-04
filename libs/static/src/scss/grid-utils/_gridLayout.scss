@@ -1,4 +1,4 @@
-@import 'grid-utils-settings/breakpoint';
+@import 'grid-utils-settings/breakpoint-vals';
 
 @include _assert-ascending($container-max-widths, '$container-max-widths');
 
