@@ -10,6 +10,7 @@ import { sizes } from './properties/sizes';
 import { radii, radius } from './properties/radius';
 import { zIndices } from './properties/zIndices';
 import { typography } from './properties/typography';
+import { stepper, stepperWrapper } from './variants/stepper';
 import { buttons, borderCurved, borderRounded } from './variants/buttons';
 import { accordions } from './variants/accordions';
 import {
@@ -92,5 +93,8 @@ export default {
   small,
   mid,
   large,
-  xLarge
+  xLarge,
+  stepper,
+  stepperWrapper,
+  accordions
 };

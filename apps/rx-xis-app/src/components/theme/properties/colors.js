@@ -51,8 +51,8 @@ const basicColors = {
   redDark: '#b02a37',
   green: '#34a84d',
   greenDark: '#2f9745',
-  greenDarker: '#247636',
-}
+  greenDarker: '#247636'
+};
 
 export const colors = {
   //FDS Social Button Colors and Hover Colors
@@ -132,7 +132,7 @@ export const colors = {
   red: '#DF4B4B',
   yellow: '#ffc107',
   green: '#34A84D',
-  teal: '#20c997',
+  teal: '#20c997'
 };
 
 export const _colors = colors;

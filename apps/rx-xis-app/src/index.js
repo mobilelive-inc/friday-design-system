@@ -25,6 +25,7 @@ import {
 import { OtherSpecs } from './../stories/typography.stories';
 // import Button from '../../../build';
 import { Text } from './components/typography';
+import Stepper from './components/stepper';
 import Span from './components/span/span';
 import Icon from './components/icon/Icon';
 import Input from './components/Input';
@@ -114,6 +115,9 @@ function App() {
         <Text mb={30} underline italic>
           Testing
         </Text>
+        <Flex mt={5} mb={100}>
+          <Stepper variant="primary" value={5} total={10} />
+        </Flex>
         <Flex mt={5} mb={100}>
           <Button
             variant="outlineGoogleBlue"

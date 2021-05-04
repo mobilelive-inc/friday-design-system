@@ -45,14 +45,7 @@ export const OpenedAccordion = () => (
       Opened Accordion
     </Text>
 
-    <Accordion
-      onExpand={() => {
-        console.log('Open');
-      }}
-      onCollapse={() => {
-        console.log('Closed');
-      }}
-      isVisible={true}>
+    <Accordion onExpand={() => {}} onCollapse={() => {}} isVisible={true}>
       <AccordionHeader title="Expanded" />
       <AccordionCollapse>
         <div>This is story</div>
@@ -69,25 +62,19 @@ export const BasicAccordion = () => (
     </Text>
 
     <AccordionContainer hasMultiple={false}>
-      <Accordion
-        onExpand={() => console.log('Opened')}
-        onCollapse={() => console.log('Closed')}>
+      <Accordion onExpand={() => {}} onCollapse={() => {}}>
         <AccordionHeader title={'Heading'}></AccordionHeader>
         <AccordionCollapse>
           <div>This is the for testing purpose</div>
         </AccordionCollapse>
       </Accordion>
-      <Accordion
-        onExpand={() => console.log('Opened')}
-        onCollapse={() => console.log('Closed')}>
+      <Accordion onExpand={() => {}} onCollapse={() => {}}>
         <AccordionHeader title={'Heading'}></AccordionHeader>
         <AccordionCollapse>
           <div>This is the for testing purpose</div>
         </AccordionCollapse>
       </Accordion>
-      <Accordion
-        onExpand={() => console.log('Opened')}
-        onCollapse={() => console.log('Closed')}>
+      <Accordion onExpand={() => {}} onCollapse={() => {}}>
         <AccordionHeader title={'Heading'}></AccordionHeader>
         <AccordionCollapse>
           <div>This is the for testing purpose</div>
@@ -105,25 +92,19 @@ export const MultipleAccordion = () => (
     </Text>
 
     <AccordionContainer hasMultiple={true}>
-      <Accordion
-        onExpand={() => console.log('Opened')}
-        onCollapse={() => console.log('Closed')}>
+      <Accordion onExpand={() => {}} onCollapse={() => {}}>
         <AccordionHeader title={'Heading'}></AccordionHeader>
         <AccordionCollapse>
           <div>This is the for testing purpose</div>
         </AccordionCollapse>
       </Accordion>
-      <Accordion
-        onExpand={() => console.log('Opened')}
-        onCollapse={() => console.log('Closed')}>
+      <Accordion onExpand={() => {}} onCollapse={() => {}}>
         <AccordionHeader title={'Heading'}></AccordionHeader>
         <AccordionCollapse>
           <div>This is the for testing purpose</div>
         </AccordionCollapse>
       </Accordion>
-      <Accordion
-        onExpand={() => console.log('Opened')}
-        onCollapse={() => console.log('Closed')}>
+      <Accordion onExpand={() => {}} onCollapse={() => {}}>
         <AccordionHeader title={'Heading'}></AccordionHeader>
         <AccordionCollapse>
           <div>This is the for testing purpose</div>

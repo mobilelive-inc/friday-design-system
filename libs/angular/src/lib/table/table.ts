@@ -225,9 +225,8 @@ export class Table
     public el: ElementRef,
     public zone: NgZone,
     public tableService: TableService,
-    public cd: ChangeDetectorRef
-  ) // public filterService: FilterService
-  {}
+    public cd: ChangeDetectorRef // public filterService: FilterService
+  ) {}
 
   ngOnInit() {
     if (this.lazy && this.lazyLoadOnInit) {
