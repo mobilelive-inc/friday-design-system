@@ -1,9 +1,9 @@
-@import '../../theme/cssVariable-values';
+@import 'themes/cssVariable-values';
 
 $enable-grid-classes: true;
 
 // Set the number of columns
-$grid-columns :12;
+$grid-columns: 12;
 
 // Set the inner columns inside row
 $grid-row-columns: 6;
@@ -338,7 +338,6 @@ $global-spacers: (
 // any value of `$grid-columns`.
 
 @mixin make-grid-columns(
-
   $columns: $grid-columns,
   $breakpoints: $grid-breakpoints
 ) {
