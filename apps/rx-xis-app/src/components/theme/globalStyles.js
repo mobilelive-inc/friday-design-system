@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import MediaQuery from '../../utils/mediaQuery';
-import { colors } from './colors';
+import { colors } from './properties/colors';
 
 // add style from reset here
 
