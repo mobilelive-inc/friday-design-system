@@ -6,7 +6,7 @@ import map from 'lodash/map';
   selector: 'demo-checkbox-multiple',
   template: `
     <div class="row">
-      <div class="col-4">
+      <div class="col--4">
         <label id="example-radio-group-label-3">
           Pick your favorite fruit (ReactiveForms)</label
         >
@@ -23,7 +23,7 @@ import map from 'lodash/map';
         </form>
         <pre>ReactiveForm: {{ values | json }}</pre>
       </div>
-      <div class="col-4">
+      <div class="col--4">
         <label id="example-radio-group-label-3">
           Pick your favorite fruit (ngModel)</label
         >

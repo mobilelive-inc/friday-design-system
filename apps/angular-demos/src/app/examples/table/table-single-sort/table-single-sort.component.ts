@@ -96,5 +96,4 @@ export class TableSingleSortComponent implements OnInit {
   onSelectionChange(event) {
     console.log('On selection: ', event);
   }
-
 }
