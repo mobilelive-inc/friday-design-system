@@ -1,55 +1,76 @@
 import React, { useState, useEffect } from 'react';
-import { ProgressWrapper, ProgressStepper } from './css';
-import Span from '../icon/Icon';
 import Box from '../box';
 import { ThemeProvider } from 'styled-components';
-import stepperTheme from './../theme/styles/stepper';
+import stepperTheme from './../theme/defaultTheme';
 import GlobalStyle from './../theme/globalStyles';
+import { VistedStep, UnVisitedStep, ProgressBar } from './css';
 import PropTypes from 'prop-types';
+import { Text } from './../typography';
 
-const Stepper = props => {
-  const { total, value, isCountVisible } = props;
-  const [progressWidth, setProgressWidth] = useState(0);
+const AdvancedStepper = ({ total = 3, value, isCountVisible }) => {
+  const [currentStep, setCurrentStep] = useState(0);
+  const [steps, setSteps] = useState([]);
 
   useEffect(() => {
-    setProgressWidth((value / total) * 100);
+    // setProgressWidth((value / total) * 100);
   }, [total, value]);
+
+  useEffect(() => {
+    initializedSteps();
+  }, []);
+
+  const initializedSteps = () => {
+    let array = [];
+    for (let i = 0; i < total; i++) {
+      array.push({
+        number: i + 1,
+        isVisited: false,
+        isCurrentStep: i === 0 ? true : false
+      });
+    }
+    setSteps(array);
+  };
 
   return (
     <ThemeProvider theme={stepperTheme}>
       <GlobalStyle />
       <Box width="100%">
-        <ProgressWrapper {...props}>
-          <ProgressStepper {...props} width={`${progressWidth}%`} />
-        </ProgressWrapper>
-        {isCountVisible && (
-          <Span
-            textAlign="center"
-            aria-live="assertive"
-            aria-label={`Step ${value} of ${total}`}
-            mt={1}>{`${value} of ${total}`}</Span>
-        )}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            position: 'relative'
+          }}>
+          <ProgressBar />
+          {steps.map((item, index) => {
+            console.log('Item: ', item);
+            return (
+              <div>
+                {item.isCurrentStep === true ? (
+                  <VistedStep>
+                    <Text>{item.number}</Text>
+                  </VistedStep>
+                ) : (
+                  <div>
+                    {item.isVisited === true ? (
+                      <VistedStep>
+                        <span className="font--size--lg icon-check ng-star-inserted" />
+                      </VistedStep>
+                    ) : (
+                      <UnVisitedStep>
+                        <Text>{item.number}</Text>
+                      </UnVisitedStep>
+                    )}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </Box>
     </ThemeProvider>
   );
 };
 
-Stepper.defaultProps = {
-  total: 10,
-  value: 3,
-  variant: 'primary',
-  isCountVisible: true
-};
-
-Stepper.propTypes = {
-  /** Total Number of steps */
-  total: PropTypes.number.isRequired,
-  /** Step no where user stands */
-  value: PropTypes.number.isRequired,
-  /** To manage theme*/
-  variant: PropTypes.string,
-  /** This is to show/hide the below count, by-default it's value is true*/
-  isCountVisible: PropTypes.bool
-};
-
-export default Stepper;
+export default AdvancedStepper;

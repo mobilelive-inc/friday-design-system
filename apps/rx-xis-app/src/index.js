@@ -5,6 +5,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Flex, Box } from 'rebass/styled-components';
 import Button from './components/Button';
+import AdvancedStepper from './components/advanced-stepper';
 import {
   PrimaryButton,
   OutlineButtons,
@@ -56,6 +57,7 @@ function App() {
   const [isOn, setIsOn] = React.useState(false);
   return (
     <ThemeProvider theme={theme}>
+      <AdvancedStepper />
       <PrimaryButton />
       <OutlineButtons />
       <ClearButton />
