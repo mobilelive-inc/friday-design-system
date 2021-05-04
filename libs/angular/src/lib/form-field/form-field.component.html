@@ -16,6 +16,7 @@
   <div
     class="formControlHolder formControlHolder__{{ controlType }}"
     [class.error]="isInvalid()"
+    [class.disabled]="_control.disabled"
     [ngClass]="getClasses()"
   >
     <ng-content select="input"></ng-content>
