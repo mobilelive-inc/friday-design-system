@@ -24,7 +24,11 @@ import {
 } from '@angular/core';
 import { DomHandler, BlockableUI } from '../shared/helpers';
 import { Template } from '../shared/template.directive';
-import { FocusTrapFactory, FocusMonitor, ListKeyManager } from '@angular/cdk/a11y';
+import {
+  FocusTrapFactory,
+  FocusMonitor,
+  ListKeyManager
+} from '@angular/cdk/a11y';
 
 let idx: number = 0;
 
@@ -268,9 +272,12 @@ export class TabView
 
   keyManager: any;
 
-  constructor(public el: ElementRef, public cd: ChangeDetectorRef,
+  constructor(
+    public el: ElementRef,
+    public cd: ChangeDetectorRef,
     private focusTrap: FocusTrapFactory,
-    private focusMonitor: FocusMonitor) {}
+    private focusMonitor: FocusMonitor
+  ) {}
 
   ngAfterContentInit() {
     this.initTabs();
@@ -282,8 +289,10 @@ export class TabView
 
   ngAfterViewInit() {
     this.keyManager = new ListKeyManager(this.tabLinks);
-    this.keyManager.withHorizontalOrientation('ltr'); // Arrow navigation options 
-    this.keyManager.withWrap().skipPredicate(item => item.nativeElement.ariaDisabled); // Skip Disabled
+    this.keyManager.withHorizontalOrientation('ltr'); // Arrow navigation options
+    this.keyManager
+      .withWrap()
+      .skipPredicate(item => item.nativeElement.ariaDisabled); // Skip Disabled
   }
 
   ngAfterViewChecked() {
@@ -307,18 +316,20 @@ export class TabView
     this.cd.markForCheck();
   }
 
-  @HostListener('keyup', ['$event']) 
+  @HostListener('keyup', ['$event'])
   keyFunc(event) {
     if (event.code !== 'Tab') {
-      this.keyManager.onKeydown(event)
-      this.focusMonitor.focusVia(this.keyManager.activeItem.nativeElement, "keyboard")
-    }
-    else {  // 'artificially' updates the active element in case the user uses Tab instead of arrows
-      this.keyManager.onKeydown(event)
-      this.keyManager.setNextItemActive()
+      this.keyManager.onKeydown(event);
+      this.focusMonitor.focusVia(
+        this.keyManager.activeItem.nativeElement,
+        'keyboard'
+      );
+    } else {
+      // 'artificially' updates the active element in case the user uses Tab instead of arrows
+      this.keyManager.onKeydown(event);
+      this.keyManager.setNextItemActive();
     }
   }
-
 
   open(event: Event, tab: TabPanel) {
     if (tab.disabled) {

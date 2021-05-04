@@ -5,6 +5,10 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Flex, Box } from 'rebass/styled-components';
 import Button from './components/Button';
+import Accordion, {
+  AccordionCollapse,
+  AccordionHeader
+} from './components/accordion';
 import {
   PrimaryButton,
   OutlineButtons,
@@ -19,6 +23,7 @@ import {
 import { OtherSpecs } from './../stories/typography.stories';
 // import Button from '../../../build';
 import { Text } from './components/typography';
+import Stepper from './components/stepper';
 import Span from './components/span/span';
 import Icon from './components/icon/Icon';
 import Input from './components/Input';
@@ -56,6 +61,14 @@ function App() {
   const [isOn, setIsOn] = React.useState(false);
   return (
     <ThemeProvider theme={theme}>
+      <Accordion
+        onExpand={() => console.log('Opened')}
+        onCollapse={() => console.log('Closed')}>
+        <AccordionHeader title={'Heading'}></AccordionHeader>
+        <AccordionCollapse>
+          <div>This is the for testing purpose</div>
+        </AccordionCollapse>
+      </Accordion>
       <PrimaryButton />
       <OutlineButtons />
       <ClearButton />
@@ -73,7 +86,7 @@ function App() {
             href="#"
             focusableID="newId"
             title="Skip"
-            top="150"
+            top={150}
             border="none"
             backgroundColor="blue"
             color="white"
@@ -82,6 +95,9 @@ function App() {
         <Text mb={30} underline italic>
           Testing
         </Text>
+        <Flex mt={5} mb={100}>
+          <Stepper variant="primary" value={5} total={10} />
+        </Flex>
         <Flex mt={5} mb={100}>
           <Button
             variant="outlineGoogleBlue"
