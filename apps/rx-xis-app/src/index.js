@@ -55,9 +55,16 @@ function App() {
   const [gender, setGender] = React.useState('male');
   const [selected, setSelected] = React.useState(null);
   const [isOn, setIsOn] = React.useState(false);
+  const [count, setCount] = React.useState(1);
   return (
     <ThemeProvider theme={theme}>
-      <AdvancedStepper />
+      <AdvancedStepper value={count} total={5} />
+      <Button
+        onClick={() => {
+          setCount(count + 1);
+        }}>
+        Next
+      </Button>
       <PrimaryButton />
       <OutlineButtons />
       <ClearButton />

@@ -3,29 +3,48 @@ import Box from '../box';
 import { ThemeProvider } from 'styled-components';
 import stepperTheme from './../theme/defaultTheme';
 import GlobalStyle from './../theme/globalStyles';
-import { VistedStep, UnVisitedStep, ProgressBar } from './css';
+import {
+  VistedStep,
+  UnVisitedStep,
+  ProgressBar,
+  StepperContainer
+} from './css';
 import PropTypes from 'prop-types';
 import { Text } from './../typography';
+import Icon from './../icon/Icon';
 
-const AdvancedStepper = ({ total = 3, value, isCountVisible }) => {
-  const [currentStep, setCurrentStep] = useState(0);
+const AdvancedStepper = ({ total = 3, value = 1 }) => {
+  const [currentStep, setCurrentStep] = useState(value);
   const [steps, setSteps] = useState([]);
+  const [visitedCount, setVisitedCount] = useState(1);
 
   useEffect(() => {
     // setProgressWidth((value / total) * 100);
+    if (value >= visitedCount) {
+      setVisitedCount(value);
+    }
+    setCurrentStep(value);
   }, [total, value]);
 
   useEffect(() => {
     initializedSteps();
   }, []);
 
+  useEffect(() => {
+    initializedSteps();
+  }, [currentStep]);
+
+  useEffect(() => {
+    initializedSteps();
+  }, [visitedCount]);
+
   const initializedSteps = () => {
     let array = [];
-    for (let i = 0; i < total; i++) {
+    for (let i = 1; i <= total; i++) {
       array.push({
-        number: i + 1,
-        isVisited: false,
-        isCurrentStep: i === 0 ? true : false
+        number: i,
+        isVisited: i <= visitedCount ? true : false,
+        isCurrentStep: i === currentStep ? true : false
       });
     }
     setSteps(array);
@@ -35,39 +54,35 @@ const AdvancedStepper = ({ total = 3, value, isCountVisible }) => {
     <ThemeProvider theme={stepperTheme}>
       <GlobalStyle />
       <Box width="100%">
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            position: 'relative'
-          }}>
-          <ProgressBar />
+        <StepperContainer>
           {steps.map((item, index) => {
-            console.log('Item: ', item);
             return (
-              <div>
+              <Box>
                 {item.isCurrentStep === true ? (
                   <VistedStep>
                     <Text>{item.number}</Text>
                   </VistedStep>
                 ) : (
-                  <div>
+                  <Box>
                     {item.isVisited === true ? (
-                      <VistedStep>
-                        <span className="font--size--lg icon-check ng-star-inserted" />
+                      <VistedStep
+                        onClick={() => {
+                          setCurrentStep(item.number);
+                        }}>
+                        <Icon className="font--size--lg icon-check ng-star-inserted" />
                       </VistedStep>
                     ) : (
                       <UnVisitedStep>
                         <Text>{item.number}</Text>
                       </UnVisitedStep>
                     )}
-                  </div>
+                  </Box>
                 )}
-              </div>
+              </Box>
             );
           })}
-        </div>
+          <ProgressBar />
+        </StepperContainer>
       </Box>
     </ThemeProvider>
   );
