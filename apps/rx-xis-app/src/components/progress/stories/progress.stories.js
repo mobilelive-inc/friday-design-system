@@ -1,19 +1,19 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
-import progressbarTheme from "../../theme/styles/progressbar";
-import GlobalStyle from "../../theme/globalStyles";
-import Progress from "..";
-
+import React from 'react';
+import ReadingProgress from '../index';
 export default {
-  title: "Progress",
-  component: Progress,
+  title: 'Progress',
+  component: ReadingProgress
 };
 
-export const Progressbar = () => {
+export function Progressbar() {
+  const target = React.createRef();
   return (
-    <ThemeProvider theme={progressbarTheme}>
-      <GlobalStyle />
-      <Progress />
-    </ThemeProvider>
+    <>
+      <ReadingProgress target={target} done={20} />
+      <ReadingProgress target={target} done={40} />
+      <ReadingProgress target={target} done={60} />
+      <ReadingProgress target={target} done={80} />
+      <ReadingProgress target={target} done={100} />
+    </>
   );
-};
+}

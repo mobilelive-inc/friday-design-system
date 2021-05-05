@@ -37,8 +37,9 @@ import TextArea from './components/textArea';
 import Tooltip from './components/tooltip';
 import Toggle from './components/toggle';
 import SkipLink from './components/skipLink';
-import Progress from './components/progress';
+import ReadingProgress from './components/progress/index';
 import Cards from './components/cards';
+import Progress from './components/progress/index';
 
 function App() {
   const options = [
@@ -60,6 +61,7 @@ function App() {
   const [gender, setGender] = React.useState('male');
   const [selected, setSelected] = React.useState(null);
   const [isOn, setIsOn] = React.useState(false);
+  const [reset, setReset] = React.useState(true);
   return (
     <ThemeProvider theme={theme}>
       <Accordion
@@ -558,8 +560,14 @@ function App() {
             isValid={true}
           />
         </Flex>
-        <Progress />
         <Cards />
+        <Progress done="70" reset={reset} />
+        <button
+          onClick={() => {
+            setReset(false);
+          }}>
+          Reset
+        </button>
       </div>
     </ThemeProvider>
   );
