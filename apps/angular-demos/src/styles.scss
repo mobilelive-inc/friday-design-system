@@ -1,26 +1,18 @@
-// Basic settings from Static Friday Design System
-@import 'libs/static/src/scss/index';
 
 @import 'styles/grid-utils-settings/breakpoint-vals';
 @import 'styles/grid-utils-settings/spacing-vals';
 
-// Basic Styles form Static Friday Design System
-// @import 'libs/static/src/scss/vendors/_rfs_autofontSizing';
-// @import 'libs/static/src/scss/generic/_base';
-// @import 'libs/static/src/scss/generic/_root';
-// @import 'libs/static/src/scss/generic/_general.functions';
-// @import 'libs/static/src/scss/settings/_colors';
-// @import 'libs/static/src/scss/settings/_borders';
-// @import 'libs/static/src/scss/utilitis/_jumbotron';
+// Basic settings from Static Friday Design System
+@import 'libs/static/src/scss/_component-dependencies';
 
-// // Component Styles form Static Friday Design System
-// @import 'libs/static/src/scss/components/_buttons';
-// @import 'libs/static/src/scss/components/_forms';
-// @import 'libs/static/src/scss/components/_progressbar';
-// @import 'libs/static/src/scss/components/_tooltip';
-// @import 'libs/static/src/scss/components/_card';
-// @import 'libs/static/src/scss/components/_accordion';
-// @import 'libs/static/src/scss/components/_tables';
+// Component Styles form Static Friday Design System
+@import 'libs/static/src/scss/components/_buttons';
+@import 'libs/static/src/scss/components/_forms';
+@import 'libs/static/src/scss/components/_progressbar';
+@import 'libs/static/src/scss/components/_tooltip';
+@import 'libs/static/src/scss/components/_card';
+@import 'libs/static/src/scss/components/_accordion';
+@import 'libs/static/src/scss/components/_tables';
 
 
 //@import 'apps/angular-demos/src/styles/themes/temp-var-vals';
