@@ -1,0 +1,40 @@
+//Card styles
+
+:root {
+  //TODO: need to MOVE this style to generic elements.
+  --card-color: #282828;
+  --divider-color: #121212;
+  --white-color: #ffffff;
+  --theme-color: var(--primary);
+  --secondary-color: var(--secondary);
+  --border-color: #bcbbba;
+  --bg-card: var(--white-color);
+  --primary-border-color: var(--primary);
+  --secondary-border-color: var(--secondary);
+  --card-border-radius: 0;
+  --card-btn-color: var(--theme-color);
+  --card-border-color: #bcbbba;
+  --card-border-width: 1px;
+
+  // Box Shadow
+  --card-shadow-horizontalLength: 0;
+  --card-shadow-verticalLength: 2px;
+  --card-shadow-blurRadius: 8px;
+  --card-shadow-spread: 0;
+  --card-shadow-color: rgba(0, 0, 0, 0.12);
+
+  // Solid Box Shadow
+  --card-solidshadow-marginTop: 1rem;
+  --card-solidshadow-marginRight: 1rem;
+  --card-solidshadow-marginBottom: 1rem;
+  --card-solidshadow-marginLeft: 1rem;
+
+  --card-solidShadow-horizontalLength: 0.7rem;
+  --card-solidShadow-verticalLength: 0.7rem;
+  --card-sm-solidShadow-horizontalLength: 0.5rem;
+  --card-sm-solidShadow-verticalLength: 0.5rem;
+  --card-solidShadow-blurRadius: 0;
+  --card-solidShadow-spread: 0;
+  --card-solidShadow-primary: var(--theme-color);
+  --card-solidShadow-secondary: var(--secondary-color);
+}

@@ -9,7 +9,7 @@ import { ThemeService, ThemeListItem } from '@fds/angular';
       <div class="btns-switcher-holder">
         <button
           *ngFor="let theme of themes"
-          class="mb--2 btn btn--sm navy default"
+          class="mb--2 btn navy default"
           [ngClass]="{
             'btn--primary': activeClassName == theme.className,
             'btn--primary': activeClassName != theme.className

@@ -1,0 +1,8 @@
+// Utilities
+$displays: inline, block, contents, block, flex, grid, inline-block, inline-flex,
+  inline-grid, inline-table, list-item, run-in, table, table-caption,
+  table-column-group, table-header-group, table-footer-group, table-row-group,
+  table-cell, table-column, table-row, none, initial, inherit;
+$overflows: visible, hidden, scroll, auto, initial, inherit;
+$positions: static, relative, absolute, fixed, sticky;
+$user-selects: all, auto, none;
