@@ -23,7 +23,7 @@
     "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
     "build": "run-s build:*",
     "serve": "browser-sync start --server \"dist\" --files \"dist\"",
-    "watch": "node postCss.js && run-p serve watch:*"
+    "watch": "run-p serve watch:*"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.4",
