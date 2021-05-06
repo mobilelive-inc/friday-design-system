@@ -4,9 +4,9 @@ import { compose, border, layout, variant, space, color } from "styled-system";
 
 export const Section = styled.section(
   css({
-    maxWidth:`container_max_width`,
-    minWidth:`container_min_width`,
-    margin:'0 auto',
+    maxWidth: `container_max_width`,
+    minWidth: `container_min_width`,
+    margin: "0 auto",
   })
 );
 export const Wrapper = styled("div")(
@@ -14,35 +14,46 @@ export const Wrapper = styled("div")(
     display: `flex`,
     justifyContent: `center`,
     flexDirection: `column`,
-    border: "4px solid",
+    borderColor: 'progressBorderColor',
+    borderWidth: 'progressBorderWidth',
+    borderStyle: 'solid',
+    borderRadius: 'progressBordeRadius',
     borderColor: "BgProgressbar",
-    paddingY: "PbPadding",
+    padding: "PbPadding",
     marginBottom: "PbMargin",
   }),
   compose(border, layout, space, color)
 );
 
-export const Progresbar = styled("div")(
+export const Progressbar = styled("div")(
   css({
     backgroundColor: "BgProgressbar",
     height: "ProgressbarHeight",
-    width: "100%",
+    width: "ProgressbarValue",
     position: "relative",
     boxShadow: "0 2px 3px rgba(0, 0, 0, 0.5) inset",
-  })
+    marginY: "PbMargin;",
+    borderRadius: "ProgressbarRadius",
+  }),
+  props => props,
+  compose(color, layout, space, border),
+  variant({ scale: 'progress' })
 );
-export const Value = styled.span(
+export const Progressdone = styled.span(
   css({
-    display: "inline-block",
+    backgroundColor: "SteperBroderColor",
+    boxShadow: "0 3px 3px -5px #f2709c, 0 2px 5px #f2709c",
+    borderRadius: "ProgressbarRadius",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     height: "ProgressbarValue",
     position: "relative",
-    transition: "width 0.6s ease",
-    backgroundColor: "SteperBroderColor",
-  })
-);
-
-export const ButtonContainer = styled("div")(
-  css({
-    textAlign:'center'
-  })
+    width: "0",
+    opacity: "0",
+    transition: "8s ease 0.3s",
+  }),
+  props => props,
+  compose(color, layout, space, border),
+  variant({ scale: 'progressWrapper' })
 );

@@ -5,13 +5,13 @@ import { _radii } from "../properties/radius";
 import { _borderWidths } from "../properties/borderWidths";
 import { _sizes } from "../properties/sizes";
 import { buttons, borderCurved, borderRounded } from '../variants/buttons';
+import { progress, progressWrapper } from '../variants/progress';
 
-//progressbar styles
 export const radii = {
   ProgressRadiusRounded: 0,
+  ProgressbarRadius:'20px'
 };
 export const sizes = {
-  // ProgressbarHeight: _sizes.sizes_1rem,
   ProgressbarHeight:'24px',
   ProgressbarWidth: _sizes.size_15pc,
   ProgressbarValue: _sizes.size_100pc,
@@ -47,5 +47,7 @@ export default {
   sizes,
   buttons,
   borderCurved,
-  borderRounded
+  borderRounded,
+  progress,
+  progressWrapper
 };

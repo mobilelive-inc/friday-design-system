@@ -5,9 +5,11 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Flex, Box } from 'rebass/styled-components';
 import Button from './components/Button';
-import Accordion, {
+import {
+  Accordion,
   AccordionCollapse,
-  AccordionHeader
+  AccordionHeader,
+  AccordionContainer
 } from './components/accordion';
 import {
   PrimaryButton,
@@ -23,6 +25,7 @@ import {
 import { OtherSpecs } from './../stories/typography.stories';
 // import Button from '../../../build';
 import { Text } from './components/typography';
+import Stepper from './components/stepper';
 import Span from './components/span/span';
 import Icon from './components/icon/Icon';
 import Input from './components/Input';
@@ -64,14 +67,32 @@ function App() {
   const [reset, setReset] = React.useState(true);
   return (
     <ThemeProvider theme={theme}>
-      <Accordion
-        onExpand={() => console.log('Opened')}
-        onCollapse={() => console.log('Closed')}>
-        <AccordionHeader title={'Heading'}></AccordionHeader>
-        <AccordionCollapse>
-          <div>This is the for testing purpose</div>
-        </AccordionCollapse>
-      </Accordion>
+      <AccordionContainer hasMultiple={false}>
+        <Accordion
+          onExpand={() => console.log('Opened')}
+          onCollapse={() => console.log('Closed')}>
+          <AccordionHeader title={'Heading'}></AccordionHeader>
+          <AccordionCollapse>
+            <div>This is the for testing purpose</div>
+          </AccordionCollapse>
+        </Accordion>
+        <Accordion
+          onExpand={() => console.log('Opened')}
+          onCollapse={() => console.log('Closed')}>
+          <AccordionHeader title={'Heading'}></AccordionHeader>
+          <AccordionCollapse>
+            <div>This is the for testing purpose</div>
+          </AccordionCollapse>
+        </Accordion>
+        <Accordion
+          onExpand={() => console.log('Opened')}
+          onCollapse={() => console.log('Closed')}>
+          <AccordionHeader title={'Heading'}></AccordionHeader>
+          <AccordionCollapse>
+            <div>This is the for testing purpose</div>
+          </AccordionCollapse>
+        </Accordion>
+      </AccordionContainer>
       <PrimaryButton />
       <OutlineButtons />
       <ClearButton />
@@ -98,6 +119,9 @@ function App() {
         <Text mb={30} underline italic>
           Testing
         </Text>
+        <Flex mt={5} mb={100}>
+          <Stepper variant="primary" value={5} total={10} />
+        </Flex>
         <Flex mt={5} mb={100}>
           <Button
             variant="outlineGoogleBlue"
@@ -560,14 +584,8 @@ function App() {
             isValid={true}
           />
         </Flex>
+        <Progress progressbarstatus="70" progressbarheading="Progress" />
         <Cards />
-        <Progress done="70" reset={reset} />
-        <button
-          onClick={() => {
-            setReset(false);
-          }}>
-          Reset
-        </button>
       </div>
     </ThemeProvider>
   );

@@ -9,7 +9,7 @@ export default {
   title: "Card",
   component: Cards,
 };
-export const Card = () => {
+export const DifferentCards = () => {
   return (
     <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
