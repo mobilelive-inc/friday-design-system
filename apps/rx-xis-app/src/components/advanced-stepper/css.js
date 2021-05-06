@@ -19,12 +19,13 @@ export const UnVisitedStep = styled(`div`)(
     borderColor: 'orange',
     color: 'orange',
     borderWidth: 2,
-    borderRadius: 29,
+    borderRadius: '50%',
     borderStyle: 'solid',
     justifyContent: 'center',
     alignItems: 'center',
     display: 'flex',
     opacity: '1 !important',
+    marginBottom: '5px',
     '&:hover': {
       color: 'white',
       backgroundColor: 'orange'
@@ -38,12 +39,13 @@ export const VistedStep = styled(`div`)(
     width: '40px',
     height: '40px',
     backgroundColor: 'orange',
-    borderRadius: 20,
+    borderRadius: '50%',
     justifyContent: 'center',
     alignItems: 'center',
     display: 'flex',
     opacity: '1 !important',
     cursor: 'pointer',
+    marginBottom: '5px',
     '&:hover': {
       color: 'white'
     }
@@ -59,11 +61,21 @@ export const ProgressBar = styled(`div`)(
     marginLeft: '2px',
     marginRight: '2px',
     position: 'absolute',
-    top: '50%',
+    top: '20px',
     left: 0,
     right: '5px',
     transform: 'translateY(-50%)',
     zIndex: -1,
     opacity: '0.8 !important'
   })
+);
+
+export const StepItemContainer = styled(`div`)(
+  css({
+    display: 'flex',
+    flexDirection: 'column'
+  }),
+  {
+    alignItems: props => props.alignment || 'start'
+  }
 );

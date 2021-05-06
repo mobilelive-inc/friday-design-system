@@ -7,13 +7,14 @@ import {
   VistedStep,
   UnVisitedStep,
   ProgressBar,
-  StepperContainer
+  StepperContainer,
+  StepItemContainer
 } from './css';
 import PropTypes from 'prop-types';
 import { Text } from './../typography';
 import Icon from './../icon/Icon';
 
-const AdvancedStepper = ({ total = 3, value = 1 }) => {
+const AdvancedStepper = ({ total = 3, value = 1, hideName, dataList }) => {
   const [currentStep, setCurrentStep] = useState(value);
   const [steps, setSteps] = useState([]);
   const [visitedCount, setVisitedCount] = useState(1);
@@ -44,7 +45,8 @@ const AdvancedStepper = ({ total = 3, value = 1 }) => {
       array.push({
         number: i,
         isVisited: i <= visitedCount ? true : false,
-        isCurrentStep: i === currentStep ? true : false
+        isCurrentStep: i === currentStep ? true : false,
+        name: dataList[i - 1]
       });
     }
     setSteps(array);
@@ -56,25 +58,49 @@ const AdvancedStepper = ({ total = 3, value = 1 }) => {
       <Box width="100%">
         <StepperContainer>
           {steps.map((item, index) => {
+            let alignValue = 'start';
+            switch (index) {
+              case 0:
+                {
+                  alignValue = 'start';
+                }
+                break;
+              case steps.length - 1:
+                {
+                  alignValue = 'flex-end';
+                }
+                break;
+              default:
+                alignValue = 'center';
+            }
             return (
               <Box>
                 {item.isCurrentStep === true ? (
-                  <VistedStep>
-                    <Text>{item.number}</Text>
-                  </VistedStep>
+                  <StepItemContainer alignment={alignValue}>
+                    <VistedStep>
+                      <Text>{item.number}</Text>
+                    </VistedStep>
+                    {hideName && <Text color="orange">{item.name}</Text>}
+                  </StepItemContainer>
                 ) : (
                   <Box>
                     {item.isVisited === true ? (
-                      <VistedStep
-                        onClick={() => {
-                          setCurrentStep(item.number);
-                        }}>
-                        <Icon className="font--size--lg icon-check ng-star-inserted" />
-                      </VistedStep>
+                      <StepItemContainer alignment={alignValue}>
+                        <VistedStep
+                          onClick={() => {
+                            setCurrentStep(item.number);
+                          }}>
+                          <Icon className="font--size--lg icon-check ng-star-inserted" />
+                        </VistedStep>
+                        {hideName && <Text>{item.name}</Text>}
+                      </StepItemContainer>
                     ) : (
-                      <UnVisitedStep>
-                        <Text>{item.number}</Text>
-                      </UnVisitedStep>
+                      <StepItemContainer alignment={alignValue}>
+                        <UnVisitedStep>
+                          <Text>{item.number}</Text>
+                        </UnVisitedStep>
+                        {hideName && <Text>{item.name}</Text>}
+                      </StepItemContainer>
                     )}
                   </Box>
                 )}
