@@ -49,8 +49,9 @@ function Radio(props) {
         htmlFor={id}
         error={error}
         pl={[10]}
+        mr={7}
         mt='-22px'
-        lineHeight={10}
+        lineHeight={5}
         fontWeight={600}
         color={error ? 'error' : 'black'}
         as="label">

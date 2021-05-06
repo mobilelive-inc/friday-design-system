@@ -557,7 +557,6 @@ function App() {
             isValid={true}
           />
         </Flex>
-        <RadioBtn  />
       </div>
     </ThemeProvider>
   );
