@@ -9,12 +9,12 @@ fds-autocomplete { position: relative; }
   flex: 1 1 auto;
 }
 .fds-autocomplete-multiple {
-  left: 0;
   top: 100%;
-  width: 100%;
+  left: -1px;
   z-index: 1000;
   padding: 0 1rem;
   position: absolute;
+  width: calc(100% + 2px);
   border: 1px solid var(--black);
   border-top: 0;
   background-color: var(--white);
@@ -49,7 +49,6 @@ fds-autocomplete .fds-autocomplete-panel { min-width: 100%; }
   margin: 0;
   padding: 0;
   cursor: text;
-  display: flex;
   overflow: hidden;
   align-items: center;
   list-style-type: none;
@@ -99,3 +98,8 @@ fds-autocomplete .fds-autocomplete-panel { min-width: 100%; }
   color: var(--primary-text-color);
   background-color: var(--primary);
 }
+.fds-inputtext {
+  overflow: auto;
+  max-height: 120px;
+}
+.max-height { max-height: 180px; }

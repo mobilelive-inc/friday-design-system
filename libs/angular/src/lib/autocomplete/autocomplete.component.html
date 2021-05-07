@@ -1,24 +1,24 @@
 <div class="position-relative">
   <fds-button *ngIf="btnDropdown" class="overflow--hidden d--block" className="btn btn--primary w--100" (onClick)="toggleAutocomplete = !toggleAutocomplete">{{ btnText }}</fds-button>
-  <div #container *ngIf="toggleAutocomplete" [ngClass]="{'fds-autocomplete fds-component':true,'fds-autocomplete-dd':dropdown,'fds-autocomplete-multiple':multiple}" [ngStyle]="style" [class]="styleClass">
+  <div #container *ngIf="toggleAutocomplete" [ngClass]="{'fds-autocomplete fds-component':true,'fds-autocomplete-dd':dropdown,'fds-autocomplete-multiple py--2':multiple }" [ngStyle]="style" [class]="styleClass">
       <input *ngIf="!multiple" #in [attr.type]="type" [attr.id]="inputId" [ngStyle]="inputStyle" [class]="inputStyleClass" [autocomplete]="autocomplete" [attr.required]="required" [attr.name]="name"
       class="formControl fds-autocomplete-input fds-inputtext fds-component" [ngClass]="{'fds-autocomplete-dd-input':dropdown,'fds-disabled': disabled}" [value]="inputFieldValue" aria-autocomplete="list" [attr.aria-controls]="listId" role="searchbox" [attr.aria-expanded]="overlayVisible" aria-haspopup="true" [attr.aria-activedescendant]="'fds-highlighted-option'"
       (click)="onInputClick($event)" (input)="onInput($event)" (keydown)="onKeydown($event)" (keyup)="onKeyup($event)" [attr.autofocus]="autofocus" (focus)="onInputFocus($event)" (blur)="onInputBlur($event)" (change)="onInputChange($event)" (paste)="onInputPaste($event)"
       [attr.placeholder]="placeholder" [attr.size]="size" [attr.maxlength]="maxlength" [attr.tabindex]="tabindex" [readonly]="readonly" [disabled]="disabled" [attr.aria-label]="ariaLabel" [attr.aria-labelledby]="ariaLabelledBy" [attr.aria-required]="required"
       >
       
-      <input *ngIf="!withinInput && multiple" #multiIn [attr.type]="type" [attr.id]="inputId" class="formControl border border--width border--black my--3" [disabled]="disabled" [attr.placeholder]="(value&&value.length ? null : placeholder)" [attr.tabindex]="tabindex" [attr.maxlength]="maxlength" (input)="onInput($event)"  (click)="onInputClick($event)"
+      <input *ngIf="!withinInput && multiple" #multiIn [attr.type]="type" [attr.id]="inputId" class="formControl border border--width border--black my--2" [disabled]="disabled" [attr.placeholder]="(value&&value.length ? null : placeholder)" [attr.tabindex]="tabindex" [attr.maxlength]="maxlength" (input)="onInput($event)"  (click)="onInputClick($event)"
                       (keydown)="onKeydown($event)" [readonly]="readonly" (keyup)="onKeyup($event)" [attr.autofocus]="autofocus" (focus)="onInputFocus($event)" (blur)="onInputBlur($event)" (change)="onInputChange($event)" (paste)="onInputPaste($event)" [autocomplete]="autocomplete"
                       [ngStyle]="inputStyle" [class]="inputStyleClass" [attr.aria-label]="ariaLabel" [attr.aria-labelledby]="ariaLabelledBy" [attr.aria-required]="required"
                       aria-autocomplete="list" [attr.aria-controls]="listId" role="searchbox" [attr.aria-expanded]="overlayVisible" aria-haspopup="true" [attr.aria-activedescendant]="'fds-highlighted-option'">
-      <ul *ngIf="multiple" #multiContainer class="fds-autocomplete-multiple-container fds-component fds-inputtext mx--n2" [ngClass]="{'fds-disabled':disabled,'fds-focus':focus}" (click)="multiIn?.focus()">
-          <li #token *ngFor="let val of value" class="fds-autocomplete-token mb--3 mx--2 border border--width border--gray bg--gray--light text--black px--2 py--1 curved">
+      <ul *ngIf="multiple" #multiContainer class="fds-autocomplete-multiple-container fds-component fds-inputtext mx--n2" [ngClass]="{'fds-disabled':disabled,'fds-focus':focus, 'd--flex flex--wrap max-height' : withinInput }" (click)="multiIn?.focus()">
+          <li #token *ngFor="let val of value" class="fds-autocomplete-token m--2 border border--width border--gray bg--gray--light text--black px--2 py--1 curved">
               <ng-container *ngTemplateOutlet="selectedItemTemplate; context: {$implicit: val}"></ng-container>
               <span *ngIf="!selectedItemTemplate" class="fds-autocomplete-token-label" tabindex="0">{{resolveFieldData(val)}}</span>
               <span class="fds-autocomplete-token-icon icon-cross" (click)="removeItem(token)" (keyup.backspace)="removeItem(token)" tabindex="0" *ngIf="!disabled && !readonly"></span>
           </li>
-          <li *ngIf="withinInput" class="fds-autocomplete-input-token">
-              <input #multiIn [attr.type]="type" [attr.id]="inputId" class="formControl my--3" [disabled]="disabled" [attr.placeholder]="(value&&value.length ? null : placeholder)" [attr.tabindex]="tabindex" [attr.maxlength]="maxlength" (input)="onInput($event)"  (click)="onInputClick($event)"
+          <li *ngIf="withinInput" class="flex--grow--1">
+              <input #multiIn [attr.type]="type" [attr.id]="inputId" class="formControl my--2" [disabled]="disabled" [attr.placeholder]="(value&&value.length ? null : placeholder)" [attr.tabindex]="tabindex" [attr.maxlength]="maxlength" (input)="onInput($event)"  (click)="onInputClick($event)"
                       (keydown)="onKeydown($event)" [readonly]="readonly" (keyup)="onKeyup($event)" [attr.autofocus]="autofocus" (focus)="onInputFocus($event)" (blur)="onInputBlur($event)" (change)="onInputChange($event)" (paste)="onInputPaste($event)" [autocomplete]="autocomplete"
                       [ngStyle]="inputStyle" [class]="inputStyleClass" [attr.aria-label]="ariaLabel" [attr.aria-labelledby]="ariaLabelledBy" [attr.aria-required]="required"
                       aria-autocomplete="list" [attr.aria-controls]="listId" role="searchbox" [attr.aria-expanded]="overlayVisible" aria-haspopup="true" [attr.aria-activedescendant]="'fds-highlighted-option'">
