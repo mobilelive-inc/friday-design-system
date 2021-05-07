@@ -2,6 +2,7 @@ import { _fontSizes } from '../properties/fontSizes';
 import { _colors } from '../properties/colors';
 import { _space } from '../properties/space';
 import { _radii } from '../properties/radius';
+import { _sizes } from '../properties/sizes';
 import { _borderWidths } from '../properties/borderWidths';
 
 export const fontSizes = {
@@ -10,28 +11,25 @@ export const fontSizes = {
 };
 
 export const colors = {
-  collapseHeadingTextColor: _colors.black,
-  collapseHeadingIconColor: _colors.black,
-  collapseBorderColor: _colors.grayLight,
-  collapseHeaderBackground: _colors.primary,
-  collapseHeaderBackgroundHover: _colors.primaryHover
+  stepperThemeColor: _colors.primary
 };
 
 export const space = {
-  collapseHeadingPaddingX: _space.globalSpacer,
-  collapseHeadingPaddingY: _space.spacerMid,
-  collapseContentPaddingX: _space.spacerMid,
-  collapseContentPaddingY: _space.globalSpacer,
-  collapseHeadingIconPaddingX: _space.space_5x_tiny,
-  collapseHeadingIconPaddingY: _space.space_5x_tiny
+  stepperProgressBarMargin: _space.globalSpacer,
+  stepperProgressBarAlignmentFromTop: _space.spacerSS
 };
 
 export const radii = {
-  collapseBordeRadius: _radii.radius_0_063rem
+  stepperItemRadius: _radii.borderRadiusHalf
 };
 
 export const borderWidths = {
   collapseBorderWidth: _borderWidths.borderWidth
+};
+
+const sizes = {
+  stepperItemHeight: _sizes.size_2_25rem,
+  stepperItemWidth: _sizes.size_2_25rem
 };
 
 export default {
@@ -39,5 +37,6 @@ export default {
   colors,
   space,
   radii,
-  borderWidths
+  borderWidths,
+  sizes
 };

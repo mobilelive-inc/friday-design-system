@@ -13,13 +13,13 @@ export const StepperContainer = styled(`div`)(
 
 export const UnVisitedStep = styled(`div`)(
   css({
-    width: '37px',
-    height: '37px',
+    width: 'stepperItemWidth',
+    height: 'stepperItemHeight',
     backgroundColor: 'white',
-    borderColor: 'orange',
-    color: 'orange',
+    borderColor: 'stepperThemeColor',
+    color: 'stepperThemeColor',
     borderWidth: 2,
-    borderRadius: '50%',
+    borderRadius: 'stepperItemRadius',
     borderStyle: 'solid',
     justifyContent: 'center',
     alignItems: 'center',
@@ -28,18 +28,19 @@ export const UnVisitedStep = styled(`div`)(
     marginBottom: '5px',
     '&:hover': {
       color: 'white',
-      backgroundColor: 'orange'
+      backgroundColor: 'stepperThemeColor'
     }
   }),
-  props => props
+  props => props,
+  compose(border, layout, space, color, variant({ scale: 'advancedStepper' }))
 );
 
 export const VistedStep = styled(`div`)(
   css({
-    width: '40px',
-    height: '40px',
-    backgroundColor: 'orange',
-    borderRadius: '50%',
+    width: 'stepperItemWidth',
+    height: 'stepperItemHeight',
+    backgroundColor: 'stepperThemeColor',
+    borderRadius: 'stepperItemRadius',
     justifyContent: 'center',
     alignItems: 'center',
     display: 'flex',
@@ -50,18 +51,19 @@ export const VistedStep = styled(`div`)(
       color: 'white'
     }
   }),
-  props => props
+  props => props,
+  compose(border, layout, space, color, variant({ scale: 'advancedStepper' }))
 );
 
 export const ProgressBar = styled(`div`)(
   css({
     flex: 1,
     height: '3px',
-    backgroundColor: 'orange',
+    backgroundColor: 'stepperThemeColor',
     marginLeft: '2px',
     marginRight: '2px',
     position: 'absolute',
-    top: '20px',
+    top: 'stepperProgressBarAlignmentFromTop',
     left: 0,
     right: '5px',
     transform: 'translateY(-50%)',

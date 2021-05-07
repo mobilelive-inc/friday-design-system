@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Box from '../box';
 import { ThemeProvider } from 'styled-components';
-import stepperTheme from './../theme/defaultTheme';
+import advancedStepper from './../theme/styles/advancedStepper';
 import GlobalStyle from './../theme/globalStyles';
 import {
   VistedStep,
@@ -14,7 +14,12 @@ import PropTypes from 'prop-types';
 import { Text } from './../typography';
 import Icon from './../icon/Icon';
 
-const AdvancedStepper = ({ total = 3, value = 1, hideName, dataList }) => {
+const AdvancedStepper = ({
+  total = 3,
+  value = 1,
+  hideName = true,
+  dataList = []
+}) => {
   const [currentStep, setCurrentStep] = useState(value);
   const [steps, setSteps] = useState([]);
   const [visitedCount, setVisitedCount] = useState(1);
@@ -53,7 +58,7 @@ const AdvancedStepper = ({ total = 3, value = 1, hideName, dataList }) => {
   };
 
   return (
-    <ThemeProvider theme={stepperTheme}>
+    <ThemeProvider theme={advancedStepper}>
       <GlobalStyle />
       <Box width="100%">
         <StepperContainer>
@@ -80,7 +85,7 @@ const AdvancedStepper = ({ total = 3, value = 1, hideName, dataList }) => {
                     <VistedStep>
                       <Text>{item.number}</Text>
                     </VistedStep>
-                    {hideName && <Text color="orange">{item.name}</Text>}
+                    {hideName && <Text bold>{item.name}</Text>}
                   </StepItemContainer>
                 ) : (
                   <Box>

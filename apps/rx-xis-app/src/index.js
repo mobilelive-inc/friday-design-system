@@ -6,9 +6,11 @@ import { ThemeProvider } from 'styled-components';
 import { Flex, Box } from 'rebass/styled-components';
 import Button from './components/Button';
 import AdvancedStepper from './components/advanced-stepper';
-import Accordion, {
+import {
+  Accordion,
   AccordionCollapse,
-  AccordionHeader
+  AccordionHeader,
+  AccordionContainer
 } from './components/accordion';
 import {
   PrimaryButton,
@@ -26,8 +28,6 @@ import { OtherSpecs } from './../stories/typography.stories';
 import { Text } from './components/typography';
 import Stepper from './components/stepper';
 import Container from './components/container';
-import Span from './components/span/span';
-import Icon from './components/icon/Icon';
 import Input from './components/Input';
 import theme, { colors } from './components/theme/defaultTheme';
 import './../../../libs/icons/icomons_styles.scss';
@@ -115,14 +115,32 @@ function App() {
         </Container>
         <Text fontSize="fontSizeH2">Accordion</Text>
         <Container>
-          <Accordion
-            onExpand={() => console.log('Opened')}
-            onCollapse={() => console.log('Closed')}>
-            <AccordionHeader title={'Heading'}></AccordionHeader>
-            <AccordionCollapse>
-              <div>This is the for testing purpose</div>
-            </AccordionCollapse>
-          </Accordion>
+          <AccordionContainer hasMultiple={false}>
+            <Accordion
+              onExpand={() => console.log('Opened')}
+              onCollapse={() => console.log('Closed')}>
+              <AccordionHeader title={'Heading'}></AccordionHeader>
+              <AccordionCollapse>
+                <div>This is the for testing purpose</div>
+              </AccordionCollapse>
+            </Accordion>
+            <Accordion
+              onExpand={() => console.log('Opened')}
+              onCollapse={() => console.log('Closed')}>
+              <AccordionHeader title={'Heading'}></AccordionHeader>
+              <AccordionCollapse>
+                <div>This is the for testing purpose</div>
+              </AccordionCollapse>
+            </Accordion>
+            <Accordion
+              onExpand={() => console.log('Opened')}
+              onCollapse={() => console.log('Closed')}>
+              <AccordionHeader title={'Heading'}></AccordionHeader>
+              <AccordionCollapse>
+                <div>This is the for testing purpose</div>
+              </AccordionCollapse>
+            </Accordion>
+          </AccordionContainer>
         </Container>
 
         <Text fontSize="fontSizeH2">Primary Buttons</Text>

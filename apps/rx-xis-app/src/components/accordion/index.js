@@ -1,11 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import { AccordionWrapper, Collapse, Header, ToggleButton } from './css';
 import { Text } from '../typography';
+import Box from '../box';
 import Icon from './../icon/Icon';
 import PropTypes from 'prop-types';
 import GlobalStyle from './../theme/globalStyles';
 import accordionTheme from './../theme/styles/accordion';
 import { ThemeProvider } from 'styled-components';
+
+const AccordionContainer = ({ children, hasMultiple }) => {
+  const [openedIndex, setOpenedIndex] = useState(0);
+  const [childrenWithProps, setChildrenWithProps] = useState(children);
+
+  const updateIndex = index => {
+    setOpenedIndex(index);
+  };
+
+  useEffect(() => {
+    if (hasMultiple === false) {
+      setChildrenWithProps(
+        React.Children.map(children, child => {
+          // checking isValidElement is the safe way and avoids a typescript error too
+          if (React.isValidElement(child)) {
+            return React.cloneElement(child, {
+              openedIndex: openedIndex,
+              index: children.indexOf(child),
+              updateIndex: updateIndex
+            });
+          }
+          return child;
+        })
+      );
+    }
+  }, [openedIndex]);
+  return <Box>{childrenWithProps}</Box>;
+};
 
 const Accordion = ({
   isVisible,
@@ -13,6 +42,9 @@ const Accordion = ({
   onExpand,
   onCollapse,
   variant,
+  openedIndex,
+  index,
+  updateIndex,
   ...props
 }) => {
   const [isOpen, setIsOpen] = useState(isVisible || false);
@@ -21,6 +53,9 @@ const Accordion = ({
   useEffect(() => {
     if (isOpen === true) {
       onExpand();
+      {
+        updateIndex && updateIndex(index);
+      }
     } else {
       onCollapse();
     }
@@ -39,6 +74,14 @@ const Accordion = ({
       })
     );
   }, [isOpen]);
+
+  useEffect(() => {
+    if (openedIndex === index) {
+      setIsOpen(true);
+    } else {
+      setIsOpen(false);
+    }
+  }, [openedIndex]);
 
   return (
     <ThemeProvider theme={accordionTheme}>
@@ -128,5 +171,4 @@ AccordionHeader.propTypes = {
   title: PropTypes.string.isRequired
 };
 
-export default Accordion;
-export { AccordionCollapse, AccordionHeader };
+export { AccordionCollapse, AccordionHeader, AccordionContainer, Accordion };
