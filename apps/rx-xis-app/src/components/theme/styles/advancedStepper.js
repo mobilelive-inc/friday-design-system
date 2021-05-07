@@ -4,6 +4,11 @@ import { _space } from '../properties/space';
 import { _radii } from '../properties/radius';
 import { _sizes } from '../properties/sizes';
 import { _borderWidths } from '../properties/borderWidths';
+import {
+  unVisitedStep,
+  visitedStep,
+  progressBar
+} from '../variants/advancedStepper';
 
 export const fontSizes = {
   collapseHeadingTextFontSize: _fontSizes.fontsize_2x_tiny,
@@ -38,5 +43,8 @@ export default {
   space,
   radii,
   borderWidths,
-  sizes
+  sizes,
+  unVisitedStep,
+  visitedStep,
+  progressBar
 };

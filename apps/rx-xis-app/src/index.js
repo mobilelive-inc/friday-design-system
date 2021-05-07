@@ -84,6 +84,7 @@ function App() {
         <Text fontSize="fontSizeH2">Advanced Stepper</Text>
         <Container>
           <AdvancedStepper
+            variant="primary"
             value={count}
             total={3}
             hideName={true}

@@ -32,7 +32,7 @@ export const UnVisitedStep = styled(`div`)(
     }
   }),
   props => props,
-  compose(border, layout, space, color, variant({ scale: 'advancedStepper' }))
+  compose(border, layout, space, color, variant({ scale: 'unVisitedStep' }))
 );
 
 export const VistedStep = styled(`div`)(
@@ -52,7 +52,7 @@ export const VistedStep = styled(`div`)(
     }
   }),
   props => props,
-  compose(border, layout, space, color, variant({ scale: 'advancedStepper' }))
+  compose(border, layout, space, color, variant({ scale: 'visitedStep' }))
 );
 
 export const ProgressBar = styled(`div`)(
@@ -69,7 +69,8 @@ export const ProgressBar = styled(`div`)(
     transform: 'translateY(-50%)',
     zIndex: -1,
     opacity: '0.8 !important'
-  })
+  }),
+  compose(border, layout, space, color, variant({ scale: 'progressBar' }))
 );
 
 export const StepItemContainer = styled(`div`)(
@@ -80,4 +81,18 @@ export const StepItemContainer = styled(`div`)(
   {
     alignItems: props => props.alignment || 'start'
   }
+);
+
+export const AnnouncementText = styled(`span`)(
+  css({
+    position: 'absolute',
+    width: '1px',
+    height: '1px',
+    padding: '0',
+    margin: '-1px',
+    overflow: 'hidden',
+    clip: 'rect(0, 0, 0, 0)',
+    whiteSpace: 'nowrap',
+    border: '0'
+  })
 );
