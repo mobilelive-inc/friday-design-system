@@ -1,121 +1,100 @@
-fds-autocomplete {
-  display: flex;
-  position: relative;
-}
-
+fds-autocomplete { position: relative; }
 .fds-autocomplete-loader {
-  position: absolute;
   top: 50%;
+  position: absolute;
   margin-top: -0.5rem;
 }
-
 .fds-autocomplete-dd .fds-autocomplete-input {
-  flex: 1 1 auto;
   width: 1%;
+  flex: 1 1 auto;
 }
+.fds-autocomplete-multiple {
+  left: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 1rem;
+  position: absolute;
+  border: 1px solid var(--black);
+  border-top: 0;
+  background-color: var(--white);
 
+}
 .fds-autocomplete-dd .fds-autocomplete-input,
 .fds-autocomplete-dd .fds-autocomplete-multiple-container {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-
 .fds-autocomplete-dd .fds-autocomplete-dropdown {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0px;
 }
-
-fds-autocomplete .fds-autocomplete-panel {
-  min-width: 100%;
-}
-
+fds-autocomplete .fds-autocomplete-panel { min-width: 100%; }
 .fds-autocomplete-panel {
   position: absolute;
   overflow: auto;
 }
-
 .fds-autocomplete-items {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-
 .fds-autocomplete-item {
   cursor: pointer;
   white-space: nowrap;
   position: relative;
   overflow: hidden;
 }
-
 .fds-autocomplete-multiple-container {
- margin: 0;
- padding: 0;
- list-style-type: none;
- cursor: text;
- overflow: hidden;
- display: flex;
- align-items: center;
+  margin: 0;
+  padding: 0;
+  cursor: text;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  list-style-type: none;
 }
-
 .fds-autocomplete-token {
- cursor: default;
- display: inline-flex;
- align-items: center;
- flex: 0 0 auto;
+  flex: 0 0 auto;
+  cursor: default;
+  align-items: center;
+  display: inline-flex;
 }
-
-.fds-autocomplete-token-icon {
- cursor: pointer;
-}
-
+.fds-autocomplete-token-icon { cursor: pointer; }
 .fds-autocomplete-input-token {
- flex: 1 1 auto;
- display: inline-flex;
+  flex: 1 1 auto;
+  display: inline-flex;
 }
-
 .fds-autocomplete-input-token input {
- border: 0 none;
- outline: 0 none;
- background-color: transparent;
- margin: 0;
- padding: 0;
- box-shadow: none;
- border-radius: 0;
- width: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: 0 none;
+  outline: 0 none;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: transparent;
 }
-
-.fds-fluid .fds-autocomplete {
- display: flex;
-}
-
-.fds-fluid .fds-autocomplete-dd .fds-autocomplete-input {
- width: 1%;
-}
-
+.fds-fluid .fds-autocomplete { display: flex; }
+.fds-fluid .fds-autocomplete-dd .fds-autocomplete-input { width: 1%; }
 //// Customization
-.fds-autocomplete-panel .fds-autocomplete-items {
-  padding: 0.5rem 0;
-}
-
+.fds-autocomplete-panel .fds-autocomplete-items { padding: 0.5rem 0; }
 .fds-autocomplete-panel .fds-autocomplete-items .fds-autocomplete-item {
   margin: 0;
-  padding: 0.5rem 1rem;
   border: 0 none;
   color: #495057;
+  border-radius: 0;
+  padding: 0.5rem 1rem;
   background: transparent;
   transition: box-shadow 0.2s;
-  border-radius: 0;
 }
-
 .fds-autocomplete-panel {
-  background: #ffffff;
-  color: #495057;
   border: 0 none;
+  color: #495057;
   border-radius: 3px;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
-
 .fds-autocomplete-panel .fds-autocomplete-items .fds-autocomplete-item.fds-highlight {
   color: var(--primary-text-color);
   background-color: var(--primary);

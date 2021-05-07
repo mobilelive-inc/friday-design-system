@@ -56,7 +56,9 @@ export const AUTOCOMPLETE_VALUE_ACCESSOR: any = {
   ],
   host: {
     '[class.fds-inputwrapper-filled]': 'filled',
-    '[class.fds-inputwrapper-focus]': 'focus && !disabled'
+    '[class.fds-inputwrapper-focus]': 'focus && !disabled',
+    '[class.w--100]': '100',
+    '[class.d--block]': '200'
   },
   providers: [
     // AUTOCOMPLETE_VALUE_ACCESSOR,
