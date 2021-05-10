@@ -1,66 +1,286 @@
 <div class="position-relative">
-  <fds-button *ngIf="btnDropdown" class="overflow--hidden d--block" className="btn btn--primary w--100" (onClick)="toggleAutocomplete = !toggleAutocomplete">{{ btnText }}</fds-button>
-  <div #container *ngIf="toggleAutocomplete" [ngClass]="{'fds-autocomplete fds-component':true,'fds-autocomplete-dd':dropdown,'fds-autocomplete-multiple py--2':multiple }" [ngStyle]="style" [class]="styleClass">
-      <input *ngIf="!multiple" #in [attr.type]="type" [attr.id]="inputId" [ngStyle]="inputStyle" [class]="inputStyleClass" [autocomplete]="autocomplete" [attr.required]="required" [attr.name]="name"
-      class="formControl fds-autocomplete-input fds-inputtext fds-component" [ngClass]="{'fds-autocomplete-dd-input':dropdown,'fds-disabled': disabled}" [value]="inputFieldValue" aria-autocomplete="list" [attr.aria-controls]="listId" role="searchbox" [attr.aria-expanded]="overlayVisible" aria-haspopup="true" [attr.aria-activedescendant]="'fds-highlighted-option'"
-      (click)="onInputClick($event)" (input)="onInput($event)" (keydown)="onKeydown($event)" (keyup)="onKeyup($event)" [attr.autofocus]="autofocus" (focus)="onInputFocus($event)" (blur)="onInputBlur($event)" (change)="onInputChange($event)" (paste)="onInputPaste($event)"
-      [attr.placeholder]="placeholder" [attr.size]="size" [attr.maxlength]="maxlength" [attr.tabindex]="tabindex" [readonly]="readonly" [disabled]="disabled" [attr.aria-label]="ariaLabel" [attr.aria-labelledby]="ariaLabelledBy" [attr.aria-required]="required"
-      >
-      
-      <input *ngIf="!withinInput && multiple" #multiIn [attr.type]="type" [attr.id]="inputId" class="formControl border border--width border--black my--2" [disabled]="disabled" [attr.placeholder]="(value&&value.length ? null : placeholder)" [attr.tabindex]="tabindex" [attr.maxlength]="maxlength" (input)="onInput($event)"  (click)="onInputClick($event)"
-                      (keydown)="onKeydown($event)" [readonly]="readonly" (keyup)="onKeyup($event)" [attr.autofocus]="autofocus" (focus)="onInputFocus($event)" (blur)="onInputBlur($event)" (change)="onInputChange($event)" (paste)="onInputPaste($event)" [autocomplete]="autocomplete"
-                      [ngStyle]="inputStyle" [class]="inputStyleClass" [attr.aria-label]="ariaLabel" [attr.aria-labelledby]="ariaLabelledBy" [attr.aria-required]="required"
-                      aria-autocomplete="list" [attr.aria-controls]="listId" role="searchbox" [attr.aria-expanded]="overlayVisible" aria-haspopup="true" [attr.aria-activedescendant]="'fds-highlighted-option'">
-      <ul *ngIf="multiple" #multiContainer class="fds-autocomplete-multiple-container fds-component fds-inputtext mx--n2" [ngClass]="{'fds-disabled':disabled,'fds-focus':focus, 'd--flex flex--wrap max-height' : withinInput }" (click)="multiIn?.focus()">
-          <li #token *ngFor="let val of value" class="fds-autocomplete-token m--2 border border--width border--gray bg--gray--light text--black px--2 py--1 curved">
-              <ng-container *ngTemplateOutlet="selectedItemTemplate; context: {$implicit: val}"></ng-container>
-              <span *ngIf="!selectedItemTemplate" class="fds-autocomplete-token-label" tabindex="0">{{resolveFieldData(val)}}</span>
-              <span class="fds-autocomplete-token-icon icon-cross" (click)="removeItem(token)" (keyup.backspace)="removeItem(token)" tabindex="0" *ngIf="!disabled && !readonly"></span>
+  <fds-button
+    *ngIf="btnDropdown"
+    class="overflow--hidden d--block"
+    className="fds-btn-autoComplete btn"
+    (onClick)="toggleAutocomplete = !toggleAutocomplete"
+    >{{ btnText }}</fds-button
+  >
+  <div
+    #container
+    *ngIf="toggleAutocomplete"
+    [ngClass]="{
+      'fds-autocomplete fds-component': true,
+      'fds-autocomplete-dd': dropdown,
+      'fds-autocomplete-multiple': multiple
+    }"
+    [ngStyle]="style"
+    [class]="styleClass"
+  >
+    <input
+      *ngIf="!multiple"
+      #in
+      [attr.type]="type"
+      [attr.id]="inputId"
+      [ngStyle]="inputStyle"
+      [class]="inputStyleClass"
+      [autocomplete]="autocomplete"
+      [attr.required]="required"
+      [attr.name]="name"
+      class="formControl fds-autocomplete-input fds-inputtext fds-component"
+      [ngClass]="{
+        'fds-autocomplete-dd-input': dropdown,
+        'fds-disabled': disabled
+      }"
+      [value]="inputFieldValue"
+      aria-autocomplete="list"
+      [attr.aria-controls]="listId"
+      role="searchbox"
+      [attr.aria-expanded]="overlayVisible"
+      aria-haspopup="true"
+      [attr.aria-activedescendant]="'fds-highlighted-option'"
+      (click)="onInputClick($event)"
+      (input)="onInput($event)"
+      (keydown)="onKeydown($event)"
+      (keyup)="onKeyup($event)"
+      [attr.autofocus]="autofocus"
+      (focus)="onInputFocus($event)"
+      (blur)="onInputBlur($event)"
+      (change)="onInputChange($event)"
+      (paste)="onInputPaste($event)"
+      [attr.placeholder]="placeholder"
+      [attr.size]="size"
+      [attr.maxlength]="maxlength"
+      [attr.tabindex]="tabindex"
+      [readonly]="readonly"
+      [disabled]="disabled"
+      [attr.aria-label]="ariaLabel"
+      [attr.aria-labelledby]="ariaLabelledBy"
+      [attr.aria-required]="required"
+    />
+
+    <input
+      *ngIf="!withinInput && multiple"
+      #multiIn
+      [attr.type]="type"
+      [attr.id]="inputId"
+      class="formControl"
+      [disabled]="disabled"
+      [attr.placeholder]="value && value.length ? null : placeholder"
+      [attr.tabindex]="tabindex"
+      [attr.maxlength]="maxlength"
+      (input)="onInput($event)"
+      (click)="onInputClick($event)"
+      (keydown)="onKeydown($event)"
+      [readonly]="readonly"
+      (keyup)="onKeyup($event)"
+      [attr.autofocus]="autofocus"
+      (focus)="onInputFocus($event)"
+      (blur)="onInputBlur($event)"
+      (change)="onInputChange($event)"
+      (paste)="onInputPaste($event)"
+      [autocomplete]="autocomplete"
+      [ngStyle]="inputStyle"
+      [class]="inputStyleClass"
+      [attr.aria-label]="ariaLabel"
+      [attr.aria-labelledby]="ariaLabelledBy"
+      [attr.aria-required]="required"
+      aria-autocomplete="list"
+      [attr.aria-controls]="listId"
+      role="searchbox"
+      [attr.aria-expanded]="overlayVisible"
+      aria-haspopup="true"
+      [attr.aria-activedescendant]="'fds-highlighted-option'"
+    />
+    <ul
+      *ngIf="multiple"
+      #multiContainer
+      class="fds-autocomplete-multiple-container fds-component fds-inputtext mx--n2"
+      [ngClass]="{
+        'fds-disabled': disabled,
+        'fds-focus': focus,
+        'd--flex flex--wrap max-height': withinInput
+      }"
+      (click)="multiIn?.focus()"
+    >
+      <li #token *ngFor="let val of value" class="fds-autocomplete-token">
+        <ng-container
+          *ngTemplateOutlet="selectedItemTemplate; context: { $implicit: val }"
+        ></ng-container>
+        <span
+          *ngIf="!selectedItemTemplate"
+          class="fds-autocomplete-token-label"
+          tabindex="0"
+          >{{ resolveFieldData(val) }}</span
+        >
+        <span
+          class="fds-autocomplete-token-icon icon-cross"
+          (click)="removeItem(token)"
+          (keyup.backspace)="removeItem(token)"
+          tabindex="0"
+          *ngIf="!disabled && !readonly"
+        ></span>
+      </li>
+      <li *ngIf="withinInput" class="flex--grow--1">
+        <input
+          #multiIn
+          [attr.type]="type"
+          [attr.id]="inputId"
+          class="formControl my--2"
+          [disabled]="disabled"
+          [attr.placeholder]="value && value.length ? null : placeholder"
+          [attr.tabindex]="tabindex"
+          [attr.maxlength]="maxlength"
+          (input)="onInput($event)"
+          (click)="onInputClick($event)"
+          (keydown)="onKeydown($event)"
+          [readonly]="readonly"
+          (keyup)="onKeyup($event)"
+          [attr.autofocus]="autofocus"
+          (focus)="onInputFocus($event)"
+          (blur)="onInputBlur($event)"
+          (change)="onInputChange($event)"
+          (paste)="onInputPaste($event)"
+          [autocomplete]="autocomplete"
+          [ngStyle]="inputStyle"
+          [class]="inputStyleClass"
+          [attr.aria-label]="ariaLabel"
+          [attr.aria-labelledby]="ariaLabelledBy"
+          [attr.aria-required]="required"
+          aria-autocomplete="list"
+          [attr.aria-controls]="listId"
+          role="searchbox"
+          [attr.aria-expanded]="overlayVisible"
+          aria-haspopup="true"
+          [attr.aria-activedescendant]="'fds-highlighted-option'"
+        />
+      </li>
+    </ul>
+    <i *ngIf="loading" class="fds-autocomplete-loader pi pi-spinner pi-spin"></i
+    ><button
+      #ddBtn
+      type="button"
+      pButton
+      [icon]="dropdownIcon"
+      class="fds-autocomplete-dropdown"
+      [disabled]="disabled"
+      pRipple
+      (click)="handleDropdownClick($event)"
+      *ngIf="dropdown"
+      [attr.tabindex]="tabindex"
+    ></button>
+    <div
+      #panel
+      *ngIf="overlayVisible"
+      [ngClass]="['fds-autocomplete-panel fds-component']"
+      [style.max-height]="virtualScroll ? 'auto' : scrollHeight"
+      [ngStyle]="panelStyle"
+      [class]="panelStyleClass"
+      [@overlayAnimation]="{
+        value: 'visible',
+        params: {
+          showTransitionParams: showTransitionOptions,
+          hideTransitionParams: hideTransitionOptions
+        }
+      }"
+      (@overlayAnimation.start)="onOverlayAnimationStart($event)"
+    >
+      <ul role="listbox" [attr.id]="listId" class="fds-autocomplete-items">
+        <ng-container *ngIf="group">
+          <ng-template ngFor let-optgroup [ngForOf]="suggestions">
+            <li class="fds-autocomplete-item-group">
+              <span *ngIf="!groupTemplate">{{
+                getOptionGroupLabel(optgroup) || 'empty'
+              }}</span>
+              <ng-container
+                *ngTemplateOutlet="
+                  groupTemplate;
+                  context: { $implicit: optgroup }
+                "
+              ></ng-container>
+            </li>
+            <ng-container
+              *ngTemplateOutlet="
+                itemslist;
+                context: { $implicit: getOptionGroupChildren(optgroup) }
+              "
+            ></ng-container>
+          </ng-template>
+        </ng-container>
+        <ng-container *ngIf="!group">
+          <ng-container
+            *ngTemplateOutlet="itemslist; context: { $implicit: suggestions }"
+          ></ng-container>
+        </ng-container>
+        <ng-template #itemslist let-suggestionsToDisplay>
+          <ng-container *ngIf="!virtualScroll; else virtualScrollList">
+            <li
+              role="option"
+              *ngFor="let option of suggestionsToDisplay; let idx = index"
+              class="fds-autocomplete-item"
+              pRipple
+              [ngClass]="{ 'fds-highlight': option === highlightOption }"
+              [id]="highlightOption == option ? 'fds-highlighted-option' : ''"
+              (click)="selectItem(option)"
+            >
+              <span *ngIf="!itemTemplate">{{ resolveFieldData(option) }}</span>
+              <ng-container
+                *ngTemplateOutlet="
+                  itemTemplate;
+                  context: { $implicit: option, index: idx }
+                "
+              ></ng-container>
+            </li>
+          </ng-container>
+          <ng-template #virtualScrollList>
+            <cdk-virtual-scroll-viewport
+              [ngStyle]="{ height: scrollHeight }"
+              [itemSize]="itemSize"
+              *ngIf="virtualScroll && !noResults"
+            >
+              <ng-container
+                *cdkVirtualFor="
+                  let option of suggestionsToDisplay;
+                  let i = index;
+                  let c = count;
+                  let f = first;
+                  let l = last;
+                  let e = even;
+                  let o = odd
+                "
+              >
+                <li
+                  role="option"
+                  class="fds-autocomplete-item"
+                  pRipple
+                  [ngClass]="{ 'fds-highlight': option === highlightOption }"
+                  [ngStyle]="{ height: itemSize + 'px' }"
+                  [id]="
+                    highlightOption == option ? 'fds-highlighted-option' : ''
+                  "
+                  (click)="selectItem(option)"
+                >
+                  <span *ngIf="!itemTemplate">{{
+                    resolveFieldData(option)
+                  }}</span>
+                  <ng-container
+                    *ngTemplateOutlet="
+                      itemTemplate;
+                      context: { $implicit: option, index: i }
+                    "
+                  ></ng-container>
+                </li>
+              </ng-container>
+            </cdk-virtual-scroll-viewport>
+          </ng-template>
+          <li
+            *ngIf="noResults && emptyMessage"
+            class="fds-autocomplete-emptymessage fds-autocomplete-item"
+          >
+            {{ emptyMessage }}
           </li>
-          <li *ngIf="withinInput" class="flex--grow--1">
-              <input #multiIn [attr.type]="type" [attr.id]="inputId" class="formControl my--2" [disabled]="disabled" [attr.placeholder]="(value&&value.length ? null : placeholder)" [attr.tabindex]="tabindex" [attr.maxlength]="maxlength" (input)="onInput($event)"  (click)="onInputClick($event)"
-                      (keydown)="onKeydown($event)" [readonly]="readonly" (keyup)="onKeyup($event)" [attr.autofocus]="autofocus" (focus)="onInputFocus($event)" (blur)="onInputBlur($event)" (change)="onInputChange($event)" (paste)="onInputPaste($event)" [autocomplete]="autocomplete"
-                      [ngStyle]="inputStyle" [class]="inputStyleClass" [attr.aria-label]="ariaLabel" [attr.aria-labelledby]="ariaLabelledBy" [attr.aria-required]="required"
-                      aria-autocomplete="list" [attr.aria-controls]="listId" role="searchbox" [attr.aria-expanded]="overlayVisible" aria-haspopup="true" [attr.aria-activedescendant]="'fds-highlighted-option'">
-          </li>
+        </ng-template>
       </ul>
-      <i *ngIf="loading" class="fds-autocomplete-loader pi pi-spinner pi-spin"></i><button #ddBtn type="button" pButton [icon]="dropdownIcon" class="fds-autocomplete-dropdown" [disabled]="disabled" pRipple
-          (click)="handleDropdownClick($event)" *ngIf="dropdown" [attr.tabindex]="tabindex"></button>
-      <div #panel *ngIf="overlayVisible" [ngClass]="['fds-autocomplete-panel fds-component']" [style.max-height]="virtualScroll ? 'auto' : scrollHeight" [ngStyle]="panelStyle" [class]="panelStyleClass"
-          [@overlayAnimation]="{value: 'visible', params: {showTransitionParams: showTransitionOptions, hideTransitionParams: hideTransitionOptions}}" (@overlayAnimation.start)="onOverlayAnimationStart($event)">
-          <ul role="listbox" [attr.id]="listId" class="fds-autocomplete-items">
-              <ng-container *ngIf="group">
-                  <ng-template ngFor let-optgroup [ngForOf]="suggestions">
-                      <li class="fds-autocomplete-item-group">
-                          <span *ngIf="!groupTemplate">{{getOptionGroupLabel(optgroup)||'empty'}}</span>
-                          <ng-container *ngTemplateOutlet="groupTemplate; context: {$implicit: optgroup}"></ng-container>
-                      </li>
-                      <ng-container *ngTemplateOutlet="itemslist; context: {$implicit: getOptionGroupChildren(optgroup)}"></ng-container>
-                  </ng-template>
-              </ng-container>
-              <ng-container *ngIf="!group">
-                      <ng-container *ngTemplateOutlet="itemslist; context: {$implicit: suggestions}"></ng-container>
-              </ng-container>
-              <ng-template #itemslist let-suggestionsToDisplay>
-                  <ng-container *ngIf="!virtualScroll; else virtualScrollList">
-                      <li role="option" *ngFor="let option of suggestionsToDisplay; let idx = index" class="fds-autocomplete-item" pRipple [ngClass]="{'fds-highlight': (option === highlightOption)}" [id]="highlightOption == option ? 'fds-highlighted-option':''" (click)="selectItem(option)">
-                          <span *ngIf="!itemTemplate">{{resolveFieldData(option)}}</span>
-                          <ng-container *ngTemplateOutlet="itemTemplate; context: {$implicit: option, index: idx}"></ng-container>
-                      </li>
-                  </ng-container>
-                  <ng-template #virtualScrollList>
-                      <cdk-virtual-scroll-viewport [ngStyle]="{'height': scrollHeight}" [itemSize]="itemSize" *ngIf="virtualScroll && !noResults">
-                          <ng-container *cdkVirtualFor="let option of suggestionsToDisplay; let i = index; let c = count; let f = first; let l = last; let e = even; let o = odd">
-                              <li role="option" class="fds-autocomplete-item" pRipple [ngClass]="{'fds-highlight': (option === highlightOption)}" [ngStyle]="{'height': itemSize + 'px'}" [id]="highlightOption == option ? 'fds-highlighted-option':''" (click)="selectItem(option)">
-                                  <span *ngIf="!itemTemplate">{{resolveFieldData(option)}}</span>
-                                  <ng-container *ngTemplateOutlet="itemTemplate; context: {$implicit: option, index: i}"></ng-container>
-                              </li>
-                          </ng-container>
-                      </cdk-virtual-scroll-viewport>
-                  </ng-template>
-                  <li *ngIf="noResults && emptyMessage" class="fds-autocomplete-emptymessage fds-autocomplete-item">{{emptyMessage}}</li>
-              </ng-template>
-          </ul>
-      </div>
     </div>
+  </div>
 </div>
