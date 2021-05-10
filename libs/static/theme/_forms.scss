@@ -152,4 +152,47 @@
   --file-progress-filled-color: var(--primary);
   --file-progress-bg-color: var(--primary-lighter);
   --fileUpload-background-color: var(--orange-lighter);
+
+  /*
+  **Auto Complete Dropdown Reset Variables
+  */
+
+  //Parent Div Variables
+  --warraper-auto-completep-border-width: 1px 1px 1px 1px;
+  --warraper-auto-completep-border-style: solid;
+  --warraper-auto-completep-border-color: var(--black);
+
+  // Auto Complete Button Variables
+  --btn-auto-complete-margin: 0;
+  --btn-auto-complete-padding: 1rem 1rem 1rem 1rem;
+  --btn-auto-complete-text-color: var(--black);
+  --btn-auto-complete-bg-color: var(--primary);
+  --btn-auto-complete-hover-text-color: var(--black);
+  --btn-auto-complete-hover-bg-color: var(--primary);
+
+  // Auto Complete DropDown Variables
+  --dropdown-auto-complete-border-width: 1px 1px 1px 1px;
+  --dropdown-auto-complete-border-style: solid;
+  --dropdown-auto-complete-border-color: var(--black);
+  --dropdown-auto-complete-bg-color: var(--white);
+  --dropdown-auto-complete-margin: 0 0 0 0;
+  --dropdown-auto-complete-padding: 0 -0.5rem 0 -0.5rem;
+  --dropdown-auto-complete-max-height: 170px;
+
+  // Auto Complete Input Search Variables
+  --auto-complete-search-line-height: 1.4;
+  --auto-complete-search-text-color: var(--black);
+  --auto-complete-search-bg-color: var(--gray-lighter);
+  --auto-complete-search-border-color: var(--gray-light);
+  --auto-complete-search-margin: 0.25rem 0.5rem 0.25rem 0.5rem;
+  --auto-complete-search-padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  --auto-complete-search-border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+
+  // Auto Complete Tags Variables
+  --tag-text-color: var(--black);
+  --tag-bg-color: var(--gray-lighter);
+  --tag-border-color: var(--gray-light);
+  --tag-margin: 0.25rem 0.5rem 0.25rem 0.5rem;
+  --tag-padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  --tag-border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
 }
