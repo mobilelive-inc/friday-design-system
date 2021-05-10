@@ -17,6 +17,7 @@
     [ngStyle]="style"
     [class]="styleClass"
   >
+    <label for="inputId" class="sr--only">auto complete search</label>
     <input
       *ngIf="!multiple"
       #in
@@ -58,7 +59,7 @@
       [attr.aria-labelledby]="ariaLabelledBy"
       [attr.aria-required]="required"
     />
-
+    <label for="inputId" class="sr--only">auto complete search</label>
     <input
       *ngIf="!withinInput && multiple"
       #multiIn
@@ -122,6 +123,7 @@
         ></span>
       </li>
       <li *ngIf="withinInput" class="flex--grow--1">
+        <label for="inputId" class="sr--only">auto complete search</label>
         <input
           #multiIn
           [attr.type]="type"
