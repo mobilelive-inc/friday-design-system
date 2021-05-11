@@ -51,8 +51,12 @@
   &[aria-disabled='true'],
   &[readonly] {
     pointer-events: none;
+    color: var(--input-disabled-color);
+    border-color: var(--input-disabled-border);
     background-color: var(--input-disabled-bg);
-    opacity: 0.5;
+    &::placeholder {
+      color: var(--input-disabled-placeholder-color);
+    }
   }
 
   //&--curved {
@@ -365,8 +369,12 @@ input[type='search'] {
   &.disabled,
   &.readonly {
     pointer-events: none;
+    color: var(--input-disabled-color);
+    border-color: var(--input-disabled-border);
     background-color: var(--input-disabled-bg);
-    opacity: 0.2;
+    &::placeholder {
+      color: var(--input-disabled-placeholder-color);
+    }
   }
 
   &.hasBg {
