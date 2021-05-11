@@ -1,12 +1,13 @@
 <div class="position-relative">
   <fds-button
     *ngIf="btnDropdown"
+    icon="icon-arrow-down fds-dropdown-icon"
+    iconPos="right"
+    [label]="btnText"
     class="overflow--hidden d--block"
     className="fds-btn-autoComplete btn"
     (onClick)="toggleAutocomplete = !toggleAutocomplete"
   >
-    <span>{{ btnText }}</span>
-    <span class="fds-dropdown-icon icon-arrow-down"></span>
   </fds-button>
   <div
     #container

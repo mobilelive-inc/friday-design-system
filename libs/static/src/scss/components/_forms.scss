@@ -1261,12 +1261,14 @@ label {
 **Auto Complete Dropdown Style
 */
 .fds-btn-autoComplete {
+  display: flex;
   width: var(--btn-auto-complete-width);
   margin: var(--btn-auto-complete-margin);
   padding: var(--btn-auto-complete-padding);
   color: var(--btn-auto-complete-text-color);
   min-width: var(--btn-auto-complete-min-width);
   background-color: var(--btn-auto-complete-bg-color);
+  justify-content: var(--btn-auto-complete-justify-content);
   &:hover {
     color: var(--btn-auto-complete-hover-text-color);
     background-color: var(--btn-auto-complete-hover-bg-color);
