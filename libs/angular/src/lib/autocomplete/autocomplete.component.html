@@ -4,8 +4,10 @@
     class="overflow--hidden d--block"
     className="fds-btn-autoComplete btn"
     (onClick)="toggleAutocomplete = !toggleAutocomplete"
-    >{{ btnText }}</fds-button
   >
+    <span>{{ btnText }}</span>
+    <span class="fds-dropdown-icon icon-arrow-down"></span>
+  </fds-button>
   <div
     #container
     *ngIf="toggleAutocomplete"
@@ -17,8 +19,9 @@
     [ngStyle]="style"
     [class]="styleClass"
   >
-    <label for="inputId" class="sr--only">auto complete search</label>
-    <span></span>
+    <label *ngIf="!multiple" for="inputId" class="sr--only"
+      >auto complete search</label
+    >
     <input
       *ngIf="!multiple"
       #in
@@ -60,7 +63,9 @@
       [attr.aria-labelledby]="ariaLabelledBy"
       [attr.aria-required]="required"
     />
-    <label for="inputId" class="sr--only">auto complete search</label>
+    <label *ngIf="!withinInput && multiple" for="inputId" class="sr--only"
+      >auto complete search</label
+    >
     <input
       *ngIf="!withinInput && multiple"
       #multiIn
@@ -188,7 +193,7 @@
       }"
       (@overlayAnimation.start)="onOverlayAnimationStart($event)"
     >
-      <ul role="listbox" [attr.id]="listId" class="fds-autocomplete-items">
+      <ul role="select" [attr.id]="listId" class="fds-autocomplete-items">
         <ng-container *ngIf="group">
           <ng-template ngFor let-optgroup [ngForOf]="suggestions">
             <li class="fds-autocomplete-item-group">

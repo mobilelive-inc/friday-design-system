@@ -93,6 +93,8 @@ export class AutocompleteComponent
 
   _btnDropdown = false;
 
+  @Input() disableBtnDropdown: boolean = false;
+
   @Input() get btnDropdown(): boolean {
     return this._btnDropdown;
   }
@@ -101,7 +103,7 @@ export class AutocompleteComponent
     this._btnDropdown = val;
     this._toggleAutocomplete = !val;
   }
-  
+
   _toggleAutocomplete = true;
 
   @Input() get toggleAutocomplete(): boolean {
@@ -291,7 +293,10 @@ export class AutocompleteComponent
     if (this.highlightOptionChanged) {
       setTimeout(() => {
         if (this.overlay) {
-          let listItem = DomHandler.findSingle(this.overlay, 'li.fds-highlight');
+          let listItem = DomHandler.findSingle(
+            this.overlay,
+            'li.fds-highlight'
+          );
           if (listItem) {
             DomHandler.scrollInView(this.overlay, listItem);
           }

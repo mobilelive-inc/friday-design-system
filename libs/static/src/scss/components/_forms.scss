@@ -1271,6 +1271,10 @@ label {
     color: var(--btn-auto-complete-hover-text-color);
     background-color: var(--btn-auto-complete-hover-bg-color);
   }
+  .fds-dropdown-icon {
+    margin: var(--btn-auto-complete-icon-spacing);
+    font-size: var(--btn-auto-complete-icon-font-size);
+  }
 }
 .fds-autocomplete-multiple {
   top: var(--warraper-auto-completep-top);
