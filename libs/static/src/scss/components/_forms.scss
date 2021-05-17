@@ -1260,6 +1260,15 @@ label {
 /*
 **Auto Complete Dropdown Style
 */
+
+.fds-btndropdown-icon {
+  width: 40px;
+  min-height: 40px;
+  padding: 0 0.25rem 0 0;
+  color: var(--btn-auto-complete-icon-color);
+  background-color: var(--btn-auto-complete-icon-bg-color);
+  font-size: var(--btn-auto-complete-icon-font-size);
+}
 .fds-btn-autoComplete {
   display: flex;
   width: var(--btn-auto-complete-width);

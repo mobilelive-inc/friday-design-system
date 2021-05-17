@@ -14,7 +14,7 @@
     *ngIf="toggleAutocomplete"
     [ngClass]="{
       'fds-autocomplete fds-component': true,
-      'fds-autocomplete-dd': dropdown,
+      'fds-autocomplete-dd d--flex': dropdown,
       'fds-autocomplete-multiple': multiple
     }"
     [ngStyle]="style"
@@ -166,18 +166,15 @@
       </li>
     </ul>
     <i *ngIf="loading" class="fds-autocomplete-loader pi pi-spinner pi-spin"></i
-    ><button
+    ><fds-button
       #ddBtn
-      type="button"
-      pButton
       [icon]="dropdownIcon"
-      class="fds-autocomplete-dropdown"
-      [disabled]="disabled"
-      pRipple
-      (click)="handleDropdownClick($event)"
+      className="fds-autocomplete-dropdown fds-btndropdown-icon"
+      [ariaDisabled]="disabled"
+      (onClick)="handleDropdownClick($event)"
       *ngIf="dropdown"
       [attr.tabindex]="tabindex"
-    ></button>
+    ></fds-button>
     <div
       #panel
       *ngIf="overlayVisible"

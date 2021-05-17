@@ -14,6 +14,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
           (completeMethod)="filterCountry($event)"
           field="name"
           [minLength]="1"
+          [dropdown]="true"
         >
         </fds-autocomplete>
       </fds-form-field>
@@ -45,7 +46,7 @@ export class AutocompleteBasicComponent {
   form = this.fb.group({
     country: new FormControl('')
   });
-  
+
   form1 = this.fb.group({
     country: new FormControl('')
   });

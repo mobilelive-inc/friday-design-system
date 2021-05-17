@@ -152,7 +152,7 @@ export class AutocompleteComponent
 
   @Input() ariaLabelledBy: string;
 
-  @Input() dropdownIcon: string = 'pi pi-chevron-down';
+  @Input() dropdownIcon: string = 'icon-arrow-down';
 
   @Input() unique: boolean = true;
 
