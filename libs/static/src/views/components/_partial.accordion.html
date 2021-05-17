@@ -1,7 +1,30 @@
 <div id="accordion">
   <div class="infoBlockPiece">
     <h2>Collapse</h2>
-
+    <p>
+      The collapse is used to show and hide content. Buttons or anchors are used
+      to toggle specific elements.
+    </p>
+    <div class="highlighted-block mb--3">
+      <h5 class="text--primary">How to import accordion/collapse styles:</h5>
+      <p>
+        In order to use accordions in your project, import following path in
+        your main styles:
+      </p>
+      <h6>
+        @import 'node_modules/@mobilelivenpm/fds-static-scss/src/scss/accordion
+      </h6>
+    </div>
+    <div class="highlighted-block mb--3">
+      <h5 class="text--primary">How to customize accordion/collapse styles:</h5>
+      <p>
+        In order to customize accordions in your theme as per requirements,
+        import following path in your theme-settings file:
+      </p>
+      <h6>
+        @import 'node_modules/@mobilelivenpm/fds-static-scss/theme/accordion
+      </h6>
+    </div>
     <div class="highlighted-block mb--4">
       <div class="row mb--3">
         <div class="col--12">
@@ -87,7 +110,7 @@
         <label for="collapsiblebtnsCollapse" class="lbl-toggle m--0"></label>
         <div class="collapsible-content">
           <div class="content-inner">
-            <pre style="font-family: Montserrat; font-size: 12pt; margin: 0;">
+            <pre style="font-family: Montserrat; font-size: 12pt; margin: 0">
 <span style="color: rgb(0,0,128);">&lt;button
   <span style="color: rgb(0,0,225);">class</span><span style="color: rgb(0,128,0)">="fds--btncollapse font--weight--bold btn--primary border--0 d--flex justify--content--between w--100 mb--1"</span>
   <span style="color: rgb(0,0,225);">data-toggle</span><span style="color: rgb(0,128,0)">="fds-collapse"</span>
@@ -159,8 +182,12 @@
       </div>
     </div>
 
-      <h2>Accordion</h2>
-      <div class="highlighted-block">
+    <h2>Accordion</h2>
+    <p>
+      With some additional classes, the default collapse component is converted
+      to Accordion.
+    </p>
+    <div class="highlighted-block mb--3">
       <div class="row mb--3">
         <div class="col--12">
           <div id="fds-accordion" class="fds-accordion">

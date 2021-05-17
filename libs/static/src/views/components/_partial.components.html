@@ -7,6 +7,30 @@
         action on the page. A basic tooltip shows information on hover and does
         not require additional JavaScript functions.
       </p>
+      <div class="highlighted-block mb--3">
+        <h5 class="text--primary">How to import tooltip styles:</h5>
+        <p>
+          In order to use tooltips in your project, import following path in
+          your main styles:
+        </p>
+        <h6>
+          @import 'node_modules/@mobilelivenpm/fds-static-scss/src/scss/tooltip
+        </h6>
+      </div>
+      <div class="highlighted-block mb--3">
+        <h5 class="text--primary">How to customize tooltip styles:</h5>
+        <p>
+          In order to customize tooltips in your theme as per requirements,
+          import following path in your theme-settings file:
+        </p>
+        <h6>
+          @import 'node_modules/@mobilelivenpm/fds-static-scss/theme/tooltip
+        </h6>
+      </div>
+      <h6>
+        Note: These imports also adds popover styles so we do not need to import
+        them for popovers separately.
+      </h6>
       <div class="highlighted-block mb--4">
         <h5 class="mb--2">Tooltip with no arrow</h5>
         <div>
@@ -14,7 +38,7 @@
             This is a tooltip with dark background. Hover on icon to reveal
             tooltip
             <span
-              style="color: var(--primary);"
+              style="color: var(--primary)"
               class="ml--2 tooltip-holder sample icon-info"
             >
               <span
@@ -28,10 +52,10 @@
             </span>
           </p>
         </div>
-        <div style="text-align: right;">
+        <div style="text-align: right">
           <p>
             <span
-              style="color: var(--primary);"
+              style="color: var(--primary)"
               class="ml--2 tooltip-holder sample icon-info"
             >
               <span
@@ -53,13 +77,13 @@
           <div class="collapsible-content">
             <div class="content-inner">
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;ml--2 tooltip-holder sample icon-info&quot;</span><span style="color:rgb(0,0,128);">&gt;
   </span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark curved py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;false&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
   </span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span></pre>
 
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;ml--2 tooltip-holder sample icon-info&quot;</span><span style="color:rgb(0,0,128);">&gt;
   </span><span style="color:rgb(0,0,128);">    &lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;light curved py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;false&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
   </span><span style="color:rgb(0,0,128);">&lt;/span&gt;</span></pre>
@@ -330,7 +354,7 @@
           <div class="collapsible-content">
             <div class="content-inner">
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p--3 tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">  </span>Top Start
   <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top-start&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
@@ -338,7 +362,7 @@
 
 </pre>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p--3 tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">  </span>Top End
   <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top-end&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
@@ -346,7 +370,7 @@
 
 </pre>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p--3 tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">  </span>Top
   <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;top&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
@@ -354,7 +378,7 @@
 
 </pre>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p--3 tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">  </span>Left Start
   <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;left-start&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
@@ -362,7 +386,7 @@
 
 </pre>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p--3 tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">  </span>Left
   <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;left&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
@@ -370,7 +394,7 @@
 
 </pre>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p--3 tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">  </span>Left End
   <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;left-end&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
@@ -378,7 +402,7 @@
 
 </pre>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p--3 tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">  </span>Right Start
   <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;right-start&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
@@ -386,7 +410,7 @@
 
 </pre>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p--3 tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">  </span>Right
   <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;right&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
@@ -394,7 +418,7 @@
 
 </pre>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p--3 tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">  </span>Right End
   <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;right-end&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
@@ -402,7 +426,7 @@
 
 </pre>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p--3 tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">  </span>Bottom Start
   <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;bottom-start&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
@@ -410,7 +434,7 @@
 
 </pre>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p--3 tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">  </span>Bottom
   <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;bottom&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
@@ -418,7 +442,7 @@
 
 </pre>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">style</span><span style="color:rgb(0,128,0);">=&quot;</span><span style="color:rgb(0,0,255);">background-color</span>: <span style="color:rgb(0,0,128);">var</span>(<span style="color:rgb(0,0,128);">--primary</span>)<span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">font-weight</span>: <span style="color:rgb(0,128,0);">bold</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">display</span>:<span style="color:rgb(0,128,0);">inline-block</span><span style="color:#cc7832;">; </span><span style="color:rgb(0,0,255);">vertical-align</span>: <span style="color:rgb(0,128,0);">top</span><span style="color:#cc7832;">;</span><span style="color:rgb(0,128,0);">&quot; </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;p--3 tooltip-holder&quot;</span><span style="color:rgb(0,0,128);">&gt;
 </span><span style="color:rgb(0,0,128);">  </span>Bottom End
   <span style="color:rgb(0,0,128);">&lt;span </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,128,0);">=&quot;dark py--2 px--3 text--center&quot; </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,128,0);">=&quot;true&quot; </span><span style="color:rgb(0,0,255);">data-position</span><span style="color:rgb(0,128,0);">=&quot;bottom-end&quot; </span><span style="color:rgb(0,0,255);">data-type="tooltip" tabindex</span><span style="color:rgb(0,128,0);">=&quot;1&quot;</span><span style="color:rgb(0,0,128);">&gt;</span>This is a tooltip<span style="color:rgb(0,0,128);">&lt;/span&gt;
@@ -440,7 +464,7 @@
           <p>
             Hover on icon to reveal tooltip:
             <span
-              style="color: var(--dark);"
+              style="color: var(--dark)"
               class="ml--2 tooltip-holder sample icon-info"
             >
               <span
@@ -461,7 +485,7 @@
           <div class="collapsible-content">
             <div class="content-inner">
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,0);">&lt;span
   </span><span style="color:rgb(0,0,0);">    </span><span style="color:rgb(0,0,255);">class</span><span style="color:rgb(0,0,128);">=&quot;dark curved py--2 px--3&quot;
   </span><span style="color:rgb(0,0,128);">    </span><span style="color:rgb(0,0,255);">data-arrow</span><span style="color:rgb(0,0,128);">=&quot;true&quot;
@@ -487,7 +511,7 @@
           <span class="popup-holder">
             <span
               class="icon-warning-circle"
-              style="font-size: 1.5rem; font-color: var(--primary);"
+              style="font-size: 1.5rem; color: var(--primary)"
             >
               <span class="sr--only">info-icon</span>
             </span>
@@ -497,7 +521,7 @@
               data-position="top"
               data-type="popover"
               tabindex="1"
-              style="opacity: 1; visibility: visible;"
+              style="opacity: 1; visibility: visible"
             >
               <span tabindex="1" class="icon icon-error mr--2">
                 <span class="sr--only">info-icon</span>
@@ -518,7 +542,7 @@
           <span class="popup-holder">
             <span
               class="icon-warning-circle"
-              style="font-size: 1.5rem; font-color: var(--primary);"
+              style="font-size: 1.5rem; font-color: var(--primary)"
             ></span>
             <div
               class="d--flex align--items--start dark p--3"
@@ -526,7 +550,7 @@
               data-position="top"
               data-type="popover"
               tabindex="1"
-              style="opacity: 1; visibility: visible;"
+              style="opacity: 1; visibility: visible"
             >
               <span tabindex="1" class="icon icon-error mr--3"
                 ><span class="sr--only">info-icon</span></span
@@ -547,7 +571,7 @@
           <span class="popup-holder">
             <span
               class="icon-warning-circle"
-              style="font-size: 1.5rem; color: var(--primary);"
+              style="font-size: 1.5rem; color: var(--primary)"
             ></span>
             <div
               class="d--flex align--items--start light p--3"
@@ -555,7 +579,7 @@
               data-position="top"
               data-type="popover"
               tabindex="1"
-              style="opacity: 1; visibility: visible;"
+              style="opacity: 1; visibility: visible"
             >
               <span tabindex="1" class="icon icon-error mr--3"
                 ><span class="sr--only">info-icon</span></span
@@ -576,7 +600,7 @@
           <span class="popup-holder">
             <span
               class="icon-warning-circle"
-              style="font-size: 1.5rem; color: var(--primary);"
+              style="font-size: 1.5rem; color: var(--primary)"
             ></span>
             <div
               class="d--flex align--items--start dark p--3 curved"
@@ -584,7 +608,7 @@
               data-position="top"
               data-type="popover"
               tabindex="1"
-              style="opacity: 1; visibility: visible;"
+              style="opacity: 1; visibility: visible"
             >
               <span tabindex="1" class="icon icon-error mr--3"
                 ><span class="sr--only">info-icon</span></span
@@ -606,7 +630,7 @@
           <span class="popup-holder">
             <span
               class="icon-warning-circle pl--3"
-              style="font-size: 1.5rem; color: var(--primary);"
+              style="font-size: 1.5rem; color: var(--primary)"
             ></span>
             <div
               class="d--flex align--items--start dark p--3"
@@ -614,7 +638,7 @@
               data-position="top-start"
               data-type="popover"
               tabindex="1"
-              style="opacity: 1; visibility: visible;"
+              style="opacity: 1; visibility: visible"
             >
               <span tabindex="1" class="icon icon-error mr--3"
                 ><span class="sr--only">info-icon</span></span
@@ -636,7 +660,7 @@
           <span class="popup-holder">
             <span
               class="icon-warning-circle pr--3"
-              style="font-size: 1.5rem; color: var(--primary);"
+              style="font-size: 1.5rem; color: var(--primary)"
             ></span>
             <div
               class="d--flex align--items--start dark p--3"
@@ -644,7 +668,7 @@
               data-position="top-end"
               data-type="popover"
               tabindex="1"
-              style="opacity: 1; visibility: visible;"
+              style="opacity: 1; visibility: visible"
             >
               <span tabindex="1" class="icon icon-error mr--3"
                 ><span class="sr--only">info-icon</span></span
@@ -666,7 +690,7 @@
           <span class="popup-holder">
             <span
               class="icon-warning-circle"
-              style="font-size: 1.5rem; color: var(--primary);"
+              style="font-size: 1.5rem; color: var(--primary)"
             ></span>
             <div
               class="d--flex align--items--start dark p--3"
@@ -674,7 +698,7 @@
               data-position="top"
               data-type="popover"
               tabindex="1"
-              style="opacity: 1; visibility: visible;"
+              style="opacity: 1; visibility: visible"
             >
               <span tabindex="1" class="icon icon-error mr--3"
                 ><span class="sr--only">info-icon</span></span
@@ -697,7 +721,7 @@
           <span class="popup-holder">
             <span
               class="icon-warning-circle"
-              style="font-size: 1.5rem; color: var(--primary);"
+              style="font-size: 1.5rem; color: var(--primary)"
             ></span>
             <div
               class="d--flex align--items--start dark p--3"
@@ -705,7 +729,7 @@
               data-position="top"
               data-type="popover"
               tabindex="1"
-              style="opacity: 1; visibility: visible;"
+              style="opacity: 1; visibility: visible"
             >
               <div class="popupWrap">
                 <span tabindex="1" class="mb--3"
@@ -730,7 +754,7 @@
           <span class="popup-holder">
             <span
               class="icon-warning-circle"
-              style="font-size: 1.5rem; color: var(--primary);"
+              style="font-size: 1.5rem; color: var(--primary)"
             ></span>
             <div
               class="d--flex align--items--start dark p--3"
@@ -738,7 +762,7 @@
               data-position="top"
               data-type="popover"
               tabindex="1"
-              style="opacity: 1; visibility: visible;"
+              style="opacity: 1; visibility: visible"
             >
               <div class="popupWrap">
                 <span tabindex="1"
@@ -760,7 +784,7 @@
           <span class="popup-holder">
             <span
               class="icon-warning-circle"
-              style="font-size: 1.5rem; color: var(--primary);"
+              style="font-size: 1.5rem; color: var(--primary)"
             ></span>
             <div
               class="curved d--flex align--items--start dark p--3"
@@ -768,7 +792,7 @@
               data-position="top"
               data-type="popover"
               tabindex="1"
-              style="opacity: 1; visibility: visible;"
+              style="opacity: 1; visibility: visible"
             >
               <div class="popupWrap">
                 <span tabindex="1" class="mb--3"
@@ -799,7 +823,7 @@
           <span class="popup-holder">
             <span
               class="icon-warning-circle"
-              style="font-size: 1.5rem; color: var(--primary);"
+              style="font-size: 1.5rem; color: var(--primary)"
             ></span>
             <div
               class="d--flex align--items--start light p--3"
@@ -807,7 +831,7 @@
               data-position="top"
               data-type="popover"
               tabindex="1"
-              style="opacity: 1; visibility: visible;"
+              style="opacity: 1; visibility: visible"
             >
               <div class="popupWrap">
                 <span tabindex="1" class="mb--3"
@@ -839,7 +863,7 @@
             <span
               tabindex="1"
               class="icon-warning-circle"
-              style="font-size: 1.5rem; color: var(--primary);"
+              style="font-size: 1.5rem; color: var(--primary)"
             ></span>
             <div
               class="d--flex align--items--start dark p--3"
@@ -847,7 +871,7 @@
               data-position="top"
               data-type="popover"
               tabindex="1"
-              style="opacity: 1; visibility: visible;"
+              style="opacity: 1; visibility: visible"
             >
               <div class="popupWrap">
                 <ul class="mb--3 popupActionList list--unstyled">
@@ -889,7 +913,7 @@
           <div class="collapsible-content">
             <div class="content-inner">
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;div
 </span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d--flex align--items--start dark p--3&quot;
 </span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;false&quot;
@@ -912,7 +936,7 @@
 
               <p>&lt;!-- 2&nbsp; --&gt;</p>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;div
 </span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d--flex align--items--start dark p--3&quot;
 </span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
@@ -936,7 +960,7 @@
 
               <p>&lt;!-- 3 &nbsp;--&gt;</p>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;div
 </span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d--flex align--items--start light p--3&quot;
 </span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
@@ -960,7 +984,7 @@
 
               <p>&lt;!-- 4 &nbsp;--&gt;</p>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;div
 </span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d--flex align--items--start dark p--3 curved&quot;
 </span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
@@ -985,7 +1009,7 @@
 
               <p>&lt;!-- 5 --&gt;</p>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;div
 </span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d--flex align--items--start dark p--3&quot;
 </span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
@@ -1010,7 +1034,7 @@
 
               <p>&lt;!-- 6 --&gt;</p>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;div
 </span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d--flex align--items--start dark p--3&quot;
 </span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
@@ -1035,7 +1059,7 @@
 
               <p>&lt;!-- 7 --&gt;</p>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;div
 </span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d--flex align--items--start dark p--3&quot;
 </span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
@@ -1061,7 +1085,7 @@
 
               <p>&lt;!-- 8 --&gt;</p>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;div
 </span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d--flex align--items--start dark p--3&quot;
 </span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
@@ -1089,7 +1113,7 @@
 
               <p>&lt;!-- 9 --&gt;</p>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;div
 </span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d--flex align--items--start dark p--3&quot;
 </span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
@@ -1114,7 +1138,7 @@
 
               <p>&lt;!-- 10 --&gt;</p>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;div
 </span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d--flex align--items--start light p--3&quot;
 </span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
@@ -1148,7 +1172,7 @@
 
               <p>&lt;!-- 11 --&gt;</p>
               <pre
-                style="font-family: 'Montserrat'; font-size: 12pt;"
+                style="font-family: 'Montserrat'; font-size: 12pt"
               ><span style="color:rgb(0,0,128);">&lt;div
 </span><span style="color:rgb(0,0,128);">  </span><span style="color:rgb(0,128,0);">class</span><span style="color:rgb(0,0,255);">=&quot;d--flex align--items--start dark p--3&quot;
 </span><span style="color:rgb(0,0,255);">  </span><span style="color:rgb(0,128,0);">data-arrow</span><span style="color:rgb(0,0,255);">=&quot;true&quot;
