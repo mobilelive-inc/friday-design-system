@@ -577,7 +577,7 @@ function App() {
             isValid={true}
           />
         </Flex>
-        <Modalcomp />
+        <Modalcomp width="864px" />
       </div>
     </ThemeProvider>
   );

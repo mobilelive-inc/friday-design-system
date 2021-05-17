@@ -14,45 +14,26 @@ export const Wrapper = styled.div(
     justifyContent: `center`,
     flexDirection: `column`,
     border: `4px solid`,
-    borderColor: 'primaryLighter',
-    padding: 'globalSpacer'
+    borderColor: 'ModalBorderColor',
+    padding: 'ModalContentPaddingY'
   })
 );
 
 export const Wrapperdiv = styled.div(
   css({
-    padding: 'globalSpacer',
+    padding: 'ModalHeadingPadding',
     backgroundColor: 'white',
     boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 25px 0px',
     boxSizing: 'order-box',
     display: 'block',
     fontSize: 'fontSizeBase',
     fontWeight: 'fontweight_normal',
-    height: '170px',
-    width: '894px',
+    // width: 'ModalLg',
     outlineStyle: ' none',
     outlineWidth: '0',
     pointerEvents: 'auto',
     textAlign: 'left',
     transform: 'none'
-  })
-);
-export const Modalhead = styled.h5(
-  css({
-    color: 'grayDarker',
-    display: 'block',
-    fontSize: [4],
-    fontWeight: [3],
-    height: [11],
-    lineHeight: [11],
-    marginBlockEnd: [7],
-    marginBlockStart: [0],
-    marginBottom: [7],
-    marginInlineEnd: [0],
-    marginInlineStart: [0],
-    marginTop: [0],
-    pointerEvents: 'auto',
-    textAlign: 'left'
   })
 );
 export const Closebutton = styled.button(
@@ -66,8 +47,7 @@ export const Closebutton = styled.button(
     top: '-25%',
     left: '95%',
     border: 'none',
-    fontSize: [11],
-    fontWeight: [1]
+    fontSize: [24]
   })
 );
 export const Sronly = styled.span(
@@ -81,16 +61,5 @@ export const Sronly = styled.span(
     position: 'absolute !important',
     width: '1px !important',
     whiteSpace: 'nowrap !important'
-  })
-);
-export const Description = styled.div(
-  css({
-    color: 'grayDarker',
-    display: 'block',
-    fontSize: [3],
-    fontWeight: [1],
-    lineHeight: [5],
-    pointerEvents: 'auto',
-    textAlign: 'left'
   })
 );
