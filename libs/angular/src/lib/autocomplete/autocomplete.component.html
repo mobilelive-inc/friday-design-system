@@ -130,7 +130,7 @@
           *ngIf="!disabled && !readonly"
         ></span>
       </li>
-      <li *ngIf="withinInput" class="flex--grow--1">
+      <li *ngIf="withinInput" class="flex--grow--1 mx--2">
         <label for="inputId" class="sr--only">auto complete search</label>
         <input
           #multiIn
@@ -166,8 +166,7 @@
         />
       </li>
     </ul>
-    <i *ngIf="loading" class="fds-autocomplete-loader pi pi-spinner pi-spin"></i
-    ><fds-button
+    <fds-button
       #ddBtn
       [icon]="dropdownIcon"
       className="fds-autocomplete-dropdown fds-btndropdown-icon"
@@ -176,6 +175,10 @@
       *ngIf="dropdown"
       [attr.tabindex]="tabindex"
     ></fds-button>
+    <i
+      *ngIf="loading"
+      class="fds-autocomplete-loader icon-auto-renew position--absolute"
+    ></i>
     <div
       #panel
       *ngIf="overlayVisible"

@@ -1349,6 +1349,10 @@ label {
   margin: var(--auto-complete-tag-list-margin);
   padding: var(--auto-complete-tag-list-padding);
   max-height: var(--auto-complete-tag-list-max-height);
+  & + .fds-autocomplete-loader {
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
 }
 .fds-autocomplete-token {
   float: left;
@@ -1370,4 +1374,28 @@ label {
 }
 .max-height {
   max-height: 180px;
+}
+.fds-autocomplete-dd {
+  .fds-autocomplete-loader {
+    margin-right: 40px;
+  }
+}
+.fds-autocomplete-loader {
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 40px !important;
+  animation: rotation 1500ms infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
