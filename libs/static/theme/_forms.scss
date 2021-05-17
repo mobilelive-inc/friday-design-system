@@ -155,4 +155,81 @@
   --file-progress-filled-color: var(--primary);
   --file-progress-bg-color: var(--primary-lighter);
   --fileUpload-background-color: var(--orange-lighter);
+
+  /*
+  **Auto Complete Dropdown Reset Variables
+  */
+
+  // Auto Complete Button Variables
+  --btn-auto-complete-margin: 0;
+  --btn-auto-complete-width: 100%;
+  --btn-auto-complete-min-width: auto;
+  --btn-auto-complete-padding: 0.5rem 2rem;
+  --btn-auto-complete-text-color: var(--black);
+  --btn-auto-complete-bg-color: var(--primary);
+  --btn-auto-complete-hover-text-color: var(--white);
+  --btn-auto-complete-hover-bg-color: var(--primary-dark);
+  --btn-auto-complete-icon-font-size: 1.75rem;
+  --btn-auto-complete-icon-color: var(--black);
+  --btn-auto-complete-icon-bg-color: var(--primary);
+  --btn-auto-complete-icon-spacing: 0 0 0 0.5rem;
+  --btn-auto-complete-justify-content: space-between;
+
+  //Parent Div Variables
+  --warraper-auto-completep-top: 100%;
+  --warraper-auto-completep-left: -1px;
+  --warraper-auto-completep-z-index: 99;
+  --warraper-auto-completep-position: absolute;
+  --warraper-auto-completep-padding: 0.5rem 1rem;
+  --warraper-auto-completep-bg-color: var(--white);
+  --warraper-auto-completep-width: calc(100% + 2px);
+  --warraper-auto-completep-border-width: 0 1px 1px 1px;
+  --warraper-auto-completep-border-style: solid;
+  --warraper-auto-completep-border-color: var(--black);
+
+  // Auto Complete Input Search Variables
+  --auto-complete-search-line-height: 1.4;
+  --auto-complete-search-margin: 0.5rem 0;
+  --auto-complete-search-text-color: var(--black);
+  --auto-complete-search-bg-color: var(--gray-lighter);
+  --auto-complete-search-border-width: 1px 1px 1px 1px;
+  --auto-complete-search-border-style: solid;
+  --auto-complete-search-border-color: var(--black);
+  --auto-complete-search-padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  --auto-complete-search-border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+
+  // Auto Complete DropDown Variables
+  --dropdown-auto-complete-margin: 0 0 0 0;
+  --dropdown-auto-complete-padding: 0 0 0 0;
+  --dropdown-auto-complete-border-width: 0 0 0 0;
+  --dropdown-auto-complete-border-style: solid;
+  --dropdown-auto-complete-border-color: var(--white);
+  --dropdown-auto-complete-bg-color: var(--white);
+  --dropdown-auto-complete-width: calc(100% + 2px);
+
+  // Auto Complete DropDown UL Variables
+  --dropdown-auto-complete-list-margin: 0;
+  --dropdown-auto-complete-list-padding: 0;
+  // Auto Complete DropDown LI Variables
+  --dropdown-auto-complete-item-margin: 0;
+  --dropdown-auto-complete-item-style-type: none;
+  --dropdown-auto-complete-item-padding: 0.5rem 1rem;
+  // Auto Complete DropDown LI Hover Variables
+  --dropdown-auto-complete-item-text-color: (--black);
+  --dropdown-auto-complete-item-bg-color: var(--primary);
+
+  // Auto Complete Tags UL Variables
+  --auto-complete-tag-list-margin: 0;
+  --auto-complete-tag-list-padding: 0;
+  --auto-complete-tag-list-max-height: 120px;
+  // Auto Complete Tag Variables
+  --auto-complete-tag-margin: 0.5rem;
+  --auto-complete-tag-max-height: 120px;
+  --auto-complete-tag-border-radius: 0.24rem;
+  --auto-complete-tag-padding: 0.25rem 0.5rem;
+  --auto-complete-tag-text-color: var(--black);
+  --auto-complete-tag-bg-color: var(--gray-light);
+  --auto-complete-tag-border-width: 1px;
+  --auto-complete-tag-border-style: solid;
+  --auto-complete-tag-border-color: var(--gray);
 }
