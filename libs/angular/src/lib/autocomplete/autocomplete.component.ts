@@ -55,8 +55,10 @@ export const AUTOCOMPLETE_VALUE_ACCESSOR: any = {
     ])
   ],
   host: {
-    '[class.p-inputwrapper-filled]': 'filled',
-    '[class.p-inputwrapper-focus]': 'focus && !disabled'
+    '[class.fds-inputwrapper-filled]': 'filled',
+    '[class.fds-inputwrapper-focus]': 'focus && !disabled',
+    '[class.w--100]': '100',
+    '[class.d--block]': '200'
   },
   providers: [
     // AUTOCOMPLETE_VALUE_ACCESSOR,
@@ -84,6 +86,33 @@ export class AutocompleteComponent
   @Input() panelStyle: any;
 
   // @Input() styleClass: string;
+
+  @Input() btnText = 'Select a Person or Group';
+
+  @Input() withinInput: boolean = true;
+
+  _btnDropdown = false;
+
+  @Input() disableBtnDropdown: boolean = false;
+
+  @Input() get btnDropdown(): boolean {
+    return this._btnDropdown;
+  }
+
+  set btnDropdown(val: boolean) {
+    this._btnDropdown = val;
+    this._toggleAutocomplete = !val;
+  }
+
+  _toggleAutocomplete = true;
+
+  @Input() get toggleAutocomplete(): boolean {
+    return this._toggleAutocomplete;
+  }
+
+  set toggleAutocomplete(val: boolean) {
+    this._toggleAutocomplete = val;
+  }
 
   @Input() panelStyleClass: string;
 
@@ -123,7 +152,7 @@ export class AutocompleteComponent
 
   @Input() ariaLabelledBy: string;
 
-  @Input() dropdownIcon: string = 'pi pi-chevron-down';
+  @Input() dropdownIcon: string = 'icon-arrow-down';
 
   @Input() unique: boolean = true;
 
@@ -264,7 +293,10 @@ export class AutocompleteComponent
     if (this.highlightOptionChanged) {
       setTimeout(() => {
         if (this.overlay) {
-          let listItem = DomHandler.findSingle(this.overlay, 'li.p-highlight');
+          let listItem = DomHandler.findSingle(
+            this.overlay,
+            'li.fds-highlight'
+          );
           if (listItem) {
             DomHandler.scrollInView(this.overlay, listItem);
           }
@@ -599,7 +631,7 @@ export class AutocompleteComponent
       }
     }
 
-    if (this.multiple) {
+    if (this.multiple && this.withinInput) {
       switch (event.which) {
         //backspace
         case 8:

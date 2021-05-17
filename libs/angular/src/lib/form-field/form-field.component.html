@@ -15,6 +15,7 @@
 >
   <div
     class="formControlHolder formControlHolder__{{ controlType }}"
+    [class.disabled]="_control.disabled"
     [class.error]="isInvalid()"
     [class.disabled]="_control.disabled"
     [ngClass]="getClasses()"
