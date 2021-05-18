@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { compose, layout, space, typography } from 'styled-system';
+import { compose, layout, space, typography, color } from 'styled-system';
 
 const getDerivedStyles = spanProps => {
   const styles = {};
@@ -15,7 +15,7 @@ const getDerivedStyles = spanProps => {
 
 const Span = styled('div')(
   props => getDerivedStyles(props),
-  compose(typography, space, layout)
+  compose(typography, space, layout, color)
 );
 
 export default Span;

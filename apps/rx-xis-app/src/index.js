@@ -26,6 +26,7 @@ import { OtherSpecs } from './../stories/typography.stories';
 // import Button from '../../../build';
 import { Text } from './components/typography';
 import Stepper from './components/stepper';
+import { Tabs, Tab, TabPanel } from './components/tab';
 import Span from './components/span/span';
 import Icon from './components/icon/Icon';
 import Input from './components/Input';
@@ -61,8 +62,27 @@ function App() {
   const [gender, setGender] = React.useState('male');
   const [selected, setSelected] = React.useState(null);
   const [isOn, setIsOn] = React.useState(false);
+  const [selectdTab, setSelectedTab] = React.useState(0);
   return (
     <ThemeProvider theme={theme}>
+      <Tabs
+        value={selectdTab}
+        onChange={setSelectedTab}
+        withLeftIcon
+        withRightIcon>
+        <Tab title="Tab One" />
+        <Tab title="Tab Two" disabled />
+        <Tab title="Tab Three" />
+      </Tabs>
+      <TabPanel value={selectdTab} index={0}>
+        <Text>Item One</Text>
+      </TabPanel>
+      <TabPanel value={selectdTab} index={1}>
+        <Text>Item Two</Text>
+      </TabPanel>
+      <TabPanel value={selectdTab} index={2}>
+        <Text>Item Three</Text>
+      </TabPanel>
       <AccordionContainer hasMultiple={false}>
         <Accordion
           onExpand={() => console.log('Opened')}
