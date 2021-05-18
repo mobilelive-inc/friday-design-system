@@ -81,11 +81,11 @@ export class AutocompleteComponent
 
   @Input() delay: number = 300;
 
-  // @Input() style: any;
+  @Input() style: any;
 
   @Input() panelStyle: any;
 
-  // @Input() styleClass: string;
+  @Input() styleClass: string;
 
   @Input() btnText = 'Select a Person or Group';
 
@@ -117,6 +117,8 @@ export class AutocompleteComponent
   @Input() panelStyleClass: string;
 
   @Input() inputStyle: any;
+
+  @Input() inputId: string;
 
   @Input() id: string = 'fdsAutocomplete' + nextUniqueId;
 
