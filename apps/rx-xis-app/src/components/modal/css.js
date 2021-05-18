@@ -33,7 +33,8 @@ export const Wrapperdiv = styled.div(
     outlineWidth: '0',
     pointerEvents: 'auto',
     textAlign: 'left',
-    transform: 'none'
+    transform: 'none',
+    overflow:'scroll',
   })
 );
 export const Closebutton = styled.button(
