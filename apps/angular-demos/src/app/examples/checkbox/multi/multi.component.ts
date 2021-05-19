@@ -8,7 +8,7 @@ import map from 'lodash/map';
     <div class="row">
       <div class="col--4">
         <label id="example-radio-group-label-3">
-          Pick your favorite fruit (ReactiveForms)</label
+          Pick your favorite fruit (Disabled)</label
         >
         <form [formGroup]="form">
           <div *ngFor="let juice of juices.controls; let i = index">
@@ -39,6 +39,22 @@ import map from 'lodash/map';
         </div>
         <pre> favoriteFruitNgModel: {{ selectedCategories | json }} </pre>
       </div>
+      <div class="col--4">
+        <label id="example-radio-group-label-3">
+          Pick your favorite fruit (ngModel)</label
+        >
+        <div *ngFor="let category of categories">
+          <fds-checkbox
+            name="group3"
+            [label]="category"
+            value="category"
+            [value]="category"
+            [(ngModel)]="selectedCategories2"
+            [inputId]="category"
+          ></fds-checkbox>
+        </div>
+        <pre> favoriteFruitNgModel: {{ selectedCategories2 | json }} </pre>
+      </div>
     </div>
   `,
   styles: []
@@ -54,6 +70,7 @@ export class MultiCheckboxComponent implements OnInit {
 
   categories: any[] = ['Mango', 'Peach', 'PineApple'];
   selectedCategories: any[] = [];
+  selectedCategories2: any[] = [];
   checkedJuices = [];
   values = [];
 
@@ -73,6 +90,7 @@ export class MultiCheckboxComponent implements OnInit {
       return elem.name;
     });
     this.selectedCategories = ['Mango'];
+    this.selectedCategories2 = ['Mango'];
   }
 
   get juices() {
@@ -81,7 +99,7 @@ export class MultiCheckboxComponent implements OnInit {
 
   buildJuices() {
     const arr = this.user.juices.map(juice => {
-      return this.fb.control(juice.selected);
+      return this.fb.control({ value: juice.selected, disabled: true });
     });
     return this.fb.array(arr);
   }
