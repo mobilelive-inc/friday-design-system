@@ -7,16 +7,18 @@ import Text from "../typography";
 import PropTypes from 'prop-types';
 
 const Progress = ({ progressbarstatus,progressbarheading, ...props}) => {
+
   const [style, setStyle] = useState({});
 
-    setTimeout(() => {
-      const newStyle = {
-        opacity: 1,
-        width: `${progressbarstatus}%`,
-      };
-      setStyle(newStyle);
-    }, 200);
- 
+   useEffect(() => {
+   for (let index = 0; index < progressbarstatus; index++) {
+    const newStyle = {
+      opacity: 1,
+      width: `${index}%`,
+    };
+    setStyle(newStyle);
+  }
+  },[progressbarstatus])
 
   return (
     <ThemeProvider theme={progressTheme}>

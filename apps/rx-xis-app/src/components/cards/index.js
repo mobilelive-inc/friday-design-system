@@ -24,7 +24,7 @@ import PropTypes from "prop-types";
 import Button from "../Button";
 import Span from "../span/span";
 
-const Cart = ({ title, cardimage }) => {
+export const Card = ({ title, cardimage }) => {
   return (
     <ThemeProvider theme={CardTheme}>
       <Text variant="H5" my={16}>
@@ -36,7 +36,7 @@ const Cart = ({ title, cardimage }) => {
     </ThemeProvider>
   );
 };
-const ShadowCart = ({ title, cardimage }) => {
+export const ShadowCard = ({ title, cardimage }) => {
   return (
     <ThemeProvider theme={CardTheme}>
       <Text variant="H5" my={16}>
@@ -48,7 +48,7 @@ const ShadowCart = ({ title, cardimage }) => {
     </ThemeProvider>
   );
 };
-const WithImageCard = ({ title, cardimage, subheading, heading }) => {
+export const WithImageCard = ({ title, cardimage, subheading, heading }) => {
   return (
     <ThemeProvider theme={CardTheme}>
       <Text variant="H5" my={16}>
@@ -68,7 +68,13 @@ const WithImageCard = ({ title, cardimage, subheading, heading }) => {
     </ThemeProvider>
   );
 };
-const FixCard = ({ title, subheading, imagetitle, color }) => {
+export const FixCard = ({
+  title,
+  subheading,
+  imagetitle,
+  color,
+  buttontitle,
+}) => {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
@@ -85,14 +91,13 @@ const FixCard = ({ title, subheading, imagetitle, color }) => {
           {subheading}
         </Text>
         <Button variant={color} width="auto" m={16}>
-          {" "}
-          Lorem Ipsum{" "}
+          {buttontitle}
         </Button>
       </IconeWrapper>
     </ThemeProvider>
   );
 };
-const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
+export const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
   return (
     <>
       <ThemeProvider theme={CardTheme}>
@@ -107,25 +112,32 @@ const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
           <Span
             style={{
               color: "#000",
-              width: "90%",
+              width: "80%",
               height: "2px",
               backgroundColor: "#666",
               textAlign: "center",
-              margin: "2rem",
+              marginTop: "22px",
+              marginBottom: "22px",
+              marginLeft: "auto",
+              marginRight: "auto",
             }}
           />
           <Text variant="H4" mb={16}>
             {heading}
           </Text>
-          <Text variant="H6" mb={16}>
-            {subheading}
-          </Text>
+          <Text m={16}>{subheading}</Text>
         </CardWrapper>
       </ThemeProvider>
     </>
   );
 };
-const WithImageSlideShadow = ({ title, cardimage, color }) => {
+export const WithImageSolidShadow = ({
+  title,
+  cardimage,
+  color,
+  subheading,
+  buttontitle,
+}) => {
   return (
     <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
@@ -137,17 +149,13 @@ const WithImageSlideShadow = ({ title, cardimage, color }) => {
           className="icon-home"
           style={{ fontWeight: 400, fontSize: "8rem", color: "#46BC9C" }}
         />
-        <p
+        <Text
           style={{ color: "black", paddingLeft: "16px", paddingRight: "16px" }}
         >
-          {" "}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt, consectetur adipiscing elit, sed do eiusmod
-          tempor, sed do eiusmod tempor.{" "}
-        </p>
+          {subheading}
+        </Text>
         <Button variant={color} width="auto" m={10}>
-          {" "}
-          Lorem Ipsum{" "}
+          {buttontitle}
         </Button>
       </ShadowWrapper>
     </ThemeProvider>
@@ -162,17 +170,17 @@ const Cards = () => {
           Cards
         </Text>
         <Wrapper>
-          <Col>
-            <Cart title="Default" cardimage={CardImg} />
-          </Col>
-          <Col>
+          {/* <Col>
+            <Card title="Default" cardimage={CardImg} />
+          </Col> */}
+          {/* <Col>
             <BoxShadow>
-              <Cart title="Box Shadow" cardimage={CardImg} box />
+              <Card title="Box Shadow" cardimage={CardImg} box />
             </BoxShadow>
-          </Col>
-          <Col>
-            <ShadowCart title="Solid Shadow" cardimage={CardImg} />
-          </Col>
+          </Col> */}
+          {/* <Col>
+            <ShadowCard title="Solid Shadow" cardimage={CardImg} />
+          </Col> */}
           <Col>
             <WithImageCard
               title="With Image"
@@ -181,42 +189,52 @@ const Cards = () => {
               subheading='"Lorem ipsum dolor sit amet, consectetur adipiscing elit"'
             />
           </Col>
-          <Col>
+          {/* <Col>
             <FixCard
               title="Icon with Fixed Height"
               imagetitle="Lorem Ipsum"
-              subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt., conssectetur adisping dlit, sed do eiusmid tempor indidunt , conssectetur adisping dlit, sed do eiusmid tempor indidunt"
+              subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt."
               color="outlinePrimary"
+              buttontitle="Lorem Ipsum"
             />
-          </Col>
-          <Col>
+          </Col> */}
+          {/* <Col>
             <FixCard
               title="Icon with Fixed Height"
               imagetitle="Lorem Ipsum"
-              subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt., conssectetur adisping dlit, sed do eiusmid tempor indidunt , conssectetur adisping dlit, sed do eiusmid tempor indidunt"
+              subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt., "
               color="outlineSecondary"
+              buttontitle="Lorem Ipsum"
             />
-          </Col>
-          <Col>
-            <WithImageSlideShadow
+          </Col> */}
+          {/* <Col>
+            <WithImageSolidShadow
               title="With Image and Solid Shadow"
               color="outlinePrimary"
+              subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt, consectetur adipiscing elit, sed do eiusmod
+              tempor, sed do eiusmod tempor."
+              buttontitle="Lorem Ipsum"
             />
-          </Col>
-          <Col>
+          </Col> */}
+          {/* <Col>
             <WithoutIcone
               title="Without Icon"
               imagetitle="Lorem Ipsum"
               heading="dolor sit amet"
-              subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt."
+              subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit,"
             />
-          </Col>
-          <Col>
-            <WithImageSlideShadow
+          </Col> */}
+          {/* <Col>
+            <WithImageSolidShadow
               title="With Image and Solid Shadow"
               color="outlineSecondary"
+              subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt, consectetur adipiscing elit, sed do eiusmod
+              tempor, sed do eiusmod tempor."
+              buttontitle="Lorem Ipsum"
             />
-          </Col>
+          </Col> */}
         </Wrapper>
       </Section>
     </ThemeProvider>
