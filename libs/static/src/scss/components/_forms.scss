@@ -1279,6 +1279,11 @@ label {
   min-width: var(--btn-auto-complete-min-width);
   background-color: var(--btn-auto-complete-bg-color);
   justify-content: var(--btn-auto-complete-justify-content);
+  height: var(--btn-auto-complete-height);
+  min-height: var(--btn-auto-complete-min-height);
+  font-size: var(--btn-auto-complete-font-size);
+  line-height: var(--btn-auto-complete-line-height);
+  font-weight: var(--btn-auto-complete-font-weight);
   &:hover {
     color: var(--btn-auto-complete-hover-text-color);
     background-color: var(--btn-auto-complete-hover-bg-color);
