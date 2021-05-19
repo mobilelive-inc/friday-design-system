@@ -626,6 +626,7 @@ label {
   margin-bottom: var(--form-checkbox-bottom-margin);
   /* Styling Checkbox Starts */
   .checkLabel {
+    opacity: 1;
     color: var(--gray-dark);
     margin: 0 0 0 var(--radio-label-left-margin);
     cursor: pointer;
@@ -731,6 +732,23 @@ label {
       }
     }
 
+    &.disabled {
+      input {
+        cursor: default;
+        ~ .checkboxFake,
+        &:checked ~ .checkboxFake {
+          cursor: default;
+          border-color: var(--gray-light);
+          pointer-events: none;
+          &:after {
+            border-color: var(--gray-light);
+          }
+        }
+      }
+      + .checkLabel {
+        color: var(--gray-light);
+      }
+    }
     &--curved {
       input {
         &:checked ~ .checkboxFake {
@@ -842,11 +860,11 @@ label {
       pointer-events: none;
 
       &:checked ~ .checkboxFake {
-        border-color: var(--gray) !important;
-        background-color: var(--gray);
+        border-color: var(--gray-light) !important;
+        background-color: var(--gray-light);
 
         &:after {
-          border: solid var(--gray-lighter);
+          border: solid var(--gray-light);
           border-width: 0 3px 3px 0;
         }
       }
@@ -860,14 +878,14 @@ label {
     }
 
     ~ .checkboxFake {
-      border-color: var(--gray) !important;
-      background-color: var(--gray);
+      border-color: var(--gray-light) !important;
+      background-color: var(--gray-light);
     }
 
     .checkLabel {
       cursor: default;
       pointer-events: none;
-      color: var(--gray);
+      color: var(--gray-light);
     }
   }
 }
@@ -1040,12 +1058,12 @@ label {
       cursor: default;
 
       &:checked ~ .radioBtnFake {
-        border-color: var(--gray) !important;
-        background-color: var(--gray);
+        border-color: var(--gray-light);
+        background-color: var(--gray-light);
 
         &:after {
-          border: solid var(--gray);
-          background-color: var(--gray);
+          border: solid var(--gray-light);
+          background-color: var(--gray-light);
         }
       }
 
@@ -1058,13 +1076,12 @@ label {
     }
 
     .radioBtnFake {
-      border-color: var(--gray) !important;
-      background-color: var(--gray);
+      border-color: var(--gray-light);
     }
 
     ~ .radioLabel {
       cursor: default;
-      color: var(--gray);
+      color: var(--gray-light);
       pointer-events: none;
     }
   }
