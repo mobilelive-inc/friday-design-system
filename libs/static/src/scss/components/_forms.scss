@@ -738,15 +738,15 @@ label {
         ~ .checkboxFake,
         &:checked ~ .checkboxFake {
           cursor: default;
-          border-color: var(--gray-light);
+          border-color: var(--form-radio-diabled-border-color);
           pointer-events: none;
           &:after {
-            border-color: var(--gray-light);
+            border-color: var(--form-radio-diabled-checked-color);
           }
         }
       }
       + .checkLabel {
-        color: var(--gray-light);
+        color: var(--form-radio-diabled-text-color);
       }
     }
     &--curved {
@@ -755,7 +755,6 @@ label {
           border-radius: var(--form-check-box-curved);
         }
       }
-
       .checkboxFake {
         border-radius: var(--form-check-box-curved);
       }
@@ -767,7 +766,6 @@ label {
           border-radius: var(--form-radio-rounded);
         }
       }
-
       .checkboxFake {
         border-radius: var(--form-radio-rounded);
       }
@@ -929,10 +927,7 @@ label {
 
       &:hover {
         ~ .radioBtnFake {
-          border: 2px solid var(--gray);
-          &:after {
-            background-color: var(--gray);
-          }
+          border-color: var(--gray);
         }
       }
 
@@ -1058,30 +1053,22 @@ label {
       cursor: default;
 
       &:checked ~ .radioBtnFake {
-        border-color: var(--gray-light);
-        background-color: var(--gray-light);
-
+        border-color: var(--form-radio-diabled-border-color);
         &:after {
-          border: solid var(--gray-light);
-          background-color: var(--gray-light);
-        }
-      }
-
-      &:hover {
-        ~ .radioBtnFake {
-          border: 2px solid var(--gray);
-          background-color: var(--gray);
+          border: solid var(--form-radio-diabled-border-color);
+          background-color: var(--form-check-box-disabled-checked-color);
         }
       }
     }
 
     .radioBtnFake {
-      border-color: var(--gray-light);
+      border-color: var(--form-radio-diabled-border-color);
+      background-color: var(--form-check-box-disabled-filled-color);
     }
 
     ~ .radioLabel {
       cursor: default;
-      color: var(--gray-light);
+      color: var(--form-radio-diabled-text-color);
       pointer-events: none;
     }
   }
