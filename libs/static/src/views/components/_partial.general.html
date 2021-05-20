@@ -147,7 +147,87 @@
       <h5>Method-2: Download the FDS files:</h5> -->
       </div>
       <div class="mb--5 highlighted-block">
-        <h4>File Structure (Development Environment)</h4>
+        <h4>How to run a Repo (in Development Environment)</h4>
+        <p class="mb--3">
+          There are 3 repositories (libraries) in Friday Design System,
+          <strong style="color: var(--primary)">Static</strong>,
+          <strong style="color: var(--primary)">Angular</strong> and
+          <strong style="color: var(--primary)">React</strong>. To run each,
+          there is a separate set of terminal commands:
+        </p>
+        <p>
+          <u
+            ><strong style="color: var(--primary)"
+              >1- Static Repository:</strong
+            ></u
+          >
+        </p>
+        <p>
+          To run static development environment, go to FDS main-folder > libs >
+          static and run following two commands in the terminal of your code
+          editor:
+        </p>
+        <p>
+          1)-
+          <strong style="color: var(--primary)"
+            >npm run watch / yarn watch</strong
+          >. This will compile the code while you're working and also opens the
+          view in browser at localhost:3000 so, make sure this port is free.
+        </p>
+        <p class="mb--3">
+          2)-
+          <strong style="color: var(--primary)"
+            >npm run build / yarn build</strong
+          >. This command prepares the final build files to be used in
+          production.
+        </p>
+        <hr />
+        <p>
+          <u
+            ><strong style="color: var(--primary)"
+              >2- Angular Repository:</strong
+            ></u
+          >
+        </p>
+        <p>
+          To run angular development environment, go to FDS main-folder > apps
+          and use following two commands in the terminal of your code editor:
+        </p>
+        <p>
+          1)-
+          <strong style="color: var(--primary)"
+            >ng serve folder-name(in our case it is 'angular-demos')</strong
+          >. This will run the code and you need to manually open the view in
+          the browser (at localhost:4200)
+        </p>
+        <p>
+          2)-
+          <strong style="color: var(--primary)"
+            >nx build --prod folder-name (in our case it is
+            'angular-demos')</strong
+          >. This will prepare the files to be used in production build.
+        </p>
+
+        <hr />
+        <p>
+          <u
+            ><strong style="color: var(--primary)"
+              >3- React Repository:</strong
+            ></u
+          >
+        </p>
+        <p>
+          To run React development environment, go to FDS main-folder > apps and
+          use following command:
+        </p>
+        <p>
+          <strong style="color: var(--primary)"
+            >ng serve folder-name(in our case it is 'rx-xis-app')</strong
+          >. This will run the code and you need to manually open the view in
+          the browser (at localhost:4200)
+        </p>
+        <hr />
+        <h4>Static File Structure (Development Environment)</h4>
         <p class="mb--3">
           The following file structure is for FDS-Static repo:<br />
         </p>
@@ -184,6 +264,36 @@
           Use theme settings to override core component styles as per your need.
         </p>
       </div>
+      <h4>Angular File Structure (Development Environment)</h4>
+      <p class="mb--3">
+        The following file structure is for FDS-Angular repo:<br />
+      </p>
+      <div class="highlighted-block mb--3">
+        <img
+          src="../../images/angular-flow.svg"
+          width="950"
+          height="460"
+          alt="flow chart"
+          style="margin: 0 auto"
+        />
+      </div>
+      <p>
+        Please note this structure gives an overview of important files/folders
+        required to run Angular FDS theme.
+      </p>
+      <br />
+      <h6 class="text--decoration--underline">
+        apps > angular-demos > style.scss
+      </h6>
+      <p>
+        Style.scss file contains all the styles including theme settings and
+        imported individual component styles.
+      </p>
+      <h6 class="text--decoration--underline">src > styles > theme</h6>
+      <p>
+        This folder contains theme related files and custom theme settings for
+        individual components.
+      </p>
     </div>
     <div class="infoBlockPiece">
       <div id="container-info" class="mb--5 highlighted-block">
