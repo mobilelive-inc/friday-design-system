@@ -5,6 +5,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Flex, Box } from 'rebass/styled-components';
 import Button from './components/Button';
+import AdvancedStepper from './components/advanced-stepper';
 import {
   Accordion,
   AccordionCollapse,
@@ -26,10 +27,9 @@ import { OtherSpecs } from './../stories/typography.stories';
 // import Button from '../../../build';
 import { Text } from './components/typography';
 import Stepper from './components/stepper';
-import Span from './components/span/span';
-import Icon from './components/icon/Icon';
+import Container from './components/container';
 import Input from './components/Input';
-import theme from './components/theme/defaultTheme';
+import theme, { colors } from './components/theme/defaultTheme';
 import './../../../libs/icons/icomons_styles.scss';
 import Checkbox from './components/checkbox';
 import Radio from './components/radio';
@@ -62,47 +62,142 @@ function App() {
   const [gender, setGender] = React.useState('male');
   const [selected, setSelected] = React.useState(null);
   const [isOn, setIsOn] = React.useState(false);
+  const [count, setCount] = React.useState(1);
   return (
     <ThemeProvider theme={theme}>
-      <AccordionContainer hasMultiple={false}>
-        <Accordion
-          onExpand={() => console.log('Opened')}
-          onCollapse={() => console.log('Closed')}>
-          <AccordionHeader title={'Heading'}></AccordionHeader>
-          <AccordionCollapse>
-            <div>This is the for testing purpose</div>
-          </AccordionCollapse>
-        </Accordion>
-        <Accordion
-          onExpand={() => console.log('Opened')}
-          onCollapse={() => console.log('Closed')}>
-          <AccordionHeader title={'Heading'}></AccordionHeader>
-          <AccordionCollapse>
-            <div>This is the for testing purpose</div>
-          </AccordionCollapse>
-        </Accordion>
-        <Accordion
-          onExpand={() => console.log('Opened')}
-          onCollapse={() => console.log('Closed')}>
-          <AccordionHeader title={'Heading'}></AccordionHeader>
-          <AccordionCollapse>
-            <div>This is the for testing purpose</div>
-          </AccordionCollapse>
-        </Accordion>
-      </AccordionContainer>
-      <PrimaryButton />
-      <OutlineButtons />
-      <ClearButton />
-      <RoundedButtons />
-      <RoundedOutlineButtons />
-      <CurvedButtons />
-      <CurvedOutlineButtons />
-      <FilledSocialButtons />
-      <OutlineSocialButtons />
-      <OtherSpecs />
-      <div style={{ height: '100px', background: 'blue' }}></div>
-      <div>
-        <Flex mt={5}>
+      <Box
+        p={25}
+        bg={colors.bgLight}
+        justifyContent="center"
+        alignItems="center">
+        <Text bold fontSize="fontSizeH1">
+          React Components Demo
+        </Text>
+        <Text fontSize="fontSizeBase" alignText="center">
+          Here are all the components we have built in React for Friday Design
+          System. Below are the examples we have formed here using these
+          componenet. We tried to implement all the usabily cases for every
+          component
+        </Text>
+      </Box>
+
+      <div style={{ padding: 25 }}>
+        <Text fontSize="fontSizeH2">Advanced Stepper</Text>
+        <Container>
+          <AdvancedStepper
+            variant="primary"
+            value={count}
+            total={3}
+            hideName={true}
+            dataList={['Option 1', 'Option 2', 'Option 3']}
+          />
+
+          <Flex mt={20}>
+            <Button
+              disabled={count === 1}
+              variant={count === 1 ? 'disabled' : 'primary'}
+              onClick={() => {
+                if (count > 1) {
+                  setCount(count - 1);
+                }
+              }}>
+              Previous
+            </Button>
+            <Button
+              disabled={count === 3}
+              variant={count === 3 ? 'disabled' : 'secondary'}
+              onClick={() => {
+                if (count < 3) {
+                  setCount(count + 1);
+                }
+              }}>
+              Next
+            </Button>
+          </Flex>
+        </Container>
+        <Text fontSize="fontSizeH2">Accordion</Text>
+        <Container>
+          <AccordionContainer hasMultiple={false}>
+            <Accordion
+              onExpand={() => console.log('Opened')}
+              onCollapse={() => console.log('Closed')}>
+              <AccordionHeader title={'Heading'}></AccordionHeader>
+              <AccordionCollapse>
+                <div>This is the for testing purpose</div>
+              </AccordionCollapse>
+            </Accordion>
+            <Accordion
+              onExpand={() => console.log('Opened')}
+              onCollapse={() => console.log('Closed')}>
+              <AccordionHeader title={'Heading'}></AccordionHeader>
+              <AccordionCollapse>
+                <div>This is the for testing purpose</div>
+              </AccordionCollapse>
+            </Accordion>
+            <Accordion
+              onExpand={() => console.log('Opened')}
+              onCollapse={() => console.log('Closed')}>
+              <AccordionHeader title={'Heading'}></AccordionHeader>
+              <AccordionCollapse>
+                <div>This is the for testing purpose</div>
+              </AccordionCollapse>
+            </Accordion>
+          </AccordionContainer>
+        </Container>
+
+        <Text fontSize="fontSizeH2">Primary Buttons</Text>
+        <Container>
+          <PrimaryButton />
+        </Container>
+
+        <Text fontSize="fontSizeH2">Outline Buttons</Text>
+        <Container>
+          <OutlineButtons />
+        </Container>
+
+        <Text fontSize="fontSizeH2">Clear Buttons</Text>
+        <Container>
+          <ClearButton />
+        </Container>
+
+        <Text fontSize="fontSizeH2">Rounded Buttons</Text>
+        <Container>
+          <RoundedButtons />
+        </Container>
+
+        <Text fontSize="fontSizeH2">Rounded Outline Buttons</Text>
+        <Container>
+          <RoundedOutlineButtons />
+        </Container>
+
+        <Text fontSize="fontSizeH2">Curved Buttons</Text>
+        <Container>
+          <CurvedButtons />
+        </Container>
+
+        <Text fontSize="fontSizeH2">Curved Outline Buttons</Text>
+        <Container>
+          <CurvedOutlineButtons />
+        </Container>
+
+        <Text fontSize="fontSizeH2">Filled Social Buttons</Text>
+        <Container>
+          <FilledSocialButtons />
+        </Container>
+
+        <Text fontSize="fontSizeH2">Outline Social Buttons</Text>
+        <Container>
+          <OutlineSocialButtons />
+        </Container>
+
+        <Text fontSize="fontSizeH2">Typography</Text>
+        <Container>
+          <OtherSpecs />
+        </Container>
+
+        <Text fontSize="fontSizeH2">Skip Navigation</Text>
+        <Container>
+          <div style={{ height: '100px', background: colors.primary }}></div>
           <SkipLink
             href="#"
             focusableID="newId"
@@ -112,23 +207,20 @@ function App() {
             backgroundColor="blue"
             color="white"
           />
-        </Flex>
-        <Text mb={30} underline italic>
-          Testing
-        </Text>
-        <Flex mt={5} mb={100}>
-          <Stepper variant="primary" value={5} total={10} />
-        </Flex>
-        <Flex mt={5} mb={100}>
-          <Button
-            variant="outlineGoogleBlue"
-            width="15%"
-            display="flex"
-            withIcon>
-            <Icon className="icon-facebook" />
-            facebook
-          </Button>
-        </Flex>
+        </Container>
+
+        <Text fontSize="fontSizeH2">Stepper</Text>
+        <Container>
+          <Stepper
+            variant="primary"
+            value={85}
+            total={100}
+            isCountVisible={true}
+          />
+        </Container>
+      </div>
+
+      <div>
         <Toggle
           shortDescription="Test toggle"
           id="bt1"
