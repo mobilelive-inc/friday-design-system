@@ -157,6 +157,24 @@
   --fileUpload-background-color: var(--orange-lighter);
 
   /*
+  ** CheckBox Disabled Colors Variables
+  */
+
+  --form-check-box-disabled-border-color: #8c8999;
+  --form-check-box-disabled-filled-color: var(--white);
+  --form-check-box-disabled-text-color: #8c8999;
+  --form-check-box-disabled-checked-color: #8c8999;
+
+  /*
+  ** Radio Disabled Colors Variables
+  */
+
+  --form-radio-diabled-border-color: #8c8999;
+  --form-radio-diabled-filled-color: #8c8999;
+  --form-radio-diabled-text-color: #8c8999;
+  --form-radio-diabled-checked-color: #8c8999;
+
+  /*
   **Auto Complete Dropdown Reset Variables
   */
 

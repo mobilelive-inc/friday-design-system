@@ -25,6 +25,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-reporting:before {
+  content: "\ecce";
+}
+.icon-customer-profile:before {
+  content: "\eccf";
+}
 .icon-action-calender:before {
   content: "\e9d1";
 }

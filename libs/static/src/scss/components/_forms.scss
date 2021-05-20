@@ -626,6 +626,7 @@ label {
   margin-bottom: var(--form-checkbox-bottom-margin);
   /* Styling Checkbox Starts */
   .checkLabel {
+    opacity: 1;
     color: var(--gray-dark);
     margin: 0 0 0 var(--radio-label-left-margin);
     cursor: pointer;
@@ -731,13 +732,29 @@ label {
       }
     }
 
+    &.disabled {
+      input {
+        cursor: default;
+        ~ .checkboxFake,
+        &:checked ~ .checkboxFake {
+          cursor: default;
+          border-color: var(--form-radio-diabled-border-color);
+          pointer-events: none;
+          &:after {
+            border-color: var(--form-radio-diabled-checked-color);
+          }
+        }
+      }
+      + .checkLabel {
+        color: var(--form-radio-diabled-text-color);
+      }
+    }
     &--curved {
       input {
         &:checked ~ .checkboxFake {
           border-radius: var(--form-check-box-curved);
         }
       }
-
       .checkboxFake {
         border-radius: var(--form-check-box-curved);
       }
@@ -749,7 +766,6 @@ label {
           border-radius: var(--form-radio-rounded);
         }
       }
-
       .checkboxFake {
         border-radius: var(--form-radio-rounded);
       }
@@ -842,11 +858,11 @@ label {
       pointer-events: none;
 
       &:checked ~ .checkboxFake {
-        border-color: var(--gray) !important;
-        background-color: var(--gray);
+        border-color: var(--gray-light) !important;
+        background-color: var(--gray-light);
 
         &:after {
-          border: solid var(--gray-lighter);
+          border: solid var(--gray-light);
           border-width: 0 3px 3px 0;
         }
       }
@@ -860,14 +876,14 @@ label {
     }
 
     ~ .checkboxFake {
-      border-color: var(--gray) !important;
-      background-color: var(--gray);
+      border-color: var(--gray-light) !important;
+      background-color: var(--gray-light);
     }
 
     .checkLabel {
       cursor: default;
       pointer-events: none;
-      color: var(--gray);
+      color: var(--gray-light);
     }
   }
 }
@@ -911,10 +927,7 @@ label {
 
       &:hover {
         ~ .radioBtnFake {
-          border: 2px solid var(--gray);
-          &:after {
-            background-color: var(--gray);
-          }
+          border-color: var(--gray);
         }
       }
 
@@ -1040,31 +1053,22 @@ label {
       cursor: default;
 
       &:checked ~ .radioBtnFake {
-        border-color: var(--gray) !important;
-        background-color: var(--gray);
-
+        border-color: var(--form-radio-diabled-border-color);
         &:after {
-          border: solid var(--gray);
-          background-color: var(--gray);
-        }
-      }
-
-      &:hover {
-        ~ .radioBtnFake {
-          border: 2px solid var(--gray);
-          background-color: var(--gray);
+          border: solid var(--form-radio-diabled-border-color);
+          background-color: var(--form-check-box-disabled-checked-color);
         }
       }
     }
 
     .radioBtnFake {
-      border-color: var(--gray) !important;
-      background-color: var(--gray);
+      border-color: var(--form-radio-diabled-border-color);
+      background-color: var(--form-check-box-disabled-filled-color);
     }
 
     ~ .radioLabel {
       cursor: default;
-      color: var(--gray);
+      color: var(--form-radio-diabled-text-color);
       pointer-events: none;
     }
   }
