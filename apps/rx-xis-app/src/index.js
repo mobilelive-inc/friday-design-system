@@ -25,6 +25,7 @@ import {
 import { OtherSpecs } from './../stories/typography.stories';
 // import Button from '../../../build';
 import { Text } from './components/typography';
+import Stepper from './components/stepper';
 import Span from './components/span/span';
 import Icon from './components/icon/Icon';
 import Input from './components/Input';
@@ -40,7 +41,6 @@ import Tooltip from './components/tooltip';
 import Toggle from './components/toggle';
 import SkipLink from './components/skipLink';
 import Modalcomp from './components/modal';
-
 function App() {
   const options = [
     {
@@ -115,6 +115,9 @@ function App() {
         <Text mb={30} underline italic>
           Testing
         </Text>
+        <Flex mt={5} mb={100}>
+          <Stepper variant="primary" value={5} total={10} />
+        </Flex>
         <Flex mt={5} mb={100}>
           <Button
             variant="outlineGoogleBlue"
@@ -577,7 +580,21 @@ function App() {
             isValid={true}
           />
         </Flex>
-        <Modalcomp width="864px" />
+        <Modalcomp 
+           width="864px"
+           heading="What is cupcake? This is a title."
+           text="standard cupcake uses the same basic ingredients as
+                standard-sized cakes: butter, sugar, eggs, and flour. Nearly any
+                recipe that is suitable for a layer cake can be used to bake
+                cupcakes. The cake batter used for cupcakes may be flavored or
+                have other ingredients stirred in, such as raisins, berries,
+                nuts, or chocolate chips. standard cupcake uses the same basic
+                ingredients as standard-sized cakes: butter, sugar, eggs, and
+                flour. Nearly any recipe that is suitable for a layer cake can
+                be used to bake cupcakes. The cake batter used for cupcakes may
+                be flavored or have other ingredients stirred in, such as
+                raisins, berries, nuts, or chocolate chips." 
+        />
       </div>
     </ThemeProvider>
   );

@@ -28,13 +28,11 @@ export const Wrapperdiv = styled.div(
     display: 'block',
     fontSize: 'fontSizeBase',
     fontWeight: 'fontweight_normal',
-    // width: 'ModalLg',
     outlineStyle: ' none',
     outlineWidth: '0',
     pointerEvents: 'auto',
     textAlign: 'left',
     transform: 'none',
-    overflow:'scroll',
   })
 );
 export const Closebutton = styled.button(
@@ -45,7 +43,6 @@ export const Closebutton = styled.button(
     backgroundClip: 'border-box',
     backgroundColor: 'rgba(0, 0, 0, 0)',
     position: 'relative',
-    top: '-25%',
     left: '95%',
     border: 'none',
     fontSize: [24]
@@ -62,5 +59,36 @@ export const Sronly = styled.span(
     position: 'absolute !important',
     width: '1px !important',
     whiteSpace: 'nowrap !important'
+  })
+);
+export const Modalbody = styled.div(
+  css({
+    flex:'1 1 auto',
+    overflowY:'auto',
+    overflow:'scroll',
+    height:'Modalbodyheight'
+  })
+);
+export const Option = styled.div(
+  css({
+    
+  })
+);
+export const Textarea = styled.textarea(
+  css({
+    minWidth:'Modalwidth',
+    minHeight:'Modalhight',
+    maxWidth:'Modalwidth',
+    padding:[16]
+  })
+);
+export const Modalfooter = styled.div(
+  css({
+    
+  })
+);
+export const Buttoncontianer = styled.div(
+  css({
+    display:"flex",
   })
 );

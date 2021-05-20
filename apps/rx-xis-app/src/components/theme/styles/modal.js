@@ -39,7 +39,10 @@ export const sizes = {
   ModalSl: '1089px',
   ModalLg: '864px',
   ModalMd: '576px',
-  ModalSm: '300px'
+  ModalSm: '300px',
+  Modalbodyheight:'368px',
+  Modalwidth: "100%",
+  Modalhight: "96px"
 };
 export const shadows = {
   ModalBoxShadow: '0 4px 25px rgba(0, 0, 0, 0.2)'

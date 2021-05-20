@@ -11,3 +11,4 @@ export { default as Radio } from './radio';
 export { default as Label } from './label';
 export { default as Select } from './select';
 export { default as Option } from './option';
+export { default as Stepper } from './stepper';
