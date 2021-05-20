@@ -63,8 +63,8 @@ export class MultiCheckboxComponent implements OnInit {
   user = {
     juices: [
       { name: 'Mango', selected: true, id: 1 },
-      { name: 'Peach', selected: false, id: 2 },
-      { name: 'PineApple', selected: false, id: 3 }
+      { name: 'Peach', selected: true, id: 2 },
+      { name: 'PineApple', selected: true, id: 3 }
     ]
   };
 
