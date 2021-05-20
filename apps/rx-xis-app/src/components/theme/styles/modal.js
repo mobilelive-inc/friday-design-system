@@ -42,7 +42,9 @@ export const sizes = {
   ModalSm: '300px',
   Modalbodyheight:'368px',
   Modalwidth: "100%",
-  Modalhight: "96px"
+  Modalhight: "96px",
+  container_max_width: '1140px',
+  container_min_width: '960px',
 };
 export const shadows = {
   ModalBoxShadow: '0 4px 25px rgba(0, 0, 0, 0.2)'
@@ -59,7 +61,3 @@ export default {
   borderCurved,
   borderRounded
 };
-
-// Modals
-//
-// Define Modal colors, font size and border radius.

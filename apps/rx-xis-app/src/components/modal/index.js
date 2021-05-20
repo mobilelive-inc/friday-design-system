@@ -142,9 +142,16 @@ export const ScrollModal = props => {
               </Box>
               <Text my={16}>Add a comment</Text>
               <Box m={10} width="497px">
-              <Textarea>
+              <Input
+                  type="Text"
+                  value=""
+                  placeholder="Text"
+                  id="bottombordered"
+                  withBottomBorderOnly
+                />
+              {/* <Textarea>
                 Please comment here...
-              </Textarea>
+              </Textarea> */}
               </Box>
               </Modalbody>
               <Modalfooter>
@@ -232,9 +239,9 @@ Modalcomp.propTypes = {
   /** add text prop for subheading  to modal */
   text: PropTypes.string,
   /** add width props to the for small large or extra small modal */
-  width:PropTypes.string,
+  width:PropTypes.number,
    /** add height props to the for small large a=or extra small modal */
-  height:PropTypes.string,
+  height:PropTypes.number,
   /** For add padding to main component */
   p: PropTypes.number,
   /** For add top padding to main component */
