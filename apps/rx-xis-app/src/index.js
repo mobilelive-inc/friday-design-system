@@ -40,7 +40,8 @@ import TextArea from './components/textArea';
 import Tooltip from './components/tooltip';
 import Toggle from './components/toggle';
 import SkipLink from './components/skipLink';
-import RadioBtn from './components/radiobtn';
+import Cards from './components/cards';
+import Progress from './components/progress/index';
 
 function App() {
   const options = [
@@ -62,6 +63,7 @@ function App() {
   const [gender, setGender] = React.useState('male');
   const [selected, setSelected] = React.useState(null);
   const [isOn, setIsOn] = React.useState(false);
+  const [reset, setReset] = React.useState(true);
   return (
     <ThemeProvider theme={theme}>
       <AccordionContainer hasMultiple={false}>
@@ -581,6 +583,8 @@ function App() {
             isValid={true}
           />
         </Flex>
+        <Progress progressbarstatus="70" progressbarheading="Progress" />
+        <Cards />
       </div>
     </ThemeProvider>
   );
