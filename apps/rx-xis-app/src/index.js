@@ -41,6 +41,9 @@ import Tooltip from './components/tooltip';
 import Toggle from './components/toggle';
 import SkipLink from './components/skipLink';
 import Modalcomp from './components/modal';
+import Cards from './components/cards';
+import Progress from './components/progress/index';
+
 function App() {
   const options = [
     {
@@ -61,6 +64,7 @@ function App() {
   const [gender, setGender] = React.useState('male');
   const [selected, setSelected] = React.useState(null);
   const [isOn, setIsOn] = React.useState(false);
+  const [reset, setReset] = React.useState(true);
   return (
     <ThemeProvider theme={theme}>
       <AccordionContainer hasMultiple={false}>
@@ -595,6 +599,8 @@ function App() {
                 be flavored or have other ingredients stirred in, such as
                 raisins, berries, nuts, or chocolate chips." 
         />
+        <Progress progressbarstatus="70" progressbarheading="Progress" />
+        <Cards />
       </div>
     </ThemeProvider>
   );

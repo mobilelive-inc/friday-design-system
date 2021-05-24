@@ -27,6 +27,7 @@ export const sizes = {
   size_neg_0_25rem: '-0.25rem', // 32
   size_neg_0_125rem: '-0.125rem', // 31
   size_auto: 'auto', // 30
+  sizes_1rem:'1rem',
   size_3_75rem: '3.75rem', // 20
   size_1_25rem: '1.25rem', // 20
   size_4rem: '4rem', // 21

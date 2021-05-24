@@ -35,6 +35,13 @@ export const Wrapperdiv = styled.div(
     transform: 'none',
   })
 );
+export const Modalhead = styled.div(
+  css({
+    display:'flex',
+    justifyContent:'space-between',
+    verticalAlign:'baseline',
+  })
+)
 export const Closebutton = styled.button(
   css({
     alignItems: 'flex-start',
@@ -43,7 +50,6 @@ export const Closebutton = styled.button(
     backgroundClip: 'border-box',
     backgroundColor: 'rgba(0, 0, 0, 0)',
     position: 'relative',
-    left: '95%',
     border: 'none',
     fontSize: [24]
   })

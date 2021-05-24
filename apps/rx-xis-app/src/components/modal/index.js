@@ -18,7 +18,7 @@ import {
   Option,
   Textarea,
   Modalfooter,
-  Buttoncontianer
+  Buttoncontianer,
 } from './css';
 import Text from '../typography';
 import GlobalStyle from '../theme/globalStyles';
@@ -78,12 +78,12 @@ export const ScrollModal = props => {
             aria-labelledby="Modal is open">
             <Wrapperdiv style={{ width: props.width }}>
               <Text variant="H4">{props.heading}</Text>
-              <Closebutton onClick={handleCloseModal}>
+              <Closebutton onClick={handleCloseModal} tabIndex='1'>
                 <Icon className="icon-close" />
                 <Sronly>Close Modal</Sronly>
               </Closebutton>
               <Modalbody>
-              <Text variant='H5' mb={16}>
+              <Text variant='H4' mb={16}>
                 {props.firsttext}
               </Text>
               <Text mb={10}>{props.firstheading}</Text>
@@ -218,11 +218,14 @@ const Modalcomp = props => {
             aria-modal="true"
             aria-labelledby="Modal is open">
             <Wrapperdiv style={{ width: props.width, height: props.height }}>
+              <Modalhead mb={16}>
               <Text variant="H3">{props.heading}</Text>
-              <Closebutton onClick={handleCloseModal}>
-                <Icon className="icon-close" />
-                <Sronly>Close Modal</Sronly>
-              </Closebutton>
+                <Closebutton onClick={handleCloseModal} tabIndex='1'>
+                  <Icon className="icon-close" />
+                  <Sronly>Close Modal</Sronly>
+                </Closebutton>
+              </Modalhead>
+              
               <Text>{props.text}</Text>
             </Wrapperdiv>
           </Modal>
