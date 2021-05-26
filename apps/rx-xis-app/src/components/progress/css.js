@@ -2,13 +2,6 @@ import styled from 'styled-components';
 import css from '@styled-system/css';
 import { compose, border, layout, variant, space, color } from 'styled-system';
 
-export const Section = styled.section(
-  css({
-    maxWidth: `container_max_width`,
-    minWidth: `container_min_width`,
-    margin: '0 auto'
-  })
-);
 export const Wrapper = styled('div')(
   css({
     display: `flex`,

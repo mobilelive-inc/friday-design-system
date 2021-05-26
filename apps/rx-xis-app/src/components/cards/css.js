@@ -1,14 +1,6 @@
 import styled from "styled-components";
 import css from "@styled-system/css";
 
-export const Section = styled.section(
-  css({
-    maxWidth: `container_max_width`,
-    minWidth: `container_min_width`,
-    margin: "0 auto",
-  })
-);
-
 export const Col = styled.div(
   css({
     flex: "0 0 30%",
