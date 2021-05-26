@@ -22,9 +22,9 @@ import {
         'p-button-vertical':
           (iconPos === 'top' || iconPos === 'bottom') && label
       }"
-      (click)="onClick.emit($event)"
-      (focus)="onFocus.emit($event)"
-      (blur)="onBlur.emit($event)"
+      (click)="!ariaDisabled && onClick.emit($event)"
+      (focus)="!ariaDisabled && onFocus.emit($event)"
+      (blur)="!ariaDisabled && onBlur.emit($event)"
     >
       <ng-content></ng-content>
       <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
