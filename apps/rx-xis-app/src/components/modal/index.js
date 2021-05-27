@@ -77,11 +77,13 @@ export const ScrollModal = props => {
             aria-modal="true"
             aria-labelledby="Modal is open">
             <Wrapperdiv style={{ width: props.width }}>
+            <Modalhead mb={16}>
               <Text variant="H4">{props.heading}</Text>
               <Closebutton onClick={handleCloseModal} tabIndex='1'>
                 <Icon className="icon-close" />
                 <Sronly>Close Modal</Sronly>
               </Closebutton>
+              </Modalhead>
               <Modalbody>
               <Text variant='H4' mb={16}>
                 {props.firsttext}

@@ -11,12 +11,17 @@ export default {
   title: "Modal",
   component: Modalcomp,
 };
+ const Xl = '1089px';
+ const Lg = '864px';
+ const Md = '576px';
+ const Sm = '300px';
+
 
 export const Modal = () => (
   <ThemeProvider theme={modalTheme}>
     <GlobalStyle />
     <Modalcomp
-      width="300px"
+      width={Sm}
       title="Small"
       heading="What is cupcake? This is a title."
       text="standard cupcake uses the same basic ingredients as
@@ -32,8 +37,8 @@ export const Modal = () => (
                 raisins, berries, nuts, or chocolate chips."
     />
     <Modalcomp
-      width="864px"
-      title="Large"
+      width={Md}
+      title="Medium"
       heading="What is cupcake? This is a title."
       text="standard cupcake uses the same basic ingredients as
                   standard-sized cakes: butter, sugar, eggs, and flour. Nearly any
@@ -48,7 +53,23 @@ export const Modal = () => (
                   raisins, berries, nuts, or chocolate chips."
     />
     <Modalcomp
-      width="1089"
+      width={Lg}
+      title="Large"
+      heading="What is cupcake? This is a title."
+      text="standard cupcake uses the same basic ingredients as
+                  standard-sized cakes: butter, sugar, eggs, and flour. Nearly any
+                  recipe that is suitable for a layer cake can be used to bake
+                  cupcakes. The cake batter used for cupcakes may be flavored or
+                  have other ingredients stirred in, such as raisins, berries,
+                  nuts, or chocolate chips. standard cupcake uses the same basic
+                  ingredients as standard-sized cakes: butter, sugar, eggs, and
+                  flour. Nearly any recipe that is suitable for a layer cake can
+                  be used to bake cupcakes. The cake batter used for cupcakes may
+                  be flavored or have other ingredients stirred in, such as
+                  raisins, berries, nuts, or chocolate chips."
+    />
+     <Modalcomp
+      width={Xl}
       title="Extra Large"
       heading="What is cupcake? This is a title."
       text="standard cupcake uses the same basic ingredients as
@@ -69,7 +90,7 @@ export const ScrollBarModal = () => (
   <ThemeProvider theme={modalTheme}>
     <GlobalStyle />
     <Modalcomp
-      width="576px"
+      width={Md}
       title="Inner Scrollbar"
       heading="What is cupcake? This is a title."
       text="Because their small size is more efficient for heat conduction, cupcakes bake much faster than a normal layered cake.[7] During baking, the volume of the batter initially increases due to the production of carbon dioxide, then decreases upon cooling due to the release of leavening gases.
@@ -77,7 +98,7 @@ export const ScrollBarModal = () => (
       Because their small size is more efficient for heat conduction, cupcakes bake much faster than a normal layered cake.[7] During baking, the volume of the batter initially increases due to the production of carbon dioxide, then decreases upon cooling due to the release of leavening gases."
     />
     <ScrollModal
-      width="576px"
+      width={Md}
       title="Scrollbar"
       heading="What is cupcake? This is a title."
       firsttitle="this is first Title"

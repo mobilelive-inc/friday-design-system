@@ -36,10 +36,10 @@ export const borderWidths = {
   ModalBorderWidth: _borderWidths.borderWidth
 };
 export const sizes = {
-  ModalSl: '1089px',
-  ModalLg: '864px',
-  ModalMd: '576px',
-  ModalSm: '300px',
+  Xl: '1089px',
+  Lg: '864px',
+  Md: '576px',
+  Sm: '300px',
   Modalbodyheight:'368px',
   Modalwidth: "100%",
   Modalhight: "96px",

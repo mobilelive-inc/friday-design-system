@@ -65,6 +65,12 @@ function App() {
   const [selected, setSelected] = React.useState(null);
   const [isOn, setIsOn] = React.useState(false);
   const [reset, setReset] = React.useState(true);
+  const width = {
+    Xl : '1089px',
+    Lg : '864px',
+    Md : '576px',
+    Sm : '300px',
+  };
   return (
     <ThemeProvider theme={theme}>
       <AccordionContainer hasMultiple={false}>
@@ -585,7 +591,7 @@ function App() {
           />
         </Flex>
         <Modalcomp 
-           width="864px"
+           width={width.Md}
            heading="What is cupcake? This is a title."
            text="standard cupcake uses the same basic ingredients as
                 standard-sized cakes: butter, sugar, eggs, and flour. Nearly any
