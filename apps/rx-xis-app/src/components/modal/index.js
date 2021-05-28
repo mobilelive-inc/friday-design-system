@@ -76,7 +76,7 @@ export const ScrollModal = props => {
             role="dialog"
             aria-modal="true"
             aria-labelledby="Modal is open">
-            <Wrapperdiv style={{ width: props.width == Xl || Md || Sm || Lg ? '300px' :props.width }}>
+            <Wrapperdiv style={{ width: props.width}}>
             <Modalhead mb={16}>
               <Text variant="H4">{props.heading}</Text>
               <Closebutton onClick={handleCloseModal} tabIndex='1'>
