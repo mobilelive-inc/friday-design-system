@@ -3,7 +3,8 @@ export const radii = {
   borderRadiusNone: radius * 0,
   borderRadius: radius * 0.25,
   borderRadiusLG: radius * 0.5,
-  borderRadiusSM: radius * 0.2
+  borderRadiusSM: radius * 0.2,
+  borderRadiusHalf: '50%'
 };
 
 export const radius = 16;

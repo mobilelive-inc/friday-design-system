@@ -16,7 +16,6 @@ export default {
  const Md = '576px';
  const Sm = '300px';
 
-
 export const Modal = () => (
   <ThemeProvider theme={modalTheme}>
     <GlobalStyle />

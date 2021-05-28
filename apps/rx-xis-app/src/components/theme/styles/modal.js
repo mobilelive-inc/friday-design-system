@@ -25,7 +25,8 @@ export const space = {
   ModalContentPaddingX: _space.spacerMid,
   ModalContentPaddingY: _space.globalSpacer,
   ModalHeadingIconPaddingX: _space.space_5x_tiny,
-  ModalHeadingIconPaddingY: _space.space_5x_tiny
+  ModalHeadingIconPaddingY: _space.space_5x_tiny,
+  SectionMarginBottom:_space.globalSpacer,
 };
 
 export const radii = {

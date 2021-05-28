@@ -165,8 +165,7 @@ const Cards = () => {
   return (
     <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
-      <Section>
-        <Text variant="H1" mb={32} ml={8}>
+        <Text variant="H1" mb={32}>
           Cards
         </Text>
         <Wrapper>
@@ -236,7 +235,6 @@ const Cards = () => {
             />
           </Col> */}
         </Wrapper>
-      </Section>
     </ThemeProvider>
   );
 };

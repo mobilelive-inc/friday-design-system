@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 import css from '@styled-system/css';
-import { compose, border, layout, sizes, space, color } from 'styled-system';
-
+// import { compose, border, layout, sizes, space, color } from 'styled-system';
 export const Section = styled.section(
   css({
     maxWidth: 'container_max_width',
     minWidth: 'container_min_width',
-    margin: '0 auto'
+    marginBottom:'SectionMarginBottom',
   }),
-  compose(border, layout, space, color,sizes)
 );
 export const Wrapper = styled.div(
   css({
@@ -35,8 +33,8 @@ export const Wrapperdiv = styled.div(
     pointerEvents: 'auto',
     textAlign: 'left',
     transform: 'none',
-  }),
-  compose(border, layout, space, color,sizes)
+    width:'Md'
+  })
 );
 export const Modalhead = styled.div(
   css({

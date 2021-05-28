@@ -55,7 +55,7 @@ export const ScrollModal = props => {
     <ThemeProvider theme={Modaltheme}>
       <GlobalStyle />
       <Section>
-        <Text variant="H1" mb={16} ml={16}>
+        <Text variant="H1" mb={16}>
           {' '}
           {props.title} Modal
         </Text>
@@ -76,7 +76,7 @@ export const ScrollModal = props => {
             role="dialog"
             aria-modal="true"
             aria-labelledby="Modal is open">
-            <Wrapperdiv style={{ width: props.width }}>
+            <Wrapperdiv style={{ width: props.width == Xl || Md || Sm || Lg ? '300px' :props.width }}>
             <Modalhead mb={16}>
               <Text variant="H4">{props.heading}</Text>
               <Closebutton onClick={handleCloseModal} tabIndex='1'>
