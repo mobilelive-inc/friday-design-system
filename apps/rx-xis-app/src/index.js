@@ -42,6 +42,7 @@ import Toggle from './components/toggle';
 import SkipLink from './components/skipLink';
 import Cards from './components/cards';
 import Progress from './components/progress/index';
+import Table from './components/tabel';
 
 function App() {
   const options = [
@@ -84,8 +85,8 @@ function App() {
         </MainContainer>
       </Box>
       <MainContainer >
-        <Text fontSize="fontSizeH2">Advanced Stepper</Text>
-        <Container>
+        {/* <Text fontSize="fontSizeH2">Advanced Stepper</Text> */}
+        {/* <Container>
           <AdvancedStepper
             variant="primary"
             value={count}
@@ -688,7 +689,11 @@ function App() {
         </Flex>
         </Container>
         <Progress progressbarstatus="70" progressbarheading="Progress" />
-        <Cards />
+        <Cards /> */}
+        <Container>
+          <Text fontSize="fontSizeH2">Default Tabel</Text> 
+          <Table />
+        </Container>
       </MainContainer>
     </ThemeProvider>
   );
