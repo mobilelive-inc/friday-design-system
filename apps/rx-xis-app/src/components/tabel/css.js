@@ -10,7 +10,6 @@ export const TabelRow = styled('div')(
     css({
         flex:'1',
         padding:'0.2rem 0.4em',
-        // padding: ''
         border: '1px solid #eeeeee',
     })
   );
