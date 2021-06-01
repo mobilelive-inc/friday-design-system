@@ -695,21 +695,25 @@ function App() {
           />
         </Flex>
         </Container>
-        <Modalcomp 
-           width={Md}
-           heading="What is cupcake? This is a title."
-           text="standard cupcake uses the same basic ingredients as
-                standard-sized cakes: butter, sugar, eggs, and flour. Nearly any
-                recipe that is suitable for a layer cake can be used to bake
-                cupcakes. The cake batter used for cupcakes may be flavored or
-                have other ingredients stirred in, such as raisins, berries,
-                nuts, or chocolate chips. standard cupcake uses the same basic
-                ingredients as standard-sized cakes: butter, sugar, eggs, and
-                flour. Nearly any recipe that is suitable for a layer cake can
-                be used to bake cupcakes. The cake batter used for cupcakes may
-                be flavored or have other ingredients stirred in, such as
-                raisins, berries, nuts, or chocolate chips." 
-        />
+        <Text fontSize="fontSizeH2">Modal</Text>
+        <Container>
+          <Modalcomp 
+            width={Md}
+            heading="What is cupcake? This is a title."
+            text="standard cupcake uses the same basic ingredients as
+                  standard-sized cakes: butter, sugar, eggs, and flour. Nearly any
+                  recipe that is suitable for a layer cake can be used to bake
+                  cupcakes. The cake batter used for cupcakes may be flavored or
+                  have other ingredients stirred in, such as raisins, berries,
+                  nuts, or chocolate chips. standard cupcake uses the same basic
+                  ingredients as standard-sized cakes: butter, sugar, eggs, and
+                  flour. Nearly any recipe that is suitable for a layer cake can
+                  be used to bake cupcakes. The cake batter used for cupcakes may
+                  be flavored or have other ingredients stirred in, such as
+                  raisins, berries, nuts, or chocolate chips." 
+          />
+        </Container>
+        
         <Progress progressbarstatus="70" progressbarheading="Progress" />
         <Cards />
       </MainContainer>

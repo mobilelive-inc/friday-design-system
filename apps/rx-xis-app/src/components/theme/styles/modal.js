@@ -16,7 +16,8 @@ export const colors = {
   ModalHeadingIconColor: _colors.black,
   ModalBorderColor: _colors.primaryLighter,
   ModalHeaderBackground: _colors.primary,
-  ModalHeaderBackgroundHover: _colors.primaryHover
+  ModalHeaderBackgroundHover: _colors.primaryHover,
+  ModalButtonBg:'rgba(0, 0, 0, 0)',
 };
 
 export const space = {
@@ -27,6 +28,7 @@ export const space = {
   ModalHeadingIconPaddingX: _space.space_5x_tiny,
   ModalHeadingIconPaddingY: _space.space_5x_tiny,
   SectionMarginBottom:_space.globalSpacer,
+  ModalButtonFontSize:'24px',
 };
 
 export const radii = {
@@ -48,7 +50,8 @@ export const sizes = {
   container_min_width: '960px',
 };
 export const shadows = {
-  ModalBoxShadow: '0 4px 25px rgba(0, 0, 0, 0.2)'
+  ModalBoxShadow: '0 4px 25px rgba(0, 0, 0, 0.2)',
+  ModalShadows:'rgba(0, 0, 0, 0.2) 0px 4px 25px 0px',
 };
 export default {
   fontSizes,

@@ -8,22 +8,12 @@ export const Section = styled.section(
     marginBottom:'SectionMarginBottom',
   }),
 );
-export const Wrapper = styled.div(
-  css({
-    display: `flex`,
-    justifyContent: `center`,
-    flexDirection: `column`,
-    border: `4px solid`,
-    borderColor: 'ModalBorderColor',
-    padding: 'ModalContentPaddingY'
-  })
-);
 
 export const Wrapperdiv = styled.div(
   css({
     padding: 'ModalHeadingPadding',
     backgroundColor: 'white',
-    boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 25px 0px',
+    boxShadow: 'ModalShadows',
     boxSizing: 'order-box',
     display: 'block',
     fontSize: 'fontSizeBase',
@@ -49,10 +39,10 @@ export const Closebutton = styled.button(
     appearance: ' auto',
     backgroundAttachment: 'scroll',
     backgroundClip: 'border-box',
-    backgroundColor: 'rgba(0, 0, 0, 0)',
+    backgroundColor: 'ModalButtonBg',
     position: 'relative',
     border: 'none',
-    fontSize: [24]
+    fontSize: 'ModalButtonFontSize',
   })
 );
 export const Sronly = styled.span(
@@ -86,7 +76,7 @@ export const Textarea = styled.textarea(
     minWidth:'Modalwidth',
     minHeight:'Modalhight',
     maxWidth:'Modalwidth',
-    padding:[16]
+    padding:'ModalHeadingPaddingX'
   })
 );
 export const Modalfooter = styled.div(

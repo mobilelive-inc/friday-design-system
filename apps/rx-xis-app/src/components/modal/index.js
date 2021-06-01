@@ -59,7 +59,6 @@ export const ScrollModal = props => {
           {' '}
           {props.title} Modal
         </Text>
-        <Wrapper>
           <Button
             variant="outlinePrimary"
             width={170}
@@ -178,7 +177,6 @@ export const ScrollModal = props => {
               </Modalfooter>
             </Wrapperdiv>
           </Modal>
-        </Wrapper>
       </Section>
 
     </ThemeProvider>
@@ -198,11 +196,6 @@ const Modalcomp = props => {
     <ThemeProvider theme={Modaltheme}>
       <GlobalStyle />
       <Section>
-        <Text variant="H1" mb={16} ml={16}>
-          {' '}
-          {props.title} Modal
-        </Text>
-        <Wrapper>
           <Button
             variant="outlinePrimary"
             width={170}
@@ -231,7 +224,6 @@ const Modalcomp = props => {
               <Text>{props.text}</Text>
             </Wrapperdiv>
           </Modal>
-        </Wrapper>
       </Section>
     </ThemeProvider>
   );
