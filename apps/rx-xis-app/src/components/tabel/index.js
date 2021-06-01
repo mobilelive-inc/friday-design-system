@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../theme/globalStyles';
-import tabelTheme from './../theme/styles/tabel';
+import tableTheme from '../theme/styles/table';
 import {
-    TabelRow,
+    TableRow,
     RowData,
     TableWrapper,
-    TabelHeader,
+    TableHeader,
     HeaderContent,
-    TabelBody
+    TableBody
   } from './css';
 
   const Row = ({id, title, priority, type, complete}) => (
-     <TabelRow>
+     <TableRow>
         <RowData>{id}</RowData>
         <RowData>{title}</RowData>
         <RowData>{priority}</RowData>
         <RowData>{type}</RowData>    
         <RowData>{complete}</RowData>  
-      </TabelRow> 
+      </TableRow> 
   );
   
   const Table = () => {
@@ -33,19 +33,19 @@ import {
       const rows = data.map( (rowData) => <Row {...rowData} />);
   
       return (
-        <ThemeProvider theme={tabelTheme}>
+        <ThemeProvider theme={tableTheme}>
           <GlobalStyle />
-          <TableWrapper>
-              <TabelHeader>
+          <TableWrapper variant="primary">
+              <TableHeader  >
                 <HeaderContent>ID</HeaderContent>
                 <HeaderContent>Title</HeaderContent>
                 <HeaderContent>Priority</HeaderContent>
                 <HeaderContent>Issue Type</HeaderContent>
                 <HeaderContent>% Complete</HeaderContent>
-            </TabelHeader>
-            <TabelBody>
+            </TableHeader>
+            <TableBody>
             {rows}
-            </TabelBody>
+            </TableBody>
         </TableWrapper>
        </ThemeProvider>
       );

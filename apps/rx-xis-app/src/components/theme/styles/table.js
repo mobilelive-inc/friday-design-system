@@ -3,7 +3,7 @@ import { _colors } from '../properties/colors'
 import { _space } from '../properties/space'
 import { _radii } from '../properties/radius'
 import { _borderWidths } from '../properties/borderWidths'
-import { TabelBody } from '../../tabel/css'
+import {table} from '../variants/table'
 
 export const fontSizes = {
    TabelTextFontSize: _fontSizes.fontsize_2x_tiny,
@@ -65,5 +65,6 @@ export default {
     colors,
     space,
     radii,
-    borderWidths
+    borderWidths,
+    table
 }

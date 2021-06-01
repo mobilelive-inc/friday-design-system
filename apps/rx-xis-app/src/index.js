@@ -691,7 +691,7 @@ function App() {
         <Progress progressbarstatus="70" progressbarheading="Progress" />
         <Cards /> */}
         <Container>
-          <Text fontSize="fontSizeH2">Default Tabel</Text> 
+          <Text fontSize="fontSizeH2">Default Table</Text> 
           <Table />
         </Container>
       </MainContainer>
