@@ -8,7 +8,8 @@ import { buttons, borderCurved, borderRounded } from '../variants/buttons';
 
 export const fontSizes = {
   ModalHeadingfontSize: _fontSizes.fontsize_2x_tiny,
-  ModalHeadingIconFontSize: _fontSizes.fontsize_tiny
+  ModalHeadingIconFontSize: _fontSizes.fontsize_tiny,
+  ModalButtonFontSize:'24px',
 };
 
 export const colors = {
@@ -28,7 +29,6 @@ export const space = {
   ModalHeadingIconPaddingX: _space.space_5x_tiny,
   ModalHeadingIconPaddingY: _space.space_5x_tiny,
   SectionMarginBottom:_space.globalSpacer,
-  ModalButtonFontSize:'24px',
 };
 
 export const radii = {

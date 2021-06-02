@@ -196,6 +196,10 @@ const Modalcomp = props => {
     <ThemeProvider theme={Modaltheme}>
       <GlobalStyle />
       <Section>
+        <Text variant="H1" mb={16}>
+            {' '}
+            {props.title} Modal
+          </Text>
           <Button
             variant="outlinePrimary"
             width={170}
