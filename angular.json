@@ -241,7 +241,6 @@
             "main": "apps/angular-demos/src/main.ts",
             "polyfills": "apps/angular-demos/src/polyfills.ts",
             "tsConfig": "apps/angular-demos/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "apps/angular-demos/src/favicon.ico",
               "apps/angular-demos/src/assets"
@@ -250,7 +249,13 @@
               "apps/angular-demos/src/styles.scss",
               "libs/icons/icomons_styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -262,10 +267,8 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": true,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": true,
               "buildOptimizer": true,
               "budgets": [
                 {
@@ -280,7 +283,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -366,7 +370,6 @@
             "main": "apps/angular-sign-up/src/main.ts",
             "polyfills": "apps/angular-sign-up/src/polyfills.ts",
             "tsConfig": "apps/angular-sign-up/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "apps/angular-sign-up/src/favicon.ico",
               "apps/angular-sign-up/src/assets"
@@ -375,7 +378,13 @@
               "apps/angular-sign-up/src/styles.scss",
               "libs/icons/icomons_styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -405,7 +414,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
