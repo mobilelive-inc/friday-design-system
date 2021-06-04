@@ -66,10 +66,7 @@
               "apps/rx-xis-app/tsconfig.app.json",
               "apps/rx-xis-app/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/rx-xis-app/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/rx-xis-app/**/*"]
           }
         },
         "test": {
@@ -103,13 +100,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/rx-xis-app-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/rx-xis-app-e2e/**/*"
-            ]
+            "tsConfig": ["apps/rx-xis-app-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/rx-xis-app-e2e/**/*"]
           }
         }
       }
@@ -120,7 +112,7 @@
       "prefix": "fds",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "project": "libs/angular/src/ng-package.json",
             "tsConfig": "libs/angular/src/tsconfig.lib.json"
@@ -133,10 +125,7 @@
               "libs/angular/tsconfig.lib.json",
               "libs/angular/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/angular/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/angular/**/*"]
           }
         },
         "test": {
@@ -227,13 +216,8 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "tsConfig": [
-              "apps/angular-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/angular-e2e/**/*"
-            ]
+            "tsConfig": ["apps/angular-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/angular-e2e/**/*"]
           }
         }
       }
@@ -279,7 +263,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": true,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": true,
@@ -323,10 +306,7 @@
               "apps/angular-demos/tsconfig.app.json",
               "apps/angular-demos/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/angular-demos/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/angular-demos/**/*"]
           }
         },
         "test": {
@@ -361,13 +341,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/angular-demos-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/angular-demos-e2e/**/*"
-            ]
+            "tsConfig": ["apps/angular-demos-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/angular-demos-e2e/**/*"]
           }
         }
       }
@@ -413,7 +388,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -457,10 +431,7 @@
               "apps/angular-sign-up/tsconfig.app.json",
               "apps/angular-sign-up/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/angular-sign-up/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/angular-sign-up/**/*"]
           }
         },
         "test": {
@@ -495,13 +466,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/angular-sign-up-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/angular-sign-up-e2e/**/*"
-            ]
+            "tsConfig": ["apps/angular-sign-up-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/angular-sign-up-e2e/**/*"]
           }
         }
       }
