@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormArray } from '@angular/forms';
-import map from 'lodash/map';
+import { map } from 'lodash-es';
 
 @Component({
   selector: 'demo-checkbox-multiple',
