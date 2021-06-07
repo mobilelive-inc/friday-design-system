@@ -14,16 +14,40 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
           (completeMethod)="filterCountry($event)"
           field="name"
           [minLength]="1"
+          [dropdown]="true"
         >
         </fds-autocomplete>
       </fds-form-field>
       <pre>Value: {{ form.get('country')?.value | json }}</pre>
+    </form>
+
+    <form class="form" role="form" [formGroup]="form1">
+      <fds-form-field>
+        <fds-label>Country</fds-label>
+        <fds-autocomplete
+          formControlName="country"
+          [suggestions]="filteredCountries"
+          (completeMethod)="filterCountry($event)"
+          field="name"
+          [minLength]="1"
+          [multiple]="true"
+          [withinInput]="false"
+          [toggleAutocomplete]="true"
+          [btnDropdown]="true"
+        >
+        </fds-autocomplete>
+      </fds-form-field>
+      <pre>Value: {{ form1.get('country')?.value | json }}</pre>
     </form>
   `,
   styles: []
 })
 export class AutocompleteBasicComponent {
   form = this.fb.group({
+    country: new FormControl('')
+  });
+
+  form1 = this.fb.group({
     country: new FormControl('')
   });
 

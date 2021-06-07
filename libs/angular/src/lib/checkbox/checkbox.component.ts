@@ -35,7 +35,7 @@ export const CHECKBOX_VALUE_ACCESSOR: any = {
       }"
       [class]="styleClass"
     >
-      <div class="checkBox checkBox--curved">
+      <div class="checkBox checkBox--curved" [class.disabled]="disabled">
         <input
           #cb
           type="checkbox"
