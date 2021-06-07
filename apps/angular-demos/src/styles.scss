@@ -1,15 +1,22 @@
-// Basic Styles form Static Friday Design System
-@import 'libs/static/src/scss/index';
+// Custom settings
+@import 'styles/grid-utils-settings/breakpoint-vals';
+@import 'styles/grid-utils-settings/spacing-vals';
 
-@import 'apps/angular-demos/src/styles/themes/temp-var-vals';
+// Basic settings from Static Friday Design System
+@import 'libs/static/src/scss/_component-dependencies';
+
+// Component Styles form Static Friday Design System
+@import 'libs/static/src/scss/components/_buttons';
+@import 'libs/static/src/scss/components/_forms';
+@import 'libs/static/src/scss/components/_progressbar';
+@import 'libs/static/src/scss/components/_tooltip';
+@import 'libs/static/src/scss/components/_card';
+@import 'libs/static/src/scss/components/_accordion';
+@import 'libs/static/src/scss/components/_tables';
+
+//@import 'apps/angular-demos/src/styles/themes/temp-var-vals';
 @import 'libs/angular/src/lib/shared/tippy/fds-tippy';
 @import 'node_modules/tippy.js/animations/shift-away';
 
-// Basic Theme form Static Friday Design System
-//@import 'libs/static/theme/theme-settings';
-
 // Add theme based custom styles from local project
 @import 'styles/themes/theme.scss';
-
-//
-//@import 'styles/css-variables.scss';

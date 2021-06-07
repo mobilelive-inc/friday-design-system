@@ -1,18 +1,34 @@
 <div id="float-info" class="highlighted-block mb--5">
   <h2>Float</h2>
-  <h3 class="h6">Toggle floats on any element, across any breakpoint, using our responsive float utilities.</h3>
+  <h3 class="h6">
+    Toggle floats on any element, across any breakpoint, using our responsive
+    float utilities.
+  </h3>
   <h3>Overview</h3>
-  <p>These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the CSS float property. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no effect on flex items.</p>
+  <p>
+    These utility classes float an element to the left or right, or disable
+    floating, based on the current viewport size using the CSS float property.
+    These use the same viewport breakpoints as our grid system. Please be aware
+    float utilities have no effect on flex items.
+  </p>
   <h3>Classes</h3>
   <p>Toggle a float with a class:</p>
 
   <div class="highlighted-block mb--4">
     <div class="clearfix w--100 pb--5">
-      <div class="float--left"><code>Float left on all viewport sizes</code></div><br>
-      <div class="float--right"><code>Float right on all viewport sizes</code></div><br>
-      <div class="float--none"><code>Don't float on all viewport sizes</code></div>
+      <div class="float--left">
+        <code>Float left on all viewport sizes</code>
+      </div>
+      <br />
+      <div class="float--right">
+        <code>Float right on all viewport sizes</code>
+      </div>
+      <br />
+      <div class="float--none">
+        <code>Don't float on all viewport sizes</code>
+      </div>
     </div>
-<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
+    <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
 <span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--left"</span>&gt;<code>Float left on all viewport sizes</code>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--right"</span>&gt;<code>Float right on all viewport sizes</code>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--none"</span>&gt;<code>Don't float on all viewport sizes</code>&lt;/div&gt;</span>
@@ -22,7 +38,7 @@
   <h3>Mixins</h3>
   <p>Or by Sass mixin:</p>
   <div class="highlighted-block mb--4">
-<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
+    <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
   .element {
     @include float--left;
   }
@@ -32,18 +48,27 @@
   .one-more {
     @include float--none;
   }
-</pre>
+</pre
+    >
   </div>
   <h3>Responsive</h3>
   <p>Responsive variations also exist for each <code>float</code> value.</p>
   <div class="highlighted-block mb--4">
     <div class="clearfix w--100 pb--5">
-      <div class="float--sm--left w--100"><code>Float left on viewports sized SM (small) or wider</code></div>
-      <div class="float--md--left w--100"><code>Float left on viewports sized MD (medium) or wider</code></div>
-      <div class="float--lg--left w--100"><code>Float left on viewports sized LG (large) or wider</code></div>
-      <div class="float--xl--left w--100"><code>Float left on viewports sized XL (extra-large) or wider</code></div>
+      <div class="float--sm--left w--100">
+        <code>Float left on viewports sized SM (small) or wider</code>
+      </div>
+      <div class="float--md--left w--100">
+        <code>Float left on viewports sized MD (medium) or wider</code>
+      </div>
+      <div class="float--lg--left w--100">
+        <code>Float left on viewports sized LG (large) or wider</code>
+      </div>
+      <div class="float--xl--left w--100">
+        <code>Float left on viewports sized XL (extra-large) or wider</code>
+      </div>
     </div>
-<pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
+    <pre class="m--0" style="font-family: 'Montserrat'; font-size: 12pt;">
 <span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--sm--left"</span>&gt;<code class="text--primary">Float left on viewports sized SM (small) or wider</code>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--sm--left"</span>&gt;<code class="text--primary">Float left on viewports sized MD (medium) or wider</code>&lt;/div&gt;</span>
 <span style="color: rgb(0,0,128)">&lt;div <span style="color: rgb(0,0,255);">class</span><span style="color: rgb(0,128,0);">="float--sm--left"</span>&gt;<code class="text--primary">Float left on viewports sized LG (large) or wider</code>&lt;/div&gt;</span>

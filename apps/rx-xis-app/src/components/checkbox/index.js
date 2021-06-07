@@ -55,7 +55,7 @@ function Checkbox(props) {
         error={errorMessage}
         pl={[10]}
         mt='-22px'
-        lineHeight={10}
+        lineHeight={5}
         fontWeight={600}
         color={errorMessage && !isChecked ? 'error' : 'black'}
         // fontWeight={isChecked ? [2] : [0]}

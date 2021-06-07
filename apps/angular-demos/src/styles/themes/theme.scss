@@ -3,23 +3,11 @@
 @import 'lime-theme';
 @import 'lemon-theme';
 
-// add individual components as per requirement
-// @import 'libs/static/theme/_accordion.scss';
-// @import 'libs/static/theme/_borders.scss';
-// @import 'libs/static/theme/_accordion.scss';
-// @import 'libs/static/theme/_buttons.scss';
-// @import 'libs/static/theme/_card.scss';
-// @import 'libs/static/theme/_colors.scss';
-// @import 'libs/static/theme/_divider.scss';
-// @import 'libs/static/theme/_forms.scss';
-// @import 'libs/static/theme/_modals.scss';
-// @import 'libs/static/theme/_notification-list.scss';
-// @import 'libs/static/theme/_progressbar.scss';
-// @import 'libs/static/theme/_spacing.scss';
-// @import 'libs/static/theme/_tables.scss';
-// @import 'libs/static/theme/_toast-notification.scss';
-// @import 'libs/static/theme/_tooltip.scss';
-// @import 'libs/static/theme/_typography.scss';
-
 // import theme from local settings
 @import 'progressbar';
+@import 'buttons';
+@import 'forms';
+@import 'tooltip';
+@import 'card';
+@import 'accordion';
+@import 'tables';
