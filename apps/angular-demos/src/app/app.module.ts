@@ -115,7 +115,11 @@ import { FullFeaturedComponent } from './examples/tabs/full-featured/full-featur
     FormsModule,
     ReactiveFormsModule,
     FdsModalModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled', useHash: true })
+    RouterModule.forRoot([], {
+      initialNavigation: 'enabled',
+      useHash: true,
+      relativeLinkResolution: 'legacy'
+    })
   ],
   entryComponents: [ModalBasicExampleComponent],
   providers: [CurrencyPipe],
