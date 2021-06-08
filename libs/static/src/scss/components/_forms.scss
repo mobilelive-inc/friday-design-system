@@ -444,6 +444,7 @@ input[type='search'] {
   //select styling
   &__select {
     select {
+      cursor: pointer;
       -moz-appearance: none;
       -webkit-appearance: none;
       &.formControl {
