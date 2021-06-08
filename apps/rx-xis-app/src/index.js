@@ -40,6 +40,7 @@ import TextArea from './components/textArea';
 import Tooltip from './components/tooltip';
 import Toggle from './components/toggle';
 import SkipLink from './components/skipLink';
+import Modalcomp from './components/modal';
 import Cards from './components/cards';
 import Progress from './components/progress/index';
 import Table from './components/tabel';
@@ -64,7 +65,14 @@ function App() {
   const [gender, setGender] = React.useState('male');
   const [selected, setSelected] = React.useState(null);
   const [isOn, setIsOn] = React.useState(false);
+  const [reset, setReset] = React.useState(true);
   const [count, setCount] = React.useState(1);
+
+  const Xl = '1089px';
+  const Lg = '864px';
+  const Md = '576px';
+  const Sm = '300px';
+
   return (
     <ThemeProvider theme={theme}>
       <Box
@@ -688,6 +696,25 @@ function App() {
           />
         </Flex>
         </Container>
+        <Text fontSize="fontSizeH2">Modal</Text>
+        <Container>
+          <Modalcomp 
+            width={Md}
+            heading="What is cupcake? This is a title."
+            text="standard cupcake uses the same basic ingredients as
+                  standard-sized cakes: butter, sugar, eggs, and flour. Nearly any
+                  recipe that is suitable for a layer cake can be used to bake
+                  cupcakes. The cake batter used for cupcakes may be flavored or
+                  have other ingredients stirred in, such as raisins, berries,
+                  nuts, or chocolate chips. standard cupcake uses the same basic
+                  ingredients as standard-sized cakes: butter, sugar, eggs, and
+                  flour. Nearly any recipe that is suitable for a layer cake can
+                  be used to bake cupcakes. The cake batter used for cupcakes may
+                  be flavored or have other ingredients stirred in, such as
+                  raisins, berries, nuts, or chocolate chips." 
+          />
+        </Container>
+        
         <Progress progressbarstatus="70" progressbarheading="Progress" />
         <Cards /> */}
         <Container>

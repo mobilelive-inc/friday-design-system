@@ -1,70 +1,80 @@
-import { _fontSizes } from '../properties/fontSizes'
-import { _colors } from '../properties/colors'
-import { _space } from '../properties/space'
-import { _radii } from '../properties/radius'
-import { _borderWidths } from '../properties/borderWidths'
-import {table} from '../variants/table'
+import { _fontSizes } from "../properties/fontSizes";
+import { _colors } from "../properties/colors";
+import { _space } from "../properties/space";
+import { _radii } from "../properties/radius";
+import { _borderWidths } from "../properties/borderWidths";
+import { TableVariant } from "../variants/tables";
 
 export const fontSizes = {
-   TabelTextFontSize: _fontSizes.fontsize_2x_tiny,
-   TabelIconFontSize: _fontSizes.fontsize_tiny,
-}
+  TableTextFontSize: _fontSizes.fontsize_2x_tiny,
+  TableIconFontSize: _fontSizes.fontsize_tiny,
+};
 
 // Tables Generic Styles
-
-export const colors = {
-    TabelBodyBgColor: _colors.white,
-    TabelBodyColor: _colors.dark,
-    TabelBodyHeadTextColor:_colors.dark,
-    TabelBodyBorderColor: _colors.graylight,
-    TabelBodyhoverTextColor: _colors.dark,
-    TabelBodyhoverBgColor: _colors.graylight,
-    TabelBodydarkhHoverTextColor: _colors.dark,
-    TabelBodydarkHoverBgColor: _colors.graylight,
-    TabelBodyrowBorderColor: _colors.graylight,
-
-    TabelBodydarkBgColor: _colors.dark,
-    TabelBodyDarkTextColor: _colors.graylight,
-    TabelBodydarkborderColor: _colors.graylight,
-  
-    TabelBodyHeadDarkBgColor: _colors.dark,
-    TabelBodyHeaddarkTextColor: _colors.graylight,
-  
-    TabelBodylightHeadTextColor: _colors.dark,
-    TabelBodylightHeadbgcolor: _colors.graylight,
-  
-    StripeTabelBodylightOddBgColor: _colors.graylight,
-    StripeTabelBodylightEvenBgColor: _colors.graylight,
+export const fontWeights = {
+  TableHeaderFontWeight:'600'
 }
+export const lineHeights = {
+  TableHeaderlineHeights:'24px'
+}
+lineHeights
+export const colors = {
+  TableBodyBgColor: _colors.white,
+  TableBodyColor: _colors.dark,
+  TableBodyHeadTextColor: _colors.dark,
+  TableBodyBorderColor: _colors.light,
+  TableBodyhoverTextColor: _colors.dark,
+  TableBodyhoverBgColor: _colors.light,
+  TableBodydarkhHoverTextColor: _colors.dark,
+  TableBodydarkHoverBgColor: _colors.light,
+  TableBodyrowBorderColor: _colors.light,
+
+  TableBodydarkBgColor: _colors.dark,
+  TableBodyDarkTextColor: _colors.light,
+  TableBodydarkborderColor: _colors.light,
+
+  TableBodyHeadDarkBgColor: _colors.dark,
+  TableBodyHeaddarkTextColor: _colors.light,
+
+  TableBodylightHeadTextColor: _colors.dark,
+  TableBodylightHeadbgcolor: _colors.light,
+
+  StripeTableBodylightOddBgColor: _colors.light,
+  StripeTableBodylightEvenBgColor: _colors.light,
+};
 
 export const space = {
-    TabelBodycolumspadding: '0.5rem 1rem',
-    TabelBodyborderwidth: 0,
-    TabelBodycolumnsborderwidth: 0,
-    TabelBodythborderwidth: '0 0 2px',
-    TabelBodytdborderwidth: '0 0 1px',
-    TabelBodyrowpaddingsm: '0',
-    TabelBodyrowborderwidth:' 0 0 2px',
-   
-    TabelBodyborderedwidth: '1px 1px 1px 1px',
-    TabelBodyborderedthborderwidth: '1px 1px 1px 1px',
-    TabelBodyborderedtdborderwidth: '1px 1px 1px 1px',
-
-}
+  TableBodycolumspadding: "0.5rem 1rem",
+  TableBodyrowpaddingsm: "0",
+  TableWrapperMargin:'1rem',
+};
+export const borders = {
+  TableBodyborderwidth: 0,
+  TableBodycolumnsborderwidth: 0,
+  TableBodythborderwidth: "0 0 2px",
+  TableBodytdborderwidth: "0 0 1px",
+  TableBodyrowborderwidth: " 0 0 2px",
+  TableBodyborderedwidth: "1px 1px 1px 1px",
+  TableBodyborderedthborderwidth: "1px 1px 1px 1px",
+  TableBodyborderedtdborderwidth: "1px 1px 1px 1px",
+};
 
 export const radii = {
-    collapseBordeRadius: _radii.radius_0_063rem
-}
+  collapseBordeRadius: _radii.radius_0_063rem,
+};
 
 export const borderWidths = {
-    collapseBorderWidth: _borderWidths.borderWidth4
-}
+  collapseBorderWidth: _borderWidths.borderWidth4,
+};
 
 export default {
-    fontSizes,
-    colors,
-    space,
-    radii,
-    borderWidths,
-    table
-}
+  fontSizes,
+  colors,
+  space,
+  radii,
+  borderWidths,
+  borders,
+  TableVariant,
+  fontWeights,
+  lineHeights
+};

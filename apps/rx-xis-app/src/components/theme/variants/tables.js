@@ -1,5 +1,6 @@
 import { lighten } from '../../utils/lighten';
 import { colors } from '../properties/colors';
+
 const buttonBorder = '2px solid transparent';
 export const borderCurved = '10px';
 export const borderRounded = '50px';
@@ -8,20 +9,17 @@ const getBorder = color => {
   return `2px solid ${color}`;
 };
 
-export const table = {
+export const tabelVariant = {
   primary: {
-    color: colors.black,
-    backgroundColor: colors.primary,
-    // '&:hover': {
-    //   color: colors.white
-    // },
-    // '&:focus': {
-    //   color: colors.white
-    // }
+    color: 'black',
+    backgroundColor: 'yellow',
   },
   secondary: {
     color: colors.white,
     backgroundColor: colors.secondary,
+    '&:nthchild(even)':{
+        backgroundColor:colors.grayLight,
+    },
     '&:hover': {
       backgroundColor: colors.secondaryHover
     },

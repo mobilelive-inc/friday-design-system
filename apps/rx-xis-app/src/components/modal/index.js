@@ -59,7 +59,6 @@ export const ScrollModal = props => {
           {' '}
           {props.title} Modal
         </Text>
-        <Wrapper>
           <Button
             variant="outlinePrimary"
             width={170}
@@ -76,7 +75,7 @@ export const ScrollModal = props => {
             role="dialog"
             aria-modal="true"
             aria-labelledby="Modal is open">
-            <Wrapperdiv style={{ width: props.widths}}>
+          <Wrapperdiv style={{ width: props.width}}>
             <Modalhead mb={16}>
               <Text variant="H4">{props.heading}</Text>
               <Closebutton onClick={handleCloseModal} tabIndex='1'>
@@ -178,7 +177,6 @@ export const ScrollModal = props => {
               </Modalfooter>
             </Wrapperdiv>
           </Modal>
-        </Wrapper>
       </Section>
 
     </ThemeProvider>
@@ -198,11 +196,10 @@ const Modalcomp = props => {
     <ThemeProvider theme={Modaltheme}>
       <GlobalStyle />
       <Section>
-        <Text variant="H1" mb={16} ml={16}>
-          {' '}
-          {props.title} Modal
-        </Text>
-        <Wrapper>
+        <Text variant="H1" mb={16}>
+            {' '}
+            {props.title} Modal
+          </Text>
           <Button
             variant="outlinePrimary"
             width={170}
@@ -227,11 +224,9 @@ const Modalcomp = props => {
                   <Sronly>Close Modal</Sronly>
                 </Closebutton>
               </Modalhead>
-              
               <Text>{props.text}</Text>
             </Wrapperdiv>
           </Modal>
-        </Wrapper>
       </Section>
     </ThemeProvider>
   );

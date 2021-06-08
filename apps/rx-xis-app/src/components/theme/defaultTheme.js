@@ -13,6 +13,7 @@ import { typography } from './properties/typography';
 import { stepper, stepperWrapper } from './variants/stepper';
 import { buttons, borderCurved, borderRounded } from './variants/buttons';
 import { accordions } from './variants/accordions';
+import { tables } from './variants/tables';
 import {
   iconMarginLeft,
   iconMarginRight,
@@ -96,5 +97,6 @@ export default {
   xLarge,
   stepper,
   stepperWrapper,
-  accordions
+  accordions,
+  tables,
 };
