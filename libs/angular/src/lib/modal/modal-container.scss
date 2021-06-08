@@ -54,15 +54,10 @@
   .modalContent > * {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     max-height: calc(100vh - 3.5rem);
   }
 
-  .modalBody {
-    flex: 1 1 auto;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  .modalBody { flex: 1 1 auto; }
 }
 
 //$mat-dialog-padding: 24px !default;
