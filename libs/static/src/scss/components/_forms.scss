@@ -1299,24 +1299,24 @@ label {
   }
 }
 .fds-autocomplete-multiple {
+  border-width: var(--warraper-auto-completep-border-width);
   top: var(--warraper-auto-completep-top);
   left: var(--warraper-auto-completep-left);
   width: var(--warraper-auto-completep-width);
+  border-style: var(--warraper-auto-completep-border-style);
   z-index: var(--warraper-auto-completep-z-index);
   padding: var(--warraper-auto-completep-padding);
   position: var(--warraper-auto-completep-position);
-  border-width: var(--warraper-auto-completep-border-width);
-  border-style: var(--warraper-auto-completep-border-style);
   border-color: var(--warraper-auto-completep-border-color);
   background-color: var(--warraper-auto-completep-bg-color);
   .formControl {
+    border-width: var(--auto-complete-search-border-width);
     margin: var(--auto-complete-search-margin);
     padding: var(--auto-complete-search-padding);
+    border-style: var(--auto-complete-search-border-style);
     color: var(--auto-complete-search-text-color);
     line-height: var(--auto-complete-search-line-height);
     background-color: var(--auto-complete-search-bg-color);
-    border-width: var(--auto-complete-search-border-width);
-    border-style: var(--auto-complete-search-border-style);
     border-color: var(--auto-complete-search-border-color);
     border-radius: var(--auto-complete-search-border-radius);
   }
