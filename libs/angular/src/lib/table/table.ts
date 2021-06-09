@@ -1281,10 +1281,15 @@ export class SortIcon implements OnInit, OnDestroy {
 @Component({
     selector: 'fds-tableCheckbox',
     template: `
-        <div class="fds-checkbox fds-component" (click)="onClick($event)">
-            <div class="fds-hidden-accessible">
+        <div class="fds-checkbox fds-component" [ngClass]="{
+            formCheck: true,
+            'fds-checkbox-checked': checked,
+            'fds-checkbox-disabled': disabled
+          }" (click)="onClick($event)">
+            <div class="checkBox checkBox--curved" [class.disabled]="disabled">
                 <input type="checkbox" [attr.id]="inputId" [attr.name]="name" [checked]="checked" (focus)="onFocus()" (blur)="onBlur()" [disabled]="disabled"
                 [attr.required]="required" [attr.aria-label]="ariaLabel">
+                <span class="checkboxFake"></span>
             </div>
             <div #box [ngClass]="{'fds-checkbox-box fds-component':true,
                 'fds-highlight':checked, 'fds-disabled':disabled}" role="checkbox" [attr.aria-checked]="checked">
@@ -1356,10 +1361,16 @@ export class TableCheckbox  {
 @Component({
     selector: 'fds-tableHeaderCheckbox',
     template: `
-        <div class="fds-checkbox fds-component" (click)="onClick($event)">
-            <div class="fds-hidden-accessible">
+        <div class="fds-checkbox fds-component" [ngClass]="{
+            formCheck: true,
+            'fds-checkbox-minus-checked': (checked && !allChecked),
+            'fds-checkbox-all-checked': allChecked,
+            'fds-checkbox-disabled': disabled
+          }" (click)="onClick($event)">
+            <div class="checkBox checkBox--curved" [class.disabled]="disabled">
                 <input #cb type="checkbox" [attr.id]="inputId" [attr.name]="name" [checked]="checked" (focus)="onFocus()" (blur)="onBlur()"
                 [disabled]="isDisabled()" [attr.aria-label]="ariaLabel">
+                <span class="checkboxFake"></span>
             </div>
             <div #box [ngClass]="{'fds-checkbox-box':true,
                 'fds-highlight':checked, 'fds-disabled': isDisabled()}" role="checkbox" [attr.aria-checked]="checked">
@@ -1382,6 +1393,7 @@ export class TableHeaderCheckbox  {
     @Input() ariaLabel: string;
 
     checked: boolean;
+    allChecked: boolean;
 
     selectionChangeSubscription: Subscription;
 
@@ -1390,15 +1402,18 @@ export class TableHeaderCheckbox  {
     constructor(public dt: Table, public tableService: TableService, public cd: ChangeDetectorRef) {
         this.valueChangeSubscription = this.dt.tableService.valueSource$.subscribe(() => {
             this.checked = this.updateCheckedState();
+            this.allChecked = this.updateAllCheckedState();
         });
 
         this.selectionChangeSubscription = this.dt.tableService.selectionSource$.subscribe(() => {
             this.checked = this.updateCheckedState();
+            this.allChecked = this.updateAllCheckedState();
         });
     }
 
     ngOnInit() {
         this.checked = this.updateCheckedState();
+        this.allChecked = this.updateAllCheckedState();
     }
 
     onClick(event: Event) {
@@ -1436,7 +1451,17 @@ export class TableHeaderCheckbox  {
     updateCheckedState() {
         this.cd.markForCheck();
         const val = this.dt.value;
-        return (val && val.length > 0 && this.dt.selection && this.dt.selection.length > 0 && this.dt.selection.length === val.length);
+        return (val && val.length > 0 && this.dt.selection && this.dt.selection.length > 0
+            // && this.dt.selection.length !== val.length
+        );
+    }
+
+    updateAllCheckedState() {
+        this.cd.markForCheck();
+        const val = this.dt.value;
+        return (val && val.length > 0 && this.dt.selection && this.dt.selection.length > 0
+            && this.dt.selection.length === val.length
+        );
     }
 
 }
