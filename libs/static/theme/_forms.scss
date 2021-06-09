@@ -119,6 +119,13 @@
   --form-check-box-border-color: var(--gray-dark);
   --form-check-box-width: 30px;
   --form-check-box-height: 30px;
+  --form-parent-check-box-width: 20px;
+  --form-parent-check-box-height: auto;
+  --form-parent-check-box-top: 11px;
+  --form-parent-check-box-left: 3px;
+  --form-parent-check-box-border-width-top: 3px;
+  --form-parent-check-box-border-style: solid;
+  --form-parent-check-box-border-color: var(--form-check-box-border-color);
 
   --form-check-inline-margin-x: 0.75rem;
   --form-check-inline-input-margin-x: 0.3125rem;

@@ -800,6 +800,25 @@ label {
     }
   }
 
+  &.fds-checkbox-all-checked,
+  &.fds-checkbox-minus-checked {
+    input {
+      &:checked ~ .checkboxFake {
+        &:after {
+          border: 0;
+          top: var(--form-parent-check-box-top);
+          left: var(--form-parent-check-box-left);
+          width: var(--form-parent-check-box-width);
+          height: var(--form-parent-check-box-height);
+          border-top-width: var(--form-parent-check-box-border-width-top);
+          border-top-style: var(--form-parent-check-box-border-style);
+          border-top-color: var(--form-parent-check-box-border-color);
+          transform: rotate(0) scale(1);
+        }
+      }
+    }
+  }
+
   &__error {
     .checkBox {
       input {
