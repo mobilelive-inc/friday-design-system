@@ -1363,7 +1363,7 @@ export class TableCheckbox  {
     template: `
         <div class="fds-checkbox fds-component" [ngClass]="{
             formCheck: true,
-            'fds-checkbox-minus-checked': checked,
+            'fds-checkbox-minus-checked': (checked && !allChecked),
             'fds-checkbox-all-checked': allChecked,
             'fds-checkbox-disabled': disabled
           }" (click)="onClick($event)">
@@ -1452,7 +1452,7 @@ export class TableHeaderCheckbox  {
         this.cd.markForCheck();
         const val = this.dt.value;
         return (val && val.length > 0 && this.dt.selection && this.dt.selection.length > 0
-            && this.dt.selection.length !== val.length
+            // && this.dt.selection.length !== val.length
         );
     }
 
