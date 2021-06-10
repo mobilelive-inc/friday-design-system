@@ -775,8 +775,8 @@ label {
     &__bg {
       input {
         &:checked ~ .checkboxFake {
-          background-color: var(--primary);
-          border-color: var(--primary);
+          background-color: var(--form-check-box-filled-bg-color);
+          border-color: var(--form-check-box-filled-border-color);
 
           &:after {
             border: solid var(--gray-lighter);
