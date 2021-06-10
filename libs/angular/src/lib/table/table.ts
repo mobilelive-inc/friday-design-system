@@ -1471,49 +1471,25 @@ export class SortIcon implements OnInit, OnDestroy {
 }
 
 @Component({
-  selector: 'fds-tableCheckbox',
-  template: `
-    <div
-      class="fds-checkbox fds-component"
-      [ngClass]="{
-        formCheck: true,
-        'fds-checkbox-checked': checked,
-        'fds-checkbox-disabled': disabled
-      }"
-      (click)="onClick($event)"
-    >
-      <div
-        class="checkBox checkBox--curved"
-        [class.disabled]="disabled"
-        [class.checkBox__bg]="checked"
-      >
-        <input
-          type="checkbox"
-          [attr.id]="inputId"
-          [attr.name]="name"
-          [checked]="checked"
-          (focus)="onFocus()"
-          (blur)="onBlur()"
-          [disabled]="disabled"
-          [attr.required]="required"
-          [attr.aria-label]="ariaLabel"
-        />
-        <span class="checkboxFake"></span>
-      </div>
-      <div
-        #box
-        [ngClass]="{
-          'fds-checkbox-box fds-component': true,
-          'fds-highlight': checked,
-          'fds-disabled': disabled
-        }"
-        role="checkbox"
-        [attr.aria-checked]="checked"
-      ></div>
-    </div>
-  `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None
+    selector: 'fds-tableCheckbox',
+    template: `
+        <div class="fds-checkbox fds-component" [ngClass]="{
+            formCheck: true,
+            'fds-checkbox-checked': checked,
+            'fds-checkbox-disabled': disabled
+          }" (click)="onClick($event)">
+            <div class="checkBox checkBox--curved" [class.checkBox__bg]="checked" [class.disabled]="disabled">
+                <input type="checkbox" [attr.id]="inputId" [attr.name]="name" [checked]="checked" (focus)="onFocus()" (blur)="onBlur()" [disabled]="disabled"
+                [attr.required]="required" [attr.aria-label]="ariaLabel">
+                <span class="checkboxFake"></span>
+            </div>
+            <div #box [ngClass]="{'fds-checkbox-box fds-component':true,
+                'fds-highlight':checked, 'fds-disabled':disabled}" role="checkbox" [attr.aria-checked]="checked">
+            </div>
+        </div>
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None
 })
 export class TableCheckbox {
   @Input() disabled: boolean;
@@ -1580,50 +1556,26 @@ export class TableCheckbox {
 }
 
 @Component({
-  selector: 'fds-tableHeaderCheckbox',
-  template: `
-    <div
-      class="fds-checkbox fds-component"
-      [ngClass]="{
-        formCheck: true,
-        'fds-checkbox-minus-checked': checked && !allChecked,
-        'fds-checkbox-all-checked': allChecked,
-        'fds-checkbox-disabled': disabled
-      }"
-      (click)="onClick($event)"
-    >
-      <div
-        class="checkBox checkBox--curved"
-        [class.checkBox__bg]="checked || allChecked"
-        [class.disabled]="disabled"
-      >
-        <input
-          #cb
-          type="checkbox"
-          [attr.id]="inputId"
-          [attr.name]="name"
-          [checked]="checked"
-          (focus)="onFocus()"
-          (blur)="onBlur()"
-          [disabled]="isDisabled()"
-          [attr.aria-label]="ariaLabel"
-        />
-        <span class="checkboxFake"></span>
-      </div>
-      <div
-        #box
-        [ngClass]="{
-          'fds-checkbox-box': true,
-          'fds-highlight': checked,
-          'fds-disabled': isDisabled()
-        }"
-        role="checkbox"
-        [attr.aria-checked]="checked"
-      ></div>
-    </div>
-  `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None
+    selector: 'fds-tableHeaderCheckbox',
+    template: `
+        <div class="fds-checkbox fds-component" [ngClass]="{
+            formCheck: true,
+            'fds-checkbox-minus-checked': (checked && !allChecked),
+            'fds-checkbox-all-checked': allChecked,
+            'fds-checkbox-disabled': disabled
+          }" (click)="onClick($event)">
+            <div class="checkBox checkBox--curved" [class.checkBox__bg]="checked || allChecked" [class.disabled]="disabled">
+                <input #cb type="checkbox" [attr.id]="inputId" [attr.name]="name" [checked]="checked" (focus)="onFocus()" (blur)="onBlur()"
+                [disabled]="isDisabled()" [attr.aria-label]="ariaLabel">
+                <span class="checkboxFake"></span>
+            </div>
+            <div #box [ngClass]="{'fds-checkbox-box':true,
+                'fds-highlight':checked, 'fds-disabled': isDisabled()}" role="checkbox" [attr.aria-checked]="checked">
+            </div>
+        </div>
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None
 })
 export class TableHeaderCheckbox {
   @ViewChild('box') boxViewChild: ElementRef;
