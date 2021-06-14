@@ -218,11 +218,11 @@
               ></ng-container>
             </li>
           </ng-container>
-          <li
-            *ngIf="noResults && emptyMessage"
-            class="fds-autocomplete-emptymessage fds-autocomplete-item"
-          >
-            {{ emptyMessage }}
+          <li *ngIf="noResults && showEmptyMessage" class="fds-autocomplete-emptymessage fds-autocomplete-item">
+              <ng-container *ngIf="!emptyTemplate; else empty">
+                  {{emptyMessageLabel}}
+              </ng-container>
+              <ng-container #empty *ngTemplateOutlet="emptyTemplate"></ng-container>
           </li>
         </ng-template>
       </ul>

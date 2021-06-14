@@ -196,6 +196,8 @@ export class AutocompleteComponent
 
   @Input() emptyMessage: string;
 
+  @Input() showEmptyMessage: boolean;
+
   @Input() showTransitionOptions: string = '.12s cubic-bezier(0, 0, 0.2, 1)';
 
   @Input() hideTransitionOptions: string = '.1s linear';
@@ -217,6 +219,8 @@ export class AutocompleteComponent
   overlay: HTMLDivElement;
 
   itemTemplate: TemplateRef<any>;
+
+  emptyTemplate: TemplateRef<any>;
 
   selectedItemTemplate: TemplateRef<any>;
 
@@ -322,7 +326,7 @@ export class AutocompleteComponent
       } else {
         this.noResults = true;
 
-        if (this.emptyMessage) {
+        if (this.showEmptyMessage) {
           this.show();
           this.suggestionsUpdated = true;
         } else {
@@ -343,6 +347,10 @@ export class AutocompleteComponent
 
         case 'selectedItem':
           this.selectedItemTemplate = item.template;
+          break;
+
+        case 'empty':
+          this.emptyTemplate = item.template;
           break;
 
         default:
@@ -562,6 +570,10 @@ export class AutocompleteComponent
   focusInput() {
     if (this.multiple) this.multiInputEL.nativeElement.focus();
     else this.inputEL.nativeElement.focus();
+  }
+
+  get emptyMessageLabel(): string {
+    return this.emptyMessage;
   }
 
   removeItem(item: any) {

@@ -15,6 +15,8 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
           field="name"
           [minLength]="1"
           [dropdown]="true"
+          [showEmptyMessage]="true"
+          emptyMessage="No Country Found"
         >
         </fds-autocomplete>
       </fds-form-field>
@@ -34,7 +36,11 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
           [withinInput]="false"
           [toggleAutocomplete]="true"
           [btnDropdown]="true"
+          [showEmptyMessage]="true"
         >
+        <ng-template fdsTemplate="empty">
+          <h6 class="mb--0 p--3 text--danger"><span class="icon-warning"></span> No record found</h6>
+        </ng-template>
         </fds-autocomplete>
       </fds-form-field>
       <pre>Value: {{ form1.get('country')?.value | json }}</pre>
