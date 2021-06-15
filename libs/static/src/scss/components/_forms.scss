@@ -1338,6 +1338,9 @@ label {
     border-color: var(--auto-complete-search-border-color);
     border-radius: var(--auto-complete-search-border-radius);
   }
+  .fds-autocomplete-panel {
+    top: 0 !important;
+  }
 }
 .fds-autocomplete-panel {
   overflow: auto;
