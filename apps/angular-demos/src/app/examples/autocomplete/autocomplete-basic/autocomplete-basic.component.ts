@@ -38,9 +38,12 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
           [btnDropdown]="true"
           [showEmptyMessage]="true"
         >
-        <ng-template fdsTemplate="empty">
-          <h6 class="mb--0 p--3 text--danger"><span class="icon-warning"></span> No record found</h6>
-        </ng-template>
+          <ng-template fdsTemplate="empty">
+            <h6 class="d--flex align--items--center mb--0 p--3 text--danger">
+              <span class="icon-warning font--xl"></span>
+              <span class="pl--3">No record found</span>
+            </h6>
+          </ng-template>
         </fds-autocomplete>
       </fds-form-field>
       <pre>Value: {{ form1.get('country')?.value | json }}</pre>

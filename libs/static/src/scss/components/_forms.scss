@@ -1342,7 +1342,7 @@ label {
 .fds-autocomplete-panel {
   overflow: auto;
   position: absolute;
-  left: -1px !important;
+  left: 0 !important;
   width: var(--dropdown-auto-complete-width);
   margin: var(--dropdown-auto-complete-margin);
   padding: var(--dropdown-auto-complete-padding);
