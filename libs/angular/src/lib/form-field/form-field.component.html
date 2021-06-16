@@ -12,6 +12,7 @@
 <div
   class="formControlWrap d--flex align--items--center flex--wrap"
   [class.fds-noIcon]="!_control?.required"
+  [class.disabled-field]="_control?.disabled"
 >
   <div
     class="formControlHolder formControlHolder__{{ controlType }}"

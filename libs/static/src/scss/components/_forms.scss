@@ -1338,11 +1338,27 @@ label {
     border-color: var(--auto-complete-search-border-color);
     border-radius: var(--auto-complete-search-border-radius);
   }
+  .fds-autocomplete-panel {
+    width: calc(100% - 2rem);
+    left: 1rem !important;
+  }
 }
+.fds-multiple-tags-below {
+  .fds-autocomplete-panel {
+    top: 56px !important;
+  }
+}
+
+.fds-multiple-tags-besides {
+  .fds-autocomplete-panel {
+    top: calc(100% - 16px) !important;
+  }
+}
+
 .fds-autocomplete-panel {
   overflow: auto;
   position: absolute;
-  left: -1px !important;
+  left: 0 !important;
   width: var(--dropdown-auto-complete-width);
   margin: var(--dropdown-auto-complete-margin);
   padding: var(--dropdown-auto-complete-padding);
