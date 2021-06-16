@@ -1339,9 +1339,22 @@ label {
     border-radius: var(--auto-complete-search-border-radius);
   }
   .fds-autocomplete-panel {
-    top: 0 !important;
+    width: calc(100% - 2rem);
+    left: 1rem !important;
   }
 }
+.fds-multiple-tags-below {
+  .fds-autocomplete-panel {
+    top: 56px !important;
+  }
+}
+
+.fds-multiple-tags-besides {
+  .fds-autocomplete-panel {
+    top: calc(100% - 16px) !important;
+  }
+}
+
 .fds-autocomplete-panel {
   overflow: auto;
   position: absolute;

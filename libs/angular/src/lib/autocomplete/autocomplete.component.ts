@@ -87,6 +87,8 @@ export class AutocompleteComponent
 
   @Input() styleClass: string;
 
+  @Input() showEmptyMessageClasses: string;
+
   @Input() btnText = 'Select a Person or Group';
 
   @Input() withinInput: boolean = true;

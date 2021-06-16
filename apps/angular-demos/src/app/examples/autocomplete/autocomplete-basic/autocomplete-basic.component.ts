@@ -37,6 +37,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
           [toggleAutocomplete]="true"
           [btnDropdown]="true"
           [showEmptyMessage]="true"
+          showEmptyMessageClasses="border border--dark"
         >
           <ng-template fdsTemplate="empty">
             <h6 class="d--flex align--items--center mb--0 p--3 text--danger">
