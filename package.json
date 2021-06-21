@@ -49,7 +49,7 @@
   "dependencies": {
     "@angular-devkit/schematics": "^12.0.3",
     "@angular/animations": "^12.0.3",
-    "@angular/cdk": "^10.2.3",
+    "@angular/cdk": "12.0.3",
     "@angular/common": "^12.0.3",
     "@angular/compiler": "^12.0.3",
     "@angular/core": "^12.0.3",
@@ -71,6 +71,8 @@
     "@nrwl/angular": "^12.0.1",
     "@purtuga/esm-webpack-plugin": "^1.2.1",
     "@svgr/webpack": "^5.4.0",
+    "ajv": "^8.2.0",
+    "ajv-formats": "^2.0.2",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.10.7",
     "babel-preset-es2015": "^6.24.1",
