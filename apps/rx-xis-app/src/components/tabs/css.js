@@ -39,3 +39,9 @@ export const Sronly = styled.span(
     whiteSpace: "nowrap !important",
   })
 );
+
+export const Wrapperdiv = styled.div(
+  css({
+    display:'flex'
+  })
+)

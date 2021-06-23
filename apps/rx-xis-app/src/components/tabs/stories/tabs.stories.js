@@ -62,8 +62,10 @@ export const CloseAble_Tab = () => {
   );
 };
 export const DisAbled_Tab = () => {
-  const [disabled, setDisabled] = useState(true);
-
+  // const [disabled, setDisabled] = useState(true);
+  const disable = {
+    pointerEvents:'none'
+}
   const data = [
     {
       id: "1",
@@ -84,7 +86,7 @@ export const DisAbled_Tab = () => {
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
       <ContainerDiv>
-        <Tab data={data} disabled />
+        <Tab data={data} disabled={disable}/>
       </ContainerDiv>
     </ThemeProvider>
   );
