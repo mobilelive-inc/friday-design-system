@@ -165,11 +165,6 @@ const Cards = () => {
   return (
     <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
-      <Section>
-        <Text variant="H1" mb={32} ml={8}>
-          Cards
-        </Text>
-        <Wrapper>
           {/* <Col>
             <Card title="Default" cardimage={CardImg} />
           </Col> */}
@@ -235,8 +230,6 @@ const Cards = () => {
               buttontitle="Lorem Ipsum"
             />
           </Col> */}
-        </Wrapper>
-      </Section>
     </ThemeProvider>
   );
 };

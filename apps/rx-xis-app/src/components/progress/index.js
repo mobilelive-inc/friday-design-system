@@ -23,17 +23,12 @@ const Progress = ({ progressbarstatus,progressbarheading, ...props}) => {
   return (
     <ThemeProvider theme={progressTheme}>
       <GlobalStyle />
-      <Section>
-        <Text variant=''mb={16}>{progressbarheading}</Text>
-        <Wrapper>
           <Text mb={16}>Progressbar status {progressbarstatus}% completed</Text>
           <Progressbar {...props}>
             <Progressdone  style={style} {...props}>
               {progressbarstatus}%
             </Progressdone>
           </Progressbar>
-        </Wrapper>
-      </Section>
     </ThemeProvider>
   );
 };

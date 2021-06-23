@@ -1,33 +1,10 @@
 import styled from "styled-components";
 import css from "@styled-system/css";
 
-export const Section = styled.section(
-  css({
-    maxWidth: `container_max_width`,
-    minWidth: `container_min_width`,
-    margin: "0 auto",
-  })
-);
-
 export const Col = styled.div(
   css({
     flex: "0 0 30%",
     margin: "5px",
-  })
-);
-export const Wrapper = styled.div(
-  css({
-    display: `flex`,
-    justifyContent: `center`,
-    flexDirection: `column`,
-    display: "flex",
-    flexFlow: "row wrap",
-    alignContent: "flex-start",
-    borderWidth: "borderWidth4",
-    borderStyle: "solid",
-    borderRadius: "borderRadiusNo",
-    borderColor: "MianWrapperBorder",
-    paddingBottom: "PaddingWrapper",
   })
 );
 export const Pwrapper = styled.div(

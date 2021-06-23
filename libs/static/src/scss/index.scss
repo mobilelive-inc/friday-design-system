@@ -1,16 +1,10 @@
-@import 'vendors/rfs_autofontSizing';
-@import 'generic/general.functions';
-@import 'settings/colors';
-@import 'settings/borders';
-@import 'settings/typography';
-@import 'settings/spacing';
-@import 'settings/forms';
-@import 'settings/breakpoint';
-@import 'settings/utilities';
-@import 'settings/images';
-@import 'generic/root';
-@import 'generic/base';
-@import 'elements/element.headings';
+//Settings
+
+@import 'grid-utils/grid-utils-settings/breakpoint-vals';
+@import 'grid-utils/grid-utils-settings/spacing-vals';
+@import 'component-dependencies';
+
+//Components
 @import 'components/buttons';
 @import 'components/card';
 @import 'components/forms';
@@ -24,26 +18,3 @@
 @import 'components/tables';
 @import 'components/navbar';
 @import 'components/notification-toast';
-
-//utilities
-@import 'utilitis/align';
-@import 'utilitis/background';
-@import 'utilitis/borders';
-@import 'utilitis/code';
-@import 'utilitis/display';
-@import 'utilitis/divider';
-@import 'utilitis/interactions';
-@import 'utilitis/jumbotron';
-@import 'utilitis/overflow';
-@import 'utilitis/position';
-@import 'utilitis/screenreanders';
-@import 'utilitis/shadows';
-@import 'utilitis/sizing';
-@import 'utilitis/stretched-link';
-@import 'utilitis/text';
-@import 'utilitis/visibility';
-
-//Tools
-@import 'tools/tool.shadows';
-@import 'tools/tool.clearfix';
-@import 'tools/tool.vendor-prefixes';

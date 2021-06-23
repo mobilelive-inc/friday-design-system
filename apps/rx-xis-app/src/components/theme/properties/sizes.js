@@ -30,6 +30,7 @@ export const sizes = {
   sizes_1rem:'1rem',
   size_3_75rem: '3.75rem', // 20
   size_1_25rem: '1.25rem', // 20
+  size_2_25rem: '2.25rem', // 20
   size_4rem: '4rem', // 21
   size_4_25rem: '4.25rem', // 22
   size_4_5rem: '4.5rem', // 23
@@ -43,8 +44,8 @@ export const sizes = {
   size_5_375rem: '5.375rem', //38
   size_3_125rem: '3.125rem', // 39
   size_45_75rem: '45.75rem', //40
-  container_max_width: '1140px',//
-  container_min_width: '960px'//
+  container_max_width: '1140px', //
+  container_min_width: '960px', //
 };
 
 export const _sizes = sizes;

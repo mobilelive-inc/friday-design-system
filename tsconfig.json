@@ -15,16 +15,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "allowJs": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    "paths": {
+      "@fds/angular": ["libs/angular/src/index.ts"]
+    }
   },
-  "exclude": ["node_modules", "tmp"],
-  "include": ["src"]
+  "exclude": ["node_modules", "tmp"]
 }

@@ -22,12 +22,15 @@ import {
         'p-button-vertical':
           (iconPos === 'top' || iconPos === 'bottom') && label
       }"
-      (click)="onClick.emit($event)"
-      (focus)="onFocus.emit($event)"
-      (blur)="onBlur.emit($event)"
+      (click)="!ariaDisabled && onClick.emit($event)"
+      (focus)="!ariaDisabled && onFocus.emit($event)"
+      (blur)="!ariaDisabled && onBlur.emit($event)"
     >
       <ng-content></ng-content>
       <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+      <span class="p-button-label" [attr.aria-hidden]="icon && !label">{{
+        label || '&nbsp;'
+      }}</span>
       <span
         [ngClass]="{
           'p-button-icon': true,
@@ -40,9 +43,6 @@ import {
         *ngIf="icon"
         [attr.aria-hidden]="true"
       ></span>
-      <span class="p-button-label" [attr.aria-hidden]="icon && !label">{{
-        label || '&nbsp;'
-      }}</span>
       <span [ngClass]="'p-badge'" *ngIf="badge" [class]="badgeClass">{{
         badge
       }}</span>

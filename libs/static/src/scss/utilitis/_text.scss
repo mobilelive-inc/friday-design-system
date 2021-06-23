@@ -36,8 +36,46 @@
   font-family: var(--font-family-monospace);
 }
 
+// Alignment
+.text--justify {
+  text-align: justify;
+}
+.text--wrap {
+  white-space: normal;
+}
+.text--nowrap {
+  white-space: nowrap;
+}
 .text--truncate {
   @include text--truncate();
+}
+
+// Responsive alignment
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .text#{$infix}--left {
+      text-align: left;
+    }
+    .text#{$infix}--right {
+      text-align: right;
+    }
+    .text#{$infix}--center {
+      text-align: center;
+    }
+  }
+}
+
+// Transformation
+.text--lowercase {
+  text-transform: lowercase;
+}
+.text--uppercase {
+  text-transform: uppercase;
+}
+.text--capitalize {
+  text-transform: capitalize;
 }
 
 // Weight and italics
@@ -87,9 +125,20 @@
   @include text--hide($ignore-warning: true);
 }
 
+.text--decoration--none {
+  text-decoration: none;
+}
+.text--decoration--underline {
+  text-decoration: underline !important;
+}
 .text--break {
   word-break: break-word; // IE & < Edge 18
   overflow-wrap: break-word;
+}
+
+// Reset
+.text--reset {
+  color: inherit;
 }
 
 // Horizontal rules

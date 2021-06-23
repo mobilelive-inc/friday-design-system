@@ -76,7 +76,7 @@ export class RadioBasicsComponent {
 
   // ReactiveForms
   form = this.fb.group({
-    favoriteFruit: new FormControl(this.fruits[0].value)
+    favoriteFruit: new FormControl({ value: this.fruits[0].value, disabled: true })
   });
 
   constructor(private fb: FormBuilder) {}
