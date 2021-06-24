@@ -34,6 +34,7 @@ const basicColors = {
   limeLight: '#e7f0b1',
   limeDark: '#768224',
   limeDarker: '#272b0c',
+  Gray:'#f5f5f5',
 
   cyan: '#66c9d5',
   cyanLighter: '#f0fafb',
@@ -78,6 +79,7 @@ export const colors = {
   primaryLight: basicColors.orangeLight,
   primaryDark: basicColors.orangeDark,
   primaryDarker: basicColors.orangeDarker,
+  primaryGray: basicColors.Gray,
 
   //Primary Tertiary Colors
   primaryTertiary: '#db0025',

@@ -1,17 +1,16 @@
-import React, { useState } from "react";
-import { ThemeProvider } from "styled-components";
-import { Theme } from "..";
-import GlobalStyle from "../theme/globalStyles";
-import "./style.css";
-import Icon from "../icon/Icon";
-import { Tabs, TabsTitles, TabContent, Closebutton, Sronly, Wrapperdiv } from "./css";
-import PropTypes from "prop-types";
+import React, { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from '../theme/globalStyles';
+import './style.css';
+import Icon from '../icon/Icon';
+import { Tabs, TabsTitles, TabContent, Closebutton, Sronly, Wrapperdiv } from './css';
+import PropTypes from 'prop-types';
+import tabsTheme from './../theme/styles/tabs';
 
 const Tab = (props) => {
-
   const closeAble = props.closeAble;
   const [visibleTab, setVisibleTab] = useState(props.data[0].id);
-  var listTitles;
+  let listTitles;
 
   if (closeAble) {
     listTitles = props.data.map((item) => (
@@ -19,11 +18,11 @@ const Tab = (props) => {
         <li
           onClick={() => setVisibleTab(item.id)}
           className={
-            visibleTab === item.id ? "tab-title tab-title--active" : "tab-title"
+            visibleTab === item.id ? 'tab-title tab-title--active' : 'tab-title'
           }
         >{item.tabTitle}</li>
-        <Closebutton onClick={() => setVisibleTab("")} tabIndex="1">
-          <Icon className="icon-close" />
+        <Closebutton onClick={() => setVisibleTab('')} tabIndex='1'>
+          <Icon className='icon-close' />
           <Sronly>Close</Sronly>
         </Closebutton>
       </Wrapperdiv>
@@ -34,7 +33,7 @@ const Tab = (props) => {
         <li
           onClick={() => setVisibleTab(item.id)}
           className={
-            visibleTab === item.id ? "tab-title tab-title--active" : "tab-title"
+            visibleTab === item.id ? 'tab-title tab-title--active' : 'tab-title'
           }
         >
           {item.tabTitle}
@@ -44,13 +43,13 @@ const Tab = (props) => {
   }
 
   const listContent = props.data.map((item) => (
-    <p style={visibleTab === item.id ? {} : { display: "none" }}>
+    <p style={visibleTab === item.id ? {} : { display: 'none' }}>
       {item.tabContent}
     </p>
   ));
 
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={tabsTheme}>
       <GlobalStyle />
       <Tabs>
         <TabsTitles>{listTitles}</TabsTitles>
