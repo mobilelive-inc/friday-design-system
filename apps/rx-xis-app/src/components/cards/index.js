@@ -165,17 +165,6 @@ const Cards = () => {
   return (
     <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
-          {/* <Col>
-            <Card title="Default" cardimage={CardImg} />
-          </Col> */}
-          {/* <Col>
-            <BoxShadow>
-              <Card title="Box Shadow" cardimage={CardImg} box />
-            </BoxShadow>
-          </Col> */}
-          {/* <Col>
-            <ShadowCard title="Solid Shadow" cardimage={CardImg} />
-          </Col> */}
           <Col>
             <WithImageCard
               title="With Image"
@@ -184,52 +173,6 @@ const Cards = () => {
               subheading='"Lorem ipsum dolor sit amet, consectetur adipiscing elit"'
             />
           </Col>
-          {/* <Col>
-            <FixCard
-              title="Icon with Fixed Height"
-              imagetitle="Lorem Ipsum"
-              subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt."
-              color="outlinePrimary"
-              buttontitle="Lorem Ipsum"
-            />
-          </Col> */}
-          {/* <Col>
-            <FixCard
-              title="Icon with Fixed Height"
-              imagetitle="Lorem Ipsum"
-              subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indidunt., "
-              color="outlineSecondary"
-              buttontitle="Lorem Ipsum"
-            />
-          </Col> */}
-          {/* <Col>
-            <WithImageSolidShadow
-              title="With Image and Solid Shadow"
-              color="outlinePrimary"
-              subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt, consectetur adipiscing elit, sed do eiusmod
-              tempor, sed do eiusmod tempor."
-              buttontitle="Lorem Ipsum"
-            />
-          </Col> */}
-          {/* <Col>
-            <WithoutIcone
-              title="Without Icon"
-              imagetitle="Lorem Ipsum"
-              heading="dolor sit amet"
-              subheading="Lorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit, sed do eiusmid tempor indiduntLorm ipsum dolor sit amet, conssectetur adisping dlit,"
-            />
-          </Col> */}
-          {/* <Col>
-            <WithImageSolidShadow
-              title="With Image and Solid Shadow"
-              color="outlineSecondary"
-              subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt, consectetur adipiscing elit, sed do eiusmod
-              tempor, sed do eiusmod tempor."
-              buttontitle="Lorem Ipsum"
-            />
-          </Col> */}
     </ThemeProvider>
   );
 };
