@@ -24,7 +24,7 @@ import PropTypes from "prop-types";
 import Button from "../Button";
 import Span from "../span/span";
 
-export const Card = ({ title, cardimage }) => {
+const Card = ({ title, cardimage }) => {
   return (
     <ThemeProvider theme={CardTheme}>
       <Text variant="H5" my={16}>
@@ -36,7 +36,7 @@ export const Card = ({ title, cardimage }) => {
     </ThemeProvider>
   );
 };
-export const ShadowCard = ({ title, cardimage }) => {
+const ShadowCard = ({ title, cardimage }) => {
   return (
     <ThemeProvider theme={CardTheme}>
       <Text variant="H5" my={16}>
@@ -48,7 +48,7 @@ export const ShadowCard = ({ title, cardimage }) => {
     </ThemeProvider>
   );
 };
-export const WithImageCard = ({ title, cardimage, subheading, heading }) => {
+const WithImageCard = ({ title, cardimage, subheading, heading }) => {
   return (
     <ThemeProvider theme={CardTheme}>
       <Text variant="H5" my={16}>
@@ -68,7 +68,7 @@ export const WithImageCard = ({ title, cardimage, subheading, heading }) => {
     </ThemeProvider>
   );
 };
-export const FixCard = ({
+const FixCard = ({
   title,
   subheading,
   imagetitle,
@@ -97,7 +97,7 @@ export const FixCard = ({
     </ThemeProvider>
   );
 };
-export const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
+const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
   return (
     <>
       <ThemeProvider theme={CardTheme}>
@@ -131,7 +131,7 @@ export const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
     </>
   );
 };
-export const WithImageSolidShadow = ({
+const WithImageSolidShadow = ({
   title,
   cardimage,
   color,
@@ -226,4 +226,4 @@ Cards.propTypes = {
   height: PropTypes.number,
 };
 
-export default Cards;
+export {Cards, WithImageSolidShadow, WithoutIcone,FixCard, WithImageCard,ShadowCard, Card }

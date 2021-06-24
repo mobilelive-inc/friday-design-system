@@ -3,9 +3,9 @@ import { ThemeProvider } from "styled-components";
 import CardTheme from "../../theme/styles/card";
 import Theme from "../../theme/defaultTheme";
 import GlobalStyle from "../../theme/globalStyles";
-import Cards from "..";
 import CardImg from "../../../assets/images/img-01.png";
 import {
+  Cards,
   Card,
   ShadowCard,
   WithImageCard,

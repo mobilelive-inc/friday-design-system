@@ -41,7 +41,7 @@ import Tooltip from './components/tooltip';
 import Toggle from './components/toggle';
 import SkipLink from './components/skipLink';
 import Modalcomp from './components/modal';
-import Cards from './components/cards';
+import {Cards} from './components/cards';
 import Progress from './components/progress/index';
 
 function App() {
