@@ -29,6 +29,7 @@ export const DefaultCards = () => {
     </ThemeProvider>
   );
 };
+
 export const SolidShadowCards = () => {
   return (
     <ThemeProvider theme={CardTheme}>
