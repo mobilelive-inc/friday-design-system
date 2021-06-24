@@ -6,7 +6,7 @@ export const Tabs = styled("div")({});
 export const TabsTitles = styled("ul")({
   display: "flex",
   listStyle: "none",
-  padding: "0px",
+  padding: "0",
   margin: "0",
 });
 export const TabContent = styled("div")({
