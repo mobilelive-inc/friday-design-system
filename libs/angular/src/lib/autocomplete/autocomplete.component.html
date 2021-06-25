@@ -225,13 +225,14 @@
             class="fds-autocomplete-emptymessage fds-autocomplete-item"
             [ngClass]="showEmptyMessageClasses"
           >
-            <ng-container *ngIf="!emptyTemplate; else empty">
+            <ng-container *ngIf="!emptyTemplate">
               {{ emptyMessageLabel }}
             </ng-container>
-            <ng-container
-              #empty
-              *ngTemplateOutlet="emptyTemplate"
-            ></ng-container>
+            <ng-container *ngIf="emptyTemplate">
+              <ng-container
+                *ngTemplateOutlet="emptyTemplate"
+              ></ng-container>
+            </ng-container>
           </li>
         </ng-template>
       </ul>
