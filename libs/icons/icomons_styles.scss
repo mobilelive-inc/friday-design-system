@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'design-system-icons';
-  src:  url('./fonts/design-system-icons.eot?9e8ykw');
-  src:  url('./fonts/design-system-icons.eot?9e8ykw#iefix') format('embedded-opentype'),
-    url('./fonts/design-system-icons.ttf?9e8ykw') format('truetype'),
-    url('./fonts/design-system-icons.woff?9e8ykw') format('woff'),
-    url('./fonts/design-system-icons.svg?9e8ykw#design-system-icons') format('svg');
+  src:url('./fonts/design-system-icons.eot?9e8ykw');
+  src:url('./fonts/design-system-icons.eot?9e8ykw#iefix') format('embedded-opentype'),
+      url('./fonts/design-system-icons.ttf?9e8ykw') format('truetype'),
+      url('./fonts/design-system-icons.woff?9e8ykw') format('woff'),
+      url('./fonts/design-system-icons.svg?9e8ykw#design-system-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-triangle-filled:before {
+  content: "\ecd0";
+}
 .icon-reporting:before {
   content: "\ecce";
 }
