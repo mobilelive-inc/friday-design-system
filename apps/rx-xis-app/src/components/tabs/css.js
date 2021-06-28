@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { compose, color, layout, space, border, variant } from 'styled-system';
 import css from '@styled-system/css';
 
 export const Tabs = styled('div')({});

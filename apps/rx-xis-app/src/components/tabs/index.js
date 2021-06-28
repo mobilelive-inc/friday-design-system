@@ -14,8 +14,8 @@ const Tab = (props) => {
 
   if (closeAble) {
     listTitles = props.data.map((item) => (
-      <Wrapperdiv style={props.disabled}>
-        <li
+      <Wrapperdiv style={props.disabled} key={item.id}>
+        <li 
           onClick={() => setVisibleTab(item.id)}
           className={
             visibleTab === item.id ? 'tab-title tab-title--active' : 'tab-title'
@@ -29,7 +29,7 @@ const Tab = (props) => {
     ));
   } else {
     listTitles = props.data.map((item) => (
-      <div style={props.disabled}>
+      <div style={props.disabled} key={item.id} >   
         <li
           onClick={() => setVisibleTab(item.id)}
           className={
@@ -43,7 +43,7 @@ const Tab = (props) => {
   }
 
   const listContent = props.data.map((item) => (
-    <p style={visibleTab === item.id ? {} : { display: 'none' }}>
+    <p key={item.id} style={visibleTab === item.id ? {} : { display: 'none' }}>
       {item.tabContent}
     </p>
   ));
@@ -59,15 +59,15 @@ const Tab = (props) => {
   );
 };
 
-// Tab.propTypes = {
-//   /** Data for tabs */
-//   Data: PropTypes.string.isRequired,
-//   /** closeable props if we want to need close tabs */
-//   closeAble : PropTypes.string,
-//   /** disabled props if we want to need disabled tabs */
-//   disabled : PropTypes.string,
-//   /** To manage theme*/
-//   variant: PropTypes.string,
-// };
+Tab.propTypes = {
+  /** Data for tabs */
+  data: PropTypes.array.isRequired,
+  /** closeable props if we want to need close tabs */
+  closeAble : PropTypes.bool,
+  /** disabled props if we want to need disabled tabs */
+  disabled : PropTypes.object,
+  /** To manage theme*/
+  variant: PropTypes.string,
+};
 
 export default Tab;
