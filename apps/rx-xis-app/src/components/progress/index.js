@@ -1,34 +1,34 @@
-import React, { useState, useEffect } from "react";
-import { ThemeProvider } from "styled-components";
-import GlobalStyle from "../theme/globalStyles";
-import progressTheme from "../theme/styles/progressbar";
-import { Section, Wrapper, Progressbar, Progressdone } from "./css";
-import Text from "../typography";
+import React, { useState, useEffect } from 'react';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from '../theme/globalStyles';
+import progressTheme from '../theme/styles/progressbar';
+import { Progressbar, Progressdone } from './css';
+import Text from '../typography';
 import PropTypes from 'prop-types';
 
-const Progress = ({ progressbarstatus,progressbarheading, ...props}) => {
+const Progress = ({ progressbarstatus, progressbarheading, ...props }) => {
 
   const [style, setStyle] = useState({});
 
-   useEffect(() => {
-   for (let index = 0; index < progressbarstatus; index++) {
-    const newStyle = {
-      opacity: 1,
-      width: `${index}%`,
-    };
-    setStyle(newStyle);
-  }
-  },[progressbarstatus])
+  useEffect(() => {
+    for (let index = 0; index < progressbarstatus; index++) {
+      const newStyle = {
+        opacity: 1,
+        width: `${index}%`,
+      };
+      setStyle(newStyle);
+    }
+  }, [progressbarstatus])
 
   return (
     <ThemeProvider theme={progressTheme}>
       <GlobalStyle />
-          <Text mb={16}>Progressbar status {progressbarstatus}% completed</Text>
-          <Progressbar {...props}>
-            <Progressdone  style={style} {...props}>
-              {progressbarstatus}%
-            </Progressdone>
-          </Progressbar>
+      <Text mb={16}>Progressbar status {progressbarstatus}% completed</Text>
+      <Progressbar {...props}>
+        <Progressdone style={style} {...props}>
+          {progressbarstatus}%
+        </Progressdone>
+      </Progressbar>
     </ThemeProvider>
   );
 };
