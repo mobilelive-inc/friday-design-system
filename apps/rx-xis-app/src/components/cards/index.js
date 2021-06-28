@@ -1,13 +1,9 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
-import CardTheme from "./../theme/styles/card";
-import Theme from "../theme/defaultTheme";
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import CardTheme from './../theme/styles/card';
 import {
-  Section,
-  Wrapper,
   Figure,
   Image,
-  BoxShadow,
   ShadowFigure,
   Pwrapper,
   TextWrapper,
@@ -15,19 +11,19 @@ import {
   ShadowWrapper,
   IconeWrapper,
   Col,
-} from "./css";
-import Text from "../../components/typography";
-import GlobalStyle from "../theme/globalStyles";
-import CardImg from "../../assets/images/img-01.png";
-import Icon from "../icon/Icon";
-import PropTypes from "prop-types";
-import Button from "../Button";
-import Span from "../span/span";
+} from './css';
+import Text from '../../components/typography';
+import GlobalStyle from '../theme/globalStyles';
+import CardImg from '../../assets/images/img-01.png';
+import Icon from '../icon/Icon';
+import PropTypes from 'prop-types';
+import Button from '../Button';
+import Span from '../span/span';
 
 const Card = ({ title, cardimage }) => {
   return (
     <ThemeProvider theme={CardTheme}>
-      <Text variant="H5" my={16}>
+      <Text variant='H5' my={16}>
         {title}
       </Text>
       <Figure>
@@ -39,7 +35,7 @@ const Card = ({ title, cardimage }) => {
 const ShadowCard = ({ title, cardimage }) => {
   return (
     <ThemeProvider theme={CardTheme}>
-      <Text variant="H5" my={16}>
+      <Text variant='H5' my={16}>
         {title}
       </Text>
       <ShadowFigure>
@@ -51,7 +47,7 @@ const ShadowCard = ({ title, cardimage }) => {
 const WithImageCard = ({ title, cardimage, subheading, heading }) => {
   return (
     <ThemeProvider theme={CardTheme}>
-      <Text variant="H5" my={16}>
+      <Text variant='H5' my={16}>
         {title}
       </Text>
       <Pwrapper>
@@ -59,10 +55,10 @@ const WithImageCard = ({ title, cardimage, subheading, heading }) => {
           <Image src={cardimage} alt={title} />
         </Figure>
         <TextWrapper>
-          <Text variant="h4" p={16}>
+          <Text variant='h4' p={16}>
             {heading}
           </Text>
-          <Text variant="H6">{subheading}</Text>
+          <Text variant='H6'>{subheading}</Text>
         </TextWrapper>
       </Pwrapper>
     </ThemeProvider>
@@ -76,21 +72,21 @@ const FixCard = ({
   buttontitle,
 }) => {
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
-      <Text variant="H5" p={16}>
+      <Text variant='H5' p={16}>
         {title}
       </Text>
       <IconeWrapper>
         <Icon
-          className="icon-DesignThinking"
-          style={{ fontWeight: 400, fontSize: "4rem", paddingTop: "1.5rem" }}
+          className='icon-DesignThinking'
+          style={{ fontWeight: 400, fontSize: '4rem', paddingTop: '1.5rem' }}
         />
         <Text py={16}>{imagetitle}</Text>
-        <Text variant="H6" pb={16} px={10}>
+        <Text variant='H6' pb={16} px={10}>
           {subheading}
         </Text>
-        <Button variant={color} width="auto" m={16}>
+        <Button variant={color} width='auto' m={16}>
           {buttontitle}
         </Button>
       </IconeWrapper>
@@ -102,27 +98,27 @@ const WithoutIcone = ({ title, heading, subheading, imagetitle }) => {
     <>
       <ThemeProvider theme={CardTheme}>
         <GlobalStyle />
-        <Text variant="H5" p={16}>
+        <Text variant='H5' p={16}>
           {title}
         </Text>
         <CardWrapper>
-          <Text variant="H3" mt={16}>
+          <Text variant='H3' mt={16}>
             {imagetitle}
           </Text>
           <Span
             style={{
-              color: "#000",
-              width: "80%",
-              height: "2px",
-              backgroundColor: "#666",
-              textAlign: "center",
-              marginTop: "22px",
-              marginBottom: "22px",
-              marginLeft: "auto",
-              marginRight: "auto",
+              color: '#000',
+              width: '80%',
+              height: '2px',
+              backgroundColor: '#666',
+              textAlign: 'center',
+              marginTop: '22px',
+              marginBottom: '22px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
             }}
           />
-          <Text variant="H4" mb={16}>
+          <Text variant='H4' mb={16}>
             {heading}
           </Text>
           <Text m={16}>{subheading}</Text>
@@ -141,20 +137,20 @@ const WithImageSolidShadow = ({
   return (
     <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
-      <Text variant="H5" p={16}>
+      <Text variant='H5' p={16}>
         {title}
       </Text>
       <ShadowWrapper>
         <Icon
-          className="icon-home"
-          style={{ fontWeight: 400, fontSize: "8rem", color: "#46BC9C" }}
+          className='icon-home'
+          style={{ fontWeight: 400, fontSize: '8rem', color: '#46BC9C' }}
         />
         <Text
-          style={{ color: "black", paddingLeft: "16px", paddingRight: "16px" }}
+          style={{ color: 'black', paddingLeft: '16px', paddingRight: '16px' }}
         >
           {subheading}
         </Text>
-        <Button variant={color} width="auto" m={10}>
+        <Button variant={color} width='auto' m={10}>
           {buttontitle}
         </Button>
       </ShadowWrapper>
@@ -165,14 +161,14 @@ const Cards = () => {
   return (
     <ThemeProvider theme={CardTheme}>
       <GlobalStyle />
-          <Col>
-            <WithImageCard
-              title="With Image"
-              cardimage={CardImg}
-              heading="Lorem ipsum dolor"
-              subheading='"Lorem ipsum dolor sit amet, consectetur adipiscing elit"'
-            />
-          </Col>
+      <Col>
+        <WithImageCard
+          title='With Image'
+          cardimage={CardImg}
+          heading='Lorem ipsum dolor'
+          subheading='Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        />
+      </Col>
     </ThemeProvider>
   );
 };
@@ -226,4 +222,4 @@ Cards.propTypes = {
   height: PropTypes.number,
 };
 
-export {Cards, WithImageSolidShadow, WithoutIcone,FixCard, WithImageCard,ShadowCard, Card }
+export { Cards, WithImageSolidShadow, WithoutIcone, FixCard, WithImageCard, ShadowCard, Card }
