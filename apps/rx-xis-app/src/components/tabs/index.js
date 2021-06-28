@@ -15,7 +15,7 @@ const Tab = (props) => {
   if (closeAble) {
     listTitles = props.data.map((item) => (
       <Wrapperdiv style={props.disabled} key={item.id}>
-        <li 
+        <li
           onClick={() => setVisibleTab(item.id)}
           className={
             visibleTab === item.id ? 'tab-title tab-title--active' : 'tab-title'
@@ -29,7 +29,7 @@ const Tab = (props) => {
     ));
   } else {
     listTitles = props.data.map((item) => (
-      <div style={props.disabled} key={item.id} >   
+      <div style={props.disabled} key={item.id} >
         <li
           onClick={() => setVisibleTab(item.id)}
           className={
@@ -63,9 +63,9 @@ Tab.propTypes = {
   /** Data for tabs */
   data: PropTypes.array.isRequired,
   /** closeable props if we want to need close tabs */
-  closeAble : PropTypes.bool,
+  closeAble: PropTypes.bool,
   /** disabled props if we want to need disabled tabs */
-  disabled : PropTypes.object,
+  disabled: PropTypes.object,
   /** To manage theme*/
   variant: PropTypes.string,
 };

@@ -45,7 +45,7 @@ import Cards from './components/cards';
 import Progress from './components/progress/index';
 import Tab from './components/tabs/index';
 
-function App(props) {
+function App() {
   const options = [
     {
       id: 0,

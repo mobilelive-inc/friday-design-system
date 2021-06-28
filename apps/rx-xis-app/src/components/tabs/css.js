@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import css from '@styled-system/css';
 
 export const Tabs = styled('div')({});
-
 export const TabsTitles = styled('ul')({
   display: 'flex',
   listStyle: 'none',
@@ -40,7 +39,6 @@ export const Sronly = styled.span(
     whiteSpace: 'nowrap !important',
   })
 );
-
 export const Wrapperdiv = styled.div(
   css({
     display: 'flex'
