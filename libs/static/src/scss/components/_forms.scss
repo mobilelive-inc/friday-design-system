@@ -1379,7 +1379,9 @@ label {
     margin: var(--dropdown-auto-complete-item-margin);
     padding: var(--dropdown-auto-complete-item-padding);
     list-style-type: var(--dropdown-auto-complete-item-style-type);
+    &:hover,
     &.fds-highlight {
+      cursor: pointer;
       font-weight: var(--font-weight-normal);
       color: var(--dropdown-auto-complete-item-text-color);
       background-color: var(--dropdown-auto-complete-item-bg-color);
